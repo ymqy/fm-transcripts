@@ -1,0 +1,548 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.561
+迈克 · 诺斯: 首先，让我自我介绍一下，我叫迈克。
+&gt;&gt; Mike North: First,
+let me introduce myself, my name is Mike.
+
+2
+00:00:02.561 --> 00:00:04.254
+我在 LinkedIn 工作,
+And I work at LinkedIn,
+
+3
+00:00:04.254 --> 00:00:10.029
+有两件事让我成为一个很好的人来和你谈论打字稿。
+where two things I do make me a great
+person to talk to you about TypeScript.
+
+4
+00:00:10.029 --> 00:00:13.330
+第一，我负责开发人员培训项目，所以
+Number one,
+I run the developer training program, so
+
+5
+00:00:13.330 --> 00:00:16.000
+我是公司的车间讲师。
+I am a workshop instructor for
+the company.
+
+6
+00:00:16.000 --> 00:00:20.606
+我帮助那里所有的工程师升级,
+Where I help level up all of
+all of the engineers there,
+
+7
+00:00:20.606 --> 00:00:25.730
+在各种主题数组中，包括打字稿。
+in a various array of topics,
+including TypeScript.
+
+8
+00:00:25.730 --> 00:00:30.879
+第二我是前端技术的领军人物,
+And number two,
+I am a tech lead on the front-end stack,
+
+9
+00:00:30.879 --> 00:00:36.584
+我主要关注的是打字稿的采用，对吗？
+where I predominantly focus on
+TypeScript adoption, right?
+
+10
+00:00:36.584 --> 00:00:40.709
+如果团队希望在他们的项目中使用 TypeScript,
+On making it so that if teams wish to
+use TypeScript with their project,
+
+11
+00:00:40.709 --> 00:00:44.700
+一切工作顺利，文档工具工作正常
+everything works smoothly, and
+the documentation tools work, and
+
+12
+00:00:44.700 --> 00:00:47.109
+所有的线条都很好。
+all of the linting works nicely.
+
+13
+00:00:47.109 --> 00:00:51.668
+所以我一直深陷在这个领域
+So I have been knee-deep in this area,
+and I'm so
+
+14
+00:00:51.668 --> 00:00:57.219
+很高兴能在这里与大家分享我所学到的很多东西。
+happy to be here to share a lot
+of what I've learned with you.
+
+15
+00:00:57.219 --> 00:01:02.045
+所以首先，在我们跳进去之前，我们要弄脏我们的手
+So first, before we jump in, and
+we're gonna get our hands dirty
+
+16
+00:01:02.045 --> 00:01:05.969
+非常快，大约10分钟。
+really quickly here,
+within about 10 minutes.
+
+17
+00:01:05.969 --> 00:01:10.096
+让我们首先确定什么是打字稿，这样我们就知道会发生什么。
+Let's first pin down exactly what
+TypeScript is, so we know what to expect.
+
+18
+00:01:10.096 --> 00:01:13.676
+所以它主要是一种开源编程语言,
+So it's an open-source
+programming language, primarily,
+
+19
+00:01:13.676 --> 00:01:17.620
+它由微软的一个核心开发团队负责维护。
+it's maintained by a core team
+of developers at Microsoft.
+
+20
+00:01:17.620 --> 00:01:21.201
+它是 JavaScript 的一个类型化的语法超集。
+And it's a typed,
+syntactic superset of JavaScript.
+
+21
+00:01:21.201 --> 00:01:24.885
+这意味着，如果你采用打字稿的语法,
+What that means is,
+if you take TypeScript syntax,
+
+22
+00:01:24.885 --> 00:01:29.120
+你可以在其中看到 JavaScript 的语法。
+you can kind of see
+JavaScript's syntax within it.
+
+23
+00:01:29.120 --> 00:01:32.807
+这并不意味着每个 JavaScript 程序都可以快乐地工作
+It does not mean that every
+JavaScript program can happily
+
+24
+00:01:32.807 --> 00:01:36.504
+在没有任何错误的情况下运行打字稿编译器。
+run through the TypeScript
+compiler without any errors.
+
+25
+00:01:36.504 --> 00:01:39.689
+所以有时候人们会对此感到困惑。
+So there is sometimes
+confusion about that.
+
+26
+00:01:39.689 --> 00:01:44.096
+现在，如果你松开打字稿编译器,
+Now, it's true that if you loosen
+up the TypeScript compiler,
+
+27
+00:01:44.096 --> 00:01:47.766
+把它设置成最灵活的模式,
+and kind of set it in the most
+flexible possible mode,
+
+28
+00:01:47.766 --> 00:01:51.615
+很多普通的 JavaScript 程序都可以让它开心。
+a lot of regular JavaScript
+programs can make it happy.
+
+29
+00:01:51.615 --> 00:01:57.400
+但是使用一个非常灵活的动态类型，你可以做一些固有的事情
+But there are inherently things you can do
+with a really flexible, dynamically typed
+
+30
+00:01:57.400 --> 00:02:03.040
+类似 JavaScript 这样的语言，它永远不会让强类型语言开心。
+language like JavaScript, that will never
+make a strongly typed language happy.
+
+31
+00:02:04.060 --> 00:02:07.864
+编译成可读的 JavaScript，以及
+TypeScript compiles to
+readable JavaScript, and
+
+32
+00:02:07.864 --> 00:02:11.409
+它没有运行时部分，没有运行时组件。
+it has no runtime part,
+no runtime component.
+
+33
+00:02:11.409 --> 00:02:17.379
+这对您来说意味着类型在构建步骤中消失。
+What that means to you is that
+the types disappear in a build step.
+
+34
+00:02:17.379 --> 00:02:21.644
+你几乎可以把它想象成一个静态分析工具
+So you're just really, you can almost
+think of it like a static analysis tool
+
+35
+00:02:21.644 --> 00:02:24.149
+对你的代码库做了很多检查。
+that does a lot of
+checking on your codebase.
+
+36
+00:02:24.149 --> 00:02:28.364
+但是，当您有了要发送给您的用户的构建，或者
+But when you have that build that
+you're sending to your users, or
+
+37
+00:02:28.364 --> 00:02:30.659
+你用的是 Node.js 吗？
+that you're running in Node.js?
+
+38
+00:02:30.659 --> 00:02:35.629
+除非你做一些很有异国情调的后空翻,
+Unless you do some
+really exotic backflips,
+
+39
+00:02:35.629 --> 00:02:39.954
+没有类型检查。
+none of that type-checking is there.
+
+40
+00:02:39.954 --> 00:02:43.460
+这在某些方面是好的，但在其他方面是坏的。
+And that's good in some ways,
+and that's bad in other ways.
+
+41
+00:02:43.460 --> 00:02:46.597
+这很好，因为在运行时没有成本，对吧,
+It's good in that there's
+no cost at runtime, right,
+
+42
+00:02:46.597 --> 00:02:48.611
+这不会影响你的应用程序。
+it's not gonna slow your app down.
+
+43
+00:02:48.611 --> 00:02:50.859
+运行时类型检查,
+Runtime type-checking,
+
+44
+00:02:50.859 --> 00:02:56.819
+这是每个浏览器中每个用户都要运行的额外代码。
+that's extra code that every user in
+every browser is gonna be running.
+
+45
+00:02:58.389 --> 00:03:01.567
+因此，在构建步骤中消失打字稿是好事。
+So TypeScript disappearing in
+a build step is good there.
+
+46
+00:03:01.567 --> 00:03:06.818
+当然，当你接收到一些数据的时候,
+But of course, when you're
+receiving some data from a fetch,
+
+47
+00:03:06.818 --> 00:03:10.770
+还是你从用户那里得到了信息？
+or you're getting some input from a user?
+
+48
+00:03:10.770 --> 00:03:15.632
+重要的是要明白，实际上并没有类型检查
+It's important to understand that
+there's really no type-checking that's
+
+49
+00:03:15.632 --> 00:03:20.502
+因为在这一点上，它只是一个 JavaScript 程序。
+gonna happen there, because at that point,
+it's just a JavaScript program.
+
+50
+00:03:20.502 --> 00:03:24.000
+所以这个项目有三个内容。
+So the project kinda has
+three things inside of it.
+
+51
+00:03:25.199 --> 00:03:29.764
+这是编程语言本身，这是语言服务器。
+There's the programming language itself,
+there's the language server.
+
+52
+00:03:29.764 --> 00:03:34.276
+这个程序可以给你的文本编辑器提供很多好东西
+Which is a program that kind of feeds
+your text editor a lot of great
+
+53
+00:03:34.276 --> 00:03:38.543
+这些信息可以在自动完成和
+information that can manifest
+itself in auto-completes and
+
+54
+00:03:38.543 --> 00:03:41.759
+工具提示，当你悬停在各种东西。
+tool tips,
+as you hover over various things.
+
+55
+00:03:41.759 --> 00:03:45.605
+语言服务器是一种你可以查询的东西,
+The language server is sort of
+something that you can query about,
+
+56
+00:03:45.605 --> 00:03:48.364
+我的程序现在怎么样了？
+what's going on with my
+program at this point?
+
+57
+00:03:48.364 --> 00:03:53.069
+然后是编译器，它是由语言服务器使用的。
+And then there's the compiler, and
+that is used by the language server.
+
+58
+00:03:53.069 --> 00:03:58.067
+但它实际上执行的是类型检查，并且
+But it is what actually
+performs the type-checking, and
+
+59
+00:03:58.067 --> 00:04:04.289
+这是获取打字稿文件和发送 JavaScript 文件的一种方式。
+it is one way of taking TypeScript
+files and emitting JavaScript files.
+
+60
+00:04:04.289 --> 00:04:09.718
+一个巨大的进步伴随着巴别塔7，巴别塔就是让我们带走的东西
+A huge advancement that came along with
+Babel 7, and Babel's what's let us take
+
+61
+00:04:09.718 --> 00:04:15.159
+现代的 JavaScript，并且有点浓缩，这样 Internet Explorer 就可以运行它了。
+modern JavaScript, and kind of boil it
+down so that Internet Explorer can run it.
+
+62
+00:04:15.159 --> 00:04:18.846
+所以你只需要简单地说出你关心哪些浏览器
+And so you can just simply state
+which browsers you care about and
+
+63
+00:04:18.846 --> 00:04:20.696
+你得到了一些相容的东西。
+you get something compatible.
+
+64
+00:04:20.696 --> 00:04:24.949
+现在 Babel 可以将打字稿文件作为输入。
+Babel can now take
+TypeScript files as inputs.
+
+65
+00:04:24.949 --> 00:04:29.242
+现在，重要的是要理解这里不涉及类型检查。
+Now, it's important to understand that
+no type-checking is involved in there.
+
+66
+00:04:29.242 --> 00:04:34.764
+基本上知道打字稿代码的哪些部分可以被吃掉
+Babel kind of just knows which parts
+of the TypeScript code it can eat and
+
+67
+00:04:34.764 --> 00:04:38.459
+忽略，只留下 JavaScript。
+ignore, leaving only
+the JavaScript behind.
+
+68
+00:04:38.459 --> 00:04:43.257
+因此，您肯定希望与 Babel 并排使用打字稿编译器。
+So you definitely wanna use the TypeScript
+compiler side-by-side with Babel.
+
+69
+00:04:43.257 --> 00:04:46.211
+但最重要的进步是,
+But the important advancement there is,
+
+70
+00:04:46.211 --> 00:04:52.120
+你有一个工具负责创建你的 JS 文件。
+you have one piece of tooling that's
+responsible for creating your JS files.
+
+71
+00:04:52.120 --> 00:04:56.531
+你不必担心，TypeScript 是如何表示一个类的
+You don't have to worry about,
+how does TypeScript represent a class for
+
+72
+00:04:56.531 --> 00:04:57.821
+Internet Explorer？
+Internet Explorer?
+
+73
+00:04:57.821 --> 00:05:02.439
+巴别塔是如何表示它的呢? 这里会有碰撞吗
+How does Babel represent it, and
+is there gonna be a collision there, so
+
+74
+00:05:02.439 --> 00:05:05.850
+你可以很好地保证一致性。
+you can have a great
+assurance of consistency.
+
+75
+00:05:05.850 --> 00:05:10.733
+几乎可以把打字稿编译器想象成一个非常漂亮的连接器,
+And almost think of the TypeScript
+compiler as a really fancy linter,
+
+76
+00:05:10.733 --> 00:05:15.122
+或者其他静态分析工具来验证
+or another static analysis tool
+that just kind of verifies that
+
+77
+00:05:15.122 --> 00:05:19.701
+一切看起来都很好，但实际上并没有产生产量。
+everything looks good, but
+doesn't actually produce output.
+
+78
+00:05:19.701 --> 00:05:24.542
+因此，由于我教授了这门课程的最后一个版本,
+So since I taught the last version
+of this course for Frontend Masters,
+
+79
+00:05:24.542 --> 00:05:29.399
+在2017年，我们看到下载量增加了300% 。
+which was in 2017,
+we've seen a 300% increase in downloads.
+
+80
+00:05:30.610 --> 00:05:33.548
+我们可以看到，这是底部的每月下载图表。
+And we can see, this is a monthly
+download graph on the bottom.
+
+81
+00:05:33.548 --> 00:05:37.372
+我们可以看到它的基本匹配反应,
+We can see that it's
+basically matched React,
+
+82
+00:05:37.372 --> 00:05:41.110
+就流行程度和普及程度而言。
+in terms of popularity and
+prevalence of use.
+
+83
+00:05:42.949 --> 00:05:49.562
+所以 NPM 每年都做一个调查，他们要求受访者,
+So NPM does a survey every year,
+and they ask their respondents,
+
+84
+00:05:49.562 --> 00:05:54.862
+你用的是什么样的 javascript 语言？
+what flavor of a JavaScript-y
+language do you use?
+
+85
+00:05:54.862 --> 00:06:00.360
+或者你使用 ES6，ES5，或者打字稿？
+CoffeeScript, or do you use ES6,
+or ES5, or TypeScript?
+
+86
+00:06:00.360 --> 00:06:04.718
+结果显示，46% 的受访者认为，在某些方面，或者说在某些方面
+And it turns out, 46% of respondents
+said that in some part or
+
+87
+00:06:04.718 --> 00:06:08.935
+他们的另一个程序，他们使用打字稿。
+another of their programming,
+they make use of TypeScript.
+
+88
+00:06:08.935 --> 00:06:12.475
+如果你看看 NPM 中的所有软件包,
+And if you look at all
+of the packages in NPM,
+
+89
+00:06:12.475 --> 00:06:18.560
+超过40% 的用户声明打字稿为依赖项或 devDependency。
+over 40% of them declare TypeScript
+as a dependency or devDependency.
+
+90
+00:06:18.560 --> 00:06:22.327
+所以你可能正在使用它，即使你不认为你正在使用它。
+So you're probably using it,
+even if you don't think you're using it.
+
+91
+00:06:22.327 --> 00:06:27.189
+你用的是这种打印语言,
+You're using something that's
+written in this typed language,
+
+92
+00:06:27.189 --> 00:06:30.151
+根据类型检查。
+and depending on that type-checking.
+
+93
+00:06:30.151 --> 00:06:33.069
+而且，你可以潜在地利用这种类型的信息。
+And potentially, you could take
+advantage of that type information.

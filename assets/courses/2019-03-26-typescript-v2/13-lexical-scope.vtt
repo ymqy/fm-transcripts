@@ -1,0 +1,244 @@
+WEBVTT
+
+1
+00:00:00.244 --> 00:00:03.383
+有一个叫做词法作用域的东西。
+&gt;&gt; Mike North: JavaScript has
+this thing called lexical scope.
+
+2
+00:00:03.383 --> 00:00:06.070
+词法范围只是意味着,
+Lexical scope just means,
+
+3
+00:00:06.070 --> 00:00:12.038
+当你调用一个函数的时候，它的值是多少，对吗？
+what is the value of this when
+you invoke a function, right?
+
+4
+00:00:12.038 --> 00:00:14.250
+这很重要，如果你处理,
+This is important if you deal with,
+
+5
+00:00:14.250 --> 00:00:18.974
+构建一个单页的应用程序，你有一些组件
+building something like a single-page app,
+and you have components, and
+
+6
+00:00:18.974 --> 00:00:22.693
+这些组件具有与 DOM 事件绑定的内容。
+those components have things
+that are bound to DOM events.
+
+7
+00:00:22.693 --> 00:00:26.893
+你需要确保你的事件以一种允许你的方式发生
+You need to make sure that your events
+fire in a way that allows you to
+
+8
+00:00:26.893 --> 00:00:31.321
+在你的组件上访问东西，让事情变得美好和方便。
+access stuff on your component,
+to make things nice and convenient.
+
+9
+00:00:31.321 --> 00:00:35.710
+这实际上是一个函数签名的一部分
+So this is actually part
+of a function signature, so
+
+10
+00:00:35.710 --> 00:00:38.514
+如果你在定义一个函数？
+if you're defining a function?
+
+11
+00:00:38.514 --> 00:00:42.945
+通常，它是一个在类上下文之外的函数,
+And usually, it's gonna be a function
+that's outside the context of a class,
+
+12
+00:00:42.945 --> 00:00:46.000
+对，因为班级已经帮我们搞定了。
+right, cuz classes already
+kinda handle this for us.
+
+13
+00:00:46.000 --> 00:00:51.180
+但是如果你真的要依靠能力去做一些事情
+But if you're gonna really depend
+on being able to do something
+
+14
+00:00:51.180 --> 00:00:56.862
+就像我们现在所做的，我们需要它的价值是正确的。
+like what we're doing here,
+we need the value of this to be correct.
+
+15
+00:00:56.862 --> 00:01:01.892
+所以你只需要在一开始输入你的函数签名,
+So you only need to put in your function
+signature at the very beginning,
+
+16
+00:01:01.892 --> 00:01:05.025
+在一个叫做这个的伪参数下
+under a pseudo-parameter called this, and
+
+17
+00:01:05.025 --> 00:01:09.903
+会进行类型检查，确保一切正常。
+type-checking will be done to make
+sure that everything looks okay.
+
+18
+00:01:09.903 --> 00:01:14.686
+我要创建一个满足这个约束的对象
+So I'm gonna create an object that
+kind of meets this constraint, so
+
+19
+00:01:14.686 --> 00:01:17.584
+我们可以看到，探索这是如何工作的。
+that we can see, explore how this works.
+
+20
+00:01:17.584 --> 00:01:21.355
+有一个电子邮件和一个电话号码，我们走，在这里。
+Has both an email and a phone number,
+there we go, down here.
+
+21
+00:01:21.355 --> 00:01:26.652
+我创建了一个函数叫做 invokeSoon,
+And I'm creating a function
+called invokeSoon,
+
+22
+00:01:26.652 --> 00:01:33.600
+它故意将 null 作为词法范围传递。
+and it's deliberately passing
+null along as the lexical scope.
+
+23
+00:01:33.600 --> 00:01:35.466
+这有点做作，但是
+And it's a little bit contrived, but
+
+24
+00:01:35.466 --> 00:01:37.918
+我只是想告诉你这是怎么回事。
+I'm just trying to show
+you kinda how this works.
+
+25
+00:01:40.055 --> 00:01:42.218
+迈克 · 诺斯: 所以如果我们试图引用这个,
+&gt;&gt; Mike North: So
+If we try to invoke this,
+
+26
+00:01:42.218 --> 00:01:47.506
+我们会发现仅仅传递邮件是不够的，对吗？
+we'll see that it's not enough
+to just pass email along, right?
+
+27
+00:01:47.506 --> 00:01:52.968
+我们这里有一个字符串，可以是电子邮件或电话。
+We have a string here that can be email or
+phone.
+
+28
+00:01:52.968 --> 00:01:57.141
+不管我选择哪一个，我仍然得到一个类型检查错误，和
+No matter which one I pick,
+I still get a type-checking error, and
+
+29
+00:01:57.141 --> 00:02:00.302
+原因是，这个约束没有得到满足。
+the reason is,
+this constraint is not satisfied.
+
+30
+00:02:00.302 --> 00:02:02.021
+我们可以用两种方法来解决,
+We could solve this two ways,
+
+31
+00:02:02.021 --> 00:02:06.780
+我们可以绑定函数 Mike North: 创建一个绑定版本的
+we could bind the function,
+&gt;&gt; Mike North: Create a bound version of
+
+32
+00:02:06.780 --> 00:02:07.501
+函数。
+the function.
+
+33
+00:02:07.501 --> 00:02:12.677
+所以在幕后我们围绕函数创建了一个闭包,
+So behind the scenes, we're creating
+a closure around the function,
+
+34
+00:02:12.677 --> 00:02:17.431
+并确保使用正确的词法范围调用它。
+and ensuring that it's invoked
+with the correct lexical scope.
+
+35
+00:02:17.431 --> 00:02:20.567
+或者我们可以使用 call 和 apply，以及
+Or we could use call and apply, and
+
+36
+00:02:20.567 --> 00:02:26.516
+在最近的一次打字稿发布会上，我不知道是哪一个,
+as of a very recent TypeScript release,
+it escapes me which one,
+
+37
+00:02:26.516 --> 00:02:32.813
+您可以使用 bind、 call 和 apply 启用严格的类型检查。
+you can enable strict type-checking
+with bind, call, and apply.
+
+38
+00:02:32.813 --> 00:02:35.509
+你不常遇到这种情况但现在你什么都明白了,
+You don't run into this a lot, but
+now you understand everything,
+
+39
+00:02:35.509 --> 00:02:38.164
+所有你真正需要知道的，开始函数。
+everything you really need to know
+to get started with functions.
+
+40
+00:02:38.164 --> 00:02:44.604
+请注意，当然，我们不，这似乎是一个额外的论点,
+And note that, of course, we don't,
+this appears to be an additional argument,
+
+41
+00:02:44.604 --> 00:02:48.846
+你不必向这个函数传递两个参数。
+you do not have to pass two
+arguments to this function.
+
+42
+00:02:48.846 --> 00:02:50.979
+这个函数仍然接受一个参数。
+This function accepts one parameter,
+still.

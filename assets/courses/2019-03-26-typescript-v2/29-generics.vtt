@@ -1,0 +1,499 @@
+WEBVTT
+
+1
+00:00:00.360 --> 00:00:03.009
+迈克 · 诺斯: 那么让我们深入研究一下泛型。
+&gt;&gt; Mike North: So let's dig into generics.
+
+2
+00:00:03.009 --> 00:00:10.740
+泛型参数化类型的方式与函数参数化值的方式相同。
+Generics parameterize types in the same
+way that functions parameterize values.
+
+3
+00:00:10.740 --> 00:00:14.429
+所以我们要讨论什么时候适合使用通用名。
+So we're gonna talk about when
+it's appropriate to use a generic.
+
+4
+00:00:15.650 --> 00:00:20.239
+通常类型参数的输入和输出。
+The ins and
+outs of type parameters in general.
+
+5
+00:00:20.239 --> 00:00:24.989
+以及如何约束类型参数
+And how to constraint type parameters, for
+
+6
+00:00:24.989 --> 00:00:29.730
+例如，在一个函数中，你有你需要的东西来保证类型安全
+example, within a function, you have what
+you need in order to have type safety
+
+7
+00:00:29.730 --> 00:00:33.899
+内部的功能，外部世界也很满意。
+within the function, and the outside
+world is happy with things as well.
+
+8
+00:00:35.270 --> 00:00:36.996
+因为类型只是约束和
+Cuz types are just constraints and
+
+9
+00:00:36.996 --> 00:00:39.743
+它们代表不同实体之间的合同。
+they represent contracts
+between various entities.
+
+10
+00:00:41.878 --> 00:00:46.030
+迈克 · 诺斯: 那么我们来看一下音符 / 5。
+&gt;&gt; Mike North: So
+we're gonna look at the notes/5.
+
+11
+00:00:46.030 --> 00:00:51.109
+如前所述，泛型参数化类型，如函数参数化值。
+As I said, generics parameterize types
+like functions parameterize values.
+
+12
+00:00:51.109 --> 00:00:54.109
+例如，如果我们有一个这样的函数,
+For example,
+if we had a function like this,
+
+13
+00:00:54.109 --> 00:00:57.619
+让我们假设它是用 JavaScript 编写的，对吗？
+and let's pretend it's just
+written in JavaScript, right?
+
+14
+00:00:57.619 --> 00:01:03.289
+在没有类型注释的情况下，此函数生成一个包装的值,
+With no type annotation,
+this function produces a wrapped value,
+
+15
+00:01:03.289 --> 00:01:07.359
+取决于我们给它什么，我们给它什么
+and depending on what we feed it,
+what we give it for
+
+16
+00:01:07.359 --> 00:01:12.763
+这将决定出来的东西的价值，对不对？
+x, that will determine the value of
+the thing that comes out, right?
+
+17
+00:01:12.763 --> 00:01:15.739
+我们可以把任何我们想要的东西放在那里
+We can put whatever we want there, and
+
+18
+00:01:17.269 --> 00:01:21.409
+这个函数允许我们重复使用这段代码，不管我们想要包装一个字符串,
+the function allows us to reuse this piece
+of code, whether we want to wrap a string,
+
+19
+00:01:21.409 --> 00:01:25.299
+或者数字，或者在包装的值中包装的值,
+or a number, or have a wrapped
+value inside a wrapped value,
+
+20
+00:01:26.439 --> 00:01:29.829
+边界 x 是一个占位符。
+the perimeter x is sort of
+a placeholder that is used.
+
+21
+00:01:29.829 --> 00:01:32.549
+它允许重复使用这段代码。
+And it allows to reuse this piece of code.
+
+22
+00:01:32.549 --> 00:01:38.680
+类似地，我们可以创建一个允许我们
+Similarly, we can create
+a type that allows us to
+
+23
+00:01:38.680 --> 00:01:45.849
+在这种情况下，在这些尖括号之间提供一个类型参数。
+provide a type parameter in this case
+X in between these angle brackets.
+
+24
+00:01:45.849 --> 00:01:53.009
+并且该类型参数将用作此属性值的类型。
+And that type parameter will be used
+as the type for this property value.
+
+25
+00:01:53.009 --> 00:01:57.689
+这里有一个例子，如果我传入字符串数组,
+So here's an example,
+if I pass in string array,
+
+26
+00:01:57.689 --> 00:02:00.930
+这就像把一个参数传递给一个函数，对吗？
+this is just like passing
+an argument to a function, right?
+
+27
+00:02:00.930 --> 00:02:05.298
+但是我将一个类型传递给泛型类型。
+But I'm passing a type to a generic type.
+
+28
+00:02:07.963 --> 00:02:10.764
+迈克 · 诺斯: 因为有这样的工具提示,
+&gt;&gt; Mike North: So
+because of the tool tips like,
+
+29
+00:02:12.335 --> 00:02:13.445
+迈克 · 诺斯: 这是正确的，但是
+&gt;&gt; Mike North: This is correct, but
+
+30
+00:02:13.445 --> 00:02:16.235
+我更感兴趣的是我能用这个东西做什么。
+I'm more interested in what
+I can do with this thing.
+
+31
+00:02:16.235 --> 00:02:19.746
+如果我们看看 val.value,
+If we look at val.value,
+
+32
+00:02:19.746 --> 00:02:24.537
+我们可以看到它是一个字符串数组。
+we can see that it is a string array.
+
+33
+00:02:26.096 --> 00:02:27.365
+迈克 · 诺斯: 就像你在这里看到的那样。
+&gt;&gt; Mike North: As you
+can see right over here.
+
+34
+00:02:28.776 --> 00:02:32.015
+迈克 · 诺斯: 如果我们把它改成一个字符串,
+&gt;&gt; Mike North: If we were to change
+this and make it just a string, well,
+
+35
+00:02:32.015 --> 00:02:36.618
+我们会得到一个类型错误，我们必须使这是一个字符串。
+we would get a type error here,
+we'd have to make this a string.
+
+36
+00:02:36.618 --> 00:02:39.284
+Mike North: 现在，值的类型是 string。
+&gt;&gt; Mike North: And now,
+the type of value is string.
+
+37
+00:02:39.284 --> 00:02:44.289
+对不起，它总是消失，我对我的鼠标太过热心了。
+Sorry, it keeps disappearing,
+I'm being overzealous with my mouse.
+
+38
+00:02:44.289 --> 00:02:51.210
+但是希望你们可以看到，我们我们有点填补了一个空白或者
+But hopefully you can see here,
+we're we're sort of filling in a blank or
+
+39
+00:02:51.210 --> 00:02:59.149
+提供一个类型，然后将其合并到 WrappedValue 的内容中。
+providing a type that is then incorporated
+into what WrappedValue shakes out to be.
+
+40
+00:03:04.491 --> 00:03:07.051
+Mike North: 所以你可以随心所欲地命名这些类型参数。
+&gt;&gt; Mike North: So you can name these
+type parameters whatever you want.
+
+41
+00:03:07.051 --> 00:03:12.758
+我可以做这个，Mike North: Name 函数键。
+I can make this,
+&gt;&gt; Mike North: Name function keys.
+
+42
+00:03:15.792 --> 00:03:17.269
+迈克 · 诺斯: 我可以让它成为主唱,
+&gt;&gt; Mike North: I can
+make it FrontEndMasters,
+
+43
+00:03:17.269 --> 00:03:20.340
+就像你可以随意命名函数参数一样。
+just like you can name function
+params whatever you want.
+
+44
+00:03:20.340 --> 00:03:25.270
+这完全是一个本地名字，指的是所有能接触到这个的东西
+That's completely a local name to
+everything that has access to this
+
+45
+00:03:25.270 --> 00:03:29.969
+类型 param，也就是某种意义上的，把它看作一个闭包。
+type param, which is just sort of, think
+of it like the same idea as a closure.
+
+46
+00:03:29.969 --> 00:03:32.930
+你有一个作用域这是一个局部变量,
+Right, you have a scope, and
+this is a local variable,
+
+47
+00:03:32.930 --> 00:03:35.539
+这几乎就像传递给函数的参数。
+it's almost like an argument
+passed to a function.
+
+48
+00:03:35.539 --> 00:03:39.531
+该参数的名称只在该函数中有意义。
+The name of that argument only
+has meaning within that function.
+
+49
+00:03:43.586 --> 00:03:47.834
+迈克 · 诺斯: 你们会经常看到的这个会议，就是从这里开始的
+&gt;&gt; Mike North: So the convention,
+which you'll see a lot, is to start with
+
+50
+00:03:47.834 --> 00:03:53.319
+大写字母 t，并使用大写字母如 t，u，v，或 s，或 r。
+the capital letter T, and use capital
+letters like T, U, V, or S, or R.
+
+51
+00:03:53.319 --> 00:03:58.437
+这是从使用模板参数的 c + + 继承而来的
+This a carryover from C++
+which uses template parameters
+
+52
+00:03:58.437 --> 00:04:04.129
+基本上它们在概念上是一致的。
+which basically they're
+conceptually identical to this.
+
+53
+00:04:04.129 --> 00:04:06.759
+这就是为什么你会看到大量的打字稿编码,
+So that's why you'll see
+a lot of TypeScript coding,
+
+54
+00:04:06.759 --> 00:04:10.199
+包括我的例子，他们只会使用大写字母 t。
+including my examples,
+they'll just use the capital letter T.
+
+55
+00:04:10.199 --> 00:04:14.073
+这就好比说这个函数取 x 和
+But that's just like saying
+this function takes x and
+
+56
+00:04:14.073 --> 00:04:18.043
+我们可以给它起任何我们想要的名字。
+y as arguments, and
+we can name this whatever we want.
+
+57
+00:04:19.231 --> 00:04:22.880
+Mike North: 如果我们使用数组过滤器,
+&gt;&gt; Mike North: So if we were using
+something like array filter,
+
+58
+00:04:22.880 --> 00:04:27.776
+我们可以输入一个函数，这个函数可以根据
+we could type a function that would
+appropriately filter based on
+
+59
+00:04:27.776 --> 00:04:31.990
+这个数组中可能存在的东西的类型，对吗？
+the types of things that might
+be in this array, right?
+
+60
+00:04:31.990 --> 00:04:36.829
+如果我们通过一个字符串数组进行过滤，这样我们就可以删除任何空字符串
+If we were filtering through an array of
+strings, so that we could remove any empty
+
+61
+00:04:36.829 --> 00:04:42.019
+字符串，我们希望接受它作为过滤函数,
+string we found, we'd want to
+accept as our filtering function,
+
+62
+00:04:42.019 --> 00:04:47.060
+我们希望用一个字符串作为参数，然后返回一个布尔值。
+we'd want that to take a string as
+an argument and to return a boolean.
+
+63
+00:04:47.060 --> 00:04:51.829
+事实上，如果我们有一个包含字符串的数组,
+And in fact, that is what happens,
+if we had an array containing strings,
+
+64
+00:04:51.829 --> 00:04:54.646
+. filter () ，Mike North: And
+.filter(),
+&gt;&gt; Mike North: And
+
+65
+00:04:54.646 --> 00:05:00.230
+我们开始实现我们的回调，迈克 · 诺斯: 我们开始吧
+we start to implement our callback,
+&gt;&gt; Mike North: Let's
+
+66
+00:05:00.230 --> 00:05:04.509
+假设这是一个总是通过的过滤器，结果 x 的值是一个字符串。
+say it's a filter that always passes,
+it turns out x has a value of a string.
+
+67
+00:05:06.192 --> 00:05:08.129
+迈克 · 诺斯: 对吧？ 这正是我们想要的。
+&gt;&gt; Mike North: Right?
+That's just what we want.
+
+68
+00:05:08.129 --> 00:05:11.649
+如果我们有一个命名函数
+If we had a named function
+that was designed
+
+69
+00:05:11.649 --> 00:05:16.130
+致，迈克 · 诺斯: 名字
+to,
+&gt;&gt; Mike North: Named
+
+70
+00:05:16.130 --> 00:05:20.279
+这样的功能，迈克诺斯: 这只是想接收
+function like this,
+&gt;&gt; Mike North: That only wanted to receive
+
+71
+00:05:20.279 --> 00:05:25.689
+数字，我们绝对希望这样说，这里有一个错位。
+numbers, we would absolutely want this
+to say, there's a misalignment here.
+
+72
+00:05:25.689 --> 00:05:27.740
+你的函数被设计成接受数字,
+Your function's designed to take numbers,
+
+73
+00:05:27.740 --> 00:05:30.329
+我需要一个可以带字符串的。
+I need one that's
+designed to take strings.
+
+74
+00:05:30.329 --> 00:05:34.769
+所以这将是一个适当的类型，使用一个通用类型，将允许我们排序
+So this would be an appropriate type using
+a generic that would allow us to sort of
+
+75
+00:05:34.769 --> 00:05:38.831
+填空，你过滤的实体类型是什么？
+fill in the blank, what is the type
+of the entity you're filtering for?
+
+76
+00:05:40.610 --> 00:05:44.225
+迈克 · 诺斯: 这里有一个我们使用这种通用类型传入的例子
+&gt;&gt; Mike North: So here's an example of
+us using this generic type of passing in
+
+77
+00:05:44.225 --> 00:05:47.930
+字符串作为类型参数，所以这个 t 将变成一个字符串。
+string as the type parameter, so
+this T will turn into a string.
+
+78
+00:05:49.129 --> 00:05:52.670
+现在我们可以看到，val 是一个字符串
+And we can see that now,
+val is a string, and
+
+79
+00:05:52.670 --> 00:05:55.290
+我们正在检查 val 的类型是否是字符串。
+we're checking to see if
+the type of val is a string.
+
+80
+00:05:55.290 --> 00:05:57.129
+这一切看起来都很棒，对吧？
+This all looks great to me, right?
+
+81
+00:05:57.129 --> 00:06:01.894
+运行时的东西，对不起，运行时的东西看起来
+The runtime stuff, this, sorry,
+that runtime stuff looks
+
+82
+00:06:01.894 --> 00:06:06.661
+就像我要检查是否有一个字符串或
+exactly like what I would want
+to check if there's a string or
+
+83
+00:06:06.661 --> 00:06:09.940
+不是，这应该是一个字符串。
+not, and this in fact should be a string.
+
+84
+00:06:11.663 --> 00:06:14.538
+Mike North: 如果我们试图解析错误的参数，很明显我们会得到一个错误,
+&gt;&gt; Mike North: If we try to parse in the
+wrong argument, obviously we get an error,
+
+85
+00:06:14.538 --> 00:06:16.519
+否则，如果是正确的类型，我们就没问题。
+otherwise if it's the right type,
+we get OK.

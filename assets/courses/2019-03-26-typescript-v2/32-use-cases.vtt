@@ -1,0 +1,816 @@
+WEBVTT
+
+1
+00:00:00.390 --> 00:00:03.839
+迈克 · 诺斯: 所以我们在这里要处理的最后一件事就是什么时候使用泛型。
+&gt;&gt; Mike North: So the last thing we're
+gonna tackle here is when to use generics.
+
+2
+00:00:03.839 --> 00:00:06.330
+这是一个非常非常强大的想法。
+It's a really, really powerful idea.
+
+3
+00:00:06.330 --> 00:00:12.019
+但是人们遇到麻烦的类型开始爆炸的复杂性,
+But people who run into trouble with types
+that begin to explode in complexity,
+
+4
+00:00:13.300 --> 00:00:17.500
+通常是因为过分热衷于使用泛型。
+often that comes from
+overzealous use of generics.
+
+5
+00:00:18.539 --> 00:00:23.670
+我也会仔细阅读博客文章。
+And I would also be careful
+reading Blog articles.
+
+6
+00:00:23.670 --> 00:00:27.378
+并且质疑你在那里看到的信息。
+And question the information
+that you see out there.
+
+7
+00:00:27.378 --> 00:00:31.571
+因为这是很多内容都会出错的一件事。
+Because this is one thing that
+a lot of content gets wrong.
+
+8
+00:00:33.408 --> 00:00:35.082
+迈克 · 诺斯: 我想给你们看一个不好的例子。
+&gt;&gt; Mike North: I wanna show
+you a bad example here.
+
+9
+00:00:38.024 --> 00:00:41.085
+迈克 · 诺斯: 我们有一个叫做“形状”的界面。
+&gt;&gt; Mike North: So
+we've got an interface called shape.
+
+10
+00:00:41.085 --> 00:00:43.219
+它上面有一个叫 draw 的方法。
+It has a method on it called draw.
+
+11
+00:00:44.420 --> 00:00:47.759
+圆形从形状上延伸，圆有一个半径。
+Circle extends from shape,
+circle has a radius.
+
+12
+00:00:47.759 --> 00:00:49.689
+所以在这里，我们说画出形状。
+So here, we're saying draw shapes.
+
+13
+00:00:51.070 --> 00:00:54.939
+我们有一个类型参数，其中 s 必须扩展形状。
+And we have a type parameter
+where S must extend shape.
+
+14
+00:00:54.939 --> 00:01:00.200
+我们接受一个 s 的数组，然后遍历每个数组并绘制。
+And we take in an array of S's, and
+we iterate over each of those and draw.
+
+15
+00:01:02.030 --> 00:01:07.280
+这里是另一个只使用基类的实现。
+Here is another implementation
+that just uses a base class here.
+
+16
+00:01:07.280 --> 00:01:11.879
+所以泛型非常适用于两件事。
+So generics are great for
+relating two things.
+
+17
+00:01:11.879 --> 00:01:17.219
+我取一个 t 的数组，然后给你们一个 t 的字典。
+I take in an array of t, and
+I give you back a dictionary of t.
+
+18
+00:01:17.219 --> 00:01:21.975
+泛型，即类型参数，是将这两者联系在一起的东西。
+The generic, that type parameter,
+is what ties those two together.
+
+19
+00:01:21.975 --> 00:01:25.039
+你给我线，我给你线，对不对？
+You give me strings,
+I give you back strings, right?
+
+20
+00:01:26.319 --> 00:01:30.289
+在这里，我们只使用这个类型参数一次。
+Here, we're only using
+this type parameter once.
+
+21
+00:01:30.289 --> 00:01:35.439
+而且您总是可以消除使用过一次的类型参数。
+And you can always eliminate
+a type parameter that's used once.
+
+22
+00:01:35.439 --> 00:01:37.900
+有一种习俗，人们喜欢把它用在,
+There's a convention that
+people like to use where,
+
+23
+00:01:37.900 --> 00:01:39.340
+我并不完全反对这个观点。
+I don't disagree with it as much.
+
+24
+00:01:40.700 --> 00:01:46.379
+其中，为了方便起见，他们将对类型断言使用泛型。
+Where they'll, for convenience,
+use a generic for a type assertion.
+
+25
+00:01:46.379 --> 00:01:50.229
+例如，它们将包装一个函数和
+For example,
+they'll wrap fetch in a function and
+
+26
+00:01:50.229 --> 00:01:55.838
+允许您传递指示响应结构的类型参数。
+allow you to pass a type parameter
+indicating the structure of the response.
+
+27
+00:01:57.370 --> 00:02:02.140
+好吧，我的意思是，你完全可以排除它，对吗？
+Okay, I mean,
+you could certainly eliminate it, right?
+
+28
+00:02:02.140 --> 00:02:05.359
+但其中也有一些便利因素。
+But there is some
+convenience factor there.
+
+29
+00:02:05.359 --> 00:02:07.694
+你眼前的这种东西,
+This kind of thing that you're
+looking at in front of you,
+
+30
+00:02:07.694 --> 00:02:08.990
+这里一点都不方便。
+there's no convenience here.
+
+31
+00:02:08.990 --> 00:02:11.578
+这只是不必要的抽象。
+This is just unnecessary abstraction.
+
+32
+00:02:11.578 --> 00:02:16.110
+但是这确实告诉我们，它有一个用处。
+But what this does show us,
+it is useful for one thing.
+
+33
+00:02:16.110 --> 00:02:19.969
+它确实告诉我们在这里指定这种类型,
+It does show us that
+specifying this type here,
+
+34
+00:02:19.969 --> 00:02:22.449
+这样我们就可以进入这个方法的绘图程序。
+that's what allows us to
+access this method draw.
+
+35
+00:02:23.969 --> 00:02:27.525
+这样我们就得到了和这个一样的东西。
+This gets us the same thing as this.
+
+36
+00:02:27.525 --> 00:02:33.652
+因此，类型参数上的约束等效于在
+So constraints on type parameters
+are equivalent to specifying the type on
+
+37
+00:02:33.652 --> 00:02:40.379
+一个参数，它规定了你在 s 上的函数里能做什么，对吗？
+an argument, in that it dictates what you
+can do within the function on s, right?
+
+38
+00:02:40.379 --> 00:02:44.710
+在这两种情况下，我们有点绘制，点绘制，对不对？
+In both cases, we've got dot draw,
+dot draw, right?
+
+39
+00:02:44.710 --> 00:02:46.336
+在这里，它来自这里。
+Up here, it's coming from this.
+
+40
+00:02:46.336 --> 00:02:47.528
+在这里，它就是从那里来的。
+Down here, it's coming from that.
+
+41
+00:02:50.546 --> 00:02:51.639
+迈克 · 诺斯: 什么事？
+&gt;&gt; Mike North: Yes?
+
+42
+00:02:51.639 --> 00:02:57.347
+演讲者2: 所以在第121行，如果形状不是一个界面
+&gt;&gt; Speaker 2: So on line 121,
+if shape was not an interface and
+
+43
+00:02:57.347 --> 00:03:01.740
+这是一个类型化名，不会工作吗？
+it was a type alias, would it not work?
+
+44
+00:03:01.740 --> 00:03:05.270
+迈克 · 诺斯: 我想会没事的。
+&gt;&gt; Mike North: It will be fine, I think.
+
+45
+00:03:05.270 --> 00:03:07.080
+字体形状等于这个。
+Type shape equals this.
+
+46
+00:03:07.080 --> 00:03:07.860
+没问题。
+Yep, no problem.
+
+47
+00:03:09.099 --> 00:03:14.090
+这是，我们在非常大的重叠的地方
+This is the, we're in the very
+large amount of overlap where
+
+48
+00:03:14.090 --> 00:03:18.379
+选择其中一个并没有什么坏处。
+there's no real downside to
+choosing one of the other.
+
+49
+00:03:18.379 --> 00:03:22.866
+演讲者2: 当然，好吧，我想我只是不明白为什么在121行,
+&gt;&gt; Speaker 2: Sure, well, I guess I'm
+just confused on why on line 121,
+
+50
+00:03:22.866 --> 00:03:28.211
+如果你以形状传递，它们有半径，这不是错误吗？
+if you're passing in shapes and
+they have radius, wouldn't that error?
+
+51
+00:03:28.211 --> 00:03:32.150
+因为它只是期待只有画的东西。
+Because it's just expecting
+something with only draw.
+
+52
+00:03:34.780 --> 00:03:37.199
+迈克 · 诺斯: 你能说清楚为什么你认为它会出错吗
+&gt;&gt; Mike North: Can you articulate
+why you would expect it to error so
+
+53
+00:03:37.199 --> 00:03:38.170
+我能回答这个问题吗？
+I can answer that question?
+
+54
+00:03:39.280 --> 00:03:42.254
+演讲者2: 是的，因为这个界面,
+&gt;&gt; Speaker 2: Well, yeah,
+so because the interface,
+
+55
+00:03:42.254 --> 00:03:47.740
+某个东西实现了一个接口，但它可能有其他属性。
+something implements an interface,
+but it could have other attributes.
+
+56
+00:03:47.740 --> 00:03:49.686
+迈克 · 诺斯: 完全正确 说话人2: 使用类型别名,
+&gt;&gt; Mike North: Totally.
+&gt;&gt; Speaker 2: With a type alias,
+
+57
+00:03:49.686 --> 00:03:52.882
+这不是很严格的定义吗？
+isn't that like a strict definition?
+
+58
+00:03:52.882 --> 00:03:58.224
+它必须有这样的东西，如果你通过一个圆圈来绘制形状,
+It has to have this stuff, and
+if you pass a circle in to draw shapes to,
+
+59
+00:03:58.224 --> 00:04:04.219
+你只是告诉它我想要一个形状，它不也期望一个半径吗？
+and you're only telling it I want a shape,
+wouldn't it also expect a radius?
+
+60
+00:04:05.240 --> 00:04:09.265
+迈克 · 诺斯: 如果我在这里要求圆圈，是的,
+&gt;&gt; Mike North: If I was
+demanding circle here, yeah,
+
+61
+00:04:09.265 --> 00:04:17.497
+我会说这是一个过度迈克北: 这是要求
+I would say this is an overly
+&gt;&gt; Mike North: This is asking for
+
+62
+00:04:17.497 --> 00:04:21.160
+太多了，因为我不需要这里的半径。
+too much,
+in that I don't need radius down here.
+
+63
+00:04:21.160 --> 00:04:23.360
+我现在可以控制半径了。
+I have access to radius now.
+
+64
+00:04:23.360 --> 00:04:26.101
+如果我需要这个，我会要求绕圈。
+If I needed this, I would demand circles.
+
+65
+00:04:26.101 --> 00:04:28.040
+我会说你得给我传圆圈。
+I would say you've gotta pass me circles.
+
+66
+00:04:28.040 --> 00:04:32.750
+我喜欢遵循的规则是，你只要求你需要的东西
+The rule I like to follow is you ask for
+only what you need and
+
+67
+00:04:32.750 --> 00:04:35.459
+你把所有东西都还回去。
+you return everything you can.
+
+68
+00:04:35.459 --> 00:04:40.189
+所以你只要求你需要的东西，这样你就可以用这个平方和
+So you ask for only what you need so
+that you can use this with square and
+
+69
+00:04:40.189 --> 00:04:44.259
+三角形和二维点，也就是 x 和 y。
+triangle and 2D point,
+which is just gonna have an X and Y.
+
+70
+00:04:45.439 --> 00:04:49.290
+如果这能行如果这都取决于绘图函数,
+If that's gonna work,
+if it's all up to the draw function,
+
+71
+00:04:49.290 --> 00:04:51.154
+那你就不需要更多的细节了。
+then you need no further details.
+
+72
+00:04:51.154 --> 00:04:58.029
+这是你的最低要求，你可以坚持下去。
+This is your minimum requirement,
+and you can stick with that.
+
+73
+00:04:58.029 --> 00:04:58.699
+另一方面,
+Now, on the other hand,
+
+74
+00:04:58.699 --> 00:05:03.899
+如果你要退货，你希望你的消费者
+if you're returning something,
+you want your consumers to be able to
+
+75
+00:05:03.899 --> 00:05:10.040
+无论安全程度如何，都能接触到这个物体的丰富内涵。
+access all of the richness of this
+object to whatever degree is safe.
+
+76
+00:05:10.040 --> 00:05:14.860
+假设我们有多种类型的集合比如一个列表一个数组,
+So let's say we had multiple types of
+collections, like a list, an array,
+
+77
+00:05:14.860 --> 00:05:17.935
+它扩展了 list，一个链表。
+which extends list, a linked list.
+
+78
+00:05:17.935 --> 00:05:22.307
+如果数组和链表上有特殊的方法，则没有理由
+If array and linked list have special
+methods on them, there's no reason for
+
+79
+00:05:22.307 --> 00:05:25.610
+我会给你们一个非常低级的基础类。
+me to kind of give you back
+a very low level base class.
+
+80
+00:05:25.610 --> 00:05:28.129
+这会阻止你安全地访问到达
+That would prevent you from
+safely accessing to reach
+
+81
+00:05:28.129 --> 00:05:29.519
+下面的功能。
+functionality underneath.
+
+82
+00:05:29.519 --> 00:05:32.399
+所以只要求你所需要的，尽你所能归还一切。
+So ask for only what you need,
+return everything you can.
+
+83
+00:05:33.819 --> 00:05:34.399
+- 什么事，先生?-那么
+Yes, sir?
+&gt;&gt; Speaker 3: So
+
+84
+00:05:34.399 --> 00:05:36.194
+这两个函数是等价的，对吗？
+the two functions are equivalent, then?
+
+85
+00:05:36.194 --> 00:05:41.800
+但是你是说最好的那种只是普通的杀伤力太大了？
+But you're saying the top one
+is just overkill on the generic?
+
+86
+00:05:41.800 --> 00:05:44.824
+迈克 · 诺斯: 它们是等价的，而且它们编译起来也完全一样
+&gt;&gt; Mike North: They're equivalent, and
+they will compile to exactly the same
+
+87
+00:05:44.824 --> 00:05:46.957
+除了函数的名字之外。
+thing, aside from
+the name of the function.
+
+88
+00:05:46.957 --> 00:05:51.896
+演讲者3: 你能举个例子说明你实际上想在哪里做-吗
+&gt;&gt; Speaker 3: Could you give an example
+where you would actually want to do the-
+
+89
+00:05:51.896 --> 00:05:55.141
+迈克 · 诺斯: 当然，这个怎么样？
+&gt;&gt; Mike North: Absolutely, how about this?
+
+90
+00:05:58.466 --> 00:06:00.225
+迈克 · 诺斯: 让我想一想。
+&gt;&gt; Mike North: Let me think for a moment.
+
+91
+00:06:00.225 --> 00:06:03.949
+有必要使用类型参数的示例？
+An example where the type
+parameter would be necessary?
+
+92
+00:06:03.949 --> 00:06:06.980
+扬声器3: 你实际上想在通用语上使用它。
+&gt;&gt; Speaker 3: Where you'd actually
+want to use it on the generic.
+
+93
+00:06:06.980 --> 00:06:08.093
+迈克 · 诺斯: 好的，我们开始吧。
+&gt;&gt; Mike North: Yeah, okay, here we go.
+
+94
+00:06:12.471 --> 00:06:14.550
+迈克 · 诺斯: 所以我得找点别的事做。
+&gt;&gt; Mike North: So
+I'd have to involve something else.
+
+95
+00:06:14.550 --> 00:06:15.420
+对不起，不是这样的。
+Sorry, that's not true.
+
+96
+00:06:17.069 --> 00:06:18.709
+迈克 · 诺斯: 那是布尔值。
+&gt;&gt; Mike North: That's Boolean.
+
+97
+00:06:18.709 --> 00:06:23.509
+我必须引入这个类型参数的第二个用法。
+I'd have to introduce a second
+use of this type parameter.
+
+98
+00:06:23.509 --> 00:06:28.459
+例如，返回这些东西的一个数组。
+For example,
+return an array of these things.
+
+99
+00:06:28.459 --> 00:06:31.396
+我会说地图
+And I'd say map, and
+
+100
+00:06:35.528 --> 00:06:38.240
+迈克 · 诺斯: s 是真实的。
+&gt;&gt; Mike North: S is drawn true.
+
+101
+00:06:38.240 --> 00:06:39.011
+报税表。
+Return s.
+
+102
+00:06:41.350 --> 00:06:45.778
+迈克 · 诺斯: 那么现在，让我们来看看，为什么这个不开心？
+&gt;&gt; Mike North: So now,
+let's see, why is this unhappy?
+
+103
+00:06:45.778 --> 00:06:48.909
+[听不见]迈克 · 诺斯: 谢谢。
+&gt;&gt; [INAUDIBLE]
+&gt;&gt; Mike North: Thank you.
+
+104
+00:06:50.572 --> 00:06:54.199
+迈克 · 诺斯: 好的，现在，事实上我在两个地方使用这个,
+&gt;&gt; Mike North: Okay, so now, the fact
+that I'm using this in two places,
+
+105
+00:06:54.199 --> 00:06:56.019
+这是有目的的。
+this serves a purpose.
+
+106
+00:06:56.019 --> 00:07:01.360
+没有这个，即使我只是说它返回形状,
+Without this, even if I just
+were to say it return shape,
+
+107
+00:07:01.360 --> 00:07:03.740
+我们有一个明显的缺点。
+we have a significant downside.
+
+108
+00:07:03.740 --> 00:07:09.019
+在这里，如果我试着说 drawShapes1并传递一个圆形数组。
+In that, if I were to try to say
+drawShapes1 and pass an array of circles.
+
+109
+00:07:19.042 --> 00:07:20.795
+迈克 · 诺斯: 这就是我的圈子。
+&gt;&gt; Mike North: There is my circle.
+
+110
+00:07:20.795 --> 00:07:22.449
+你不喜欢那里的什么？
+What don't you like there?
+
+111
+00:07:22.449 --> 00:07:23.886
+半径是一个数字。
+Radius is a number.
+
+112
+00:07:28.315 --> 00:07:33.810
+迈克 · 诺斯: 我必须明确地说明这一点。
+&gt;&gt; Mike North: I'd have to
+be explicit about this.
+
+113
+00:07:33.810 --> 00:07:39.079
+它已经在说这是一个形状上的未知属性。
+It already is saying this is
+an unknown property on shape.
+
+114
+00:07:39.079 --> 00:07:39.978
+我可以在外面创建这个。
+I could create this outside.
+
+115
+00:07:45.670 --> 00:07:46.959
+迈克 · 诺斯: 现在，它会很高兴的。
+&gt;&gt; Mike North: And now, it'll be happy.
+
+116
+00:07:46.959 --> 00:07:52.475
+但是现在，如果我想把它锁起来,
+But now, I'm in a situation where
+if I wanted to chain off of that,
+
+117
+00:07:52.475 --> 00:07:56.329
+我已经把它简化为一系列的形状。
+I have reduced this down
+to an array of shapes.
+
+118
+00:07:56.329 --> 00:07:59.079
+我已经没有圆形数组了。
+I don't have an array of circles anymore.
+
+119
+00:08:00.279 --> 00:08:03.047
+我没有拿出我经过的东西,
+I didn't get out what I passed in,
+
+120
+00:08:03.047 --> 00:08:07.827
+我得到了函数需要的最低公共值。
+I got out the lowest common
+thing that the function needed.
+
+121
+00:08:07.827 --> 00:08:13.283
+然而，如果我们返回 s 的数组，现在 radius 就存在了。
+Whereas if we return an array of s's,
+now radius is present.
+
+122
+00:08:13.283 --> 00:08:15.779
+演讲者3: 如果我们绕圈子通过，你会得到圈子回来。
+&gt;&gt; Speaker 3: If we pass in circles,
+you're gonna get circles back.
+
+123
+00:08:15.779 --> 00:08:17.848
+我们通过正方形，我们得到正方形回来。
+We pass in squares,
+we get the squares back.
+
+124
+00:08:17.848 --> 00:08:19.293
+迈克 · 诺斯: 你可以在工具顶端看到它。
+&gt;&gt; Mike North: And
+you can see it right in the tool tip.
+
+125
+00:08:19.293 --> 00:08:23.670
+看到所有的 s 都变成了圆圈了吗？
+See how all of the s's
+have changed to circle?
+
+126
+00:08:23.670 --> 00:08:26.610
+这个呼叫站点已经填写了空白。
+The blank has been filled
+in at this call site.
+
+127
+00:08:26.610 --> 00:08:29.670
+这就是 type 参数可以给你带来的东西。
+And this is where type parameter
+would get you something.
+
+128
+00:08:29.670 --> 00:08:34.701
+在这种情况下，drawShapes 并不关心形状的细节。
+In that drawShapes does not care
+about the particulars of the shape.
+
+129
+00:08:34.701 --> 00:08:39.260
+但是它能做的就是把你过去的东西还给你。
+But what it will do is give
+you back what you passed in.
+
+130
+00:08:41.821 --> 00:08:45.414
+麦克 · 诺斯: 或者我也可以回一个承诺，结成 s 或什么的。
+&gt;&gt; Mike North: Or I could return a promise
+that resolves to s or something.
+
+131
+00:08:45.414 --> 00:08:49.209
+但关键是，我已经介绍了 type 参数的第二个用法。
+But the key is, I've introduced
+a second use of the type parameter.
+
+132
+00:08:49.209 --> 00:08:51.470
+这就使得这个普通的东西是值得的。
+And that makes this generic worthwhile.
+
+133
+00:08:52.690 --> 00:08:59.158
+现在，type 参数正在描述参数和返回值之间的关系。
+Now, the type parameter is describing a
+relationship between arguments and return.
+
+134
+00:08:59.158 --> 00:09:04.474
+对于类，你可以说我在构造函数中加入了这个,
+And for like classes, you could say
+I take in this in my constructor,
+
+135
+00:09:04.474 --> 00:09:07.232
+这个方法返回这个类型。
+and that method returns this type.
+
+136
+00:09:07.232 --> 00:09:10.340
+这个课程有更多的机会，因为你有这样的机会
+There are many more opportunities
+with this classes because you have so
+
+137
+00:09:10.340 --> 00:09:12.071
+对他们来说有很多不同的部分，对吗？
+many different parts to them, right?
+
+138
+00:09:12.071 --> 00:09:15.099
+但是你必须能够指向两个。
+But you gotta be able to point to two.
+
+139
+00:09:15.099 --> 00:09:16.687
+如果你做不到,
+If you can't do that,
+
+140
+00:09:16.687 --> 00:09:21.630
+你可能只是使用了一个类型参数作为某种断言，对吗？
+you may just be using a type parameter
+as sort of an assertion, right?
+
+141
+00:09:21.630 --> 00:09:26.664
+或者你是说把它当绳子还给我。
+Or you're saying give this
+back to me as a string.
+
+142
+00:09:26.664 --> 00:09:28.720
+把它作为数组还给我。
+Give this back to me as an array.
+
+143
+00:09:28.720 --> 00:09:29.980
+这不是一回事。
+That's not the same thing.
+
+144
+00:09:29.980 --> 00:09:33.240
+这通常不是类型参数的用途。
+That's not what type parameters
+are typically used for.

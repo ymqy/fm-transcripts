@@ -1,0 +1,347 @@
+WEBVTT
+
+1
+00:00:00.450 --> 00:00:04.522
+迈克 · 诺斯: 这可能是我将要做的最有价值的事情之一
+&gt;&gt; Mike North: This is probably one of
+the most valuable things that I'm going to
+
+2
+00:00:04.522 --> 00:00:06.520
+在这个工作室里教你们
+teach you in this workshop, and
+
+3
+00:00:06.520 --> 00:00:10.384
+这是一个从 JavaScript 转换到 TypeScript 的秘诀。
+it is a recipe for
+converting from JavaScript to TypeScript.
+
+4
+00:00:10.384 --> 00:00:15.003
+所以，打字稿最大的优点之一就是它可以
+So one of the great things
+about TypeScript is it can
+
+5
+00:00:15.003 --> 00:00:19.954
+非常非常容易地与 JavaScript 进行互操作。
+inter-operate with JavaScript very,
+very easily.
+
+6
+00:00:19.954 --> 00:00:23.995
+你将会有 JS 和 TS 模块并排。
+You're gonna have JS and
+TS modules side by side.
+
+7
+00:00:23.995 --> 00:00:30.483
+你可以导入一个方向或者另一个方向，一切都会好起来。
+You can import in one direction or
+the other and everything will be okay.
+
+8
+00:00:30.483 --> 00:00:33.451
+并不是很多编程语言都能给你这个。
+Not a lot of programming
+languages give you this.
+
+9
+00:00:33.451 --> 00:00:38.668
+所以我们不应该将 JavaScript 转换为 TypeScript
+So we shouldn't treat a transition
+from JavaScript to TypeScript
+
+10
+00:00:38.668 --> 00:00:44.073
+同样的代码库更改，将导致更改
+as the same kind of change to a code
+base that would result from a change
+
+11
+00:00:44.073 --> 00:00:49.031
+把一种编程语言和一些完全不相关的东西联系起来。
+in one programming language to
+something totally unrelated.
+
+12
+00:00:49.031 --> 00:00:52.860
+这就像重写一些东西从 Ruby 到 Rust。
+It's like rewriting
+something from Ruby to Rust.
+
+13
+00:00:52.860 --> 00:00:56.459
+这就像苹果和桔子一样，对吗？
+That is like apples and oranges, right?
+
+14
+00:00:56.459 --> 00:01:01.658
+所以我要给你们讲一个三步骤的过程，这个过程会让你们明白
+So I'm gonna lead you down a three-step
+process that will make it so
+
+15
+00:01:01.658 --> 00:01:06.867
+这个更改可以一次对几个文件进行递增更改。
+this change can be made incrementally
+on a couple of files at a time.
+
+16
+00:01:06.867 --> 00:01:12.352
+或者在多次传递中到达您正在寻找的端点
+Or in multiple passes where you get
+to the endpoint you are looking
+
+17
+00:01:12.352 --> 00:01:17.739
+这样就不会有潜在的额外工作了
+to get without potentially running
+into creating extra work for
+
+18
+00:01:17.739 --> 00:01:22.746
+你自己或者对那些依赖这些代码的人的破坏。
+yourself or disruption for
+people who depend on that code.
+
+19
+00:01:22.746 --> 00:01:27.027
+首先，让我们讨论一下什么是不该做的。
+First, let's talk about what not to do.
+
+20
+00:01:27.027 --> 00:01:31.438
+你不想做的是混合从 JavaScript 到
+What you don't want to do is mix
+a conversion from JavaScript to
+
+21
+00:01:31.438 --> 00:01:35.945
+功能上的变化，这些变化可能很微妙。
+TypeScript with functional changes,
+and these can be subtle.
+
+22
+00:01:35.945 --> 00:01:40.777
+这可能是检查
+It can be the difference
+between checking whether
+
+23
+00:01:40.777 --> 00:01:45.615
+一个值对于一种支票来说是否真实，对吗？
+a value is truthy or
+not to a type of check, right?
+
+24
+00:01:45.615 --> 00:01:49.820
+这是真值还是检查这个值是否未定义，没有零和
+Is this truth versus check whether
+this value is undefined, no zero and
+
+25
+00:01:49.820 --> 00:01:52.706
+空字符串会有不同的处理方式。
+empty string are gonna
+be handled differently.
+
+26
+00:01:52.706 --> 00:01:57.436
+因此，如果可能的话，你应该尽量避免这些功能上的改变。
+So you want to avoid even those kinds
+of functional changes if you can.
+
+27
+00:01:57.436 --> 00:02:01.801
+如果您的测试覆盖率是，那么您不希望尝试这种转换
+You don't want to try this kind of
+conversion if your test coverage is
+
+28
+00:02:01.801 --> 00:02:02.635
+真的很低。
+really low.
+
+29
+00:02:02.635 --> 00:02:08.204
+因为在我们的三个步骤中的每一步之后，都要运行一个测试扫描，就像您的测试扫描一样
+Because after each of our three steps run
+a test sweep like your test sweep for
+
+30
+00:02:08.204 --> 00:02:13.945
+这段代码，并确保我们不仅已经转换为打字稿,
+this piece of code, and ensure that not
+only have we converted to TypeScript,
+
+31
+00:02:13.945 --> 00:02:17.862
+但是图书馆还是按照我们的方式运作。
+but the library still works
+the way we want it to work.
+
+32
+00:02:20.810 --> 00:02:24.617
+迈克 · 诺斯: 你不想让完美成为优秀的敌人。
+&gt;&gt; Mike North: You don't want to let
+the perfect be the enemy of the good.
+
+33
+00:02:24.617 --> 00:02:32.652
+从这个意义上来说，我的意思是不要试图把事情打得太强烈，太早。
+And in this sense what I mean is don't try
+to type things too strongly, too early on.
+
+34
+00:02:32.652 --> 00:02:37.944
+你的目标是得到转变，你会开始看到一些强大的好处
+Your goal is to get converted, and you'll
+start to see some benefits of the strong
+
+35
+00:02:37.944 --> 00:02:43.328
+打字，但是不要过早地打字来追求这些好处。
+typing, but don't chase those benefits
+by trying to type things up prematurely.
+
+36
+00:02:43.328 --> 00:02:46.400
+你想被转换过来，然后
+You want to get converted over and
+
+37
+00:02:46.400 --> 00:02:52.222
+然后开始在有意义的地方加强打字。
+then start applying stronger
+typing where things make sense.
+
+38
+00:02:52.222 --> 00:02:56.944
+这样做的原因是，特别是如果您一次转换几个文件，并且
+The reason for this is, particularly if
+you convert a few files at a time, and
+
+39
+00:02:56.944 --> 00:02:59.570
+你有一些非常强类型的东西。
+you have some very strongly typed things.
+
+40
+00:02:59.570 --> 00:03:04.247
+一旦你转换一些其他的文件，交互与您的已经
+As soon as you convert some of the other
+files that interact with your already
+
+41
+00:03:04.247 --> 00:03:08.868
+强代码，你没有机会开始排序弱类型。
+strong code, you don't have a chance
+to start out with sort of weak types.
+
+42
+00:03:08.868 --> 00:03:11.911
+因为你的约束已经很紧了，对吧？
+Cuz your constraints
+are already very tight, right?
+
+43
+00:03:11.911 --> 00:03:13.338
+在你的应用程序的一个部分。
+In one part of your app.
+
+44
+00:03:13.338 --> 00:03:16.890
+所以你应该记住目标是,
+So you kind of want to
+remember the goal is,
+
+45
+00:03:16.890 --> 00:03:21.045
+改变信仰，然后我们再把事情闹大。
+get converted and
+then we'll ratchet things up.
+
+46
+00:03:21.045 --> 00:03:23.252
+不要忘记为类型添加测试。
+Don't forget to add tests for your types.
+
+47
+00:03:23.252 --> 00:03:29.282
+同样，dts lint 是您编写测试的特定方式
+Again, dts lint is the way you write
+tests that's specifically are for
+
+48
+00:03:29.282 --> 00:03:31.402
+只提供类型资料。
+type information only.
+
+49
+00:03:31.402 --> 00:03:37.194
+特别是对于图书馆，不要试图发布
+And also particularly for libraries,
+don't try to publish types for
+
+50
+00:03:37.194 --> 00:03:40.938
+直到你满意为止。
+consumer use until you're happy with them.
+
+51
+00:03:40.938 --> 00:03:45.596
+因为人们将随库一起出现的类型信息作为
+Because people take type information
+that comes along with the library as
+
+52
+00:03:45.596 --> 00:03:47.560
+公共空气污染指数的指示。
+an indication of a public API.
+
+53
+00:03:47.560 --> 00:03:49.932
+你应该做什么，不应该做什么。
+What you should do and what you shouldn't.
+
+54
+00:03:49.932 --> 00:03:52.371
+记住，这是开发者的意图。
+Remember, it's developer intent.
+
+55
+00:03:52.371 --> 00:03:55.997
+如果你一开始就用打字稿写了这段代码,
+If you wrote this code in
+TypeScript in the first place,
+
+56
+00:03:55.997 --> 00:04:00.794
+这些类型表示你能做什么和不能做什么的代码。
+those types would express what you can
+do and can't do with piece of code.
+
+57
+00:04:00.794 --> 00:04:04.651
+所以如果你过早地让人们使用这些东西，并且
+So if you prematurely have
+people using this stuff, and
+
+58
+00:04:04.651 --> 00:04:09.819
+到处都是放松的人，你可以带他们去野外
+there's a bunch of looseness all over
+the place, you can lead them on a wild
+
+59
+00:04:09.819 --> 00:04:14.850
+白费力气，他们认为事情应该是可行的和有效的。
+goose chase where they're assuming
+things should be doable and valid.
+
+60
+00:04:14.850 --> 00:04:17.240
+事实并非如此。
+And in fact that's not the case.

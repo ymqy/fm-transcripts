@@ -1,0 +1,605 @@
+WEBVTT
+
+1
+00:00:00.090 --> 00:00:04.179
+迈克 · 诺斯: 这部分特别有趣，超载签名。
+&gt;&gt; Mike North: This part is particularly
+interesting, overload signatures.
+
+2
+00:00:04.179 --> 00:00:08.880
+我们有一个函数叫 contactPeople。
+So we have a function here
+called contactPeople.
+
+3
+00:00:08.880 --> 00:00:13.619
+我接受了一个叫做方法的论点
+And I take in an argument
+called method and
+
+4
+00:00:13.619 --> 00:00:19.510
+这里的方法类型是字符串电子邮件或字符串电话。
+the type of method here is either
+the string email or the string phone.
+
+5
+00:00:20.839 --> 00:00:27.634
+然后接下来的任何其他参数可以是 HasEmail 或 HasPhone。
+And then any other parameter that follows
+can be either HasEmail or HasPhone.
+
+6
+00:00:27.634 --> 00:00:29.949
+和我们上次练习中使用的类型相同。
+The same types that we were
+using in the last exercise.
+
+7
+00:00:31.390 --> 00:00:36.417
+所以在这里，让我们确保这个工程，如我们所期望的那样。
+So down here, let's make sure
+that this works as we'd expect.
+
+8
+00:00:36.417 --> 00:00:43.067
+如果我想通过电子邮件联系别人，我可以这样做，那是无效的电子邮件地址。
+If I wanna contact people by email, I can
+do this, and that's invalid email address.
+
+9
+00:00:43.067 --> 00:00:49.719
+但是从类型的角度来看，它应该有用，这也有用。
+But from a type perspective,
+it should work, this also works.
+
+10
+00:00:49.719 --> 00:00:55.656
+这不应该有效，对吧，电子邮件，我的意思是，从概念上来说，这没有意义。
+This should not work, right, email,
+I mean, conceptually, this makes no sense.
+
+11
+00:00:55.656 --> 00:00:59.328
+如果我想给某人发邮件而他们只有一个电话号码,
+If I'm trying to email someone and
+they only have a phone number,
+
+12
+00:00:59.328 --> 00:01:02.189
+我们会遇到麻烦的。
+we're gonna run into a problem.
+
+13
+00:01:02.189 --> 00:01:05.420
+不幸的是，这种方法目前是有效的。
+And unfortunately, this currently works.
+
+14
+00:01:05.420 --> 00:01:09.920
+原因是我们定义了两个独立的
+And the reason is we have
+defined two independent and
+
+15
+00:01:09.920 --> 00:01:13.030
+不相关的约束。
+unrelated constraints here.
+
+16
+00:01:13.030 --> 00:01:17.640
+它可以是电子邮件或电话，字符串，然后对象，我们
+It can be either email or phone,
+the string, and then the objects that we
+
+17
+00:01:17.640 --> 00:01:21.859
+可以是一个混合包的联系人与电子邮件和电话号码。
+take can be sort of a mixed bag of
+contacts with emails and phone numbers.
+
+18
+00:01:21.859 --> 00:01:27.420
+所以尽管这些是我们能找到的最窄的类型
+So although these
+are the narrowest types we could
+
+19
+00:01:27.420 --> 00:01:32.479
+为了完成我们需要完成的工作，我们需要提供这两个参数。
+provide for these two arguments in order
+to get done what we need to get done.
+
+20
+00:01:32.479 --> 00:01:37.719
+有一些不允许的组合，我们要防止。
+There is some disallowed combination
+that we want to prevent.
+
+21
+00:01:37.719 --> 00:01:40.126
+而 TypeScript 提供了一种实现这一点的方法。
+And TypeScript provides
+a way of doing this.
+
+22
+00:01:40.126 --> 00:01:45.069
+所以我想在这里看一个工具提示，contactPeople，和
+So I wanna look at a tool tip here,
+contactPeople, and
+
+23
+00:01:45.069 --> 00:01:47.979
+这和我们上面看到的完全吻合，对吗？
+this matches exactly what
+we're seeing above, right?
+
+24
+00:01:47.979 --> 00:01:51.549
+第一个参数是我们的两个特殊字符串之一。
+The first argument is one
+of our two special strings.
+
+25
+00:01:51.549 --> 00:01:55.703
+然后这是我们混合的 HasEmail 和 HasPhoneNumber。
+And then this is our mixed bag
+of HasEmail and HasPhoneNumber.
+
+26
+00:01:55.703 --> 00:02:00.956
+我要做的是创建两个额外的函数签名,
+What I wanna do is create two
+additional function signatures,
+
+27
+00:02:00.956 --> 00:02:03.837
+抱歉刚才那一跳。
+sorry for that little jump there.
+
+28
+00:02:03.837 --> 00:02:09.860
+这些都是访问这个函数的特定有效方法。
+And these are specific valid
+ways to access this function.
+
+29
+00:02:09.860 --> 00:02:13.530
+所以第一个，你只能传递一封邮件，然后
+So the first one,
+you can only pass an email, and
+
+30
+00:02:13.530 --> 00:02:16.560
+那你必须给我一份有电子邮件地址的名单。
+then you must give me a list of
+people with email addresses.
+
+31
+00:02:16.560 --> 00:02:20.789
+第二个，只有电话，然后，只有电话号码。
+Second one, only phone, and
+then, only HasPhoneNumber.
+
+32
+00:02:22.270 --> 00:02:28.189
+如果我们现在看一下我们的工具提示，看到2中的1和2中的2了吗？
+If we look at our tool tip now,
+see that little 1 of 2 and 2 of 2?
+
+33
+00:02:28.189 --> 00:02:32.319
+我们可以通过两种方式调用这个函数,
+There are two specific ways that
+we can invoke this function,
+
+34
+00:02:32.319 --> 00:02:37.020
+要么指定字符串电子邮件，并给我的对象与电子邮件地址。
+either specify the string email and
+give me objects with an email address.
+
+35
+00:02:37.020 --> 00:02:42.719
+或者让我们用字符串 phone 和 HasPhoneNumber 连接。
+Or let's get a line with the string
+phone and HasPhoneNumber.
+
+36
+00:02:42.719 --> 00:02:46.310
+如果我们看看第三个有问题的例子,
+And if we look at our third and
+problematic example here,
+
+37
+00:02:46.310 --> 00:02:51.300
+它告诉我们，我们已经提供了一个物体的电话号码。
+it's telling us that we've provided
+an object with the phone number.
+
+38
+00:02:51.300 --> 00:02:54.562
+所以我要么改变一件事，要么改变另一件事，对吗？
+So this either I have to change
+one thing or the other, right?
+
+39
+00:02:54.562 --> 00:02:58.771
+它目前的错误是说，你必须使这个字符串电话,
+It's currently erroring by saying,
+you gotta make this string phone,
+
+40
+00:02:58.771 --> 00:03:02.330
+你在用别人的电话号码做手术。
+you're operating on
+people's phone numbers.
+
+41
+00:03:02.330 --> 00:03:07.122
+我没有电子邮件地址，所以，迈克 · 诺斯: 注意，我们
+I don't have email addresses, so,
+&gt;&gt; Mike North: Note that we
+
+42
+00:03:07.122 --> 00:03:09.389
+有两种方法访问这个函数。
+have two ways to access this function.
+
+43
+00:03:10.569 --> 00:03:15.560
+这些就是我们在这里定义的特定函数签名。
+And those are the specific function
+signatures we've defined up here.
+
+44
+00:03:15.560 --> 00:03:18.479
+这不是从外部调用的。
+This is not callable from the outside.
+
+45
+00:03:18.479 --> 00:03:22.400
+只需要足够宽,
+It just needs to be wide enough,
+
+46
+00:03:22.400 --> 00:03:26.099
+足够容纳所有的函数签名。
+general enough to accommodate
+all of the function signatures.
+
+47
+00:03:26.099 --> 00:03:30.479
+所以如果我移除这个，我们会在
+So if I were to remove this,
+we'd run into an error on
+
+48
+00:03:30.479 --> 00:03:34.650
+电话信号显示
+the phone signature saying the underlying
+
+49
+00:03:34.650 --> 00:03:39.329
+实现不容许传递电话作为第一个参数。
+implementation does not accommodate
+passing phone as the first parameter.
+
+50
+00:03:40.530 --> 00:03:45.045
+所以它必须足够通用，以满足所有签名的需要
+So it just has to be general enough that
+it'll meet the needs of all signatures
+
+51
+00:03:45.045 --> 00:03:45.674
+在它上面。
+above it.
+
+52
+00:03:48.758 --> 00:03:49.439
+迈克 · 诺斯: 什么事？
+&gt;&gt; Mike North: Yes?
+
+53
+00:03:49.439 --> 00:03:53.764
+扬声器2: 所以你可以安全地将类型签名从
+&gt;&gt; Speaker 2: So could you just
+safely remove the type signature from
+
+54
+00:03:53.764 --> 00:03:55.930
+实际的函数调用？
+the actual function call?
+
+55
+00:03:55.930 --> 00:03:58.439
+迈克 · 诺斯: 这取决于你所说的安全。
+&gt;&gt; Mike North: It depends
+what you mean by safely.
+
+56
+00:03:58.439 --> 00:04:03.030
+所以你仍然可以从外部世界的角度,
+So you could still,
+like from the outside world's perspective,
+
+57
+00:04:03.030 --> 00:04:06.129
+就像现在一样安全。
+it would be exactly as
+safe as it is right now.
+
+58
+00:04:06.129 --> 00:04:09.292
+我认为你在这里说的基本上是
+And I think what you're
+saying here is basically
+
+59
+00:04:09.292 --> 00:04:11.842
+字符串，迈克诺斯: 和
+string,
+&gt;&gt; Mike North: And
+
+60
+00:04:11.842 --> 00:04:14.340
+这是一个 anys 数组，对吗？
+make this an array of anys, right?
+
+61
+00:04:14.340 --> 00:04:17.196
+演讲者2: 或者干脆把所有东西都拿走,
+&gt;&gt; Speaker 2: Or
+even just removing everything,
+
+62
+00:04:17.196 --> 00:04:20.153
+53到56行的所有类型。
+all the types from line 53 to 56.
+
+63
+00:04:20.153 --> 00:04:22.930
+因为我们已经拿到了49号和50号的申报单。
+Cuz we've got the declarations on 49 and
+50.
+
+64
+00:04:22.930 --> 00:04:26.600
+迈克 · 诺斯: 完全正确，这就是我们所说的隐式 anys。
+&gt;&gt; Mike North: Totally, and these would
+become what we call implicit anys.
+
+65
+00:04:27.750 --> 00:04:30.709
+这是一个 anys 数组，这是一个 any。
+So this is gonna be an array of anys,
+this is gonna be an any.
+
+66
+00:04:30.709 --> 00:04:34.740
+从外面的世界，因为我们实际上不能访问的签名,
+And from the outside world, because we
+can't actually access the signature,
+
+67
+00:04:34.740 --> 00:04:39.659
+外部世界的类型检查永远不会与这个签名相比较。
+no type checking from the outside world
+ever is compared against this signature.
+
+68
+00:04:39.659 --> 00:04:43.471
+所以外面的世界并不关心，但是在这个功能里面,
+So the outside world don't care,
+but within this function,
+
+69
+00:04:43.471 --> 00:04:45.529
+我现在身处西部荒野。
+I'm in the Wild West here.
+
+70
+00:04:45.529 --> 00:04:49.110
+在函数中，我没有任何类型安全。
+Within the function,
+I don't have any kind of type safety.
+
+71
+00:04:50.430 --> 00:04:52.449
+所以这是一个好主意
+So it's a good idea for
+
+72
+00:04:52.449 --> 00:04:57.990
+保持这个功能的目的不是超级，超级一般。
+the purpose of maintaining this function
+to not be super, super general.
+
+73
+00:04:57.990 --> 00:05:00.449
+你可能会这么做,
+You might do something like this,
+
+74
+00:05:00.449 --> 00:05:03.819
+特别是如果你最终创造了一大堆这样的签名。
+especially if you end up creating
+a whole bunch of these signatures here.
+
+75
+00:05:03.819 --> 00:05:08.603
+比如说，我们有传真、短信和烟雾信号。
+Like let's say, we had fax and
+SMS and smoke signal.
+
+76
+00:05:08.603 --> 00:05:16.154
+它开始到达一个点，这成为一个困难的管理类型。
+And it starts to get to a point where
+this becomes a difficult to manage type.
+
+77
+00:05:16.154 --> 00:05:19.266
+我可能会退回到字符串这里，对吧？
+And I might fall back to string here,
+right?
+
+78
+00:05:22.082 --> 00:05:23.562
+迈克 · 诺斯: 问得好，各位。
+&gt;&gt; Mike North: Good questions everybody.
+
+79
+00:05:26.247 --> 00:05:27.009
+演讲者2: 我有一个简短的问题。
+&gt;&gt; Speaker 2: I have a quick question.
+
+80
+00:05:27.009 --> 00:05:27.598
+迈克 · 诺斯: 是的 讲者3: 所以
+&gt;&gt; Mike North: Yes.
+&gt;&gt; Speaker 3: So
+
+81
+00:05:27.598 --> 00:05:30.959
+超载签名是一种文档策略？
+the overload signature's
+a documentation strategy?
+
+82
+00:05:30.959 --> 00:05:34.389
+麦克 · 诺斯: 不，好吧-演讲者3: 看起来有点像。
+&gt;&gt; Mike North: No, well-
+&gt;&gt; Speaker 3: It seems kind of like one.
+
+83
+00:05:34.389 --> 00:05:39.459
+迈克 · 诺斯: 可以肯定的是，它有文档化的好处。
+&gt;&gt; Mike North: It has
+documentation benefits, to be sure.
+
+84
+00:05:39.459 --> 00:05:43.870
+因为消费者很清楚他们应该做什么。
+Because it's very clear to consumers
+what they should be doing.
+
+85
+00:05:43.870 --> 00:05:48.316
+但我只是说这不仅仅是一个文档化的策略
+But I only say it's not purely
+a documentation strategy
+
+86
+00:05:48.316 --> 00:05:52.769
+因为它实际上有类型检查分支。
+because it actually has type
+checking ramifications.
+
+87
+00:05:52.769 --> 00:05:59.887
+这个签名在72行，我的意思是，这个尝试调用这里的函数,
+This signature on line 72, I mean,
+this attempt to invoke the function here,
+
+88
+00:05:59.887 --> 00:06:05.769
+这不是类型检查，因为我们只允许 a 和 a，b 和 b。
+this is not type checking because
+we only allow a and a, b and b.
+
+89
+00:06:05.769 --> 00:06:09.168
+这里的签名是 a 和 b。
+And this signature here
+is trying to do a and b.
+
+90
+00:06:09.168 --> 00:06:15.180
+这就像是我们可以传入的一个不允许的参数范围。
+It is like a disallowed range of
+arguments that we can pass in.
+
+91
+00:06:15.180 --> 00:06:19.394
+所以不仅仅是提供有用的工具技巧,
+So more than just
+providing useful tool tips,
+
+92
+00:06:19.394 --> 00:06:25.124
+它实际上是为某些类型的祈祷开绿灯
+it is actually greenlighting
+certain styles of invocation and
+
+93
+00:06:25.124 --> 00:06:30.649
+禁止其他不合适的事情。
+forbidding anything else that's not,
+that doesn't fit.
+
+94
+00:06:33.062 --> 00:06:37.391
+迈克 · 诺斯: 这里有人用支持模式的语言工作过吗
+&gt;&gt; Mike North: Has anyone here ever worked
+with a language that supports pattern
+
+95
+00:06:37.391 --> 00:06:40.560
+比如 Scala、 Erlang 或 Elixir？
+matching like Scala or Erlang or Elixir?
+
+96
+00:06:40.560 --> 00:06:44.534
+所以这和模式类似，你可以经常这样做
+So this is similar to patterns,
+where often you can
+
+97
+00:06:44.534 --> 00:06:49.139
+定义为特定情况设计的多个签名。
+define multiple signatures that
+are designed for specific cases.
+
+98
+00:06:50.490 --> 00:06:54.470
+这里的区别是你只能有多个函数头。
+The difference here is you can
+only have multiple function heads.
+
+99
+00:06:54.470 --> 00:06:57.600
+你不能有多个实现，对吗？
+You can't have multiple implementations,
+right?
+
+100
+00:06:57.600 --> 00:07:02.877
+但是你可以在这里有多种行为，独立的共享功能
+But you can have multiple behaviors here,
+independent functions that share
+
+101
+00:07:02.877 --> 00:07:07.920
+同样的名字，叠在一起，只有签名。
+the same name and kind of stack on top
+of each other, just the signatures.
+
+102
+00:07:07.920 --> 00:07:11.269
+原因是这必须成为 JavaScript。
+And the reason is this
+has to become JavaScript.
+
+103
+00:07:11.269 --> 00:07:17.129
+这个 JavaScript 不支持这种模式。
+And this JavaScript doesn't
+support patterns in that way.
+
+104
+00:07:19.110 --> 00:07:20.879
+但我也是这么想的。
+But I think of it in similar way.

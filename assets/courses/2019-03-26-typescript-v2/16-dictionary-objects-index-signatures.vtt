@@ -1,0 +1,335 @@
+WEBVTT
+
+1
+00:00:00.042 --> 00:00:01.897
+Mike North: 这是我们的数组示例。
+&gt;&gt; Mike North: Here's our array example.
+
+2
+00:00:01.897 --> 00:00:07.796
+索引签名看起来像这里，方括号，有意义的权利。
+Index signatures which look like this
+here, square brackets, makes sense right.
+
+3
+00:00:07.796 --> 00:00:14.400
+因为这就是我们使用任意键访问对象的属性的方式。
+Because that's how we access a property
+off of an object with an arbitrary key.
+
+4
+00:00:14.400 --> 00:00:22.155
+我们说，如果你访问一个电话号码字典的属性，并给它一个字符串。
+We are saying if you access a property off
+a phone number dict and give it a string.
+
+5
+00:00:22.155 --> 00:00:26.952
+它要么根本不存在，要么就会有这个表格。
+It'll either not be there at all,
+or it'll have this form.
+
+6
+00:00:26.952 --> 00:00:31.245
+现在，当您定义这样的字典类型时,
+Now, when you are defining
+a dictionary type like this, and
+
+7
+00:00:31.245 --> 00:00:34.695
+字典只是一个键值数据结构,
+a dictionary is just a key
+value data structure,
+
+8
+00:00:34.695 --> 00:00:39.325
+几乎可以肯定，你以前用过一个物体作为字典
+you have almost certainly used
+an object as a dictionary before in
+
+9
+00:00:39.325 --> 00:00:44.060
+属性键具有一致的对象类型，对。
+JavaScript property keys with
+consistent object types, right.
+
+10
+00:00:44.060 --> 00:00:49.158
+你必须小心，不要以打字稿的方式输入
+You've got to be careful that you don't
+type this in such a way that TypeScript
+
+11
+00:00:49.158 --> 00:00:53.871
+给你一个虚假的保证，不管你传入什么属性键,
+gives you a false guarantee that no
+matter what property key you pass in,
+
+12
+00:00:53.871 --> 00:00:57.287
+你肯定会得到一个明确的值。
+you will definitely get
+a well-defined value out.
+
+13
+00:00:57.287 --> 00:00:59.859
+让我们看看如果我们这样做会发生什么。
+Let's look at what would
+happen if we did that.
+
+14
+00:01:05.117 --> 00:01:08.207
+迈克 · 诺斯: 那么，一个空的物体在这里就是一个有效的例子，对吗？
+&gt;&gt; Mike North: So, an empty object
+is a valid case here, right?
+
+15
+00:01:08.207 --> 00:01:13.313
+没有钥匙，不管我做什么，都是在演戏
+No keys, and
+no matter what I do it's acting
+
+16
+00:01:13.313 --> 00:01:17.873
+好像有什么是属于我的。
+like there's something there for me.
+
+17
+00:01:17.873 --> 00:01:24.777
+这是一个很难跟踪错误等待发生，所以不要这样做。
+This is a hard to track down error
+waiting to happen, so don't do that.
+
+18
+00:01:24.777 --> 00:01:29.137
+通过添加未定义的，Mike North: 我们强迫,
+By adding undefined,
+&gt;&gt; Mike North: We force,
+
+19
+00:01:30.212 --> 00:01:31.515
+迈克 · 诺斯: 检查一下这个
+&gt;&gt; Mike North: A check on this, and
+
+20
+00:01:31.515 --> 00:01:34.521
+你要做的就是这样。
+what you'd have to do
+is something like this.
+
+21
+00:01:41.825 --> 00:01:45.164
+迈克 · 诺斯: 看到这里的未定义是什么了吗？
+&gt;&gt; Mike North: See how up here
+the undefined is present?
+
+22
+00:01:45.164 --> 00:01:50.188
+并且在条件之后的块中，未定义的内容已经消失。
+And inside the block following the
+condition the undefined has disappeared.
+
+23
+00:01:50.188 --> 00:01:54.968
+我们在这里所做的是缩小类型。
+What we have done here
+is narrowed the type.
+
+24
+00:01:54.968 --> 00:01:59.957
+明白这个条件，它明白
+TypeScript understands that this
+condition that it understands that
+
+25
+00:01:59.957 --> 00:02:03.772
+这种人永远不会有真正的价值，永远。
+this type here can never
+have a truthy value, never.
+
+26
+00:02:03.772 --> 00:02:09.799
+因此，未定义的值不可能传递到这个块中。
+So, there is no way for an undefined
+value to pass into this block here.
+
+27
+00:02:09.799 --> 00:02:12.881
+而这正是我们想要的正确用途。
+And this is the proper use
+that we would want anyway.
+
+28
+00:02:12.881 --> 00:02:15.292
+因为如果我们只是接到一些
+Because if we're just handed something and
+
+29
+00:02:15.292 --> 00:02:19.604
+我们被告知这种类型的，我们不一定知道里面有什么。
+we're told that it's this type we don't
+necessarily know what's on there.
+
+30
+00:02:19.604 --> 00:02:24.277
+我们不知道哪些按键对于查找信息是有效的。
+We don't know which keys are valid for
+looking things up.
+
+31
+00:02:24.277 --> 00:02:29.397
+因此，条件可以用来缩小类型。
+So, conditions can be
+used to narrow types.
+
+32
+00:02:29.397 --> 00:02:30.890
+我们可以用不同的方法。
+We could do it a different way.
+
+33
+00:02:38.009 --> 00:02:39.145
+迈克 · 诺斯: 恰恰相反，对吧？
+&gt;&gt; Mike North: It's just the inverse,
+right?
+
+34
+00:02:39.145 --> 00:02:43.900
+我们正在检查 d.abc 的类型是否是一个对象。
+We're checking to see if
+the type of d.abc is an object.
+
+35
+00:02:46.070 --> 00:02:50.963
+迈克 · 诺斯: 让我们看看这个会发生什么，不可能。
+&gt;&gt; Mike North: Let's see what
+happens with this, impossible.
+
+36
+00:02:50.963 --> 00:02:55.320
+它说这就像是文恩图表打字稿总是试图
+It says this is like in terms of the Venn
+diagram TypeScript's always trying to
+
+37
+00:02:55.320 --> 00:02:57.375
+想办法解决问题。
+figure out a way to make things work.
+
+38
+00:02:57.375 --> 00:03:00.949
+这种情况下它会说好吧,
+This is a situation
+where it's saying okay,
+
+39
+00:03:00.949 --> 00:03:04.343
+它可以是未定义的，也可以是一个对象。
+this can either be undefined or an object.
+
+40
+00:03:04.343 --> 00:03:09.114
+现在我们有了一些代码，在字符串的情况下可以运行。
+So now we have some code that would
+run in the case where it's a string.
+
+41
+00:03:09.114 --> 00:03:15.725
+永远不会发生，所以你永远不会。
+Never gonna happen never,
+so you get never.
+
+42
+00:03:15.725 --> 00:03:20.998
+我把它放在那儿，你可以继续查。
+I'll leave that there so
+you can follow on that.
+
+43
+00:03:20.998 --> 00:03:25.045
+好的，这是我们的电话号码字典。
+Okay, here is our phone number dictionary.
+
+44
+00:03:25.045 --> 00:03:30.118
+这就证明了我们可以在这里放置价值观
+And this is just demonstrating
+that we can place values in there
+
+45
+00:03:30.118 --> 00:03:34.722
+如果我们拼错了什么，我们会被逮到的，对吧。
+if we misspelt something we'd
+get busted on it, right.
+
+46
+00:03:34.722 --> 00:03:39.877
+它告诉我们没有 araCode，我们必须把它拼对，araCode。
+It's telling us there's no araCode,
+we have to spell that right, areaCode.
+
+47
+00:03:39.877 --> 00:03:46.275
+我马上就试着剪辑一下，不过还是看看现在会发生什么吧。
+I'm gonna try editing it in a second, but
+let's just see what happens right now.
+
+48
+00:03:46.275 --> 00:03:51.009
+所以，我们可以消除它，因为如果这是在我们的手机通讯录页面,
+So, we can eliminate it because if this
+were in our contacts page in our phone,
+
+49
+00:03:51.009 --> 00:03:53.762
+那里可能有多个电话号码。
+we could have multiple
+phone numbers there.
+
+50
+00:03:53.762 --> 00:03:55.699
+有些人没有家庭电话号码,
+Some people are not gonna
+have a home number,
+
+51
+00:03:55.699 --> 00:03:58.155
+他们只有一个办公室电话，所以，没关系。
+they'll only have an office number,
+so, this is fine.
+
+52
+00:03:58.155 --> 00:04:03.727
+所以它看起来像这些值的结构，这是强制的。
+So it look likes the structure of
+these values here, that's enforced.
+
+53
+00:04:03.727 --> 00:04:08.496
+但是我们可以完全控制键的属性。
+But we have total control over
+what the properties keys are.
+
+54
+00:04:08.496 --> 00:04:13.371
+有一点很重要，那就是您最多只能有一个字符串
+One thing that's important to know is
+that you can only have at most one string
+
+55
+00:04:13.371 --> 00:04:16.531
+索引签名和一个数字索引签名。
+index signature and
+one number index signature.
+
+56
+00:04:16.531 --> 00:04:21.220
+所以，你可以把这个改成喜欢的数字，然后得到一些稍微不同于
+So, you could change this to like number
+and have something slightly different than
+
+57
+00:04:21.220 --> 00:04:24.795
+如果你传入一个字符串，并试图以这种方式访问一个属性。
+if you passed a string in and
+tried to access a property that way.

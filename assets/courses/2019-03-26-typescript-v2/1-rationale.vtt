@@ -1,0 +1,369 @@
+WEBVTT
+
+1
+00:00:00.190 --> 00:00:01.740
+那么我们为什么要添加类型呢？
+&gt;&gt; Mike North: So
+why would we wanna add types?
+
+2
+00:00:01.740 --> 00:00:05.070
+为什么有人要做这个项目呢？
+Why would someone bother
+to make this project?
+
+3
+00:00:05.070 --> 00:00:09.429
+首先，它让我们有机会进行假设
+First, it gives us the opportunity
+to take assumptions and
+
+4
+00:00:09.429 --> 00:00:13.000
+当我们编写一段代码时，我们作为作者所受到的约束。
+constraints we have as authors
+when we write a piece of code.
+
+5
+00:00:13.000 --> 00:00:17.339
+它给了我们一个机会，使这些成为我们的代码的一部分。
+It gives us an opportunity to
+make those a part of our code.
+
+6
+00:00:17.339 --> 00:00:21.129
+所以如果你有一个设计用字符串作为参数的函数,
+So if you have a function that's designed
+to take a string as an argument,
+
+7
+00:00:21.129 --> 00:00:25.510
+你有一个地方可以说，这个参数必须是一个字符串。
+you actually have a place where you could
+say, this argument must be a string.
+
+8
+00:00:25.510 --> 00:00:27.559
+现在，如果我们只看普通的 JavaScript,
+Now, if we were just looking
+at regular JavaScript,
+
+9
+00:00:27.559 --> 00:00:33.590
+你可以写一个注释说，请只传递字符串给这个函数。
+you could write a comment saying,
+please only pass string to this function.
+
+10
+00:00:33.590 --> 00:00:39.390
+但是你需要依靠人们阅读你的源代码并找到它。
+But you'd be relying on people reading
+your source code and finding that.
+
+11
+00:00:39.390 --> 00:00:45.450
+你可以断言它是一个类似函数中的字符串，抛出
+You could assert that it's a string
+like within the function, throwing
+
+12
+00:00:45.450 --> 00:00:50.479
+如果这个值的类型不是一个字符串，但是这个值开始增加，那么就会出现一个错误。
+error if the type of this value is not
+a string, but that starts to add up.
+
+13
+00:00:50.479 --> 00:00:55.090
+它开始朝着我们称之为防御性编程的方向发展。
+It starts to get towards something
+we would call defensive programming.
+
+14
+00:00:55.090 --> 00:00:59.729
+这就是你基本上不相信你的任何投入和
+Which is where you basically don't
+trust any of your inputs and
+
+15
+00:00:59.729 --> 00:01:02.700
+它带来了大量的开销和复杂性,
+it introduces a lot of overhead and
+complexity,
+
+16
+00:01:02.700 --> 00:01:07.239
+性能开销和认知开销，对吗？
+both performance overhead and
+cognitive overhead, right?
+
+17
+00:01:07.239 --> 00:01:11.117
+你雇了一个新人加入你的团队，他们必须迂回前进
+You hire a new person to your team and
+they're gonna have to weave through
+
+18
+00:01:11.117 --> 00:01:13.918
+然后找出这些论断的出处
+the stuff and
+figure out where are the assertions and
+
+19
+00:01:13.918 --> 00:01:18.581
+这个函数在确认数据正确后的实际作用是什么。
+what's this function actually doing after
+it's satisfied that the data is correct.
+
+20
+00:01:18.581 --> 00:01:21.189
+这使得事情有点难以维持。
+It makes things a little
+difficult to maintain.
+
+21
+00:01:21.189 --> 00:01:26.510
+所以这些类型帮助我们获得所有的开发人员
+So this types assist us in
+taking all of our developer
+
+22
+00:01:26.510 --> 00:01:31.269
+并将其编码到我们编写的代码中。
+intent and
+encoding it into the code we write.
+
+23
+00:01:32.960 --> 00:01:37.599
+类型帮助我们发现常见的错误，比如拼写错误。
+Types help us catch common mistakes,
+like a spelling error.
+
+24
+00:01:37.599 --> 00:01:42.359
+我每天都会犯几次拼写错误，至少在第二次或者第三次之前
+I make spelling errors a few times a day,
+at least leading up to my second or
+
+25
+00:01:42.359 --> 00:01:46.960
+第三杯咖啡，拼写错误是很常见的。
+third cup of coffee,
+spelling errors are very common.
+
+26
+00:01:46.960 --> 00:01:53.390
+因为有一个验证，你只访问属性
+So because there's a validation that
+you're only accessing the properties
+
+27
+00:01:53.390 --> 00:01:56.909
+你应该访问，你正确命名你的参数。
+that you should be accessing and that
+you're naming your arguments correctly.
+
+28
+00:01:58.170 --> 00:02:03.420
+因为你已经定义了类型，所以你不太可能使用这些类型
+You're less likely to make those
+with types because you've defined
+
+29
+00:02:03.420 --> 00:02:10.805
+什么东西应该被访问，还有其他你不应该碰的东西。
+what should be accessed, and everything
+else you should not be trying to touch.
+
+30
+00:02:10.805 --> 00:02:12.849
+一个不完整的重构和其他好例子。
+An incomplete refactors and
+other good example.
+
+31
+00:02:12.849 --> 00:02:16.009
+假设你在四个地方使用一个函数
+Imagine you have a function that
+you're using in four places and
+
+32
+00:02:16.009 --> 00:02:18.909
+你再加上一个必要的论点
+you add another required argument and
+
+33
+00:02:18.909 --> 00:02:24.449
+你只更新了三个电话网站，其中一个过期了。
+you only update three of the call
+sites leaving one out of date.
+
+34
+00:02:24.449 --> 00:02:28.389
+编译器会让您知道这里存在不匹配，因此
+The compiler will let you know
+that there is a mismatch here, so
+
+35
+00:02:28.389 --> 00:02:32.000
+它有助于捕捉那些在 JavaScript 中很难捕捉到的东西。
+it helps catch that kind of thing which
+is very difficult to catch in JavaScript.
+
+36
+00:02:33.699 --> 00:02:37.990
+你会看到我们今天的工作，我们正在移动我们会发现的许多错误
+You'll see throughout our work today that
+we're moving a lot of errors we would find
+
+37
+00:02:37.990 --> 00:02:40.270
+在运行时直到编译时。
+at run time up to compile time.
+
+38
+00:02:40.270 --> 00:02:42.509
+所以我们得到了更早的反馈
+So we're getting earlier feedback and
+
+39
+00:02:42.509 --> 00:02:45.960
+我们从静态分析中得到了反馈。
+we're getting feedback as
+a result of static analysis.
+
+40
+00:02:45.960 --> 00:02:53.009
+这是一个分析，只是看看你的源代码，并得出结论。
+Which is an analysis that just looks at
+your source code and comes to conclusions.
+
+41
+00:02:53.009 --> 00:02:57.699
+与运行时分析相反，运行时分析需要你实际经历和
+As opposed to runtime analysis which
+requires you to actually go through and
+
+42
+00:02:57.699 --> 00:03:00.969
+执行代码的每一条路径。
+execute every path of your code.
+
+43
+00:03:00.969 --> 00:03:04.733
+所以你可以通过测试捕捉到一些东西，绝对的。
+So you could catch some of
+the stuff with tests, absolutely.
+
+44
+00:03:04.733 --> 00:03:07.477
+但是当你写代码的时候
+But while you're writing your code and
+
+45
+00:03:07.477 --> 00:03:12.966
+也许你还没有完成你的考试，也许你的考试不完整,
+maybe you haven't written your test yet,
+or maybe your test are incomplete,
+
+46
+00:03:12.966 --> 00:03:17.736
+这里有人在做一个测试不完美的项目吗？
+is anyone here worked on a project
+that has an imperfect test suite?
+
+47
+00:03:17.736 --> 00:03:20.799
+我已经，所有的人现在都应该上去了。
+I have, all hands should go up right now.
+
+48
+00:03:20.799 --> 00:03:23.117
+你们所有的测试服可能都不完美。
+All of your test suits
+are probably imperfect.
+
+49
+00:03:23.117 --> 00:03:28.409
+因此，这意味着您不需要依靠测试来捕捉这种类型的错误。
+So, this means you are not depending
+on tests to catch this type of error.
+
+50
+00:03:28.409 --> 00:03:31.199
+您当然可以犯其他类型的错误。
+You certainly can make
+other types of errors.
+
+51
+00:03:31.199 --> 00:03:34.829
+最后，你马上就会看到打字稿是基础
+And then finally right away, you're gonna
+see that TypeScript is the foundation
+
+52
+00:03:34.829 --> 00:03:36.949
+一个伟大的开发经验。
+of a great developer experience.
+
+53
+00:03:36.949 --> 00:03:41.219
+这是 JavaScript 生态系统一直缺失的东西
+It's something that the JavaScript
+ecosystem has kind of been missing
+
+54
+00:03:41.219 --> 00:03:44.020
+相对的两种类型程序设计语言。
+relative two typed programming languages.
+
+55
+00:03:44.020 --> 00:03:46.800
+所以我从一个 Java 开发者开始
+So I started out as a Java developer and
+
+56
+00:03:46.800 --> 00:03:52.120
+我使用了各种各样的 ide 来编写代码。
+I used a wide-range of
+IDEs to write my code in.
+
+57
+00:03:52.120 --> 00:03:57.932
+我有很多大纲，告诉我这些是课程
+And I've got a lot of outlines
+showing me these are the classes and
+
+58
+00:03:57.932 --> 00:04:01.560
+这些是班级的成员，这些是公开的，这些是私人的。
+these are the members of the classes, and
+these are public and these are private.
+
+59
+00:04:01.560 --> 00:04:07.020
+我得到了很好的自动完成，因为语言是这样设置的
+And I got great auto-completes because
+the language was setup in such a way
+
+60
+00:04:07.020 --> 00:04:12.164
+你可以知道你应该访问什么，不该访问什么。
+that you could know what you're supposed
+to be accessing and what you're not.
+
+61
+00:04:12.164 --> 00:04:15.145
+你访问的东西的价值是什么？
+And what is the value of
+the thing you are accessing?
+
+62
+00:04:15.145 --> 00:04:19.954
+这在像 JavaScript 这样的动态类型语言中是很难理解的
+This is much harder to figure out in a
+dynamically typed language like JavaScript
+
+63
+00:04:19.954 --> 00:04:20.795
+或者 Ruby。
+or Ruby.

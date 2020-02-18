@@ -1,0 +1,451 @@
+WEBVTT
+
+1
+00:00:00.190 --> 00:00:03.120
+Mike North: 所以我们可以使用索引签名
+&gt;&gt; Mike North: So
+we can use index signatures
+
+2
+00:00:03.120 --> 00:00:05.389
+与其他类型结合在一起。
+in combination with other types.
+
+3
+00:00:05.389 --> 00:00:09.119
+这就是我在这里展示的一些东西。
+And this is where I'm actually
+showing off a couple things here.
+
+4
+00:00:09.119 --> 00:00:12.369
+第一，我创造了另一个
+Number one, I have created another
+
+5
+00:00:12.369 --> 00:00:16.149
+和我们刚才用的是同一个名字，对吗？
+interface with the same name of
+what we were just using, right?
+
+6
+00:00:16.149 --> 00:00:18.297
+在这里，我们有 PhoneNumberDict。
+Up here, we had PhoneNumberDict.
+
+7
+00:00:19.510 --> 00:00:22.471
+迈克 · 诺斯: 现在在这里，同样的名字。
+&gt;&gt; Mike North: And
+now down here, same exact name.
+
+8
+00:00:22.471 --> 00:00:28.960
+如果我们看这个，如果我试图移除它，我们现在得到一个错误。
+And if we look at this, if I try to
+remove it, we're now getting an error.
+
+9
+00:00:30.019 --> 00:00:31.230
+让我们看看下面
+So let's look below and
+
+10
+00:00:31.230 --> 00:00:36.049
+研究我们添加的内容，找出为什么有些东西会出错。
+study what we've added in order to figure
+out why something might be erroring.
+
+11
+00:00:36.049 --> 00:00:38.539
+我添加的是新类型。
+What I've added is new types.
+
+12
+00:00:38.539 --> 00:00:42.939
+他们说我们有了新的必需品。
+They kind of say we have
+new required properties.
+
+13
+00:00:42.939 --> 00:00:48.049
+每个人必须有一个家庭电话号码和一个办公室电话号码。
+Everyone must have a home phone number,
+and an office phone number.
+
+14
+00:00:48.049 --> 00:00:51.630
+而且，索引签名仍然存在于所有这一切之下。
+And, the index signature still
+exists underneath all of that.
+
+15
+00:00:51.630 --> 00:00:55.920
+这就是为什么如果我们试图删除这里,
+So that's what's making it so
+if we attempt to delete this up here,
+
+16
+00:00:55.920 --> 00:00:58.969
+我们发现了一个家不见了的问题。
+we're getting an issue
+where home is missing.
+
+17
+00:01:00.049 --> 00:01:02.659
+现在我们完全可以在这里安全地添加另一个,
+Now we could totally add
+another one here safely,
+
+18
+00:01:05.003 --> 00:01:05.707
+迈克 · 诺斯: iPhone,
+&gt;&gt; Mike North: iPhone,
+
+19
+00:01:05.707 --> 00:01:07.209
+我只需要一个逗号。
+I just need a comma.
+
+20
+00:01:08.730 --> 00:01:12.379
+这很好，我们可以根据自己的需要自由添加或删除这些内容。
+And that's fine and we're free to add and
+remove this as we see fit.
+
+21
+00:01:12.379 --> 00:01:15.048
+因此，您可以将索引签名与
+So you can use index
+signatures in combination with
+
+22
+00:01:15.048 --> 00:01:18.968
+关于对象类型的其他知识。
+anything else that we have
+learned about object types.
+
+23
+00:01:18.968 --> 00:01:22.793
+Mike North: 通常这是一个后备方案，你可以指定某些事情
+&gt;&gt; Mike North: Often this will be a
+fallback where you specify certain things
+
+24
+00:01:22.793 --> 00:01:25.700
+比如，我们知道我们可以访问这些东西。
+like, we know we can access these things.
+
+25
+00:01:25.700 --> 00:01:30.500
+所以，举个例子来说，这个东西被交到手上是很方便的。
+So, for example, it would be
+convenient to be handed this thing.
+
+26
+00:01:30.500 --> 00:01:34.750
+我不需要检查家和办公室是否没有定义。
+I don't have to check whether home and
+the office are undefined.
+
+27
+00:01:34.750 --> 00:01:36.390
+如果你知道他们出现在
+If you know they're present for
+
+28
+00:01:36.390 --> 00:01:40.789
+当然，有这么一个可以用的东西要好得多。
+sure, it's much nicer to be handed
+this thing that's ready to go.
+
+29
+00:01:40.789 --> 00:01:44.265
+但是，那里可能有可选的额外的东西
+But, there may be optional
+extra stuff there and
+
+30
+00:01:44.265 --> 00:01:48.603
+索引签名是一种方便输入的方法。
+an index signature would be
+a way to facilitate typing that.
+
+31
+00:01:53.082 --> 00:01:55.549
+迈克 · 诺斯: 我们已经演示过了，但是
+&gt;&gt; Mike North: We kind of
+demonstrated this already, but
+
+32
+00:01:55.549 --> 00:01:59.250
+家肯定在那儿，办公室肯定在那儿。
+home is definitely there,
+office is definitely there.
+
+33
+00:01:59.250 --> 00:02:03.329
+由于索引签名，移动设备将不得不未定义。
+Mobile will have to be undefined
+due to the index signature.
+
+34
+00:02:03.329 --> 00:02:06.126
+这里我们看到的是声明合并。
+So what we're seeing here
+is declaration merging.
+
+35
+00:02:07.150 --> 00:02:12.879
+Mike North: 我们发现我们可以把索引堆叠在其他东西之上。
+&gt;&gt; Mike North: And we're seeing that we
+can stack indexes on top of other things.
+
+36
+00:02:12.879 --> 00:02:16.750
+关于接口，我想指出的最后一点是
+The last thing I wanna point out
+about interfaces loops back to
+
+37
+00:02:16.750 --> 00:02:20.270
+我们之前讨论的化名类型。
+the type alias discussion
+we were having earlier.
+
+38
+00:02:20.270 --> 00:02:25.056
+接口有点像函数，它们像函数一样被解析。
+Interfaces are kind of like functions,
+they're parsed like functions.
+
+39
+00:02:25.056 --> 00:02:28.429
+在这里，我们知道一个接口的存在
+In that,
+we know that an interface exists and
+
+40
+00:02:28.429 --> 00:02:32.539
+有一个特定的名称，因为我们经过解析的东西。
+has a particular name as we
+go through in parse things.
+
+41
+00:02:32.539 --> 00:02:35.194
+但是，只有当我们尝试真正访问它的时候
+But, only when we attempt
+to actually access it and
+
+42
+00:02:35.194 --> 00:02:39.579
+使用它将我们最终找出什么是允许的类型为这件事情。
+use it will we end up figuring out what
+are the allowable types for this thing.
+
+43
+00:02:39.579 --> 00:02:45.289
+所以，类型别名是急切排序,
+So, type aliases are kind
+of sorted out eagerly,
+
+44
+00:02:45.289 --> 00:02:48.829
+接口是懒洋洋地整理出来的。
+interfaces are sorted out lazily.
+
+45
+00:02:48.829 --> 00:02:52.789
+如果我们来看第一个例子,
+So if we were to go up here to our
+first example, and we were to say,
+
+46
+00:02:52.789 --> 00:03:00.039
+我们要想办法让这种类型的东西运作起来。
+we were to try to figure out
+a way to make this type work.
+
+47
+00:03:00.039 --> 00:03:05.204
+如果我们只是说，接口数组和
+If we were just gonna say,
+interface number array and
+
+48
+00:03:05.204 --> 00:03:10.924
+我要在这里作弊一点，迈克 · 诺斯: 延伸。
+I'm gonna cheat a little bit here,
+&gt;&gt; Mike North: Extends.
+
+49
+00:03:13.472 --> 00:03:17.829
+和 numVals 数组，分号,
+&gt;&gt; Mike North: And
+array of numVals, semicolon,
+
+50
+00:03:17.829 --> 00:03:21.758
+现在这个起作用了，为什么？
+now this ends up working, why?
+
+51
+00:03:21.758 --> 00:03:26.901
+因为这有点像，就像一个函数，这样悬挂起来
+Because this is kind of like,
+just like a function that's hoisted so
+
+52
+00:03:26.901 --> 00:03:31.439
+我们可以在它使用之前或者定义之前引用它。
+we can refer to it before it's used or
+before it's defined.
+
+53
+00:03:32.509 --> 00:03:34.139
+数字，当我们通过和
+Numval, by the time we go through and
+
+54
+00:03:34.139 --> 00:03:38.849
+解决这个问题，这实际上是快乐，它现在是一个界面。
+sort this out, this is actually happy,
+it's an interface now.
+
+55
+00:03:38.849 --> 00:03:40.430
+直到我们来到这里
+Until we get down here and
+
+56
+00:03:40.430 --> 00:03:44.509
+解决这些问题，我们不一定知道这个接口能容纳什么。
+sort out all of this, we don't necessarily
+know what this interface can hold.
+
+57
+00:03:44.509 --> 00:03:49.210
+但是至少我们可以引用它，并且把它作为定义的一部分
+But at least we can refer to it and
+use it as part of the definition for
+
+58
+00:03:49.210 --> 00:03:50.490
+类型化名。
+the type alias.
+
+59
+00:03:50.490 --> 00:03:55.742
+所以你可以创建一些等级类型的东西,
+So you can create things that
+are sort of hierarchical types,
+
+60
+00:03:55.742 --> 00:03:58.175
+自尊型。
+self-reverential types.
+
+61
+00:03:58.175 --> 00:04:00.840
+有些人称之为递归类型，但是
+Some people call this recursive types, but
+
+62
+00:04:00.840 --> 00:04:05.308
+你可以通过组合类型和接口来创建这样的东西。
+you can create things like this through
+combining types and interfaces.
+
+63
+00:04:07.638 --> 00:04:09.086
+迈克 · 诺斯: 让我们确认一下我没有撒谎。
+&gt;&gt; Mike North: Let's
+make sure I'm not lying.
+
+64
+00:04:15.306 --> 00:04:16.899
+麦克 · 诺斯: 看起来不错，我们试试这个。
+&gt;&gt; Mike North: Looks good, let's try this.
+
+65
+00:04:18.815 --> 00:04:19.831
+迈克 · 诺斯: 看起来不错。
+&gt;&gt; Mike North: Looks good.
+
+66
+00:04:21.298 --> 00:04:22.879
+迈克 · 诺斯: 四个让它不开心。
+&gt;&gt; Mike North: Four makes it unhappy.
+
+67
+00:04:22.879 --> 00:04:24.831
+所以它可以保存嵌套的数组,
+So it can hold our nested arrays,
+
+68
+00:04:24.831 --> 00:04:30.680
+它可以保存我们感兴趣的简单值，一切看起来都非常好。
+it can hold the simple values we're
+interested in, everything looks copacetic.
+
+69
+00:04:30.680 --> 00:04:31.300
+迈克 · 诺斯: 那么,
+&gt;&gt; Mike North: So that's,
+
+70
+00:04:31.300 --> 00:04:34.406
+希望你现在能明白这两者的区别。
+hopefully now you understand
+the difference between these two.
+
+71
+00:04:34.406 --> 00:04:36.920
+类型别名是渴望的，接口是懒惰的。
+Type aliases are eager,
+interfaces are lazy.
+
+72
+00:04:36.920 --> 00:04:42.108
+类型别名是非常灵活的，它们可以给任何类型命名,
+Type aliases are extremely flexible, they
+literally can give a name to any type,
+
+73
+00:04:42.108 --> 00:04:46.769
+任何用作变量类型的东西都适用于类型别名。
+anything you would use as the type
+of variable fits in a type alias.
+
+74
+00:04:46.769 --> 00:04:50.290
+接口或者你想用来做什么
+Interfaces or what you would wanna use for
+
+75
+00:04:50.290 --> 00:04:53.790
+包含函数和数组的对象。
+things that are objects which includes
+functions and includes arrays.
+
+76
+00:04:53.790 --> 00:04:58.220
+当我说的东西是子类型的对象，我的意思是在 JavaScript 的意义。
+when I say things that are sub-types of
+object I mean in the JavaScript sense.
+
+77
+00:04:58.220 --> 00:05:01.639
+事物是不可改变的，对吗？
+Things that are immutable things, right?
+
+78
+00:05:01.639 --> 00:05:04.519
+除了原语字符串，数字,
+Everything except the primitive
+like string, number,
+
+79
+00:05:04.519 --> 00:05:06.891
+恶霸，象征和未定义的
+bully, and symbol and the undefined

@@ -1,0 +1,140 @@
+WEBVTT
+
+1
+00:00:00.180 --> 00:00:04.169
+迈克 · 诺斯: 让我们应用我们新学到的三阶段转换方法
+&gt;&gt; Mike North: Let's apply our newly
+learned three phase approach to converting
+
+2
+00:00:04.169 --> 00:00:07.530
+将一段 JavaScript 代码转换成打字稿。
+a piece of JavaScript
+code into TypeScript.
+
+3
+00:00:07.530 --> 00:00:11.550
+所以我为你们写了这样一个例子。
+So I've written such an example for you.
+
+4
+00:00:11.550 --> 00:00:15.259
+在通讯录下的“挑战”文件夹里。
+It's in the challenges
+folder under address book.
+
+5
+00:00:15.259 --> 00:00:19.980
+这里有一个输入错误，不是 index.ts，而是 index.js。
+And there's a little typo here
+that's not index.ts, it is index.js.
+
+6
+00:00:19.980 --> 00:00:24.196
+唯一的文件在地址簿文件夹，所以希望我们能找出来。
+The only file in the address book folder,
+so hopefully we'll figure that out.
+
+7
+00:00:40.234 --> 00:00:43.893
+Mike North: 为了理解，让我们来看看这段代码
+&gt;&gt; Mike North: Let's take a look at this
+piece of code in order to understand
+
+8
+00:00:43.893 --> 00:00:45.615
+它的各个方面
+the various aspects of it and
+
+9
+00:00:45.615 --> 00:00:49.590
+我们可能需要考虑类型信息。
+where we might need to think
+about type information.
+
+10
+00:00:49.590 --> 00:00:53.039
+我们有一个叫做 addressbook 的类
+So we've got a class here
+called AdressBook and
+
+11
+00:00:53.039 --> 00:00:54.590
+我们一会儿再深入讨论。
+we'll dig into that in a moment.
+
+12
+00:00:55.700 --> 00:01:00.665
+我们有一个函数叫格式化日期,
+We've got a function here
+called the formatDate,
+
+13
+00:01:00.665 --> 00:01:04.519
+和 getVcardText。
+getFullName, and getVcardText.
+
+14
+00:01:04.519 --> 00:01:08.840
+如果你从未听说过 Vcard，你可以创建一个 Vcard 文件,
+If you've never heard of Vcard,
+you can create a Vcard file,
+
+15
+00:01:08.840 --> 00:01:12.329
+只是一个文本文件，里面有联系方式。
+it's just a text file with
+contact information in it.
+
+16
+00:01:12.329 --> 00:01:15.840
+你可以把这个安装到你的联系人应用程序或者其他什么地方。
+And you can install this in
+your contacts app or something.
+
+17
+00:01:17.370 --> 00:01:23.289
+在 AddressBook 类中，我们有一个看起来像是用于联系人的数组。
+In the AddressBook class, we have an array
+that looks like it's for contacts.
+
+18
+00:01:23.289 --> 00:01:27.719
+一个添加联系人的方法，然后按名称查找联系人。
+A method to add contact, and
+then find a contact by name.
+
+19
+00:01:29.370 --> 00:01:34.849
+因此，三个步骤中的第一步让我们重新命名
+So, the first of the three
+steps has us renaming
+
+20
+00:01:34.849 --> 00:01:40.069
+从 JS 到 TS，并设置打字稿编译器
+this file from JS to TS, and
+setting the TypeScript compiler
+
+21
+00:01:40.069 --> 00:01:45.049
+直到我们能让事情顺利进行。
+in a very loose mode until
+we can get things passing.
+
+22
+00:01:46.680 --> 00:01:53.240
+第0步是确保测试在我们完成之前和之后都通过。
+Step 0 is making sure that the tests
+pass before and after we are done.
+
+23
+00:01:58.888 --> 00:02:01.745
+迈克 · 诺斯: 好的，14个测试中有14个通过了。
+&gt;&gt; Mike North: Okay,
+14 out of 14 tests passed.
+
+24
+00:02:01.745 --> 00:02:05.013
+看来我们可以开始了。
+So, looks like we are good to get started.

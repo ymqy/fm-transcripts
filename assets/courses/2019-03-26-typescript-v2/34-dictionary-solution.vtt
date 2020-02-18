@@ -1,0 +1,895 @@
+WEBVTT
+
+1
+00:00:00.430 --> 00:00:04.410
+迈克 · 诺斯: 所以我希望我们首先考虑的是
+&gt;&gt; Mike North: So the first thing
+I want us to think about is
+
+2
+00:00:04.410 --> 00:00:05.799
+定义字典。
+defining a dictionary.
+
+3
+00:00:06.950 --> 00:00:09.519
+有人能帮我把这个充实一下吗？
+So can someone help me flesh this out?
+
+4
+00:00:09.519 --> 00:00:11.640
+我知道这不是字典。
+I know this is not a dictionary.
+
+5
+00:00:11.640 --> 00:00:16.230
+帮助我创建一个使用类型参数的字典。
+Help me create a dictionary
+that uses a type parameter.
+
+6
+00:00:16.230 --> 00:00:19.399
+所以我可以用数字、字符串或字符串数组来创建一个字典。
+So I can make a dictionary with numbers,
+or strings, or string arrays.
+
+7
+00:00:19.399 --> 00:00:20.532
+我需要在这里改变什么？
+What would I need to change here?
+
+8
+00:00:31.559 --> 00:00:35.869
+Mike North: 我们刚刚讨论了泛型和类型参数。
+&gt;&gt; Mike North: So we've just been talking
+about generics and type parameters.
+
+9
+00:00:35.869 --> 00:00:37.979
+我这里可能需要点东西。
+I probably need something up here.
+
+10
+00:00:43.609 --> 00:00:46.600
+是什么使字典成为字典？
+What makes a dictionary a dictionary?
+
+11
+00:00:47.850 --> 00:00:48.930
+它和数组有什么不同？
+How's it different from an array?
+
+12
+00:00:48.930 --> 00:00:51.207
+演讲者2: 所有的值都是相同的类型。
+&gt;&gt; Speaker 2: All of
+the values are the same type.
+
+13
+00:00:51.207 --> 00:00:53.539
+Mike North: 所有的值都是相同的类型。
+&gt;&gt; Mike North: All of the values
+are of the same type.
+
+14
+00:00:53.539 --> 00:00:58.889
+所以我们会有一些东西，然后是 t。
+So we're going to have something,
+and then T.
+
+15
+00:01:00.770 --> 00:01:03.909
+这些价值观是如何在字典中组织起来的？
+And how are the values organized
+within the dictionary?
+
+16
+00:01:05.180 --> 00:01:06.319
+音箱3: 键值对。
+&gt;&gt; Speaker 3: Key value pairs.
+
+17
+00:01:06.319 --> 00:01:12.650
+Mike North: 键值对，以及我们如何键入任意值
+&gt;&gt; Mike North: Key value pairs,
+and how do we type an arbitrary
+
+18
+00:01:12.650 --> 00:01:18.400
+在打字稿中的键访问，我可以在这里传入
+key access in TypeScript
+where I can pass in
+
+19
+00:01:18.400 --> 00:01:22.150
+家里、办公室或者 iPhone，然后拿回一个电话号码？
+home or Office or iPhone and
+get a phone number back?
+
+20
+00:01:22.150 --> 00:01:25.799
+演讲者2: 你有一个数组，其中有 k 冒号，然后是类型。
+&gt;&gt; Speaker 2: So you have that array
+where k colon and then the type.
+
+21
+00:01:25.799 --> 00:01:27.219
+迈克 · 诺斯: 完美的描述。
+&gt;&gt; Mike North: Perfectly described.
+
+22
+00:01:27.219 --> 00:01:31.689
+演讲者2: k 在某种程度上有什么特别之处吗？
+&gt;&gt; Speaker 2: Is the k special in any way,
+or can that be anything?
+
+23
+00:01:31.689 --> 00:01:32.710
+迈克 · 诺斯: 可以是我们想要的任何东西。
+&gt;&gt; Mike North: It can be whatever we want.
+
+24
+00:01:34.500 --> 00:01:38.639
+演讲者2: 那是惯例吗？
+&gt;&gt; Speaker 2: Is that convention?
+
+25
+00:01:38.639 --> 00:01:40.924
+迈克 · 诺斯: 所以我把它叫做 k，因为它是一把钥匙。
+&gt;&gt; Mike North: So
+I call it k, because of key.
+
+26
+00:01:40.924 --> 00:01:45.305
+这相当于命名一个函数参数，并且
+It's the equivalent of naming
+a function argument, and
+
+27
+00:01:45.305 --> 00:01:48.326
+就是这种类型的。
+this is just the type that goes with it.
+
+28
+00:01:48.326 --> 00:01:50.543
+好了。
+There we go.
+
+29
+00:01:50.543 --> 00:01:56.606
+我会按照惯例
+And I'm gonna follow
+the convention of acknowledging
+
+30
+00:01:56.606 --> 00:02:01.629
+如果我输入密钥我可能什么也得不到。
+that if I pass in key I
+might get nothing back.
+
+31
+00:02:03.140 --> 00:02:05.000
+如何将它添加到这个类型中？
+How would I add that to this type?
+
+32
+00:02:08.219 --> 00:02:09.628
+演讲者2: 或未定义的问号。
+&gt;&gt; Speaker 2: Or undefined question mark.
+
+33
+00:02:09.628 --> 00:02:14.058
+迈克 · 诺斯: 很好，事实上，我们得到了两个很好的答案。
+&gt;&gt; Mike North: Good, actually,
+we got two good answers.
+
+34
+00:02:14.058 --> 00:02:21.778
+所以我可以这样做
+So I can do it this way and
+
+35
+00:02:21.778 --> 00:02:27.182
+我要出去了
+I'm gonna go out
+
+36
+00:02:27.182 --> 00:02:34.520
+在这里的肢体，哎呀。
+on a limb here, oops.
+
+37
+00:02:34.520 --> 00:02:37.710
+是的，看起来可选项不起作用。
+Yep, looks like the optional
+is not gonna work.
+
+38
+00:02:37.710 --> 00:02:39.826
+这是一个很好的猜测，我们,
+That's a very good guess though, that we,
+
+39
+00:02:39.826 --> 00:02:43.387
+我希望这是他们将来会引进的东西。
+I would expect that to be something
+that they'd introduce in the future.
+
+40
+00:02:43.387 --> 00:02:48.090
+没有什么能阻止他们。
+There's really no,
+nothing is stopping them.
+
+41
+00:02:48.090 --> 00:02:54.634
+事实上，我不想在这里深入研究更高级的东西。
+In fact, I don't wanna get too deep
+into more advanced things here.
+
+42
+00:02:54.634 --> 00:02:58.991
+有一种方法可以用问号来指定，但是两者都是
+There is a way that you could specify
+with the question mark, but you're both
+
+43
+00:02:58.991 --> 00:03:03.835
+要么我们引入值未定义的可能性。
+right in that either we'll introduce the
+possibility of the value being undefined.
+
+44
+00:03:03.835 --> 00:03:06.975
+很好，那么根据这些东西的使用情况,
+Great, so
+according to the use of these things,
+
+45
+00:03:06.975 --> 00:03:11.360
+如果这些是独立的功能。
+if these are gonna be like
+free-standing functions.
+
+46
+00:03:11.360 --> 00:03:14.066
+我们要传递的第一样东西是一本字典。
+The first thing we are gonna
+pass in is a dictionary.
+
+47
+00:03:18.127 --> 00:03:23.167
+迈克 · 诺斯: 所以我们要把它做成一个 DictT。
+&gt;&gt; Mike North: So
+we're gonna make it a DictT.
+
+48
+00:03:23.167 --> 00:03:26.364
+它说找不到名字 t。
+It's saying cannot find name T.
+
+49
+00:03:26.364 --> 00:03:29.164
+有人知道这里少了什么吗？
+Anyone have an idea of
+what's missing here?
+
+50
+00:03:29.164 --> 00:03:34.441
+演讲者2: [听不见]麦克 · 诺斯: 约束？
+&gt;&gt; Speaker 2: [INAUDIBLE]
+&gt;&gt; Mike North: A constraint?
+
+51
+00:03:34.441 --> 00:03:36.969
+我认为我们现在不需要限制。
+I don't think we need
+a constraint right now.
+
+52
+00:03:36.969 --> 00:03:39.394
+讲者2: 功能 t 是 t。
+&gt;&gt; Speaker 2: Function T is T.
+
+53
+00:03:39.394 --> 00:03:41.229
+Mike North: Function 应该有一个通用的 t，对吗？
+&gt;&gt; Mike North: Function should
+have a generic T, right?
+
+54
+00:03:41.229 --> 00:03:44.550
+我们必须事先声明。
+We have to state kind of up front that.
+
+55
+00:03:44.550 --> 00:03:49.813
+这个函数和 t 一样不是对一个叫做 t 的接口的引用,
+This function, like T is not
+a reference to an interface called T,
+
+56
+00:03:49.813 --> 00:03:55.829
+这个函数有一个类型周长，叫做 t，很好。
+there is a type perimeter that this
+function uses and it is called T, great.
+
+57
+00:03:55.829 --> 00:03:59.625
+我要在这里加上映射函数。
+And I'm gonna add
+the mapping function here.
+
+58
+00:03:59.625 --> 00:04:02.957
+所以从概念上来说当我们使用 array.map 时,
+So conceptually, when we use array.map,
+
+59
+00:04:02.957 --> 00:04:07.909
+你怎么描述我们传入的函数？
+how would you describe
+the function that we pass in?
+
+60
+00:04:07.909 --> 00:04:08.780
+它的目的是什么？
+What's its purpose?
+
+61
+00:04:10.400 --> 00:04:13.500
+演讲者2: 循环遍历你所有的数组？
+&gt;&gt; Speaker 2: To loop through
+whatever array you have?
+
+62
+00:04:13.500 --> 00:04:17.050
+Mike North: 当然，我们迭代调用这个函数。
+&gt;&gt; Mike North: Sure,
+we iteratively invoke that function.
+
+63
+00:04:17.050 --> 00:04:19.639
+这个函数是做什么的？
+And what does the function do?
+
+64
+00:04:19.639 --> 00:04:21.476
+演讲者4: 转化它 迈克 · 诺斯: 它改变了它,
+&gt;&gt; Speaker 4: Transforming it.
+&gt;&gt; Mike North: It transforms it,
+
+65
+00:04:21.476 --> 00:04:25.639
+可能从一种类型转变成另一种类型，对吗？
+potentially from one type to another type,
+right?
+
+66
+00:04:25.639 --> 00:04:29.985
+在这种情况下，我们可能需要一个 t 的论点,
+So, in this case,
+we should probably take an argument of T,
+
+67
+00:04:29.985 --> 00:04:35.250
+因为我们正在迭代具有 t 值的数据结构。
+cuz we're iterating over data
+structure that has values of T.
+
+68
+00:04:35.250 --> 00:04:37.230
+我们还吐出了别的东西。
+And we're spitting out something else.
+
+69
+00:04:38.269 --> 00:04:42.790
+我想引入另一个类型参数，因为这就是我们要转换的内容。
+I want to introduce another type parameter
+because that's what we're transforming to.
+
+70
+00:04:44.500 --> 00:04:47.180
+我马上就会填充这个函数，但是
+And I'll fill in the function in a second,
+but
+
+71
+00:04:49.519 --> 00:04:54.759
+我们要返回这些变换后的值的字典。
+we're gonna return a dictionary
+of these transformed values.
+
+72
+00:04:54.759 --> 00:04:56.720
+现在剩下的就是定义函数本身了。
+Now all that's left is for
+us to define the function itself.
+
+73
+00:04:59.452 --> 00:05:05.634
+麦克 · 诺斯: Arg 是 t，它返回 s。
+&gt;&gt; Mike North: Arg is a T and
+it returns an S.
+
+74
+00:05:09.341 --> 00:05:11.168
+演讲者2: 你能忽略索引的论点吗？
+&gt;&gt; Speaker 2: Can you
+ignore the index argument?
+
+75
+00:05:12.490 --> 00:05:14.689
+麦克 · 诺斯: 我可以忽略索引的论点吗？
+&gt;&gt; Mike North: Can I
+ignore the index argument?
+
+76
+00:05:14.689 --> 00:05:18.079
+说话人2: map 函数中的第二个参数。
+&gt;&gt; Speaker 2: The second
+argument in a map function.
+
+77
+00:05:18.079 --> 00:05:23.766
+迈克 · 诺斯: 你可以，它不会，就像使用 array.map,
+&gt;&gt; Mike North: You could, it wouldn't,
+like in terms of using array.map,
+
+78
+00:05:23.766 --> 00:05:27.579
+那会有点违背我们的初衷。
+that would sort of defeat the purpose.
+
+79
+00:05:27.579 --> 00:05:31.310
+函数是要完成的工作的定义。
+The function is the definition
+of the work to be done.
+
+80
+00:05:31.310 --> 00:05:36.029
+我们可以让它是可选的，然后返回相同的字典,
+We could make it optional and then
+just return the same dictionary again,
+
+81
+00:05:36.029 --> 00:05:41.170
+但对我来说，这是滥用的标志，对吗？
+but to me that would be a sign of misuse,
+right?
+
+82
+00:05:41.170 --> 00:05:46.023
+我们所能做的就是遍历数组，什么也不做。
+All we could do is iterate
+over the array and do nothing.
+
+83
+00:05:46.023 --> 00:05:52.023
+没错，所以没有指示如何从一种类型转换到另一种类型,
+Right, so without instructions as to how
+to transform from one type to another,
+
+84
+00:05:52.023 --> 00:05:54.860
+我想说这没有意义。
+I would say there's no point in this.
+
+85
+00:05:54.860 --> 00:05:57.399
+所以在这种情况下，我会保持强制性。
+So I would keep it mandatory in this case.
+
+86
+00:05:57.399 --> 00:06:01.697
+说话人2: 我的意思是类似于函数类型 Arg 是 t，但是
+&gt;&gt; Speaker 2: I mean like for
+the function type Arg is T, but
+
+87
+00:06:01.697 --> 00:06:06.112
+这个函数的第二个参数是
+then as the second argument
+of that function Is
+
+88
+00:06:06.112 --> 00:06:09.605
+类型编号的索引迈克 · 诺斯: 对不起，谢谢,
+an index of type number
+&gt;&gt; Mike North: Sorry, thank you,
+
+89
+00:06:09.605 --> 00:06:10.249
+当然。
+absolutely.
+
+90
+00:06:13.343 --> 00:06:15.288
+迈克 · 诺斯: 是的，我们完全可以这么做
+&gt;&gt; Mike North: Yeah we
+could totally do that and
+
+91
+00:06:15.288 --> 00:06:17.850
+我们不需要让它成为可选的。
+we don't need to make it optional.
+
+92
+00:06:17.850 --> 00:06:22.620
+因为类型等价的工作方式,
+Because the way that
+the type equivalent works,
+
+93
+00:06:22.620 --> 00:06:27.370
+如果一个函数选择不接受这个参数，那没关系。
+if a function chooses to not
+receive that argument, that's fine.
+
+94
+00:06:27.370 --> 00:06:30.920
+如果我们让它成为可选的，我们是在暗示我们可能提供了它，但是
+If we made it optional, we're indicating
+that we may be providing it, but
+
+95
+00:06:30.920 --> 00:06:32.310
+它可能是未定义的,
+it could come through as undefined,
+
+96
+00:06:32.310 --> 00:06:36.800
+这是不可能发生的，所以让我们执行这个。
+which is not what's likely to happen,
+so let's implement this.
+
+97
+00:06:39.430 --> 00:06:42.569
+很方便，创建一个空字典很容易，对吧？
+Conveniently, it's easy to create
+an empty dictionary, right?
+
+98
+00:06:42.569 --> 00:06:44.019
+我们要创造一个空字典。
+We're gonna create an empty dictionary.
+
+99
+00:06:44.019 --> 00:06:47.689
+我们要循环遍历现有的字典
+We're gonna loop over
+the existing dictionary and
+
+100
+00:06:47.689 --> 00:06:51.500
+填充我们将要返回的东西。
+populate the thing that
+we're going to return.
+
+101
+00:06:51.500 --> 00:06:52.197
+然后我们会把它还回去。
+And then we'll return it.
+
+102
+00:07:00.117 --> 00:07:01.079
+迈克 · 诺斯: 这就对了。
+&gt;&gt; Mike North: So there you go.
+
+103
+00:07:02.120 --> 00:07:07.502
+这是简单的部分，现在我们如何迭代对象的键？
+That's the easy part, and now how do
+we iterate over an object's keys?
+
+104
+00:07:10.829 --> 00:07:16.334
+演讲者2: 反对。钥匙 Mike North: 好，反对。钥匙(dict) ,
+&gt;&gt; Speaker 2: Object.keys
+&gt;&gt; Mike North: Good, Object.keys(dict),
+
+105
+00:07:16.334 --> 00:07:20.358
+我只需要使用 forEach
+and I'll just use forEach, and
+
+106
+00:07:20.358 --> 00:07:24.841
+它接收一个值和一个索引。
+this receives a value and an index.
+
+107
+00:07:24.841 --> 00:07:28.302
+这将有助于传递下去。
+And that'll be useful to pass along.
+
+108
+00:07:28.302 --> 00:07:35.629
+我们会把它放在输出字典里,
+And we'll say we're gonna place
+in the output dictionary,
+
+109
+00:07:35.629 --> 00:07:40.798
+不好意思我要把这个改个名字,
+sorry I'm gonna rename this for clarity,
+
+110
+00:07:40.798 --> 00:07:46.697
+在同一个字典键下，我们接下来做什么？
+under the same dictionary
+key what do we do next?
+
+111
+00:07:51.781 --> 00:07:53.569
+迈克 · 诺斯: 必须使用这个功能，对吗？
+&gt;&gt; Mike North: Gotta use that function,
+right?
+
+112
+00:07:53.569 --> 00:07:54.981
+我差不多完成了，但还没用到。
+I'm almost done and I haven't use it yet.
+
+113
+00:07:57.617 --> 00:08:03.459
+Mike North: 这个函数的作用是在索引中输入 t，然后返回 s。
+&gt;&gt; Mike North: So this function is made
+to take in a T in an index and return S.
+
+114
+00:08:13.204 --> 00:08:16.292
+麦克 · 诺斯: dict 和，dKey。
+&gt;&gt; Mike North: dict and, dKey.
+
+115
+00:08:16.292 --> 00:08:17.201
+太好了，谢谢。
+Great, thank you.
+
+116
+00:08:19.459 --> 00:08:23.779
+迈克 · 诺斯: 这是 t 型的还是未定义的，对吗？
+&gt;&gt; Mike North: And
+this is of type T or undefined, right?
+
+117
+00:08:23.779 --> 00:08:28.300
+因为从理论上讲，这本词典里可能缺了点什么。
+Cuz In theory, there could be
+something missing in this dictionary.
+
+118
+00:08:28.300 --> 00:08:32.485
+可能是有人故意给我们设置了一个不确定的价值。
+Could be someone who's deliberately placed
+an undefined value in there trolling us.
+
+119
+00:08:35.739 --> 00:08:40.479
+迈克诺斯: 如果，迈克诺斯: 这个项目和
+&gt;&gt; Mike North: If,
+&gt;&gt; Mike North: This item and
+
+120
+00:08:40.479 --> 00:08:45.629
+将返回，对不起，不返回，我们将只
+will return, sorry, not return, we'll only
+
+121
+00:08:45.629 --> 00:08:52.119
+如果定义了输出项，则将其放入此字典中。
+place the output item in this
+dictionary if it's defined.
+
+122
+00:08:52.119 --> 00:08:55.179
+我得小心点。
+I've gotta be careful here.
+
+123
+00:08:55.179 --> 00:08:58.999
+我刚刚意识到零和空字符串还有其他麻痹的东西怎么办？
+I just realized what about zeroes and
+empty strings and other palsy things?
+
+124
+00:09:04.738 --> 00:09:07.779
+迈克 · 诺斯: 就是这样，这样更彻底，对吧？
+&gt;&gt; Mike North: There we go,
+that's more thorough, right?
+
+125
+00:09:07.779 --> 00:09:10.610
+所以我们循环遍历字典中的所有键。
+So we're looping over all of
+the keys in the dictionary.
+
+126
+00:09:10.610 --> 00:09:13.360
+如果有定义的话，我们就得到每个值。
+We're grabbing each value if it's defined.
+
+127
+00:09:13.360 --> 00:09:18.000
+转换它，传递它，使用这个函数转换它
+Transform it, pass it along that,
+transform it using this function by
+
+128
+00:09:18.000 --> 00:09:22.330
+传递原始值和索引，得到转换后的值。
+passing along the original value and the
+index, we get the transformed value out.
+
+129
+00:09:22.330 --> 00:09:24.139
+现在我们把这个还回去。
+And now we return this thing.
+
+130
+00:09:24.139 --> 00:09:28.929
+这是我们正在使用的地方，我们可以指向我们正在使用的地方
+This is a place where we're using,
+we can point to the places we're using
+
+131
+00:09:28.929 --> 00:09:33.570
+类型参数，这是很有必要的，对吗？
+the type parameters, and
+it's quite necessary, right?
+
+132
+00:09:33.570 --> 00:09:36.470
+所以我们收集了一本 t 型的字典。
+So we take in a dictionary of type T.
+
+133
+00:09:36.470 --> 00:09:39.490
+T 可以帮助我们输入用于转换的函数。
+T helps us type the function
+we're using to transform.
+
+134
+00:09:40.799 --> 00:09:45.626
+我们接收到的函数会返回一些东西，这就是我们将要做的
+And the function we receive returns
+something and that how we'll be
+
+135
+00:09:45.626 --> 00:09:50.293
+能够弱化什么 s 应该和这决定了我们的输出类型。
+able to infirm what S should and
+that determines our output type.
+
+136
+00:09:50.293 --> 00:09:55.201
+看看我怎么用这个。
+So check out how I can use this.
+
+137
+00:09:55.201 --> 00:09:59.428
+我已经创建了一个，没有。
+mapDict, do I have one already created,
+no.
+
+138
+00:09:59.428 --> 00:10:03.291
+所以我们要创建一个，我们只需要字符串。
+So we'll create a, we'll just strings.
+
+139
+00:10:07.960 --> 00:10:10.909
+Mike North: 我在这里有一个函数，它把字符串当作
+&gt;&gt; Mike North: And I'll have a function
+here that'll take the string as
+
+140
+00:10:10.909 --> 00:10:11.654
+争论。
+an argument.
+
+141
+00:10:14.995 --> 00:10:18.222
+Mike North: 如果我返回一个字符串数组,
+&gt;&gt; Mike North: And
+if I return an array of strings,
+
+142
+00:10:18.222 --> 00:10:22.963
+mapdict 将返回字符串数组的字典。
+mapDict will return
+a dictionary of string arrays.
+
+143
+00:10:22.963 --> 00:10:27.937
+如果我把它包在这样的物体里,
+If I where to wrap it
+in an object like this,
+
+144
+00:10:27.937 --> 00:10:35.140
+这是我们已经见过的函数体的错误函数。
+it's error functions we've
+already met as a function body.
+
+145
+00:10:35.140 --> 00:10:38.415
+现在它是一个包装值的字典。
+Now it's a dictionary of
+sort of wrapped values.
+
+146
+00:10:38.415 --> 00:10:43.320
+注意，我必须使用类型参数来定义这个东西的作用,
+Notice I had to use type parameters
+to define what this thing does,
+
+147
+00:10:43.320 --> 00:10:47.710
+但是在我所说的地方，这看起来相对简单。
+but where I'm calling it,
+this looks relatively simple.
+
+148
+00:10:47.710 --> 00:10:52.019
+类型只是工作，空格填写，和
+The types kind of just work,
+the blanks are filled in, and
+
+149
+00:10:52.019 --> 00:10:56.470
+它们是由我传递给这个函数的参数推断出来的。
+they're inferred by the arguments
+that I'm passing to this function.
+
+150
+00:10:56.470 --> 00:10:59.870
+它们不需要被明确指定。
+They don't have to be
+explicitly specified.
+
+151
+00:11:01.009 --> 00:11:03.580
+这就像一口井
+So this will be like a well
+
+152
+00:11:03.580 --> 00:11:08.679
+选择泛型的使用，因为它是一段非常灵活的代码。
+chosen use of generics in that it's
+a really flexible piece of code.
+
+153
+00:11:08.679 --> 00:11:11.269
+返回的类型。
+The types that it returns.
+
+154
+00:11:11.269 --> 00:11:15.600
+你有足够的特异性和
+You have as much level of specificity and
+
+155
+00:11:15.600 --> 00:11:18.309
+你需要的细节，以便继续进行。
+detail that you need in
+order to carry them forward.
+
+156
+00:11:18.309 --> 00:11:19.826
+我不需要提供任何明确的信息。
+And I don't have to
+provide anything explicit.
+
+157
+00:11:19.826 --> 00:11:26.342
+我们将确保减少行动的解决方案在回购协议中。
+We'll make sure that the solution to the
+reduce exercise here will be in the repo.
+
+158
+00:11:26.342 --> 00:11:29.440
+它遵循一个类似的模式。
+And it follows a similar pattern.

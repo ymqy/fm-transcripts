@@ -1,0 +1,550 @@
+WEBVTT
+
+1
+00:00:00.320 --> 00:00:04.472
+迈克 · 诺斯: 当与未知数打交道时，先回到这个话题。
+&gt;&gt; Mike North: When working with unknowns,
+going back to that topic for a moment.
+
+2
+00:00:04.472 --> 00:00:08.670
+有一件事让我很困扰
+There's one thing about this
+that kinda bugs me, and
+
+3
+00:00:08.670 --> 00:00:12.070
+这个例子说明了。
+that is illustrated by this example.
+
+4
+00:00:12.070 --> 00:00:15.666
+所以我们有一个值 aa，也就是未知数 bb,
+So we have a value aa,
+which is unknown, bb,
+
+5
+00:00:15.666 --> 00:00:19.940
+另一种未知的，但是完全不同的类型。
+another unknown, but
+a completely different type.
+
+6
+00:00:19.940 --> 00:00:25.085
+实际上我们没有得到一个类型错误。
+And it's actually like we're
+not getting a type error here.
+
+7
+00:00:25.085 --> 00:00:28.469
+因此，任何未知都可以指定给任何其他未知。
+So any unknown can be assigned
+to any other unknown.
+
+8
+00:00:28.469 --> 00:00:29.980
+这是因为它是一个顶级类型。
+And it's because it's a top type.
+
+9
+00:00:29.980 --> 00:00:33.759
+它就像一个任何，它是一种不透明的任何。
+It's just like an any,
+it's sort of an opaque any.
+
+10
+00:00:33.759 --> 00:00:36.990
+我们看不到里面的东西，但它可以装下任何它想要的东西。
+We can't see into it but
+it can hold whatever it wants.
+
+11
+00:00:36.990 --> 00:00:42.781
+所以很容易得到一对不同的不透明值混合在一起
+So it's very easy to get a couple sort
+of different opaque values mixed up and
+
+12
+00:00:42.781 --> 00:00:45.145
+彼此交织在一起。
+intertwined with each other.
+
+13
+00:00:45.145 --> 00:00:49.930
+所以，我要给你们一个替代方案
+So, I'm gonna give you
+an alternate solution that for
+
+14
+00:00:49.930 --> 00:00:52.948
+Me it’s a little more involved but
+me it's a little more involved but
+
+15
+00:00:52.948 --> 00:00:57.119
+这个想法更安全，更直观。
+the idea is a lot safer and
+a lot more intuitive.
+
+16
+00:00:59.359 --> 00:01:01.933
+这被称为品牌类型。
+And this is called branded types.
+
+17
+00:01:01.933 --> 00:01:07.137
+所以我要创建一个具有特殊属性名的接口
+So I'm just gonna create an interface
+that has a special property name
+
+18
+00:01:07.137 --> 00:01:12.790
+不太可能与任何其他物体重叠。
+that is very unlikely to overlap with
+anything any other object might have.
+
+19
+00:01:12.790 --> 00:01:16.266
+我有一个功能叫做品牌和非品牌。
+And I have a function called brand and
+unbrand.
+
+20
+00:01:16.266 --> 00:01:22.010
+我在这里做的是，通常这是不安全的，好吗？
+What I'm doing here is,
+typically this would be unsafe, all right?
+
+21
+00:01:22.010 --> 00:01:24.015
+这就是所谓的选角
+This is called casting, and
+
+22
+00:01:24.015 --> 00:01:29.039
+它是你强迫一个值被视为特定类型的地方。
+it is where you're forcing a value
+to be regarded as a particular type.
+
+23
+00:01:29.039 --> 00:01:31.896
+我在这里传递一个字符串
+So I'm passing a string in here, and
+
+24
+00:01:31.896 --> 00:01:37.210
+我强迫它到顶端类型未知，或者你可以做任何在这里。
+I'm forcing it to a top type unknown,
+or you could do any here.
+
+25
+00:01:37.210 --> 00:01:38.593
+然后强迫布兰德达。
+And then forcing it to BrandedA.
+
+26
+00:01:38.593 --> 00:01:43.456
+如果我们不做这个中间步骤，我们就会变成这样，因为
+If we did not do this intermediate
+step we'd be all that because
+
+27
+00:01:43.456 --> 00:01:46.865
+这种类型之间没有重叠。
+there is no overlap between this types.
+
+28
+00:01:46.865 --> 00:01:50.010
+我们使一个字符串看起来类似于
+We're making a string
+look to type script like
+
+29
+00:01:50.010 --> 00:01:52.759
+上面有特殊属性的物体。
+an object with a special property on it.
+
+30
+00:01:52.759 --> 00:01:57.185
+然后我们有另一个匹配函数，进行逆变换。
+And then we have another matching
+function that does the inverse transform.
+
+31
+00:01:57.185 --> 00:02:00.810
+所以我们可以传递这些东西，它们看起来不像是绳子。
+So we can pass this things around and
+they dont look like strings.
+
+32
+00:02:00.810 --> 00:02:06.623
+没有人可以像字符串一样使用它，这就是优势。
+Nobody is ever gonna be able to use this
+like a string, here is the advantage.
+
+33
+00:02:06.623 --> 00:02:12.159
+首先，我要确保我们都同意这是不透明的，对吧？
+So number one, I wanna make sure
+we agree it's opaque, right?
+
+34
+00:02:12.159 --> 00:02:16.516
+我们没有看到这是一个字符串，我们不能用它来做字符串的东西。
+We don't see that this is a string,
+we can't do string stuff with it.
+
+35
+00:02:16.516 --> 00:02:20.373
+但是如果我们有另一种类型，这是一样的,
+But if we had another type, and
+this is just the same thing,
+
+36
+00:02:20.373 --> 00:02:23.090
+只是一个不同的属性键和值。
+just a different property key and value.
+
+37
+00:02:25.389 --> 00:02:33.009
+迈克 · 诺斯: 我们可以创造品牌价值，对吗？
+&gt;&gt; Mike North: We can create
+branded values, right?
+
+38
+00:02:33.009 --> 00:02:37.719
+Brandb 用一个带有 abc 属性的对象来说明。
+BrandB takes an object with a property
+called abc, just to illustrate.
+
+39
+00:02:37.719 --> 00:02:39.212
+你可以用任何你喜欢的类型来做这件事。
+You can do this with
+whatever type you want.
+
+40
+00:02:43.840 --> 00:02:45.728
+迈克 · 诺斯: 但这才是吸引人的地方。
+&gt;&gt; Mike North: But
+this is the appealing part.
+
+41
+00:02:45.728 --> 00:02:50.960
+因为这是两种不同的品牌类型，有两种不同的属性。
+Because these are two different branded
+types with two different properties.
+
+42
+00:02:50.960 --> 00:02:53.514
+这个以 a 结尾，这个以 b 结尾。
+Here this one ends with A,
+this one ends with B.
+
+43
+00:02:53.514 --> 00:02:55.759
+你永远不能把他们弄糊涂。
+You can never get them confused.
+
+44
+00:02:55.759 --> 00:02:57.579
+它们是两种不同的结构。
+They're two different structures.
+
+45
+00:02:57.579 --> 00:03:00.938
+这两者之间不会有结构上的匹配。
+There will not be a structural
+match between these.
+
+46
+00:03:02.060 --> 00:03:08.814
+所以我们隐藏了这个值的原始身份。
+So we've hidden away the original
+identity of what this value is.
+
+47
+00:03:08.814 --> 00:03:12.349
+我们已经使它们不可互换。
+We've made it so
+that they're not interchangeable.
+
+48
+00:03:12.349 --> 00:03:16.884
+你不能无意中混合了不打上品牌的功能,
+You can't accidentally mix
+the unbranding functions,
+
+49
+00:03:16.884 --> 00:03:20.099
+这样就可以恢复原来的价值。
+which will recover the original value.
+
+50
+00:03:20.099 --> 00:03:24.110
+但是如果你这样做了，你可以通过非品牌回到你最初的价值观
+But you can get back to your original
+values through the unbrand if you do it
+
+51
+00:03:24.110 --> 00:03:24.829
+正确地。
+correctly.
+
+52
+00:03:24.829 --> 00:03:26.997
+所以，这几乎就像取一个值
+So, it's almost like taking a value and
+
+53
+00:03:26.997 --> 00:03:29.490
+把它装进信封，然后包装起来。
+putting it in an envelope and
+packaging it up.
+
+54
+00:03:29.490 --> 00:03:32.896
+这就像你邮寄重要文件的信封一样。
+It's like those envelopes you'd
+mail an important document in.
+
+55
+00:03:32.896 --> 00:03:37.129
+你看不到里面的内容，但是上面有个标记，所以
+Where you can't see the contents,
+but it sort of has a stamp on it, so
+
+56
+00:03:37.129 --> 00:03:41.670
+你知道这是那个人写的，只有他们才能重新打开。
+you know this came from that person and
+only they can open it back up again.
+
+57
+00:03:43.129 --> 00:03:46.031
+那么，我马上就回答你的问题。
+So, I'll get to your question in a second.
+
+58
+00:03:46.031 --> 00:03:50.853
+这里我唯一的建议是，确保代码中只有一个地方
+My only tip here is, make sure that
+there's only one place in your code
+
+59
+00:03:50.853 --> 00:03:55.210
+你正在做你的品牌和你的品牌。
+where you're doing your branding and
+your unbranding.
+
+60
+00:03:55.210 --> 00:04:00.396
+只有这样你才能完全确定没有人窥视这个东西,
+That is the way you can be absolutely
+sure nobody is peeking inside this thing,
+
+61
+00:04:00.396 --> 00:04:03.784
+或访问试图访问其原始值。
+or accessing trying to
+access its original value.
+
+62
+00:04:06.169 --> 00:04:09.969
+迈克 · 诺斯: 将铸件朝一个方向浇注到不透明的结构上
+&gt;&gt; Mike North: Having the cast in one
+direction to the opaque structure and
+
+63
+00:04:09.969 --> 00:04:12.556
+返回到相同的作业描述符模块。
+back in the same job descriptor module.
+
+64
+00:04:12.556 --> 00:04:15.811
+如果你想改变现状,
+That allows you if you
+wanted to change things up,
+
+65
+00:04:15.811 --> 00:04:20.927
+你可以移除这个属性的关键，你可以在一个位置做出改变。
+you could remove this property key and
+you could make changes in one location.
+
+66
+00:04:20.927 --> 00:04:23.896
+因为没有其他人可以和它进行有意义的互动,
+And because nobody else can interact
+with it in a meaningful way,
+
+67
+00:04:23.896 --> 00:04:26.790
+你不需要改变其他任何东西。
+you shouldn't have to alter
+much of anything else.
+
+68
+00:04:26.790 --> 00:04:28.144
+你有什么问题吗？
+Did you have a question?
+
+69
+00:04:28.144 --> 00:04:32.213
+演讲者2: 是的，这样做和使用一个物体有什么区别
+&gt;&gt; Speaker 2: Yeah, what is the point of
+doing it this way versus using an object
+
+70
+00:04:32.213 --> 00:04:34.290
+然后在里面做私人侦探？
+and doing a private inside of it?
+
+71
+00:04:35.769 --> 00:04:39.978
+Mike North: Privates 只能在类实例上使用。
+&gt;&gt; Mike North: Privates can only
+be used on class instances.
+
+72
+00:04:39.978 --> 00:04:42.750
+演讲者2: 好的，这是什么？
+&gt;&gt; Speaker 2: Okay, so this was?
+
+73
+00:04:42.750 --> 00:04:48.165
+迈克 · 诺斯: 所以，我的意思是，你可以那样做，但那意味着
+&gt;&gt; Mike North: So, I mean, you could
+do things that way, but that would mean
+
+74
+00:04:48.165 --> 00:04:55.264
+这个类必须公开一种方法，把原始值返回出来。
+that the class would have to expose a way
+of getting that original value back out.
+
+75
+00:04:55.264 --> 00:04:59.569
+所以我特别用它来生成 ID。
+So I use this, in particular,
+for ID generation.
+
+76
+00:04:59.569 --> 00:05:03.446
+如果我在我的应用中有一打不同类型的实体，并且
+Where if I've got a dozen different
+type of entities in my app, and
+
+77
+00:05:03.446 --> 00:05:08.223
+我要发出身份证明我要确保它们都来自我的身份识别生成器,
+I'm issuing IDs, and I wanna make sure
+they're all coming from My ID generator,
+
+78
+00:05:08.223 --> 00:05:10.456
+不是普通的绳子，是这个。
+it's not just any string it's this.
+
+79
+00:05:10.456 --> 00:05:13.259
+现在，我将创建一个品牌类型。
+Now, I will create a branded type.
+
+80
+00:05:13.259 --> 00:05:15.420
+所以你可以肯定这就是原点。
+So you can be sure like
+this is the origin.
+
+81
+00:05:15.420 --> 00:05:18.776
+这是整个应用程序中唯一一个返回类型的函数
+It's the only function in the whole
+app that will return to type with this
+
+82
+00:05:18.776 --> 00:05:19.910
+结构。
+structure.
+
+83
+00:05:19.910 --> 00:05:27.148
+当需要将这个或那个序列化到 JSON 时，这是一个谎言。
+When it comes time to serialize this or
+that to JSON, this here is a lie.
+
+84
+00:05:27.148 --> 00:05:31.966
+这是下面的实际类型，每当所有类型都编译离开时,
+This is the real type underneath, and
+whenever all of the types compile away,
+
+85
+00:05:31.966 --> 00:05:35.471
+你的代码将完全按照原来的方式运行，但是
+your code will run exactly as
+it would otherwise run, but
+
+86
+00:05:35.471 --> 00:05:38.790
+我只是想让你别插手这件事。
+this is just a way of saying
+hands off this thing.
+
+87
+00:05:38.790 --> 00:05:43.661
+好像我要用类型系统来隐藏这个本质似的
+Like I'm gonna use the type system
+as a way to hide the nature of this
+
+88
+00:05:43.661 --> 00:05:47.500
+只要有人想戳它，它就有价值。
+value from anyone who would
+care to try to poke at it.
+
+89
+00:05:47.500 --> 00:05:50.026
+再说一次，这与安全无关。
+And again, it's not about security.
+
+90
+00:05:50.026 --> 00:05:54.332
+这是关于阻止开发人员相互交织
+It's about discouraging
+developers from intertwining
+
+91
+00:05:54.332 --> 00:05:57.747
+他们自己的私人部分，你的代码。
+themselves with private
+parts of your code.
+
+92
+00:05:57.747 --> 00:06:02.596
+作为一个图书馆作者，我想确保我可以削减
+As a library author I want
+to make sure that I can cut
+
+93
+00:06:02.596 --> 00:06:06.307
+修改了我的代码的新版本。
+new releases with changes to my code.
+
+94
+00:06:06.307 --> 00:06:10.103
+我不会伤害其他人的。
+And I'm not gonna break
+a lot other people.
+
+95
+00:06:10.103 --> 00:06:14.896
+这是一种划清界限的方法，不要用这个,
+And this is a way of sort of drawing
+a clean line, don't use this,
+
+96
+00:06:14.896 --> 00:06:17.959
+我故意让事情变得困难。
+I'm deliberately making it difficult.

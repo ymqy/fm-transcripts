@@ -1,0 +1,467 @@
+WEBVTT
+
+1
+00:00:00.280 --> 00:00:04.679
+迈克 · 诺斯: 接下来我们要讨论的是五分钟
+&gt;&gt; Mike North: The next thing we're going
+to talk about is a little five-minute
+
+2
+00:00:04.679 --> 00:00:07.410
+类型系统描述。
+description of type systems.
+
+3
+00:00:07.410 --> 00:00:10.630
+以及如何分辨这两者的区别并利用它们
+And how you can tell the difference and
+take advantage
+
+4
+00:00:10.630 --> 00:00:15.089
+类似打字稿和类似 Java 的东西之间的区别。
+of the difference between something
+like TypeScript and something like Java.
+
+5
+00:00:15.089 --> 00:00:20.120
+因此，类型系统可以归结为等价类型的问题。
+So, type systems come down to this
+question of type equivalents.
+
+6
+00:00:20.120 --> 00:00:24.443
+当我们看到一些错误消息时，我们看到的也是同样的东西
+And that is the same thing we were looking
+at when we saw some error messages
+
+7
+00:00:24.443 --> 00:00:29.065
+和赋值的左右手有关，对吗？
+that related to the left-hand and
+the right-hand of an assignment, right?
+
+8
+00:00:29.065 --> 00:00:34.115
+这是打字稿试图找出这个值，你正在尝试
+That's TypeScript trying to figure
+out is this value you're trying to
+
+9
+00:00:34.115 --> 00:00:39.264
+赋值等价于你要赋值的变量的类型。
+assign equivalent to this type of
+the variable you're assigning it to.
+
+10
+00:00:39.264 --> 00:00:43.659
+同样的事情也会发生在，你试图传递一个参数给函数的时候。
+And the same thing happens when you're
+trying to pass an argument to a function.
+
+11
+00:00:43.659 --> 00:00:46.820
+就把它想象成一个试图穿过一个洞的物体。
+Just think of it like an object
+trying to pass through a hole.
+
+12
+00:00:46.820 --> 00:00:51.637
+你希望方桩适当地穿过一个方孔。
+You want the square peg passing
+through a square hole as appropriate.
+
+13
+00:00:51.637 --> 00:00:57.350
+所以，真正的问题是，我们能不能把 x 看作是一个 htmlinputement？
+So really, it's about can we
+regard x as an HTMLInputElement?
+
+14
+00:00:57.350 --> 00:01:04.197
+类型系统，比如 Java 和几乎所有的类型化语言,
+Nominal type systems, like Java and
+almost every typed language out there,
+
+15
+00:01:04.197 --> 00:01:09.778
+他们会根据 x 是否是一个实例来回答这个问题
+they would answer the question
+based on whether x is an instance
+
+16
+00:01:09.778 --> 00:01:14.751
+不管你要找的是什么类型的。
+of a class named whatever
+the type you're looking for.
+
+17
+00:01:14.751 --> 00:01:19.537
+因此，这需要您将所有代码设置在一个公平的
+So this would require you to have
+all of your code set up in a fairly
+
+18
+00:01:19.537 --> 00:01:23.539
+面向对象的方式，你有构造函数。
+object-oriented way where
+you have constructors.
+
+19
+00:01:23.539 --> 00:01:26.335
+主要处理类和类的实例
+And you're dealing primarily
+with instances of classes and
+
+20
+00:01:26.335 --> 00:01:27.881
+你在传东西。
+you're passing things around.
+
+21
+00:01:27.881 --> 00:01:31.542
+这不一定是 JavaScript 代码的编写方式。
+This isn't necessarily how
+JavaScript code is written.
+
+22
+00:01:31.542 --> 00:01:36.629
+这就需要我们进行大量的改写，几乎所有的东西
+And this would require us to do a lot of
+rewriting and to make almost everything
+
+23
+00:01:36.629 --> 00:01:41.343
+一个类和一个实例，以便具有具体名称的工厂。
+a class and an instance in order to
+have factories with specific names.
+
+24
+00:01:41.343 --> 00:01:42.531
+这样我们就可以利用类型的优势。
+So that we could take advantage of types.
+
+25
+00:01:44.414 --> 00:01:47.258
+是一个结构类型的系统,
+&gt;&gt; Mike North: TypeScript is
+a structural type system,
+
+26
+00:01:47.258 --> 00:01:50.271
+他们只关心物体的形状。
+they only care about
+the shape of an object.
+
+27
+00:01:50.271 --> 00:01:55.245
+哪些属性名称和类型是允许用于这些属性的，对吗？
+Which is property names and types that
+are allowed for those properties, right?
+
+28
+00:01:55.245 --> 00:01:59.242
+所以它只关心对象的结构。
+So it only cares about
+the structure of an object.
+
+29
+00:01:59.242 --> 00:02:04.278
+所以，如果我们有一个汽车的数据结构，我们可以称之为汽车。
+So, if we had like a data structure for
+a car, we could call it car.
+
+30
+00:02:04.278 --> 00:02:08.939
+但实际上，我们所关心的只是它有一种叫做 make 的特性,
+But really, all we care about is the fact
+that it has properties called make,
+
+31
+00:02:08.939 --> 00:02:11.969
+型号及年份，而该等型号及年份均属适当类别。
+model and
+year that are of the appropriate types.
+
+32
+00:02:11.969 --> 00:02:13.353
+函数也是如此。
+Same goes for functions.
+
+33
+00:02:13.353 --> 00:02:17.582
+我们实际上只关心参数和返回类型。
+We really only care about
+the arguments and the return type.
+
+34
+00:02:17.582 --> 00:02:23.606
+如果你创建了一个完全不同的函数来满足这些条件,
+And if you create a totally different
+function that meets those criteria,
+
+35
+00:02:23.606 --> 00:02:26.949
+结果就是类型等价。
+that will end up being type equivalent.
+
+36
+00:02:26.949 --> 00:02:31.090
+在需要使用该类型的地方，这将是可用的。
+That will be usable where you
+need that type to be used.
+
+37
+00:02:32.139 --> 00:02:35.909
+我必须指出，这是一个需要理解的重要概念
+And I should point out that this is
+an important concept to understand in
+
+38
+00:02:35.909 --> 00:02:36.949
+打字稿。
+TypeScript.
+
+39
+00:02:36.949 --> 00:02:40.689
+但是如果你在 JavaScript 中有一致的形状。
+But also if you have consistent
+shapes in JavaScript.
+
+40
+00:02:40.689 --> 00:02:47.923
+而且你可以避免给已经被大量使用的对象引入新的属性。
+And you avoid introducing new properties
+to objects that have been heavily used.
+
+41
+00:02:47.923 --> 00:02:52.598
+你最终在 JavaScript 运行时有了一个更好的机会,
+You end up having a better
+shot at JavaScript run times,
+
+42
+00:02:52.598 --> 00:02:55.296
+比如 V8优化你的代码。
+like V8 optimizing your code.
+
+43
+00:02:56.783 --> 00:03:00.157
+使用了术语 wider and
+&gt;&gt; Mike North: TypeScript
+uses the term wider and
+
+44
+00:03:00.157 --> 00:03:05.449
+缩小到可以描述特异性的程度。
+narrower to describe
+a level of specificity.
+
+45
+00:03:05.449 --> 00:03:09.963
+毫无疑问，你会遇到这样的人，他们使用更宽、更窄、更多的词汇
+And you'll no doubt come across
+someone who uses wider, narrower, and
+
+46
+00:03:09.963 --> 00:03:12.629
+我今天就开始用这些术语。
+I'm gonna start using these terms today.
+
+47
+00:03:12.629 --> 00:03:17.270
+但是这里的图表可以帮助你理解我们的意思。
+But here is the diagram to help you
+understand what we mean by this.
+
+48
+00:03:17.270 --> 00:03:23.090
+最宽的类型是 any，它允许任何可能的值。
+The widest type is any and
+it allows for any possible value.
+
+49
+00:03:23.090 --> 00:03:27.960
+只要把它想象成，任意一个被允许的值的集合是无穷大的。
+And just think of it as the set of allowed
+values for any is infinitely wide.
+
+50
+00:03:27.960 --> 00:03:32.039
+它可以取任何东西，几乎是无穷大。
+It can just take absolutely anything,
+it’s almost infinity.
+
+51
+00:03:32.039 --> 00:03:35.740
+现在，如果我说，我想要一个数组，任何一个数组。
+Now, if I said, I want an array,
+any array at all.
+
+52
+00:03:35.740 --> 00:03:38.569
+我不在乎这个数组中的值类型,
+I don't care what type of
+value is in this array,
+
+53
+00:03:38.569 --> 00:03:41.090
+那是窄的类型，对吗？
+that would be a narrower type, right?
+
+54
+00:03:41.090 --> 00:03:43.329
+我们不再是无限宽广了。
+We're not infinitely wide anymore.
+
+55
+00:03:43.329 --> 00:03:46.800
+这组值，如果你把它们排成一行,
+The set of values,
+if you line them up end to end,
+
+56
+00:03:46.800 --> 00:03:50.366
+会更窄，但还是很宽。
+it would be narrower,
+still pretty wide though.
+
+57
+00:03:50.366 --> 00:03:55.106
+我们可以更具体地说，这个数组可以是任意长度的,
+And we could get even more specific and
+say this array can be of arbitrary length,
+
+58
+00:03:55.106 --> 00:03:57.650
+但它必须只包含字符串。
+but it must only contain strings.
+
+59
+00:03:57.650 --> 00:04:00.909
+然后你可以说，但它必须是长度为3的。
+And then you could say, but
+it must be of length three.
+
+60
+00:04:00.909 --> 00:04:03.219
+但是这些字符串可以是任何东西。
+But those strings can be anything at all.
+
+61
+00:04:03.219 --> 00:04:08.060
+然后我们可以通过非常具体地说明
+And then we could get narrower still
+by being very specific about what
+
+62
+00:04:08.060 --> 00:04:10.902
+这些值可能是某些字符串。
+certain strings these values might be.
+
+63
+00:04:10.902 --> 00:04:17.096
+现在如果我们有一个可以操作任何数组的函数。
+Now if we had a function that
+could operate on any array.
+
+64
+00:04:17.096 --> 00:04:20.889
+我们可以查看数组类型，它下面的任何内容,
+We could look at the array type,
+and anything below it,
+
+65
+00:04:20.889 --> 00:04:26.680
+任何窄一点的都可以用，只是更具体一点。
+anything narrower than that will be
+fine to use, it's just more specific.
+
+66
+00:04:26.680 --> 00:04:32.122
+我们始终可以将必须保持大小为3的三个字符串的数组视为。
+We can always regard an array of three
+strings that must remain of size three.
+
+67
+00:04:32.122 --> 00:04:36.374
+我们总是可以把它看作一个任意的字符串数组，或者
+We can always regard that as
+an arbitrary array of strings, or
+
+68
+00:04:36.374 --> 00:04:40.129
+作为任何数组，或者任何值，对吗？
+as an array of anything,
+or as any value, right?
+
+69
+00:04:40.129 --> 00:04:44.480
+所以狭窄的数值总是可以通过较宽的洞来适应。
+So narrower values can always
+fit through the wider hole.
+
+70
+00:04:44.480 --> 00:04:46.370
+我就是这么想的。
+That's the way I kind of think of this.
+
+71
+00:04:46.370 --> 00:04:54.159
+但是如果你想要一个字符串数组,
+But if you wanted to have
+specifically an array of strings,
+
+72
+00:04:54.159 --> 00:04:55.959
+如果你有一个任意数组，你就得想办法缩小这个数组的范围。
+and you had an array of any, you'd have
+to find a way to narrow that type.
+
+73
+00:04:55.959 --> 00:04:59.180
+并且确认只有正确的东西才能通过。
+And to validate that only
+the correct thing fits through.
+
+74
+00:04:59.180 --> 00:05:02.019
+这就是我们所说的“宽”和“窄”。
+So this is what we mean by wider and
+narrower.
+
+75
+00:05:02.019 --> 00:05:07.389
+宽是非常一般的，狭是非常具体的。
+Wide is very general,
+narrow is extremely specific.
+
+76
+00:05:07.389 --> 00:05:13.531
+当我们使用空数组初始化数组时，会遇到这种 never 类型。
+We run into this never type when we were
+initializing an array with an empty array.
+
+77
+00:05:13.531 --> 00:05:20.290
+永远是无限狭窄的，它从字面上看不能容纳任何价值。
+Never is infinitely narrow,
+it literally can hold no value.
+
+78
+00:05:20.290 --> 00:05:24.490
+我的意思是，它可以容纳一个从来没有，但它就像循环推理，对不对？
+I mean, it can hold a never, but
+it is like circular reasoning, right?
+
+79
+00:05:24.490 --> 00:05:28.620
+你认为它就像没有洞，没有什么可以真正通过。
+You think of it like there is no hole,
+nothing can really pass through.
+
+80
+00:05:30.029 --> 00:05:35.579
+这是没有什么和不可能的，或不可达到的，这样想想
+It is nothing and impossible, or
+unreachable, think of it that way

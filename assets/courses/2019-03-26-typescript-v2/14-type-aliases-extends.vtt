@@ -1,0 +1,359 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:02.640
+迈克 · 诺斯: 之前我们有一个关于
+&gt;&gt; Mike North: Earlier we had
+a question about the difference between
+
+2
+00:00:02.640 --> 00:00:05.719
+接口和类型别名。
+interfaces and
+something called type aliases.
+
+3
+00:00:05.719 --> 00:00:11.599
+这两种方法都可以给结构起一个名字，我们可以导入
+And these are both ways of giving
+a structure a name that we can import and
+
+4
+00:00:11.599 --> 00:00:15.240
+从模块导出，我们可以参考。
+export from modules, and we can refer to.
+
+5
+00:00:15.240 --> 00:00:19.469
+主要的好处是我们有一个定义类型的中心位置，并且
+The main benefit is we have one central
+place where a type is defined, and
+
+6
+00:00:19.469 --> 00:00:22.550
+它可以在整个代码库中使用。
+it can be used throughout a code base.
+
+7
+00:00:22.550 --> 00:00:27.350
+所以我们要学习这两个概念，比较和对比它们。
+So we're gonna study these two concepts,
+and compare and contrast them.
+
+8
+00:00:28.399 --> 00:00:31.600
+一路上，我们会谈到不同类型的签名
+Along the way, we're gonna touch on
+different types of signatures which
+
+9
+00:00:31.600 --> 00:00:36.409
+包括我们用来调用函数的签名
+includes the kind of signature we're
+used to for invoking a function, and
+
+10
+00:00:36.409 --> 00:00:38.170
+一种叫索引签名的东西。
+something called an index signature.
+
+11
+00:00:39.299 --> 00:00:43.600
+我们将讨论开放接口的概念，这是一种你可以
+We will discuss the idea of open
+interfaces, and this is a way that you can
+
+12
+00:00:43.600 --> 00:00:48.210
+增加可以从某个库导入的类型。
+augment types that you may
+import from a library somewhere.
+
+13
+00:00:48.210 --> 00:00:52.600
+我们将讨论访问修饰符关键字的概念，它给我们提供了控制
+We will discuss the concept of access
+modifier keywords which gives us control
+
+14
+00:00:52.600 --> 00:00:56.326
+谁可以看到方法
+over who can see methods and
+
+15
+00:00:56.326 --> 00:01:01.060
+当涉及到类时，使用实例数据。
+instance data when it comes to classes.
+
+16
+00:01:01.060 --> 00:01:05.936
+最后我们会谈到遗产条款，这只是一个花哨的名字
+And finally we'll touch on heritage
+clauses which is just a fancy name for
+
+17
+00:01:05.936 --> 00:01:07.206
+延伸，对吗？
+extends, right?
+
+18
+00:01:07.206 --> 00:01:09.557
+您习惯于从 JavaScript 类扩展。
+You're used to extends
+from JavaScript classes.
+
+19
+00:01:09.557 --> 00:01:13.257
+有一个新的叫 implements 的东西是和打字稿一起出现的。
+There's a new one called implements
+that comes with with TypeScript.
+
+20
+00:01:13.257 --> 00:01:18.706
+我们打开笔记，翻到以三开头的页面,
+So we'll open our notes to
+the page that starts with three,
+
+21
+00:01:18.706 --> 00:01:21.331
+接口和类型的基础知识。
+interface and type basics.
+
+22
+00:01:25.153 --> 00:01:32.634
+类型别名，一个非常简单的概念。
+&gt;&gt; Mike North: Type aliases,
+a really simple concept.
+
+23
+00:01:32.634 --> 00:01:36.189
+它实际上是给一个类型命名。
+It is literally giving a type a name.
+
+24
+00:01:36.189 --> 00:01:42.632
+任何可以与变量一起使用的类型，也可以为。
+Any type that you can use with a variable,
+you can also create a type alias for.
+
+25
+00:01:42.632 --> 00:01:44.463
+所以，当我说字符串或
+So, when I say string or
+
+26
+00:01:44.463 --> 00:01:51.858
+麦克 · 诺斯: 我的意思
+number here,
+&gt;&gt; Mike North: What I mean
+
+27
+00:01:51.858 --> 00:01:56.914
+这里是任何可能存在于这个空间中的东西，您可以为。
+here is anything that could exist in this
+space, you can create a type alias for.
+
+28
+00:01:56.914 --> 00:01:59.460
+对于接口来说，情况并非如此。
+This is not true for interfaces.
+
+29
+00:01:59.460 --> 00:02:04.659
+所以类型别名实际上在某些方面比接口更灵活。
+So type alias is actually more flexible
+than an interface in some way.
+
+30
+00:02:04.659 --> 00:02:09.569
+这是你唯一一次在右手边看到一个字体
+This is the only time you'll ever
+see a type up here on the right hand
+
+31
+00:02:09.569 --> 00:02:11.599
+平等的一面。
+side of an equals.
+
+32
+00:02:11.599 --> 00:02:16.711
+嗯，还有一个，但是，它真的是一模一样的
+Well, there is one other but,
+it is really the identical
+
+33
+00:02:16.711 --> 00:02:21.186
+只是语法稍有不同
+concept just in a slightly
+different syntax, but
+
+34
+00:02:21.186 --> 00:02:25.570
+我们只在这里寻找字体空间。
+we're exclusively looking
+in type space here.
+
+35
+00:02:25.570 --> 00:02:28.150
+这将根本无法编译成 JavaScript。
+This will compile to no JavaScript at all.
+
+36
+00:02:30.615 --> 00:02:37.395
+Mike North: 类型别名的挑战之一是它们被定义为和
+&gt;&gt; Mike North: One of the challenges with
+type aliases is that they are defined and
+
+37
+00:02:37.395 --> 00:02:42.480
+由编译器根据什么值来计算
+figured out by the compiler
+in terms of what values
+
+38
+00:02:42.480 --> 00:02:47.789
+是允许的，在文件被解析时排成一行。
+are allowed,
+in line as the file is parsed.
+
+39
+00:02:47.789 --> 00:02:51.557
+这会阻止你创建自我尊重的类型。
+And this prevents you from
+creating self reverential types.
+
+40
+00:02:51.557 --> 00:02:55.459
+假设我们有一个数据结构，我们想为它创建一个类型,
+So let's say we had a data structure
+that we wanted to create a type for,
+
+41
+00:02:55.459 --> 00:02:56.771
+看起来像这样。
+that looked like this.
+
+42
+00:03:01.228 --> 00:03:02.052
+1,2,3,1,1.
+&gt;&gt; Mike North: 1, 2, 3, 1, 1.
+
+43
+00:03:02.052 --> 00:03:08.294
+对，它由1、2和3组成，还有一个嵌套数组。
+Right, it consist of 1s, 2s and
+3s, but also a nested array.
+
+44
+00:03:08.294 --> 00:03:12.164
+非常简单的那种类似 JSONish 的东西。
+Really simplified kinda JSONish thing.
+
+45
+00:03:12.164 --> 00:03:16.139
+就像在一组允许的值中有一些层次。
+Like there's some hierarchy here
+in a set of allowed values.
+
+46
+00:03:17.189 --> 00:03:23.468
+我们可以尝试输入这个值可以是1,2或者
+We could try to type this saying
+that the value can be 1, 2 or
+
+47
+00:03:23.468 --> 00:03:29.269
+3，或者数组，其中数组是 NumVals 数组。
+3, or an array,
+where an array is an array of NumVals.
+
+48
+00:03:29.269 --> 00:03:32.396
+编译器不高兴，原因是,
+Typescript compiler is not happy,
+and the reason is,
+
+49
+00:03:32.396 --> 00:03:35.932
+它想要最终弄清 NumVal 到底是什么,
+it wants to conclusively figure
+out what NumVal is all about,
+
+50
+00:03:35.932 --> 00:03:40.086
+然后移动到下一行，它还没有遇到这个。
+before it moves on to the next line,
+and it has not yet encountered this.
+
+51
+00:03:40.086 --> 00:03:44.490
+所以，它遇到了一个循环问题。
+So, it runs into a circular problem.
+
+52
+00:03:44.490 --> 00:03:48.197
+这就像一个鸡和蛋的问题。
+It's like a chicken and the egg problem.
+
+53
+00:03:48.197 --> 00:03:52.600
+为了定义 a，我们需要 b，它需要 a，所以沿着这条路一直走下去。
+To define A we need B which needs A,
+and so follow that all the way down.
+
+54
+00:03:55.189 --> 00:03:59.838
+所以，我们会回过头来看这个问题，并解释这个问题是如何产生的。
+So, we will look back to this and
+explain how this can be.
+
+55
+00:03:59.838 --> 00:04:01.770
+我们可以利用我们的优势。
+We can use to our advantage.
+
+56
+00:04:01.770 --> 00:04:03.194
+我们可以利用这个弱点作为优势。
+We can use this weakness as strength.
+
+57
+00:04:06.180 --> 00:04:07.748
+迈克 · 诺斯: 我们已经看过界面了。
+&gt;&gt; Mike North: So
+we've already looked at interfaces.
+
+58
+00:04:07.748 --> 00:04:11.771
+我想指出的是接口可以从其他接口扩展,
+I wanna point out that interfaces
+can extend from other interfaces,
+
+59
+00:04:11.771 --> 00:04:15.620
+就像你习惯在类中看到的一样。
+like same syntax that you're
+used to seeing with classes.
+
+60
+00:04:15.620 --> 00:04:21.286
+请记住，extends 用于类似事物的继承。
+Just remember that extends is used for
+inheritance of like things.
+
+61
+00:04:21.286 --> 00:04:27.485
+接口从接口扩展，类从类扩展。
+Interfaces extend from interfaces,
+classes extend from classes.
+
+62
+00:04:27.485 --> 00:04:32.173
+所以在这里我们只是添加国家代码的东西，已经
+So here we're just adding country
+code to something that already
+
+63
+00:04:32.173 --> 00:04:34.310
+有电话号码和名字。
+has a phone number and a name.

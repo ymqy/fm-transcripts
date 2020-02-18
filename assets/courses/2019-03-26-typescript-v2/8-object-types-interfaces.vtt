@@ -1,0 +1,216 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:02.209
+迈克 · 诺斯: 我们已经稍微谈到了对象。
+&gt;&gt; Mike North: We've already
+touched on objects little bit.
+
+2
+00:00:02.209 --> 00:00:07.048
+它们有点像对象类型，它们看起来有点像对象值,
+They're kind of, object types here,
+they look kind of like object values,
+
+3
+00:00:07.048 --> 00:00:09.538
+只不过你用的不是键值，而是键类型。
+except instead of key value,
+you have key type.
+
+4
+00:00:09.538 --> 00:00:14.179
+我使用 Prettier 格式化我的代码，这就是为什么我在这里得到了分号。
+I use Prettier to format my code,
+which is why I get the semi-colon here.
+
+5
+00:00:14.179 --> 00:00:18.980
+我喜欢这个，因为看看这个，事实上这里有一个分号
+I like this because looking at this,
+the fact that there's a semi-colon, it's
+
+6
+00:00:18.980 --> 00:00:23.260
+还有一件事情能帮助我理解，这不是一个值，这只是一种类型。
+one more thing that helps me understand,
+this is not a value, this is just a type.
+
+7
+00:00:25.509 --> 00:00:28.710
+Mike North: 默认情况下，所有属性都是强制的。
+&gt;&gt; Mike North: By default,
+all properties are mandatory.
+
+8
+00:00:28.710 --> 00:00:34.344
+因此，我们在这里得到一个错误说，街道名缺少类型 houseNumber。
+So we get an error here saying,
+streetName is missing in type houseNumber.
+
+9
+00:00:34.344 --> 00:00:36.810
+我这里有一个错误的例子,
+Well, I've got an example
+of the error done here,
+
+10
+00:00:36.810 --> 00:00:41.859
+在这里没有街名，但是在类型中它是必需的。
+streetName is missing in this but
+it's required in type that.
+
+11
+00:00:41.859 --> 00:00:46.920
+我希望你们把它想象成等号的打字稿,
+And I want you to imagine this as
+TypeScript at that equal sign,
+
+12
+00:00:46.920 --> 00:00:50.299
+试图找到一种方法，使左手边
+trying to figure out a way to
+make the left hand side and
+
+13
+00:00:50.299 --> 00:00:56.619
+右手边的人同意，这些类型相容吗？
+the right hand side agree in terms of,
+are these types compatible?
+
+14
+00:00:56.619 --> 00:01:00.679
+在右手边，我们只有后生编号，在左边，街名，所以
+On the right hand side, we just have
+houseNumber, on the left, streetName, so
+
+15
+00:01:00.679 --> 00:01:03.520
+这就是为什么你看到的错误消息是这样表示的。
+that's why you're seeing the error
+message represented in this way.
+
+16
+00:01:04.739 --> 00:01:08.689
+如果你真的想做一些可选的事情，这并不是一件坏事,
+If you really wanted to make something
+optional, and this is not a bad thing,
+
+17
+00:01:08.689 --> 00:01:13.310
+我通常使用这个函数，如果我有一个大的选择包,
+I typically use this if I have
+a function that takes a big options bag,
+
+18
+00:01:13.310 --> 00:01:15.030
+大期权目标。
+big options object.
+
+19
+00:01:15.030 --> 00:01:16.304
+用问号就行了。
+Just use the question mark.
+
+20
+00:01:16.304 --> 00:01:19.810
+问号就像它可能在那里，也可能不在那里。
+Question mark like it may be there,
+it may not be there.
+
+21
+00:01:19.810 --> 00:01:22.689
+你看，我们并没有遇到这个问题。
+And you see here we don't
+run into that problem.
+
+22
+00:01:22.689 --> 00:01:23.939
+我们完全可以加上去。
+We could totally add it.
+
+23
+00:01:25.905 --> 00:01:27.039
+麦克 · 诺斯: 我需要一个逗号。
+&gt;&gt; Mike North: I need a comma.
+
+24
+00:01:28.069 --> 00:01:29.480
+街名，就是这个。
+streetName, there it is.
+
+25
+00:01:30.626 --> 00:01:32.543
+Mike North: 所以街名就是空字符串,
+&gt;&gt; Mike North: So
+it's just streetName is empty string,
+
+26
+00:01:32.543 --> 00:01:34.469
+这是个非常高级的地址。
+it's a pretty exclusive address.
+
+27
+00:01:34.469 --> 00:01:38.590
+但是如果我想要另一个字体上没有的东西,
+But if I wanted to have another thing
+there that's not present on the type,
+
+28
+00:01:38.590 --> 00:01:40.030
+我会因此而破产的。
+I'd be busted for it.
+
+29
+00:01:40.030 --> 00:01:42.780
+没有 x，你为什么要把它放在那里，对吗？
+There is no x,
+why would you put it there, right?
+
+30
+00:01:47.140 --> 00:01:50.560
+迈克 · 诺斯: 我们将深入探讨接口的细节。
+&gt;&gt; Mike North: We'll go into
+interfaces in pretty deep detail.
+
+31
+00:01:51.870 --> 00:01:55.349
+现在，我只想让你把接口想象成一个名字
+For now, I just want you to think
+of an interface as a name for
+
+32
+00:01:55.349 --> 00:02:00.170
+我们正在建造的这些结构之一，对吗？
+one of these structures
+that we're creating, right?
+
+33
+00:02:00.170 --> 00:02:02.900
+现在，您可以认为它只处理对象类型。
+For now, you can think of it as
+only working with object types.
+
+34
+00:02:02.900 --> 00:02:06.739
+我们还可以做一些其他的事情来使它适用于函数之类的东西。
+There are other things we can do to
+make it work with things like functions.
+
+35
+00:02:06.739 --> 00:02:11.789
+但我们现在要做的就是创建一个名字地址,
+But all we are doing here is we
+are creating a name, address,
+
+36
+00:02:11.789 --> 00:02:15.460
+我们可以在任何地方使用之前使用过的类型。
+that we can use anywhere that
+we were using a type before.
+
+37
+00:02:15.460 --> 00:02:19.020
+您可以从模块中导入和导出接口，就像导入值一样。
+And you can import and export interfaces
+from modules just like values.

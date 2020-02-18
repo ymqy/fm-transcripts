@@ -1,0 +1,453 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:02.720
+我们一直在使用打字稿的顶部和底部类型
+&gt;&gt; Mike North: We've been working with
+TypeScript's top and bottom types which
+
+2
+00:00:02.720 --> 00:00:07.280
+分别是任何和从来没有，在几个不同的方式今天。
+are any and never respectively,
+in a few different ways today.
+
+3
+00:00:07.280 --> 00:00:11.070
+因此，让我们更深入地挖掘一下这个主题，并给予一些适当的关注。
+So let's dig a little bit deeper into this
+topic and give it some proper attention.
+
+4
+00:00:11.070 --> 00:00:14.119
+我们来看看如何通过 private 或者
+We'll look at how we can pass private or
+
+5
+00:00:14.119 --> 00:00:17.789
+通过一段打字稿代码来获取未知值。
+unknown values through
+a piece of TypeScript code.
+
+6
+00:00:17.789 --> 00:00:21.000
+我们将研究详尽的条件句。
+We'll look at exhaustive conditionals.
+
+7
+00:00:21.000 --> 00:00:26.890
+最后，我们来看看我们能找到的各种类型的保安
+And, finally, we'll take a look at all of
+the various kinds of type guards we can
+
+8
+00:00:26.890 --> 00:00:32.429
+可以与条件句一起使用来缩小类型,
+build and use that can be used with
+conditionals to narrow a type down,
+
+9
+00:00:32.429 --> 00:00:33.929
+这样你就能得到更详细的信息。
+so you can get something more specific.
+
+10
+00:00:35.009 --> 00:00:38.356
+那么让我们打开我们的笔记到6号,
+So let's open up our notes to number 6,
+
+11
+00:00:38.356 --> 00:00:43.539
+守卫和极端类型。
+guards-and-extreme-types.
+
+12
+00:00:46.399 --> 00:00:49.850
+迈克 · 诺斯: 那么，首先，让我们来看看顶级类型。
+&gt;&gt; Mike North: So, first,
+let's take a look at top types.
+
+13
+00:00:49.850 --> 00:00:52.159
+实际上有两个,
+TypeScript actually has two of these,
+
+14
+00:00:52.159 --> 00:00:56.390
+虽然其中一个是最近才出现的。
+although one is a relatively
+recent development.
+
+15
+00:00:56.390 --> 00:00:59.149
+当然，任何一种都是最好的类型。
+Any, of course, is a top type.
+
+16
+00:00:59.149 --> 00:01:02.679
+但是 TypeScript 也有一个叫做 unknown 的类型。
+But TypeScript also has
+a type called unknown.
+
+17
+00:01:03.750 --> 00:01:07.750
+像任何东西一样，unknown 可以接收任何值。
+Like any, unknown can receive any value.
+
+18
+00:01:08.920 --> 00:01:13.289
+你可以把它分配给一个字符串或者一个数字，无论你想要什么。
+You could assign it to a string or
+to a number, whatever you want.
+
+19
+00:01:13.289 --> 00:01:15.909
+这两者之间的不同
+The different between these two
+
+20
+00:01:15.909 --> 00:01:21.170
+当我们研究如何通过这两个值访问内容时，我们会发现。
+is apparent when we look at how you can
+access things off of these two values.
+
+21
+00:01:21.170 --> 00:01:28.060
+因此，对于任何，你可以看到，我们能够抓住 foo.bar.baz，我们是
+So for the any, you can see that
+we're able to grab foo.bar.baz, we're
+
+22
+00:01:28.060 --> 00:01:32.859
+将其视为一个嵌套对象，并且没有类型检查错误。
+treating it like it's a nested object and
+there is no type checking error there.
+
+23
+00:01:34.340 --> 00:01:37.700
+这就是你所遵循的 JavaScript 规则，对吧？
+And this is you're playing
+by JavaScript rules, right?
+
+24
+00:01:37.700 --> 00:01:39.740
+没有类型检查。
+No type checking.
+
+25
+00:01:39.740 --> 00:01:43.979
+未知，虽然它很乐意持有任何价值,
+Unknown, while it is very
+happy to hold any value,
+
+26
+00:01:43.979 --> 00:01:46.200
+你不能直接使用 unknown。
+you cannot use unknown directly.
+
+27
+00:01:46.200 --> 00:01:50.590
+在使用它之前，你必须以某种方式缩小它。
+You must narrow it in some
+way before you use it.
+
+28
+00:01:50.590 --> 00:01:55.549
+您可能希望在哪里使用这个 API 是一个很好的例子
+A good example of where you might
+want to make use of this is an API
+
+29
+00:01:55.549 --> 00:02:01.340
+你知道你已经得到了一些 JSON 回应。
+response where you know
+you've got some JSON back.
+
+30
+00:02:01.340 --> 00:02:05.569
+但是您需要执行某种断言
+But you need to perform
+some sort of assertion
+
+31
+00:02:05.569 --> 00:02:09.599
+确保它真的是你所希望的那样，在你继续走下去之前。
+to make sure it really is what you hope it
+is, before you continue down that path.
+
+32
+00:02:11.435 --> 00:02:13.905
+迈克 · 诺斯: 我们来看看你是如何缩小范围的
+&gt;&gt; Mike North: And
+we'll look at how you narrow that down and
+
+33
+00:02:13.905 --> 00:02:16.090
+这是通过使用类型守卫。
+it's through using Type Guards.
+
+34
+00:02:16.090 --> 00:02:18.159
+我们会看到它能装下你想要的任何东西,
+And we'll see that you it
+can hold anything you want,
+
+35
+00:02:18.159 --> 00:02:20.629
+但我们必须在进入之前做点什么。
+but we gotta do something
+before we can access it.
+
+36
+00:02:23.174 --> 00:02:26.668
+迈克 · 诺斯: 就什么时候你可能想用它们而言，它们非常适合
+&gt;&gt; Mike North: In terms of when you
+might want to use any, they're great for
+
+37
+00:02:26.668 --> 00:02:30.520
+我们希望保留很多灵活性的部分。
+parts of our programs where we want
+to retain a lot of flexibility.
+
+38
+00:02:33.557 --> 00:02:38.231
+Mike North: 在这个例子中，我们可以看到这个函数，它就是
+&gt;&gt; Mike North: So, in this example,
+we can see that this function, it just is
+
+39
+00:02:38.231 --> 00:02:44.560
+有兴趣把一个承诺的解析价值输出到控制台上，对吗？
+interested in printing the resolved value
+of a promise out to a console, right?
+
+40
+00:02:44.560 --> 00:02:50.009
+因此，它所做的就是等待一个承诺，获取已解析的值，然后
+So all it does is, it waits for
+a promise, grabs the resolved value, and
+
+41
+00:02:50.009 --> 00:02:51.659
+传给 console.log。
+passes it to console.log.
+
+42
+00:02:51.659 --> 00:02:53.829
+如果我们查看 console.log 的类型,
+And if we look at the type of console.log,
+
+43
+00:02:53.829 --> 00:02:57.469
+结果是，噢，这个很有意思。
+it turns out, oops,
+this is the interesting one.
+
+44
+00:02:57.469 --> 00:03:00.400
+我想他们都在，他们在这里的某个地方。
+I guess they're both,
+they're somewhere here.
+
+45
+00:03:00.400 --> 00:03:02.349
+他们都吃茴香酒，对吧？
+They both take anys, right?
+
+46
+00:03:02.349 --> 00:03:04.710
+这就是你要传递给 console.log 的内容。
+That's what you're passing to console.log.
+
+47
+00:03:04.710 --> 00:03:06.199
+你可以传递函数和类,
+You can pass it functions and classes,
+
+48
+00:03:06.199 --> 00:03:09.770
+它有自己的方式来把事情说清楚。
+and it has it's own way of
+serializing things out.
+
+49
+00:03:09.770 --> 00:03:11.560
+所以，没有理由
+So, there is no reason for
+
+50
+00:03:11.560 --> 00:03:16.860
+我们进一步限制什么样的承诺，我们可以这样处理。
+us to further limit what kind of
+promise we can handle in this way.
+
+51
+00:03:16.860 --> 00:03:20.500
+在这种情况下，Any 绝对是合适的类型。
+Any is absolutely the appropriate
+type to use in this case.
+
+52
+00:03:22.907 --> 00:03:26.923
+迈克 · 诺斯: 当我们需要使用未知数的时候，它们是有用的
+&gt;&gt; Mike North: In terms of when we want
+to use unknowns, they are good for
+
+53
+00:03:26.923 --> 00:03:31.943
+要么是私有的，也许你有一个图书馆
+either values that are either private
+where maybe you have a library and
+
+54
+00:03:31.943 --> 00:03:36.712
+你传递一个值给某人，他们可能会传递到其他地方
+you pass a value to somebody and
+they might pass it somewhere else but
+
+55
+00:03:36.712 --> 00:03:40.909
+你不会想知道这东西的结构的。
+you don't want the to know
+the structure of this thing.
+
+56
+00:03:40.909 --> 00:03:42.689
+不是出于安全原因，而是
+Not for a security reason, but
+
+57
+00:03:42.689 --> 00:03:46.530
+也许你不希望它们依赖于这个东西的结构。
+maybe you don't want them to depend
+on the structure of this thing.
+
+58
+00:03:46.530 --> 00:03:50.849
+您不希望它成为您的公共 API 的一部分，对吗？
+You don't want that to become
+part of your public API, right?
+
+59
+00:03:50.849 --> 00:03:56.843
+例如，无论返回什么设置超时。
+So an example of this might be,
+whatever set timeout returns.
+
+60
+00:03:58.259 --> 00:04:00.550
+你真的在乎那是个数字吗？
+Do you really care that that's a number?
+
+61
+00:04:00.550 --> 00:04:04.830
+它是一个数字，因为你传递了一个数字回去清除超时，对吗？
+It's a number because you pass
+a number back to clear timeout, right?
+
+62
+00:04:04.830 --> 00:04:08.169
+因此，您可以说，设置超时，在五秒钟内调用这个函数。
+So you can say, set timeout,
+in five seconds invoke this function.
+
+63
+00:04:08.169 --> 00:04:11.569
+这几乎就像是给你一张小票，你可以用它来取消
+And it's almost like it gives you a little
+ticket that you can use to cancel
+
+64
+00:04:11.569 --> 00:04:12.800
+以后再说。
+that later on.
+
+65
+00:04:12.800 --> 00:04:16.029
+但事实上，它只是一个数字，对你来说并不重要。
+But the fact that it's a number,
+is not really important to you.
+
+66
+00:04:16.029 --> 00:04:20.050
+如果这是一个图书馆的一部分，作者可能会希望
+And maybe if this were a part of
+a library, the author would want
+
+67
+00:04:20.050 --> 00:04:23.449
+可以自由地把它改成别的东西
+the freedom to be able to change
+this to some other thing and
+
+68
+00:04:23.449 --> 00:04:26.220
+不把这当成突破性的改变。
+to not consider that a breaking change.
+
+69
+00:04:26.220 --> 00:04:28.550
+所以，这将是一个伟大的使用未知。
+So that would be a great use of unknown.
+
+70
+00:04:29.899 --> 00:04:34.930
+但是我们可以肯定地看到，就像现在这样，它们并不是真正可用的。
+But we can certainly see that,
+as is, they are not really usable.
+
+71
+00:04:36.149 --> 00:04:41.699
+所以我们需要的是一个类型保护，以便充分缩小这种类型和
+So what we need is a type guard in order
+to sufficiently narrow this type and
+
+72
+00:04:41.699 --> 00:04:43.490
+才能使用它。
+to be able to use it.
+
+73
+00:04:43.490 --> 00:04:46.300
+这里有两个你们已经很熟悉了,
+Here are two that you'll
+already be familiar with,
+
+74
+00:04:46.300 --> 00:04:50.409
+因为它们在 JavaScript 世界中是有意义的。
+because they have meaning in
+the JavaScript world, typeof.
+
+75
+00:04:52.250 --> 00:04:55.709
+在这里，myUnknown 的类型是 string。
+Inside here, myUnknown is of type string.
+
+76
+00:04:55.709 --> 00:05:00.245
+所以在这里是未知的，在这里，它是一根绳子。
+So out here it's unknown,
+in here, it's a string.
+
+77
+00:05:00.245 --> 00:05:04.470
+那么 string.split 就可以了。
+And then string.split works fine.
+
+78
+00:05:04.470 --> 00:05:07.529
+一瞬间的承诺，在这里它是未知的。
+Instanceof Promise, out here it's unknown.
+
+79
+00:05:07.529 --> 00:05:09.370
+在这里，它是一个承诺。
+In here it's a Promise any.
+
+80
+00:05:11.230 --> 00:05:14.540
+所以这就是你如何让它变得有用的方法。
+So this would be how you'd sort
+of get it to something useful.

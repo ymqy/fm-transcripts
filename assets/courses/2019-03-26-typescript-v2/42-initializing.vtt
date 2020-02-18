@@ -1,0 +1,576 @@
+WEBVTT
+
+1
+00:00:00.126 --> 00:00:05.209
+迈克 · 诺斯: 在这个工作坊里，我们最不想做的就是
+&gt;&gt; Mike North: The last thing we're
+gonna do in this workshop is to give
+
+2
+00:00:05.209 --> 00:00:10.518
+编译器如何看待你的代码。
+you an idea of how the TypeScript
+compiler sees your code.
+
+3
+00:00:10.518 --> 00:00:16.032
+我们将通过一个非常快速的
+And we're gonna do this through
+taking a tour of a really quick and
+
+4
+00:00:16.032 --> 00:00:19.809
+肮脏的文件产生器。
+dirty documentation generator.
+
+5
+00:00:19.809 --> 00:00:24.839
+它充分利用了编译器收集的所有信息
+That takes advantage of all of the
+information that compiler gathers as it
+
+6
+00:00:24.839 --> 00:00:29.230
+解析和输入检查你的打字稿源代码。
+parses and
+type checks your TypeScript source code.
+
+7
+00:00:29.230 --> 00:00:35.088
+让我们来看看第九个注释部分，编译器 API。
+So let's look at in the notes section
+at number nine, Compiler API.
+
+8
+00:00:44.597 --> 00:00:49.198
+Mike North: 首先，这证明了我一直在使用 isDefined over 和
+&gt;&gt; Mike North: So first, this is proof
+that I keep using isDefined over and
+
+9
+00:00:49.198 --> 00:00:50.350
+再来一次。
+over again.
+
+10
+00:00:50.350 --> 00:00:52.829
+没有它我好像过不下去。
+I just cannot seem to get by without it.
+
+11
+00:00:54.439 --> 00:00:58.509
+我们要进口，这被称为外卡进口。
+We're going to import,
+this is called a wild card import.
+
+12
+00:00:58.509 --> 00:01:03.869
+我们只是从打字稿和打字稿模块中获得了一些东西。
+We're just sort of getting everything from
+TypeScript, from the TypeScript module.
+
+13
+00:01:03.869 --> 00:01:10.653
+我们可以从打字稿中导入 createProgram,
+We could do import
+createProgram from TypeScript,
+
+14
+00:01:10.653 --> 00:01:17.751
+然后我们可以直接使用 createProgram。
+and then we'd be able to
+use createProgram directly.
+
+15
+00:01:17.751 --> 00:01:24.055
+它所做的一切就是让我们可以做。
+All this does is it allows
+us to do ts.createProgram.
+
+16
+00:01:26.644 --> 00:01:28.129
+迈克 · 诺斯: 在那儿。
+&gt;&gt; Mike North: There it is.
+
+17
+00:01:28.129 --> 00:01:32.057
+这只是因为我们需要一大堆不同的东西
+And this is just because we need
+a whole bunch of different stuff, but
+
+18
+00:01:32.057 --> 00:01:33.490
+这有点微妙。
+it's a little nuanced.
+
+19
+00:01:34.670 --> 00:01:36.750
+这有点像打字稿。
+It's kinda TypeScript specific.
+
+20
+00:01:36.750 --> 00:01:39.390
+你在 JavaScript 中看不到通配符导入。
+You don't see wildcard
+imports in JavaScript.
+
+21
+00:01:42.944 --> 00:01:45.259
+迈克 · 诺斯: 我们要做的第一件事,
+&gt;&gt; Mike North: So
+the first thing we're gonna do,
+
+22
+00:01:45.259 --> 00:01:49.140
+我们要创建一个打字稿程序。
+we're going to create
+a TypeScript program.
+
+23
+00:01:49.140 --> 00:01:51.079
+我们传递了两个信息。
+And we're passing in two things.
+
+24
+00:01:51.079 --> 00:01:54.340
+这里的第一个对象选项,
+This first object here, options,
+
+25
+00:01:54.340 --> 00:01:58.920
+它在概念上等同于 ts.Config 编译器选项。
+it is equivalent conceptually to
+your ts.Config compiler options.
+
+26
+00:01:58.920 --> 00:02:01.829
+所以我们有目标，我们可以有模块和
+So we've got target,
+we could have module and
+
+27
+00:02:01.829 --> 00:02:08.400
+例如，ModuleKind，CommonJS，任何我们想放入的东西。
+say ys.ModuleKind.CommonJS,
+whatever we want to put in there.
+
+28
+00:02:08.400 --> 00:02:12.319
+这些对应于我们当时看到的一些命令行标志
+These correspond to some of the command
+line flags we were looking at when we
+
+29
+00:02:12.319 --> 00:02:16.650
+首先使用 TypeScript 编译器进行编译，这也是 ts. Config 中的内容。
+first played with TypeScript compiler and
+it's also what's in ts.Config.
+
+30
+00:02:16.650 --> 00:02:20.400
+我们必须传递的第二个东西是 rootNames。
+The second thing we
+must pass is rootNames.
+
+31
+00:02:20.400 --> 00:02:25.961
+我所做的就是使用节点路径模块，我把它们连接在一起
+And so what I've done is using nodes
+path module, I've joined together
+
+32
+00:02:25.961 --> 00:02:31.799
+一个适当的路径，导致我们编译的例子，在第一件事
+an appropriate path that leads to the
+example we compiled in that first thing
+
+33
+00:02:31.799 --> 00:02:37.670
+我们做的就像我们四处打探如何将打字稿转换成 JavaScript 一样。
+we did as we were poking around with
+how to turn TypeScript into JavaScript.
+
+34
+00:02:37.670 --> 00:02:39.430
+所以它指向 ts 文件。
+So it's pointing to the ts file.
+
+35
+00:02:43.379 --> 00:02:47.899
+接下来我们要做的就是抓住这个
+The next thing we're gonna do is grab this
+
+36
+00:02:47.899 --> 00:02:53.560
+当我们到达这行代码的时候，它将被编译和
+program, and by the time we reach this
+line of code it will be compiled and
+
+37
+00:02:53.560 --> 00:02:55.460
+检查完毕，准备出发。
+type checked and ready to go.
+
+38
+00:02:55.460 --> 00:02:58.650
+我们要拿到所有的源文件
+We're gonna get all of
+the source files and
+
+39
+00:02:58.650 --> 00:03:03.479
+过滤掉那些声明文件。
+filter out those that
+are declaration files.
+
+40
+00:03:03.479 --> 00:03:04.830
+这是一个很好的机会
+And this is a good opportunity for
+
+41
+00:03:04.830 --> 00:03:10.800
+我来给你们展示一下程序自动输入的内容。
+me to kinda show you what all is brought
+in automatically to you program.
+
+42
+00:03:10.800 --> 00:03:18.590
+因此，我将暂时将其注释掉，console.log (nonDeclFiles)。
+So I'll comment that out temporarily,
+console.log(nonDeclFiles).
+
+43
+00:03:18.590 --> 00:03:23.199
+我们现在就调用这些文件，因为我们要跳过过滤
+Let's just call that files now since
+we're gonna skip the filtering
+
+44
+00:03:24.280 --> 00:03:29.590
+为了日志的目的我要把它们转换成,
+and for the purposes of logging,
+I'm just gonna transform them,
+
+45
+00:03:29.590 --> 00:03:32.509
+我只需要路径名。
+their objects, and
+I just want the path name.
+
+46
+00:03:32.509 --> 00:03:33.651
+所以我想运行这个代码。
+So I wanna run this code.
+
+47
+00:03:39.925 --> 00:03:41.360
+迈克 · 诺斯: 所以我没有存钱。
+&gt;&gt; Mike North: So I didn't save.
+
+48
+00:03:41.360 --> 00:03:42.050
+我的错。
+My bad.
+
+49
+00:03:44.750 --> 00:03:47.620
+我们有很多不同的东西。
+And we have a whole lot
+of different stuff.
+
+50
+00:03:48.620 --> 00:03:50.129
+以前有人用过打字稿。
+Someone has used TypeScript before.
+
+51
+00:03:50.129 --> 00:03:54.219
+你能告诉我这些文件是关于什么的吗？
+Can you tell me what these
+files are all about?
+
+52
+00:03:54.219 --> 00:03:57.929
+说话人1: 这里有各种不同库的类型定义。
+&gt;&gt; Speaker 1: There type definitions for
+various different libraries.
+
+53
+00:03:57.929 --> 00:03:59.008
+迈克 · 诺斯: 节点，对吗？
+&gt;&gt; Mike North: For node, right?
+
+54
+00:03:59.008 --> 00:04:05.560
+任何以@类型开头的东西都是来自肯定输入的,
+Anything that starts with @types,
+those are from the definitely typed,
+
+55
+00:04:05.560 --> 00:04:09.201
+公共类型定义的主回购。
+master repo of public type definitions.
+
+56
+00:04:09.201 --> 00:04:12.766
+你可以通过点击
+You could get to those
+by just clicking into
+
+57
+00:04:12.766 --> 00:04:18.079
+我从各个节点模块导入的内容。
+stuff that I'm importing from
+the various node modules.
+
+58
+00:04:18.079 --> 00:04:23.449
+在类型节点路径，对，所以这些都是不同的节点模块。
+At types node path, right, so
+these are all the different node modules.
+
+59
+00:04:24.509 --> 00:04:27.749
+所以让我们继续看看这里。
+So let's keep looking around here.
+
+60
+00:04:27.749 --> 00:04:31.867
+还有一些更多类型的节点，很多很多。
+There's some more types nodes stuff,
+lots and lots of it.
+
+61
+00:04:31.867 --> 00:04:36.670
+迈克 · 诺斯: 只是扫描看看什么时候事情看起来有点不同。
+&gt;&gt; Mike North: And just scanning for
+when things look a bit different.
+
+62
+00:04:36.670 --> 00:04:40.409
+这是摩卡和印度茶，所以我用它们来做测试。
+Here's mocha and chai, so
+I'm using those for testing.
+
+63
+00:04:40.409 --> 00:04:45.850
+好的，最后我们有了 hello-ts 中的原始源文件。
+Okay, finally we have the original
+source file in hello-ts.
+
+64
+00:04:45.850 --> 00:04:48.627
+请注意，其他所有内容都是 d.ts 文件。
+Note that everything else
+has been a d.ts file.
+
+65
+00:04:48.627 --> 00:04:52.161
+这些只是正在导入的声明文件。
+These are just declaration
+files that are being imported.
+
+66
+00:04:52.161 --> 00:04:56.927
+然后在下面，因为这是从第一次打印出来的
+And then underneath,
+because this is printed from the first
+
+67
+00:04:56.927 --> 00:05:01.139
+一直被解析到最后的东西。
+things that are parsed all
+the way to the last things.
+
+68
+00:05:03.079 --> 00:05:07.319
+比如，我失去了我的位置，所以这里是程序。
+Like, I lost my place,
+so here's the program.
+
+69
+00:05:07.319 --> 00:05:09.762
+这就是我认为的源代码。
+This is what I would
+consider my source code.
+
+70
+00:05:09.762 --> 00:05:13.105
+下面是 esnext 对吧,
+Underneath that we've got esnext, right,
+
+71
+00:05:13.105 --> 00:05:18.870
+这些实际上是打字稿本身附带的声明文件。
+these are actually declaration files
+that come with TypeScript itself.
+
+72
+00:05:18.870 --> 00:05:24.449
+这就是我可以点击的地方，例如，什么是一个好例子？
+So that's where I can click on
+something like, what's a good example?
+
+73
+00:05:24.449 --> 00:05:26.259
+地图，排列，地图。
+Map, array.map.
+
+74
+00:05:26.259 --> 00:05:28.553
+是编程语言的一部分，对吧？
+Part of the programming language, right?
+
+75
+00:05:28.553 --> 00:05:32.338
+我们在一个声明文件里找到了自己,
+Well we find ourself
+in a declaration file,
+
+76
+00:05:32.338 --> 00:05:37.146
+所以他的机制是用来消费类型库
+so he same mechanism that is
+used to consume library type
+
+77
+00:05:37.146 --> 00:05:41.957
+使用类型信息
+information is used to consume
+the type information for
+
+78
+00:05:41.957 --> 00:05:46.060
+所有我们认为是 JavaScript 的东西。
+everything we would consider JavaScript.
+
+79
+00:05:46.060 --> 00:05:48.230
+Dom API 也是如此。
+Same goes with the dom API.
+
+80
+00:05:48.230 --> 00:05:53.745
+如果我们看看这里，实际上有几个不同的版本。
+And if we looked here, there are actually
+a couple different versions of these.
+
+81
+00:05:53.745 --> 00:05:57.473
+当我们说，我想针对 es17或2017或
+Where, when we're saying,
+I want to target es17 or 2017 or
+
+82
+00:05:57.473 --> 00:06:02.139
+2016年或者2015年，你只是选择了一个不同的文件。
+2016 or 2015, you just end up kind
+of picking a different file here.
+
+83
+00:06:02.139 --> 00:06:06.264
+很多新的只是堆叠在旧的上面,
+And a lot of the new one just
+stack on top of the old ones,
+
+84
+00:06:06.264 --> 00:06:10.420
+因为很自然的，语言就像时间的敌人。
+cuz naturally,
+the language is additive as time foes on.
+
+85
+00:06:11.759 --> 00:06:15.410
+所以如果我们要构建文档引擎
+So If we're gonna build
+the documentation engine
+
+86
+00:06:15.410 --> 00:06:20.319
+我们可能不想记录整个 JavaScript 编程语言。
+we probably don't wanna document the whole
+JavaScript programming language.
+
+87
+00:06:20.319 --> 00:06:22.970
+我们最后会碰到很多不同的东西。
+We're gonna end up touching
+on a lot of different things.
+
+88
+00:06:22.970 --> 00:06:27.254
+它开始变得非常大，非常快。
+And it sort of starts to get very big,
+very quickly.
+
+89
+00:06:27.254 --> 00:06:30.312
+所以当你触摸字符串的时候，它们都在字符串方法中
+So as you touch the string,
+now they are all in string methods and
+
+90
+00:06:30.312 --> 00:06:33.620
+它们指的是数组，还有数组方法。
+those refer to arrays, and
+there are the array methods.
+
+91
+00:06:33.620 --> 00:06:38.519
+某种程度上很快就会解体，变得巨大。
+Sort of unravels very quickly and
+becomes huge.
+
+92
+00:06:38.519 --> 00:06:40.759
+这就是为什么我要过滤
+So that is why I'm filtering through for
+
+93
+00:06:40.759 --> 00:06:44.569
+只有那些不是声明文件的东西。
+only those things that
+are not declaration files.
+
+94
+00:06:44.569 --> 00:06:48.060
+只有 ts 文件，没有 d.ts 文件。
+Only the ts files, not the d.ts files.
+
+95
+00:06:48.060 --> 00:06:54.399
+谢天谢地，这里有一个名为 isDeclarationFile 的属性。
+And, thankfully, there is a property
+on there called isDeclarationFile.
+
+96
+00:06:54.399 --> 00:07:00.353
+如果我现在也这么做,
+If I were to do the same thing now,
+
+97
+00:07:00.353 --> 00:07:06.528
+日志 nonDeclFiles.map
+console.log nonDeclFiles.map
+
+98
+00:07:06.528 --> 00:07:11.221
+文件名，再次运行它。
+fileName, run it again.
+
+99
+00:07:11.221 --> 00:07:13.668
+好了，我们完成了一个。
+There we go, we're done to one.
+
+100
+00:07:13.668 --> 00:07:18.220
+一个源文件，其他的都是有帮助的额外类型信息
+One source file, everything else is
+just extra type information that helps
+
+101
+00:07:18.220 --> 00:07:20.149
+一切都编译正确。
+everything compile properly.
