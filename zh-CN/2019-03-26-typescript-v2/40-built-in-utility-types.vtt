@@ -1,0 +1,155 @@
+WEBVTT
+
+1
+00:00:00.180 --> 00:00:02.529
+提供了一些实用类型和
+&gt;&gt; Mike North: TypeScript comes
+with a couple Utility Types and
+
+2
+00:00:02.529 --> 00:00:07.160
+他们最近增加了一对夫妇，严重依赖于这个条件。
+they have recently added a couple more
+that heavily depend on this conditional.
+
+3
+00:00:07.160 --> 00:00:09.830
+第一个是偏爱。
+Number one is Partial.
+
+4
+00:00:09.830 --> 00:00:13.810
+Partial 只是使得类型上的所有内容都是可选的。
+Partial just makes everything
+on a type optional.
+
+5
+00:00:13.810 --> 00:00:16.129
+这是伟大的，如果你有一个选项对象。
+This is great if you
+have an options object.
+
+6
+00:00:16.129 --> 00:00:19.429
+你可能有一组默认值
+Where you have maybe a set of defaults and
+
+7
+00:00:19.429 --> 00:00:22.600
+有人可以给你这些选项的子集。
+someone can pass you
+a subset of those options.
+
+8
+00:00:22.600 --> 00:00:27.460
+你只需要做一个物体合并，就像一个大的啪嗒声。
+And you just wanna do sort of
+an object merge, like a big splat.
+
+9
+00:00:27.460 --> 00:00:29.640
+所以无论给予什么,
+So take whatever is given,
+
+10
+00:00:30.890 --> 00:00:36.570
+合并到我的备用计划里，你就有了全部的选择。
+merger it into my fallbacks and
+you have the full set of options.
+
+11
+00:00:36.570 --> 00:00:42.159
+所以 Partial 在姓名和电子邮件旁边打了个问号，它可能有电子邮件。
+So Partial has put a question mark next
+to name and email, it may have email.
+
+12
+00:00:44.829 --> 00:00:48.939
+Pick 允许我们选择一个或多个属性。
+Pick allows us to select one or
+more properties of something.
+
+13
+00:00:48.939 --> 00:00:54.560
+所以我创建了一个类型叫 HasThen,
+So, I've created a type called HasThen,
+
+14
+00:00:54.560 --> 00:01:01.326
+它接受一个类型参数，然后从一个承诺中选择一个，然后接住。
+it takes a type parameter and it's going
+to pick of a promise, then, and catch.
+
+15
+00:01:01.326 --> 00:01:07.280
+让我们看看，我使用的类型,
+So let's see, so then I'm using the type,
+
+16
+00:01:08.750 --> 00:01:13.280
+我正在挣脱承诺，解决问题，然后抓住它。
+I'm extracting off of promise.resolve
+just, then, and catch.
+
+17
+00:01:14.900 --> 00:01:20.939
+所以它们就在那里，如果我只是抓住它们，我们只能看到它们。
+And so there they are, if I were to
+just grab then we would only see then.
+
+18
+00:01:20.939 --> 00:01:22.390
+如果我把事情简单化,
+If I'd made this a little simpler,
+
+19
+00:01:34.984 --> 00:01:36.680
+迈克 · 诺斯: 那么我们这里就不需要模板了。
+&gt;&gt; Mike North: Then we don't
+need the template here.
+
+20
+00:01:47.014 --> 00:01:48.775
+迈克 · 诺斯: 我没有初始化它，但是
+&gt;&gt; Mike North: I didn't initialize it, but
+
+21
+00:01:48.775 --> 00:01:54.438
+我们只能看到 a 是现在，Mike North: 只能看到 b
+we can see only a is present,
+&gt;&gt; Mike North: Only b should
+
+22
+00:01:54.438 --> 00:01:59.979
+在这里，或者你可以做 b 或 a，他们都应该在场。
+be present here, or you can do b or
+a and they should both be present.
+
+23
+00:01:59.979 --> 00:02:04.469
+所以你是在通过属性键来选择对象类型。
+So you're picking off of
+an object type by property key.
+
+24
+00:02:08.204 --> 00:02:12.961
+迈克 · 诺斯: Extract 让我们，当你有一个大的交叉点类型它会
+&gt;&gt; Mike North: Extract lets us, when
+you have a big intersection type it'll
+
+25
+00:02:12.961 --> 00:02:18.099
+让你选择可以分配给特定类型的东西。
+let you select things that
+are assignable to a particular type.
+
+26
+00:02:18.099 --> 00:02:23.030
+所以只给我字符串，我在这里错误地命名了。
+So give me only strings,
+I misnamed this here.
+
+27
+00:02:24.139 --> 00:02:26.506
+数字，只给我数字。
+Number, gives me only numbers.

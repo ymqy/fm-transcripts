@@ -1,0 +1,650 @@
+WEBVTT
+
+1
+00:00:00.180 --> 00:00:02.060
+Mike North: 让我们来谈谈数组。
+&gt;&gt; Mike North: Let's touch on arrays.
+
+2
+00:00:02.060 --> 00:00:04.849
+到目前为止，我们一直在使用原始值
+Right, so we've been working with
+primitive values so far, and
+
+3
+00:00:04.849 --> 00:00:07.820
+我们有几个问题的例子。
+with questions we got
+a couple object examples.
+
+4
+00:00:07.820 --> 00:00:12.210
+这是一个非常直观的数组示例。
+So here's an example of an array and
+pretty intuitive.
+
+5
+00:00:12.210 --> 00:00:18.539
+表示数组的一种方法是在类型后面使用方括号，对吗？
+One way of representing an array is to use
+square brackets following a type, right?
+
+6
+00:00:18.539 --> 00:00:21.789
+这是一组数字。
+So this is an array of numbers.
+
+7
+00:00:21.789 --> 00:00:24.120
+我们可以推33，正如你所期望的,
+We can push 33, and as you would expect,
+
+8
+00:00:24.120 --> 00:00:28.710
+试图将一个字符串推入这个数组会导致一个问题。
+trying to push a string into
+this array will cause a problem.
+
+9
+00:00:28.710 --> 00:00:34.710
+现在，如果我们这里没有这个，我们就会遇到问题。
+Now, if we didn't have this here,
+we would run into issues.
+
+10
+00:00:34.710 --> 00:00:40.472
+这是一个 nevers 数组，听起来很糟糕。
+That's an array of nevers, sounds bad.
+
+11
+00:00:40.472 --> 00:00:45.965
+数组的 nevers 在，它永远不会发生，它永远不会工作。
+Array of nevers as in, it can never
+happen, it's never going to work.
+
+12
+00:00:45.965 --> 00:00:50.770
+所以永远不要输入脚本的底部类型。
+[LAUGH] So
+never is type script bottom type.
+
+13
+00:00:50.770 --> 00:00:55.000
+当我们学习 top 和 top 的时候，我们会更详细地研究它
+And we will look at that more in detail
+later when we're studying top and
+
+14
+00:00:55.000 --> 00:00:56.899
+特别是底部类型。
+bottom types specifically.
+
+15
+00:00:56.899 --> 00:01:01.194
+但请注意，我们在推动任何事情上都会遇到问题
+But just note that we're gonna
+have problems pushing anything at
+
+16
+00:01:01.194 --> 00:01:02.216
+都是为了这个。
+all into this.
+
+17
+00:01:02.216 --> 00:01:06.049
+如果我们仔细想想这是有道理的,
+And if we think about it
+this is kind of makes sense,
+
+18
+00:01:06.049 --> 00:01:11.224
+如果你只能看第57行，你必须决定戒酒协会的类型,
+if you could only look at line 57 and
+you had to decide the type of aa,
+
+19
+00:01:11.224 --> 00:01:17.500
+你只能假设它是一个什么东西的数组，一个什么东西的数组。
+all you can assume is that it's an array
+of whatever, it's an array of something.
+
+20
+00:01:18.689 --> 00:01:21.700
+现在你可以说它是任何东西的数组,
+Now you could say it's
+an array of anything at all,
+
+21
+00:01:21.700 --> 00:01:26.390
+但是，迈克诺斯: 那将是危险的
+but,
+&gt;&gt; Mike North: That's gonna be dangerously
+
+22
+00:01:26.390 --> 00:01:28.500
+很灵活，对吧？
+flexible, right?
+
+23
+00:01:28.500 --> 00:01:31.909
+所以一个 nevers 的数组，是的，它是一个数组。
+So an array of nevers, yes it's an array.
+
+24
+00:01:31.909 --> 00:01:34.189
+但是没有额外的信息。
+But without additional information.
+
+25
+00:01:34.189 --> 00:01:38.930
+没有为你提供一个好的、安全的选择所需的东西。
+TypeScript doesn't have what it needs in
+order to make a nice, safe choice for you.
+
+26
+00:01:38.930 --> 00:01:41.770
+这就是为什么数组声明。
+So that's why for array declarations.
+
+27
+00:01:41.770 --> 00:01:43.659
+一开始是空的。
+That start out as empty.
+
+28
+00:01:43.659 --> 00:01:47.520
+你得说清楚你要放什么进去。
+You wanna be specific about
+what you're putting in there.
+
+29
+00:01:47.520 --> 00:01:50.000
+如果我们有哪怕一个元素,
+Now, if we had even one element,
+
+30
+00:01:50.000 --> 00:01:52.439
+我们可以做出合理的假设。
+it's gonna be able to make
+a reasonable assumption here.
+
+31
+00:01:53.849 --> 00:01:56.770
+所以如果你在某些情况下没有动力
+So if you didn't have
+motivation in situations
+
+32
+00:01:56.770 --> 00:01:59.710
+你已经开始的东西，肯定会在那里
+where you already start out with
+something that'll definitely be there and
+
+33
+00:01:59.710 --> 00:02:01.340
+然后有条件地加入其他东西。
+then conditionally you add other stuff.
+
+34
+00:02:02.359 --> 00:02:06.450
+将其作为变量初始化放在声明本身中。
+Putting that in the declaration itself
+as the variable initialization.
+
+35
+00:02:07.569 --> 00:02:08.949
+现在你有动力去
+Now you have motivation to go and
+
+36
+00:02:08.949 --> 00:02:13.419
+这样做，因为这样你就不用指定那个类型了。
+do that, because it saves you from
+having to actually specify that type.
+
+37
+00:02:14.469 --> 00:02:17.336
+如果你给它一些内容，它可以被推断出来。
+It can be inferred if you
+give it some contents at all.
+
+38
+00:02:21.576 --> 00:02:24.110
+Mike North: 那么，tuple 是个花哨的词。
+&gt;&gt; Mike North: So, tuple is a fancy word.
+
+39
+00:02:25.340 --> 00:02:26.759
+意思是数组。
+Just means array.
+
+40
+00:02:26.759 --> 00:02:33.159
+它是一个固定长度的数组，和一个带有约定的数组。
+It's an array of a fixed length, and
+an array that comes with a convention.
+
+41
+00:02:33.159 --> 00:02:38.430
+所以如果我们定义一个可以包含街道地址的数据结构,
+So if we were to define a data structure
+that could contain a street address,
+
+42
+00:02:38.430 --> 00:02:43.039
+我们可以使用一个物体的属性名，比如门牌号，街道名,
+we could use an object with property
+names like house number, street name,
+
+43
+00:02:43.039 --> 00:02:44.819
+邮政编码，城市。
+postal code, city.
+
+44
+00:02:44.819 --> 00:02:47.689
+然后我们可以在需要的时候把东西拿出来。
+And then we can pluck
+things out as we need them.
+
+45
+00:02:47.689 --> 00:02:51.829
+类似地，tuple 可以保存结构化的数据集。
+Tuples, similarly,
+can hold a structured set of data.
+
+46
+00:02:51.829 --> 00:02:55.379
+但是我们必须记住这里的惯例是,
+But, we just have to remember
+that the convention here is,
+
+47
+00:02:55.379 --> 00:02:56.780
+首先是门牌号,
+the first thing is the house number,
+
+48
+00:02:56.780 --> 00:03:00.590
+第二件事是街名，最后一件事是邮政编码。
+the second thing is the street name,
+the last thing is the postal code.
+
+49
+00:03:00.590 --> 00:03:03.270
+我们仍然可以在那里获得强大的打字能力。
+And we still get strong typing there.
+
+50
+00:03:03.270 --> 00:03:06.449
+所以这些数组的长度只能是4。
+So these arrays can
+only be of length four.
+
+51
+00:03:06.449 --> 00:03:10.539
+它们的成员类型必须与我们声明的完全一致。
+And the types of their members must
+be exactly as we declare them.
+
+52
+00:03:10.539 --> 00:03:14.219
+现在，这是从一个函数返回多个值的一个很好的方法。
+Now, this is a great way of returning
+multiple values from a function.
+
+53
+00:03:15.439 --> 00:03:20.090
+我很成功地完成了这次抓取，这是你的数据。
+I was successful in making this fetch and
+here is your data.
+
+54
+00:03:20.090 --> 00:03:24.900
+我没有成功地进行这次获取，这是您的错误消息，对吗？
+I was unsuccessful in making this fetch,
+and here is your error message, right?
+
+55
+00:03:26.050 --> 00:03:31.800
+一个不错的选择，如果你有一些东西，通过经常使用，可能会扔。
+A nice alternative, if you have something
+that, through regular use, might throw.
+
+56
+00:03:31.800 --> 00:03:34.960
+而不是抛出，这对异常错误很有好处,
+Instead of throwing,
+which is good for exceptional errors,
+
+57
+00:03:34.960 --> 00:03:39.979
+一些你没有计划的事情，这样你就可以像
+things you didn't plan for,
+this would allow you to return in like
+
+58
+00:03:39.979 --> 00:03:44.729
+对结果和细节数据表示赞成和反对。
+a thumbs up a thumbs down for
+the result and data about the details.
+
+59
+00:03:46.180 --> 00:03:50.192
+你可以看到这里我们检查了元组成员的类型,
+You can see here that we get type
+checking for members of a tuple,
+
+60
+00:03:50.192 --> 00:03:53.163
+我想指出一点，那就是让它变得紧凑
+one thing I want to point
+out that make it tight in
+
+61
+00:03:53.163 --> 00:04:00.644
+未来的迈克 · 诺斯: 你
+the future
+&gt;&gt; Mike North: You
+
+62
+00:04:00.644 --> 00:04:05.454
+在会员周围安装类型安全装置，但我相信。
+get type safety around the members,
+but I believe.
+
+63
+00:04:08.905 --> 00:04:11.590
+迈克 · 诺斯: 在 push 中没有类型安全。
+&gt;&gt; Mike North: You don't
+get type safety in push.
+
+64
+00:04:11.590 --> 00:04:17.158
+所以我们可以把这看作是一种推力,
+So it's gonna regard this as
+in terms of the type of push,
+
+65
+00:04:17.158 --> 00:04:20.293
+它可以接受字符串或数字。
+it can take strings or numbers.
+
+66
+00:04:20.293 --> 00:04:25.384
+所以对于元组，你需要小心地设置它的值
+So with tuples, you're gonna want to be
+careful to just sort of set its value and
+
+67
+00:04:25.384 --> 00:04:26.677
+访问它的值
+access its value and
+
+68
+00:04:26.677 --> 00:04:30.879
+不使用数组方法，因为它们不是真正的类型安全。
+not use the array methods because
+they're not really type safe.
+
+69
+00:04:30.879 --> 00:04:35.970
+实际上，没有办法安全地输入 push
+There's actually no way to type,
+to safely type push
+
+70
+00:04:35.970 --> 00:04:40.209
+以这样的方式，基于它当前拥有的元素数量。
+In such a way that based on the number
+of elements it currently has.
+
+71
+00:04:40.209 --> 00:04:44.529
+如果我们尝试逐步构建这个模型，我们可以
+If we were to try to
+incrementally build this up, we
+
+72
+00:04:44.529 --> 00:04:49.290
+不知道首先我们应该接受一个数字，然后我们应该接受一个字符串,
+wouldn't know that first we should accept
+a number, then we should accept a string,
+
+73
+00:04:49.290 --> 00:04:52.329
+然后我们接受一个字符串，然后我们接受一个数字。
+then we should accept a string,
+then we should accept a number.
+
+74
+00:04:52.329 --> 00:04:56.519
+这就需要我们基于数组更改中的状态
+With that it will require us to kind
+of based on state in the array change
+
+75
+00:04:56.519 --> 00:04:58.100
+这个函数的类型签名。
+the type signature of this function.
+
+76
+00:04:59.259 --> 00:05:01.589
+无论如何，你不会这样使用元组。
+And you don't use tuples this way, anyway.
+
+77
+00:05:01.589 --> 00:05:05.370
+因为唯一的方法得到一个有效的是设置它所有在一次和
+Cuz the only way to get a valid
+one is to set it all at once and
+
+78
+00:05:05.370 --> 00:05:08.420
+可以作为整个语句进行类型检查。
+that can all be type checked
+as a whole statement.
+
+79
+00:05:08.420 --> 00:05:09.129
+什么事？
+Yes?
+
+80
+00:05:09.129 --> 00:05:11.850
+扬声器2: 如果你这样做，例如，希望有一个数组可以是
+&gt;&gt; Speaker 2: If you did, for example,
+want to have an array that could be either
+
+81
+00:05:11.850 --> 00:05:16.529
+数字或者字符串，你会怎么做？
+number or a string,
+how would you go about doing that?
+
+82
+00:05:16.529 --> 00:05:17.500
+麦克 · 诺斯: 问得好。
+&gt;&gt; Mike North: Good question.
+
+83
+00:05:17.500 --> 00:05:22.233
+如果我给你看迈克 · 诺斯: 如果我
+If I showed you
+&gt;&gt; Mike North: If I
+
+84
+00:05:22.233 --> 00:05:25.773
+给你看了这个工具。
+showed you this tool tip here.
+
+85
+00:05:25.773 --> 00:05:33.519
+等等，对不起，这是，迈克 · 诺斯: 这个工具提示。
+Wait, sorry it's,
+&gt;&gt; Mike North: This tool tip.
+
+86
+00:05:35.480 --> 00:05:37.488
+这里，这样一个例子。
+So here, this kind of an example.
+
+87
+00:05:38.810 --> 00:05:42.411
+如果你读过这篇文章，比如有人能给我一次机会吗。
+If you had read that,
+like can someone give me a shot.
+
+88
+00:05:42.411 --> 00:05:43.081
+演讲者3: 或者那里的一个数字。
+&gt;&gt; Speaker 3: Or a number there.
+
+89
+00:05:43.081 --> 00:05:44.149
+字符串或数字。
+&gt;&gt; Mike North: String or number.
+
+90
+00:05:44.149 --> 00:05:49.699
+它是字符串或数字括号，输入它们的数组。
+It's string or number parentheses,
+entered an array of them.
+
+91
+00:05:49.699 --> 00:05:52.286
+扬声器3: 你可以在函数中做一个字符串，就像我想要的
+&gt;&gt; Speaker 3: So you could do like a
+string in a function like I wanna array of
+
+92
+00:05:52.286 --> 00:05:54.848
+字符串或函数返回这个总和？
+strings or functions to return
+back in this the sum of that?
+
+93
+00:05:54.848 --> 00:05:56.917
+迈克 · 诺斯: 正确 演讲者3: 好的，很好。
+&gt;&gt; Mike North: Correct.
+&gt;&gt; Speaker 3: Okay, cool.
+
+94
+00:05:56.917 --> 00:05:59.201
+迈克 · 诺斯: 这是我们这堂课最后要讲的内容。
+&gt;&gt; Mike North: And that's the last
+thing we'll cover in this lecture.
+
+95
+00:05:59.201 --> 00:06:00.300
+演讲者3: 对不起 迈克 · 诺斯: 不，不,
+&gt;&gt; Speaker 3: I'm sorry.
+&gt;&gt; Mike North: No, no,
+
+96
+00:06:00.300 --> 00:06:03.997
+不要因为带领我们走向,
+do not apologize for
+leading us to if anything,
+
+97
+00:06:03.997 --> 00:06:09.170
+你在帮我的忙，准备下一个部分。
+you're doing me a favor and
+teeing up the next sections.
+
+98
+00:06:09.170 --> 00:06:10.529
+还有其他问题吗？
+Other questions about this?
+
+99
+00:06:10.529 --> 00:06:13.776
+说话人3: 你实际上可以把任何喜欢
+&gt;&gt; Speaker 3: You can'actually
+just put any like
+
+100
+00:06:13.776 --> 00:06:15.059
+迈克 · 诺斯: 完全正确,
+&gt;&gt; Mike North: Totally, yep,
+
+101
+00:06:15.059 --> 00:06:21.709
+你可以做任何你总是可以提供一个类型缩进来放松东西。
+you could do any You can always provide
+a type indentation to loosen things up.
+
+102
+00:06:21.709 --> 00:06:28.990
+类似于我们的 let 和 const 示例，在创建这些元组时，对。
+Similar to our let and const example,
+when creating these tuples, right.
+
+103
+00:06:28.990 --> 00:06:31.040
+这些东西的长度是固定的。
+These things of fixed length.
+
+104
+00:06:31.040 --> 00:06:34.170
+就像数组中的一对数字。
+Like a pair of numbers in an array.
+
+105
+00:06:34.170 --> 00:06:39.899
+你经常需要或者总是需要指定你想要的类型。
+You are going to often have to or
+always have to specify the type you want.
+
+106
+00:06:39.899 --> 00:06:47.060
+为什么，因为在不干扰你的工作流程方面犯了错误。
+Why, because erring on the side of
+not interfering with your work flow.
+
+107
+00:06:47.060 --> 00:06:50.215
+类型脚本会将其视为一个数字数组。
+Type script is gonna consider
+this to be an array of numbers.
+
+108
+00:06:50.215 --> 00:06:56.487
+它不会认为这是一个包含两个数字的元组。
+Right, it's not gonna consider this
+to be a tuple containing two numbers.
+
+109
+00:06:56.487 --> 00:07:00.266
+所以你只需要在这里提供这个类型注释，因为它是一个漂亮的
+So you just have to always provide this
+type annotation here because it's a pretty
+
+110
+00:07:00.266 --> 00:07:01.459
+特殊的东西。
+specific thing.
+
+111
+00:07:01.459 --> 00:07:06.545
+字符串文字类型也是如此，如果您想要一个类型为
+Same goes with a string literal type,
+if you wanted a string whose type was
+
+112
+00:07:06.545 --> 00:07:11.646
+只有弦麦克，仅仅说 x 等于麦克是不够的。
+only the string Mike, it wouldn't be
+enough to just say let x equal Mike.
+
+113
+00:07:11.646 --> 00:07:16.137
+你得说让 x: 迈克 · 迈克。
+You'd have to say let x: Mike = Mike.
+
+114
+00:07:16.137 --> 00:07:19.105
+只有这样你才能得到那个非常非常具体的东西。
+And only then would you get that really,
+really specific thing.

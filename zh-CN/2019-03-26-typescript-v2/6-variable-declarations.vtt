@@ -1,0 +1,342 @@
+WEBVTT
+
+1
+00:00:00.460 --> 00:00:08.000
+Mike North: 那么让我们来看一下变量声明和初始化的分离。
+&gt;&gt; Mike North: So let's look at separating
+variable declarations and initializations.
+
+2
+00:00:08.000 --> 00:00:09.849
+所以，我们经常需要这样做。
+So, often, we need to do this.
+
+3
+00:00:09.849 --> 00:00:13.244
+我能想到的我做这件事的一个地方就是
+One place I can think of
+that I do this is if I have
+
+4
+00:00:13.244 --> 00:00:17.734
+根据某些条件取不同值的变量。
+a variable that takes on a different
+value based on some conditions.
+
+5
+00:00:17.734 --> 00:00:21.954
+也许我有一个大小写切换包含五个或六个大小写条款
+Maybe I have a case switch with five or
+six case clauses, and
+
+6
+00:00:21.954 --> 00:00:26.015
+我想根据这些条款来设定某物的价值。
+I wanna set the value of something based
+on which of those clauses I fall into.
+
+7
+00:00:26.015 --> 00:00:31.350
+我可能会在 switch 语句外面声明这个变量,
+I'll probably declare that variable
+outside of the switch statement,
+
+8
+00:00:31.350 --> 00:00:34.799
+然后分配给每个子句。
+and then assign it in each of the clauses.
+
+9
+00:00:34.799 --> 00:00:37.149
+所以你最终会得到这样的东西，但是
+So you end up with something like this,
+but
+
+10
+00:00:37.149 --> 00:00:39.939
+我们遇到了一些麻烦事。
+we run into something that looks
+a little bit troubling here.
+
+11
+00:00:41.030 --> 00:00:46.920
+我们将它初始化为41或者重新分配给41，因为它没有初始化式。
+We initialize it to 41 or reassign
+it to 41 cuz it has no initializer.
+
+12
+00:00:46.920 --> 00:00:49.759
+然后看起来我们也可以用一个字符串。
+And then it looks like we
+can use a string as well.
+
+13
+00:00:51.210 --> 00:00:57.256
+这给了我们一个线索，关于这里发生了什么。
+And this gives us a clue as to what's
+going on here, z takes on a type of any.
+
+14
+00:00:57.256 --> 00:01:01.152
+这基本上是一张万能牌。
+It's basically a wildcard.
+
+15
+00:01:01.152 --> 00:01:06.180
+类型系统，一般来说，称之为 top 类型。
+Well, type systems, in general,
+call this a top type.
+
+16
+00:01:06.180 --> 00:01:08.359
+Top 类型可以取任何值。
+Top types can take any value.
+
+17
+00:01:09.879 --> 00:01:11.840
+并不是说这些都是邪恶的。
+And it's not that these are evil.
+
+18
+00:01:12.920 --> 00:01:17.769
+它们只是遵循 JavaScript 变量所遵循的规则,
+They just play by the same rules
+that JavaScript variables play by,
+
+19
+00:01:17.769 --> 00:01:22.010
+我们可以在字符串、数字、数组和函数之间切换,
+where we can flip-flop between strings,
+and numbers, and arrays, and functions,
+
+20
+00:01:22.010 --> 00:01:24.269
+你想怎样就怎样。
+and it'll take on whatever you want.
+
+21
+00:01:24.269 --> 00:01:28.010
+所以这是你们这类人的弱点。
+So it's a point of weakness in your types.
+
+22
+00:01:28.010 --> 00:01:32.920
+现在，有些地方完全可以使用 any，所以
+Now, there are places where it's
+totally valid to use an any, so
+
+23
+00:01:32.920 --> 00:01:39.159
+别以为你的任务就是把他们从你的应用程序里清除。
+don't think that you're on a mission
+to completely purge them from your app.
+
+24
+00:01:39.159 --> 00:01:41.889
+你只是想确保无论你在哪里,
+You just wanna make sure
+that wherever you have it,
+
+25
+00:01:41.889 --> 00:01:44.563
+你真的想让任何事情。
+you actually want to allow
+absolutely anything.
+
+26
+00:01:48.868 --> 00:01:52.990
+迈克 · 诺斯: 所以如果我们愿意的话，我们可以改善情况,
+&gt;&gt; Mike North: So we could improve
+the situation if we wanted to by,
+
+27
+00:01:52.990 --> 00:01:57.150
+在变量声明中，指定一个类型。
+in our variable declaration,
+specifying a type.
+
+28
+00:01:57.150 --> 00:02:00.040
+这被称为类型注释。
+And this is called a type annotation.
+
+29
+00:02:00.040 --> 00:02:03.540
+我们附加了一些额外的信息
+We're sort of attaching a little
+extra piece of information
+
+30
+00:02:03.540 --> 00:02:07.640
+你没有初始值设定项,
+to the variable that says, look,
+you don't have an initializer,
+
+31
+00:02:07.640 --> 00:02:12.490
+但我告诉你，数字才是你设计的目的。
+but I'm telling you number is
+what you're designed to hold.
+
+32
+00:02:12.490 --> 00:02:19.490
+现在我们得到了我们想要的类型错误，如果我们试图把一个字符串放入这个变量。
+And now we get our desirable type error if
+we try to put a string into this variable.
+
+33
+00:02:20.939 --> 00:02:24.147
+所以这就是你要小心的地方，对吗？
+So this is something you
+gotta watch out for, right?
+
+34
+00:02:24.147 --> 00:02:28.079
+如果声明中没有初始化变量,
+If you have declarations where you
+don't initialize the variable,
+
+35
+00:02:28.079 --> 00:02:31.750
+你要说明这是什么型号的。
+you're gonna wanna specify what
+type this is designed to hold.
+
+36
+00:02:33.319 --> 00:02:34.219
+什么事？
+Yes?
+
+37
+00:02:34.219 --> 00:02:38.679
+演讲者2: 所以在 TypesScript 的官方文档中，他们通常会这么做
+&gt;&gt; Speaker 2: So in the official docs of
+TypesScript, they generally do do that
+
+38
+00:02:38.679 --> 00:02:44.780
+类型声明，即使使用值初始化变量。
+type declaration, even if you're
+initializing the variable with a value.
+
+39
+00:02:44.780 --> 00:02:48.979
+建议这样做还是不建议，或者现在重要吗？
+Is it recommended to do it that way or
+no, or does it now matter?
+
+40
+00:02:48.979 --> 00:02:50.810
+迈克 · 诺斯: 这是个很好的问题。
+&gt;&gt; Mike North: That's a great question.
+
+41
+00:02:50.810 --> 00:02:55.313
+如果你正在写文档，我建议你这么做
+I would say it's recommended to do that
+way if you are writing docs because you
+
+42
+00:02:55.313 --> 00:02:58.097
+在文档中非常具有描述性。
+are being very descriptive
+in documentation.
+
+43
+00:02:58.097 --> 00:02:59.317
+而且,
+And what's more,
+
+44
+00:02:59.317 --> 00:03:04.197
+我相信打字稿团队会很高兴能够展示工具提示
+I'm sure the TypeScript team would love
+to have the ability to show tool tips
+
+45
+00:03:04.197 --> 00:03:09.379
+在他们的医生里，你可以在那里徘徊，看看他们是什么，对吗？
+in their docs where you could hover over
+things and see what they are, right?
+
+46
+00:03:09.379 --> 00:03:11.748
+就像这个例子一样,
+So like in this example up here,
+
+47
+00:03:11.748 --> 00:03:16.889
+描述这是类型 hello world，喜欢写在文本上,
+describing that this is of type hello
+world, like to write that out on text,
+
+48
+00:03:16.889 --> 00:03:22.319
+为了描述的目的，这样做可能有点冗长。
+you might be verbose in doing so
+for descriptive purposes.
+
+49
+00:03:22.319 --> 00:03:26.099
+但是因为我们这里有一个编辑，我们不必这样做。
+But because we have an editor here,
+we don't have to do that.
+
+50
+00:03:26.099 --> 00:03:31.469
+我宁愿在一些特定的地方提供类型信息。
+I err on the side of providing type
+information in a few specific places.
+
+51
+00:03:31.469 --> 00:03:35.069
+带有初始化器的变量,
+Variables with initializers,
+
+52
+00:03:35.069 --> 00:03:40.990
+不是这些地方，因为打字稿总是可以推断出那个位置。
+not one of those places because TypeScript
+can always infer at that location.
+
+53
+00:03:40.990 --> 00:03:46.270
+现在，我将非常清楚地指出我总是放置类型信息的地方
+Now, I'll be very clear to point out
+spots where I always put type information
+
+54
+00:03:46.270 --> 00:03:52.060
+作为一种在代码片段之间设置有意识界限的方式。
+as a way of kind of setting deliberate
+boundaries around pieces of code.
+
+55
+00:03:52.060 --> 00:03:56.409
+基本上，当我提供类型信息时，我要做的就是
+Basically, what I'm trying to do
+when I provide type information
+
+56
+00:03:56.409 --> 00:04:00.900
+在两个事物之间提供一个明确的契约
+is provide an explicit contract
+between two things, and
+
+57
+00:04:00.900 --> 00:04:04.060
+在合同的两边都保持诚实。
+keep myself honest on both
+sides of that contract.
+
+58
+00:04:04.060 --> 00:04:07.469
+但是在这里，它只是一些额外的东西。
+But here,
+it would sort of just be extra stuff.
+
+59
+00:04:07.469 --> 00:04:09.509
+但是我会用同样的方式来写我的文档。
+But I would write my docs in
+the same way to be clear.

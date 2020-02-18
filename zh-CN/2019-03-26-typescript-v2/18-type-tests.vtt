@@ -1,0 +1,100 @@
+WEBVTT
+
+1
+00:00:00.490 --> 00:00:02.870
+迈克 · 诺斯: 我还想给你们看看这个测试。
+&gt;&gt; Mike North: I want to also
+show you this test here.
+
+2
+00:00:04.950 --> 00:00:09.259
+因此，您可以为类型编写测试。
+So you can write tests for types.
+
+3
+00:00:09.259 --> 00:00:15.890
+微软有一个叫做 dtslint 的库，它使用了 tslint。
+Microsoft has a library called dtslint,
+which uses tslint.
+
+4
+00:00:15.890 --> 00:00:18.925
+它基本上解析了链接错误消息
+And it basically parses
+the linting error messages and
+
+5
+00:00:18.925 --> 00:00:23.370
+将它们与你可以在类型中留下的特殊注释进行比较。
+compares them against special comments
+that you can leave in your types.
+
+6
+00:00:23.370 --> 00:00:27.100
+所以，这不是真的，当我说这是摩卡测试的时候，我有点撒谎了。
+So, this isn't actually, I kind of
+lied when I said it was a Mocha test.
+
+7
+00:00:28.140 --> 00:00:32.512
+这只是一个带有特殊注释的打字稿文件。
+This is just a TypeScript file
+with special comments in there.
+
+8
+00:00:32.512 --> 00:00:36.807
+这基本上断言，如果有错误,
+And this basically asserts
+that if there is an error,
+
+9
+00:00:36.807 --> 00:00:41.292
+这里一定有什么错误，我可以很容易地说,
+there must be an error here,
+I could just as easily say,
+
+10
+00:00:41.292 --> 00:00:47.429
+预期输入，迈克 · 诺斯: 错，对吗？
+$ExpectType,
+&gt;&gt; Mike North: False, right?
+
+11
+00:00:47.429 --> 00:00:52.439
+您可以围绕纯类型的事物编写测试用例。
+You can write test cases around
+things that are purely types.
+
+12
+00:00:52.439 --> 00:00:54.060
+很多人都没有意识到这一点
+A lot of people don't realize this and
+
+13
+00:00:54.060 --> 00:00:59.359
+他们只是完全跳过测试，当它涉及到接口和诸如此类的东西。
+they just skip tests completely when it
+comes to interfaces and things like that.
+
+14
+00:00:59.359 --> 00:01:04.150
+但是，这可能是代码中一个非常棘手的区域。
+But this can be a gnarly
+area of your code.
+
+15
+00:01:04.150 --> 00:01:08.489
+如果你有一些有点抽象的东西，你真的想要有
+Where if you have something that's a
+little bit abstract, you really wanna have
+
+16
+00:01:08.489 --> 00:01:14.069
+对于变化的一些信心是非破坏性的。
+some confidence around
+changes being nondestructive.
+
+17
+00:01:14.069 --> 00:01:16.159
+所以 dtslint 就是我们要找的东西。
+So dtslint is what to look for.

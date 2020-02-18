@@ -1,0 +1,481 @@
+WEBVTT
+
+1
+00:00:00.030 --> 00:00:02.279
+迈克 · 诺斯: 那么接下来我要做的就是获得
+&gt;&gt; Mike North: So
+the next thing am gonna do is obtain
+
+2
+00:00:03.359 --> 00:00:05.480
+类型检查器的引用。
+a reference to the type checker.
+
+3
+00:00:05.480 --> 00:00:09.300
+类型检查器，它是编译的一部分,
+The type checker,
+which is part of the compile,
+
+4
+00:00:09.300 --> 00:00:14.970
+它需要你创建的所有类型和接口。
+it is what takes all of the types and
+the interface you create.
+
+5
+00:00:14.970 --> 00:00:20.390
+代码在内存中的表示抽象语法树,
+And the abstract syntax tree which is
+the in memory representation of your code,
+
+6
+00:00:20.390 --> 00:00:20.957
+对吧？
+right?
+
+7
+00:00:20.957 --> 00:00:25.632
+所有的函数，参数，所有的东西
+All of the functions and
+the arguments and everything and
+
+8
+00:00:25.632 --> 00:00:32.640
+它将它们绑定在一起，并识别实际输入的支票。
+it binds them together and identifies
+what is going to actually typed check.
+
+9
+00:00:32.640 --> 00:00:33.649
+什么会起作用？
+What is going to work?
+
+10
+00:00:35.159 --> 00:00:37.350
+确保所有内容都是等效的类型。
+Make sure everything is type equivalent.
+
+11
+00:00:37.350 --> 00:00:41.688
+所以我们要用它来获取很多信息
+So it's gonna be the source of a lot of
+the information that we're gonna use to
+
+12
+00:00:41.688 --> 00:00:43.125
+注销文件。
+log out documentation.
+
+13
+00:00:43.125 --> 00:00:45.700
+我们只需要把它记录到控制台上，让事情变得简单明了。
+We're just gonna log it to the console
+to keep things nice and simple.
+
+14
+00:00:48.859 --> 00:00:54.287
+接下来，我们将使用类型检查器来获取 TypeScript 符号和
+Next, we'll use the type checker to
+obtain the TypeScript symbol and
+
+15
+00:00:54.287 --> 00:00:58.802
+这个符号可以输入或输出。
+the symbol is something that
+can be imported or exported.
+
+16
+00:00:58.802 --> 00:01:03.457
+有名字的东西记住一个符号有三个插槽,
+It's something with a name,
+remember you have three slots on a symbol,
+
+17
+00:01:03.457 --> 00:01:08.049
+值、类型和名称空间，这就是我们在这里要处理的。
+value, type, and namespace,
+that's what we are working with here.
+
+18
+00:01:09.120 --> 00:01:11.750
+每个文件都与一个文件相关联。
+And each file is associated with one.
+
+19
+00:01:13.900 --> 00:01:18.640
+因此，我们将获取所有文件，对它们进行迭代，然后
+So we are going to take all of our files,
+iterate over them, and
+
+20
+00:01:18.640 --> 00:01:23.650
+对于每个文件，我们都会询问这个符号,
+for each file,
+we're going to ask the symbol, sorry,
+
+21
+00:01:23.650 --> 00:01:28.829
+向检查人员要文件所在位置的符号。
+ask the checker for
+the symbol at the location of that file.
+
+22
+00:01:28.829 --> 00:01:30.170
+这就是你得到的,
+This is just the way you get,
+
+23
+00:01:31.719 --> 00:01:34.939
+我们有效地使用了一点语言服务器。
+we're effectively using the language
+server a little bit here.
+
+24
+00:01:34.939 --> 00:01:39.200
+我们说，我们询问检查人员说，这里有一个位置。
+We're saying, we're querying
+the checker saying, here's a location.
+
+25
+00:01:39.200 --> 00:01:42.490
+它基本上是文件中的字符零。
+It is character zero in the file,
+basically.
+
+26
+00:01:42.490 --> 00:01:46.560
+告诉我那里的工具提示符号是什么？
+Give me whatever the tool tip would
+be there, like what is the symbol?
+
+27
+00:01:48.009 --> 00:01:51.020
+然后我们过滤掉所有未定义的信息。
+And then we're filtering out
+anything that might be undefined.
+
+28
+00:01:51.020 --> 00:01:55.140
+如果有某种编译错误，或者
+If there was a compile error of some sort,
+or something was really wrong with one of
+
+29
+00:01:55.140 --> 00:01:59.490
+在我们的声明文件中，有些文件可能与符号无关。
+our declaration files, some files might
+not be associated with the symbol.
+
+30
+00:01:59.490 --> 00:02:04.009
+如果他们不能成功输入检查，而我们有了打字稿
+If they couldn't successfully type
+check and we had our TypeScript
+
+31
+00:02:04.009 --> 00:02:08.207
+设置真的很松散，其中一些可能会回来像,
+settings really relaxed,
+some of these might come back like,
+
+32
+00:02:08.207 --> 00:02:11.865
+我不能给你任何东西，它就这么消失了。
+I can't give you anything for
+this, it's just gone.
+
+33
+00:02:14.728 --> 00:02:20.961
+迈克 · 诺斯: 现在我们有了符号，迈克 · 诺斯: 我只是
+&gt;&gt; Mike North: So now we have symbols,
+&gt;&gt; Mike North: And I'm just
+
+34
+00:02:20.961 --> 00:02:25.780
+我们要取消注释这块这里，我们只是有点走过它的一步一步。
+gonna uncomment this block here and we'll
+just kinda walk through it's step by step.
+
+35
+00:02:28.831 --> 00:02:32.280
+迈克 · 诺斯: 实际上，让我们逐步地尝试一下。
+&gt;&gt; Mike North: Actually,
+let's try it out incrementally.
+
+36
+00:02:32.280 --> 00:02:36.430
+所以我要注销每个符号的名称。
+So I'm just going to
+logout each symbols name.
+
+37
+00:02:36.430 --> 00:02:37.668
+我们从那里开始，这是一个好的开始。
+We'll start there, that's a good start.
+
+38
+00:02:45.995 --> 00:02:49.829
+迈克 · 诺斯: 好的，这给我们提供了和以前基本相同的东西。
+&gt;&gt; Mike North: Okay, so this is giving
+us basically the same thing as before.
+
+39
+00:02:49.829 --> 00:02:53.400
+让我只是确保我的另一个控制台日志消失了，它是。
+Let me just make sure my other
+console log is gone, and it is.
+
+40
+00:02:53.400 --> 00:02:56.530
+所以这里一定产生了这个输出。
+So this must be producing
+this output down here.
+
+41
+00:03:00.090 --> 00:03:04.580
+一个与文件相关的符号，它的名字，将成为该文件的一部分。
+A symbol associated with a file,
+it's name, is gonna be part of that file.
+
+42
+00:03:06.069 --> 00:03:10.740
+因此，如果文件有导出，我们将在这里输入这个分支。
+So if the file has exports,
+we will enter this branch here.
+
+43
+00:03:11.789 --> 00:03:17.260
+所以让我们试着编译并运行它。
+So let's try to compile that and run it.
+
+44
+00:03:20.176 --> 00:03:23.311
+迈克诺斯: 我们只是，符号有一个属性叫做出口，和
+&gt;&gt; Mike North: And we're just,
+symbol has a property called exports, and
+
+45
+00:03:23.311 --> 00:03:26.370
+我只是把它从标志上拿下来。
+I'm just grabbing that
+right off of the symbol.
+
+46
+00:03:26.370 --> 00:03:31.439
+看起来它确实有导出，所以让我们遍历导出。
+Looks like it does have exports,
+so let's iterate over the exports.
+
+47
+00:03:31.439 --> 00:03:37.850
+他们的类型恰好是一个叫做 UnderscoreEscapeMap 的东西，它是一个字典。
+Their type happens to be something called
+an UnderscoreEscapeMap, it's a dictionary.
+
+48
+00:03:42.129 --> 00:03:44.104
+迈克 · 诺斯: 抱歉一直在滚动,
+&gt;&gt; Mike North: Sorry for
+all the scrolling,
+
+49
+00:03:44.104 --> 00:03:48.530
+我只是想一点一点地揭开这个秘密这样我们就可以一起跟进了。
+it's just I wanna reveal this bit
+by bit so we can all follow along.
+
+50
+00:03:49.670 --> 00:03:52.479
+所以我们要在导出上进行迭代。
+So we're gonna iterate over the export.
+
+51
+00:03:52.479 --> 00:03:55.659
+对于每个导出，我们要注销它的名称和
+And for each export,
+we're gonna log out its name and
+
+52
+00:03:55.659 --> 00:04:00.060
+在类型检查器中使用此技术获取其类型。
+use this technique with a type
+checker to obtain its type.
+
+53
+00:04:00.060 --> 00:04:03.912
+这和我们用来获取每个文件符号的东西完全一样,
+This is the exact same thing we
+used to get each file's symbol,
+
+54
+00:04:03.912 --> 00:04:10.270
+1. getsymbolicatlocation，getTypeAtLocation.
+getSymbolAtLocation, getTypeAtLocation.
+
+55
+00:04:10.270 --> 00:04:17.699
+这将给我们一个类型，然后这是 typeToString，不言自明。
+So this will give us a type, and then
+this is typeToString, self-explanatory.
+
+56
+00:04:17.699 --> 00:04:19.060
+让我们看看这是什么样子。
+Let's see what this looks like.
+
+57
+00:04:22.853 --> 00:04:28.040
+迈克 · 诺斯: 找到了，就是这个符号的名字。
+&gt;&gt; Mike North: Here we go, there's the
+name of the symbol that's this right here.
+
+58
+00:04:28.040 --> 00:04:31.100
+然后打印出这个字符串,
+And then this prints out this string,
+
+59
+00:04:31.100 --> 00:04:35.040
+看起来很像我们在工具提示中看到的。
+which looks a lot like what
+we're seeing in our tool tips.
+
+60
+00:04:35.040 --> 00:04:39.889
+这里有几个步骤,
+Now, there are couple steps involved here,
+
+61
+00:04:39.889 --> 00:04:45.000
+但实际上一旦我们创建了程序掌握了文件,
+but really, once we create our program,
+get ahold of a file,
+
+62
+00:04:45.000 --> 00:04:48.199
+我们可以开始利用它所有的出口
+we can start accessing all its exports and
+
+63
+00:04:48.199 --> 00:04:52.161
+找出哪一个是函数，并开始检查它们的参数。
+figure out which one are functions and
+start checking on their arguments.
+
+64
+00:04:54.569 --> 00:04:58.060
+在今天的某个时候，我有一个关于 JSDoc 标签的问题。
+At some point today,
+I got a question about JSDoc tags.
+
+65
+00:04:58.060 --> 00:05:01.949
+我想是你问的，蔡斯，你想知道这是什么的一部分
+I think you asked it, Chase,
+where you wondered is this part of what
+
+66
+00:05:01.949 --> 00:05:09.259
+打字稿是在解析，还是 VS 代码只是把它添加到工具类型中？
+the TypeScript is parsing or is it
+VS Code just adding it to a tool type?
+
+67
+00:05:09.259 --> 00:05:15.639
+事实证明，TypeScript 理解这些 JSDoc 标签，所以下面是我们的值。
+It turns out TypeScript understand
+these JSDoc tags, so here's our value.
+
+68
+00:05:15.639 --> 00:05:20.295
+它有一个叫做 getjsDocTags 的方法，剩下的就是
+It's got a method called getjsDocTags and
+the rest of this is just getting
+
+69
+00:05:20.295 --> 00:05:23.759
+我们可以很容易地在控制台上看到它,
+it into a form where we can
+easily see it in the console,
+
+70
+00:05:30.620 --> 00:05:32.009
+迈克 · 诺斯: 好了。
+&gt;&gt; Mike North: And there we go.
+
+71
+00:05:32.009 --> 00:05:36.490
+所以这些符合代码中的注释。
+So these correspond to
+the comments in that code.
+
+72
+00:05:36.490 --> 00:05:37.959
+让我打开代码就这样
+Let me open up the code just so
+
+73
+00:05:37.959 --> 00:05:42.340
+我们可以比较登记出去的数据，这就对了。
+we can compare what's being logged out,
+there you go.
+
+74
+00:05:42.340 --> 00:05:48.279
+还有另一种方法，比如属性，我们可以在这里看到这个字符串。
+There's another way, like property we
+could access to see this string up here.
+
+75
+00:05:48.279 --> 00:05:55.629
+但这看起来很像我们在底部注销的东西。
+But this looks a lot like what
+we're logging out on the bottom.
+
+76
+00:05:55.629 --> 00:06:02.240
+所以，如果你有兴趣检查你的代码，以确保没有人的
+So if you were interested in checking
+your code to make sure that nobody's
+
+77
+00:06:02.240 --> 00:06:09.079
+访问某个库的旧版本，或者如果你想确保
+accessing this old version of some library
+or if you wanted to make sure that
+
+78
+00:06:12.360 --> 00:06:16.709
+没有人的，你想建立一个自定义的规则之类的,
+nobody's, you wanted to build
+a custom linting rule of some sort,
+
+79
+00:06:16.709 --> 00:06:20.220
+你需要了解这些代码是如何组合在一起的。
+where you need to understand how all
+of this code is assembled together.
+
+80
+00:06:20.220 --> 00:06:24.560
+是一个很好的工具，因为它可以理解 JavaScript 和 JavaScript
+TypeScript is a great tool for that,
+because it understands JavaScript and
+
+81
+00:06:24.560 --> 00:06:26.170
+打字稿也同样出色。
+TypeScript equally well.
+
+82
+00:06:26.170 --> 00:06:32.040
+你可以得到这些非常合理的数据结构
+And you get these pretty reasonable
+data structures out that
+
+83
+00:06:32.040 --> 00:06:37.000
+你可以遍历并爬过它，然后用它来做这样的事情。
+you can iterate over and crawl through and
+use it for something like this.

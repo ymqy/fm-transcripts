@@ -1,0 +1,163 @@
+WEBVTT
+
+1
+00:00:00.090 --> 00:00:02.923
+迈克 · 诺斯: 我们接下来要讨论的话题是课程。
+&gt;&gt; Mike North: The next topic we're
+going to jump into is classes.
+
+2
+00:00:02.923 --> 00:00:08.151
+您可能熟悉在常规 JavaScript 中使用类。
+And you're probably familiar with
+using classes in regular JavaScript.
+
+3
+00:00:08.151 --> 00:00:12.580
+在你已经习惯的基础上增加了一些新的概念。
+TypeScript adds some new concepts
+on top of what you're used to.
+
+4
+00:00:12.580 --> 00:00:17.849
+我们需要从阶级领域的角度思考一些新的东西,
+There is something new we need to
+think about in terms of class fields,
+
+5
+00:00:17.849 --> 00:00:23.673
+和-TypeScript 还引入了访问修饰符关键字的概念。
+and- TypeScript also introduces
+the concept of access modifier keywords.
+
+6
+00:00:23.673 --> 00:00:28.556
+这使我们能够控制谁可以看到成员数据和
+Which allow us to have control
+over who can see member data and
+
+7
+00:00:28.556 --> 00:00:31.570
+实例上的成员函数。
+member functions on instances.
+
+8
+00:00:31.570 --> 00:00:37.625
+那么让我们回到音符，回到4-class-basic。 Ts 文件
+So let's go to the notes,
+to the 4-class-basic.ts file
+
+9
+00:00:45.326 --> 00:00:47.249
+Mike North: 在这个例子中,
+&gt;&gt; Mike North: So in this example,
+
+10
+00:00:47.249 --> 00:00:50.380
+你可以看到一些东西。
+you can see a couple things.
+
+11
+00:00:50.380 --> 00:00:55.146
+首先，我们使用的是我曾经使用过的新东西
+The first is that we're using
+a new something I've been
+
+12
+00:00:55.146 --> 00:00:58.299
+要求继承遗产条款，对吗？
+calling a heritage clause, right?
+
+13
+00:00:58.299 --> 00:01:03.259
+扩展是我们唯一可以用来描述从另一个继承的东西
+Extends is the only thing that we can
+use to describe inheriting from another
+
+14
+00:01:03.259 --> 00:01:08.150
+你可以说类扩展了基类。
+entity in JavaScript,
+that you can say class extends base class.
+
+15
+00:01:08.150 --> 00:01:11.644
+引入了实现，并且
+TypeScript introduces implements, and
+
+16
+00:01:11.644 --> 00:01:16.948
+描述与特定接口对齐的类。
+that describes a class aligning
+with a particular interface.
+
+17
+00:01:16.948 --> 00:01:21.739
+所以有电子邮件，我们知道这种类型要求一切都有一个名称
+So HasEmail, we know this type
+requires that everything have a name
+
+18
+00:01:21.739 --> 00:01:25.120
+这是一个字符串和一封邮件，这是一个字符串。
+that's a string and
+an email that's a string.
+
+19
+00:01:27.984 --> 00:01:32.700
+Mike North: 这对于任何实现这个接口的类来说意味着什么,
+&gt;&gt; Mike North: What this means for
+any class that implements this interface,
+
+20
+00:01:32.700 --> 00:01:36.972
+我们必须确保这些属性符合
+we have to make sure that these
+properties that conform to
+
+21
+00:01:36.972 --> 00:01:40.799
+这个界面是可用的，并且提前说明了。
+that interface are available and
+stated upfront.
+
+22
+00:01:42.359 --> 00:01:47.629
+所以，从这里的意义来说，这就是我们
+So, in terms of what this means up here,
+this is us
+
+23
+00:01:47.629 --> 00:01:52.689
+声明这些成员数据字段将存在。
+declaring that these member
+data fields will exist.
+
+24
+00:01:52.689 --> 00:01:55.920
+它们的类型是字符串。
+And their type is going to be a string.
+
+25
+00:01:55.920 --> 00:02:00.006
+这里我们说我们接受两个参数
+Here we're stating that
+we accept two parameters
+
+26
+00:02:00.006 --> 00:02:04.750
+在构造函数中，我们接受两个参数。
+within our constructor,
+we accept two parameters.
+
+27
+00:02:04.750 --> 00:02:09.560
+在这里，我们确保传递构造函数接收到的东西
+And down here, we are making sure that we
+pass the things our constructor receives
+
+28
+00:02:09.560 --> 00:02:13.259
+实例，当然就是这个实例，在构造函数中。
+onto the instance, which of course
+is this, within the constructor.

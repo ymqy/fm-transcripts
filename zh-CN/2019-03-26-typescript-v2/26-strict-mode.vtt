@@ -1,0 +1,326 @@
+WEBVTT
+
+1
+00:00:00.310 --> 00:00:05.009
+迈克 · 诺斯: 第三次传球时你要做的第三件事是小传球
+&gt;&gt; Mike North: The third thing you're
+going to do as the third pass is in small
+
+2
+00:00:05.009 --> 00:00:10.380
+因为一次性完成这个任务是没有好处的。
+chunks because there's really no benefit
+to doing this in a huge single pass.
+
+3
+00:00:10.380 --> 00:00:15.689
+您将打开严格的打字稿编译器设置。
+You're going to turn on strict
+TypeScript compiler settings.
+
+4
+00:00:15.689 --> 00:00:19.780
+所以严格的空检查，使它成为这样
+So the strict null checks,
+that makes it so
+
+5
+00:00:19.780 --> 00:00:26.275
+这个 null 没有被考虑，对不起，我不想用双重否定。
+that null it's not regarded, sorry I
+don't wanna use a double negative here.
+
+6
+00:00:26.275 --> 00:00:31.859
+将 strict null 检查设置为 false，null
+With strict null checks set to false, null
+
+7
+00:00:31.859 --> 00:00:37.659
+被视为任何类型的有效值。
+is regarded as a valid value in any type.
+
+8
+00:00:37.659 --> 00:00:41.189
+不是任何类型，但是可以有一个值为 null 的数字。
+Not the any type, but you could
+have a number whose value is null.
+
+9
+00:00:42.310 --> 00:00:44.079
+所以 null 适用于任何地方。
+So null fits anywhere.
+
+10
+00:00:45.280 --> 00:00:48.590
+严格的 null 检查，设置为 true，使它成为 true
+Strict null check,
+set to true, makes it so
+
+11
+00:00:48.590 --> 00:00:52.170
+唯一能够保持无效的东西就是 null。
+that the only thing that
+can hold the null is null.
+
+12
+00:00:52.170 --> 00:00:54.920
+从那时起你就开始摇摆不定,
+And that's where you're
+gonna start shaking out,
+
+13
+00:00:54.920 --> 00:00:58.909
+返回 null 的代码分支，现在你必须开始引入
+branches of your code that returned null
+and now you'll have to start introducing
+
+14
+00:00:58.909 --> 00:01:04.400
+这个函数的交集运算符返回字符串或 null。
+the intersection operator with this
+function returns the string or null.
+
+15
+00:01:06.189 --> 00:01:13.010
+严格的真实开启了一系列严格的设置，我不会深入讨论这个问题。
+Strict true turns on a bunch of strictness
+settings, I won't go too deeply into that.
+
+16
+00:01:13.010 --> 00:01:18.730
+严格的函数类型验证参数和
+Strict function types it
+validates arguments and
+
+17
+00:01:18.730 --> 00:01:23.379
+回调类型的返回类型。
+return types of callback types.
+
+18
+00:01:23.379 --> 00:01:23.980
+所以如果你说,
+So if you say,
+
+19
+00:01:23.980 --> 00:01:28.269
+我使用 mouseListener 函数作为参数，strictFunctionTypes 将
+I take a mouseListener function as
+an argument, strictFunctionTypes will
+
+20
+00:01:28.269 --> 00:01:33.020
+更严格的类型匹配来对抗你试图传递给它的任何东西。
+more rigorously type match against
+everything you try to pass to it.
+
+21
+00:01:33.020 --> 00:01:36.361
+和 Bind，Call，Apply，我们已经看过了,
+And Bind, Call, Apply,
+we've already looked at,
+
+22
+00:01:36.361 --> 00:01:40.819
+确保传递给函数 bind、 call 和
+that makes sure that the arguments
+passed to function bind, call, and
+
+23
+00:01:40.819 --> 00:01:44.560
+适当应用和词法范围的所有类型检查。
+apply and the lexical scope
+all type check appropriately.
+
+24
+00:01:46.810 --> 00:01:52.310
+通常，如果没有将最后一个标志设置为 true、 bind、 call 和 apply,
+And normally, without that last flag
+set to true, bind, call, and apply,
+
+25
+00:01:52.310 --> 00:01:57.109
+你基本上失去了所有类型的安全，通过进入这些功能。
+you basically lose all type safety
+through going into those functions.
+
+26
+00:01:58.870 --> 00:02:02.719
+所以这就是你试图摆脱尽可能多的明确 anys，你可以和
+So this is where you're trying to get rid
+of as many explicit anys as you can and
+
+27
+00:02:02.719 --> 00:02:05.659
+用更有意义的类型替换它们。
+replace them with more meaningful types.
+
+28
+00:02:05.659 --> 00:02:10.509
+你要避免选角，这就是你现在的处境
+And you wanna avoid casting,
+which is where you're
+
+29
+00:02:10.509 --> 00:02:16.300
+强迫打字脚本将某种东西视为特定的类型。
+forcing TypeScript to regard
+something as a particular type.
+
+30
+00:02:16.300 --> 00:02:21.639
+这是用 as 关键字完成的，所以你会说，把它看作一个字符串。
+That is done with the as keyword, so
+you'd say, regard this as a string.
+
+31
+00:02:24.060 --> 00:02:26.606
+你在你的应用中引入的东西越多,
+The more of that you
+introduce into your app,
+
+32
+00:02:26.606 --> 00:02:29.162
+你们这种人越有机会撒谎。
+the more your types have
+a chance of lying to.
+
+33
+00:02:33.329 --> 00:02:34.062
+演讲者1: 我的意思是,
+&gt;&gt; Speaker 1: So I mean,
+
+34
+00:02:34.062 --> 00:02:39.699
+提升现有代码库到打字稿的好处是什么？
+what is the benefit of uplifting
+an existing code base to TypeScript?
+
+35
+00:02:39.699 --> 00:02:42.539
+首先使用打字稿也有同样的好处。
+&gt;&gt; Mike North: They are the same benefits
+of using TypeScript in the first place.
+
+36
+00:02:43.780 --> 00:02:47.114
+演讲者1: 你所说的工作量，以及
+&gt;&gt; Speaker 1: The amount of
+work you are talking about, and
+
+37
+00:02:47.114 --> 00:02:50.409
+这样能证明这些好处是正当的吗？
+does that justify those benefits?
+
+38
+00:02:50.409 --> 00:02:54.810
+迈克 · 诺斯: 所以这有点取决于个案的基础。
+&gt;&gt; Mike North: So
+it kinda depends on a case-by-case basis.
+
+39
+00:02:54.810 --> 00:02:55.509
+比如说,
+For example,
+
+40
+00:02:55.509 --> 00:02:59.960
+如果你谈论的是一些非常小的 JavaScript 模块
+if you're talking about some of these
+really small JavaScript modules that do
+
+41
+00:02:59.960 --> 00:03:04.215
+一件事，只有一件事，左垫是一个很好的例子，对不对？
+one thing and one thing only, left pad
+would be a good example of this, right?
+
+42
+00:03:04.215 --> 00:03:08.460
+它在字符串的开头添加了一定数量的空白,
+It's adding a prescribed amount of white
+space to the beginning of the string,
+
+43
+00:03:08.460 --> 00:03:12.469
+我不确定把这种东西转换成
+I'm not sure there's a whole lot of value
+in converting that kind of thing to
+
+44
+00:03:12.469 --> 00:03:13.449
+打字稿。
+TypeScript.
+
+45
+00:03:13.449 --> 00:03:18.500
+但是，如果您想在其他地方对代码使用 TypeScript
+However, if you want to use
+TypeScript elsewhere on code
+
+46
+00:03:18.500 --> 00:03:23.310
+缺乏类型，必须有人提供类型信息。
+that is lacking types, someone has
+to provide that type information.
+
+47
+00:03:23.310 --> 00:03:28.490
+你有两个选择，或者你可以，通过我稍后给你看的东西,
+You have two choices, you either can,
+through something I'll show you later,
+
+48
+00:03:28.490 --> 00:03:33.349
+比如说，把这整个模块当成任何东西，任何东西。
+say, regard this whole module as an any,
+like anything goes.
+
+49
+00:03:33.349 --> 00:03:37.509
+当我从这个模块导入一些东西时，让我做我想做的事情。
+When I import something from this module,
+let me do whatever I want.
+
+50
+00:03:37.509 --> 00:03:43.810
+你可以这样做，但是这样做是有风险的，因为在其他地方这样做也是有风险的。
+You could do that but that's risky for
+the same reason any is a risky elsewhere.
+
+51
+00:03:44.849 --> 00:03:49.599
+另一个选择是你的图书馆的每一个消费者
+The other option is every consumer
+of your library has to kind of
+
+52
+00:03:49.599 --> 00:03:55.060
+填写类型信息，至少是他们希望使用的部分。
+fill in the type information, at least for
+the portion they wish to use.
+
+53
+00:03:55.060 --> 00:03:59.449
+因为编译器正在执行一个整体
+Because the compiler it
+is performing a holistic
+
+54
+00:03:59.449 --> 00:04:04.210
+分析你的应用程序，包括所有的依赖性。
+analysis of your app,
+which includes all of it's dependencies.
+
+55
+00:04:04.210 --> 00:04:06.310
+所以，缺少类型信息
+So, missing type information for
+
+56
+00:04:06.310 --> 00:04:10.439
+依赖关系会导致任何依赖于该代码的应用程序的弱点。
+dependencies that causes weakness in
+any app that depends on that code.

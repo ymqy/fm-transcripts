@@ -1,0 +1,602 @@
+WEBVTT
+
+1
+00:00:00.340 --> 00:00:05.269
+迈克 · 诺斯: 我们马上就可以看出这是一个很大的数字，太冗长了。
+&gt;&gt; Mike North: We can see right away
+that this is a lot, this is verbose.
+
+2
+00:00:05.269 --> 00:00:07.969
+我们必须指定电子邮件和姓名。
+We have to specify email and name.
+
+3
+00:00:07.969 --> 00:00:10.619
+这句话已经出现三次了，对吧？
+Those words are here three times, right?
+
+4
+00:00:10.619 --> 00:00:14.470
+一次定义类型，一次在构造函数签名和
+Once to define the type,
+once in the constructor signature and
+
+5
+00:00:14.470 --> 00:00:18.550
+然后当我们从函数参数传递到实例时。
+then as we pass from function
+arguments onto the instance.
+
+6
+00:00:18.550 --> 00:00:22.500
+因此，TypeScript 为此提供了一个称为参数属性的快捷方式。
+So TypeScript has a shortcut for
+this called Parameter Properties.
+
+7
+00:00:22.500 --> 00:00:23.920
+我们来看看这个。
+And we're gonna look at that.
+
+8
+00:00:23.920 --> 00:00:28.390
+但与此同时，我们必须引入这些访问修饰符关键字。
+But at the same time, we have to
+introduce these access modifier keywords.
+
+9
+00:00:28.390 --> 00:00:32.780
+所以你会看到这是三个选择之一,
+So you'll see these as
+being one of three choices,
+
+10
+00:00:32.780 --> 00:00:35.850
+公共场所，这是你习惯的，对吗？
+public, which is what you're used to,
+right?
+
+11
+00:00:35.850 --> 00:00:40.359
+我们在 JavaScript 中唯一拥有的东西是公共的，并且是带有下划线的公共的,
+The only thing we have in JavaScript is
+public, and public with an underscore,
+
+12
+00:00:40.359 --> 00:00:44.210
+也就是说你用这个很丢脸，但这还是公开的。
+which means shame on you for
+using that, but it's still public.
+
+13
+00:00:44.210 --> 00:00:50.979
+Protected 允许实例和子类的任何实例查看它。
+Protected allows the instance, and
+any instance of a subclass, to see it.
+
+14
+00:00:50.979 --> 00:00:55.579
+在 private 中，意味着只有那个类型可以看到它，只有那个类可以。
+In private, means only that type
+can see it, only that class.
+
+15
+00:00:55.579 --> 00:00:59.770
+即使是子类也不能看到私有方法或私有字段。
+Even a subclass won't be able to see
+a private method or private field.
+
+16
+00:00:59.770 --> 00:01:04.319
+下面是这些参数属性的一个例子。
+So, here is an example of
+these parameter properties.
+
+17
+00:01:04.319 --> 00:01:10.019
+不幸的是，自动格式化让事情变得不那么理想。
+And unfortunately, the auto formatting
+kinda makes things less than ideal.
+
+18
+00:01:10.019 --> 00:01:13.295
+这里和我们之前的例子的区别是,
+So, the difference here
+from our previous example,
+
+19
+00:01:13.295 --> 00:01:16.950
+很明显，有很多东西是不存在的。
+obviously, there are a lot of
+things that are not present.
+
+20
+00:01:16.950 --> 00:01:23.243
+但是通过在构造函数之前添加访问修饰符关键字
+But through adding an access modifier
+keyword before our constructor's
+
+21
+00:01:23.243 --> 00:01:29.245
+我们可以创建与之前相同的设置。
+arguments, we can create the equivalent
+setup to what we had before.
+
+22
+00:01:29.245 --> 00:01:32.257
+事实上，我甚至在这里添加了一些东西
+In fact, I have even added
+a little something here, and
+
+23
+00:01:32.257 --> 00:01:34.832
+这是第二个字段的默认值。
+that is the default value for
+the second field.
+
+24
+00:01:34.832 --> 00:01:39.460
+这意味着我在构造函数中引入一个参数
+So this means I take an argument
+in my constructor and
+
+25
+00:01:39.460 --> 00:01:46.079
+类似于同名字段的参数应该存在于实例中。
+a parameter like a field of the same
+name should exist on the instance.
+
+26
+00:01:46.079 --> 00:01:49.140
+当你在构造函数中收到它的时候,
+And when you receive
+it in the constructor,
+
+27
+00:01:49.140 --> 00:01:51.079
+你应该把它放在实例上。
+you should place it on the instance.
+
+28
+00:01:51.079 --> 00:01:54.250
+我要用同样的例子来说服你们。
+And I'm gonna convince you of this
+by taking this exact same example.
+
+29
+00:01:54.250 --> 00:01:56.299
+我只是要删除界面。
+I'm just gonna remove the interface.
+
+30
+00:01:56.299 --> 00:01:59.034
+我要把它放到打字稿游乐场
+And I'm gonna put it into
+the TypeScript Playground so
+
+31
+00:01:59.034 --> 00:02:01.418
+我们可以看到它编译的 JavaSscript。
+we can see the JavaSscript
+that it compiles to.
+
+32
+00:02:06.346 --> 00:02:08.319
+迈克 · 诺斯: 去掉界面。
+&gt;&gt; Mike North: And
+get rid of the interface.
+
+33
+00:02:09.939 --> 00:02:14.056
+所以，在右边，我知道我们在这里被切断，但是
+So, on the right side,
+I know we're getting cut off here but
+
+34
+00:02:14.056 --> 00:02:19.060
+我们可以看到，如果电子邮件是，这是未定义的，void 0是未定义的,
+we can see that if the email is,
+this is undefined, void 0 is undefined,
+
+35
+00:02:19.060 --> 00:02:23.612
+如果电子邮件没有定义，用默认值初始化它。
+if the email is undefined,
+initialize it with the default value.
+
+36
+00:02:23.612 --> 00:02:26.832
+然后我们将接收名称作为函数参数,
+And then we will receive
+name as a function argument,
+
+37
+00:02:26.832 --> 00:02:29.840
+我们把它放在实例上，电子邮件也一样。
+we put it on the instance,
+same with email.
+
+38
+00:02:29.840 --> 00:02:34.770
+这是实际上在构造函数主体中的注释。
+And then this is the comment that was
+actually in the body of our constructor.
+
+39
+00:02:34.770 --> 00:02:38.439
+所以你可以在构造函数中看到任何你自定义的东西,
+So you can see anything in your
+constructor that you do custom,
+
+40
+00:02:38.439 --> 00:02:44.560
+在参数到字段的映射完成之后会发生。
+would happen after all of this mapping
+from parameters to fields has taken place.
+
+41
+00:02:45.590 --> 00:02:50.599
+这是一个非常好的方便，因为它允许我们这样做
+This is a really nice convenience
+because it allows us to do this common
+
+42
+00:02:50.599 --> 00:02:55.949
+我们想把一些东西传递给构造函数,
+thing where we want to pass
+some stuff into a constructor,
+
+43
+00:02:55.949 --> 00:02:59.199
+收集田地，这样就不那么冗长了。
+get the fields,
+it makes it a lot less verbose.
+
+44
+00:03:00.409 --> 00:03:05.830
+请注意，如果我们要使这个受保护，这意味着外部
+Note that if we were to make this
+protected, which means the outside
+
+45
+00:03:05.830 --> 00:03:10.580
+在与 ParamPropContract 实例交互时,
+world when interacting with
+an instance of ParamPropContract,
+
+46
+00:03:10.580 --> 00:03:14.050
+它看不到这片区域。
+it wouldn't be able to see this field.
+
+47
+00:03:15.400 --> 00:03:18.062
+所以，我们仍然可以把它作为一个论点，但是
+So, we still can receive
+it as an argument, but
+
+48
+00:03:18.062 --> 00:03:21.336
+你不能从外面进入。
+you're not going to be able to
+access it from the outside.
+
+49
+00:03:27.474 --> 00:03:30.013
+迈克 · 诺斯: 只是路过这里的一些无意义的领域,
+&gt;&gt; Mike North: Just passing
+in some nonsense fields here,
+
+50
+00:03:30.013 --> 00:03:31.990
+毫无意义的价值观。
+nonsense values rather.
+
+51
+00:03:31.990 --> 00:03:36.906
+在这下面你可以看到我们只有名字，而以前,
+Down here you can see we only have
+access to name whereas before,
+
+52
+00:03:36.906 --> 00:03:38.739
+我们两个都有权限。
+we have access to both.
+
+53
+00:03:38.739 --> 00:03:42.733
+这就是公开和保护的区别。
+So that's the difference in
+making it public or protected.
+
+54
+00:03:42.733 --> 00:03:47.126
+你们会注意到我这么做的另一个后果
+And you'll note that another
+consequence of me making it
+
+55
+00:03:47.126 --> 00:03:52.067
+我在这里得到一个错误说类错误
+protected was I get an error up
+here saying the class incorrectly
+
+56
+00:03:52.067 --> 00:03:55.030
+实现的接口有电子邮件。
+implements the interface HasEmail.
+
+57
+00:03:55.030 --> 00:03:59.780
+有人能猜测为什么会发生这种错误吗？
+Can anyone make a guess as to
+why this error is happening?
+
+58
+00:03:59.780 --> 00:04:04.116
+显然，字段是存在的，但为什么打字稿会反对呢？
+Clearly, the field is there, but
+why might TypeScript be objecting?
+
+59
+00:04:07.115 --> 00:04:08.379
+发件人1: 电子邮件不可见。
+&gt;&gt; Speaker 1: Email's not visible.
+
+60
+00:04:08.379 --> 00:04:09.840
+迈克 · 诺斯: 电子邮件是看不见的。
+&gt;&gt; Mike North: Email's not visible.
+
+61
+00:04:09.840 --> 00:04:15.569
+你希望这个类的实例是 HasEmail,
+You expect the instance of
+this class to be a HasEmail,
+
+62
+00:04:15.569 --> 00:04:19.790
+意思是你可以访问名字和电子邮件。
+meaning you can access name and
+you can access email.
+
+63
+00:04:19.790 --> 00:04:22.410
+这就是 HasEmail 的含义。
+That's what it means to be a HasEmail.
+
+64
+00:04:22.410 --> 00:04:27.348
+所以你并没有真正遵循一个界面，除非那些东西允许你这么做
+So you're not really conforming to an
+interface unless the things that allow you
+
+65
+00:04:27.348 --> 00:04:30.843
+是公开的，从外面就可以看到。
+to conform to it are public and
+visible from the outside.
+
+66
+00:04:34.286 --> 00:04:36.086
+迈克 · 诺斯: 现在这个错误消失了。
+&gt;&gt; Mike North: And
+now the error goes away.
+
+67
+00:04:38.449 --> 00:04:41.420
+Mike North: 所以 class 字段可以有初始化器。
+&gt;&gt; Mike North: So
+class fields can have initializers.
+
+68
+00:04:41.420 --> 00:04:44.399
+如果你想要一个 ParamProp 初始化器,
+If you want a ParamProp initializer,
+
+69
+00:04:44.399 --> 00:04:48.209
+和函数参数一样,
+just do the same thing you would do for
+function arguments,
+
+70
+00:04:48.209 --> 00:04:51.090
+因为它是一个函数参数，就是它所在的位置，对吗？
+cuz it is a function argument,
+that's kind of where it lives, right?
+
+71
+00:04:51.090 --> 00:04:53.590
+这就是 email 字段的默认值。
+So that's the default value for
+the email field.
+
+72
+00:04:55.490 --> 00:04:59.850
+但是如果你有一些属性，这些属性不是你可以用作参数的东西
+But if you have properties that are not
+things that you take in as arguments to
+
+73
+00:04:59.850 --> 00:05:05.579
+一个构造函数，在这个例子中，年龄，你可以在顶部看到,
+a constructor, in this case, age,
+which you can see up at the top,
+
+74
+00:05:05.579 --> 00:05:09.519
+你可以用 JavaScript 做同样的事情。
+you can just do the same thing
+you would do in JavaScript.
+
+75
+00:05:09.519 --> 00:05:11.889
+这实际上是一个默认值。
+This effectively is a default value.
+
+76
+00:05:14.079 --> 00:05:18.829
+如果它不像这里的构造函数那样以某种方式设置。
+If it is not in some way set like
+within the constructor here.
+
+77
+00:05:18.829 --> 00:05:26.509
+所以如果我在这里做像35岁，现在这样永远不会发挥作用。
+So if in here I were to do like age = 35,
+now like this will never come into play.
+
+78
+00:05:26.509 --> 00:05:29.689
+只有当它还没有被初始化的时候，它才会被初始化
+It is only initialized with
+that if it has not yet
+
+79
+00:05:29.689 --> 00:05:31.660
+已经被初始化了。
+been initialized up until that point.
+
+80
+00:05:31.660 --> 00:05:33.084
+我们在哪里可以看到这方面的证据？
+Where do we see evidence of that?
+
+81
+00:05:33.084 --> 00:05:35.899
+基本上就会变成这样。
+It's basically gonna turn
+into this right here.
+
+82
+00:05:35.899 --> 00:05:38.303
+如果它没有定义，初始化它。
+If it's undefined, initialize it.
+
+83
+00:05:40.283 --> 00:05:41.343
+迈克 · 诺斯: 你有问题吗？
+&gt;&gt; Mike North: Did you have a question?
+
+84
+00:05:41.343 --> 00:05:45.300
+演讲者2: 是的，如果你给它一个默认值，它能推断出类型吗？
+&gt;&gt; Speaker 2: Yeah, does it infer
+the type, if you give it a default?
+
+85
+00:05:45.300 --> 00:05:47.165
+迈克 · 诺斯: 是的，因为它是一个,
+&gt;&gt; Mike North: Yes, because it's a,
+
+86
+00:05:47.165 --> 00:05:52.439
+和变量一样的规则，你给它初始值,
+kinda same rules as a variable,
+you're giving it its initial value,
+
+87
+00:05:52.439 --> 00:05:57.670
+所以它会尽最大努力合理地推测。
+and so it will do the best it can to
+make a reasonable guess of the type.
+
+88
+00:05:57.670 --> 00:06:02.399
+现在你需要注意的是，这是一个字符串还是
+Now the one thing you'd want to be careful
+of is if this could be a string or
+
+89
+00:06:02.399 --> 00:06:06.610
+可以是一个数字，你把它初始化为一个数字，你需要具体
+could be a number and you initialize it to
+a number, you're going to have to specific
+
+90
+00:06:06.610 --> 00:06:12.589
+你会故意扩大字体，包括字符串的可能性。
+that you'll deliberately widen the type
+to include the possibility of a string.
+
+91
+00:06:12.589 --> 00:06:17.019
+因此，它将做出它通常的猜测，这是正确的。
+So it will make its usual guess and
+rightly so.
+
+92
+00:06:17.019 --> 00:06:19.939
+我可以把它拿走，它仍然是第号。
+I can take that away, and
+it'll still be number.
+
+93
+00:06:22.216 --> 00:06:25.514
+Mike North: 还有另外一个适用于访问修饰符的东西
+&gt;&gt; Mike North: There's one other thing
+that kind of fits into access modifier
+
+94
+00:06:25.514 --> 00:06:29.949
+关键字，虽然它不是真的在可见性方面的访问。
+keywords, although it's not really
+about access in terms of visibility.
+
+95
+00:06:29.949 --> 00:06:33.540
+你也可以做只读。
+You could also do readonly.
+
+96
+00:06:33.540 --> 00:06:37.730
+从类型检查的角度来看，这会让你大喊大叫
+And that, from a type checking
+perspective, will yell at you for
+
+97
+00:06:37.730 --> 00:06:43.110
+尝试网站，其中您试图写到这个值。
+attempted sites where you
+are trying to write to this value.
+
+98
+00:06:43.110 --> 00:06:44.449
+别自欺欺人了,
+Don't fool yourself, through,
+
+99
+00:06:44.449 --> 00:06:47.590
+因为这个库可能会有 JavaScript 的使用者。
+because there may be JavaScript
+consumers of this library.
+
+100
+00:06:47.590 --> 00:06:52.259
+这根本不能阻止对这个值的权利。
+And this does nothing at all in terms of
+actually preventing rights to this value.
+
+101
+00:06:53.259 --> 00:06:58.009
+它就像一个为使用字体信息的人租用的东西。
+It is just like a renting thing for
+people using type information.
+
+102
+00:06:58.009 --> 00:07:00.838
+所以，我会偶尔使用这个但是
+So, I'll use this once in while but
+
+103
+00:07:00.838 --> 00:07:05.490
+请注意，不是每个人都使用类型信息。
+just be advised that not
+everyone uses type information.
+
+104
+00:07:05.490 --> 00:07:08.827
+这只是一张支票，对吗？
+And this is just making a check, right?

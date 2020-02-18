@@ -1,0 +1,451 @@
+WEBVTT
+
+1
+00:00:00.120 --> 00:00:04.900
+Mike North: 接下来我们要看的是函数和函数类型。
+&gt;&gt; Mike North: The next thing we are gonna
+look at is functions, and function types.
+
+2
+00:00:04.900 --> 00:00:06.796
+看看备忘录,
+So look in the notes folder,
+
+3
+00:00:06.796 --> 00:00:11.070
+这个文件以数字2开头，函数基础
+this is the file that starts with
+the number 2, function basics
+
+4
+00:00:26.178 --> 00:00:28.638
+迈克 · 诺斯: 我在这里有一个函数
+&gt;&gt; Mike North: So I have a function here
+
+5
+00:00:28.638 --> 00:00:34.299
+我和她有一个争论。
+called sendEmail and
+I have an argument her called to.
+
+6
+00:00:35.560 --> 00:00:38.530
+我在这里使用的是 HasEmail。
+And what I'm using here is HasEmail.
+
+7
+00:00:38.530 --> 00:00:43.299
+如果我这样做，至少在 Mac，Cmd，点击,
+And if I do,
+at least on a Mac, Cmd, click,
+
+8
+00:00:43.299 --> 00:00:48.939
+这样我就可以从之前的笔记中找到这个界面。
+that'll take me to this interface from the
+previous notes that we were going through.
+
+9
+00:00:48.939 --> 00:00:52.659
+我从前面的模块导出了这个接口，并且
+I exported this interface
+from the previous module, and
+
+10
+00:00:53.810 --> 00:00:58.390
+你可以直接跳到这种类型的定义。
+you can jump to
+the definition of this type.
+
+11
+00:00:58.390 --> 00:01:04.939
+所以我会在我们进行的过程中重复使用一些东西，但是这个指出
+So I'm gonna be reusing things as we
+go along, but this points out that
+
+12
+00:01:04.939 --> 00:01:08.620
+我们可以导入和导出接口和类型，就像我们可以处理值一样。
+we can import and export interfaces and
+types, just like we can do with values.
+
+13
+00:01:09.780 --> 00:01:13.215
+这就是我们如何表示返回类型，它实际上是相同的
+This is how we indicate a return type,
+and it's actually the same
+
+14
+00:01:13.215 --> 00:01:17.292
+我们已经使用的变量约定，它是冒号后面跟着类型。
+convention we've been using for
+variables, It's colon followed by type.
+
+15
+00:01:17.292 --> 00:01:21.665
+这是一个有两个字符串的对象，接收者和主体，以及
+And this is an object that has two
+strings, recipient and body, and
+
+16
+00:01:21.665 --> 00:01:27.620
+我们只是在锻炼身体，然后发送垃圾邮件。
+here we're just building up that body
+to send, apparently, some spam email.
+
+17
+00:01:27.620 --> 00:01:35.629
+所以这是我倾向于使用类型注释的地方。
+So this is a place where I tend
+to always use type annotations.
+
+18
+00:01:36.700 --> 00:01:41.469
+这是因为我想找到这个函数的契约
+And this is because I wanted to find
+the contract that this function has
+
+19
+00:01:41.469 --> 00:01:43.710
+我程序的其他部分。
+with other parts of my program.
+
+20
+00:01:45.049 --> 00:01:49.670
+类型脚本可以很好地推断返回类型。
+Type script can infer
+return types pretty well.
+
+21
+00:01:49.670 --> 00:01:52.189
+但是很容易犯错误
+But it's very easy to slip up and
+
+22
+00:01:52.189 --> 00:01:56.460
+无意中改变了一些东西，我将在几分钟后演示。
+unintentionally change things, which
+I'll demonstrate in a couple of minutes.
+
+23
+00:01:56.460 --> 00:02:00.540
+这基本上就是箭头函数的味道,
+This is the arrow-function flavor of,
+basically,
+
+24
+00:02:00.540 --> 00:02:04.760
+同样的东西，唯一的区别就是你有胖箭头。
+the same thing, and the only
+difference is you have the fat arrows.
+
+25
+00:02:04.760 --> 00:02:10.979
+这就是参数列表，冒号，类型，胖箭头的实现，对吗？
+So it's the parameter list, colon,
+type, fat arrow implementation, right?
+
+26
+00:02:10.979 --> 00:02:17.050
+参数列表、冒号、类型，然后是胖箭头，您将逐渐适应它。
+Parameter list, colon, type, and then the
+fat arrow, and you'll get used to that.
+
+27
+00:02:18.829 --> 00:02:21.800
+因此，可以推断返回类型。
+So, return types can be inferred.
+
+28
+00:02:21.800 --> 00:02:25.305
+这个函数需要一个联系人,
+This is a function that
+will take a contact and,
+
+29
+00:02:25.305 --> 00:02:28.740
+这个函数所需要的条件,
+un terms of what this function needs,
+
+30
+00:02:28.740 --> 00:02:33.810
+它可能不仅仅只对物业名称进行操作。
+it may typically operate on things that
+have way more than just the property name.
+
+31
+00:02:33.810 --> 00:02:35.610
+但我还是保守一点,
+But I'm being conservative,
+
+32
+00:02:35.610 --> 00:02:40.610
+就允许对任何具有属性名的对象进行操作而言。
+in terms of allowing this operate on
+any object that has a property name.
+
+33
+00:02:40.610 --> 00:02:46.170
+当我输入函数参数时，我有点想说出最小值
+When I'm typing function arguments,
+I kinda wanna state the minimum thing
+
+34
+00:02:46.170 --> 00:02:51.280
+我需要，为了避免功能过度约束，对不对？
+I need, in order to avoid
+over-constraining the function, right?
+
+35
+00:02:51.280 --> 00:02:56.069
+这可能在其他地方有用，我不想人为地强加于人
+This might be useful elsewhere and
+I don't want to artificially impose
+
+36
+00:02:56.069 --> 00:02:59.819
+关于这些论点必须是什么的附加要求。
+additional requirements on
+what these arguments must be.
+
+37
+00:02:59.819 --> 00:03:01.479
+我希望它尽可能的灵活。
+I want it to be as flexible as possible.
+
+38
+00:03:02.629 --> 00:03:04.759
+现在的情况是,
+And what's happening here is,
+
+39
+00:03:04.759 --> 00:03:09.349
+我们分割这个字符串，接触，名字，我们分割它的重量空间。
+we split this string, contact.name,
+we split it by weight space.
+
+40
+00:03:09.349 --> 00:03:12.189
+我们扔，如果有少于两个部分。
+We throw,
+if there are less than two parts.
+
+41
+00:03:12.189 --> 00:03:16.240
+然后我们返回一个对象，其中第一部分是名字,
+And then we return an object where
+the first part is the first name,
+
+42
+00:03:16.240 --> 00:03:18.590
+最后一部分是姓。
+the last part is the last name.
+
+43
+00:03:18.590 --> 00:03:23.550
+如果我们只有两个部分，中间的名字最终是未定义的。
+The middle name, if we only have
+two parts, ends up being undefined.
+
+44
+00:03:23.550 --> 00:03:26.340
+或者我们把中间的所有东西都放在一起。
+Or we join everything
+in the middle together.
+
+45
+00:03:26.340 --> 00:03:30.729
+所以，如果我们看一下返回类型，就是这个。
+So, if we look at the return type here,
+there it is.
+
+46
+00:03:30.729 --> 00:03:35.569
+哎呀，我们可以看到它是正确的推断，对不对？
+Oops, and we can see that it
+is correctly inferred, right?
+
+47
+00:03:35.569 --> 00:03:40.379
+所以编译器会遍历这个程序的所有可能的路径
+So the compiler's going through all
+possible paths of this program, and
+
+48
+00:03:40.379 --> 00:03:45.069
+它正在研究回到这里的可能性。
+it's figuring out what all
+is possible to return here.
+
+49
+00:03:45.069 --> 00:03:49.812
+如果我们有这个函数,
+If, instead of, so like,
+let's say we have this function,
+
+50
+00:03:49.812 --> 00:03:54.191
+在某种程度上，我们需要处理麦当娜的案子
+and, at some point,
+we need to handle the Madonna case or
+
+51
+00:03:54.191 --> 00:03:59.509
+普林斯案，只是一个单音节词，没有姓氏。
+the Prince case, where it's just
+a mononym, there is no last name.
+
+52
+00:04:00.810 --> 00:04:07.698
+所以我们可以到这里来说如果部分长度为1,
+So we would then go up here and
+say If parts.length = 1,
+
+53
+00:04:07.698 --> 00:04:12.864
+我们可以直接回去,
+instead of throwing, we can just return,
+
+54
+00:04:12.864 --> 00:04:17.899
+oops，return { name: parts [0]}.
+oops, return { name: parts [0] }.
+
+55
+00:04:20.100 --> 00:04:25.870
+所以现在我们在这里增加了一个可能性,
+So now, we've added an additional
+possibility here where,
+
+56
+00:04:25.870 --> 00:04:31.100
+现在，我们返回一个对象，打字稿试图在这里加强一些一致性,
+now, we return an object, and typescripts
+try to impose some consistency here,
+
+57
+00:04:31.100 --> 00:04:35.409
+但是我们已经返回了一个可能有一个未定义的姓氏的东西。
+but we've returned something that
+potentially has an undefined last name.
+
+58
+00:04:36.939 --> 00:04:40.949
+事实上，所有这些值最终都是未定义的。
+In fact, all of these values
+will end up being undefined.
+
+59
+00:04:42.389 --> 00:04:47.019
+所以，我可能并不打算这样做。
+So, I may not have intended
+this to work in such a way.
+
+60
+00:04:47.019 --> 00:04:50.060
+这可能会影响我代码的其他部分。
+And this may affect
+other parts of my code.
+
+61
+00:04:50.060 --> 00:04:53.060
+所以，我想特别声明一个返回类型,
+So, I like to specifically
+state a return type,
+
+62
+00:04:53.060 --> 00:04:57.029
+因为它让我在这个职能的所有分支中保持诚实,
+because it keeps me honest within
+all branches of this function,
+
+63
+00:04:57.029 --> 00:05:00.019
+确保我的退货是有意为之。
+to make sure that what I'm
+returning is intentional.
+
+64
+00:05:00.019 --> 00:05:03.410
+你知道，有时候你会提前终止妊娠，对吧？
+You know,
+sometimes you early terminate, right?
+
+65
+00:05:03.410 --> 00:05:09.430
+如果确定刚才调用的函数，那么它现在就不是 op 了。
+If you determine that this function
+that was just called, it's no op now.
+
+66
+00:05:09.430 --> 00:05:12.379
+提前终止，这是什么意思,
+And early terminating, what does that,
+
+67
+00:05:12.379 --> 00:05:17.079
+如果我只是说返回分号，那么我真正返回的是什么呢？
+if I just say return semicolon,
+what am I really returning there?
+
+68
+00:05:19.379 --> 00:05:25.040
+如果我调用一个函数，它只说返回，分号，我得到什么值？
+If I invoke a function and it just says
+return, semicolon, what value do I get?
+
+69
+00:05:25.040 --> 00:05:25.605
+未定义的。
+Undefined.
+
+70
+00:05:25.605 --> 00:05:30.812
+所以，这会改变这个函数，它会改变这个类型
+So, that will change what this function,
+it will change the type this
+
+71
+00:05:30.812 --> 00:05:36.382
+函数返回，这会对你的代码产生连锁反应。
+function returns, and that sort of has
+a ripple effect through your code.
+
+72
+00:05:36.382 --> 00:05:41.564
+我宁愿保持这种刻意创造的界限,
+And I would rather keep that
+boundary very deliberately created,
+
+73
+00:05:41.564 --> 00:05:47.870
+同时对功能的内部和外部进行操作，使其正常工作。
+and operate on both inside and the outside
+of the function, to make things work.
+
+74
+00:05:51.893 --> 00:05:54.759
+迈克诺斯: 所以休息参数工作正如你所期望的,
+&gt;&gt; Mike North: So rest params
+work just like you'd just expect,
+
+75
+00:05:54.759 --> 00:05:57.409
+这里没什么有趣的。
+nothing really interesting here.
+
+76
+00:05:57.409 --> 00:06:01.709
+你唯一需要注意的就是休息参数的类型
+The only thing you gotta be aware of
+is the type of a rest param has to be
+
+77
+00:06:01.709 --> 00:06:03.389
+阵列状的。
+array-like.
+
+78
+00:06:03.389 --> 00:06:05.399
+因为它将作为一个数组消耗。
+Cuz it's gonna be consumed as an array.

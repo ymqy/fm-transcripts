@@ -1,0 +1,963 @@
+WEBVTT
+
+1
+00:00:00.180 --> 00:00:03.549
+Mike North: 让我们先重命名这个文件。
+&gt;&gt; Mike North: Let's start
+by renaming this file.
+
+2
+00:00:05.488 --> 00:00:10.429
+迈克 · 诺斯: 我要把它重新命名为 ts，我要去我的
+&gt;&gt; Mike North: I'm renaming it to ts,
+I'm going to go to my
+
+3
+00:00:10.429 --> 00:00:15.505
+添加允许隐式的，对不起,
+tsconfig, and add allow implicit, sorry,
+
+4
+00:00:15.505 --> 00:00:21.100
+不包含任何，设置为 false。
+noImplicitAny, setting this to false.
+
+5
+00:00:21.100 --> 00:00:26.890
+所以这个选项不允许使用 ImplicitAnys，我希望允许它们。
+So this option disallows ImplicitAnys and
+I wish to allow them.
+
+6
+00:00:26.890 --> 00:00:27.989
+这是一种双重否定。
+It's kind of a double negative.
+
+7
+00:00:29.210 --> 00:00:34.469
+所以我要保存这个然后回到我们的文件。
+So I'll save that and go back to our file.
+
+8
+00:00:34.469 --> 00:00:40.229
+实际上我们现在做得还不错。
+Now we actually are doing kinda okay here.
+
+9
+00:00:40.229 --> 00:00:44.890
+显然有很多暗示,
+There are obviously a lot of ImplicitAnys,
+
+10
+00:00:44.890 --> 00:00:49.259
+但我们在这里没有遇到太多问题。
+but we haven't run into
+too many problems here.
+
+11
+00:00:49.259 --> 00:00:52.039
+让我们看看，联系人，这是一个数组的 anys。
+Let's see, contacts,
+it's an array of anys.
+
+12
+00:00:53.909 --> 00:00:58.280
+这是一条关于 anys 阵列和 nevers 阵列的线索,
+This is a clue around that array
+of anys versus array of nevers,
+
+13
+00:00:58.280 --> 00:01:04.700
+我们现在处于松散状态，所以看起来我们真的完成了。
+we're in a loose mode now, so
+it looks like we're actually done.
+
+14
+00:01:04.700 --> 00:01:05.780
+让我们再做一次测试。
+Let's run our test again.
+
+15
+00:01:08.683 --> 00:01:11.500
+迈克 · 诺斯: 很好，他们已经跑完了。
+&gt;&gt; Mike North: Good, so
+they've finished running.
+
+16
+00:01:11.500 --> 00:01:16.140
+好的，这是我们做出承诺的地方，打开一个投票请求，然后
+All right, and this is where we make
+a commit, open up a poll request, and
+
+17
+00:01:16.140 --> 00:01:20.519
+把这看作是我们进入打字稿世界的立足点。
+regard this as getting our foothold
+into the Typescript world.
+
+18
+00:01:22.219 --> 00:01:22.882
+还记得第二步吗？
+Anyone who remember step two?
+
+19
+00:01:26.207 --> 00:01:30.109
+迈克 · 诺斯: 禁止暗示，所以我们的暗示要明确。
+&gt;&gt; Mike North: Forbid ImplicitAnys,
+so making our anys explicit.
+
+20
+00:01:31.719 --> 00:01:33.129
+在这里我们还有很多工作要做。
+In this we're gonna have
+quite a bit of work.
+
+21
+00:01:37.174 --> 00:01:42.128
+麦克 · 诺斯: 现在我们可以看到打字稿正在告诉我们那里的情况
+&gt;&gt; Mike North: Now we can see in our
+gutter here TypeScript's telling us there
+
+22
+00:01:42.128 --> 00:01:45.969
+有很多地方我们需要解决问题。
+are many places where we
+need to address things.
+
+23
+00:01:48.479 --> 00:01:55.789
+所以我想从 formatDate 开始，所以我们必须找到 date 的类型。
+So I'd like to start with formatDate,
+so we have to find a type for date.
+
+24
+00:01:55.789 --> 00:01:57.569
+有人知道这可能是什么吗？
+Does anyone have an idea
+of what this might be?
+
+25
+00:01:58.920 --> 00:01:59.719
+讲者二: 日期。
+&gt;&gt; Speaker 2: Date.
+
+26
+00:01:59.719 --> 00:02:01.700
+迈克 · 诺斯: 约会，这是个线索，对吧？
+&gt;&gt; Mike North: Date,
+this is a clue, right?
+
+27
+00:02:01.700 --> 00:02:06.420
+迈克 · 诺斯: 好吧，这很令人高兴。
+ToISOString,
+&gt;&gt; Mike North: Okay, so that's happy.
+
+28
+00:02:06.420 --> 00:02:07.319
+那么 getFullName 呢？
+What about getFullName?
+
+29
+00:02:07.319 --> 00:02:14.628
+迈克 · 诺斯: 什么？
+&gt;&gt; [INAUDIBLE]
+&gt;&gt; Mike North: Pardon?
+
+30
+00:02:14.628 --> 00:02:16.801
+讲者二: 弦乐。
+&gt;&gt; Speaker 2: String.
+
+31
+00:02:16.801 --> 00:02:19.129
+迈克 · 诺斯: 我们试试吧。
+&gt;&gt; Mike North: Let's try it.
+
+32
+00:02:19.129 --> 00:02:22.766
+所以我得到了错误，属性的名字,
+So I'm getting errors that
+Property's firstName,
+
+33
+00:02:22.766 --> 00:02:25.926
+中间名和 lastName 不在字符串上。
+middleName, and
+lastName are not on string.
+
+34
+00:02:25.926 --> 00:02:29.100
+必须是一个对象，对吧，上面有属性。
+Got to be an object, right,
+with properties on it.
+
+35
+00:02:31.430 --> 00:02:36.812
+迈克 · 诺斯: 所以我想应该是名字，中间名,
+&gt;&gt; Mike North: So I think it's
+gonna be firstName, middleName,
+
+36
+00:02:41.520 --> 00:02:44.170
+迈克 · 诺斯: 拯救。
+&gt;&gt; Mike North: Save.
+
+37
+00:02:44.170 --> 00:02:47.240
+好的，现在看起来很开心。
+Okay, so now this looks to be happy.
+
+38
+00:02:47.240 --> 00:02:51.689
+所以这就是我们过滤的一个字符串数组
+So this ends up being kind of an array
+of strings that we've filter for
+
+39
+00:02:51.689 --> 00:02:52.530
+丢了什么东西。
+anything missing.
+
+40
+00:02:55.829 --> 00:03:00.526
+这可以是所有可选的，这个过滤给我提示
+This could be all optional,
+this filtering gives me clue that
+
+41
+00:03:00.526 --> 00:03:05.421
+有些东西 falsy 试图消除。
+there's something falsy there
+that were trying to eliminate.
+
+42
+00:03:05.421 --> 00:03:10.210
+如果它开始骚扰我们，我们会回来的。
+We'll come back if it
+starts to serve to bug us.
+
+43
+00:03:11.330 --> 00:03:14.319
+好吧这个看起来有点粗糙,
+All right,
+now this one looks a little gnarly,
+
+44
+00:03:14.319 --> 00:03:18.409
+所以我会选择等到最后。
+so I actually would choose to
+kind of wait until the end.
+
+45
+00:03:19.550 --> 00:03:22.639
+我们在这里遇到的问题是如果我们看看接触
+The problem we're running into
+here if we look at contact
+
+46
+00:03:22.639 --> 00:03:26.319
+我们可以从中获取各种信息。
+we're accessing all sorts
+of stuff off of it.
+
+47
+00:03:26.319 --> 00:03:32.229
+所以我们使用了大量的结构，使用了大量的结构。
+So this is using a fair amount of whatever
+structure, this using a lot of it.
+
+48
+00:03:35.030 --> 00:03:39.832
+这是我们的日期，格式日期，我们要传入的日期,
+And there's our date,
+formatDate we're passing in,
+
+49
+00:03:39.832 --> 00:03:44.430
+但如果只是这样的话，我们应该往深处走
+but we should probably be
+passing in deep if that's it
+
+50
+00:03:44.430 --> 00:03:48.639
+应该没问题，日期定义了某个地方。
+should still be fine,dates
+define somewhere.
+
+51
+00:03:48.639 --> 00:03:52.147
+不，是从上面传来的，我们没事。
+No, it's coming from up here, we're good.
+
+52
+00:03:52.147 --> 00:03:57.270
+好吧，让我们看看地址簿，联系人。
+All right, let's look at AddressBook,
+so contacts.
+
+53
+00:03:57.270 --> 00:04:03.039
+所以很明显，这里的数组需要输入相同的内容，对吗？
+So obviously, this needs to be type
+the same as the array up here, right?
+
+54
+00:04:03.039 --> 00:04:08.139
+所有这些方法就像是一种便利，让我们可以操作底层数组。
+All this method is like a convenience that
+lets us operate on the underlying array.
+
+55
+00:04:09.849 --> 00:04:15.819
+这里我们过滤了 c，所以 c 有 firstName 和 lastName。
+Here we're filtering through and there's
+c, so c has firstName and lastName.
+
+56
+00:04:15.819 --> 00:04:20.098
+这看起来很像我们使用的数据结构
+So this looks a lot like the data
+structure we were working with in
+
+57
+00:04:20.098 --> 00:04:22.643
+下面的函数，名称部分。
+the function below, the name parts.
+
+58
+00:04:22.643 --> 00:04:28.000
+这就是我要说的，看起来我们在好几个地方都用到了。
+This is a point where I'd say, it looks
+like we're using this in several places.
+
+59
+00:04:28.000 --> 00:04:31.250
+我可能想为此创建一个接口。
+I probably want to create an interface for
+this.
+
+60
+00:04:31.250 --> 00:04:33.529
+所以我会继续这么做。
+So I will go ahead and do that.
+
+61
+00:04:35.040 --> 00:04:40.973
+就是这样，我们就叫它“人” ，在顶部,
+There it is, so we'll just call it Person,
+and up at the top,
+
+62
+00:04:46.678 --> 00:04:49.632
+迈克 · 诺斯: 所以我们可以这么说
+&gt;&gt; Mike North: And so we would say that
+
+63
+00:04:49.632 --> 00:04:55.860
+联系人可能应该是一组人。
+contacts should probably
+in array of Persons.
+
+64
+00:04:55.860 --> 00:04:58.180
+而这只需要一个人。
+And this will take in a single person.
+
+65
+00:05:01.589 --> 00:05:06.600
+有一个属性，它是 firstName 和 lastName。
+&gt;&gt; Mike North: Filter has a property
+on it, it's firstName and lastName.
+
+66
+00:05:06.600 --> 00:05:13.860
+所以，我还没有确定这是必然的，它可能是一个人。
+So again, I haven't identified that this
+is necessarily, it could be a Person.
+
+67
+00:05:13.860 --> 00:05:16.500
+我的意思是，它是在检查它们是否没有定义。
+I mean,
+it's checking to see if they're undefined.
+
+68
+00:05:16.500 --> 00:05:20.040
+到目前为止，我们还没有找到不合适的理由。
+It fits for now, we haven't found
+a reason for it to not fit.
+
+69
+00:05:20.040 --> 00:05:22.922
+我想在这里记下我可能会回来,
+I'd wanna make a note here that
+I should probably come back,
+
+70
+00:05:22.922 --> 00:05:25.180
+我可能太拘束了。
+I may be over-constraining this.
+
+71
+00:05:25.180 --> 00:05:30.139
+如果它只是一个人的某些属性，现在我正在思考它
+If it's just some properties of a Person,
+and now that I'm thinking about it
+
+72
+00:05:30.139 --> 00:05:34.654
+很可能是，你不会想要它是一个完整的东西。
+it probably is, you wouldn't want
+to require that it be a full thing.
+
+73
+00:05:38.810 --> 00:05:44.215
+迈克 · 诺斯: 这些未定义的检查让我想要使 firstName 和
+&gt;&gt; Mike North: Those undefined checks
+make me want to make firstName and
+
+74
+00:05:44.215 --> 00:05:46.250
+姓氏可选。
+lastName optional.
+
+75
+00:05:49.250 --> 00:05:51.659
+迈克 · 诺斯: 好的，这段代码很快乐。
+&gt;&gt; Mike North: Okay, so
+this piece of code is happy.
+
+76
+00:05:53.009 --> 00:05:55.769
+事实上，我们的整个通讯录看起来都很开心。
+Actually, our whole
+AddressBook seems to be happy.
+
+77
+00:05:55.769 --> 00:05:57.870
+现在我们进入了一个棘手的领域。
+Now we're in the gnarly area.
+
+78
+00:05:59.779 --> 00:06:03.689
+为了方便起见不用到处滚动,
+And just for convenience and being
+able to not scroll all over the place,
+
+79
+00:06:03.689 --> 00:06:07.600
+我想把这个移下去，这样就近了。
+I wanna move this down so it's close by.
+
+80
+00:06:07.600 --> 00:06:10.000
+好的我们有个问候语,
+All right, we have a salutation,
+
+81
+00:06:10.000 --> 00:06:13.149
+向空字符串后退的称呼。
+salutation falling back
+to an empty string.
+
+82
+00:06:13.149 --> 00:06:16.629
+这是一个线索，一个字符串可能在这里工作。
+That's a clue that a string
+would probably work here.
+
+83
+00:06:20.269 --> 00:06:24.197
+迈克 · 诺斯: 事实上，我需要一个后备计划，这说明有可能
+&gt;&gt; Mike North: And the fact that I need
+a fallback at all suggests it could be
+
+84
+00:06:24.197 --> 00:06:24.779
+Falsy.
+falsy.
+
+85
+00:06:24.779 --> 00:06:30.879
+我猜它可能是一个空字符串，但这应该没问题。
+I guess maybe it could be an empty string,
+but this should be okay.
+
+86
+00:06:30.879 --> 00:06:33.480
+好吧那我们有电话和地址了。
+Okay, then we've got phones and addresses.
+
+87
+00:06:36.840 --> 00:06:38.889
+有人有什么想法吗？
+Anyone have an idea for this?
+
+88
+00:06:38.889 --> 00:06:43.610
+这是否向任何人暗示了这个值的特定形状？
+Does this suggest a particular
+shape of this value to anyone?
+
+89
+00:06:43.610 --> 00:06:45.231
+演讲者3: 操作码 迈克 · 诺斯: 这是一个物体,
+&gt;&gt; Speaker 3: Op code.
+&gt;&gt; Mike North: It's an object,
+
+90
+00:06:45.231 --> 00:06:46.283
+反对钥匙。
+Object.keys.
+
+91
+00:06:58.454 --> 00:06:59.909
+迈克 · 诺斯: 差不多就是这样，对吧？
+&gt;&gt; Mike North: So
+something like that, right?
+
+92
+00:06:59.909 --> 00:07:03.189
+这就是 Object.keys 想要的，它想要一个对象。
+That's what Object.keys wants,
+it wants an object.
+
+93
+00:07:05.959 --> 00:07:08.036
+让我们看看，这个类型错误,
+Let's see, this type error,
+
+94
+00:07:13.083 --> 00:07:16.190
+迈克 · 诺斯: 看起来我快到了
+&gt;&gt; Mike North: It looks like I am reaching
+
+95
+00:07:16.190 --> 00:07:21.004
+然后传入 pHName。
+into that object and passing in pHName.
+
+96
+00:07:22.220 --> 00:07:24.490
+这个错误消息是一个很好的遵循。
+This error messages is
+pretty good one to follow.
+
+97
+00:07:26.310 --> 00:07:27.463
+它建议我们下一步做什么？
+What does it suggest we do next?
+
+98
+00:07:30.670 --> 00:07:32.269
+迈克 · 诺斯: 我们漏掉了什么？
+&gt;&gt; Mike North: What are we missing?
+
+99
+00:07:32.269 --> 00:07:36.259
+说话人4: 和 phName 到您的手机属性。
+&gt;&gt; Speaker 4: And
+phName to your phones property.
+
+100
+00:07:36.259 --> 00:07:37.505
+Mike North: PhName 只是一个字符串。
+&gt;&gt; Mike North: PhName is just a string.
+
+101
+00:07:37.505 --> 00:07:39.196
+讲者四: 钥匙。
+&gt;&gt; Speaker 4: Keys.
+
+102
+00:07:39.196 --> 00:07:42.740
+迈克 · 诺斯: 我正在看这个，它没有索引签名。
+&gt;&gt; Mike North: I'm looking at
+this it has no index signature.
+
+103
+00:07:42.740 --> 00:07:47.430
+让我们添加一个索引签名，因为我们正在获取一个任意的字符串。
+Let's add an index signature,
+cuz we're taking an arbitrary string.
+
+104
+00:07:47.430 --> 00:07:49.832
+我们只知道字符串在运行时是什么，对吗？
+We only know what the string
+is at runtime, right?
+
+105
+00:07:49.832 --> 00:07:56.060
+我们只是遍历所有的键，把这个键传入。
+We're just iterating over all of the keys,
+passing that key in.
+
+106
+00:07:56.060 --> 00:07:58.220
+这就是字典访问的样子。
+This is what dictionary access looks like.
+
+107
+00:07:59.970 --> 00:08:02.449
+这里我们可以传入一个键，然后返回一个值。
+Where we can pass in a key and
+we get a value back.
+
+108
+00:08:04.730 --> 00:08:05.661
+这就是我们需要的。
+So this is where we need.
+
+109
+00:08:07.771 --> 00:08:11.836
+迈克 · 诺斯: 差不多吧，我打赌地址是类似的。
+&gt;&gt; Mike North: Something like that, and
+I'm gonna bet addresses is similar.
+
+110
+00:08:11.836 --> 00:08:17.060
+我们可以看一下，但是 AddrName，让我们证明给自己看。
+We could look at it, but AddrName,
+let's just prove it to ourselves.
+
+111
+00:08:18.160 --> 00:08:22.689
+在这里，到达地址对象，传入关键字,
+Here it is, reach in to the addresses
+object, pass in the key,
+
+112
+00:08:22.689 --> 00:08:24.617
+取出价值，对吗？
+get the value out, right?
+
+113
+00:08:24.617 --> 00:08:31.238
+一个字典或者数组关联者的告密符号，按值传递键。
+Telltale sign of a dictionary or an
+associate of array, passing key at value.
+
+114
+00:08:35.419 --> 00:08:38.144
+迈克 · 诺斯: 那么现在我们需要弄清楚这些东西是什么,
+&gt;&gt; Mike North: So now we need to
+figure out what these things are,
+
+115
+00:08:43.039 --> 00:08:44.692
+迈克 · 诺斯: 我们找到了地址,
+&gt;&gt; Mike North: So we've got on address,
+
+116
+00:08:44.692 --> 00:08:48.835
+房号，街道，城市，国家，州，邮政编码。
+houseNumber, street, city,
+country, state, postalCode.
+
+117
+00:08:48.835 --> 00:08:51.058
+我来做一些合理的推测
+I'm gonna just make some
+reasonable guesses for
+
+118
+00:08:51.058 --> 00:08:53.179
+这些都是基于我所认为的类型。
+these based on what I
+think the type should be.
+
+119
+00:08:56.201 --> 00:09:02.107
+编号，号码，街道，绳子,
+&gt;&gt; Mike North: HouseNumber,
+number, street, string,
+
+120
+00:09:02.107 --> 00:09:07.879
+城市，迈克诺斯: 是一根弦,
+city,
+&gt;&gt; Mike North: Is a string,
+
+121
+00:09:07.879 --> 00:09:13.870
+state 是一个字符串，postalCode 看起来像一个数字
+state is a string,
+postalCode seems like a number
+
+122
+00:09:13.870 --> 00:09:19.590
+可能是根绳子，没关系。
+could be a string,
+it doesn't really matter.
+
+123
+00:09:19.590 --> 00:09:22.037
+这些都是一些字符串或者内插的东西。
+These are all just sort of strings or
+interpolated things.
+
+124
+00:09:30.426 --> 00:09:33.239
+好的，联系人有一个电子邮件属性。
+&gt;&gt; Mike North: Okay, and
+contact has an email property.
+
+125
+00:09:39.572 --> 00:09:43.419
+迈克 · 诺斯: 我身边酒吧里的所有红色都消失了。
+&gt;&gt; Mike North: And all of my red
+in my side bar has gone away here.
+
+126
+00:09:43.419 --> 00:09:47.940
+这样我就可以在 VS 代码中显示更多的信息,
+Just so I can show you one more place
+where this information pops up in VS Code,
+
+127
+00:09:47.940 --> 00:09:50.019
+这里有个问题标签。
+there's this Problems tab.
+
+128
+00:09:50.019 --> 00:09:50.980
+因为我一直在打开
+And cuz I've been opening and
+
+129
+00:09:50.980 --> 00:09:55.820
+关闭了很多文件，其中一些与我们这里的例子无关。
+closing a lot of files, some of these
+are not related to our example here.
+
+130
+00:09:57.559 --> 00:10:02.330
+但是这在你的代码中给了你一些小小的症结,
+But this gives you sort of little
+sticking points within your code,
+
+131
+00:10:02.330 --> 00:10:06.360
+编译器发现错误的位置。
+places where the compiler
+is finding errors.
+
+132
+00:10:09.659 --> 00:10:12.990
+所以我们开始了，这将是另一个提交。
+So there we go, and
+this would be another commit.
+
+133
+00:10:12.990 --> 00:10:15.730
+因为我们必须进行测试，我们不能忘记。
+Because we've gotta run our test,
+we can't forget that.
+
+134
+00:10:17.820 --> 00:10:21.197
+我不期待任何问题，因为我认为我们只是添加类型信息。
+I don't expect any problems, cuz I think
+we were just adding type information.
+
+135
+00:10:21.197 --> 00:10:23.210
+有一个问题。
+There is a problem.
+
+136
+00:10:23.210 --> 00:10:25.690
+演讲者5: 我觉得手机的型号不对。
+&gt;&gt; Speaker 5: I think phones has
+the wrong type for the value.
+
+137
+00:10:25.690 --> 00:10:29.379
+麦克 · 诺斯: 谢谢，手机的型号与价值不符。
+&gt;&gt; Mike North: Thank you,
+phones has the wrong type for the value.
+
+138
+00:10:30.659 --> 00:10:36.350
+让我们来看看这个，在 fixture 数据中看看 postalCode 应该是一个数字。
+Let's look at this, look in the fixture
+data postalCode should be a number.
+
+139
+00:10:36.350 --> 00:10:38.919
+所以我们在测试中得到了一个类型错误。
+So we're getting a type error
+in the tests themselves.
+
+140
+00:10:40.039 --> 00:10:46.960
+我们去解决这个问题，还有你们的手机，这里什么都没有。
+Let's go address that, and
+your phones, there's nothing here.
+
+141
+00:10:46.960 --> 00:10:48.460
+你是否建议它应该是一个数字？
+Did you suggest it should be a number?
+
+142
+00:10:51.399 --> 00:10:53.869
+迈克 · 诺斯: 这里看起来什么都有可能,
+&gt;&gt; Mike North: It looks
+anything stringifiable here,
+
+143
+00:10:53.869 --> 00:10:57.145
+如果测试结果令人满意，我愿意接受数字。
+I'm willing to accept number
+if the tests are happy.
+
+144
+00:11:03.270 --> 00:11:06.409
+迈克 · 诺斯: 好吧，让我们看看还有什么要做的。
+&gt;&gt; Mike North: All right,
+let's see what else we got to do.
+
+145
+00:11:07.710 --> 00:11:11.339
+类型字符串不能分配给编号，它是一个字符串,
+Type string is not assignable to number,
+it's a string,
+
+146
+00:11:20.110 --> 00:11:21.105
+迈克 · 诺斯: 就是这样，所以
+&gt;&gt; Mike North: There we go, so
+
+147
+00:11:21.105 --> 00:11:26.409
+现在我们知道我们的背部和正常状态，假设我们的测试覆盖率是好的。
+now we know our back and our normal state,
+assuming our test coverage is good.
+
+148
+00:11:26.409 --> 00:11:29.820
+你可以看到我们有多么依赖测试覆盖率来确保我们没有
+You see how much we are leaning on
+the test coverage to make sure we haven't
+
+149
+00:11:31.009 --> 00:11:34.669
+大幅度地改变代码，从而导致问题。
+substantially alter the code in
+a way that will cause problems.
+
+150
+00:11:36.240 --> 00:11:42.296
+这里的最后一个阶段是回到 tsconfig,
+And the last phase here is going
+to be going back to our tsconfig,
+
+151
+00:11:42.296 --> 00:11:46.110
+启用严格模式，严格: 真,
+enabling strict mode, strict: true,
+
+152
+00:11:46.110 --> 00:11:51.947
+真实的，严格的检查: 真实的和
+strictFunctionTypes: true,
+strictNullChecks: true and
+
+153
+00:11:51.947 --> 00:11:57.350
+这不重要，因为我们没有使用 BindCallApply。
+not that it matters cuz we're
+not using BindCallApply.
+
+154
+00:11:57.350 --> 00:12:02.225
+但是为了完整性，我们也会设置这个，幸运的是,
+But for completeness we'll set
+up that as well, and luckily,
+
+155
+00:12:02.225 --> 00:12:04.529
+我在这里没有看到任何错误。
+I don't see any errors here.
+
+156
+00:12:04.529 --> 00:12:10.549
+所以我们的第三步是一个没有任何新东西出现的停机状态。
+So it turns out our third step was kind
+of a no-op where nothing new popped up.
+
+157
+00:12:10.549 --> 00:12:15.620
+实际上，我们到达终点时，只有禁止的隐含条目。
+We actually got to the finish line
+with only forbidding implicit entries.
+
+158
+00:12:15.620 --> 00:12:17.509
+但这完全有可能
+But it would be totally possible for
+
+159
+00:12:17.509 --> 00:12:22.289
+在松散模式下可以弹出的新东西
+new things to pop-up that were fine
+in the loose mode, and sort of only
+
+160
+00:12:22.289 --> 00:12:26.980
+一旦我们打开那些编译器的标志，就成了真正的违规。
+became true violations once we
+turn those compiler flags on.
+
+161
+00:12:28.100 --> 00:12:28.750
+什么事？
+Yes?
+
+162
+00:12:28.750 --> 00:12:32.000
+扬声器6: 所以如果我在写界面的时候不小心加了逗号。
+&gt;&gt; Speaker 6: So if I accidentally added
+commas as I was writing my interface.
+
+163
+00:12:32.000 --> 00:12:33.860
+看起来这些都不错。
+It seems like those are fine to do.
+
+164
+00:12:33.860 --> 00:12:39.274
+Mike North: 它们是，逗号是在键-值对和接口之间找到的。
+&gt;&gt; Mike North: They are, commas are find
+between key-value pairs and interfaces.
+
+165
+00:12:39.274 --> 00:12:44.124
+我喜欢使用分号的原因是，它可以帮助我在视觉上
+The reason I prefer to use semicolons is,
+it helps me visually
+
+166
+00:12:44.124 --> 00:12:49.700
+标识对象类型和对象值之间的区别。
+identify the difference between and
+an object type and object value.
+
+167
+00:12:49.700 --> 00:12:52.427
+正如你所指出的，两者都很好。
+As you point out, both are fine.
+
+168
+00:12:52.427 --> 00:12:56.721
+我使用更漂亮的自动格式化的东西，每次我保存，和
+I use prettier to automatically
+format things every time I save, and
+
+169
+00:12:56.721 --> 00:12:59.620
+用分号代替逗号。
+it's gonna replace commas with semicolons.

@@ -1,0 +1,696 @@
+WEBVTT
+
+1
+00:00:00.430 --> 00:00:03.665
+Mike North: 所以这些是顶级类型，可以保存任何值。
+&gt;&gt; Mike North: So those are top
+types that can hold any values.
+
+2
+00:00:03.665 --> 00:00:05.924
+让我们看看底部类型。
+Let's look at bottom types.
+
+3
+00:00:05.924 --> 00:00:08.205
+所以这里有一个永远不会。
+So here's a never.
+
+4
+00:00:08.205 --> 00:00:14.419
+所有底部类型都不能保存任何值。
+Never, and all bottom types,
+can hold no values.
+
+5
+00:00:14.419 --> 00:00:21.320
+一个常见的地方，你会看到它正在逐渐变窄。
+And a common place you'll see
+this is narrowing exhaustively.
+
+6
+00:00:21.320 --> 00:00:26.629
+所以我们有一个值 x，我们把它看作一个字符串或数字。
+So we've got a value x and we're
+regarding it as a string or a number.
+
+7
+00:00:26.629 --> 00:00:29.829
+因为编译器太聪明了，所以我必须在这里进行强制转换,
+I just have to cast here because
+the compiler's too clever,
+
+8
+00:00:31.010 --> 00:00:35.490
+即使我想把它变成一个字符串或数字，它也会说，这是一个字符串。
+even if I tried to make it a string or
+a number, it would say, that's a string.
+
+9
+00:00:35.490 --> 00:00:37.189
+你已经初始化了它。
+You've initialized it.
+
+10
+00:00:37.189 --> 00:00:38.948
+但这就是我想要得到的。
+But that's all I'm trying to get here.
+
+11
+00:00:40.049 --> 00:00:42.439
+所以我有一个条件
+So I have one condition here for
+
+12
+00:00:42.439 --> 00:00:46.369
+字符串大小写，数字大小写的一个条件。
+the string case, one condition here for
+the number case.
+
+13
+00:00:46.369 --> 00:00:48.990
+你们可以看到，x 是一个字符串。
+And you can see here, x is a string.
+
+14
+00:00:48.990 --> 00:00:54.820
+在这里，x 是一个数，在这里，x 是一个从不。
+Here, x is a number and
+down here, x is a never.
+
+15
+00:00:54.820 --> 00:00:57.049
+什么都没有了。
+There's nothing left.
+
+16
+00:00:57.049 --> 00:01:01.188
+这是打字稿告诉你，如果你对你的类型很好,
+This is TypeScript telling you that
+if you've been good about your types,
+
+17
+00:01:01.188 --> 00:01:02.509
+你永远也到不了这里。
+you can never get here.
+
+18
+00:01:04.787 --> 00:01:06.725
+迈克 · 诺斯: 所以你可能会在那里遇到一个。
+&gt;&gt; Mike North: So
+that's where you might encounter one.
+
+19
+00:01:06.725 --> 00:01:10.129
+你不会创建类型为 never 的值，但是
+You're not going to be creating
+values of type never, but
+
+20
+00:01:10.129 --> 00:01:11.944
+在这里你会看到一个。
+this is where you'll see one.
+
+21
+00:01:11.944 --> 00:01:14.759
+这是同样的例子，但是
+So this is the same example but
+
+22
+00:01:14.759 --> 00:01:19.409
+看看我们能不能利用”永不”。
+we're gonna see if we can
+use never to our favor.
+
+23
+00:01:19.409 --> 00:01:24.920
+为此，我要创建一个新类型的错误，我想要一个子类错误。
+And for this, I'm gonna create a new
+type of error, I wanna a subclass error.
+
+24
+00:01:24.920 --> 00:01:27.920
+并调用这个 unreableerror。
+And will call this UnreachableError.
+
+25
+00:01:27.920 --> 00:01:31.519
+这需要一个从来没有作为一个争论。
+And it's gonna take
+a never as an argument.
+
+26
+00:01:31.519 --> 00:01:34.960
+唯一可以输入 check against 的东西
+The only thing that can type check against
+
+27
+00:01:34.960 --> 00:01:38.740
+这个 never 参数是一个 never 类型的值。
+that never argument is
+a value of type never.
+
+28
+00:01:38.740 --> 00:01:41.629
+这就是底层型的意思。
+That's what it means to be a bottom type.
+
+29
+00:01:41.629 --> 00:01:43.629
+字符串不匹配，数字也不匹配。
+A string won't match it,
+a number won't match it.
+
+30
+00:01:44.670 --> 00:01:46.379
+然后，当然，我们接受一个信息
+And then of course, we take a message and
+
+31
+00:01:46.379 --> 00:01:48.960
+我们在做了一些字符串插值之后传递它。
+we kind of pass it along after
+doing some string interpolation.
+
+32
+00:01:50.400 --> 00:01:53.979
+所以，和我们上面的例子一样。
+So, same example as we had above.
+
+33
+00:01:53.979 --> 00:01:55.650
+只不过我把它改成了一个数字。
+Except I've just changed this to a number.
+
+34
+00:01:55.650 --> 00:01:58.099
+它不会真的影响任何事情。
+It doesn't really affect anything.
+
+35
+00:01:58.099 --> 00:02:02.189
+这就是我们的字符串箱，我们的数字箱。
+So we've got our string case,
+our number case.
+
+36
+00:02:02.189 --> 00:02:04.569
+在这里，你永远不会。
+Down here, y is never.
+
+37
+00:02:04.569 --> 00:02:07.239
+这里开始变得很酷了。
+Here's where this starts to get cool.
+
+38
+00:02:07.239 --> 00:02:11.909
+如果我给这个变量加上，它可能是布尔值的可能性。
+If I add to this variable the possibility
+that it could be a boolean.
+
+39
+00:02:13.960 --> 00:02:16.110
+我们在这里得到一个类型错误。
+We get a type error down here.
+
+40
+00:02:17.949 --> 00:02:23.439
+因此，在创建这个子类的时候，在尝试使用 y 和
+So, in creating this subclass of error and
+in trying to take y and
+
+41
+00:02:23.439 --> 00:02:29.719
+确保它是一个永远不会在最后的 else 条款,
+ensure that it is a never down
+at that last else clause,
+
+42
+00:02:29.719 --> 00:02:34.909
+我实际上是在断言所有的条件,
+I am effectively asserting
+that all of the conditions,
+
+43
+00:02:34.909 --> 00:02:38.020
+所有的可能性都已经考虑好了。
+all of the possibilities
+are already taken care of.
+
+44
+00:02:38.020 --> 00:02:40.969
+为什么应该是一个从来没有到这一点？
+Why should be a never by this point?
+
+45
+00:02:40.969 --> 00:02:47.783
+所以如果我有一个像这样的大交叉类型，这会提醒我。
+So this would alert me if I had
+a big intersection type like this.
+
+46
+00:02:47.783 --> 00:02:52.028
+我开始为它增加可能性，增加新的可能性。
+And I start adding possibilities to it,
+adding new things that this could be.
+
+47
+00:02:52.028 --> 00:02:57.319
+这在编译时告诉我，现在您有未处理的案例。
+This at compile time is telling me,
+now you have unhandled cases.
+
+48
+00:02:57.319 --> 00:03:00.455
+你必须加入这样的东西。
+You've gotta go in and
+add something like this.
+
+49
+00:03:06.592 --> 00:03:09.789
+迈克 · 诺斯: 哦，现在我们又没事了。
+&gt;&gt; Mike North: Ooh, and
+now we're okay again.
+
+50
+00:03:09.789 --> 00:03:13.840
+因为现在，在这里，你回来了，再也不会。
+Because now, down here,
+y is back to never again.
+
+51
+00:03:14.889 --> 00:03:20.870
+这就是我们所说的穷举转换或穷举条件转换,
+This is what we call an exhaustive
+switch or an exhaustive conditional,
+
+52
+00:03:20.870 --> 00:03:24.340
+它同样适用于 if else 和 case switch。
+and it works equally well with if else and
+with case switch.
+
+53
+00:03:25.360 --> 00:03:31.639
+它确保我们在达到最后一个条款之前处理好一切事情。
+It ensures that we handle everything
+before we reach that last clause.
+
+54
+00:03:31.639 --> 00:03:35.449
+在大小写切换中，你会把它放到默认子句中，对吗？
+And in a case switch, you would put
+this in your default clause, right?
+
+55
+00:03:36.639 --> 00:03:40.337
+这是我写的几乎每一个打字应用程序中的另一个东西,
+This is another thing that is in almost
+every TypeScript app that I write,
+
+56
+00:03:40.337 --> 00:03:41.789
+无法反应的错误。
+UnreachableError.
+
+57
+00:03:41.789 --> 00:03:43.170
+这一点，以及我的定义。
+That, and IsDefined.
+
+58
+00:03:44.960 --> 00:03:47.841
+如果我在一个荒岛上而你只给了我几个打字稿函数,
+If I was in a desert island, and you gave
+me only a couple TypeScript functions,
+
+59
+00:03:47.841 --> 00:03:49.280
+是的，这些应该是最重要的。
+these would be high on the list, yes.
+
+60
+00:03:49.280 --> 00:03:53.792
+学生: 所以它不会编译，所以它永远不会进入
+&gt;&gt; Student: So wouldn't it just not
+compile so it would never get into
+
+61
+00:03:53.792 --> 00:03:59.000
+错误因为为什么-Mike North: 问得好。
+UnreachableError because why is-
+&gt;&gt; Mike North: Excellent question.
+
+62
+00:03:59.000 --> 00:04:00.780
+学生: 你是怎么进入 unacableerror 的？
+&gt;&gt; Student: How do you get
+into UnreachableError?
+
+63
+00:04:00.780 --> 00:04:02.849
+迈克 · 诺斯: 很好，很好的问题。
+&gt;&gt; Mike North: Excellent,
+excellent question.
+
+64
+00:04:02.849 --> 00:04:08.969
+有几种方法，第一，你可以做一些选角。
+There are a couple of ways, one,
+you could have done some casting.
+
+65
+00:04:08.969 --> 00:04:12.909
+你可以通过某种方式削弱你的性格让他们对你撒谎,
+You could have weakened your types in
+such a way that they're lying to you,
+
+66
+00:04:12.909 --> 00:04:15.759
+你可能会死在那里。
+and you could end up there.
+
+67
+00:04:15.759 --> 00:04:19.959
+只是因为打字稿在那个代码点说，这是一个字符串数组。
+Just because TypeScript at that point of
+code says, this is an array of strings.
+
+68
+00:04:21.439 --> 00:04:25.149
+在你的程序中其他地方所做的恶作剧可以使它变成这样
+Shenanigans that were done elsewhere
+in your program can make it so
+
+69
+00:04:25.149 --> 00:04:26.959
+这不是一个字符串数组。
+that's not really an array of strings.
+
+70
+00:04:26.959 --> 00:04:28.040
+所以这是一种方法。
+So that's one way.
+
+71
+00:04:28.040 --> 00:04:31.639
+另一种方式，特别是如果你正在写一个图书馆,
+Another way,
+especially if you are writing a library,
+
+72
+00:04:31.639 --> 00:04:35.689
+消费者不一定使用你的类型信息。
+you'll have consumers that are not
+necessarily using your type information.
+
+73
+00:04:35.689 --> 00:04:41.430
+所以，如果我在一个函数中有这个，并且我把 y 当作一个参数
+So, if I had this in a function and
+I was taking y as an argument, there's
+
+74
+00:04:41.430 --> 00:04:47.550
+没有什么能阻止人们传递布尔值，或者数组，或者其他东西。
+nothing stopping someone from passing
+a boolean in, or an array, or whatever.
+
+75
+00:04:47.550 --> 00:04:50.879
+请记住，打字稿是一个编译时唯一的东西。
+Remember, TypeScript is
+a compile time only thing.
+
+76
+00:04:50.879 --> 00:04:53.500
+它在运行时不进行这些检查。
+And it's not doing these
+checks at run-time.
+
+77
+00:04:53.500 --> 00:04:58.279
+所以当你开始构建某个东西的时候,
+So by the time you make your built
+version of something and start going,
+
+78
+00:04:59.909 --> 00:05:03.660
+所有的检查都不存在了。
+all of that checking is
+not present anymore.
+
+79
+00:05:05.329 --> 00:05:07.069
+说实话这花了我不少时间,
+That took me a while, to be honest,
+
+80
+00:05:07.069 --> 00:05:12.459
+当我第一次开始使用打字稿时,
+when I first started using TypeScript
+to able to delineate between,
+
+81
+00:05:13.569 --> 00:05:18.009
+这是运行时类型检查还是编译时类型检查？
+is this a run-time type-checking thing or
+a compile time type-checking thing?
+
+82
+00:05:18.009 --> 00:05:20.750
+另一个是 HTTP 响应。
+Another one is HTTP responses.
+
+83
+00:05:20.750 --> 00:05:23.862
+我希望能够打印检查，因为他们来了，但
+I'd love to be able to type
+check those as they come in but
+
+84
+00:05:23.862 --> 00:05:25.639
+已经不存在了。
+TypeScript is not there anymore.
+
+85
+00:05:25.639 --> 00:05:33.689
+所以，无论你做什么，都有可能泄露出来。
+So, no matter what you do, there is
+the possibility of that stuff leaking in.
+
+86
+00:05:33.689 --> 00:05:37.600
+这就是为什么当我们看到这些类型的警卫,
+Which is why when we look at
+these type guards or like,
+
+87
+00:05:37.600 --> 00:05:41.269
+我们之前看到的定义。
+IsDefined, which we
+were looking at before.
+
+88
+00:05:41.269 --> 00:05:44.980
+我们希望确保该功能的实现
+We want to make sure that
+the implementation of that function
+
+89
+00:05:44.980 --> 00:05:50.199
+是我们希望创建的类型保护的运行时等价物。
+is the run-time equivalent of the type
+guard that we wish to create.
+
+90
+00:05:50.199 --> 00:05:57.620
+对，这种类型的 x 并不是未定义的，它们很好地排列在一起。
+Right, that type of x is not undefined,
+that lines up very nicely.
+
+91
+00:05:57.620 --> 00:06:01.079
+但是你可能会有一个不太正确的类型守卫。
+But you could have a type
+guard that's not quite right.
+
+92
+00:06:01.079 --> 00:06:03.579
+这样你就很容易达到这个目标。
+And that would very easily
+allow you to reach this.
+
+93
+00:06:03.579 --> 00:06:06.990
+这正是您希望抛出异常的地方
+And that's exactly where you want
+an exception to be thrown so
+
+94
+00:06:06.990 --> 00:06:10.240
+你可以去解决这个问题，追踪你是如何到达那里的。
+that you can go and address that and track
+down how you could have gotten there.
+
+95
+00:06:10.240 --> 00:06:13.490
+学生2: 是的，所以这有点像我所处的环境
+&gt;&gt; Student2: Right, so
+it's kind of like in the environment of my
+
+96
+00:06:13.490 --> 00:06:16.649
+编写打字稿，这是不可能的。
+TypeScript compilation,
+this is never gonna happen.
+
+97
+00:06:16.649 --> 00:06:20.269
+但是如果我们把它捆起来，扔到野外，它就可以。
+But if we bundle it up, throw it
+out there into the wild, it could.
+
+98
+00:06:20.269 --> 00:06:23.910
+这就是我们要抛出错误的情况？
+So that's the case where we're
+going to throw the error?
+
+99
+00:06:23.910 --> 00:06:25.139
+迈克 · 诺斯: 你走对路了。
+&gt;&gt; Mike North: You're on the right path.
+
+100
+00:06:25.139 --> 00:06:29.089
+我只是想软化它打字稿告诉你,
+I would only soften it,
+TypeScript is telling you,
+
+101
+00:06:29.089 --> 00:06:33.340
+这是不可能的，只要你对自己喜欢的类型完全诚实。
+it's never gonna happen, as long as you've
+been totally honest about your types.
+
+102
+00:06:33.340 --> 00:06:36.459
+您所依赖的所有库的类型信息都是完美的。
+The type information for
+all libraries you depend on is perfect.
+
+103
+00:06:37.610 --> 00:06:43.120
+你的类型守卫是以一种完全正确的方式实现的。
+Your type guards are implemented
+in a totally correct way.
+
+104
+00:06:43.120 --> 00:06:48.019
+其中一些是很难得到100% 的检查分数。
+And some of these are really
+hard to get 100% check marks on.
+
+105
+00:06:48.019 --> 00:06:51.540
+但是让我们把它和另一种方法比较一下，让我移除这个布尔值。
+But let's compare it to an alternative,
+and let me remove this boolean.
+
+106
+00:06:52.800 --> 00:06:55.899
+让我们把它和其他东西比较一下。
+Let's compare it to something else.
+
+107
+00:06:55.899 --> 00:07:02.250
+如果我们只想处理字符串和数字，我们可以这样做。
+If we just intended to handle strings and
+numbers, we could have just done this.
+
+108
+00:07:02.250 --> 00:07:06.970
+但是你永远不会发现这些小小的不协调
+But you're never going to find out
+about these little incongruities, and
+
+109
+00:07:06.970 --> 00:07:10.959
+你想知道他们在那里，这样你就可以去解决他们。
+you want to know that they are there so
+you can go and address them.
+
+110
+00:07:10.959 --> 00:07:14.970
+根据类型，这种事情是不应该发生的，但是
+It's something that according to
+the types should never happen, but
+
+111
+00:07:14.970 --> 00:07:20.550
+实际上，这种情况时有发生，你想给自己留点面包屑。
+in practice it happens and you want
+to leave yourself some breadcrumbs.
+
+112
+00:07:20.550 --> 00:07:25.439
+我把它叫做这里，这几乎是一个很棒的 JavaScript 场景
+I would call this here,
+this is almost as great a JavaScript scene
+
+113
+00:07:25.439 --> 00:07:29.759
+作为 try catch 中的空 catch 子句。
+as an empty catch clause in a try catch.
+
+114
+00:07:29.759 --> 00:07:34.129
+您可能会出现类型错误。
+You're swallowing a type error,
+potentially.
+
+115
+00:07:34.129 --> 00:07:36.459
+因为在这里，没关系，我可以加任何我想加的东西。
+Because here, it doesn't matter,
+I could add whatever I want.
+
+116
+00:07:38.649 --> 00:07:41.290
+没有线索，到处都没有线索。
+No clues, no clues anywhere.
+
+117
+00:07:41.290 --> 00:07:42.819
+这个会直接掉下去的。
+This is gonna fall straight through.
+
+118
+00:07:44.199 --> 00:07:47.379
+所以有一个彻底的转换是很好的。
+So it's nice to have an exhaustive switch.
+
+119
+00:07:47.379 --> 00:07:53.490
+这是针对那些具有高度安全性的语言，比如 Rust。
+And this is for languages that feature
+a high amount of safety, like Rust.
+
+120
+00:07:53.490 --> 00:07:55.889
+它们有详尽的开关和
+They have exhaustive switches and
+
+121
+00:07:55.889 --> 00:07:59.889
+在编程语言中构建了详尽的条件句。
+exhaustive conditionals built right
+into the programming language.
+
+122
+00:07:59.889 --> 00:08:03.649
+所以在 JavaScript 的目标定位中加入这个特性真的很不错。
+So it's really nice to have this feature
+in a JavaScript targeting thing.

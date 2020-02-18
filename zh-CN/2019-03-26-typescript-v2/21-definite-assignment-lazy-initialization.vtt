@@ -1,0 +1,510 @@
+WEBVTT
+
+1
+00:00:00.460 --> 00:00:01.504
+迈克 · 诺斯: 在这种情况下,
+&gt;&gt; Mike North: In this situation,
+
+2
+00:00:01.504 --> 00:00:05.830
+我们只是用另一种方式提供了初始化器。
+w're just providing an initializer
+by kind of another means.
+
+3
+00:00:06.910 --> 00:00:11.529
+我们可以像属性初始值设定项一样轻松地移动它。
+We could just as easily moved this
+up as a property initializer.
+
+4
+00:00:11.529 --> 00:00:16.600
+但我要指出的是，我们可以在任何地方做到这一点。
+But I'm pointing out that
+we can do in either place.
+
+5
+00:00:16.600 --> 00:00:22.980
+另外，如果我的打字稿设置正确的话。
+Additionally, if my TypeScript settings
+are correct here and they are.
+
+6
+00:00:22.980 --> 00:00:29.121
+你会注意到我们在这里被大喊大叫，忽略这第一条信息。
+You'll note that we're getting yelled
+at here, ignore this first message.
+
+7
+00:00:29.121 --> 00:00:33.790
+我们只是看到很多，因为我们有很多的课程和从来没有读过的东西,
+We just see that a lot, cuz we have a lot
+of classes and things that are never read,
+
+8
+00:00:33.790 --> 00:00:35.798
+因为这只是一页例子。
+cuz it's just a page of examples.
+
+9
+00:00:35.798 --> 00:00:40.012
+这个错误消息很有趣，密码没有初始值设定项，并且
+This error message is interesting,
+password has no initializer and
+
+10
+00:00:40.012 --> 00:00:43.216
+构造函数中没有明确指定。
+it's not definitely assigned
+in the constructor.
+
+11
+00:00:43.216 --> 00:00:48.530
+我们现在看到的是，我们已经说明了 password 是一个字符串。
+So what we're seeing here is we've
+stated that password is a string.
+
+12
+00:00:49.640 --> 00:00:52.030
+对于任何下游代码,
+And for any downstream code,
+
+13
+00:00:52.030 --> 00:00:56.460
+任何方法，他们都有可能进入私人领域。
+any methods, they might be
+able to access private field.
+
+14
+00:00:56.460 --> 00:01:01.049
+如果他们尝试访问密码，他们希望得到一个字符串返回，并且
+If they try to access password they
+expect to get a string back, and
+
+15
+00:01:01.049 --> 00:01:03.520
+目前这是不可能的。
+currently that's not going to happen.
+
+16
+00:01:04.909 --> 00:01:12.103
+即使我们在这里有一个条件，如果我们说如果(电话0)。
+Even if we had a condition here where
+if we said like if (phone &gt; 0).
+
+17
+00:01:14.019 --> 00:01:18.629
+初始化这个，我们仍然会得到一个错误，因为分析
+&gt;&gt; Mike North: Initialize this,
+we'll still get an error because analyzing
+
+18
+00:01:18.629 --> 00:01:22.739
+不同的路径，我们可以通过我们的承包商。
+the various paths,
+we can take though our contractor.
+
+19
+00:01:22.739 --> 00:01:25.519
+一个或多个已被确定在哪里
+One or more have been identified where
+
+20
+00:01:25.519 --> 00:01:29.039
+我们不会最终设置密码的值。
+we would not end up setting
+passwords up with the value.
+
+21
+00:01:29.039 --> 00:01:31.210
+我们有几种方法可以解决这个问题。
+There are couple ways we can handle this.
+
+22
+00:01:32.799 --> 00:01:35.079
+一种方法是确定这就是问题所在,
+One way would be to decide
+that this is the problem,
+
+23
+00:01:35.079 --> 00:01:37.539
+我们应该始终初始化密码。
+we just should always
+initiatialize password.
+
+24
+00:01:37.539 --> 00:01:45.180
+另一种方法是增加这种可能性，即这种可能性是未定义的。
+The other way would be to add
+the possibility that this is undefined.
+
+25
+00:01:45.180 --> 00:01:50.299
+现在，任何人试图访问密码，他们会得到字符串或未定义。
+And now anyone who attempts to access
+password, they'll get string or undefined.
+
+26
+00:01:50.299 --> 00:01:55.840
+他们必须使用我们之前展示过的那些警卫中的一个。
+They'll have to use one of those guards
+that we showed an example of before.
+
+27
+00:01:55.840 --> 00:02:01.480
+如果(this.password) ，那么在该块密码中将是一个字符串。
+If (this.password), and then within
+that block password will be a string.
+
+28
+00:02:01.480 --> 00:02:03.480
+所以这是我们可以做的一件事。
+So that's one thing we could do.
+
+29
+00:02:03.480 --> 00:02:05.067
+还有一件事我们可以做。
+Here's another thing we could do.
+
+30
+00:02:05.067 --> 00:02:10.401
+我们可以使用一个新的操作员，这是一个我们想使用的
+We could use a new operator here and
+this is one we'd wanna use
+
+31
+00:02:10.401 --> 00:02:18.150
+如果我们真的知道那个电话号码，就像它肯定大于零一样。
+if we really know that phone number like
+it's guaranteed to be greater than zero.
+
+32
+00:02:18.150 --> 00:02:19.490
+基本上你知道
+Basically you know for
+
+33
+00:02:19.490 --> 00:02:24.670
+事实上，你总是会走下去，一切都会好起来的。
+a fact that you're always gonna go down
+this branch and it's gonna be okay.
+
+34
+00:02:24.670 --> 00:02:28.079
+或者每次你实例化这个类,
+Or maybe every time you
+instantiate this class,
+
+35
+00:02:28.079 --> 00:02:32.110
+你在它上面调用一个方法来进行异步设置，对吗？
+you call a method on it to do
+some asynchronous setup, right?
+
+36
+00:02:32.110 --> 00:02:32.800
+比如我们这么做。
+Like if we did this.
+
+37
+00:02:36.248 --> 00:02:38.364
+一个异步 init 函数,
+&gt;&gt; Mike North: An asynchronous
+init function,
+
+38
+00:02:38.364 --> 00:02:41.769
+没有办法让构造函数异步。
+there's no way to make
+a constructor asynchronous.
+
+39
+00:02:43.069 --> 00:02:46.129
+对不起，我一直保存在自动格式的东西。
+Sorry, I keep saving
+in things auto-format.
+
+40
+00:02:46.129 --> 00:02:49.789
+没有办法制造异步的东西，但也许我们就是知道
+There's no way to make something
+asynchronous, but perhaps we just know
+
+41
+00:02:49.789 --> 00:02:54.038
+无论我们在哪里使用它，在我们构建它之后，我们称之为 init
+that wherever we use this, right after
+we construct it we call init and
+
+42
+00:02:54.038 --> 00:02:58.199
+那么下游的所有东西都应该依赖于密码。
+then everything downstream should be
+able to depend on password being there.
+
+43
+00:02:58.199 --> 00:03:02.620
+在这种情况下，我们将使用所谓的定义赋值操作符
+In this case, we would use something
+called the definite assignment operator
+
+44
+00:03:02.620 --> 00:03:04.990
+这是一个叹号。
+and it is an exclamation mark.
+
+45
+00:03:04.990 --> 00:03:08.860
+这就是说相信我打字稿,
+What this is saying is
+trust me TypeScript,
+
+46
+00:03:08.860 --> 00:03:14.889
+我负责确保这个字段被正确地初始化。
+I'm taking responsibility for making sure
+that this field gets initialized properly.
+
+47
+00:03:14.889 --> 00:03:20.460
+所以我希望你们能让我来处理这个问题
+So this is an area where I want
+you to let me handle this and
+
+48
+00:03:20.460 --> 00:03:24.870
+不要在代码的这一点上造成错误。
+don't cause an error at
+this point in the code.
+
+49
+00:03:27.210 --> 00:03:32.449
+那么，我的另一个有用的地方在哪里呢？
+So, where my another useful place for
+this kind of thing be?
+
+50
+00:03:33.509 --> 00:03:39.789
+如果你使用过棱角，反应，灰烬，聚合物，或 Vue，请举手？
+Raise your hand if you've used Angular,
+React, Ember, Polymer, or Vue?
+
+51
+00:03:42.079 --> 00:03:48.389
+太棒了，那么，您是否发现您最终直接实例化了组件？
+Awesome, so, do you find that you end
+up directly instantiating components?
+
+52
+00:03:48.389 --> 00:03:52.849
+您有一个组件类，您是否发现您曾经调用过新组件，以及
+You have a component class, do you find
+you are ever calling new component, and
+
+53
+00:03:52.849 --> 00:03:57.000
+然后渲染它并将该元素放入 DOM 中，或者
+then rendering it and
+putting that element in the DOM, or
+
+54
+00:03:57.000 --> 00:03:58.420
+这个框架能帮你解决吗？
+is the framework handling it for you?
+
+55
+00:03:59.430 --> 00:04:01.009
+框架为您处理它。
+Framework handles it for you.
+
+56
+00:04:01.009 --> 00:04:06.789
+所以通常有生命周期挂钩，你可能在那里设置东西,
+So there are often life cycle hooks
+where you might be setting things up,
+
+57
+00:04:06.789 --> 00:04:08.330
+建立属性。
+setting up properties.
+
+58
+00:04:08.330 --> 00:04:13.960
+在早期的生命周期钩子中，您可能需要设置密码。
+And in an early life cycle hook, you might
+take care of putting password in place.
+
+59
+00:04:13.960 --> 00:04:17.910
+你们应该知道这是第一个叫法,
+And you just know that this is the first
+thing that is gonna be called,
+
+60
+00:04:17.910 --> 00:04:20.910
+构造函数的框架。
+the frameworks doing
+the constructor stuff.
+
+61
+00:04:20.910 --> 00:04:24.029
+我会负起责任的我知道有一个小小的差距,
+I'll take responsibility,
+I know there's this little gap,
+
+62
+00:04:24.029 --> 00:04:28.170
+在生命周期的早期，密码不在那里，但实际上,
+very early in the life cycle, where
+password's not there, but realistically,
+
+63
+00:04:28.170 --> 00:04:30.319
+我不会用那些代码做任何事情。
+I'm not doing anything with that code.
+
+64
+00:04:30.319 --> 00:04:33.019
+这就简化了下游的东西,
+And that simplifies downstream stuff,
+
+65
+00:04:33.019 --> 00:04:36.009
+你只需要输入密码，相信密码就在那里。
+where you can just access password,
+and trust that it will be there.
+
+66
+00:04:38.060 --> 00:04:39.259
+这里还有一个相关的提示。
+Here's another related tip.
+
+67
+00:04:40.779 --> 00:04:45.350
+现实地说，我们不知道密码是否一定是
+Let's say that realistically we don't know
+if passwords are gonna necessarily be
+
+68
+00:04:45.350 --> 00:04:49.050
+在那里，也许在它生命周期的中期。
+there, maybe in the middle
+of its life cycle.
+
+69
+00:04:49.050 --> 00:04:52.040
+你的零件可能会有用，对吧？
+Your component might get something, right?
+
+70
+00:04:53.430 --> 00:04:55.189
+你还是想把事情简化一点。
+And you still wanna simplify things a bit.
+
+71
+00:04:56.279 --> 00:04:58.207
+我会做这样的事。
+I would do something like this.
+
+72
+00:05:01.016 --> 00:05:03.851
+迈克 · 诺斯: 我会有一个潜在的价值
+&gt;&gt; Mike North: I would have a value
+that has the potential to be
+
+73
+00:05:03.851 --> 00:05:09.415
+迈克 · 诺斯: 还有
+undefined,
+&gt;&gt; Mike North: And
+
+74
+00:05:09.415 --> 00:05:14.240
+我可以做私人获取密码。
+I could do private get password.
+
+75
+00:05:14.240 --> 00:05:20.396
+这只是一个 ecmascript5获得者，ES5获得者，它已经工作了很长时间。
+This is just a ECMAScript 5 getter,
+ES5 getter, it's worked for a long time.
+
+76
+00:05:20.396 --> 00:05:22.321
+它在 IE11和 ie10中工作。
+It works natively in IE11 and 10.
+
+77
+00:05:26.630 --> 00:05:30.750
+如果密码值不存在，我们将懒惰地创建它,
+&gt;&gt; Mike North: If the password value
+doesn't exist, we'll create it lazily,
+
+78
+00:05:35.048 --> 00:05:36.370
+迈克 · 诺斯: 然后还回去。
+&gt;&gt; Mike North: And then return it.
+
+79
+00:05:40.271 --> 00:05:46.300
+迈克 · 诺斯: 我们可以说这绝对是一根绳子。
+&gt;&gt; Mike North: And
+we can say this is definitely a string.
+
+80
+00:05:46.300 --> 00:05:50.689
+最终的结果是，在这里，我们有一个属性，它是一个字符串和
+The end result is, here,
+we have a property that's a string and
+
+81
+00:05:50.689 --> 00:05:56.360
+我们可以访问密码，无论我们需要它，它是懒惰创建。
+we can access password wherever
+we need it, it's lazily created.
+
+82
+00:05:56.360 --> 00:06:02.000
+我们第一次请求它，然后它缓存在实例上。
+The first time we ask for it and
+then it's cached on the instance.
+
+83
+00:06:02.000 --> 00:06:04.629
+所以我们可以不断地要求,
+And so we could repeatedly go ahead and
+keep asking for it,
+
+84
+00:06:04.629 --> 00:06:06.970
+我们还是实例化过一次。
+we still instantiate it once.
+
+85
+00:06:06.970 --> 00:06:12.165
+但这是另一个技巧，对于那些开始时可能没有定义的东西
+But this is another trick for
+things that may start out as undefined and
+
+86
+00:06:12.165 --> 00:06:16.757
+你可以像这样创建一个懒惰的实例化值。
+you can kind of create a lazily
+instantiated value like this.
+
+87
+00:06:19.115 --> 00:06:20.577
+迈克 · 诺斯: 有问题吗？
+&gt;&gt; Mike North: Questions?
+
+88
+00:06:20.577 --> 00:06:26.589
+酷，这应该是大部分常规的 JavaScript 的东西，尤其是。
+Cool, this should be mostly regular
+JavaScript stuff, especially that.
+
+89
+00:06:26.589 --> 00:06:30.110
+这是一种未充分利用，但吸气剂已经存在了一段时间。
+It's kind of underutilized but
+getters have been around for a while.

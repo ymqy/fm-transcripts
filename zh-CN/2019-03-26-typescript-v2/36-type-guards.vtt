@@ -1,0 +1,322 @@
+WEBVTT
+
+1
+00:00:00.070 --> 00:00:02.681
+迈克 · 诺斯: 我们甚至可以定义我们自己的防守类型。
+&gt;&gt; Mike North: We can even
+define our own type guards.
+
+2
+00:00:05.722 --> 00:00:11.890
+Mike North: 这个叫做，这个叫做用户定义的类型保护。
+&gt;&gt; Mike North: So this is called, this is
+referred to as a user defined type guard.
+
+3
+00:00:11.890 --> 00:00:16.739
+如果我们看一下这里的实现，这个返回的类型是什么？
+And if we look at the implementation here,
+what type does this return?
+
+4
+00:00:16.739 --> 00:00:18.519
+这是什么类型的？
+What's this type here?
+
+5
+00:00:18.519 --> 00:00:21.420
+类型等于字符串。
+Type of something equals string.
+
+6
+00:00:24.916 --> 00:00:25.550
+迈克 · 诺斯: 这是一个布尔值，对吗？
+&gt;&gt; Mike North: It's a Boolean, right?
+
+7
+00:00:26.589 --> 00:00:29.449
+类型，如果我们要捕获这个值，它是一个布尔值。
+Type of, if we were to capture that value,
+it's a Boolean.
+
+8
+00:00:29.449 --> 00:00:36.470
+一个布尔值以另一个布尔值结束，它会给我们一个布尔值。
+And a Boolean ended with another Boolean,
+it's gonna give us a Boolean.
+
+9
+00:00:36.470 --> 00:00:40.899
+所以这里的返回值，我们肯定是返回一个布尔值。
+So the return here,
+we're definitely returning a Boolean.
+
+10
+00:00:40.899 --> 00:00:45.609
+但是我们已经向打字稿编译器表明它应该
+But we have indicated to
+the typescript compiler that it should
+
+11
+00:00:45.609 --> 00:00:50.719
+将此布尔值的 true 或 false 作为指示
+regard the true or false value
+of this Boolean as an indication
+
+12
+00:00:50.719 --> 00:00:55.009
+X 的类型是否有电子邮件。
+of whether x is of type has e-mail.
+
+13
+00:00:55.009 --> 00:00:59.509
+这样我们就可以使用它，就像我们使用
+And that allows us down here to use
+it just like we're using type of and
+
+14
+00:00:59.509 --> 00:01:02.030
+在前面的例子中。
+instance of in the previous examples.
+
+15
+00:01:02.030 --> 00:01:07.670
+我们可以使用它将未知的范围缩小到有电子邮件的范围。
+We can use it to narrow from
+an unknown down to a has e-mail.
+
+16
+00:01:07.670 --> 00:01:10.620
+这些是超级，超级方便，对不对？
+These are super, super handy, right?
+
+17
+00:01:10.620 --> 00:01:14.569
+这是你自己的定制类型，你有在你的应用程序,
+This is where your own custom
+types that you have in your app,
+
+18
+00:01:14.569 --> 00:01:20.659
+你可以创造好的警卫，让你处理特定的案件。
+you can create nice guards that will
+allow you to handle specific cases.
+
+19
+00:01:20.659 --> 00:01:24.109
+这是我最喜欢的警卫，我到处都用它。
+This is my favorite guard,
+I use it all over the place.
+
+20
+00:01:25.489 --> 00:01:27.150
+定义。
+Is defined.
+
+21
+00:01:27.150 --> 00:01:29.382
+我们把仿制药带回到这里。
+And we're bringing back generics here.
+
+22
+00:01:29.382 --> 00:01:33.945
+以下是原因。
+Here's why.
+
+23
+00:01:33.945 --> 00:01:35.069
+我们有一个紧密的参数 t。
+We have a tight parameter T.
+
+24
+00:01:35.069 --> 00:01:38.150
+我们取一个参数，可以是 t 或
+We take an argument, which could be T or
+
+25
+00:01:38.150 --> 00:01:43.364
+我们返回 arg 是否是 t。
+undefined, and
+we return whether the arg is T.
+
+26
+00:01:43.364 --> 00:01:48.159
+所以我们试图排除它未定义的可能性。
+So we're trying to remove
+the possibility that it is undefined.
+
+27
+00:01:48.159 --> 00:01:55.729
+如果我们看一下这里的返回值，就会得到正确的布尔值
+And if we look at the return here, that is
+gonna give us the correct Boolean value
+
+28
+00:01:55.729 --> 00:02:00.829
+如果我们想知道这是一个未定义的值。
+if we're trying to figure out that
+this is a non-undefined value.
+
+29
+00:02:01.849 --> 00:02:03.930
+它的价值是被定义的。
+It's value is defined.
+
+30
+00:02:03.930 --> 00:02:07.759
+我这样做的原因是因为如果我通过了
+The reason I do things this way
+is because if I were to pass
+
+31
+00:02:07.759 --> 00:02:12.079
+这个值可以是字符串，但也可以是未定义的,
+this a value that could be a string but
+could also be undefined,
+
+32
+00:02:12.079 --> 00:02:17.068
+当类型检查符合的时候，就像这样。
+when the type checking matches that up,
+it's kind of like it does this.
+
+33
+00:02:24.989 --> 00:02:27.371
+迈克 · 诺斯: 它几乎是这样排列的。
+&gt;&gt; Mike North: It almost
+lines things up this way.
+
+34
+00:02:27.371 --> 00:02:30.170
+所以 t 变成了弦。
+And so, T becomes string.
+
+35
+00:02:30.170 --> 00:02:33.990
+所以这就是我如何能够提取出未定义的。
+So this is how I'm able to kind
+of pluck out the undefined.
+
+36
+00:02:33.990 --> 00:02:38.841
+我在《迈克 · 诺斯》中传递的观点是: 有吗
+The argument I pass in
+&gt;&gt; Mike North: Has it's
+
+37
+00:02:38.841 --> 00:02:40.229
+未定义值删除。
+undefined value removed.
+
+38
+00:02:40.229 --> 00:02:45.540
+如果你有一个类似这样的东西的清单，这是非常有用的。
+And this is useful if you have
+a list of things, like this.
+
+39
+00:02:55.105 --> 00:02:59.402
+Mike North: 对，所以这是一个类型为 string 或 undefined 的数组。
+&gt;&gt; Mike North: Right, so this is
+an array of type string or undefined.
+
+40
+00:02:59.402 --> 00:03:00.825
+清单。
+List.
+
+41
+00:03:02.237 --> 00:03:03.013
+迈克 · 诺斯: 过滤器。
+&gt;&gt; Mike North: Filter.
+
+42
+00:03:09.048 --> 00:03:10.020
+麦克 · 诺斯: 过滤。
+&gt;&gt; Mike North: Filtered.
+
+43
+00:03:10.020 --> 00:03:12.650
+我们移除了所有未定义的值，并且
+We've removed all of the undefined values,
+and
+
+44
+00:03:12.650 --> 00:03:15.520
+我们也删除了未定义的类型。
+we've removed undefined
+from the type as well.
+
+45
+00:03:15.520 --> 00:03:18.349
+所以，如果你有一个收藏，并且
+So it's great if you have a collection,
+and
+
+46
+00:03:18.349 --> 00:03:23.490
+假设你有一个类型的可选值，你有一个它们的数组。
+say you have some optional value on
+a type, and you have an array of them.
+
+47
+00:03:23.490 --> 00:03:28.139
+您可以尝试将它们全部删除，过滤掉所有未定义的值。
+You can just attempt to pluck all them
+off, filter out all the undefined values.
+
+48
+00:03:28.139 --> 00:03:28.789
+事情就是这样。
+Things just work.
+
+49
+00:03:28.789 --> 00:03:30.920
+我想知道他们是否修好了这个。
+I wonder if they fixed this.
+
+50
+00:03:33.759 --> 00:03:39.120
+迈克 · 诺斯: 所以，实际上，我认为这正是它应该做的。
+&gt;&gt; Mike North: So this, actually, I think
+this is doing exactly what it should be.
+
+51
+00:03:39.120 --> 00:03:42.210
+但事实上，字符串可以有一个虚假的值
+But the fact that string
+can have a falsey value
+
+52
+00:03:42.210 --> 00:03:46.400
+意味着一个空字符串作为 false 通过布尔构造函数。
+means that an empty string passes through
+the Boolean constructor as false.
+
+53
+00:03:46.400 --> 00:03:50.120
+这就是为什么我们不能真正区分空字符串和
+Which is why we can't really tell the
+difference between an empty string, and
+
+54
+00:03:50.120 --> 00:03:51.280
+一个布尔值。
+a Boolean.
+
+55
+00:03:51.280 --> 00:03:55.670
+他们都会给出同样真实的检查。
+They both will give the same
+truthy-falsey check.
+
+56
+00:03:55.670 --> 00:03:56.590
+但实际上,
+But it's really,
+
+57
+00:03:56.590 --> 00:04:01.270
+当与过滤函数结合使用时，定义了真正有用的。
+really useful, is defined, when used in
+conjunction with filtering functions.

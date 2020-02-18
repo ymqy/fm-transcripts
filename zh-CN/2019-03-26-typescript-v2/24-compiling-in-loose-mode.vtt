@@ -1,0 +1,161 @@
+WEBVTT
+
+1
+00:00:00.117 --> 00:00:05.431
+Mike North: 冲浪一个，你想在松散模式下编译你的项目。
+&gt;&gt; Mike North: Surf one, you want to
+compile your project in loose mode.
+
+2
+00:00:05.431 --> 00:00:09.265
+你首先要确保你的测试通过。
+And you begin by making
+sure your tests pass.
+
+3
+00:00:09.265 --> 00:00:13.772
+然后，重命名你所有的文件或一大块你的文件从
+And then, rename all your files or
+a chunk of your files from
+
+4
+00:00:13.772 --> 00:00:18.567
+支持任何隐式类型。
+JavaScript to TypeScript,
+allowing for implicit any types.
+
+5
+00:00:18.567 --> 00:00:23.393
+每当打字稿编译器无法弹出时，就会弹出隐式 anys
+Implicit anys pop up whenever
+the TypeScript compiler cannot
+
+6
+00:00:23.393 --> 00:00:26.463
+推断出更具体和有用的类型。
+infer a more specific and useful type.
+
+7
+00:00:26.463 --> 00:00:30.493
+函数参数就是一个很好的例子。
+Good example of this would
+be a function argument.
+
+8
+00:00:30.493 --> 00:00:34.546
+所以打字稿的推断方式只有一个方向。
+So the way TypeScript infers things
+is kinda only in one direction.
+
+9
+00:00:34.546 --> 00:00:39.993
+只有通过接收某种值,
+It's, only through receiving
+a value of some sort,
+
+10
+00:00:39.993 --> 00:00:42.667
+就像传承下去一样。
+and like passing that on.
+
+11
+00:00:42.667 --> 00:00:45.957
+所以，在这里强调一下这个例子。
+So, just to highlight this example here.
+
+12
+00:00:50.756 --> 00:00:55.853
+迈克 · 诺斯: 这是一个隐式的任何，即使在这里，如果我试图把它分成
+&gt;&gt; Mike North: This is an implicit any and
+even if down here, if I try to split it to
+
+13
+00:00:55.853 --> 00:01:02.096
+试图给出线索，它可能是一个字符串，它仍然是一个隐式的任何。
+try to give the clue that it might be a
+string, it still remains an implicit any.
+
+14
+00:01:02.096 --> 00:01:04.486
+因为类型信息没有,
+Because type information does not,
+
+15
+00:01:04.486 --> 00:01:09.043
+推论并不是从用法点到论点。
+the inference does not flow up from
+the point of usage to the argument.
+
+16
+00:01:09.043 --> 00:01:13.132
+有些语言可以做到这一点，但是这种语言不行。
+Some languages do that, this one does not.
+
+17
+00:01:13.132 --> 00:01:16.799
+所以函数论点被放在
+So functional arguments are placed
+where you're almost always gonna
+
+18
+00:01:16.799 --> 00:01:17.923
+得到一个隐含的任何。
+get an implicit any.
+
+19
+00:01:17.923 --> 00:01:22.186
+唯一的情况是，你不会是如果它是一个回电，有一个具体的
+The only case where you wouldn't is if
+it's a call back, and there's a specific
+
+20
+00:01:22.186 --> 00:01:26.596
+输入那个回电，记住，我们不需要指定任何东西。
+type for that call back, and remember,
+we don't have to specify anything there.
+
+21
+00:01:26.596 --> 00:01:32.360
+这样做的目的是修复导致打字稿编译错误的任何问题。
+Your goal in this pass is to fix anything
+that is causing TypeScript compile errors.
+
+22
+00:01:32.360 --> 00:01:37.655
+这种情况经常出现的例子是 JavaScript 类。
+Examples of where this will pop up
+all the time is JavaScript classes.
+
+23
+00:01:37.655 --> 00:01:42.469
+当你改用打字稿的时候，你必须去
+When you change to TypeScript,
+you're gonna have to go and
+
+24
+00:01:42.469 --> 00:01:45.456
+说明字段及其类型，所以
+state the fields and their types, so
+
+25
+00:01:45.456 --> 00:01:50.391
+你事先就知道什么是有效的领域，什么不是。
+you know ahead of time what's
+a valid field and what's not.
+
+26
+00:01:50.391 --> 00:01:53.402
+所以你要解决这种问题,
+So you're gonna fix that kind of thing,
+
+27
+00:01:53.402 --> 00:01:59.522
+非常小心地避免改变任何行为，这是一个拉请求。
+being very careful to avoid changing any
+behavior, and that is one pull request.
+
+28
+00:01:59.522 --> 00:02:02.159
+确保您的测试再次通过，并将其合并到。
+Make sure your tests have passed again,
+and merge that in.

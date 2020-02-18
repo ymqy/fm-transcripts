@@ -1,0 +1,509 @@
+WEBVTT
+
+1
+00:00:00.050 --> 00:00:02.946
+Mike North: 类型参数也可以有约束。
+&gt;&gt; Mike North: Type parameters
+can also have constraints.
+
+2
+00:00:02.946 --> 00:00:08.429
+因此，当您开始使用类型参数时，您将
+So, as you'll start using type parameters,
+you'll
+
+3
+00:00:08.429 --> 00:00:14.480
+如果没有这样的约束，这就是约束部分。
+see that if you don't have a constraint
+like this, this is the constraint part.
+
+4
+00:00:14.480 --> 00:00:21.760
+也就是说 t 必须扩展，必须可赋值到，这里的这个类型。
+This is saying T must extend,
+must be assignable to, this type here.
+
+5
+00:00:21.760 --> 00:00:25.329
+我向您解释约束的最好方法是移除它
+The best way I can explain
+constraints to you is to remove this
+
+6
+00:00:25.329 --> 00:00:27.000
+来揭示添加它的动机。
+to reveal the motivation for adding it.
+
+7
+00:00:29.149 --> 00:00:30.280
+这就对了。
+And there you go.
+
+8
+00:00:30.280 --> 00:00:35.360
+因此，我们得到了一个类型错误，因为我们正在尝试
+So, we're getting a type
+error because we're trying
+
+9
+00:00:35.360 --> 00:00:41.429
+将类型 t 的数组转换为类型 t 的字典。
+to transform an array of type
+T to a dictionary of type T.
+
+10
+00:00:41.429 --> 00:00:45.899
+我们首先创建一个空字典，遍历数组,
+And we begin by creating an empty
+dictionary, we iterate over the array,
+
+11
+00:00:45.899 --> 00:00:50.810
+我们试着把每个值都放进字典里，但结果不行
+we try to place each value into
+the dictionary, but it turns out we can't
+
+12
+00:00:50.810 --> 00:00:56.539
+从数组的每个成员访问这个属性 ID。
+access this property ID off
+of each member of our array.
+
+13
+00:00:56.539 --> 00:01:01.179
+原因是我们还没有宣布
+And the reason is we have
+not declared that there is
+
+14
+00:01:01.179 --> 00:01:05.390
+一个 t 必须满足的最低要求，因此,
+a minimum requirement that T must meet,
+and as a result,
+
+15
+00:01:05.390 --> 00:01:10.109
+对于函数内 t 类型的值，我们能做的很少。
+there's very little that we can do with
+values of type T inside the function.
+
+16
+00:01:10.109 --> 00:01:14.069
+在传递给函数的内容方面，它确实很灵活，但是
+It's really flexible in terms of what
+can be passed into the function, but
+
+17
+00:01:14.069 --> 00:01:18.810
+你只能做你明确要求的事情。
+you can only do the things that
+you've explicitly asked for.
+
+18
+00:01:18.810 --> 00:01:23.500
+如果我们需要访问 ID，我们必须声明 t 必须是一个对象和
+If we need to access ID,
+we must state that T must be an object and
+
+19
+00:01:23.500 --> 00:01:27.710
+它必须有一个名为 ID 的属性，这就是我们要做的。
+it must have a property called ID,
+and this is how we would do it.
+
+20
+00:01:27.710 --> 00:01:32.770
+我们接受一个 t 型，至少是
+We accept a type T, that is at least
+
+21
+00:01:33.909 --> 00:01:37.710
+具有值为字符串的属性 ID 的对象。
+an object with a property
+ID whose value is a string.
+
+22
+00:01:37.710 --> 00:01:40.140
+现在，这是一根绳子。
+And now, this would be a string.
+
+23
+00:01:40.140 --> 00:01:44.947
+这相当于做这样的事情,
+So, this is the equivalent of
+doing something like this,
+
+24
+00:01:44.947 --> 00:01:48.673
+我们可以尝试移除这个然后说,
+that we could try to remove this and
+just say,
+
+25
+00:01:48.673 --> 00:01:53.510
+我用一个数组，Mike North: Of
+I'm taking an array,
+&gt;&gt; Mike North: Of
+
+26
+00:01:53.510 --> 00:01:55.430
+看起来像这样的物体。
+objects that look like this.
+
+27
+00:01:57.250 --> 00:01:58.722
+我们可以尝试改变这种状况。
+And we could try to change this.
+
+28
+00:02:03.778 --> 00:02:06.840
+迈克 · 诺斯: 对，我们可以把这里的 t 替换掉。
+&gt;&gt; Mike North: Right, instead of T there,
+we can replace the T here.
+
+29
+00:02:06.840 --> 00:02:08.409
+我们会遇到另一个问题。
+We're gonna run into another problem.
+
+30
+00:02:08.409 --> 00:02:12.189
+所以，我基本上把这些归结为我的最低要求。
+So, I've basically boiled this
+down to my minimum requirements.
+
+31
+00:02:12.189 --> 00:02:15.710
+我说过把这个数组转换成一个字典，但是
+I've said transform this
+array to a dictionary, but
+
+32
+00:02:15.710 --> 00:02:18.170
+没有类型参数了。
+there's no type parameter any more.
+
+33
+00:02:19.170 --> 00:02:20.610
+这就是我们将遇到的问题。
+Here's the problem we'll run into.
+
+34
+00:02:22.500 --> 00:02:29.050
+第一，我们在传入任何属性时都会得到错误
+Number one, we're getting errors for
+passing in any properties
+
+35
+00:02:29.050 --> 00:02:34.829
+不仅仅是拥有一个 ID，其值是一个字符串。
+that are more than simply having
+an ID who's value is a string.
+
+36
+00:02:34.829 --> 00:02:40.091
+另一个问题是，迈克 · 诺斯: 当我们尝试访问
+The other problem we'll get is,
+&gt;&gt; Mike North: When we try to access
+
+37
+00:02:40.091 --> 00:02:45.319
+我们大大简化了这种类型，不是吗？
+things off of it, we've greatly
+simplified this type in a bad way, right?
+
+38
+00:02:45.319 --> 00:02:48.729
+我们已经失去了所有这些额外的东西。
+We've lost any of this extra
+stuff that was passed in.
+
+39
+00:02:48.729 --> 00:02:53.759
+我们想要的是能够传入任何 ID 为字符串的东西,
+What we want is to be able to pass in
+anything that has an ID that's a string,
+
+40
+00:02:53.759 --> 00:02:58.569
+把它从数组重新编排成字典。
+and to get out a rearrangement of
+this from an array to a dictionary.
+
+41
+00:03:00.030 --> 00:03:03.209
+但我们并没有失去任何忠诚,
+But we haven't lost any
+fidelity in the types,
+
+42
+00:03:03.209 --> 00:03:06.240
+我们仍然可以拿到我们放进去的所有东西。
+we still have access to
+everything we put in.
+
+43
+00:03:06.240 --> 00:03:11.193
+这就是我们要说的，好吧，不管你给我什么
+And that's where we're gonna say,
+all right whatever you give me
+
+44
+00:03:11.193 --> 00:03:16.693
+一个 t 类型的数组，我会给你一个 t 类型的字典，对吗？
+an array of type T, I'm gonna give you
+a dictionary of type T out, right?
+
+45
+00:03:16.693 --> 00:03:19.272
+你还是会继续研究你所经历的一切,
+You'll still be working
+with whatever you pass in,
+
+46
+00:03:19.272 --> 00:03:21.900
+你还是可以用字典的形式找回来。
+you'll still get it back
+in dictionary form.
+
+47
+00:03:21.900 --> 00:03:25.337
+我不会把它简化为只有 ID 的对象,
+I'm not gonna reduce it down
+to just objects that have ID,
+
+48
+00:03:25.337 --> 00:03:27.449
+你会得到你给我的东西。
+you'll have it as you gave it to me.
+
+49
+00:03:28.699 --> 00:03:31.360
+然后是类型约束，我们已经讨论过了。
+And then the type constraint,
+we already went over.
+
+50
+00:03:31.360 --> 00:03:36.917
+这相当于说，看，我不只是要采取，这是一种方式
+This is the equivalent of saying, look,
+I'm not just gonna take, it's a way of
+
+51
+00:03:36.917 --> 00:03:42.170
+在函数中说明您使用这种类型的需求。
+stating your requirements for working
+with this type within the function.
+
+52
+00:03:46.550 --> 00:03:48.164
+迈克 · 诺斯: 为什么一切都不快乐？
+&gt;&gt; Mike North: And
+why isn't everything happy?
+
+53
+00:03:48.164 --> 00:03:51.456
+我忘了最后一件事。
+I forgot one last thing.
+
+54
+00:03:51.456 --> 00:03:52.105
+现在我们没事了。
+Now we're good.
+
+55
+00:03:55.991 --> 00:04:02.336
+迈克 · 诺斯: 让我们来回顾一下，通过把这个抽象化，通过添加
+&gt;&gt; Mike North: So just to recap,
+by making this abstract, by adding
+
+56
+00:04:02.336 --> 00:04:09.021
+这个通用的概念，迈克诺斯: 我们
+this idea of a generic,
+&gt;&gt; Mike North: We
+
+57
+00:04:09.021 --> 00:04:12.746
+麦克 · 诺斯: 保留细节
+can,
+&gt;&gt; Mike North: Retain the detail of
+
+58
+00:04:12.746 --> 00:04:17.971
+我们传入的对象，即使这个函数正在做功,
+the object we passed in even though
+this function that was doing the work,
+
+59
+00:04:17.971 --> 00:04:22.795
+它对这些额外的属性一无所知。
+it knows nothing about these extra
+properties that might be there.
+
+60
+00:04:22.795 --> 00:04:28.572
+但是因为它给了我们一个空白，我们可以填补，从外面我们可以说,
+But because it's given us a blank that we
+can fill in, from the outside we can say,
+
+61
+00:04:28.572 --> 00:04:32.213
+为了调用这个函数,
+for the purposes of invoking
+this function right now,
+
+62
+00:04:32.213 --> 00:04:36.569
+我给你一个巨大的对象，在一个 ID 中有很多属性
+I'm giving you huge objects with
+lots of properties in an ID, and
+
+63
+00:04:36.569 --> 00:04:41.952
+你会找回同样的类型，你将不必处理排序最低
+you'll get those same types back, you
+won't have to deal with sort of the lowest
+
+64
+00:04:41.952 --> 00:04:46.862
+共同点，因为这让你处于一种
+common denominator, cuz that puts you
+in a position where you sort of have
+
+65
+00:04:46.862 --> 00:04:51.822
+想办法再次扩展你的类型，让它更有用。
+to like figure out a way to widen your
+types again to make this more useful.
+
+66
+00:04:56.072 --> 00:04:58.064
+像函数参数一样,
+&gt;&gt; Mike North: Like function arguments,
+
+67
+00:04:58.064 --> 00:05:01.949
+类型参数与作用域关联。
+type parameters
+are associated with a scope.
+
+68
+00:05:01.949 --> 00:05:06.894
+这里我们有一个函数返回一个函数，开始元组，完成元组,
+So here we have a function that returns
+a function, start tuple, finish tuple,
+
+69
+00:05:06.894 --> 00:05:08.310
+对吧？
+right?
+
+70
+00:05:08.310 --> 00:05:11.759
+我们使用的技术
+And we're using a technique that
+
+71
+00:05:11.759 --> 00:05:16.879
+凯尔辛普森在他的前端大师课程的函数光编程。
+Kyle Simpson in his Frontend Masters
+course on functional light programming.
+
+72
+00:05:16.879 --> 00:05:22.470
+他称之为零点编程，因为我们返回一个函数
+He calls this zero point programming
+because we're returning a function and
+
+73
+00:05:22.470 --> 00:05:26.430
+然后调用它立即返回的函数。
+then invoking the function
+that it returns immediately.
+
+74
+00:05:26.430 --> 00:05:30.620
+所以我们传入一个参数一个字符串数组,
+So we pass in one argument,
+an array of strings,
+
+75
+00:05:30.620 --> 00:05:36.360
+第二个参数，一个数字，我们得到的元组类型是。
+a second argument, a number, and
+the type of the tuple we get out is this.
+
+76
+00:05:36.360 --> 00:05:39.990
+就像 a 和 b 一样，对吧？
+So just like A and B, right?
+
+77
+00:05:39.990 --> 00:05:43.470
+这些值是常规函数参数,
+The values,
+those are regular function parameters,
+
+78
+00:05:43.470 --> 00:05:47.189
+在这里我们可以同时访问 a 和 b。
+in here we can access both A and B.
+
+79
+00:05:48.500 --> 00:05:52.600
+因为泛型就像函数一样,
+And because of this analogy where
+generics are like functions,
+
+80
+00:05:52.600 --> 00:05:55.509
+我们也可以访问 u 和 t。
+we can also access U and T.
+
+81
+00:05:55.509 --> 00:06:00.845
+现在在94号线，我们可以进入 b 区吗？
+Now out here on line 94,
+could we access B?
+
+82
+00:06:02.761 --> 00:06:04.252
+迈克 · 诺斯: 没有，而且我们也不能访问你,
+&gt;&gt; Mike North: No, and
+we can't access U either,
+
+83
+00:06:04.252 --> 00:06:07.189
+它们以同样的方式与瞄准镜联系在一起。
+they are associated with
+scopes in the same way.
+
+84
+00:06:07.189 --> 00:06:11.310
+这与我们所拥有的
+And this fits similarly to having
+
+85
+00:06:11.310 --> 00:06:16.990
+类中的类型参数，然后是该类中的方法，对吗？
+a type parameter on a class and
+then on a method within that class, right?
+
+86
+00:06:16.990 --> 00:06:19.040
+外部和内部范围。
+Outer and inner scope.
+
+87
+00:06:19.040 --> 00:06:24.389
+你可以有一个类，一个类中的方法，一个返回的函数,
+You could have a class, a method within
+the class, a function that that returns,
+
+88
+00:06:24.389 --> 00:06:30.350
+它的工作正如你所期望的，因为我发现这是一个非常有效的类比。
+it works just as you'd expect cuz I've
+found this to be a very effective analogy.

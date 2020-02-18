@@ -1,0 +1,288 @@
+WEBVTT
+
+1
+00:00:00.330 --> 00:00:04.809
+迈克 · 诺斯: 我们这里也有，类似这样的句法。
+&gt;&gt; Mike North: We also have here,
+something like this syntax here.
+
+2
+00:00:04.809 --> 00:00:09.140
+所以我一直把类型 perimeter 比作函数参数。
+So I've been likening type
+perimeters to function arguments.
+
+3
+00:00:09.140 --> 00:00:10.631
+基于这个类比,
+Based on that analogy,
+
+4
+00:00:10.631 --> 00:00:15.118
+有人能猜一下在这种情况下，什么等于什么吗？
+can someone venture a guess as to what
+equals any means in this context?
+
+5
+00:00:15.118 --> 00:00:17.690
+演讲者2: [听不见]迈克 · 诺斯: 那是什么？
+&gt;&gt; Speaker 2: [INAUDIBLE]
+&gt;&gt; Mike North: What's that?
+
+6
+00:00:17.690 --> 00:00:19.420
+演讲者2: 默认值是 any。
+&gt;&gt; Speaker 2: Default value is an any.
+
+7
+00:00:19.420 --> 00:00:19.980
+麦克 · 诺斯: 正确,
+&gt;&gt; Mike North: Correct,
+
+8
+00:00:19.980 --> 00:00:24.859
+如果没有任何类型的警戒线，我们就撤退到任何。
+if no type perimeter is provided,
+we fall back to an any.
+
+9
+00:00:24.859 --> 00:00:28.160
+这是此类型参数的默认值。
+That is the default of
+this type parameter.
+
+10
+00:00:28.160 --> 00:00:31.570
+所以在这里，如果我们盘旋在这上面,
+So here, if we hover over this,
+
+11
+00:00:31.570 --> 00:00:37.439
+这是一个任意值，这是真值的过滤器。
+this ends up being an any and
+this is sort of a filter for truth values.
+
+12
+00:00:37.439 --> 00:00:42.262
+排序通过 x 直接通过，它通过 val 直接通过。
+Sort of passes X straight through,
+it passes val straight through.
+
+13
+00:00:42.262 --> 00:00:45.070
+因此，这就是你可以期待的结果。
+And, as a result,
+this is what you could expect.
+
+14
+00:00:45.070 --> 00:00:49.159
+你将不会得到类型错误传递一个参数到这里,
+You'll get no type errors for
+passing an argument to this,
+
+15
+00:00:49.159 --> 00:00:50.979
+因为任何事情都会发生，对吗？
+cause anything goes, right?
+
+16
+00:00:52.429 --> 00:00:56.320
+所以它等价于一个默认参数值。
+So it's the equivalent of
+a default parameter value.
+
+17
+00:00:56.320 --> 00:00:57.600
+它只是一个默认类型。
+It's just a default type.
+
+18
+00:01:00.015 --> 00:01:03.817
+Mike North: 到目前为止，在我们的例子中，比如这个例子,
+&gt;&gt; Mike North: So, so far,
+in our examples, like in this example,
+
+19
+00:01:03.817 --> 00:01:07.956
+我们已经声明了这个类型参数 t 和
+we've declared that we have
+this type parameter, T, and
+
+20
+00:01:07.956 --> 00:01:11.090
+我们发现我们直接使用 t。
+we have found that we're using T directly.
+
+21
+00:01:12.140 --> 00:01:15.310
+但是你不必总是这样做，你不仅仅局限于此。
+But you don't always have to do that,
+you're not limited to that.
+
+22
+00:01:16.359 --> 00:01:21.006
+这里有一个例子，有点复杂，但是
+Here's an example,
+a little bit more complicated but
+
+23
+00:01:21.006 --> 00:01:28.722
+我从我自己的代码中抽出来的一个，迈克 · 诺斯: 当传递一个承诺时,
+one that I pulled out of my own code that,
+&gt;&gt; Mike North: When passed a promise,
+
+24
+00:01:28.722 --> 00:01:35.635
+这就像承诺类型是泛型的类型，它解析为。
+and this is like the promise type is
+generic over the type that it resolves to.
+
+25
+00:01:35.635 --> 00:01:39.772
+当我们说泛型的时候意思就是泛型,
+And when we say generic
+over that means that it is,
+
+26
+00:01:39.772 --> 00:01:46.479
+它将解析的类型抽象为，并将其作为类型参数。
+it abstracts the type that it resolves to,
+it takes it as a type parameter.
+
+27
+00:01:46.479 --> 00:01:49.379
+所以你可以有一个承诺，解析为一个数字，或者
+So you could have a promise
+that resolves to a number, or
+
+28
+00:01:49.379 --> 00:01:52.579
+一个解析为 HTTP 响应的承诺，对吗？
+a promise that resolves to
+an HTTP response, right?
+
+29
+00:01:52.579 --> 00:01:54.349
+这就是你呼叫 fetch 时得到的回应。
+That's what you get back
+when you call fetch.
+
+30
+00:01:55.879 --> 00:02:01.569
+所以 t 是参数，但我把它作为参数
+So T is the parameter, but
+I take as an argument Promise T and
+
+31
+00:02:01.569 --> 00:02:09.689
+我将根据我得到的承诺和它的类型推断出 t 必须是什么。
+I'll infer what T must be based on
+the promise that I'm given and its type.
+
+32
+00:02:09.689 --> 00:02:13.659
+它以承诺和论点为基础，以一个数作为论点,
+So it takes a promises and argument and
+it takes a number as an argument,
+
+33
+00:02:13.659 --> 00:02:19.170
+它会带回一个新的承诺，如果时间到了就会暂停。
+and it'll return a new promise
+that'll either time out if time's up.
+
+34
+00:02:19.170 --> 00:02:21.930
+或者承诺在时间到之前就结束了,
+Or if the promise resolves
+before it time's up,
+
+35
+00:02:21.930 --> 00:02:25.259
+它实际上会传递这个承诺的结果值。
+it'll actually pass through
+the result value of that promise.
+
+36
+00:02:25.259 --> 00:02:28.241
+这里是实现，应该有意义。
+And here is the implementation,
+should hopefully make sense.
+
+37
+00:02:28.241 --> 00:02:31.759
+它叫做 setTimeout。
+It's called setTimeout.
+
+38
+00:02:31.759 --> 00:02:36.240
+为了取消超时，setTimeout 返回的内容是必要的
+This thing that setTimeout returns is
+necessary in order to cancel the timeout
+
+39
+00:02:36.240 --> 00:02:36.750
+后来。
+later on.
+
+40
+00:02:37.800 --> 00:02:43.449
+如果没有其他事情发生，这一切都是为了拒绝承诺。
+And it's all set up, if nothing else
+happens, to reject the promise.
+
+41
+00:02:45.439 --> 00:02:48.146
+如果承诺解除，我们取消超时。
+If the promise resolves,
+we cancel the timeout.
+
+42
+00:02:48.146 --> 00:02:51.490
+还没完成,
+It's not finished,
+
+43
+00:02:51.490 --> 00:02:55.740
+我们传递给 setTimeout 的回调可能永远不会被调用。
+the callback that we passed to
+setTimeout may never get invoked.
+
+44
+00:02:55.740 --> 00:02:57.610
+然后我们用值来解析。
+And then we resolve with the value.
+
+45
+00:02:57.610 --> 00:03:02.599
+注意，我不需要传入任何带有尖括号的内容。
+Note that I don't have to pass in
+anything with angle brackets here.
+
+46
+00:03:02.599 --> 00:03:07.750
+原因是 fetch 返回一个承诺，解析为一个响应。
+And the reason is fetch returns
+a promise that resolves to a response.
+
+47
+00:03:07.750 --> 00:03:11.548
+通过接受这个论点,
+And so through receiving this an argument,
+
+48
+00:03:11.548 --> 00:03:15.780
+类型脚本指出 t 必须是一个响应。
+type script figures out
+that T must be a response.
+
+49
+00:03:17.090 --> 00:03:21.870
+它推断出 t 是什么，通过某种程度上从承诺或
+It infers what T is by kind of
+plucking it out of the promise or
+
+50
+00:03:21.870 --> 00:03:23.000
+这种承诺。
+the type of the promise.

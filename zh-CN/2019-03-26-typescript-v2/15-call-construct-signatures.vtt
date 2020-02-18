@@ -1,0 +1,277 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.117
+我们可以使用一个接口来描述一个呼叫签名。
+&gt;&gt; Mike North: We can use an interface
+to describe a call signature.
+
+2
+00:00:03.117 --> 00:00:09.234
+我们只是用括号来描述一个函数。
+And we're simply using parenthesis
+here to this describe a function.
+
+3
+00:00:09.234 --> 00:00:14.404
+现在我们开始看到接口可以描述对象,
+Now, what we're starting to see is
+interfaces can describe objects,
+
+4
+00:00:14.404 --> 00:00:17.175
+接口可以描述函数。
+interfaces can describe functions.
+
+5
+00:00:17.175 --> 00:00:22.577
+稍后，我们将看到接口可以描述数组。
+In a moment, we'll see that
+interfaces can describe arrays.
+
+6
+00:00:22.577 --> 00:00:27.568
+所以我们只处理 JavaScript 值
+So we're dealing exclusively
+with JavaScript values
+
+7
+00:00:27.568 --> 00:00:31.806
+从 JavaScript 对象类型扩展而来。
+that extend from
+the JavaScript object type.
+
+8
+00:00:31.806 --> 00:00:36.906
+我们还没有看到，我们也不会看到，一个界面能够
+We've not yet seen, and we won't see,
+an interface being able to
+
+9
+00:00:36.906 --> 00:00:43.116
+处理基元类型，或与类型(如字符串或数字)一起使用的运算符。
+handle primitive types, or operators
+used with types, like string or number.
+
+10
+00:00:43.116 --> 00:00:46.232
+没有办法用接口来描述它。
+There is no way to describe
+that with an interface.
+
+11
+00:00:46.232 --> 00:00:49.100
+这就是我们在这里看到的一个明显的区别。
+So that's one clear
+difference we're seeing here.
+
+12
+00:00:49.100 --> 00:00:52.112
+类型别名非常灵活。
+Type aliases are extremely flexible.
+
+13
+00:00:52.112 --> 00:00:53.904
+他们可以处理原始的东西。
+They can handle the primitive stuff.
+
+14
+00:00:53.904 --> 00:00:58.959
+它们可以处理接口可以处理的大多数事情。
+They can handle most things
+that an interface can handle.
+
+15
+00:00:58.959 --> 00:01:00.768
+接口可以处理的所有事情。
+Everything that an interface can handle.
+
+16
+00:01:00.768 --> 00:01:05.147
+但是接口仅限于 JavaScript 对象和
+But interfaces are limited
+to JavaScript object and
+
+17
+00:01:05.147 --> 00:01:09.236
+子类型，包括数组和函数。
+sub types which includes arrays and
+functions.
+
+18
+00:01:09.236 --> 00:01:11.387
+有原型的东西，就这么想吧。
+Things that have prototypes,
+think of it that way.
+
+19
+00:01:11.387 --> 00:01:14.090
+这是一个函数签名。
+So here is a function signature.
+
+20
+00:01:14.090 --> 00:01:17.496
+这里是类型的等价物，对吗？
+And here is the equivalent with the type,
+right?
+
+21
+00:01:17.496 --> 00:01:22.908
+包装在这里有点不合适，但是同样的想法。
+The wrapping is a little unfortunate here,
+but same idea.
+
+22
+00:01:22.908 --> 00:01:28.355
+这是一个签名，也是我想指出的唯一区别
+This is one signature and
+the only difference I wanna really point
+
+23
+00:01:28.355 --> 00:01:33.813
+因为它有点微妙，回报在这里是空白的，: 空白。
+out cuz it's a little subtle,
+the return is void here, :void.
+
+24
+00:01:33.813 --> 00:01:39.127
+为了使解析成为可能，我们在这里使用了胖箭头
+And just to make parsing possible,
+we use a fat arrow here
+
+25
+00:01:39.127 --> 00:01:45.563
+定义具有类型别名的函数类型时，这将无效。
+to define a function type with a type
+alias, this would not be valid.
+
+26
+00:01:52.841 --> 00:01:54.882
+关于函数类型有一个很酷的地方,
+&gt;&gt; Mike North: One cool
+thing about function types,
+
+27
+00:01:54.882 --> 00:01:57.635
+这里应该更漂亮一点。
+a little prettier it's
+supposed to be right here.
+
+28
+00:01:57.635 --> 00:02:04.459
+函数类型有一个很酷的地方，那就是我们可以得到一种叫做上下文推理的东西。
+One cool thing about function types is we
+get something called contextual inference.
+
+29
+00:02:04.459 --> 00:02:06.822
+我们已经定义了这种类型。
+So we've already defined this type.
+
+30
+00:02:06.822 --> 00:02:08.356
+联系人1。
+Contactmessenger1.
+
+31
+00:02:08.356 --> 00:02:11.067
+就在这里，对吧？
+That's right up here, right?
+
+32
+00:02:13.730 --> 00:02:18.014
+迈克 · 诺斯: 看来我们不需要任何额外的工作了。
+&gt;&gt; Mike North: It turns out like
+we don't need any additional work.
+
+33
+00:02:18.014 --> 00:02:22.836
+没有额外的类型信息来确定返回类型应该是什么。
+No additional type information in order to
+figure out what the return type should be.
+
+34
+00:02:22.836 --> 00:02:24.954
+这些参数类型应该是什么。
+What should these arguments type be.
+
+35
+00:02:24.954 --> 00:02:27.287
+或者论证时间应该是多少。
+Or what should the argument times be.
+
+36
+00:02:27.287 --> 00:02:31.210
+这些都是免费的，因为这些信息都存在于这里。
+That's all coming along for
+free because that information exist here.
+
+37
+00:02:31.210 --> 00:02:34.716
+你会看到同样的好处通过回电，对不对？
+You'll see the same benefit come
+through with call backs, right?
+
+38
+00:02:34.716 --> 00:02:40.396
+如果你说我接受回电，它的价值就像签名应该是这样。
+If you say I accept the call back and it's
+value like the signature should be this.
+
+39
+00:02:40.396 --> 00:02:44.879
+现在，在每个调用站点上，每次你传回一个调用,
+Now, at every invocation site,
+every time you pass a call back along,
+
+40
+00:02:44.879 --> 00:02:47.284
+你可以忘记类型信息。
+you can forget the type information.
+
+41
+00:02:47.284 --> 00:02:50.980
+类型检查仍然按照原来的方式进行，但是
+The type checking still happens
+exactly as it would, but
+
+42
+00:02:50.980 --> 00:02:54.062
+你不用一路上说得这么清楚。
+you don't need to be so
+explicit along the way.
+
+43
+00:02:57.746 --> 00:03:00.358
+Mike North: 构造签名看起来非常类似于调用签名。
+&gt;&gt; Mike North: Construct signatures
+look very similar to call signatures.
+
+44
+00:03:00.358 --> 00:03:04.530
+你所需要的就是新的领导。
+All you need is new head of that.
+
+45
+00:03:04.530 --> 00:03:07.710
+你已经习惯在课堂上看到这些了，对吧？
+You're used to seeing this in a class,
+right?
+
+46
+00:03:07.710 --> 00:03:11.580
+类是什么东西，它们是新的，我们可以使用新的关键字。
+Classes are something, they're new-able,
+we can use the new keyword with them.
+
+47
+00:03:11.580 --> 00:03:16.765
+所以这是一种描述实例化构造函数的方法
+So this would be a way of describing
+a constructor that instantiates either
+
+48
+00:03:16.765 --> 00:03:22.379
+有电子邮件地址或者电话号码的东西，而且肯定有名字。
+things that have an email address or a
+phone number, and definitely have a name.
