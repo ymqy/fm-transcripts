@@ -1,572 +1,690 @@
 WEBVTT
 
 1
-00:00:00.320 --> 00:00:02.150
+00:00:00.320 --> 00:00:02.149
+威尔 · 森坦斯: 让我们进入结对编程的人们,
 &gt;&gt; Will Sentance: Let's go
 into Pair Programming folks,
 
 2
-00:00:02.150 --> 00:00:05.400
+00:00:02.149 --> 00:00:05.400
+我们会先遇到这些东西
 we're gonna start encountering
 these things first, and
 
 3
 00:00:05.400 --> 00:00:09.730
+然后，事后，实际解决它们，看看它们是如何工作的。
 then, afterwards, actually resolving
 them and seeing how they work.
 
 4
 00:00:09.730 --> 00:00:12.400
+所以你会首先看到高阶函数
 So you're gonna start seeing
 high order functions first, and
 
 5
 00:00:12.400 --> 00:00:15.570
+然后我们自己解决。
 then we're gonna start actually
 resolving them ourselves.
 
 6
 00:00:15.570 --> 00:00:19.760
+所以，我们要使用结对编程来做到这一点，这是迄今为止和
 So, we're gonna use Pair Programming
 to do so, this is by far and
 
 7
-00:00:19.760 --> 00:00:22.430
+00:00:19.760 --> 00:00:22.429
+作为一个工程师，最有效的成长方式。
 away the most effective way
 to grow as an engineer.
 
 8
-00:00:22.430 --> 00:00:24.170
+00:00:22.429 --> 00:00:24.170
+如果你以前做过，你可能已经知道这一点，但是
 If you've done it before,
 you probably already know this, but
 
 9
 00:00:24.170 --> 00:00:26.070
+我们要用一种非常有效的方法。
 we're going to do it in
 a really effective way here.
 
 10
-00:00:26.070 --> 00:00:30.110
+00:00:26.070 --> 00:00:30.109
+看看这个，如果你想把自己打造成一个工程师,
 Take a look at this, if you
 are building yourself as an engineer,
 
 11
-00:00:30.110 --> 00:00:32.750
+00:00:30.109 --> 00:00:32.750
+你经常会陷入两个非常危险的陷阱。
 you fall into often two very risky traps.
 
 12
-00:00:32.750 --> 00:00:36.230
+00:00:32.750 --> 00:00:36.229
+一个是研究者，一个是堆叠叠花，两者都是
 One is the researcher and
 one is the Stack Overflower, both
 
 13
-00:00:36.230 --> 00:00:39.356
+00:00:36.229 --> 00:00:39.356
+正在逃避成为一名工程师的真正意义，我马上就会告诉你们。
 are avoiding what it really is to be an
 engineer, which I'll tell you in a second.
 
 14
 00:00:39.356 --> 00:00:44.380
+研究人员避免成为一名工程师,
 The researcher avoids what
 it is to be an engineer,
 
 15
 00:00:44.380 --> 00:00:49.600
+就是能够击中整个街区并以某种方式解决它,
 which is to be able to hit a whole
 block and somehow resolve through it,
 
 16
-00:00:49.600 --> 00:00:53.620
+00:00:49.600 --> 00:00:53.619
+这就是作为一个工程师的全部，我们到底要怎么做呢？
 that is all it is to be an engineer,
 how do we actually do that?
 
 17
-00:00:53.620 --> 00:00:56.180
+00:00:53.619 --> 00:00:56.179
+我早该想到的我们应该这么做,
 I should have figured out,
 here's how we do it,
 
 18
-00:00:56.180 --> 00:00:59.864
+00:00:56.179 --> 00:00:59.863
+这是我们如何实际解决打击整个街区，我们通过代码。
 here's how we actually resolve hitting
 a whole block we go through the code.
 
 19
-00:00:59.864 --> 00:01:04.250
+00:00:59.863 --> 00:01:04.250
+当我们在那个一行一行地阻塞我们并且理解数据的位上时，他们
 When we on that bit that's blocking us
 line by line and understand the data, they
 
 20
-00:01:04.250 --> 00:01:09.610
+00:01:04.250 --> 00:01:09.609
+我们称之为状态，当你一行一行地查看活动数据时，这就是调试。
 call it the state, the live data as you go
 through line by line, that is debugging.
 
 21
-00:01:09.610 --> 00:01:14.665
+00:01:09.609 --> 00:01:14.664
+它会命中一个块并假设代码，然后进行控制台日志记录
 It's hitting a block and assuming
 the code, and then console logging
 
 22
-00:01:14.665 --> 00:01:19.770
+00:01:14.664 --> 00:01:19.769
+使用其他调试工具，一行一行地查看数据。
 essential using some other debugging tool,
 the data as you go through, line by line.
 
 23
-00:01:19.770 --> 00:01:22.140
+00:01:19.769 --> 00:01:22.140
+虽然我们喜欢避免这样做,
 We love to avoid doing that though,
 
 24
 00:01:22.140 --> 00:01:26.280
+我们会不惜一切代价避免这个过程，我们会养成这样的习惯
 we will do anything to avoid doing that
 process, we gonna get in that habit of
 
 25
 00:01:26.280 --> 00:01:30.430
+我们会尽一切努力，包括这里的一两件事。
 doing so we'll do anything we can,
 including one or two these things here.
 
 26
 00:01:30.430 --> 00:01:35.150
+我们成为了研究者，那个障碍，我们看到了神秘的一面,
 We become the researcher, that block,
 we look at the mystery bit,
 
 27
-00:01:35.150 --> 00:01:36.800
+00:01:35.150 --> 00:01:36.799
+也许是个新的关键词。
 maybe it's a new key word.
 
 28
-00:01:36.800 --> 00:01:42.120
+00:01:36.799 --> 00:01:42.120
+在接下来的三天里，我们阅读了所有关于
 And we spend the following three
 days reading every last thing about
 
 29
-00:01:42.120 --> 00:01:47.190
+00:01:42.120 --> 00:01:47.189
+新的关键词，以及原型链的所有方面，非常棒。
 the new keyword, and about all aspects
 of the prototype chain, and wonderful.
 
 30
-00:01:47.190 --> 00:01:50.694
+00:01:47.189 --> 00:01:50.694
+然而，我们不写一行代码，我们避免了块,
 And yet we don't write a single
 line of code, we avoid the block,
 
 31
 00:01:50.694 --> 00:01:54.918
+另一种方法是从 Stack Overflow 获取代码片段来修复 bug。
 the other approach is to grab snippets of
 code to fix a bug from Stack Overflow.
 
 32
 00:01:54.918 --> 00:01:57.216
+当我们插上电源不能工作时,
 And when that one when we plug it in,
 doesn't work,
 
 33
-00:01:57.216 --> 00:01:59.320
+00:01:57.216 --> 00:01:59.319
+把这段加上我们加进去的部分。
 take that snippet plus the bit we added.
 
 34
-00:01:59.320 --> 00:02:03.510
+00:01:59.319 --> 00:02:03.510
+把它放到 Stack Overflow 中，然后说，这些位是如何粘在一起的？
 Put it in the Stack Overflow, and say,
 how do these bits, stick together?
 
 35
 00:02:03.510 --> 00:02:08.550
+两者都不是有效的，都是作为一个工程师所必需的,
 Neither is effective in its own isolation,
 both are necessary to being an engineer,
 
 36
-00:02:08.550 --> 00:02:10.470
+00:02:08.550 --> 00:02:10.469
+你们在职业生涯的第一年就这么做了，这两个都是。
 you've done this in the first year
 of your careers, both of these.
 
 37
-00:02:10.470 --> 00:02:14.255
+00:02:10.469 --> 00:02:14.254
+可能是这样的，是的，就是这样的，但是你必须要做得更好
 That's probably, yeah, that's how it is,
 but you've gotta get better at
 
 38
-00:02:14.255 --> 00:02:18.114
+00:02:14.254 --> 00:02:18.114
+平衡这两者，以及最重要的部分。
 balancing those two and the really
 important bit which is just going through.
 
 39
-00:02:18.114 --> 00:02:22.386
+00:02:18.114 --> 00:02:22.385
+并在控制台日志的帮助下逐行分析代码
 And analyzing the code yourself line by
 line by line with the help of console logs
 
 40
-00:02:22.386 --> 00:02:24.697
+00:02:22.385 --> 00:02:24.697
+或者调试工具的帮助。
 or the help of some
 sort of debugging tool.
 
 41
-00:02:24.697 --> 00:02:26.330
+00:02:24.697 --> 00:02:26.329
+然后，是的，去理解和
 And then yes, going to understand and
 
 42
-00:02:26.330 --> 00:02:29.760
+00:02:26.329 --> 00:02:29.759
+建立你的基本原则，理解这就是研究者。
 building your underlying principles
 understanding that's the researcher.
 
 43
-00:02:29.760 --> 00:02:33.491
+00:02:29.759 --> 00:02:33.490
+但是有时候你会说，我不知道它是怎么工作的,
 And yet taking snippets that sometimes
 you just go, I don't know how it works,
 
 44
-00:02:33.491 --> 00:02:36.276
+00:02:33.490 --> 00:02:36.276
+是魔法，但它的工作，这是一个工程师的一部分，但
 is magic but it works,
 that’s part of being an engineer but
 
 45
-00:02:36.276 --> 00:02:38.470
+00:02:36.276 --> 00:02:38.469
+你得保持平衡。
 you gotta get that balance right.
 
 46
-00:02:38.470 --> 00:02:41.690
+00:02:38.469 --> 00:02:41.689
+这样做的途径是结对编程,
 And the route to do so
 is Pair Programming,
 
 47
-00:02:41.690 --> 00:02:45.700
+00:02:41.689 --> 00:02:45.699
+你可以解决困难的问题，还有个同伙和你一起犯罪。
 you get to tackle tough blocks and
 you got a partner in crime alongside you.
 
 48
-00:02:45.700 --> 00:02:50.900
+00:02:45.699 --> 00:02:50.900
+你必须专注于手头的问题，因为你不能逃避。
 You get to stay focused on the problem
 at hand because you can’t run away.
 
 49
 00:02:50.900 --> 00:02:54.360
+去泡一杯茶因为他们就坐在你旁边,
 To make a cup of tea, because they're
 literally sitting there right beside you,
 
 50
 00:02:54.360 --> 00:02:56.750
+你也不能花太多时间做这些事。
 and you also can't spend too
 much time doing these things.
 
 51
 00:02:56.750 --> 00:02:57.870
+所以研究人员,
 So the researcher,
 
 52
 00:02:57.870 --> 00:03:00.620
+我仍然记得我第一次和一个叫约翰的人进行结对编程。
 I still remember my first time pair
 programming with a guy called John.
 
 53
-00:03:00.620 --> 00:03:01.754
+00:03:00.620 --> 00:03:01.753
+他坐在我旁边
 And he sits next to me, and
 
 54
-00:03:01.754 --> 00:03:04.860
+00:03:01.753 --> 00:03:04.860
+他说，你不介意我们先研究一下这个吧。
 he's like, do you mind if we do some
 sort of reading up on this first.
 
 55
-00:03:04.860 --> 00:03:08.129
+00:03:04.860 --> 00:03:08.128
+我说当然然然后大概8分钟他说,
 And I said of course, and
 then like eight minutes he then says,
 
 56
-00:03:08.129 --> 00:03:09.793
+00:03:08.128 --> 00:03:09.793
+你介意我开始吗
 do you mind if I get started, and
 
 57
-00:03:09.793 --> 00:03:14.214
+00:03:09.793 --> 00:03:14.213
+我想要读完每一本书，我想先全部理解，对吗？
 I was like I wanted to read up on every,
 I wanna understand it all first, right?
 
 58
-00:03:14.214 --> 00:03:16.410
+00:03:14.213 --> 00:03:16.409
+我做不到，我的搭档在等我
 I couldn't, my partner was waiting for
 
 59
-00:03:16.410 --> 00:03:21.080
+00:03:16.409 --> 00:03:21.079
+我他们准备运行，我也不能只是给他们一个代码片段。
 me they were ready to run, I also
 couldn't just give them a code snippet.
 
 60
-00:03:21.080 --> 00:03:24.279
+00:03:21.079 --> 00:03:24.278
+我记得有一次我在处理纸张，有一个叫爱丽丝的人
 I remember a time I was working with
 paper and someone called Alice and
 
 61
-00:03:24.279 --> 00:03:26.276
+00:03:24.278 --> 00:03:26.276
+我不能只给他们一个代码片段。
 I couldn't just give them a code snippet.
 
 62
 00:03:26.276 --> 00:03:29.336
+因为他们不告诉我为什么要用这个,
 Because they were like, won't talk
 me through why we're using this,
 
 63
-00:03:29.336 --> 00:03:30.720
+00:03:29.336 --> 00:03:30.719
+它是如何解决问题的。
 how it's solving the problem.
 
 64
 00:03:31.930 --> 00:03:36.430
+当我们结对编程来表达和解释我们的代码时，我们就是傻瓜
 We are fools when we pair programming
 to verbalize and explain our code and
 
 65
 00:03:36.430 --> 00:03:40.310
+因此，不仅使它单独工作的一些元素，但
 therefore not just make it work
 alone some element of that but
 
 66
-00:03:40.310 --> 00:03:42.140
+00:03:40.310 --> 00:03:42.139
+理解我们所做的。
 understanding as we go.
 
 67
-00:03:42.140 --> 00:03:47.400
+00:03:42.139 --> 00:03:47.400
+这是另一个重要的部分，它将改进我们的技术沟通,
 And that's the other big piece here, it's
 gonna refine our technical communication,
 
 68
-00:03:47.400 --> 00:03:49.390
+00:03:47.400 --> 00:03:49.389
+我们的配对程序是这样的。
 the way we pair program is this.
 
 69
-00:03:49.390 --> 00:03:52.887
+00:03:49.389 --> 00:03:52.887
+如果我是导航员，我会看提示符，然后
 If I'm navigator,
 I'm looking at the prompt and
 
 70
 00:03:52.887 --> 00:03:56.400
+我看到它说，我让 twitteapi 变得很酷。
 I'm seeing it says,
 I make it cool to Twitte API.
 
 71
-00:03:56.400 --> 00:04:01.220
+00:03:56.400 --> 00:04:01.219
+我现在要带领我的伴侣，他们的手放在键盘上打字
 I'm now going to lead my partner their
 hands are on the keyboard typing and
 
 72
-00:04:01.220 --> 00:04:02.908
+00:04:01.219 --> 00:04:02.907
+实际上执行代码本身
 actually executing the code itself and
 
 73
-00:04:02.908 --> 00:04:07.032
+00:04:02.907 --> 00:04:07.032
+然后口头解释一个策略，他们必须变成实际的代码。
 then verbally explain a strategy that
 they must turn into actual code.
 
 74
 00:04:07.032 --> 00:04:11.590
+他们不能下车，他们不能做到他们的方式，他们必须采取我的解释和
 They can't get off, they can't do it their
 way they have to take my explanation and
 
 75
-00:04:11.590 --> 00:04:14.760
+00:04:11.590 --> 00:04:14.759
+如果他们不理解我的解释,
 implement it and if they're not
 understanding my explanation,
 
 76
-00:04:14.760 --> 00:04:16.050
+00:04:14.759 --> 00:04:16.050
+这都是我的功劳。
 that's all in me.
 
 77
 00:04:16.050 --> 00:04:20.980
+我不能说，嘿，实际上，让我告诉你怎么做,
 I can't say, hey, actually,
 let me just show you how to do it,
 
 78
 00:04:20.980 --> 00:04:23.240
+我必须能够如此清晰地表达出来
 I've got to be able to
 verbalize with such clarity and
 
 79
-00:04:23.240 --> 00:04:27.630
+00:04:23.240 --> 00:04:27.629
+精确的直观风格，我的搭档可以把它变成真正的代码。
 precision intuitive style, that my partner
 can actually turn it into real code.
 
 80
-00:04:27.630 --> 00:04:32.890
+00:04:27.629 --> 00:04:32.889
+这真是了不起，它将使我的技术沟通达到无法估量的程度。
 That is remarkable, it's gonna refine my
 technical communication beyond measure.
 
 81
-00:04:32.890 --> 00:04:37.310
+00:04:32.889 --> 00:04:37.310
+为什么结对编程如此重要,
 Why pair programming is so important as
 a team doing these industry reviews with,
 
 82
 00:04:37.310 --> 00:04:42.040
+你知道的，工程经理和工业界的人来教我们的课程。
 you know, engineering managers and
 folks in industry for our curriculum.
 
 83
 00:04:42.040 --> 00:04:44.600
+这个新课程让我们这么做，但是
 This new curriculum is
 what makes us do it, but
 
 84
 00:04:44.600 --> 00:04:47.290
+不管他们让我们复习新课程,
 whatever they make us
 review the new curriculum,
 
 85
-00:04:47.290 --> 00:04:48.950
+00:04:47.290 --> 00:04:48.949
+因为和我们合作的是政府机构。
 because it's government agency
 that we're doing it with.
 
 86
-00:04:48.950 --> 00:04:53.330
+00:04:48.949 --> 00:04:53.329
+就是这样，听到他们的声音真让人吃惊
 So there you go,
 it's astonishing to hear them
 
 87
-00:04:53.330 --> 00:04:57.560
+00:04:53.329 --> 00:04:57.560
+谈论他们的高级工程师，他们可能会感到沮丧。
 talk about their senior engineers
 that they are may be frustrated with.
 
 88
 00:04:57.560 --> 00:05:03.990
+谁不能用语言表达他们的代码，这是一个巨大的障碍，一个公司。
 Who cannot verbalize their code well,
 that is a massive hindrance to a company.
 
 89
 00:05:03.990 --> 00:05:05.290
+所以即使你经验丰富,
 So even if you're very seasoned,
 
 90
 00:05:05.290 --> 00:05:08.240
+这是一个很好的机会，可以有效地表达你的代码。
 this is a huge opportunity to
 verbalize your code effectively.
 
 91
-00:05:08.240 --> 00:05:11.030
+00:05:08.240 --> 00:05:11.029
+所以就这样，就像我说的，你要接受挑战，一个提示，然后
 So there we go, as I say, you're
 gonna take a challenge, a prompt, and
 
 92
-00:05:11.030 --> 00:05:12.070
+00:05:11.029 --> 00:05:12.069
+其中之一就是领航员。
 one of this'll mean navigator.
 
 93
-00:05:12.070 --> 00:05:16.170
+00:05:12.069 --> 00:05:16.170
+我要口头解释一个策略口头上的伪代码,
 I'm gonna be explaining a strategy
 verbally, verbal pseudocode,
 
 94
-00:05:16.170 --> 00:05:19.590
+00:05:16.170 --> 00:05:19.589
+所以对于一个要用实际代码执行的合伙人来说。
 so to speak to a partner who's gonna
 be executing it in actual code.
 
 95
-00:05:19.590 --> 00:05:23.720
+00:05:19.589 --> 00:05:23.720
+好的，你要这样做，你知道，5分钟的领航员,
 Okay, you're going to do it for,
 you know, five minutes navigator,
 
 96
-00:05:23.720 --> 00:05:26.010
+00:05:23.720 --> 00:05:26.009
+五分钟，司机和女巫结束。
 five minutes driver and witch over.
 
 97
-00:05:26.010 --> 00:05:28.960
+00:05:26.009 --> 00:05:28.959
+顺便说一句如果你认为你的伴侣走错路了,
 If you do think by the way,
 your partner's going off on a bad route,
 
 98
-00:05:28.960 --> 00:05:30.920
+00:05:28.959 --> 00:05:30.920
+不要阻止他们，不要说我认为那不会起作用。
 don't block them,
 don't say I think that's not gonna work.
 
 99
 00:05:30.920 --> 00:05:35.430
+让它发生吧按 Run 你会看到 bug 不是错误,
 Let it happen, press Run,
 you're gonna see a bug is not a mistake,
 
 100
-00:05:35.430 --> 00:05:39.880
+00:05:35.430 --> 00:05:39.879
+你现在知道这个窃听器，可以用来识别问题所在。
 the bug is something that you now know can
 be used to identify what the problem was.
 
 101
-00:05:39.880 --> 00:05:40.625
+00:05:39.879 --> 00:05:40.625
+太棒了,
 That's awesome,
 
 102
-00:05:40.625 --> 00:05:43.469
+00:05:40.625 --> 00:05:43.468
+你可以成为一个调试器，在那里你已经知道什么是坏的。
 you get to be a debugger with them
 where you already know what's broken.
 
 103
-00:05:43.469 --> 00:05:46.811
+00:05:43.468 --> 00:05:46.810
+还有一些奇怪的错误就像你知道的记号什么的,
 And something that weird error that's
 like, you know, token whatever,
 
 104
-00:05:46.811 --> 00:05:48.040
+00:05:46.810 --> 00:05:48.040
+这不是什么秘密。
 now, it's not a mystery.
 
 105
 00:05:48.040 --> 00:05:50.000
+这是你可以做到的,
 It's something you actually can, you know,
 
 106
-00:05:50.000 --> 00:05:52.880
+00:05:50.000 --> 00:05:52.879
+幕后的东西是错误的，这实际上是很好的。
 what's behind the scene's wrong,
 that's pretty nice actually.
 
 107
-00:05:52.880 --> 00:05:55.089
+00:05:52.879 --> 00:05:55.088
+好吧顺便说一句有一半的时间是对的
 Okay, and by the way,
 half the time that may be right and
 
 108
-00:05:55.089 --> 00:05:57.023
+00:05:55.088 --> 00:05:57.023
+根据策略，我们走吧，伙计们。
 according to the strategy,
 there we go people.
 
 109
 00:05:57.023 --> 00:06:01.098
+我们要结对编程，我们要用旧的风格，我们要去
 We're going to pair program and we are
 going to do the old style and we're going
 
 110
-00:06:01.098 --> 00:06:05.130
+00:06:01.098 --> 00:06:05.129
+通过这个九件事的列表，你们看到了。
 to go through this list of nine things,
 have reached thing that you see here.
 
 111
-00:06:05.130 --> 00:06:09.616
+00:06:05.129 --> 00:06:09.615
+给自己一个积分，总分在1到9之间,
 Give yourself a point to get
 a total of between one and nine,
 
 112
-00:06:09.616 --> 00:06:13.025
+00:06:09.615 --> 00:06:13.024
+是的如果你以前都做过,
 yes, so
 if you've done all of these before,
 
 113
-00:06:13.025 --> 00:06:18.166
+00:06:13.024 --> 00:06:18.165
+这些你都考虑过了，你的总分是，九分。
 you've covered all of these,
 your score is, total out of, nine.
 
 114
-00:06:18.166 --> 00:06:21.391
+00:06:18.165 --> 00:06:21.391
+我不知道这是怎么被切断的，总共9个，如果你做了所有这些,
 I don't know how that got cut off, a total
 out of nine, if you've done all of these,
 
 115
 00:06:21.391 --> 00:06:22.492
+你得了9分。
 you've got a score of nine.
 
 116
-00:06:22.492 --> 00:06:25.844
+00:06:22.492 --> 00:06:25.843
+如果你按顺序做了三个，得分是三，按顺序做了五个,
 If you've done three of them in any order,
 score of three, five of them in any order,
 
 117
-00:06:25.844 --> 00:06:27.060
+00:06:25.843 --> 00:06:27.060
+五分。
 score of five.
 
 118
 00:06:27.060 --> 00:06:28.660
+好的，一旦你知道了你的记录,
 Okay, once you know your tally,
 
 119
 00:06:28.660 --> 00:06:31.680
+各位，我们又回到了老式的哈利波特风格。
 people, we are back to the old
 school Harry Potter style.
-

@@ -1,1137 +1,1380 @@
 WEBVTT
 
 1
-00:00:00.120 --> 00:00:02.622
+00:00:00.120 --> 00:00:02.621
+威尔 · 森坦斯: 但是现在，我实际上想在这里补充一些东西。
 &gt;&gt; Will Sentance: But for now,
 I actually want to add something here.
 
 2
-00:00:02.622 --> 00:00:05.972
+00:00:02.621 --> 00:00:05.972
+我想要一点奖金，和我们刚才看到的有关。
 I want a little bonus here,
 related to what we just saw.
 
 3
-00:00:05.972 --> 00:00:12.783
+00:00:05.972 --> 00:00:12.782
+我想介绍箭头函数，一种保存代码的简便方法。
 I want to introduce arrow functions,
 a shorthand way to save our code.
 
 4
-00:00:12.783 --> 00:00:14.033
+00:00:12.782 --> 00:00:14.032
+让我们看看这里。
 Let's have a look at this here.
 
 5
-00:00:14.033 --> 00:00:16.563
+00:00:14.032 --> 00:00:16.562
+我们已经得到了原始的函数定义。
 We've got our original
 function definition up here.
 
 6
-00:00:16.563 --> 00:00:18.148
+00:00:16.562 --> 00:00:18.147
+我们知道它是一个函数因为,
 We know it's a function because look,
 
 7
-00:00:18.148 --> 00:00:20.269
+00:00:18.147 --> 00:00:20.268
+前面有个漂亮的单词功能。
 it's got the beautiful word
 function at the front.
 
 8
-00:00:20.269 --> 00:00:21.996
+00:00:20.268 --> 00:00:21.995
+在我看来，这是非常可读的。
 That is, in my view, really readable.
 
 9
-00:00:21.996 --> 00:00:23.958
+00:00:21.995 --> 00:00:23.957
+我知道函数什么时候出现。
 I know exactly when
 the function's showing up.
 
 10
-00:00:23.958 --> 00:00:27.038
+00:00:23.957 --> 00:00:27.038
+它有一个身体，它有一个参数。
 It's got a body and it's got a parameter.
 
 11
 00:00:27.038 --> 00:00:30.812
+当我最终运行乘以2加上一点点3时,
 That when I end up running multiply
 by two with a bit of three,
 
 12
-00:00:30.812 --> 00:00:33.336
+00:00:30.812 --> 00:00:33.335
+它会在输入端插入3。
 it's going to insert three into input.
 
 13
-00:00:33.336 --> 00:00:36.976
+00:00:33.335 --> 00:00:36.975
+三乘二返回六进输出。
 Three by two return out six into output.
 
 14
-00:00:36.976 --> 00:00:39.804
+00:00:36.975 --> 00:00:39.804
+还有其他方法可以保存函数。
 There are other ways to save functions.
 
 15
 00:00:39.804 --> 00:00:41.173
+让我们看看下一个版本。
 Let's look at the next version down.
 
 16
 00:00:41.173 --> 00:00:45.091
+这些都忽略了一个事实，那就是我们通过阅读来获得控制台。
 Each of these ignore the fact that we
 read acquiring a console our way through.
 
 17
 00:00:45.091 --> 00:00:48.762
+这不是每次的单个代码文件。
 This is not the individual
 files of code each time.
 
 18
 00:00:48.762 --> 00:00:50.109
+下一行。
 Next line down.
 
 19
-00:00:50.109 --> 00:00:54.760
+00:00:50.109 --> 00:00:54.759
+现在我们在这里声明引入 ESX 的所谓箭头函数。
 We now here declare what's known as
 an arrow function introducing ESX.
 
 20
-00:00:54.760 --> 00:00:59.537
+00:00:54.759 --> 00:00:59.536
+记住函数定义可以被存储，分配给标签。
 Remember function definitions can
 be stored, assigned to labels.
 
 21
-00:00:59.537 --> 00:01:01.766
+00:00:59.536 --> 00:01:01.765
+因为它们只是场景背后的物体
 Because they're just objects
 behind the scenes, and
 
 22
-00:01:01.766 --> 00:01:03.470
+00:01:01.765 --> 00:01:03.469
+这正是我们现在要做的。
 that's exactly what we're doing here.
 
 23
-00:01:03.470 --> 00:01:07.305
+00:01:03.469 --> 00:01:07.305
+我们把这个功能放在右手边
 We are taking that function there on
 the right hand side and storing and
 
 24
 00:01:07.305 --> 00:01:08.549
+标号乘以2。
 label multiply by 2.
 
 25
 00:01:08.549 --> 00:01:13.043
+它对所有人来说都有一些差异，但就我们现在的目的而言,
 It has some differences under the hood for
 all, but for our purposes here for now,
 
 26
 00:01:13.043 --> 00:01:14.555
+我们把这个放在这里。
 let's just put this here.
 
 27
-00:01:14.555 --> 00:01:19.778
+00:01:14.555 --> 00:01:19.777
+我们声明的第二行，乘以2。
 That second line down there we declare,
 multiply by 2.
 
 28
-00:01:19.778 --> 00:01:21.414
+00:01:19.777 --> 00:01:21.414
+就是这个。
 There it is.
 
 29
-00:01:21.414 --> 00:01:25.969
+00:01:21.414 --> 00:01:25.968
+我们给它赋了一个函数定义。
 And we assign it a function definition.
 
 30
-00:01:25.969 --> 00:01:29.432
+00:01:25.968 --> 00:01:29.432
+就是这样，没有变化。
 There it is, no change.
 
 31
-00:01:29.432 --> 00:01:34.748
+00:01:29.432 --> 00:01:34.747
+现在我要说的是，我们就像在这里输入参数名一样。
 Now I will say this, let's just just like
 up here the parameter name is input.
 
 32
-00:01:34.748 --> 00:01:36.933
+00:01:34.747 --> 00:01:36.932
+你知道，让我们把它放在这里，蓝色更集中一点。
 You know, let's put it here
 the blue being a bit more focused.
 
 33
-00:01:36.933 --> 00:01:38.882
+00:01:36.932 --> 00:01:38.882
+参数名称是输入。
 The parameter name is input.
 
 34
-00:01:38.882 --> 00:01:42.481
+00:01:38.882 --> 00:01:42.480
+但是在第二行里什么也没有改变。
 But nothing has changed
 in that second line.
 
 35
-00:01:42.481 --> 00:01:46.721
+00:01:42.480 --> 00:01:46.721
+嗯，JavaScript 的设计者喜欢减少代码。
 Well, the designers of
 JavaScript love to reduce code.
 
 36
-00:01:46.721 --> 00:01:49.666
+00:01:46.721 --> 00:01:49.665
+我喜欢把它想象成一种渴望
 I like to think of this
 as being a desire for
 
 37
-00:01:49.666 --> 00:01:53.973
+00:01:49.665 --> 00:01:53.972
+易读性，但可能不是为了易读性，易读性。
 legibility, but maybe not for
 readability, legibility.
 
 38
-00:01:53.973 --> 00:01:57.145
+00:01:53.972 --> 00:01:57.145
+这使得它很好，很短，写的东西很少。
 This makes it nice and
 short and less stuff written.
 
 39
 00:01:57.145 --> 00:01:58.745
+这使得它更清晰易读。
 That is makes it more legible.
 
 40
 00:01:58.745 --> 00:02:03.146
+我可以从字面上理解，这样可以减少阅读量，而且在页面上看起来更漂亮。
 I can kind of literally there's less to
 read and it sort of prettier on the page.
 
 41
-00:02:03.146 --> 00:02:04.714
+00:02:03.146 --> 00:02:04.713
+但它可能会降低可读性。
 But it may reduce readability.
 
 42
-00:02:04.714 --> 00:02:06.281
+00:02:04.713 --> 00:02:06.281
+就像我马上要说的。
 It will be like I'll say in a second.
 
 43
-00:02:06.281 --> 00:02:07.109
+00:02:06.281 --> 00:02:07.108
+但是为什么呢？
 But why?
 
 44
-00:02:07.109 --> 00:02:08.865
+00:02:07.108 --> 00:02:08.865
+但是让我们看看下一行。
 But let's look at this
 next line down here.
 
 45
-00:02:08.865 --> 00:02:11.588
+00:02:08.865 --> 00:02:11.587
+下面这一行。
 This next line down here.
 
 46
-00:02:11.588 --> 00:02:16.377
+00:02:11.587 --> 00:02:16.377
+这里我们声明乘以2。
 Here we declaring multiply by two.
 
 47
 00:02:16.377 --> 00:02:18.138
+我们得到了一个参数输入。
 We got a parameter input.
 
 48
-00:02:18.138 --> 00:02:19.839
+00:02:18.138 --> 00:02:19.838
+然后右手边发生了什么？
 And then what's this thing
 happen on the right hand side?
 
 49
-00:02:19.839 --> 00:02:23.097
+00:02:19.838 --> 00:02:23.097
+如果你只能做一件事
 Well, if you will function
 only does one thing and
 
 50
 00:02:23.097 --> 00:02:25.668
+这是它的返回值，它的输出。
 that is its return value, its output.
 
 51
 00:02:25.668 --> 00:02:28.139
+的设计者说，你知道吗？
 JavaScript designers said, you know what?
 
 52
 00:02:28.139 --> 00:02:32.947
+实际上，我们将跳过大括号和返回关键字
 We'll let you actually skip the curly
 braces and the return keyword and
 
 53
-00:02:32.947 --> 00:02:34.963
+00:02:32.947 --> 00:02:34.962
+我们会帮你插进去的。
 we'll insert those for you.
 
 54
-00:02:34.963 --> 00:02:36.474
+00:02:34.962 --> 00:02:36.473
+我们会自动插入。
 We'll insert those automatically.
 
 55
-00:02:36.474 --> 00:02:41.483
+00:02:36.473 --> 00:02:41.483
+下面这一行，参数输入，箭头输入到 JavaScript
 And so this next line down here, Parameter
 input, arrow input by to JavaScript
 
 56
 00:02:41.483 --> 00:02:46.442
+在幕后，当我们运行这个乘以2的函数时。
 behind the scenes, when we run that
 multiply by two function is gonna insert.
 
 57
-00:02:46.442 --> 00:02:49.926
+00:02:46.442 --> 00:02:49.925
+在输入前返回关键字由两个。
 The Return key word in
 front of input by two.
 
 58
-00:02:49.926 --> 00:02:51.597
+00:02:49.925 --> 00:02:51.597
+我们一会儿就能看到。
 We'll see that one in a second.
 
 59
-00:02:51.597 --> 00:02:52.880
+00:02:51.597 --> 00:02:52.879
+看看下面这个。
 Look at this one below.
 
 60
-00:02:52.880 --> 00:02:58.518
+00:02:52.879 --> 00:02:58.518
+如果只有一个输入，我们甚至可以删除括号。
 We can even remove if you've only
 got one input, the parentheses.
 
 61
-00:02:58.518 --> 00:03:03.403
+00:02:58.518 --> 00:03:03.402
+我只是字面上说乘以2就是那个函数定义，底下那个。
 I just literally say multiply by two is
 that function definition, that bottom one.
 
 62
-00:03:03.403 --> 00:03:07.538
+00:03:03.402 --> 00:03:07.538
+但在执行方面，我们将在明天上午或
 But in terms of executing we'll see
 its changes in tomorrow morning or
 
 63
 00:03:07.538 --> 00:03:08.734
+明天下午。
 tomorrow afternoon.
 
 64
-00:03:08.734 --> 00:03:13.016
+00:03:08.734 --> 00:03:13.015
+但就我们目前的目的而言，最终版本没有任何改变。
 But for our purposes right now,
 nothing has changed in that final version.
 
 65
-00:03:13.016 --> 00:03:17.207
+00:03:13.015 --> 00:03:17.206
+我想要执行带有参数输入的最终版本。
 The point I wanna execute that final
 version with the parameter input.
 
 66
-00:03:17.207 --> 00:03:19.507
+00:03:17.206 --> 00:03:19.507
+然后返回输入2作为它的主体,
 And then return input by 2 as its body,
 
 67
 00:03:19.507 --> 00:03:22.518
+只是为了确保我们知道什么都没改变。
 just to make sure we know
 that nothing's changed.
 
 68
 00:03:22.518 --> 00:03:24.746
+让我们实际执行最后一个。
 So let's actually execute
 that final one there.
 
 69
-00:03:24.746 --> 00:03:27.581
+00:03:24.746 --> 00:03:27.580
+我们就在这里做吧。
 Let's do it down here.
 
 70
-00:03:27.581 --> 00:03:32.432
+00:03:27.580 --> 00:03:32.432
+让我们宣布朝着，让我们清除最后一行的左边。
 Let's declare Toward, let's clear
 the left hand side of that final line.
 
 71
-00:03:32.432 --> 00:03:33.914
+00:03:32.432 --> 00:03:33.913
+这就对了，我乘以两个函数。
 There we go.
 And I multiply by two functions.
 
 72
-00:03:33.914 --> 00:03:36.269
+00:03:33.913 --> 00:03:36.269
+我们这里使用的是最后一个版本。
 We're using the very last version here.
 
 73
 00:03:36.269 --> 00:03:40.658
+我们正在使用最后一个版本，甚至没有任何参数，没有花括号,
 We're using that very last version,
 not even any params no curly braces,
 
 74
 00:03:40.658 --> 00:03:41.643
+非常清晰。
 super legible.
 
 75
 00:03:41.643 --> 00:03:44.621
+我马上告诉你们，为什么要问这个问题
 And I tell you in a moment
 why question it's
 
 76
 00:03:44.621 --> 00:03:49.271
+老实说，对读者来说，它是可读的。
 honestly it's readability in terms
 of its meaning to the reader.
 
 77
-00:03:49.271 --> 00:03:53.583
+00:03:49.271 --> 00:03:53.582
+因为有很多民间人士会观看这个节目，这是一样的
 Because there are many folk people will
 be watching this going that's the same
 
 78
-00:03:53.583 --> 00:03:54.706
+00:03:53.582 --> 00:03:54.706
+顶端的东西。
 thing as at the top.
 
 79
 00:03:54.706 --> 00:03:59.008
+我的意思是，这是我们如何使用它的一个隐藏的改变，但不是在这一点上。
 I mean, it's an under the hood changes for
 how we use it but not at this point.
 
 80
-00:03:59.008 --> 00:04:00.815
+00:03:59.008 --> 00:04:00.814
+但本质上还是一样的。
 And yet it's essentially the same.
 
 81
-00:04:00.815 --> 00:04:02.196
+00:04:00.814 --> 00:04:02.195
+所以是的，托德。
 So yeah, Todd.
 
 82
-00:04:02.196 --> 00:04:04.076
+00:04:02.195 --> 00:04:04.075
+现在我们用左手边。
 Let's now use the left hand side there.
 
 83
-00:04:04.076 --> 00:04:05.898
+00:04:04.075 --> 00:04:05.897
+我们首先宣布什么？
 What are we declaring first?
 
 84
-00:04:05.898 --> 00:04:06.931
+00:04:05.897 --> 00:04:06.931
+音箱2: 恒定输出。
 &gt;&gt; Speaker 2: Constant output.
 
 85
-00:04:06.931 --> 00:04:10.589
+00:04:06.931 --> 00:04:10.588
+威尔 · 森特斯: 是的，非常好，我们现在就要开始了
 &gt;&gt; Will Sentance: Yeah, excellent,
 and we've gotta go ahead now and
 
 86
-00:04:10.589 --> 00:04:12.012
+00:04:10.588 --> 00:04:12.012
+运行什么功能？
 run what function?
 
 87
 00:04:12.012 --> 00:04:12.711
+演讲者2: 乘以2。
 &gt;&gt; Speaker 2: Multiply By2.
 
 88
 00:04:12.711 --> 00:04:15.758
+威尔 · 森塔斯: 乘以2，再一次，人们，只是真的很清楚,
 &gt;&gt; Will Sentance: MultiplyBy2, and
 again, people, just be really clear,
 
 89
-00:04:15.758 --> 00:04:19.179
+00:04:15.758 --> 00:04:19.178
+我们运行的是最底层的那个，输入什么，托德？
 we're running the very bottom one,
 with the input of what, Todd?
 
 90
-00:04:19.179 --> 00:04:21.068
+00:04:19.178 --> 00:04:21.067
+讲者2:3 威尔 · 森特斯: 3，全新的什么，托德,
 &gt;&gt; Speaker 2: 3.
 &gt;&gt; Will Sentance: 3, brand-new what, Todd,
 
 91
-00:04:21.068 --> 00:04:22.573
+00:04:21.067 --> 00:04:22.572
+有什么变化吗，全新的？
 any change, no, brand-new?
 
 92
-00:04:22.573 --> 00:04:23.397
+00:04:22.572 --> 00:04:23.396
+演讲者2: 执行情境。
 &gt;&gt; Speaker 2: Execution context.
 
 93
-00:04:23.397 --> 00:04:25.811
+00:04:23.396 --> 00:04:25.810
+执行上下文，它就是它本来的样子。
 &gt;&gt; Will Sentance: Execution context,
 it is what it is.
 
 94
-00:04:25.811 --> 00:04:29.657
+00:04:25.810 --> 00:04:29.656
+这就是全新的执行环境，我们开始了。
 There it is, brand new execution context,
 and into we go.
 
 95
-00:04:29.657 --> 00:04:31.301
+00:04:29.656 --> 00:04:31.300
+我们当地的记忆中,
 What's in our local memory,
 
 96
-00:04:31.301 --> 00:04:34.731
+00:04:31.300 --> 00:04:34.730
+首先传入本地内存的值是多少，托德？
 what's the value passed into
 our local memory first, Todd?
 
 97
-00:04:34.731 --> 00:04:36.475
+00:04:34.730 --> 00:04:36.475
+说话人2: 输入，值为3。
 &gt;&gt; Speaker 2: Input, value of 3.
 
 98
 00:04:36.475 --> 00:04:38.329
+是否命题: 值3分配给什么参数？
 &gt;&gt; Will Sentance: Value of 3
 assigned to what parameter?
 
 99
 00:04:38.329 --> 00:04:40.576
+讲者二: 输入法 输入，还有什么变化吗,
 &gt;&gt; Speaker 2: Input.
 &gt;&gt; Will Sentance: Input, any change yet,
 
 100
-00:04:40.576 --> 00:04:41.291
+00:04:40.576 --> 00:04:41.290
+人们？
 people?
 
 101
-00:04:41.291 --> 00:04:42.538
+00:04:41.290 --> 00:04:42.538
+演讲者2: 没有 威尔 · 森坦斯: 不。
 &gt;&gt; Speaker 2: Nope.
 &gt;&gt; Will Sentance: Nope.
 
 102
-00:04:42.538 --> 00:04:44.409
+00:04:42.538 --> 00:04:44.408
+那么，这个函数的主体是什么？
 Now, what's the body of that function?
 
 103
-00:04:44.409 --> 00:04:48.780
+00:04:44.408 --> 00:04:48.779
+箭头右边有一个插入的单词。
 It's a stuff on the right hand side
 of the arrow with an inserted word.
 
 104
-00:04:48.780 --> 00:04:50.063
+00:04:48.779 --> 00:04:50.062
+我要做的是,
 I'm going to do in,
 
 105
-00:04:50.063 --> 00:04:54.373
+00:04:50.062 --> 00:04:54.372
+我知道，我要用什么词来表达我的紫色，汤姆？
 I know, I'm gonna do in purple
 here with what inserted word, Tom?
 
 106
-00:04:54.373 --> 00:04:54.925
+00:04:54.372 --> 00:04:54.925
+讲者二: 报税表。
 &gt;&gt; Speaker 2: Return.
 
 107
-00:04:54.925 --> 00:05:01.030
+00:04:54.925 --> 00:05:01.029
+句子: 回到前面的代码是什么？
 &gt;&gt; Will Sentance: Return
 in front of what code?
 
 108
-00:05:01.030 --> 00:05:01.668
+00:05:01.029 --> 00:05:01.668
+讲者2:3乘以2。
 &gt;&gt; Speaker 2: 3 times 2.
 
 109
 00:05:01.668 --> 00:05:05.822
+是的，输入2，也就是3乘2，也就是6。
 &gt;&gt; Will Sentance: Yeah, input by 2,
 which is 3 by 2, which is 6.
 
 110
-00:05:05.822 --> 00:05:13.529
+00:05:05.822 --> 00:05:13.528
+然后再返回到输出中，就是这样。
 And that is then return out
 into output and there it is.
 
 111
-00:05:13.529 --> 00:05:15.433
+00:05:13.528 --> 00:05:15.432
+你可能会看着然后离开，是的，我知道。
 You maybe watching and
 then go, yeah, I knew that.
 
 112
-00:05:15.433 --> 00:05:21.315
+00:05:15.432 --> 00:05:21.314
+但是我想让我看看下面的东西，输入2的箭头输入。
 But I think let me see that stuff
 down there, input arrow input by 2.
 
 113
-00:05:21.315 --> 00:05:25.094
+00:05:21.314 --> 00:05:25.093
+它看起来非常类似于等号赋值,
 And it looks so similar to an assignment,
 by the equals sign,
 
 114
-00:05:25.094 --> 00:05:28.888
+00:05:25.093 --> 00:05:28.887
+我向你们保证，人们看到的是右手边的那一面。
 I promise you people are seeing
 that right-hand side there.
 
 115
-00:05:28.888 --> 00:05:34.344
+00:05:28.887 --> 00:05:34.343
+没有意识到这是一个完整的函数定义，带有一个参数和
 And not realizing that is a full function
 definition, with a parameter and
 
 116
-00:05:34.344 --> 00:05:39.640
+00:05:34.343 --> 00:05:39.639
+一具尸体，并自动为我们插入返回语句，好吗？
 a body, with a return statement
 inserted automatically for us, okay?
 
 117
-00:05:39.640 --> 00:05:43.331
+00:05:39.639 --> 00:05:43.331
+你会马上做点什么吗，让我们看看这个
 Would you do something in a second is
 actually let's have a look at this in
 
 118
 00:05:43.331 --> 00:05:43.947
+练习。
 practice.
 
 119
 00:05:43.947 --> 00:05:46.896
+看看这个，我用了一个高阶函数
 So look at this,
 I've taken a higher order function and
 
 120
 00:05:46.896 --> 00:05:48.918
+的回调函数。
 callback function from just before.
 
 121
-00:05:48.918 --> 00:05:54.373
+00:05:48.918 --> 00:05:54.372
+你看，我把乘以2的函数改成了箭头样式。
 And you see I've changed the function
 multiply by 2 into the arrow style.
 
 122
-00:05:54.373 --> 00:05:55.966
+00:05:54.372 --> 00:05:55.966
+有什么变化吗？
 Has anything changed?
 
 123
 00:05:55.966 --> 00:05:59.444
+什么都没有改变，我把代码插入。
 Nothing's changed,
 I take that code I insert it.
 
 124
-00:05:59.444 --> 00:06:04.159
+00:05:59.444 --> 00:06:04.158
+在年，我用它作为指示，我会采取一个重置零
 In, I use it as instructions,
 I would take a reposition zero
 
 125
-00:06:04.159 --> 00:06:08.884
+00:06:04.158 --> 00:06:08.884
+这将是插入指令的第一个。
 which will be the number one
 on inserted into instructions.
 
 126
 00:06:08.884 --> 00:06:13.326
+也就是把它插入到每个人身上乘以2。
 Which is inserting it into
 everybody multiply by two.
 
 127
-00:06:13.326 --> 00:06:17.484
+00:06:13.326 --> 00:06:17.483
+一个在井中，一个在输入的本地内存中
 One is going to then be in the well one
 would be in the local memory of the input
 
 128
-00:06:17.484 --> 00:06:19.336
+00:06:17.483 --> 00:06:19.336
+参数值参数和。
 parameters value argument and.
 
 129
 00:06:19.336 --> 00:06:23.785
+然后我们做1乘2，然后返回2到执行中
 And then we do 1 by 2 and
 return out 2 into the execution
 
 130
 00:06:23.785 --> 00:06:28.627
+的上下文，并将其推送到输出。
 context of copyArrayManipulate,
 and push it into output.
 
 131
 00:06:28.627 --> 00:06:35.293
+这里什么都没有改变，但是你会越来越多地看到这种风格。
 Nothing has changed here, folk, but
 you're gonna see this style more and more.
 
 132
 00:06:35.293 --> 00:06:37.244
+还有更多,
 And it gets even more,
 
 133
-00:06:37.244 --> 00:06:42.808
+00:06:37.244 --> 00:06:42.807
+你可能知道接下来会发生什么，看看这个。
 Extreme you probably know what's coming,
 have a look at that.
 
 134
-00:06:42.808 --> 00:06:45.906
+00:06:42.807 --> 00:06:45.906
+这就是你经常看到的景象,
 This is what you end up
 seeing a lot of the time,
 
 135
 00:06:45.906 --> 00:06:50.447
+因为我在全局函数中保留了乘以2的结果。
 given that I'm saving the multiply
 by two function here in global.
 
 136
 00:06:50.447 --> 00:06:55.362
+然后抓住它，就像丹在标签上说的那样，把它拉出来
 And then just grabbing it referring to
 it as Dan said by his label to pull it
 
 137
 00:06:55.362 --> 00:06:59.408
+进入版权操纵开发商去，你知道吗？
 into copyright manipulate Developers go,
 you know what?
 
 138
 00:06:59.408 --> 00:07:04.206
+最好还是跳过这一步，直接编写代码
 Might as well just skip that step,
 might as well just take the code and
 
 139
 00:07:04.206 --> 00:07:06.045
+直接插进去。
 insert that in directly.
 
 140
 00:07:06.045 --> 00:07:11.266
+在执行上下文中，我们不使用标签乘以2
 Given that we don't use the label multiply
 by 2 inside of the execution context of
 
 141
-00:07:11.266 --> 00:07:12.102
+00:07:11.266 --> 00:07:12.101
+操纵。
 manipulate.
 
 142
-00:07:12.102 --> 00:07:15.346
+00:07:12.101 --> 00:07:15.346
+我们只需要使用代码给它一个新的标签指令,
 We just use the code And
 give it a new label instructions,
 
 143
 00:07:15.346 --> 00:07:18.261
+为什么还要给它贴上标签，然后插进去？
 why even bother giving it a label and
 inserting it?
 
 144
-00:07:18.261 --> 00:07:21.130
+00:07:18.261 --> 00:07:21.129
+为什么不直接抓取代码并在内部使用它呢？
 Why not just grab the code and
 just use it inside?
 
 145
-00:07:21.130 --> 00:07:23.770
+00:07:21.129 --> 00:07:23.769
+事实就是这样，但是
 And that's exactly what happens, but
 
 146
-00:07:23.770 --> 00:07:28.340
+00:07:23.769 --> 00:07:28.339
+当你看到那行代码时，我们很想知道。
 when you see that line of code there,
 we are so tempted to feel that.
 
 147
-00:07:28.340 --> 00:07:31.870
+00:07:28.339 --> 00:07:31.870
+这个函数就在这里执行
 That function is being kind
 of executed right there and
 
 148
 00:07:31.870 --> 00:07:34.485
+那就不清楚它在做什么。
 then it's so unclear what it's doing.
 
 149
 00:07:34.485 --> 00:07:38.802
+但是这里有乘以2的完整函数定义,
 But that there is the full function
 definition of multiply by two,
 
 150
-00:07:38.802 --> 00:07:41.743
+00:07:38.802 --> 00:07:41.742
+就是上面的函数定义。
 which is that function
 definition up there.
 
 151
-00:07:41.743 --> 00:07:44.328
+00:07:41.742 --> 00:07:44.327
+现实中什么都没有改变。
 Nothing has changed in reality.
 
 152
-00:07:44.328 --> 00:07:47.342
+00:07:44.327 --> 00:07:47.341
+我们知道的那个函数定义通过名称和
 That function definition we
 know we grabbed by name and
 
 153
-00:07:47.342 --> 00:07:49.774
+00:07:47.341 --> 00:07:49.774
+插入使用的劳动指令。
 inserted engaged the labor instructions.
 
 154
-00:07:49.774 --> 00:07:51.001
+00:07:49.774 --> 00:07:51.000
+什么都没变。
 Nothing's changed.
 
 155
-00:07:51.001 --> 00:07:53.203
+00:07:51.000 --> 00:07:53.202
+我们也遇到过同样的情况
 We've taken exactly the same situation,
 and
 
 156
-00:07:53.203 --> 00:07:55.413
+00:07:53.202 --> 00:07:55.413
+我们现在已经插入了整个函数。
 we've now just inserted
 the whole function.
 
 157
 00:07:55.413 --> 00:07:59.076
+我可以采取这个输入箭头输入二和
 I could take this input
 arrow input by two and
 
 158
-00:07:59.076 --> 00:08:02.842
+00:07:59.076 --> 00:08:02.841
+只是这个代码现在直接插入了。
 it's just this code now inserted directly.
 
 159
-00:08:02.842 --> 00:08:06.556
+00:08:02.841 --> 00:08:06.555
+好吧，如果你想对此表示赞同，你会经常看到这个
 All right, if you wanna have thumbs on
 this, you're gonna see this a lot and
 
 160
-00:08:06.556 --> 00:08:09.126
+00:08:06.555 --> 00:08:09.125
+我马上就会给出我对这种方法的看法。
 I'm gonna give my view on
 this approach in a second.
 
 161
-00:08:09.126 --> 00:08:10.435
+00:08:09.125 --> 00:08:10.435
+但你把我弄糊涂了。
 But you lost me.
 
 162
 00:08:10.435 --> 00:08:14.249
+我清楚的澄清真的感兴趣的任何人的澄清
 I'm clear clarification of really
 interested in anyone's clarification on
 
 163
-00:08:14.249 --> 00:08:16.339
+00:08:14.249 --> 00:08:16.338
+因为这是一个具有挑战性的转变。
 this cuz this is a challenging shift here.
 
 164
-00:08:16.339 --> 00:08:20.972
+00:08:16.338 --> 00:08:20.971
+好吧，我们今天不打算过多地使用这种风格，但是
 Okay, we're not gonna tend to use
 this style too much today, but
 
 165
-00:08:20.972 --> 00:08:26.126
+00:08:20.971 --> 00:08:26.125
+这是越来越标准的风格，为什么没有人使用它太多的一天。
 this is increasingly A standard style,
 why nobody use it too much a day.
 
 166
-00:08:26.126 --> 00:08:31.058
+00:08:26.125 --> 00:08:31.057
+因此，在我们的函数中使用匿名，可以立即提高代码的易读性。
 So, anonymous in our functions, they
 improve immediate legibility of the code.
 
 167
-00:08:31.058 --> 00:08:33.564
+00:08:31.057 --> 00:08:33.563
+让它看起来很漂亮，对吧？
 It makes it look like kind of pretty,
 right?
 
 168
-00:08:33.564 --> 00:08:36.186
+00:08:33.563 --> 00:08:36.186
+我没有把东西分开存放。
 I'm not storing stuff separately.
 
 169
-00:08:36.186 --> 00:08:39.650
+00:08:36.186 --> 00:08:39.649
+为什么我在做难的部分的时候总是这样？
 Why am i so when i'm doing hard parts?
 
 170
-00:08:39.650 --> 00:08:42.467
+00:08:39.649 --> 00:08:42.466
+为什么我，喜欢声明函数分开,
 Why do I,
 Like declare function separately,
 
 171
-00:08:42.467 --> 00:08:46.075
+00:08:42.466 --> 00:08:46.075
+而实际上只是直接插入。
 when in reality will tend to
 just insert them directly.
 
 172
-00:08:46.075 --> 00:08:48.632
+00:08:46.075 --> 00:08:48.631
+这是一个反问，但好吧，凯尔，继续。
 It was a rhetorical question,
 but okay, Kyle, go ahead.
 
 173
-00:08:48.632 --> 00:08:51.293
+00:08:48.631 --> 00:08:51.293
+说话人3: 你可能还有另外一个函数需要传递。
 &gt;&gt; Speaker 3: You might have another
 function where you want to pass.
 
 174
-00:08:51.293 --> 00:08:53.310
+00:08:51.293 --> 00:08:53.309
+威尔 · 森塔斯: 我喜欢这个，这是一个很好的理由。
 &gt;&gt; Will Sentance: I love that,
 that's a very good reason.
 
 175
-00:08:53.310 --> 00:08:57.669
+00:08:53.309 --> 00:08:57.668
+对我来说，我更倾向于用我猜想的，教育学的意义来说，我这样做是因为
 For me, I'm sort of talking in a more I
 guess, pedagogical sense, I do it because
 
 176
-00:08:57.669 --> 00:09:02.239
+00:08:57.668 --> 00:09:02.239
+这样可以提高易读性，我们写的代码更少，也许看起来更漂亮。
 while this improves legibility, we write
 less code, it looks prettier, perhaps.
 
 177
-00:09:02.239 --> 00:09:03.838
+00:09:02.239 --> 00:09:03.837
+因此，这是非常标准的。
 And therefore it is very standard.
 
 178
-00:09:03.838 --> 00:09:06.899
+00:09:03.837 --> 00:09:06.899
+而且我非常标准，完全支持它,
 And I'm very standard and
 full endorsement of it,
 
 179
 00:09:06.899 --> 00:09:09.897
+当我解释这些概念的时候。
 in terms of when I'm
 explaining these concepts.
 
 180
-00:09:09.897 --> 00:09:12.680
+00:09:09.897 --> 00:09:12.679
+这是一个很好的预测器，从某种意义上来说，它是否可读
 And that's a good predictor of
 whether it's readable in a sense of
 
 181
-00:09:12.680 --> 00:09:15.128
+00:09:12.679 --> 00:09:15.128
+开发人员可以理解和理解。
 understandable and
 comprehensible for the developers.
 
 182
 00:09:15.128 --> 00:09:16.980
+顺便说一句，我不是说你不应该这么做。
 And by the way, this is not me
 saying that you shouldn't do this.
 
 183
-00:09:16.980 --> 00:09:19.803
+00:09:16.980 --> 00:09:19.802
+这是非常标准的，这绝对是边界线更好的做法。
 It's very standard, it's absolutely
 border line better practice.
 
 184
-00:09:19.803 --> 00:09:22.522
+00:09:19.802 --> 00:09:22.522
+但就我们的理解而言。
 But in terms of our understanding.
 
 185
-00:09:22.522 --> 00:09:25.747
+00:09:22.522 --> 00:09:25.746
+在决定它的实际工作方式方面,
 In terms of deciding how
 it's actually working,
 
 186
-00:09:25.747 --> 00:09:29.605
+00:09:25.746 --> 00:09:29.605
+我会区分易读性和可读性。
 I would distinguish between legibility and
 readability.
 
 187
-00:09:29.605 --> 00:09:32.858
+00:09:29.605 --> 00:09:32.857
+这在引擎盖下是如何理解的，这在引擎盖下是如何工作的
 How this is understanding under the hood,
 how is this working under the hood is
 
 188
-00:09:32.858 --> 00:09:34.893
+00:09:32.857 --> 00:09:34.893
+对了解真正发生的事情至关重要。
 vital to understand
 what's really happening.
 
 189
 00:09:34.893 --> 00:09:39.081
+这个函数，传入的整个定义，更容易追踪
 That function, whole definition that's
 being passed in is much easier to track
 
 190
 00:09:39.081 --> 00:09:42.109
+当我们按照标签声明时，就会发生这种情况。
 that that's happening when
 we've declared it by label.
 
 191
 00:09:42.109 --> 00:09:44.317
+用关键字函数再把它传递进去。
 With the key word function and
 then pass it in.
 
 192
 00:09:44.317 --> 00:09:47.379
+这就是为什么我们今天要继续艰难的部分,
 And that's why we're going to
 continue in hard part today,
 
 193
 00:09:47.379 --> 00:09:49.250
+主要使用关键字功能。
 to mostly use the keyword function.
 
 194
-00:09:49.250 --> 00:09:54.314
+00:09:49.250 --> 00:09:54.313
+这个设计，这个函数的简化版本，实际上是,
 And this design here, this little
 shorthand version of functions, is really,
 
 195
-00:09:54.314 --> 00:09:58.938
+00:09:54.313 --> 00:09:58.937
+当你传递一些小函数时，非常好的易读性。
 really nice for legibility when
 you're passing little mini functions.
 
 196
-00:09:58.938 --> 00:10:03.370
+00:09:58.937 --> 00:10:03.370
+在是其他功能的输入有真正的可读性和充分认可和
 In is the input to other functions there
 is really readable and fully endorse and
 
 197
 00:10:03.370 --> 00:10:06.955
+我绝对想让你知道，你会看到有一个标准。
 I would absolutely you know,
 you will see there's a standard.
 
 198
-00:10:06.955 --> 00:10:11.496
+00:10:06.955 --> 00:10:11.495
+但是我们不应该总是使用箭头函数。
 But it's not automatically the case that
 we should always be using arrow functions.
 
 199
-00:10:11.496 --> 00:10:15.273
+00:10:11.495 --> 00:10:15.273
+我们稍后会看到你们在这种情况下完全撤销什么
 And we'll see you later on situations in
 which you will completely under undo what
 
 200
 00:10:15.273 --> 00:10:16.538
+我们想要达到的目标。
 we're trying to achieve.
 
 201
 00:10:16.538 --> 00:10:21.350
+对于箭的功能有一个隐藏的改变。
 There is an under the hood change
 to how arrow functions treat.
 
 202
-00:10:21.350 --> 00:10:25.005
+00:10:21.350 --> 00:10:25.004
+这个关键词作业，我们会在课程中看到
 This key word assignment that we're
 going to see in our courses and
 
 203
-00:10:25.005 --> 00:10:27.821
+00:10:25.004 --> 00:10:27.821
+原型会议，它可以是真正有用的。
 prototypes session where
 it can be really useful.
 
 204
-00:10:27.821 --> 00:10:32.582
+00:10:27.821 --> 00:10:32.581
+顺便说一下，我现在告诉你这个小预览，如果他是一个方法中的一个函数,
 By the way, I tell you this little preview
 now if he was a function inside a method,
 
 205
-00:10:32.582 --> 00:10:37.067
+00:10:32.581 --> 00:10:37.067
+这个词汇范围的箭头函数是他是一个多伦多，我可以真正
 that lexically scoped arrow function was
 he was a Toronto where I can be really
 
 206
-00:10:37.067 --> 00:10:37.622
+00:10:37.067 --> 00:10:37.621
+有用的。
 useful.
 
 207
-00:10:37.622 --> 00:10:41.644
+00:10:37.621 --> 00:10:41.644
+但是如果你把它用在对象的常规方法上，它就不起作用了。
 But if you're using that for regular
 methods on objects, It ain't gonna work.
 
 208
-00:10:41.644 --> 00:10:46.323
+00:10:41.644 --> 00:10:46.322
+所以我们将继续使用默认的函数声明样式。
 So we're gonna continue to default
 to the function declaration style.
 
 209
-00:10:46.323 --> 00:10:49.430
+00:10:46.322 --> 00:10:49.429
+但是当我们解析小婴儿函数的时候,
 But, for when we're parsing
 little baby functions in,
 
 210
-00:10:49.430 --> 00:10:52.742
+00:10:49.429 --> 00:10:52.741
+我确实支持这样的说法，即地图数组123。
 I do endorse that that makes it,
 that says map array 123.
 
 211
-00:10:52.742 --> 00:10:55.235
+00:10:52.741 --> 00:10:55.235
+我们把每个元素乘以2。
 So we take each element,
 and multiply it by 2.
 
 212
-00:10:55.235 --> 00:10:56.626
+00:10:55.235 --> 00:10:56.625
+看到这一行了吗？
 And see that one in one line?
 
 213
-00:10:56.626 --> 00:10:58.688
+00:10:56.625 --> 00:10:58.687
+真不错，我很喜欢。
 That is pretty nice, I do like that.
 
 214
-00:10:58.688 --> 00:11:02.139
+00:10:58.687 --> 00:11:02.139
+但是为了理解它是如何在引擎盖下工作的,
 But in understanding how
 it's working under the hood,
 
 215
-00:11:02.139 --> 00:11:06.702
+00:11:02.139 --> 00:11:06.701
+了解这里到底发生了什么，这一点越来越重要。
 it's important ever more to understand
 what's really happening here.
 
 216
-00:11:06.702 --> 00:11:08.602
+00:11:06.701 --> 00:11:08.601
+好的，杰森，说吧。
 Okay, Jason go ahead.
 
 217
-00:11:08.602 --> 00:11:11.585
+00:11:08.601 --> 00:11:11.585
+演讲者2: 是，[咳嗽]对不起，有没有记忆或者
 &gt;&gt; Speaker 2: Is, [COUGH] excuse me,
 are there any memory or
 
 218
-00:11:11.585 --> 00:11:15.521
+00:11:11.585 --> 00:11:15.520
+内联策略的内存分配节省。
 memory allocation savings for
 that strategy of inlining.
 
 219
-00:11:15.521 --> 00:11:19.356
+00:11:15.520 --> 00:11:19.355
+在这里你不需要创建一个外部的全局上下文
 Where you instead of creating
 an external global context for
 
 220
-00:11:19.356 --> 00:11:22.148
+00:11:19.355 --> 00:11:22.148
+在内存中存储 multipyBy2的函数。
 A function to store multipyBy2 in memory.
 
 221
-00:11:22.148 --> 00:11:23.805
+00:11:22.148 --> 00:11:23.804
+威尔 · 森特斯: 杰森，这件事,
 &gt;&gt; Will Sentance: The thing with that,
 Jason,
 
 222
-00:11:23.805 --> 00:11:28.597
+00:11:23.804 --> 00:11:28.596
+只是我们在这里讨论的是，在任何时刻，这么小的记忆增加或减少。
 is just that we're talking here about such
 small memory gains or losses at any point.
 
 223
-00:11:28.597 --> 00:11:32.042
+00:11:28.596 --> 00:11:32.042
+我们生活的世界并不是建立在这样的事情上的。
 We don't live in the world where we're
 constructed on that sort of thing.
 
 224
-00:11:32.042 --> 00:11:35.866
+00:11:32.042 --> 00:11:35.865
+现在，如果你递归地调用这个函数，如果你是，并且
 Now, if you were calling that function
 recursively, if you were, and
 
 225
-00:11:35.866 --> 00:11:38.302
+00:11:35.865 --> 00:11:38.302
+我们明天在原型课上会看到。
 we'll see tomorrow in class in prototypes.
 
 226
 00:11:38.302 --> 00:11:43.921
+将100个函数保存到1000个对象中，每个对象都会被复制。
 Saving a 100 functions to 1,000
 objects where each of them is copied.
 
 227
-00:11:43.921 --> 00:11:46.121
+00:11:43.921 --> 00:11:46.120
+我们只需要一组函数
 Where we could just have
 one set of functions and
 
 228
-00:11:46.121 --> 00:11:47.992
+00:11:46.120 --> 00:11:47.991
+都指向同一组函数。
 point all to that same set of functions.
 
 229
-00:11:47.992 --> 00:11:51.030
+00:11:47.991 --> 00:11:51.029
+是的，这就是性能的重要性，这里的这类事情就是这样
 Yeah, that's where performance counts,
 this sort of thing here it's so
 
 230
-00:11:51.030 --> 00:11:52.489
+00:11:51.029 --> 00:11:52.489
+我们不需要担心的小事。
 minor that we don't need to worry.
 
 231
-00:11:52.489 --> 00:11:55.708
+00:11:52.489 --> 00:11:55.707
+作为一个开发者，越来越多的最有价值的资源,
 More and more the most valuable
 resource as a developer,
 
 232
-00:11:55.708 --> 00:11:58.935
+00:11:55.707 --> 00:11:58.934
+是开发商的时间和推理能力。
 is the developer's time and
 ability to reason about it.
 
 233
-00:11:58.935 --> 00:12:02.588
+00:11:58.934 --> 00:12:02.587
+相反，我们最终会自动收集垃圾
 Versus do we end up automatically
 garbage collecting and
 
 234
-00:12:02.588 --> 00:12:05.639
+00:12:02.587 --> 00:12:05.639
+因此，在那一刻保存一些记忆？
 therefore, in the moment
 saving some memory?
 
 235
-00:12:05.639 --> 00:12:09.007
+00:12:05.639 --> 00:12:09.006
+在这些边缘情况下，可读性是第一位的。
 On these marginal cases,
 readability comes first.
 
 236
-00:12:09.007 --> 00:12:11.949
+00:12:09.006 --> 00:12:11.948
+话虽如此只要你明白这里的情况,
 That being said, as long as you
 understand how this is working here,
 
 237
-00:12:11.949 --> 00:12:13.842
+00:12:11.948 --> 00:12:13.841
+直接传入这个函数吗？
 passing in that function directly?
 
 238
-00:12:13.842 --> 00:12:15.837
+00:12:13.841 --> 00:12:15.836
+我觉得它真的很不错。
 I think it does it really nice.
 
 239
-00:12:15.837 --> 00:12:18.803
+00:12:15.836 --> 00:12:18.802
+映射，1,2,3通过这个映射规则,
 Mapping, 1, 2, 3 by this mapping rule,
 
 240
-00:12:18.803 --> 00:12:24.205
+00:12:18.802 --> 00:12:24.205
+我认为人们不知道它是如何工作的。
 where it's explicitly in that line I
 think people don't know how it's working.
 
 241
-00:12:24.205 --> 00:12:27.285
+00:12:24.205 --> 00:12:27.284
+但是我认为人们有一种感觉，如果他们不知道怎么做，他们可以让它工作
 But I think people get a sense, they can
 make it work if they don't understand how
 
 242
-00:12:27.285 --> 00:12:28.476
+00:12:27.284 --> 00:12:28.475
+它在引擎盖下工作。
 it's working under the hood.
 
 243
-00:12:28.476 --> 00:12:31.508
+00:12:28.475 --> 00:12:31.508
+但是我们想成为那些了解它是如何运作的人
 But we wanna be those people who
 understand how it's working under
 
 244
-00:12:31.508 --> 00:12:33.140
+00:12:31.508 --> 00:12:33.139
+引擎盖，希望现在我们做到了。
 the hood, and hopefully now we do.
-

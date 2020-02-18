@@ -2,285 +2,402 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:00.549
+< ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+威尔 · 森特斯: 今天,
 &gt;&gt; Will Sentance: Today,
 
 2
-00:00:00.549 --> 00:00:05.130
+00:00:00.549 --> 00:00:05.128
+在 " " ， " " ， " ， " ，" ， " ，" ， " ， " ， " ， " ， " ， " ， " ， " " 我们将会覆盖两个 " 硬部件 " 原始课程
+我们要学习硬件原始课程的第二个版本。
 we are gonna cover a version two
 of the Hard Parts original course.
 
 3
-00:00:05.130 --> 00:00:08.510
+00:00:05.128 --> 00:00:08.509
+" 根据 " . " . " . " . " . " . " . 我们将会经历五个大领域的 JavaScript。
+接下来，我们将讨论 JavaScript 的五个主要方面。
 With that, we're gonna go through
 five big areas of JavaScript.
 
 4
-00:00:08.510 --> 00:00:10.587
+00:00:08.509 --> 00:00:10.586
+" . " . " . " . " . " . 我想所有的基础作品
+我认为所有的基础部分。
 I think all the foundational pieces.
 
 5
-00:00:10.587 --> 00:00:13.590
+00:00:10.586 --> 00:00:13.589
+，，，，，，，，，，，，，，JavaScript， . 首先，就是基本的 JavaScript 原则。
+首先，只是基本的 JavaScript 原则。
 Firstly, just underlying
 JavaScript principles.
 
 6
-00:00:13.590 --> 00:00:15.940
+00:00:13.589 --> 00:00:15.939
+美国的 " 全球经济 " 中的 " 消费 " 是什么 ? 代码实际上如何在 JavaScript 中运行 ?
+代码实际上是如何在 JavaScript 中运行的？
 How does code actually run in JavaScript?
 
 7
-00:00:15.940 --> 00:00:19.239
+00:00:15.939 --> 00:00:19.239
+在这方面，第一个是 " 第二个 " ， " 第二个 " ， " 第二个 " ， " 第二个 " ， " 第二个 " ， " 第二个 " 。
+其次，函数式编程的一个关键部分,
 Secondly, a key part of
 functional programming,
 
 8
-00:00:19.239 --> 00:00:21.857
+00:00:19.239 --> 00:00:21.856
+但是，也有了。 更高的命令功能和回调。
+高阶函数和回调函数。
 higher order functions and callbacks.
 
 9
-00:00:21.857 --> 00:00:26.554
+00:00:21.856 --> 00:00:26.553
+美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国和美国。 第三，结束，给我一个最优雅，最美丽的 JavaScript 特征。
+第三，闭包，对我来说，JavaScript 最优雅、最美丽的特性。
 Third, closure, to me the most elegant and
 beautiful feature of JavaScript.
 
 10
-00:00:26.554 --> 00:00:30.149
+00:00:26.553 --> 00:00:30.149
+" . " . " . " . " . " . " . " .
+如果你真的想清楚了，就要从一开始就真正理解它
 The bit that if you get your head around
 truly, truly understand it from first
 
 11
-00:00:30.149 --> 00:00:33.870
+00:00:30.149 --> 00:00:33.868
+" 使用 JavaScript " 的 " JavaScript " 是 " 基于 JavaScript 的 " 。 原则，您可以了解 JavaScript 引擎的许多核心部分。
+你可以理解 JavaScript 引擎的许多核心部分。
 principles, you understand many of
 the core pieces of the JavaScript engine.
 
 12
-00:00:33.870 --> 00:00:35.756
+00:00:33.868 --> 00:00:35.756
+?????? ??? ??? 我喜欢这部分
+我喜欢这部分。
 I love this part.
 
 13
 00:00:35.756 --> 00:00:38.777
+??? ??? ??? ??? ??? ??? ??? ??? 然后是类和原型，即 OOP。
+然后是类和原型，这意味着 OOP。
 Then classes and
 prototypes, that means OOP.
 
 14
 00:00:38.777 --> 00:00:43.338
+我们的目标是把它作为一个有问题的解决方案。在美国，在美国，在美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国
+这里的目标是，我们可以成长为问题解决者的代码，这样
 The goal here is can we grow as
 problem solvers with code such that
 
 15
 00:00:43.338 --> 00:00:47.770
+" 我们的 " " 在" 上" 的 " 是 "吗 ? 我们的未来要面对挑战吗
+我们可以自主应对未来的挑战吗？
 we're autonomous in our future
 wrestling with challenges?
 
 16
 00:00:47.770 --> 00:00:51.490
+" . " . " . " . " . " . " . " . . . . . . . . . . . . . . . . . . . . .
+要做到这一点，我的信念是
 Now to do that, my conviction is
 
 17
-00:00:51.490 --> 00:00:55.930
+00:00:51.490 --> 00:00:55.929
+" 已使用 " 的 " 已执行 " 的 " 已执行 " 的 " 已执行 " 的 " 已执行 " 你想尽可能地了解风帽下的 JavaScript
+你需要尽可能全面地理解 JavaScript。
 you want to understand JavaScript
 under the hood as fully as possible.
 
 18
-00:00:55.930 --> 00:00:59.980
+00:00:55.929 --> 00:00:59.978
+" . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . "
+你越是了解它是如何发挥出组件，然后
 The more you understand how it's playing
 out of the component pieces, then
 
 19
-00:00:59.980 --> 00:01:04.500
+00:00:59.978 --> 00:01:04.500
+" 提供 " 的 " 是 " ， " 是 " ， " 是 " ， " 是 " ， " 是 " ， " 是 " ， " 是 " ， " 是 " ， " 是 " 。 你可以把这些知识的原子带到一个高水平来解决这个问题。
+你可以利用这些知识的原子来解决高层次的问题。
 you can bring those atoms of knowledge to
 bear to solve a problem at a high level.
 
 20
 00:01:04.500 --> 00:01:08.640
+" . " . " . " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+现在，我也认为，它不仅使你成为一个伟大的高级工程师，事实上,
 Now, I also argue that not only does it
 make you a great senior engineer, in fact,
 
 21
 00:01:08.640 --> 00:01:09.590
+" 我的 " 是 " 我的 " 这是我的要求
+这是我的要求。
 here's my claim.
 
 22
-00:01:09.590 --> 00:01:13.445
+00:01:09.590 --> 00:01:13.444
+" 设计 " 的 " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " 初级工程师的特征是他们要建造的任何部件。
+初级工程师采用任何他们交给建造的特性。
 Junior engineer takes any
 feature they're given to build.
 
 23
-00:01:13.445 --> 00:01:17.181
+00:01:13.444 --> 00:01:17.180
+" . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " 如果他们看过技术，或者以前的解决方案，他们就能解决这个问题。
+如果他们以前见过技术或者解决方案，他们可以解决它。
 And if they've seen technology or maybe
 the solution before, they can solve it.
 
 24
-00:01:17.181 --> 00:01:20.762
+00:01:17.180 --> 00:01:20.762
+中国的 " " 中国 " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " 中层工程师负责构建他们要构建的任何功能部件。
+中级工程师采用任何他们被赋予的特性来构建。
 Mid-level engineer takes any
 feature they're given to build.
 
 25
-00:01:20.762 --> 00:01:24.272
+00:01:20.762 --> 00:01:24.271
+" . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . "
+即使他们以前没有见过这种技术或解决方案，他们也可以
 And even if they've not seen the
 technology or solution before, they can
 
 26
-00:01:24.272 --> 00:01:28.531
+00:01:24.271 --> 00:01:28.531
+" . " . " . " . " . 因为他们学会了学习如何解决他们的问题
+因为他们学会了如何学习，他们解决问题的能力很强。
 figure it out because they've learned how
 to learn, they're problem solving strong.
 
 27
 00:01:28.531 --> 00:01:33.114
+在这一问题上，美国的 " 公司 " 是 " 非常重要的 " ，它是由 " 公司 " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( ) )
+高级工程师是那些可以利用任何特定功能的人，而不仅仅是
 A senior engineer is somebody who can
 take any given feature, and not only just
 
 28
 00:01:33.114 --> 00:01:37.709
+根据第 1 号和第 1号和第 1号和第 1号的 " 第 1号 " 号 自己想办法，但让他们的其他队员去想办法。
+自己解决问题，但要让团队的其他人自己解决问题。
 figure out for themselves, but enable
 the rest of their team to figure it out.
 
 29
-00:01:37.709 --> 00:01:42.407
+00:01:37.709 --> 00:01:42.406
+" . " . " . " . " . " .
+因为他们有技术交流，能够解释他们的代码是什么
 Because they have technical communication,
 the ability to explain what their code is
 
 30
-00:01:42.407 --> 00:01:46.156
+00:01:42.406 --> 00:01:46.156
+根据 " 美国 " 的 " 第 1 号 " ， " 第 1 号 " ， " 第 1号 " ， " 第 1号 " ， " 第 1号 " ， " 第 1号 " ，" 第 1号 " 。 在他们的团队里以一种明确和真诚的方式
+以一种清晰而热诚的方式，对他们团队中的其他人做了什么。
 doing to somebody else in their team,
 in a clear and cordial manner.
 
 31
-00:01:46.156 --> 00:01:49.839
+00:01:46.156 --> 00:01:49.837
+" . " . " . " . " . " .
+但我也要说，即使是初级的中级开发人员,
 But I'd also say even for
 junior mid-level developers,
 
 32
-00:01:49.839 --> 00:01:54.059
+00:01:49.837 --> 00:01:54.057
+" " " " " " " " " " " " " " " " " " " " " " " " " " 技术沟通会让你的思维更清晰
+技术交流会让你的思维更清晰。
 technical communication is gonna
 make your own mindset clearer.
 
 33
-00:01:54.059 --> 00:01:58.399
+00:01:54.057 --> 00:01:58.399
+在此基础上，美国的 " 第一个 " ( " ) " ( " ) " ( " ) " ( ) ， " ( ) " ( ) ， " ( ) " ( ) ， " ( ) " ( ) ， " ( ) " ( ) ) 。
+所以硬件部分的目的可能会因为你的背景而有所不同
 So the purpose of Hard Parts is gonna
 differ depending maybe on your background
 
 34
 00:01:58.399 --> 00:01:59.740
+" JavaScript " 在 JavaScript中。
+在 JavaScript 中。
 in JavaScript.
 
 35
 00:01:59.740 --> 00:02:03.150
+" . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " .
+如果你是一个中高级开发人员，你已经见过很多这样的例子
 If you're someone who's a mid-senior
 developer, you've seen many of these
 
 36
 00:02:03.150 --> 00:02:06.420
+" " " " " " " " " " " " " " " " " " " " " " " " 之前的原则也许你来自计算机科学的背景
+也许你有计算机科学的背景。
 principles before, maybe you've come
 from a computer science background.
 
 37
-00:02:06.420 --> 00:02:09.540
+00:02:06.420 --> 00:02:09.538
+" . " . " . " . " . " .
+然后想想 JavaScript 的早期部分,
 Then think of especially
 the earlier parts of JavaScript,
 
 38
-00:02:09.540 --> 00:02:14.790
+00:02:09.538 --> 00:02:14.788
+" " " " " " " " " " 的 " " " " " " " " " " " " " " " " " 硬部件 " ，更多地用于构建您的技术通信。
+更多的是关于建立你的技术交流。
 the Hard Parts, as more about building
 up your technical communication.
 
 39
-00:02:14.790 --> 00:02:15.653
+00:02:14.788 --> 00:02:15.651
+具有以下功能的能力 :
+这种能力
 The ability for
 
 40
-00:02:15.653 --> 00:02:20.172
+00:02:15.651 --> 00:02:20.170
+" . " . " . " . " . " .
+把黑板上正在发生的事情用口头表达出来,
 you to verbally work through exactly
 what's happening on the blackboard here,
 
 41
-00:02:20.172 --> 00:02:24.766
+00:02:20.170 --> 00:02:24.764
+在 " 使用 JavaScript " 的 " 基于 " 的 " 使用 " 时， " 使用了 " 。 通过您的 JavaScript 和您的代码以清晰且精确的方式进行口头讨论。
+用清晰和精确的语言来描述你的 JavaScript 和代码。
 verbally talk through your JavaScript and
 your code with clarity and precision.
 
 42
-00:02:24.766 --> 00:02:30.351
+00:02:24.764 --> 00:02:30.349
+" . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " .
+这不仅会提高你作为一个工程师的推理能力，而且还会
 That's not only going to improve the way
 you reason as an engineer, it's also gonna
 
 43
-00:02:30.351 --> 00:02:36.122
+00:02:30.349 --> 00:02:36.122
+在 " 第 " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( ) ， " ( ) ) " ( ) ， " ( ) " ( ) ， " ( ) " ( ) 使您成为更有效的协作团队成员。
+让你在工程项目上成为一个更有效率，更具合作精神的团队成员。
 make you a more effective, collaborative
 team member on your engineering projects.
 
 44
-00:02:36.122 --> 00:02:39.350
+00:02:36.122 --> 00:02:39.348
+" . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " .
+你现在可以把复杂性变得突出或者
 You're gonna now be able to take
 complexity and make it salient or
 
 45
-00:02:39.350 --> 00:02:41.270
+00:02:39.348 --> 00:02:41.270
+中国的 " 中国 " ， " 中国 " ， " 中国 " ， " 中国 " ， " 中国 " ， " 中国 " 对您团队中的其他开发者有意义。
+对你团队中的其他开发人员有意义。
 meaningful to other
 developers in your team.
 
 46
-00:02:42.420 --> 00:02:46.950
+00:02:42.420 --> 00:02:46.949
+在美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，美国，
+如果你不熟悉这些真正相当困难的原则下
 If you're not as familiar with some of
 these really quite hard principles under
 
 47
-00:02:46.950 --> 00:02:50.290
+00:02:46.949 --> 00:02:50.288
+在 " . " . " . " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+的引擎盖，然后它会给你提供一些
 the hood of JavaScript,
 then it's gonna provide you some of
 
 48
-00:02:50.290 --> 00:02:54.120
+00:02:50.288 --> 00:02:54.120
+" IBM " 的 " 解决方案 " 获得了 " 解决方案 " 的 " 解决方案 " 。 将使您成为更好的问题解决者的构建块。
+能让你成为更好的问题解决者的基石。
 the building blocks that is gonna allow
 you to become a better problem solver.
 
 49
-00:02:54.120 --> 00:02:57.071
+00:02:54.120 --> 00:02:57.069
+" 已使用 JavaScript " 的 " JavaScript " 是 " JavaScript " ， " 是 " ， " 是 " ， " 是 " 。 我们要在幕后的幕后进行
+我们将深入到 JavaScript 的背后，在幕后。
 We're gonna go under the hood of
 JavaScript, behind the scenes.
 
 50
-00:02:57.071 --> 00:03:01.995
+00:02:57.069 --> 00:03:01.995
+在美国的第一个 " 第一个 " ( " ) " ( " ) " ( " ) " ( ) ， " ( ) " ( ) ， " ( ) " ( ) ， " ( ) ) " 。
+看看所有的部件如何从原型链，所有的方式到
 See how all the pieces from the prototype
 chain, all the way through to
 
 51
 00:03:01.995 --> 00:03:07.354
+3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 3 ， 词法作用域限定，到事件循环以及微任务和回调队列。
+词法作用域、事件循环、微任务和回调队列。
 lexical scoping, to the event loop and
 the micro task and callback queues.
 
 52
-00:03:07.354 --> 00:03:12.160
+00:03:07.354 --> 00:03:12.158
+" . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " . " .
+为了给我们自己的特色，承诺是如何在引擎盖下工作的
 To how promises are working under the hood
 in order to give ourselves the features
 
 53
-00:03:12.160 --> 00:03:16.822
+00:03:12.158 --> 00:03:16.822
+" 我们的 " ， " 我的 " ， " 我的 " ， " 我的 " ， " 我的 " ， " 我们 " ， " 知识 " ， " 知识 " ， " 知识 " ， " 知识 " ， " 知 " ， " 知 " ， " 知 " ， " 知 " ， " 知 " 。
+以及知识的单位，我们可以利用的知识的原子
 and the units of knowledge, the kinda
 atoms of knowledge that we can then wield
 
 54
-00:03:16.822 --> 00:03:19.200
+00:03:16.822 --> 00:03:19.199
+( ?????? ??? ??? 更灵活的解决了问题。
+更灵活地解决问题。
 to solve problems more flexibly.
 
 55
-00:03:19.200 --> 00:03:21.090
+00:03:19.199 --> 00:03:21.090
+在我们通过研讨会的同时，也有了 < 美国的第 1 号 > 。
+当我们一起参观工作室的时候,
 As we go through the workshop together,
 
 56
-00:03:21.090 --> 00:03:25.260
+00:03:21.090 --> 00:03:25.259
+在 " 第 " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( " ) " ( ) ， " ( " ) " ( ) ) " 我们会发现这些碎片是如何聚集在一起的
+我们要看看这些部分是如何组合在一起的，从我们的平台开始。
 we're gonna see how these pieces come
 together, build up from our platform.
 
 57
-00:03:25.260 --> 00:03:29.320
+00:03:25.259 --> 00:03:29.318
+根据我们的工作和理解，我们将以慎重的方式开始工作。
+我们将从工作和理解的节奏开始,
 We'll start with a measured pace
 in our jobs and understandings,
 
 58
-00:03:29.320 --> 00:03:32.600
+00:03:29.318 --> 00:03:32.598
+如果我们关注更多的经验，关注技术的交流，那么就会有更多的信息。
+如果我们注重更多的经验，注重技术沟通,
 if we focus on more experience,
 focus on the technical communication,
 
 59
-00:03:32.600 --> 00:03:37.360
+00:03:32.598 --> 00:03:37.360
+" " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " 从共同的理解平台上建立起更难的作品
+从这个共享的理解平台上建立起更难的部分。
 building up to ever harder pieces from
 that shared platform of understanding.
-

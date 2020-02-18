@@ -2,471 +2,571 @@ WEBVTT
 
 1
 00:00:00.060 --> 00:00:01.567
+威尔 · 森特斯: 好了，各位,
 &gt;&gt; Will Sentance: All right, people,
 
 2
-00:00:01.567 --> 00:00:05.510
+00:00:01.567 --> 00:00:05.509
+我们会继续研究这是怎么可能的。
 we are gonna keep going to see
 how this is even possible.
 
 3
-00:00:05.510 --> 00:00:08.537
+00:00:05.509 --> 00:00:08.537
+我们开始暗示实际上老实说从 Dan 的问题来看,
 We started hinting at it, I think
 actually, honestly, from Dan's question,
 
 4
-00:00:08.537 --> 00:00:09.700
+00:00:08.537 --> 00:00:09.699
+这怎么可能？
 how is it even possible?
 
 5
-00:00:09.700 --> 00:00:15.210
+00:00:09.699 --> 00:00:15.210
+在 JavaScript 中，函数就是所谓的第一类对象。
 Well, in JavaScript, functions
 are what's called first class objects.
 
 6
-00:00:15.210 --> 00:00:19.810
+00:00:15.210 --> 00:00:19.809
+也就是说，它们具有物体的所有特征。
 That is to say that they have
 all the features of objects.
 
 7
-00:00:19.810 --> 00:00:22.840
+00:00:19.809 --> 00:00:22.839
+第一类只是意味着它们拥有对象拥有的一切,
 First class just means,
 they have everything that objects have,
 
 8
-00:00:22.840 --> 00:00:24.530
+00:00:22.839 --> 00:00:24.530
+他们也是。
 they have too.
 
 9
-00:00:24.530 --> 00:00:28.970
+00:00:24.530 --> 00:00:28.969
+它们是物体的全部特征，这意味着它们可以像物体一样被对待。
 They're full features of objects, meaning
 they can be treated just like objects.
 
 10
-00:00:28.970 --> 00:00:31.037
+00:00:28.969 --> 00:00:31.036
+我们知道不存在通过的问题。
 We know that there's
 no problem of passing.
 
 11
-00:00:31.037 --> 00:00:35.860
+00:00:31.036 --> 00:00:35.859
+假设我声明了一个对象，我不知道，像这样。
 Suppose I declared an object,
 I don't know, like this.
 
 12
-00:00:36.870 --> 00:00:39.450
+00:00:36.869 --> 00:00:39.450
+如果我声明一个对象，它就在那里。
 If I declared an object, there it is.
 
 13
 00:00:39.450 --> 00:00:42.090
+我会毫不犹豫地将其作为输入。
 I'd have no problem
 passing that as an input.
 
 14
 00:00:42.090 --> 00:00:45.131
+顺便说一下，在后面的场景中，数组，我们稍后会看到它们只是对象。
 Behind the scenes by the way, arrays,
 we're gonna see later on are just objects.
 
 15
 00:00:45.131 --> 00:00:49.240
+顺便说一下，在幕后，函数只是对象。
 By the way, behind the scenes,
 functions are just objects.
 
 16
-00:00:49.240 --> 00:00:52.440
+00:00:49.240 --> 00:00:52.439
+在 JavaScript 的幕后意味着他们可以做所有的事情
 Behind the scenes in JavaScript
 meaning they can do all the things
 
 17
-00:00:52.440 --> 00:00:53.820
+00:00:52.439 --> 00:00:53.820
+物体可以做的事情。
 that objects can do.
 
 18
-00:00:53.820 --> 00:00:56.745
+00:00:53.820 --> 00:00:56.744
+我们可以把它们赋给变量。
 We can assign them to variables.
 
 19
-00:00:56.745 --> 00:01:00.972
+00:00:56.744 --> 00:01:00.972
+我们马上就会看到一种特殊的拯救方式
 We're gonna see in a moment that's
 gonna create a particular way of saving
 
 20
 00:01:00.972 --> 00:01:03.640
+越来越流行的函数。
 functions that is more and more popular.
 
 21
-00:01:03.640 --> 00:01:07.294
+00:01:03.640 --> 00:01:07.293
+它们可以被存储为其他物体的属性,
 They can be stored as properties of
 other objects where they're known as,
 
 22
-00:01:07.294 --> 00:01:10.716
+00:01:07.293 --> 00:01:10.715
+作为其他对象的其他属性存储的函数叫什么？
 what do we call function stored as
 other properties of other objects?
 
 23
-00:01:10.716 --> 00:01:12.190
+00:01:10.715 --> 00:01:12.189
+方法，完全正确。
 Methods, exactly.
 
 24
-00:01:12.190 --> 00:01:17.610
+00:01:12.189 --> 00:01:17.609
+它们可以作为输入，作为参数，传递到其他函数中,
 They can be passed as inputs,
 as arguments, into other functions,
 
 25
-00:01:17.610 --> 00:01:22.250
+00:01:17.609 --> 00:01:22.250
+顺便说一下，根据他们出生的地方，正是丹长大的地方。
 by the way, by reference back to where
 they were born, exactly as Dan raised.
 
 26
 00:01:22.250 --> 00:01:26.200
+今天下午我们将看到对我来说最优雅最成熟的,
 And we're gonna see this afternoon,
 to me the most elegant, sophisticated,
 
 27
 00:01:26.200 --> 00:01:27.950
+的漂亮特性。
 beautiful feature of JavaScript.
 
 28
 00:01:27.950 --> 00:01:32.270
+可以声明它们，并在运行另一个函数时保存它们。
 That they can be declared, saved inside
 of the running of another function.
 
 29
-00:01:32.270 --> 00:01:35.190
+00:01:32.270 --> 00:01:35.189
+不在那里使用，而是返回出去。
 Not used there, but instead returned out.
 
 30
-00:01:35.190 --> 00:01:38.090
+00:01:35.189 --> 00:01:38.090
+这给了我们什么样的 JavaScript 特性？
 And that gives us what
 feature of JavaScript?
 
 31
-00:01:39.660 --> 00:01:40.330
+00:01:39.659 --> 00:01:40.329
+讲者二: 闭幕 威尔 · 森塔斯: 结束,
 &gt;&gt; Speaker 2: Closure.
 &gt;&gt; Will Sentance: Closure,
 
 32
-00:01:40.330 --> 00:01:41.028
+00:01:40.329 --> 00:01:41.027
+没错，结束。
 exactly, closure.
 
 33
-00:01:41.028 --> 00:01:44.920
+00:01:41.027 --> 00:01:44.920
+好了，哪个是我们的高阶函数
 All right, so, which of these
 is our higher order function and
 
 34
-00:01:44.920 --> 00:01:47.300
+00:01:44.920 --> 00:01:47.299
+哪个是我们的复试？
 which of these is our callback?
 
 35
-00:01:47.300 --> 00:01:50.420
+00:01:47.299 --> 00:01:50.420
+不幸的是，这些幻灯片有答案，不要去读它们。
 These slides unfortunately have
 the answer, don't read them.
 
 36
-00:01:50.420 --> 00:01:55.130
+00:01:50.420 --> 00:01:55.129
+让我们看看亚当，因为他，亚当是我们早期的专家。
 But let's turn to Adam because he,
 Adam was our earlier expert.
 
 37
-00:01:55.130 --> 00:01:58.765
+00:01:55.129 --> 00:01:58.765
+它是复制数组和操作，还是乘法 by2。
 Is it copy array and
 manipulate or is it multiplyBy2.
 
 38
-00:01:58.765 --> 00:02:02.776
+00:01:58.765 --> 00:02:02.775
+亚当，哪个是我们的高阶函数？
 Adam, which is our higher order function?
 
 39
-00:02:02.776 --> 00:02:03.666
+00:02:02.775 --> 00:02:03.665
+说话人2: 复制数组和操作。
 &gt;&gt; Speaker 2: The copy array and
 manipulate.
 
 40
-00:02:03.666 --> 00:02:08.089
+00:02:03.665 --> 00:02:08.088
+那么哪个是我们的回调函数呢，布雷登？
 &gt;&gt; Will Sentance: And
 which is our callback function, Brayden?
 
 41
-00:02:08.089 --> 00:02:08.645
+00:02:08.088 --> 00:02:08.645
+讲者2: multilyby2。
 &gt;&gt; Speaker 2: MultiplyBy2.
 
 42
-00:02:08.645 --> 00:02:09.926
+00:02:08.645 --> 00:02:09.925
+威尔 · 森塔斯: multilyby2。
 &gt;&gt; Will Sentance: MultiplyBy2.
 
 43
-00:02:09.926 --> 00:02:13.634
+00:02:09.925 --> 00:02:13.634
+是的，外部功能可以增加一点婴儿功能,
 Yeah, the outer function that
 takes in a little baby function,
 
 44
 00:02:13.634 --> 00:02:15.770
+这是我们的高阶函数。
 that's our higher order function.
 
 45
-00:02:17.050 --> 00:02:22.510
+00:02:17.050 --> 00:02:22.509
+我们插入的函数是回调函数。
 The function we insert in
 is our callback function.
 
 46
-00:02:22.510 --> 00:02:23.205
+00:02:22.509 --> 00:02:23.204
+就是这样，各位。
 And that's it, people.
 
 47
-00:02:23.205 --> 00:02:26.674
+00:02:23.204 --> 00:02:26.674
+我仍然记得当我第一次遇到这些深刻的思考。
 I still remember when I first
 encountered these thinking so profound.
 
 48
-00:02:26.674 --> 00:02:29.320
+00:02:26.674 --> 00:02:29.319
+但这是我们的高阶函数。
 But this is our high order function.
 
 49
-00:02:29.320 --> 00:02:33.990
+00:02:29.319 --> 00:02:33.990
+任何接受或以这种方式返回一个函数的函数。
 Any function that takes in, or
 by the way returns out a function.
 
 50
-00:02:35.080 --> 00:02:36.270
+00:02:35.079 --> 00:02:36.270
+只是用一个术语来描述每个函数。
 Just a term describe each function.
 
 51
-00:02:36.270 --> 00:02:39.100
+00:02:36.270 --> 00:02:39.099
+我们不需要，你可以想象一种语言，我们需要把它声明为
 We don't need to, you can imagine
 a language where we need to declare it as
 
 52
-00:02:39.100 --> 00:02:40.790
+00:02:39.099 --> 00:02:40.789
+是一个高阶函数。
 being a higher order function.
 
 53
-00:02:40.790 --> 00:02:42.780
+00:02:40.789 --> 00:02:42.780
+所以它已经准备好接收其他功能了。
 So it's ready to receive other functions.
 
 54
-00:02:42.780 --> 00:02:44.242
+00:02:42.780 --> 00:02:44.241
+不是在 JavaScript 中，没有问题。
 Not in JavaScript, no problem.
 
 55
-00:02:44.242 --> 00:02:47.965
+00:02:44.241 --> 00:02:47.965
+在 JavaScript 中，任何接受函数或函数的函数
 In JavaScript,
 any function that takes in a function or
 
 56
-00:02:47.965 --> 00:02:52.540
+00:02:47.965 --> 00:02:52.539
+自动返回一个输出是一个高阶函数。
 returns one out automatically
 is a higher order function.
 
 57
-00:02:52.540 --> 00:02:54.819
+00:02:52.539 --> 00:02:54.819
+他们之间没有什么本质上的不同。
 There's nothing inherently
 different about them.
 
 58
-00:02:54.819 --> 00:02:59.190
+00:02:54.819 --> 00:02:59.189
+高阶函数和回调函数,
 Okay, so high order functions and
 callbacks,
 
 59
-00:02:59.190 --> 00:03:02.320
+00:02:59.189 --> 00:03:02.319
+他们让我们的代码更加干燥。
 they keep our code far more dry.
 
 60
-00:03:02.320 --> 00:03:03.370
+00:03:02.319 --> 00:03:03.370
+不要重复自己的话。
 Don't repeat yourself.
 
 61
-00:03:03.370 --> 00:03:04.920
+00:03:03.370 --> 00:03:04.919
+我们写过一次。
 We wrote one time.
 
 62
-00:03:04.920 --> 00:03:08.730
+00:03:04.919 --> 00:03:08.729
+看看这个，有一次，复制数组操作，然后运行它，就是这样
 Look at this, one time, copy array
 manipulate, and then when ran it, that's
 
 63
-00:03:08.730 --> 00:03:11.690
+00:03:08.729 --> 00:03:11.689
+当我们决定如何处理这些代码的时候。
 when we determined what specifically
 we would do with some of the code.
 
 64
-00:03:11.690 --> 00:03:17.020
+00:03:11.689 --> 00:03:17.020
+这个想法很特别，我们可以在保存一个函数之后再编辑它,
 That's really special, the idea that we
 can edit a function after we've saved it,
 
 65
 00:03:17.020 --> 00:03:19.210
+因为我们留了一点空白。
 because we left a little bit of it blank.
 
 66
-00:03:19.210 --> 00:03:21.700
+00:03:19.210 --> 00:03:21.699
+而不仅仅是编辑我们要用的数据,
 And not just edit it with what
 data we're gonna have in there,
 
 67
-00:03:21.700 --> 00:03:23.409
+00:03:21.699 --> 00:03:23.408
+而是字面上编辑它的代码。
 but literally edit its code.
 
 68
-00:03:24.840 --> 00:03:28.940
+00:03:24.840 --> 00:03:28.939
+这使得我们的代码更加可重用。
 That makes our code saved
 profoundly more reusable.
 
 69
-00:03:28.940 --> 00:03:30.600
+00:03:28.939 --> 00:03:30.599
+我们可以在很多不同的情况下使用它。
 We can use it in so
 many different situations.
 
 70
-00:03:30.600 --> 00:03:36.160
+00:03:30.599 --> 00:03:36.159
+我们可以除以2，我们可以加上3，任何我们想要的。
 We could pass in divide by 2,
 we could pass in add 3, anything we want.
 
 71
-00:03:36.160 --> 00:03:41.865
+00:03:36.159 --> 00:03:41.865
+这确保了我们也可以编写更具声明性、更具可读性的代码。
 This ensures that we can write more
 declarative, more readable code as well.
 
 72
 00:03:41.865 --> 00:03:44.670
+看看下面这个函数，copyArrayManipulate。
 Have a look at what this function
 down here, copyArrayManipulate.
 
 73
-00:03:44.670 --> 00:03:46.986
+00:03:44.670 --> 00:03:46.985
+他们打电话不是为了这个而是为了什么,
 They tend to call is not that,
 but what, everybody,
 
 74
-00:03:46.986 --> 00:03:48.794
+00:03:46.985 --> 00:03:48.793
+他们通常怎么称呼这个函数？
 what do they call this function usually?
 
 75
-00:03:48.794 --> 00:03:49.458
+00:03:48.793 --> 00:03:49.457
+讲者二: 地图 威尔 · 森塔斯: 地图,
 &gt;&gt; Speaker 2: Map.
 &gt;&gt; Will Sentance: Map,
 
 76
-00:03:49.458 --> 00:03:52.813
+00:03:49.457 --> 00:03:52.812
+确切地说，他们称之为地图，这意味着通过一些数据
 exactly they call it map,
 it means take some data through some
 
 77
-00:03:52.813 --> 00:03:55.989
+00:03:52.812 --> 00:03:55.989
+映射功能，某种改变数据的方法。
 mapping functionality,
 some way of changing that data.
 
 78
 00:03:55.989 --> 00:03:59.138
+使用每个元素的更改创建新的数据集合
 Create new collection of data with
 each of those elements change
 
 79
 00:03:59.138 --> 00:04:02.620
+根据某个函数，在这种情况下，每个函数乘以2。
 according some function, in this case,
 multiply each of them by 2.
 
 80
-00:04:02.620 --> 00:04:05.220
+00:04:02.620 --> 00:04:05.219
+这是一行非常易读的代码。
 That is a very readable line of code.
 
 81
-00:04:05.220 --> 00:04:08.096
+00:04:05.219 --> 00:04:08.096
+在现实中，我们需要了解它是如何建立在引擎盖下的，但是
 In reality, we need to understand
 how it's built under the hood, but
 
 82
 00:04:08.096 --> 00:04:10.705
+我们不写那个，我们只是大部分时间在用它。
 we ain't writing that,
 we're just using it most of the time.
 
 83
-00:04:10.705 --> 00:04:14.849
+00:04:10.705 --> 00:04:14.848
+这意味着我要写在这里映射这个数据通过这个转换函数,
 Meaning I get to write here map this
 data by this transformation function,
 
 84
-00:04:14.849 --> 00:04:18.340
+00:04:14.848 --> 00:04:18.339
+每个元素乘以2，很容易读懂。
 multiply each element by 2,
 that's pretty readable.
 
 85
-00:04:18.340 --> 00:04:19.700
+00:04:18.339 --> 00:04:19.699
+而如果我这样做。
 Versus if I were doing it like that.
 
 86
-00:04:19.700 --> 00:04:23.564
+00:04:19.699 --> 00:04:23.564
+看看这个函数的内部，这是我过去必须写的,
 Have a look inside that function, that's
 what I've had to write in the old days,
 
 87
-00:04:23.564 --> 00:04:25.330
+00:04:23.564 --> 00:04:25.329
+用祈使语气。
 in the imperative style.
 
 88
-00:04:25.330 --> 00:04:29.200
+00:04:25.329 --> 00:04:29.199
+相反，我声明我想过滤或映射这个条件的数据。
 Instead I declare I wanna filter or
 map this data by this condition.
 
 89
-00:04:29.200 --> 00:04:32.230
+00:04:29.199 --> 00:04:32.230
+对不起，在这种情况下，这个数据由这个映射函数来映射。
 Sorry, in this case,
 this data by this mapping function.
 
 90
-00:04:32.230 --> 00:04:33.780
+00:04:32.230 --> 00:04:33.779
+这使得代码非常具有可读性。
 That makes for very readable code.
 
 91
-00:04:33.780 --> 00:04:35.840
+00:04:33.779 --> 00:04:35.840
+它是函数式编程的核心部分
 It's a core part of
 functional programming and
 
 92
-00:04:35.840 --> 00:04:37.820
+00:04:35.840 --> 00:04:37.819
+更普遍的宣告式编程。
 more generally declarative programming.
 
 93
-00:04:37.820 --> 00:04:39.360
+00:04:37.819 --> 00:04:39.360
+宣告我想要发生的事情。
 Declaring what I wanna have happen.
 
 94
 00:04:39.360 --> 00:04:42.590
+比如说，我想绘制地图，然后它就发生了，很漂亮。
 Say, I wanna map it, and
 it happens, beautiful.
 
 95
 00:04:42.590 --> 00:04:47.430
+这仍然是面试的关键部分,
 All right,
 it remains a key part of interviewing,
 
 96
 00:04:47.430 --> 00:04:50.840
+无论是中高级职位面试。
 whether for
 mid-senior level job interviews.
 
 97
 00:04:50.840 --> 00:04:55.360
+传入一个函数的概念
 And the notion of passing in a function
 
 98
 00:04:55.360 --> 00:05:00.370
+以一种完全不同的方式运行另一个函数,
 to the running of another
 function in a very different way,
 
 99
 00:05:00.370 --> 00:05:05.420
+将成为同步 JavaScript 的主干。
 is gonna turn out to be the backbone
 of a synchronous JavaScript.
 
 100
-00:05:05.420 --> 00:05:10.352
+00:05:05.420 --> 00:05:10.351
+即使我们使用了许诺，即使我们在幕后使用了异步等待,
 Even if we're using promises, even if
 we're using async await behind the scenes,
 
 101
-00:05:10.352 --> 00:05:14.880
+00:05:10.351 --> 00:05:14.879
+将一个函数传递给另一个函数是这些概念的核心。
 passing in a function to another function
 is gonna be core to those concepts.
-
