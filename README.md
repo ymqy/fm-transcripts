@@ -5,3 +5,8 @@
 ## 已翻译
 
 - 2019-03-26-typescript-v2
+
+## 工具
+
+- Tern-Subtitle File Translator 字幕翻译工具
+- 彩云小译开放平台 翻译 API
