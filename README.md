@@ -20,16 +20,4 @@
 ## 工具
 
 - Tern-Subtitle File Translator 字幕翻译工具
-
-## API 提供商
-- 彩云小译
-- 腾讯云
-- 百度
-- 有道
-- 搜狗
-- 小牛
-- 亚马逊
-- 谷歌
-- Azure
-- Yandex
-- IBM
+    - 翻译 API：彩云小译、腾讯云、百度、有道、搜狗、小牛、亚马逊、谷歌、Azure、Yandex、IBM
