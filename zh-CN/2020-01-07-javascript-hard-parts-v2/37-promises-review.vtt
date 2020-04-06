@@ -1,519 +1,610 @@
 WEBVTT
 
 1
-00:00:00.210 --> 00:00:02.250
-那么应该重新命名什么呢？
-&gt;&gt; Will Sentance: Then
-should be renamed what?
+00:00:00.030 --> 00:00:04.040
+&GT；&GT；Will Sentance：让我们谈谈好处和
+&gt;&gt; Will Sentance: Let's
+talk about the benefits and
 
 2
-00:00:02.250 --> 00:00:05.929
-它应该被重命名为 this，store 函数以便以后运行。
-It should be renamed this,
-store function to run later.
+00:00:04.040 --> 00:00:06.293
+而不是这种方法的好处。
+not to benefits of this approach.
 
 3
-00:00:07.440 --> 00:00:08.614
-没错。
-Yeah, exactly.
+00:00:06.293 --> 00:00:11.669
+所以，问题99%的开发人员不知道这是如何在引擎盖下工作的，
+So, problems 99% of developers have
+no idea how this work under the hood,
 
 4
-00:00:08.614 --> 00:00:12.320
-将来的 data.store 我以后自动运行我的时候
-Future data.store me to run
-me later automatically when
+00:00:11.669 --> 00:00:14.750
+这使得调试成为一件神秘的事情。
+which makes debugging
+just this mystery thing.
 
 5
-00:00:12.320 --> 00:00:15.730
-从前面的获取调用中产生的后台任务完成并
-the background task that came out of
-the fetch call previously completes and
+00:00:14.750 --> 00:00:18.033
+最重要的是，我想是的，我现在说了，
+And on top of that,
+I think yeah, I said that now,
 
 6
-00:00:15.730 --> 00:00:16.899
-数值可能会更新。
-the value probably gets updated.
+00:00:18.033 --> 00:00:20.789
+最重要的是，我感觉要去面试了。
+on top of that I felt going to interviews.
 
 7
-00:00:16.899 --> 00:00:20.289
-虽然不够吸引人，但确实很准确。
-Not catchy but it is accurate.
+00:00:20.789 --> 00:00:25.039
+这种风格的好处是它创造了某种意味着
+The upside of this style is it
+creates something that sort of means
 
 8
-00:00:21.660 --> 00:00:24.870
-所以，我还要再加一个好处。
-So, I will add one more benefit though.
+00:00:25.039 --> 00:00:29.870
+如果你不明白它是如何工作的，你可以大致让它起作用。
+if you don't understand how it's working,
+you can roughly make it kind of work.
 
 9
-00:00:24.870 --> 00:00:29.809
-所以，人们认为更干净，可读的风格，我会说，像 pseudo synchronous,
-So, people think kind of cleaner, readable
-style, I'll say, like pseudo synchronous,
+00:00:29.870 --> 00:00:32.314
+我要说的是旧的风格，你可以直接传递一个函数，
+I will say about the old style where
+you literally pass a function in,
 
 10
-00:00:29.809 --> 00:00:32.829
-看起来你运行得很好，但实际上不是。
-it sort of looks like you're running
-it right then but you really are not.
+00:00:32.314 --> 00:00:33.674
+如果你明白它是怎么工作的。
+if you understand how it's working.
 
 11
-00:00:32.829 --> 00:00:36.950
-你传入的函数会像以前一样自动运行，不是你传入的，而是
-You're passing in a function that's gonna
-be auto run as before, not by you, but
+00:00:33.674 --> 00:00:37.634
+你有点完蛋了，这种风格，因为这种外观，
+You're kinda done, this style,
+because of this appearance,
 
 12
-00:00:36.950 --> 00:00:37.840
-作者: JavaScript。
-by JavaScript.
+00:00:37.634 --> 00:00:42.470
+当时的方法，你觉得你知道它在做什么，它是一种工作，但是
+the then method you kind of think you know
+what it's doing and it kind of work but
 
 13
-00:00:37.840 --> 00:00:41.850
-它接受的是一个你没有放进去的输入，是 java 放进去的。
-And it's taking an input that you didn't
-put in there, java who put in there.
+00:00:42.470 --> 00:00:45.130
+真的，我讨厌这个名字。
+really, I hate this name, then.
 
 14
-00:00:41.850 --> 00:00:44.700
-从背景来看，那个高音符号是自动的
-From the background work,
-that high string that's gonna be auto
+00:00:45.130 --> 00:00:49.030
+它什么都不做，如果我作为开发人员阅读这些代码，我会说，好的，所以
+It's doing nothing, if I'm reading this
+code as a developer I'm like, okay, so
 
 15
-00:00:44.700 --> 00:00:47.390
-自动运行时插入显示功能。
-inserted into display
-function when it's auto run.
+00:00:49.030 --> 00:00:50.929
+拿来然后我要展示。
+fetching and then I'm gonna display.
 
 16
-00:00:47.390 --> 00:00:50.469
-我很喜欢。顺便说一下，一旦你看到 JavaScript
-I love it.
-By the way, once you see that JavaScript
+00:00:50.929 --> 00:00:54.000
+但当然，这还不够，
+But of course, it's not even close,
 
 17
-00:00:50.469 --> 00:00:54.340
-或者一旦你看到 JavaScript 正在使用这个函数代码来显示，并且
-or once one sees that JavaScript is
-taking that function code of display, and
+00:00:54.000 --> 00:00:57.020
+也许我们甚至会这样想，如果我们回到这条线上，做那一行
+maybe we even think that kind of if we go
+back up the thread and do that line and
 
 18
-00:00:54.340 --> 00:00:57.289
-它会自动为你输入指纹。
-it's running it for you by putting
-print on it for you automatically.
+00:00:57.020 --> 00:01:00.140
+然后再点，不，那么应该改名什么？
+then bit later, No, no, no,
+then should be renamed what?
 
 19
-00:00:57.289 --> 00:00:58.789
-它将输入插入到
-And it's inserting the input for
+00:01:00.140 --> 00:01:07.290
+我认为它应该重命名为这个，存储函数以后运行，是的，没错。
+I think it should be renamed this, store
+function to Run later, yeah, exactly.
 
 20
-00:00:58.789 --> 00:01:03.000
-你自然而然地，在这个意义上，这是非常慷慨的语言。
-you automatically,
-it's very generous language in that sense.
+00:01:07.290 --> 00:01:11.650
+将来日期点，存储我以后自动运行我的后台任务
+Future dated dot, store me to Run me later
+automatically when the background task
 
 21
-00:01:04.530 --> 00:01:09.340
-这种设计有一个很大的好处，那就是错误处理过程。
-There is one big benefit to this design,
-and it's that error handling process.
+00:01:11.650 --> 00:01:14.230
+先前从fetch调用中出来的
+that came out of the fetch
+call previously completes and
 
 22
-00:01:09.340 --> 00:01:11.420
-所以这真的很棒。
-So this is really nice.
+00:01:14.230 --> 00:01:15.340
+值可能会被更新。
+the value probably gets updated.
 
 23
-00:01:11.420 --> 00:01:16.310
-结果是人们，在这个承诺对象上，实际上还有另一个数组
-It turns out people, there's actually
-another array on this promise object
+00:01:16.469 --> 00:01:23.319
+不是上口，但它是准确的，嗯哼，所以我会增加一个额外的好处，虽然。
+Not catchy, but it is accurate, mm-hm,
+so I will add one more benefit though.
 
 24
-00:01:16.310 --> 00:01:22.260
-在幕后，另一个隐藏属性，它被称为拒绝。
-behind the scenes, another hidden
-property and it's called On Rejection.
+00:01:23.319 --> 00:01:25.390
+所以人们认为这是一种更干净，更易读的风格，
+So people think kind of cleaner,
+readable style,
 
 25
-00:01:23.510 --> 00:01:26.019
-它也是一个数组，我们可以把函数放进去。
-And it's also an array into
-which we can put functions.
+00:01:25.390 --> 00:01:28.260
+我会说，就像伪同步，
+I will say, like pseudo synchronous,
 
 26
-00:01:27.629 --> 00:01:31.329
-当你与外部世界，尤其是网络上的东西互动时,
-When you interact with the outside
-world especially network stuff,
+00:01:28.260 --> 00:01:31.289
+它看起来像是你当时正在运行它，但你真的不是。
+it sort of looks like you are running
+it right then but you really are not.
 
 27
-00:01:31.329 --> 00:01:32.310
-你总是会犯错。
-you get errors all the time.
+00:01:31.289 --> 00:01:34.159
+您正在传递一个函数，该函数也将像以前一样运行，
+You are passing in a function that
+is going to be also run as before,
 
 28
-00:01:33.340 --> 00:01:37.170
-你不想运行你的显示功能，所以 Twitter 上的用户得到了一个可爱的
-You don't wanna run your display function
-so the user on Twitter gets a lovely
+00:01:34.159 --> 00:01:36.299
+不是你，而是JavaScript。
+not by you, but by JavaScript.
 
 29
-00:01:37.170 --> 00:01:39.170
-广播了错误的全部细节。
+00:01:36.299 --> 00:01:40.219
+它接受了一个你没有放进去的输入，JavaScript放进去了。
+And it's taking an input that you did not
+put in there, JavaScript put in that.
+
+30
+00:01:40.219 --> 00:01:43.159
+从后台工作的高字符串将是自动的
+That from the background work that
+high string that's gonna be auto
+
+31
+00:01:43.159 --> 00:01:46.299
+当它自动运行时插入显示功能，我喜欢它。
+inserted into display function
+when it's AutoRun, I love it.
+
+32
+00:01:46.299 --> 00:01:49.219
+顺便说一下，一旦您看到JavaScript是
+By the way,
+once you see that JavaScript was
+
+33
+00:01:49.219 --> 00:01:52.799
+我们可以看到JavaScript正在使用显示的功能代码，并且
+one sees that JavaScript is taking
+that function code of display, and
+
+34
+00:01:52.799 --> 00:01:55.750
+它通过自动为你打印来为你运行它。
+it's running it for you by putting
+Print on it for you automatically.
+
+35
+00:01:55.750 --> 00:01:57.250
+它正在插入输入
+And it's inserting the input for
+
+36
+00:01:57.250 --> 00:02:01.459
+从这个意义上说，你当然是一种非常慷慨的语言。
+you automatically It's a very
+generous language in that sense.
+
+37
+00:02:02.989 --> 00:02:05.430
+这种设计有一个很大的好处，并且
+There is one big benefit of this design,
+and
+
+38
+00:02:05.430 --> 00:02:09.879
+这是那个时代的处理过程，所以，这真的很好。
+it's that era handling process,
+so, this is really nice.
+
+39
+00:02:09.879 --> 00:02:12.710
+原来人们，实际上还有另一个
+It turns out people,
+there's actually another
+
+40
+00:02:12.710 --> 00:02:16.939
+幕后此Promise对象上的数组，这是另一个隐藏的属性。
+array on this promise object behind
+the scenes, another hidden property.
+
+41
+00:02:16.939 --> 00:02:24.449
+它被称为onRjection，它也是一个数组，我们可以将函数放入其中。
+And it's called onRjection, and it's also
+an array into which we can put functions.
+
+42
+00:02:24.449 --> 00:02:29.009
+尤其是当你和外面的世界互动的时候
+When you're interacting with
+the outside world especially
+
+43
+00:02:29.009 --> 00:02:30.770
+网络上的东西你总是会收到错误。
+network stuff you get errors all the time.
+
+44
+00:02:31.789 --> 00:02:35.629
+你不想运行你的显示功能，所以Twitter上的用户会得到一个可爱的
+You don't wanna run your display functions
+so the user on Twitter gets a lovely
+
+45
+00:02:35.629 --> 00:02:37.629
+广播错误的全部细节。
 broadcast of the full
 details of the error.
 
-30
-00:01:40.299 --> 00:01:44.229
-理想情况下，我们应该有一个单独的函数来处理这个错误。
-Ideally we would have a separate function
-is gonna run that handles that error.
+46
+00:02:38.759 --> 00:02:41.479
+理想情况下，希望有一个单独的函数来运行
+Ideally wanna have a separate
+function that's going to run
 
-31
-00:01:44.229 --> 00:01:46.509
-也许它以某种方式为你记录了它，但是
+47
+00:02:41.479 --> 00:02:42.689
+处理该错误的。
+that handles that error.
+
+48
+00:02:42.689 --> 00:02:44.447
+也许它会以某种方式为你记录下来，但是
 Maybe it logs it for you in some way, but
 
-32
-00:01:46.509 --> 00:01:48.390
-可能只是给用户一个更好的体验。
+49
+00:02:44.447 --> 00:02:46.751
+可能只是给用户更好的体验。
 probably just gives the user
 a better experience.
 
-33
-00:01:48.390 --> 00:01:51.673
-它正在做类似的事情，也许，不管它是什么。
-It's doing something similar,
-maybe, whatever it might be.
-
-34
-00:01:51.673 --> 00:01:55.379
-现在，我们如何处理这个问题呢？
-Now, how can we handle that?
-
-35
-00:01:55.379 --> 00:01:59.359
-好吧，你知道吗，我保证我会给我们这个惊人的功能。
-Well, you know what, the promise I'll
-just give us this amazing feature.
-
-36
-00:01:59.359 --> 00:02:03.355
-这意味着如果我们得到的是一个错误，而不是我们想要的实际响应对象,
-That means if we get an error back not
-the actual response object that we want,
-
-37
-00:02:03.355 --> 00:02:06.250
-任何错误，它都不会运行显示功能。
-any error,
-it's not gonna run that display function.
-
-38
-00:02:06.250 --> 00:02:09.590
-它甚至不会自动触发任何功能和未完成。
-It's not even gonna auto trigger any
-of the functions and unfulfilled.
-
-39
-00:02:09.590 --> 00:02:13.090
-它会触发任何你存储在拒绝中的功能。
-It's going to trigger any functions
-that you stored in on rejection.
-
-40
-00:02:14.360 --> 00:02:15.969
-我们如何在那里得到函数？
-How do we get functions in there?
-
-41
-00:02:15.969 --> 00:02:23.264
-有两种方法一种是写未来数据有人知道吗？
-Well, there's two ways, one would
-be to write futureData.anyone know?
-
-42
-00:02:23.264 --> 00:02:23.789
-演讲者2: . 接住。
-&gt;&gt; Speaker 2: .catch.
-
-43
-00:02:23.789 --> 00:02:26.909
-威尔 · 森塔斯:。 接着，完全正确，凯拉说得对。 抓住。
-&gt;&gt; Will Sentance: .catch, spot on,
-exactly, Kayla's right, .catch.
-
-44
-00:02:26.909 --> 00:02:31.229
-我们在这里传递的任何函数，都会进入你们的拒绝数组。
-And any function we pass in there
-is going in your rejection array.
-
-45
-00:02:31.229 --> 00:02:35.469
-另一种方法是作为第二个参数传递给 then,
-The other way is to pass to
-then as the second argument,
-
-46
-00:02:37.520 --> 00:02:41.259
-无论你想要什么功能，它都会在这里自动运行。
-whatever function you want that's
-gonna go in here to auto run on error.
-
-47
-00:02:41.259 --> 00:02:44.050
-第一个参数，将该函数设置为未实现。
-First argument,
-stick that function in unfulfilled.
-
-48
-00:02:44.050 --> 00:02:46.990
-然后我们接受第二个参数，第二个输入和
-Then we'll take the second argument,
-the second input and
-
-49
-00:02:46.990 --> 00:02:49.150
-把这个功能植入你的排斥系统。
-stick that function in your rejected.
-
 50
-00:02:49.150 --> 00:02:50.310
-真是太好了,
-That's really nice,
+00:02:46.751 --> 00:02:51.587
+它正在做类似的事情，也许，不管是什么，
+It's doing something similar,
+maybe, whatever it might be,
 
 51
-00:02:50.310 --> 00:02:54.280
-毫无疑问，这是一个非常好的错误处理方法。
-that's a really really nice error
-handling approach without a doubt.
+00:02:51.587 --> 00:02:53.840
+现在，我们该怎么处理呢？
+now, how can we handle that?
 
 52
-00:02:55.409 --> 00:02:59.949
-好了，伙计们，我们有了，我们现在有了规则
-All right folks, so there we have it,
-we now have rules for
+00:02:53.840 --> 00:02:54.496
+你知道吗？
+Well, you know what?
 
 53
-00:02:59.949 --> 00:03:05.039
-我们异步延迟代码的执行承诺延迟函数。
+00:02:54.496 --> 00:02:57.819
+Promise对象为我们提供了这一惊人功能，
+The promise object give
+us this amazing feature,
+
+54
+00:02:57.819 --> 00:03:03.050
+这意味着如果我们得到一个错误，而不是实际的响应对象，我们想要任何错误，
+that means if we get an error back not the
+actual response object we want any error,
+
+55
+00:03:03.050 --> 00:03:04.710
+它不会运行显示功能。
+it's not gonna Run that display function.
+
+56
+00:03:04.710 --> 00:03:08.050
+它甚至不会自动触发你未完成的任何功能，
+It's not even gonna auto trigger any
+of your functions in unfulfilled,
+
+57
+00:03:08.050 --> 00:03:12.870
+它会触发你存储在onRejection中的任何函数
+it's gonna trigger any functions
+that you stored in onRejection,
+
+58
+00:03:12.870 --> 00:03:14.430
+我们如何在那里获得函数？
+how do we get functions in there?
+
+59
+00:03:14.430 --> 00:03:15.650
+嗯，有两种方法，
+Well, there's two ways,
+
+60
+00:03:15.650 --> 00:03:21.001
+一个是写未来，&gt；&gt；Will Sentance：数据点，有人知道吗？
+one would be to write future,
+&gt;&gt; Will Sentance: Data dot, anyone know?
+
+61
+00:03:22.069 --> 00:03:25.318
+网点接点准确，凯特是对的，网点接点，和
+Dot catch spot on exactly,
+Cate is right, dot catch, and
+
+62
+00:03:25.318 --> 00:03:29.680
+我们在里面传递的任何函数，都会被拒绝，对吗？
+any function we pass in there,
+it's going on rejection, right?
+
+63
+00:03:29.680 --> 00:03:33.930
+另一种方式是暂停到THEN作为第二个参数，
+The other way is to pause to
+then as the second argument,
+
+64
+00:03:35.979 --> 00:03:39.719
+你想要的任何功能都会在这里出现错误时自动运行，
+whatever function you want that's going
+to go in here to AutoRun on error,
+
+65
+00:03:39.719 --> 00:03:42.509
+第一个参数，将该函数放在unfulled中。
+first argument,
+stick that function in unfulfilled.
+
+66
+00:03:42.509 --> 00:03:44.163
+然后我们将进行第二个论点，
+Then we'll take the second argument,
+
+67
+00:03:44.163 --> 00:03:47.610
+第二个输入并保留您拒绝的功能？
+the second input and
+stay that function that you rejected?
+
+68
+00:03:47.610 --> 00:03:49.349
+那真的很好，这真的是，
+That's really nice, that's a really,
+
+69
+00:03:49.349 --> 00:03:52.740
+毫无疑问，非常好的错误处理方法。
+really nice error handling
+approach without a doubt.
+
+70
+00:03:53.870 --> 00:03:58.409
+好了，伙计们，现在我们有了它，我们现在有了规则
+Alright folks, so there we have it,
+we now have rules for
+
+71
+00:03:58.409 --> 00:04:03.509
+我们的异步延迟代码的执行包含Promise延迟功能。
 the execution of our asynchronously delay
 code hold promise deferred functions.
 
-54
-00:03:05.039 --> 00:03:07.650
-这就是丹所说的承诺延迟作用,
+72
+00:04:03.509 --> 00:04:06.110
+这就是丹所说的承诺延期功能，
 This is what Dan was saying
 promise deferred functions,
 
-55
-00:03:07.650 --> 00:03:10.500
-那些承诺延迟他们逃跑的人
+73
+00:04:06.110 --> 00:04:08.969
+那些与承诺相联系的人会推迟他们的运行
 ones that were attached to
 a promise to delay them running
 
-56
-00:03:10.500 --> 00:03:12.189
-直到背景里发生了什么事。
+74
+00:04:08.969 --> 00:04:11.069
+直到后台发生了一些事情。
 until something happened
 in the background.
 
-57
-00:03:12.189 --> 00:03:16.750
-将它们存储在微任务队列和传递的回调函数中
-Store them in the micro task queue and
-callback functions ones that were passed
+75
+00:04:11.069 --> 00:04:14.229
+将它们存储在微任务队列和回调函数中，
+Store them in the microtask queue and
+callback functions,
 
-58
-00:03:16.750 --> 00:03:20.759
-类似计时器这样的外观函数,
-in to one of these facade
-functions like timer, sorry,
+76
+00:04:14.229 --> 00:04:19.220
+传递给其中一个门面函数的函数，如计时器，对不起，
+ones that were passed in to one of these
+facade functions like timer, sorry,
 
-59
-00:03:20.759 --> 00:03:23.680
-设置超时，让他们进入回调队列。
+77
+00:04:19.220 --> 00:04:22.139
+设置超时，让它们进入回调队列。
 set timeout,
 have them go in the callback queue.
 
-60
-00:03:25.379 --> 00:03:30.280
-当 web 浏览器功能，也就是 API 完成后,
-When the web browser feature,
-otherwise known as API finishes,
+78
+00:04:23.839 --> 00:04:28.740
+当网络浏览器特征否则存在API完成时，
+When the web browser feature
+otherwise there is API finishes,
 
-61
-00:03:30.280 --> 00:03:34.699
-将函数添加到调用堆栈中，换句话说，运行它。
-add the function to the call stack,
-in other words, run it.
+79
+00:04:28.740 --> 00:04:32.409
+将该函数添加到冷却堆栈。
+add that function to the coolstack.
 
-62
-00:03:35.969 --> 00:03:40.069
-当调用堆栈为空且所有全局代码运行完毕时,
-When call stack is empty and
-all global code is finished running,
+80
+00:04:32.409 --> 00:04:37.050
+换句话说，当Coolstack为空时运行它，并且
+In other words,
+Run it when coolstack is empty and
 
-63
-00:03:41.490 --> 00:03:44.469
-让事件循环为我们检查这个条件。
-have the event loop check
-this condition for us.
+81
+00:04:37.050 --> 00:04:42.930
+所有全局代码都已完成运行，请让事件newcheck为我们检查此条件。
+all global code is finished running, have
+the event newcheck this condition for us.
 
-64
-00:03:44.469 --> 00:03:46.409
-在我们知道代码是我会运行下一步,
-Before we know it code
-is I would run next,
+82
+00:04:42.930 --> 00:04:44.870
+在我们知道代码是我接下来会运行之前，
+Before we learn the code
+is I would Run next,
 
-65
-00:03:46.409 --> 00:03:52.000
-将微任务队列中的函数优先于回调队列中的函数。
-prioritize functions in the micro
-task queue over the callback queue.
+83
+00:04:44.870 --> 00:04:50.459
+将微任务队列中的函数优先于回调队列。
+prioritize functions in the microtask
+queue over the callback queue.
 
-66
-00:03:53.659 --> 00:03:58.990
-承诺网页浏览器的特性，回调和微任务队列以及
+84
+00:04:52.120 --> 00:04:57.439
+承诺Web浏览器功能、回调和微任务队列以及
 Promises web browser features,
-the callback and micro task queues and
+the callback and microtask queues and
 
-67
-00:03:58.990 --> 00:04:03.349
+85
+00:04:57.439 --> 00:05:01.810
 事件循环使我们能够构建非阻塞应用程序。
 the event loop enable us to
 build non blocking applications.
 
-68
-00:04:03.349 --> 00:04:07.169
-我们不必在这个 JavaScript 线程中等待。
-We don't have to wait in this
-single JavaScript thread.
-
-69
-00:04:07.169 --> 00:04:09.169
-我们必须在这里等待我们的数据回来。
-We'd have to wait here for
-our data to come back.
-
-70
-00:04:09.169 --> 00:04:11.689
-没有等待这条线，取我们不坐在这条线等待
-No waiting on this line, fetch we're
-not sitting on this line waiting for
-
-71
-00:04:11.689 --> 00:04:12.849
-数据回来。
-the data to come back.
-
-72
-00:04:12.849 --> 00:04:13.360
-不不不。
-No, no, no, no.
-
-73
-00:04:13.360 --> 00:04:14.764
-我的意思是，不是我们做的普通代码,
-I mean, no in regular code we do,
-
-74
-00:04:14.764 --> 00:04:18.240
-在函数代码中，你要一直站在那条线上直到你完成它。
-in function code, you're staying
-on that line til you finished it.
-
-75
-00:04:18.240 --> 00:04:19.509
-但它不是一个常规的函数调用。
-But it's not a regular function call.
-
-76
-00:04:19.509 --> 00:04:21.689
-这是一个用于设置后台工作的 facade 函数。
-It's a facade function for
-setting up background work.
-
-77
-00:04:23.209 --> 00:04:24.139
-不管要花多长时间,
-However long it takes,
-
-78
-00:04:24.139 --> 00:04:28.189
-我们不能预测我们的浏览器功能什么时候会在后台完成。
-we can't predict when our Browser features
-work will finish in the background.
-
-79
-00:04:28.189 --> 00:04:29.649
-我们不知道它什么时候结束。
-We can't know exactly
-when it's gonna finish.
-
-80
-00:04:29.649 --> 00:04:34.319
-所以我们不能让一行代码运行后台数据
-So we can't kinda have the line of code
-that's gonna use that background data run
-
-81
-00:04:34.319 --> 00:04:35.110
-现在。
-right now.
-
-82
-00:04:35.110 --> 00:04:36.509
-因为我们告诉它什么时候该跑,
-Because we tell it when to run,
-
-83
-00:04:36.509 --> 00:04:40.209
-我们必须依靠 JavaScript 来知道后台工作何时完成,
-we got to rely on JavaScript that knows
-when the background work is done,
-
-84
-00:04:40.209 --> 00:04:43.939
-自动触发函数在那个时刻运行。
-to automatically trigger
-the function to run on that moment.
-
-85
-00:04:45.360 --> 00:04:50.550
-这就是为什么我们人们可以建立这些非阻塞的动态,
-This is what allows us people to
-build these non blocking dynamic,
-
 86
-00:04:50.550 --> 00:04:52.209
-快速应用。
-fast applications.
+00:05:01.810 --> 00:05:04.790
+我们不必在这个JavaScript线程中等待，
+We do not have to wait in this
+single JavaScript thread,
 
 87
-00:04:52.209 --> 00:04:55.860
+00:05:04.790 --> 00:05:07.629
+我们不必在这里等待我们的数据回来。
+we do not have to wait here for
+our data to come back.
+
+88
+00:05:07.629 --> 00:05:10.358
+这条线上没有等待，FETCH不会坐在这条线上，等待
+No waiting on this line, fetch will
+not sit on this line, waiting for
+
+89
+00:05:10.358 --> 00:05:12.021
+要回来的数据，不。
+the data to come back, no, no, no, no.
+
+90
+00:05:12.021 --> 00:05:13.326
+我的意思是不，在我们的常规代码中，
+I mean no in regular code we do,
+
+91
+00:05:13.326 --> 00:05:16.699
+你的功能很酷，你一直呆在那条线上，直到你完成它。
+your function cool you are staying
+on that line till you finish it.
+
+92
+00:05:16.699 --> 00:05:19.069
+但它不是常规的函数调用，它是用于
+But it is not a regular function call,
+it is a facade function for
+
+93
+00:05:19.069 --> 00:05:20.149
+设置后台工作。
+setting up background work.
+
+94
+00:05:21.670 --> 00:05:24.832
+无论需要多长时间，我们都无法预测浏览器的功能何时起作用
+However long it takes we can't predict
+when our browser's features work
+
+95
+00:05:24.832 --> 00:05:26.218
+将在后台完成。
+will finish in the background.
+
+96
+00:05:26.218 --> 00:05:30.112
+我们不能确切地知道它什么时候结束，所以我们不能把线
+We can't know exactly when it's gonna
+finish, so we can't kind of have the line
+
+97
+00:05:30.112 --> 00:05:33.340
+使用背景数据的代码现在就在运行。
+of code that's gonna use that
+background data Run right now.
+
+98
+00:05:33.340 --> 00:05:34.970
+我们得告诉它什么时候逃跑
+We got to tell it when to run,
+
+99
+00:05:34.970 --> 00:05:38.670
+我们必须依赖JavaScript，它知道后台工作何时完成
+we got to rely on JavaScript that
+knows when the background work is done
+
+100
+00:05:38.670 --> 00:05:42.399
+为了自动触发，函数在那个时刻运行。
+to automatically trigger,
+the function to Run on that moment.
+
+101
+00:05:43.810 --> 00:05:48.029
+这就是允许我们，人们，建立这些非阻塞，
+This is what allows us, people,
+to build these non-blocking,
+
+102
+00:05:48.029 --> 00:05:50.709
+动态、快速的应用程序。
+dynamic, fast applications.
+
+103
+00:05:50.709 --> 00:05:54.329
 我们可以在后台设置大量的东西
 We can handle setting up a ton
 of stuff in the background
 
-88
-00:04:55.860 --> 00:05:00.850
-当我们在前台比赛，运行我们的代码，响应,
-while we race on in the foreground,
-running our code, being responsive,
+104
+00:05:54.329 --> 00:05:58.199
+当我们在前台运行代码时，
+while we race on in
+the foreground running our code,
 
-89
-00:05:00.850 --> 00:05:05.269
-响应用户交互，构建这些动态应用程序。
-responsive to users interactions,
+105
+00:05:58.199 --> 00:06:03.730
+响应用户的交互，构建这些动态应用程序。
+being responsive to users' interactions,
 building these dynamic applications.
 
-90
-00:05:05.269 --> 00:05:08.339
-这就是让 JavaScript 变得非常非常特别，非常好用的原因。
-This is what really makes JavaScript
-very very special and very usable.
+106
+00:06:03.730 --> 00:06:06.800
+这就是真正使JavaScript非常、非常特殊和非常可用的地方。
+This is what really makes JavaScript very,
+very special and very usable.
