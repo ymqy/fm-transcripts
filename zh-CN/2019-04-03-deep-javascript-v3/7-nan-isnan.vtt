@@ -2,129 +2,112 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:03.294
->> 凯尔: 在这些基本类型中，我们应该有特殊的值
-&gt;&gt; Kyle: Within those primitive types
-there are special values that we should
+&gt；&gt；Kyle：在这些基本类型中，我们应该有一些特殊值
+&gt;&gt; Kyle: Within those primitive types there are special values that we should
 
 2
 00:00:03.294 --> 00:00:04.214
-请注意。
+注意。
 pay attention to.
 
 3
 00:00:04.214 --> 00:00:06.078
-有几个但
+而且有很多这样的人，但是
 And there are a number of them but
 
 4
 00:00:06.078 --> 00:00:09.611
-我想把注意力集中在两个特定的特殊价值观上。
-I wanna focus our attention on
-two specific special values.
+我想把我们的注意力集中在两个特殊的价值观上。
+I wanna focus our attention on two specific special values.
 
 5
 00:00:09.611 --> 00:00:13.294
-这些作物比我们想要的要多的多，或者至少
-These are ones that crop up much more
-often than we would like, or at least some
+这些问题出现的频率比我们希望的要高得多，或者至少有一些
+These are ones that crop up much more often than we would like, or at least some
 
 6
 00:00:13.294 --> 00:00:16.536
-其中至少有一个比我们想的要多
-of them, at least one of them crops
-up more often than we would like.
+其中，至少有一个比我们希望的更频繁地出现。
+of them, at least one of them crops up more often than we would like.
 
 7
 00:00:16.536 --> 00:00:20.629
-他们的意识能让我们避免虫子
-And awareness of both of them
-is gonna help us avoid bugs and
+对它们的认识将有助于我们避免虫子和
+And awareness of both of them is gonna help us avoid bugs and
 
 8
 00:00:20.629 --> 00:00:25.402
-在某些情况下，甚至可以从我们的 JavaScript 语言中获得更多的能量。
-in some cases, even get more power
-out of our JavaScript language.
+在某些情况下，甚至可以从我们的JavaScript语言中获得更多功能。
+in some cases, even get more power out of our JavaScript language.
 
 9
 00:00:25.402 --> 00:00:28.809
-让我们看看第一个被称为 NaN的
-So let's look at the first
-one it's referred to as NaN,
+所以让我们来看第一个它被称为NaN的，
+So let's look at the first one it's referred to as NaN,
 
 10
 00:00:28.809 --> 00:00:31.792
-这个词的首字母缩写不是数字
-which is supposedly an acronym for
-not a number.
+这应该是不是数字的首字母缩写。
+which is supposedly an acronym for not a number.
 
 11
 00:00:31.792 --> 00:00:37.750
-从历史上看 NaN 至少是用 JavaScript来的
-Historically, that's where it comes from,
-NaN comes to us at least in JavaScript,
+从历史上看，这就是它的来源，NaN至少在JavaScript中出现，
+Historically, that's where it comes from, NaN comes to us at least in JavaScript,
 
 12
 00:00:37.750 --> 00:00:41.737
-它是通过 IEEE 754 规范来的，数字规范。
-it comes by way of the IEEE 754 spec,
-the number spec.
+它是通过IEEE 754规范(数字规范)来实现的。
+it comes by way of the IEEE 754 spec, the number spec.
 
 13
 00:00:41.737 --> 00:00:46.881
-本质上 NaN 并不表示不是数字
-Essentially NaN doesn't mean not
-a number essentially it means
+本质上，NaN并不意味着不是一个数字，它本质上意味着
+Essentially NaN doesn't mean not a number essentially it means
 
 14
 00:00:46.881 --> 00:00:52.987
-这种特殊的值指示了指示无效数字的 sentinel 值。
-this special what we call sentinel
-value that indicates an invalid number.
+这个特殊的，我们称之为标记值的值，表示一个无效的数字。
+this special what we call sentinel value that indicates an invalid number.
 
 15
 00:00:52.987 --> 00:00:57.231
-这比你说的不是个数字好得多
-That's a much better mental model for
-it than referring to it is not a number,
+这是一个比提到它不是一个数字更好的心理模型，
+That's a much better mental model for it than referring to it is not a number,
 
 16
 00:00:57.231 --> 00:01:00.975
-我们应该把它当作一个无效的数字，让我们深入研究这个问题。
-we oughta refer to at as an invalid
-number, so let's dig into that.
+我们应该把at称为无效的数字，所以让我们深入研究一下。
+we oughta refer to at as an invalid number, so let's dig into that.
 
 17
 00:01:00.975 --> 00:01:03.570
-我们怎么就像个南人呢 ?
+我们怎样才能到达像南这样的东西呢？
 How do we arrive at something like a Nan?
 
 18
 00:01:03.570 --> 00:01:08.525
-第一，你可以把那些数字表示的东西
-Well, number one, you can take things
-that are representations of numbers in
+好的，第一，你可以把代表数字的东西
+Well, number one, you can take things that are representations of numbers in
 
 19
 00:01:08.525 --> 00:01:10.335
-字符串形式，在这种情况下。
+在这种情况下，字符串形式。
 string form, in this case.
 
 20
 00:01:10.335 --> 00:01:15.656
-举个例子，我现在的年龄是 38 岁，我也可以
-Like for example, my age at the moment
-is 38, and I can represent that either
+例如，我现在的年龄是38岁，我可以代表这两者之一
+Like for example, my age at the moment is 38, and I can represent that either
 
 21
 00:01:15.656 --> 00:01:20.750
-引用第 38 条或第 1 行的第 1 行，我可以用八进制表示。
-as quote 38 or, in this case, on line 1,
-I could represent it in octal.
+正如引用38，或者在本例中，在第1行上，我可以用八进制表示它。
+as quote 38 or, in this case, on line 1, I could represent it in octal.
 
 22
 00:01:20.750 --> 00:01:22.956
-八进制表示为 46。
+八进制表示是46。
 The octal representation being 46.
 
 23
@@ -134,484 +117,423 @@ I don't like that one,
 
 24
 00:01:23.856 --> 00:01:26.162
-因为它让我听起来很老所以不想用这个
-cuz that makes me sound a lot older so
-I don't wanna use that.
+因为这让我听起来老了很多，所以我不想用它。
+cuz that makes me sound a lot older so I don't wanna use that.
 
 25
 00:01:26.162 --> 00:01:32.334
-但我可以用字符串形式表示，然后我有一个数字，就像 38号。
-But I can represent it in string form, and
-then I have a number, like the number 38.
+但是我可以用字符串的形式表示它，然后我有一个数字，比如数字38。
+But I can represent it in string form, and then I have a number, like the number 38.
 
 26
 00:01:32.334 --> 00:01:35.676
-或者我可以引用 " 39 " 来引用我的下一个年龄。
-Or I can do quote 39 to
-reference my next age.
+或者我可以引用39号来引用我的下一个年龄。
+Or I can do quote 39 to reference my next age.
 
 27
 00:01:35.676 --> 00:01:39.679
-我不再拥有猫了所以当我说我的猫的年龄
-I don't own cats anymore, so
-when I say my cat's age, and
+我不再养猫了，所以当我说我的猫的年龄，并且
+I don't own cats anymore, so when I say my cat's age, and
 
 28
 00:01:39.679 --> 00:01:45.091
-我使用不适用的内容，没有数字可用来引用该内容。
-I use something like not applicable
-there's no number to use to refer to that.
+我使用不适用的东西，没有数字可以用来指代它。
+I use something like not applicable there's no number to use to refer to that.
 
 29
 00:01:45.091 --> 00:01:49.878
-让我非常明确地告诉你 0 号是
-And let me be very specific and
-clear with you the number 0 is
+让我非常具体和明确地告诉你们，数字0是
+And let me be very specific and clear with you the number 0 is
 
 30
 00:01:49.878 --> 00:01:54.783
-不是您指示缺少有效数字值的方式。
-not the way you indicate
-the absence of valid numeric value.
+不是您指示缺少有效数值的方式。
+not the way you indicate the absence of valid numeric value.
 
 31
 00:01:54.783 --> 00:01:59.877
-与数学数学家交谈，数字 0 绝对是一个重要的数字。
-Talk to any math mathematician, the number
-0 is absolutely an important number.
+对任何一个数学家来说，数字0绝对是一个重要的数字。
+Talk to any math mathematician, the number 0 is absolutely an important number.
 
 32
 00:01:59.877 --> 00:02:04.057
-它是一个对它有实质内容的数字。
+这是一个有实质意义的数字。
 It is a number that has substance to it.
 
 33
 00:02:04.057 --> 00:02:07.346
-在任何形式上都不合适
+它在任何方面都是不合适的
 It's not appropriate in any way shape or
 
 34
 00:02:07.346 --> 00:02:13.355
-以 0 作为缺少数字值的占位符的形式。
-form to think of 0 as being the place
-holder for absence of numeric value.
+形式将0视为缺少数值的占位符。
+form to think of 0 as being the place holder for absence of numeric value.
 
 35
 00:02:13.355 --> 00:02:17.507
-这在数学上是没有意义的，而且在编程上也没有意义。
-Doesn't make sense mathematically and
-doesn't make sense programatically.
+在数学上没有意义，在程序上也没有意义。
+Doesn't make sense mathematically and doesn't make sense programatically.
 
 36
 00:02:17.507 --> 00:02:19.508
-那么我们应该用多少呢 ?
+那么我们应该用什么号码呢？
 So what number should we use?
 
 37
 00:02:19.508 --> 00:02:24.116
-这就是为什么 IEEE 在定义特殊的比特模式时做的
-Well, that's why IEEE did when they
-defined the special bit pattern that
+嗯，这就是为什么IEEE在定义特殊的位模式时会这样做
+Well, that's why IEEE did when they defined the special bit pattern that
 
 38
 00:02:24.116 --> 00:02:27.179
-表示这是我们指出的数字。
-represents this is
-the number that we indicate.
+表示这是我们指示的数字。
+represents this is the number that we indicate.
 
 39
 00:02:27.179 --> 00:02:32.070
-这不是有效数字，我不能用 n/a做任何事情。
-It's not a valid number,
-I can't do anything with n/a.
+这不是一个有效的数字，我无法对n/a执行任何操作。
+It's not a valid number, I can't do anything with n/a.
 
 40
 00:02:32.070 --> 00:02:35.586
-基本没有数字系统，其中 n/a
-There's essentially no
-number system where n/a
+基本上不存在n/a的数制
+There's essentially no number system where n/a
 
 41
 00:02:35.586 --> 00:02:40.449
-是数字 [LAUGH] 的有效表示，除非您发明了一个数字。
-is a valid representation of a number
-[LAUGH] unless you invented one.
+是一个数字[笑]的有效表示，除非你发明了一个。
+is a valid representation of a number [LAUGH] unless you invented one.
 
 42
 00:02:40.449 --> 00:02:44.224
-因此我们得到 NN 的支持，我们会得到无效的号码。
-So we get NaN back,
-we get the invalid number back.
+所以我们拿回了Nan，我们拿回了无效号码。
+So we get NaN back, we get the invalid number back.
 
 43
 00:02:44.224 --> 00:02:48.843
-顺便说下当你做的数字无效时
-And by the way,
-when you do things with an invalid number,
+顺便说一下，当你用一个无效的号码做事情时，
+And by the way, when you do things with an invalid number,
 
 44
 00:02:48.843 --> 00:02:53.466
-即使是那些看似疯狂的事情
-even things that seem crazy,
-like subtracting strings,
+即使是看起来很疯狂的事情，比如减去字符串，
+even things that seem crazy, like subtracting strings,
 
 45
 00:02:53.466 --> 00:02:56.694
-你会得到无效的号码
+你会拿回无效的号码。
 you're gonna get invalid number back.
 
 46
 00:02:56.694 --> 00:03:01.252
-第 4 行，我的年龄减，然后是字符串，就像我儿子的年龄一样，
-Line 4, my age minus, and
-then a string, like my son's age,
+第4行，我的年龄减去，然后是一条字符串，就像我儿子的年龄，
+Line 4, my age minus, and then a string, like my son's age,
 
 47
 00:03:01.252 --> 00:03:06.242
-不管怎么说都没有什么意义
-doesn't actually make any sense,
-not programatically, anyway.
+这实际上没有任何意义，至少在编程上没有意义。
+doesn't actually make any sense, not programatically, anyway.
 
 48
 00:03:06.242 --> 00:03:12.152
-但 JavaScript 有一种思考方式，我们常常掩饰。
-But JavaScript has a way of thinking
-about this that we often gloss over.
+但是JavaScript有一种我们经常掩饰的思考方式。
+But JavaScript has a way of thinking about this that we often gloss over.
 
 49
 00:03:12.152 --> 00:03:17.620
-特别地， JavaScript 认为这是负运算符需要数字，
-In particular, JavaScript thinks about
-this as the minus operator needs numbers,
+特别是，JavaScript考虑到这一点，因为负运算符需要数字，
+In particular, JavaScript thinks about this as the minus operator needs numbers,
 
 50
 00:03:17.620 --> 00:03:19.784
-它只为数字定义的
+它只为数字定义。
 it's only defined for numbers.
 
 51
 00:03:19.784 --> 00:03:23.052
-当你给它不是数字的时候
-When you give it something
-that is not a number,
+当你给它一个不是数字的东西时，
+When you give it something that is not a number,
 
 52
 00:03:24.669 --> 00:03:25.829
->> 凯尔: 然后它说，
+&gt；&gt；Kyle：然后它说，
 &gt;&gt; Kyle: Then it says,
 
 53
 00:03:25.829 --> 00:03:28.347
-我得把它变成数字
+我需要把它变成一个数字。
 I need to turn it into a number.
 
 54
 00:03:28.347 --> 00:03:31.020
-这就是我们在一点点的压力下谈论的话题。
-That's what we'll talk about when we
-get into coercion in a little bit.
+这就是我们将讨论的，当我们进入强制的一小部分。
+That's what we'll talk about when we get into coercion in a little bit.
 
 55
 00:03:31.020 --> 00:03:35.288
-所以说我儿子的年纪
+所以，它改变了，引用，我儿子的年龄，
 So, it turns the, quote, my son's age,
 
 56
 00:03:35.288 --> 00:03:39.439
-他 8岁的时候我儿子的年龄
+顺便说一句，他8岁，我儿子的年龄，
 which by the way he's 8, my son's age,
 
 57
 00:03:39.439 --> 00:03:44.432
-把他的年龄变成了 NaN 值
-it turns his age,
-that string into the NaN value.
+它将他的年龄，字符串转化为NaN值。
+it turns his age, that string into the NaN value.
 
 58
 00:03:44.432 --> 00:03:48.997
-所以当我说我的年龄减时，我实际上是在说我的年龄减去 NaN ，
-So when I say my age minus,
-I'm actually saying my age minus NaN, and
+所以当我说我的年龄减去，我实际上是在说我的年龄减去NaN，并且
+So when I say my age minus, I'm actually saying my age minus NaN, and
 
 59
 00:03:48.997 --> 00:03:54.213
-NaN 与任何其他数学运算始终是 NaN， cuz 是无效的。
-NaN with any other mathematical operation
-is always NaN, cuz it's invalid.
+NaN和任何其他数学运算都是NaN，因为它是无效的。
+NaN with any other mathematical operation is always NaN, cuz it's invalid.
 
 60
 00:03:54.213 --> 00:03:57.396
-所以 NaN 将所有方法传播出去。
+所以NaN一直在传播。
 So NaN sort of propagates all the way out.
 
 61
 00:03:57.396 --> 00:04:01.054
-没有你能做的包括 NaN 和
-There's nothing that you can
-ever do that includes a NaN and
+你永远不能做任何事情，包括NaN和
+There's nothing that you can ever do that includes a NaN and
 
 62
 00:04:01.054 --> 00:04:05.016
-结果除了 NaN 之外的任何东西都是数学上的
-results in anything other than a NaN,
-mathematically anyway.
+产生除NaN以外的任何结果，无论如何，在数学上都是如此。
+results in anything other than a NaN, mathematically anyway.
 
 63
 00:04:05.016 --> 00:04:09.056
-顺便说一下你会发现即使我的猫年龄是 NaN
-And by the way, you'll notice that
-even though my cat's age is NaN,
+顺便说一句，你会注意到即使我的猫的年龄是NaN，
+And by the way, you'll notice that even though my cat's age is NaN,
 
 64
 00:04:09.056 --> 00:04:13.724
-它不等于它本身，或者至少是按三等号运算符，
-it is not equal to itself, or at least
-according to the triple equals operator,
+它不等于自身，或者至少根据三重等于运算符，
+it is not equal to itself, or at least according to the triple equals operator,
 
 65
 00:04:13.724 --> 00:04:15.350
-它不等于自己
+它并不等于它自己。
 it's not equal to itself.
 
 66
 00:04:15.350 --> 00:04:19.422
-很多人喜欢相信三重等号运算符告诉你
-Many people like to believe that
-the triple equals operator tells you
+许多人喜欢相信三重等于运算符告诉您
+Many people like to believe that the triple equals operator tells you
 
 67
 00:04:19.422 --> 00:04:23.434
-但我要告诉你三大代表的谎言
-the truth, but I have news for
-you the triple equals operator lies.
+真相，但我有消息告诉你三重等于运算符的谎言。
+the truth, but I have news for you the triple equals operator lies.
 
 68
 00:04:23.434 --> 00:04:25.456
-它告诉你这两个东西并不是平等的。
-It tells you that those
-two things are not equal.
+它告诉你这两个东西是不相等的。
+It tells you that those two things are not equal.
 
 69
 00:04:25.456 --> 00:04:30.415
-之所以这样做并不是因为布兰登 - 艾希当天发疯了。
-And the reason it does that is not
-because Brendan Eich was crazy that day.
+它这样做的原因并不是因为Brendan Eich那天疯了。
+And the reason it does that is not because Brendan Eich was crazy that day.
 
 70
 00:04:30.415 --> 00:04:35.725
-因为 IEEE 说 NN 不相等。
-It does that because IEEE said
-NaNs are not equal to each other.
+它这样做是因为IEEE说NAN彼此不平等。
+It does that because IEEE said NaNs are not equal to each other.
 
 71
 00:04:35.725 --> 00:04:40.502
-实际上， NaN 是唯一存在的价值，至少在 JavaScript中，
-As a matter of fact, NaN is the only value
-in existence, at least in JavaScript,
+事实上，NaN是存在的唯一价值，至少在JavaScript中是这样，
+As a matter of fact, NaN is the only value in existence, at least in JavaScript,
 
 72
 00:04:40.502 --> 00:04:44.932
-这是唯一没有我们所说的身份财产的价值
-it's the only value that does not have
-what we call the identity property,
+它是唯一没有我们称为身份属性的值，
+it's the only value that does not have what we call the identity property,
 
 73
 00:04:44.932 --> 00:04:47.000
-意思就是不等于自己。
+意思是它不等于它自己。
 meaning it is not equal to itself.
 
 74
 00:04:47.000 --> 00:04:49.459
-只有这才是真正的价值
+这是唯一正确的价值。
 It's the only value where that is true.
 
 75
 00:04:49.459 --> 00:04:51.425
->> 扬声器 2: 未定义，未定义相同 ?
-&gt;&gt; Speaker 2: Undefined,
-undefined's the same?
+&gt；&gt；扬声器2：未定义，未定义是否相同？
+&gt;&gt; Speaker 2: Undefined, undefined's the same?
 
 76
 00:04:51.425 --> 00:04:54.911
->> 凯尔: 未定义完全等于自身。
-&gt;&gt; Kyle: Undefined is
-absolutely equal to itself.
+&gt；&gt；Kyle：undefined绝对等于自身。
+&gt;&gt; Kyle: Undefined is absolutely equal to itself.
 
 77
 00:04:54.911 --> 00:04:58.120
-NaN 是唯一不等于自身的值。
-NaN is the only value that
-is not equal to itself.
+NaN是唯一不等于自身的值。
+NaN is the only value that is not equal to itself.
 
 78
 00:04:58.120 --> 00:05:02.250
-所以我们需要某种方式来确定因为三重等于我们
-So we need some way to determine
-because triple equals lies to us,
+所以我们需要一些方法来确定，因为三重等于对我们撒谎，
+So we need some way to determine because triple equals lies to us,
 
 79
 00:05:02.250 --> 00:05:05.791
-我们需要一些方法来确定这个值是否实际上是 NaN。
-we need some way to determine
-if the value is in fact NaN.
+我们需要一些方法来确定该值是否实际上是NaN。
+we need some way to determine if the value is in fact NaN.
 
 80
 00:05:05.791 --> 00:05:09.619
-而 JavaScript 最初是用一个叫做 isNaN的实用程序提供的，
-And JavaScript shipped originally
-with a utility called isNaN,
+JavaScript最初附带了一个名为isNaN的实用程序，
+And JavaScript shipped originally with a utility called isNaN,
 
 81
 00:05:09.619 --> 00:05:13.595
-当我们把一个像个号码的东西递给它时我们就正确地得到了假
-which when we pass a thing like
-a number to it we correctly get false.
+当我们将数字之类的东西传递给它时，我们正确地得到了false。
+which when we pass a thing like a number to it we correctly get false.
 
 82
 00:05:13.595 --> 00:05:18.894
-当我们通过一个事实时，合法的是 NaN ，我们会得到真实的。
-And when we pass a thing that actually,
-legitimately is NaN, we get true.
+当我们通过一个实际上，合法的是NaN的东西时，我们就得到了真。
+And when we pass a thing that actually, legitimately is NaN, we get true.
 
 83
 00:05:18.894 --> 00:05:23.822
-看起来很棒直到我们看到第 10 行
-Seems great until we look at line
-10 when we pass in something that
+看起来很棒，直到我们看到第10行，当我们通过一些
+Seems great until we look at line 10 when we pass in something that
 
 84
 00:05:23.822 --> 00:05:27.877
-肯定不是数字，是我儿子的年龄。
-is definitely not a number,
-the string my son's age.
+绝对不是一个数字，字符串我儿子的年龄。
+is definitely not a number, the string my son's age.
 
 85
 00:05:27.877 --> 00:05:32.593
-但是，让我问你这个问题，这不是一个数字，我们同意，但是
-But let me ask you the question,
-it's not a number, we agree with that, but
+但让我问你一个问题，这不是一个数字，我们同意这一点，但是
+But let me ask you the question, it's not a number, we agree with that, but
 
 86
 00:05:32.593 --> 00:05:33.860
-是 NaN 值吗 ?
+是NaN值吗？
 is it the NaN value?
 
 87
 00:05:33.860 --> 00:05:35.560
-当然不是。
+绝对不是。
 Most definitely not.
 
 88
 00:05:35.560 --> 00:05:37.492
-那么为什么我们还能得到真正的真相呢 ?
+那么为什么我们仍然是真实的呢？
 So why do we still get true?
 
 89
 00:05:37.492 --> 00:05:43.540
-历史的真正原因，是由于某种原因，
-The historical reason for getting true,
-is because for some reason, the isNaN
+成为现实的历史原因，是因为出于某种原因，isNaN
+The historical reason for getting true, is because for some reason, the isNaN
 
 90
 00:05:43.540 --> 00:05:48.877
-实用程序将值强制为数字，然后将其检查为 NaN。
-utility coerces values to numbers
-before it checks for them to be NaN.
+实用程序在检查数值是否为NaN之前将值强制为数字。
+utility coerces values to numbers before it checks for them to be NaN.
 
 91
 00:05:51.071 --> 00:05:54.682
->> 凯尔: 所以，它会强迫把我儿子的年龄串到一个数字上，
-&gt;&gt; Kyle: So, it's gonna coerce
-the string my son's age to a number and
+&gt；&gt；Kyle：所以，它将强制字符串我儿子的年龄为一个数字
+&gt;&gt; Kyle: So, it's gonna coerce the string my son's age to a number and
 
 92
 00:05:54.682 --> 00:05:57.264
-你猜它会强迫它吗
+猜猜它会强迫它的号码是多少？
 guess what number it's gonna coerce it to?
 
 93
 00:05:57.264 --> 00:06:00.235
-NaN 值，所以它当然会恢复为 true。
-The NaN value, so
-of course it's gonna back true.
+NaN值，所以它当然会返回true。
+The NaN value, so of course it's gonna back true.
 
 94
 00:06:00.235 --> 00:06:03.149
-你猜我是怎么知道的
+现在，猜猜我怎么知道它能做到这一点。
 Now, guess how I know that it does that.
 
 95
 00:06:03.149 --> 00:06:09.500
-我看了这个规格，而且这个规格很清楚的说，强迫它一个号码。
-I read the spec, and the spec very
-clearly says, coerce it to a number.
+我看了说明书，说明书非常清楚地写着，强迫它到一个数字。
+I read the spec, and the spec very clearly says, coerce it to a number.
 
 96
 00:06:09.500 --> 00:06:13.182
-这一错误发生在最初的 JavaScript中
-Sometime after that mistake
-happened in initial JavaScript,
+在初始JavaScript中发生错误后一段时间，
+Sometime after that mistake happened in initial JavaScript,
 
 97
 00:06:13.182 --> 00:06:15.132
-他们觉得这是个坏主意
+他们觉得这不是个好主意。
 they decided that's a bad idea.
 
 98
 00:06:15.132 --> 00:06:19.221
-因此，在 ES6 中，我们有更好的实用程序 Number.isNan 实用程序。
-So with ES6, we got a better utility,
-the Number.isNan utility.
+因此，在ES6中，我们得到了一个更好的实用程序，Number.isNan实用程序。
+So with ES6, we got a better utility, the Number.isNan utility.
 
 99
 00:06:19.221 --> 00:06:24.944
-而这个 Number.isNan 让我们坚定地告诉我们它是 NaN 值，也不是。
-And that Number.isNan tells us defiantly
-for sure it's the NaN value or it's not.
+并且Number.isNan挑衅地告诉我们，它肯定是NaN值，或者不是。
+And that Number.isNan tells us defiantly for sure it's the NaN value or it's not.
 
 100
 00:06:24.944 --> 00:06:28.879
-换句话说，它对我们没有任何胁迫。
-In other words it doesn't
-do any coercion for us.
+换句话说，它对我们没有任何强制作用。
+In other words it doesn't do any coercion for us.
 
 101
 00:06:28.879 --> 00:06:31.471
-它告诉我们确切的数字。
+它明确地告诉我们这是号码。
 It tells us specifically it's the number.
 
 102
 00:06:31.471 --> 00:06:35.615
-就像回到你的问题一样， NaN是什么 ?
-So like going back to your
-question about what is NaN?
+所以就像回到你关于NaN是什么的问题上？
+So like going back to your question about what is NaN?
 
 103
 00:06:35.615 --> 00:06:39.468
-如果我做数字运算
+好吧，如果我做一个数值运算
 Well, if I do a numeric operation and
 
 104
 00:06:39.468 --> 00:06:44.192
-我要返回我期待的类型的值
-I get back a value what
-type am I expecting back
+我返回一个值，我期望返回的类型是什么
+I get back a value what type am I expecting back
 
 105
 00:06:44.192 --> 00:06:48.312
-从每一个数字运算中
+从每一个数字运算？
 from every single numeric operation?
 
 106
 00:06:48.312 --> 00:06:49.846
-我在等一个号码对吧
+我在等一个数字，对吧？
 I'm expecting a number, right?
 
 107
 00:06:49.846 --> 00:06:54.365
-记住我说 NN 是 IEEE 754 规范的一部分
-And remember I said NaNs are part
-of the IEEE 754 spec which is
+还记得我说过，NAN是IEEE 754规范的一部分，
+And remember I said NaNs are part of the IEEE 754 spec which is
 
 108
 00:06:54.365 --> 00:06:57.531
@@ -620,217 +542,185 @@ a numeric representation specification.
 
 109
 00:06:57.531 --> 00:07:04.151
-令人费解的是， NaN 的类型是数字。
-So perplexingly,
-the type of a NaN is number.
+令人费解的是，NaN的类型是数字。
+So perplexingly, the type of a NaN is number.
 
 110
 00:07:04.151 --> 00:07:07.636
-只是一个无效的号码
+这只是一个无效的号码。
 It's just an invalid number.
 
 111
 00:07:07.636 --> 00:07:12.367
-这就是为什么认为这不是数字是不恰当的原因
-Which is why it's not appropriate to think
-of it as not a number because then you
+这就是为什么认为它不是一个数字是不合适的，因为然后你
+Which is why it's not appropriate to think of it as not a number because then you
 
 112
 00:07:12.367 --> 00:07:16.542
-就会很奇怪不是号码的那种字眼是号码吗
-get into that weirdness the wording
-of type of not a number is number?
+陷入那怪异不是数字类型的字眼是数字吗？
+get into that weirdness the wording of type of not a number is number?
 
 113
 00:07:16.542 --> 00:07:19.175
-那是因为把它想象成一个数字是错误的
-That's because it's wrong to
-think of it as not a number,
+那是因为认为它不是一个数字是错误的，
+That's because it's wrong to think of it as not a number,
 
 114
 00:07:19.175 --> 00:07:21.401
-最好把它想象成无效的数字
-it's better to think of
-it as an invalid number.
+最好认为它是一个无效的数字。
+it's better to think of it as an invalid number.
 
 115
 00:07:21.401 --> 00:07:27.497
-当然，号码类型和无效号码肯定是号码。
-And of course the type of and
-invalid number is definitely number.
+当然，无效数字的类型肯定是数字。
+And of course the type of and invalid number is definitely number.
 
 116
 00:07:27.497 --> 00:07:32.091
-我有很多人向我建议他们不应该不做 NN nevermind 的事
-I have people suggest to me no no no they
-should have never done NaN nevermind what
+有人对我说，不，他们不应该做什么，南，别管我做了什么
+I have people suggest to me no no no they should have never done NaN nevermind what
 
 117
 00:07:32.091 --> 00:07:33.201
-EEE 754 说。
+我EEE 754说的。
 I EEE 754 said.
 
 118
 00:07:33.201 --> 00:07:36.788
-他们不应该做 NaN ，我们应该把其他东西还给他们。
-They never should have done NaN,
-we should have returned something else.
+他们不应该做Nan，我们应该退回一些其他的东西。
+They never should have done NaN, we should have returned something else.
 
 119
 00:07:36.788 --> 00:07:37.841
-真的吗
+真的吗？
 Really?
 
 120
 00:07:37.841 --> 00:07:42.718
-我们从一个数字运算中返回的
-What should we return from
-a numeric operation that's
+我们应该从数值操作返回什么
+What should we return from a numeric operation that's
 
 121
 00:07:42.718 --> 00:07:45.584
-不是号码的人吗
+不会是那种号码吧？
 gonna be not of the type number?
 
 122
 00:07:45.584 --> 00:07:49.694
-我们可以重新定义，但这不是数字。
-We could return back undefined,
-but that's not numeric.
+我们可以返回undefined，但这不是数字。
+We could return back undefined, but that's not numeric.
 
 123
 00:07:49.694 --> 00:07:53.784
-这是一个糟糕的想法，给开发者一个诱饵和开关。
-That's a terrible idea, to give developers
-something that's a bait and switch.
+这是一个糟糕的想法，给开发人员一些作为诱饵和切换的东西。
+That's a terrible idea, to give developers something that's a bait and switch.
 
 124
 00:07:53.784 --> 00:07:56.226
-我们可以再回去了糟糕的想法
-We could maybe return back null,
-terrible idea.
+我们也许可以返回空，糟糕的主意。
+We could maybe return back null, terrible idea.
 
 125
 00:07:56.226 --> 00:08:02.213
-我们可以返回错误，可怕的想法，我们可以返回，唉， -1。
-We could return back false, terrible idea,
-we could return back, ugh, -1.
+我们可以返回错误的，糟糕的想法，我们可以返回，呃，-1。
+We could return back false, terrible idea, we could return back, ugh, -1.
 
 126
 00:08:02.213 --> 00:08:07.028
-这是旧的，历史的，当你做什么索引的时候，
-This is old, historical,
-when you do something like index of, and
+这是古老的，历史的，当你做一些类似索引的事情，和
+This is old, historical, when you do something like index of, and
 
 127
 00:08:07.028 --> 00:08:10.583
-无法在您的字符串或数组中找到任何内容。
-it can't find something in your string or
-array.
+它在您的字符串或数组中找不到东西。
+it can't find something in your string or array.
 
 128
 00:08:10.583 --> 00:08:15.685
-因为在过去的 C 天里，你只能返回号码，他们不是 IEEE 754。
-Because in the old C days, you could only
-return numbers, and they weren't IEEE 754.
+因为在过去的C时代，你只能返回数字，它们不是IEEE754。
+Because in the old C days, you could only return numbers, and they weren't IEEE 754.
 
 129
 00:08:15.685 --> 00:08:19.143
-所以他们唯一能出来的号码是什么
-So what was the only
-number they could come up
+那么他们能找到的唯一的数字是什么
+So what was the only number they could come up
 
 130
 00:08:19.143 --> 00:08:23.360
-表示找不到或无效的搜索吗 ?
-with to represent didn't find it or
-invalid search?
+用来表示没有找到它或无效的搜索吗？
+with to represent didn't find it or invalid search?
 
 131
 00:08:23.360 --> 00:08:27.983
-他们选择了 -1，就像 40 年前一样。
-They chose -1, which was fine for
-them like 40 years ago.
+他们选择了-1，这对他们来说就像40年前一样好。
+They chose -1, which was fine for them like 40 years ago.
 
 132
 00:08:27.983 --> 00:08:31.007
-我不知道为什么我们用 JavaScript 来做，但我们做了。
-I don't know why we adopt it
-in a JavaScript but we did.
+我不知道为什么我们在JavaScript中采用它，但我们做到了。
+I don't know why we adopt it in a JavaScript but we did.
 
 133
 00:08:31.007 --> 00:08:36.490
-因此，当更合适的时候，我们的一些 API 将返回 -1 。
-So we have some of our APIs that return
-back -1, when the more appropriate
+所以我们有一些返回-1的API，当更合适的时候
+So we have some of our APIs that return back -1, when the more appropriate
 
 134
 00:08:36.490 --> 00:08:41.900
-我们用语言表达的数字，代表我没有发现它是 NaN。
-number that we had in the language,
-to represent I didn't find it as NaN.
+我们在语言中拥有的数字，为了表示，我没有发现它是NaN。
+number that we had in the language, to represent I didn't find it as NaN.
 
 135
 00:08:41.900 --> 00:08:45.203
-如果你在设计一个系统你想回去
-If you're designing a system,
-and you wanna return and
+如果你在设计一个系统，你想回来
+If you're designing a system, and you wanna return and
 
 136
 00:08:45.203 --> 00:08:49.769
-有人希望得到一个号码你想向他们发出信号
-somebody expects to get a number and
-you wanna signal to them there's no valid
+有人希望得到一个号码，而你想要向他们发出信号，没有有效的
+somebody expects to get a number and you wanna signal to them there's no valid
 
 137
 00:08:49.769 --> 00:08:53.999
-我要给你的号码只有一个意义上的意义
-number for me to give there is only
-one value that makes any sense at all.
+数字对我来说，只有一个值是有意义的。
+number for me to give there is only one value that makes any sense at all.
 
 138
 00:08:53.999 --> 00:08:56.105
-你应该把 NaN 送回去
+你应该把Nan还回去。
 You should return the NaN.
 
 139
 00:08:56.105 --> 00:09:00.677
-但我在这份名单上的任何其他投诉都是
-But more than any other complaint
-that I have on this list is when
+但比起我在这张单子上的其他抱怨，更多的是什么时候
+But more than any other complaint that I have on this list is when
 
 140
 00:09:00.677 --> 00:09:04.916
-人们尝试引用 0 作为 NaN 的占位符。
-people try to refer to 0 as
-somehow a placeholder for NaN.
+人们试图以某种方式将0称为NaN的占位符。
+people try to refer to 0 as somehow a placeholder for NaN.
 
 141
 00:09:04.916 --> 00:09:09.231
-我们会回到这个和胁迫的时刻。
-And we'll come back to this and
-coercion and just a moment.
+我们会回到这一点，强迫，稍等片刻。
+And we'll come back to this and coercion and just a moment.
 
 142
 00:09:09.231 --> 00:09:12.710
-所以 NaN ，它是一个数字，它是无效的数字，
-So NaN, it is a number, and
-it is the invalid number, and
+所以NaN，它是一个数字，它是无效的数字，并且
+So NaN, it is a number, and it is the invalid number, and
 
 143
 00:09:12.710 --> 00:09:16.552
-它会发生在你的节目里，不可能，它会，
-it is going to occur in your programs,
-not maybe, it will, and
+它将出现在您的程序中，而不是可能，它会发生，并且
+it is going to occur in your programs, not maybe, it will, and
 
 144
 00:09:16.552 --> 00:09:19.323
-你应该对它进行适当的测试
-you should be testing for
-it appropriately.
+您应该适当地测试它。
+you should be testing for it appropriately.
 
 145
 00:09:19.323 --> 00:09:22.000
-否则，您会有错误，而您无法处理这些错误。
-Otherwise, you have bugs and
-you're not handling those bugs.
+否则，你有错误，你不能处理那些错误。
+Otherwise, you have bugs and you're not handling those bugs.

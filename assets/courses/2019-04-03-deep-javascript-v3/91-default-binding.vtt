@@ -2,26 +2,23 @@ WEBVTT
 
 1
 00:00:00.100 --> 00:00:05.710
->> 凯尔: 第四条调用函数的最后一种方式是回退
-&gt;&gt; Kyle: And our fourth and final way
-of invoking a function is the fallback
+&gt；&gt；Kyle：我们调用函数的第四种也是最后一种方法是回退
+&gt;&gt; Kyle: And our fourth and final way of invoking a function is the fallback
 
 2
 00:00:05.710 --> 00:00:08.939
-如果其他三种匹配都不匹配，那么称为缺省绑定。
-if none of the other three match,
-which is called the default binding.
+如果其他三个都不匹配，则称为默认绑定。
+if none of the other three match, which is called the default binding.
 
 3
 00:00:08.939 --> 00:00:10.869
-在这里我有一个要求的功能。
+这里我有一个Ask函数。
 Here I have an ask function.
 
 4
 00:00:10.869 --> 00:00:15.749
-当我在第 12 行上打它时你会注意到第 12 行
-And when I call it on line 12,
-you'll notice that on line 12,
+当我在第12行调用它时，你会注意到在第12行，
+And when I call it on line 12, you'll notice that on line 12,
 
 5
 00:00:15.749 --> 00:00:18.339
@@ -30,7 +27,7 @@ I don't have any context object.
 
 6
 00:00:18.339 --> 00:00:19.589
-我没点点电话
+我没有任何点号。
 I don't have any dot call.
 
 7
@@ -40,9 +37,8 @@ I don't have a bind, I don't have a new.
 
 8
 00:00:21.829 --> 00:00:23.859
-只是一个普通的正常的函数调用。
-It's just a plain old,
-normal function call.
+这只是一个普通的、普通的函数调用。
+It's just a plain old, normal function call.
 
 9
 00:00:23.859 --> 00:00:26.489
@@ -51,79 +47,68 @@ It doesn't match any of the other rules.
 
 10
 00:00:26.489 --> 00:00:30.850
-因此，它与其他任何规则都不匹配，
-So since it doesn't match any
-of the other rules, the fallback
+因此，由于它与任何其他规则都不匹配，因此回退
+So since it doesn't match any of the other rules, the fallback
 
 11
 00:00:30.850 --> 00:00:35.149
-在规范中以非严格方式定义为全局缺省值。
-is defined in the spec as,
-in non-strict mode, default to the global.
+在规范中定义为，在非严格模式下，默认为全局。
+is defined in the spec as, in non-strict mode, default to the global.
 
 12
 00:00:36.729 --> 00:00:41.447
-这就是我们为什么要在这里打印凯尔的原因库兹有一个全球变量叫老师
-It's why we print Kyle here, cuz there's
-a global variable called teacher,
+这就是为什么我们在这里打印Kyle，因为有一个全局变量叫做教师，
+It's why we print Kyle here, cuz there's a global variable called teacher,
 
 13
 00:00:41.447 --> 00:00:42.600
-用的是凯尔的价值
+有价值的凯尔。
 with a value Kyle.
 
 14
 00:00:43.649 --> 00:00:47.100
-但请注意， askAgain 函数处于严格方式。
-But notice that the askAgain
-function is in strict mode.
+但请注意askAain函数处于严格模式。
+But notice that the askAgain function is in strict mode.
 
 15
 00:00:47.100 --> 00:00:50.119
-当我们调用它时，我们实际上得到了一个类型的错误。
-And when we invoke it,
-we actually get a type error.
+当我们调用它时，我们实际上得到了一个类型错误。
+And when we invoke it, we actually get a type error.
 
 16
 00:00:51.439 --> 00:00:53.030
-谁能猜到为什么会有一个类型的错误?
-Can anybody guess why
-there's a type error?
+有人能猜出为什么会有类型错误吗？
+Can anybody guess why there's a type error?
 
 17
 00:00:54.390 --> 00:00:56.649
->> 扬声器 2: 由于此类型，无论可能是什么，
-&gt;&gt; Speaker 2: Because the type of this,
-whatever that may be,
+&gt；&gt；扬声器2：因为这种类型，不管是什么，
+&gt;&gt; Speaker 2: Because the type of this, whatever that may be,
 
 18
 00:00:56.649 --> 00:00:59.469
-老师的方法和财产都没有吗
-doesn't have the teacher method or
-property on it?
+没有老师的方法或属性吗？
+doesn't have the teacher method or property on it?
 
 19
 00:00:59.469 --> 00:01:00.869
->> 凯尔: 这是一个很好的直觉。
+&GT；&GT；Kyle：这是一个很好的直觉。
 &gt;&gt; Kyle: That's a good intuition.
 
 20
 00:01:00.869 --> 00:01:06.670
-在严格方式下，在没有其他此绑定的情况下调用它时，
-Specifically in strict mode, when you
-invoke it with no other this bindings,
+特别是在严格模式下，当您在没有其他this绑定的情况下调用它时，
+Specifically in strict mode, when you invoke it with no other this bindings,
 
 21
 00:01:06.670 --> 00:01:09.280
-缺省行为是保留此未定义。
-the default behavior is
-to leave this undefined.
+默认行为是将其保留为未定义。
+the default behavior is to leave this undefined.
 
 22
 00:01:10.930 --> 00:01:14.379
-因此，您现在正在尝试访问未定义值上的属性，
-So you're now trying to access
-a property on the undefined value,
+所以您现在尝试访问未定义值的属性，
+So you're now trying to access a property on the undefined value,
 
 23
 00:01:14.379 --> 00:01:16.359
@@ -132,177 +117,155 @@ which is a type error.
 
 24
 00:01:18.289 --> 00:01:23.019
-现在，为何假设他们以严格方式选择此定义，因此
-Now, why do you suppose that they chose
-in strict-mode to make this undefined, so
+现在，你为什么认为他们选择在严格模式下使其成为未定义的，所以
+Now, why do you suppose that they chose in strict-mode to make this undefined, so
 
 25
 00:01:23.019 --> 00:01:24.430
-它会产生一种类型的错误吗 ?
+它会产生一个类型错误吗？
 that it would create a type error?
 
 26
 00:01:24.430 --> 00:01:30.689
-因为它几乎肯定是你的错
-It's because it is almost
-certainly an error on your part
+因为这几乎可以肯定是你的错误
+It's because it is almost certainly an error on your part
 
 27
 00:01:30.689 --> 00:01:35.950
-以定义此感知函数，并在没有此函数的情况下调用此函数。
-to define a this-aware function,
-and invoke it without it any this.
+定义一个感知this的函数，并在不使用this的情况下调用它。
+to define a this-aware function, and invoke it without it any this.
 
 28
 00:01:37.539 --> 00:01:42.870
-这是一个糟糕的想法，几乎和自动创建全球化一样糟糕。
-That's a terrible idea, that's almost
-as bad as auto-creating globals.
+这是一个糟糕的想法，几乎和自动创建全局变量一样糟糕。
+That's a terrible idea, that's almost as bad as auto-creating globals.
 
 29
 00:01:42.870 --> 00:01:44.770
-没人能做的对吧
+没人会这么做，对吧？
 Which nobody would ever do, right?
 
 30
 00:01:44.770 --> 00:01:49.109
-调用此感知函数是一个非常糟糕的想法
-That's a terrible idea to
-invoke a this-aware function
+调用this-aware函数是个糟糕的想法
+That's a terrible idea to invoke a this-aware function
 
 31
 00:01:49.109 --> 00:01:50.759
-使用缺省绑定。
+使用默认绑定。
 using the default binding.
 
 32
 00:01:50.759 --> 00:01:56.603
-在非严格或所谓的不严格的模式下，它最终使用了全局对象，
-And in non-strict or so-called sloppy
-mode, it ends up using the global object,
+在非严格或所谓的草率模式下，它最终使用全局对象，
+And in non-strict or so-called sloppy mode, it ends up using the global object,
 
 33
 00:01:56.603 --> 00:02:01.528
-几乎从来没有你想要的那样的方式
-which is almost never what you would want,
-in exactly the same way that
+这几乎不是你想要的，完全相同的方式
+which is almost never what you would want, in exactly the same way that
 
 34
 00:02:01.528 --> 00:02:06.230
-几乎从来没有你想要自动创建全球化的案例。
-it's almost never the case that
-you wanna auto-create globals.
+这几乎不是你想要自动创建全局的情况。
+it's almost never the case that you wanna auto-create globals.
 
 35
 00:02:06.230 --> 00:02:10.949
-但严格的方式让我们知道，而且它说，嘿，你做了一个错误。
-But strict mode fixes that up for us and
-it says, hey, you've made an error.
+但是严格模式为我们修复了这个问题，它说，嘿，你犯了一个错误。
+But strict mode fixes that up for us and it says, hey, you've made an error.
 
 36
 00:02:10.949 --> 00:02:14.860
-您的错误不是您正在执行此点引用。
-Your error is not that you're
-doing a this dot reference.
+你的错误不是你在做这个点引用。
+Your error is not that you're doing a this dot reference.
 
 37
 00:02:14.860 --> 00:02:19.729
-您的错误是您已调用该函数而不提供此函数。
-Your error is that you've invoked
-the function without giving it a this.
+您的错误是您调用了该函数而没有给它一个this。
+Your error is that you've invoked the function without giving it a this.
 
 38
 00:02:19.729 --> 00:02:21.840
-您需要使用其他三种方法之一。
-You need to use one of
-the other three ways.
+您需要使用其他三种方法中的一种。
+You need to use one of the other three ways.
 
 39
 00:02:21.840 --> 00:02:26.629
-使用新关键字，使用点调用，或应用或绑定，或使用上下文解析器。
-Use a new keyword, use a dot call, or
-apply, or a bind, or use a context solver.
+使用新关键字，使用点调用，或应用，或绑定，或使用上下文解算器。
+Use a new keyword, use a dot call, or apply, or a bind, or use a context solver.
 
 40
 00:02:28.900 --> 00:02:32.289
-因此，我们有四种方法来调用一个函数。
-So there we go,
-four ways to invoke a function.
+这就是，调用函数的四种方法。
+So there we go, four ways to invoke a function.
 
 41
 00:02:32.289 --> 00:02:34.599
-顺便说下那是唯一的四种方法
+顺便说一下，这是唯一的四种方式。
 Those are the only four ways, by the way.
 
 42
 00:02:34.599 --> 00:02:36.800
-就这 4个
+就是这样，就这四个。
 That's it, just those four.
 
 43
 00:02:38.180 --> 00:02:42.900
-您需要了解这些信息，才能了解如何绑定此关键字。
-That's all you need to learn to be able to
-understand how the this keyword get bound.
+这就是您需要学习的全部内容，以便能够理解this关键字是如何绑定的。
+That's all you need to learn to be able to understand how the this keyword get bound.
 
 44
 00:02:42.900 --> 00:02:45.368
-但让我们重新考虑一下吧
+但让我们重新考虑一下。
 But let's reset our mind back.
 
 45
 00:02:45.368 --> 00:02:48.924
-我们要问的问题是，如果我有这个意识的功能，
-The question that we set out to ask is,
-if I have a this-aware function,
+我们要问的问题是，如果我有这个感知函数，
+The question that we set out to ask is, if I have a this-aware function,
 
 46
 00:02:48.924 --> 00:02:52.000
-我该如何知道该关键字指向什么 ?
-how do I know what its
-this keyword points at?
+我怎么知道这个关键字指向什么？
+how do I know what its this keyword points at?
 
 47
 00:02:52.000 --> 00:02:53.539
-我们的强烈诱惑是
+我们强烈的诱惑是，
 And our strong temptation is,
 
 48
 00:02:53.539 --> 00:02:57.479
-我们假设我们可以通过查看功能来回答这个问题
-we wanna assume that we can just answer
-that by looking at the function.
+我们想假设我们可以通过查看函数来回答这个问题。
+we wanna assume that we can just answer that by looking at the function.
 
 49
 00:02:58.840 --> 00:03:00.050
-我们现在看到的是
+我们现在看到的是，
 And what we've now seen is,
 
 50
 00:03:00.050 --> 00:03:03.110
-无法找到解答这个问题的功能
-there's no way to look at
-the function to answer that question.
+没有办法通过查看函数来回答这个问题。
+there's no way to look at the function to answer that question.
 
 51
 00:03:03.110 --> 00:03:05.909
-你得看看通话地点
+你必须看一下呼叫地点。
 You have to look at the call site.
 
 52
 00:03:05.909 --> 00:03:08.689
-您必须查看该函数的调用方式。
-You have to look at how
-the function's being called.
+您必须查看函数是如何被调用的。
+You have to look at how the function's being called.
 
 53
 00:03:08.689 --> 00:03:12.957
-因为每次打电话的时候电话的方式
-Because every time it gets called,
-the how of the call
+因为每次调用它，调用的方式
+Because every time it gets called, the how of the call
 
 54
 00:03:12.957 --> 00:03:17.069
-控制此键盘将指向的内容。
-controls what the this
-keyboard will point at.
+控制此键盘将指向的位置。
+controls what the this keyboard will point at.

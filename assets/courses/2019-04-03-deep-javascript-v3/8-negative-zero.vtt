@@ -2,366 +2,317 @@ WEBVTT
 
 1
 00:00:00.150 --> 00:00:02.910
->> 凯尔 - 辛普森: 让我们谈谈另一个特殊的价值。
-&gt;&gt; Kyle Simpson: Let's talk
-about another special value.
+&gt；&gt；Kyle Simpson：让我们谈谈另一个特殊的价值。
+&gt;&gt; Kyle Simpson: Let's talk about another special value.
 
 2
 00:00:02.910 --> 00:00:08.669
-这个看起来很奇怪，因为地球上的东西是负零吗 ?
-This one seems rather strange because
-what on Earth is a negative zero?
+这个看起来很奇怪，因为地球上什么是负零？
+This one seems rather strange because what on Earth is a negative zero?
 
 3
 00:00:08.669 --> 00:00:11.699
-如果你问一个数学家的话，他们会说那是不存在的，
-If you ask a mathematician, they'll say
-that's made up, that doesn't exist,
+如果你问数学家，他们会说那是捏造的，那是不存在的，
+If you ask a mathematician, they'll say that's made up, that doesn't exist,
 
 4
 00:00:11.699 --> 00:00:12.800
-那不是真的
+那不是真的。
 that's not a real thing.
 
 5
 00:00:15.509 --> 00:00:19.980
-它确实存在于编程中，它绝对存在于 IEEE 754中。
-It definitely exists in programming,
-it definitely exists in IEEE 754.
+它肯定存在于编程中，它肯定存在于IEEE754中。
+It definitely exists in programming, it definitely exists in IEEE 754.
 
 6
 00:00:19.980 --> 00:00:24.760
-就像在 IEEE 754 中存在的楠一样，但一个数学家却不知道什么是 nan 意味着什么。
-Just like nan exists in IEEE 754, but a
-mathematician doesn't know what nan means.
+就像NaN存在于IEEE754中一样，但是数学家不知道NaN是什么意思。
+Just like nan exists in IEEE 754, but a mathematician doesn't know what nan means.
 
 7
 00:00:25.879 --> 00:00:30.170
-那肯定也需要 IEEE 54 如果你愿意的话，
-Then it definitely also requires,
-IEEE 54 if you will,
+那么它肯定也需要，IEEE 54如果你愿意，
+Then it definitely also requires, IEEE 54 if you will,
 
 8
 00:00:30.170 --> 00:00:34.819
-需要有一个负零。
+要求存在负零。
 requires there to be a negative zero.
 
 9
 00:00:35.939 --> 00:00:37.179
-那么，这意味着什么 ?
+那是什么意思？
 So, what does that mean?
 
 10
 00:00:37.179 --> 00:00:41.490
-它本质上是零值，但是有符号位。
-Well, it's essentially the zero value,
-but with the sign bit on.
+嗯，它本质上是零值，但符号位是开的。
+Well, it's essentially the zero value, but with the sign bit on.
 
 11
 00:00:41.490 --> 00:00:44.340
-因此，它是零的负表示。
-So it is the negative
-representation of a zero.
+所以它是零的负表示。
+So it is the negative representation of a zero.
 
 12
 00:00:44.340 --> 00:00:48.950
-现在， JavaScript 的早期认为 JavaScript 开发者永远不会
-Now, early days of JavaScript felt
-that JavaScript developers would never
+现在，JavaScript的早期认为JavaScript开发人员永远不会
+Now, early days of JavaScript felt that JavaScript developers would never
 
 13
 00:00:48.950 --> 00:00:50.549
-想要一个负的零
+想要负零。
 want a negative zero.
 
 14
 00:00:50.549 --> 00:00:54.979
-所以他们在极端的长度上试图假扮
-And so they actually went to extreme
-lengths to try to pretend as if it didn't
+所以他们实际上竭尽全力假装它没有
+And so they actually went to extreme lengths to try to pretend as if it didn't
 
 15
 00:00:54.979 --> 00:00:59.130
-我们会看到一群古怪的人
-exist which we're gonna see
-a whole bunch of weirdness.
+我们会看到一大堆奇怪的东西。
+exist which we're gonna see a whole bunch of weirdness.
 
 16
 00:00:59.130 --> 00:01:03.670
-例如，如果将 -0 指定为 trendRate 第 1 行，
-For example, if I have a -0
-assigned to trendRate line 1,
+例如，如果我将-0分配给TrendRate行1，
+For example, if I have a -0 assigned to trendRate line 1,
 
 17
 00:01:03.670 --> 00:01:09.289
-我和我的三等同音都是真的听起来很棒
-here and I triple equals it with
--0 I get true, sounds great.
+在这里，我用三倍等于-0，我得到了真的，听起来很棒。
+here and I triple equals it with -0 I get true, sounds great.
 
 18
 00:01:09.289 --> 00:01:10.920
-如果我把它扼杀了怎么办
+如果我把它串起来会发生什么？
 What happens if I stringify it?
 
 19
 00:01:10.920 --> 00:01:15.079
-我在这里用 toString 方法还有别的办法但是如果我把它
-I'll use the toString method here,
-there's other ways, but if I stringify it,
+我将在这里使用toString方法，还有其他方法，但如果我将其字符串，
+I'll use the toString method here, there's other ways, but if I stringify it,
 
 20
 00:01:15.079 --> 00:01:15.769
-我有 0
+我得0分。
 I get 0.
 
 21
 00:01:15.769 --> 00:01:17.774
-那不是好事对吧
+这不太好对吧？
 That's not good, right?
 
 22
 00:01:17.774 --> 00:01:20.039
-0我的负号在哪里
+0，我的负号在哪里？
 0, where's my negative sign?
 
 23
 00:01:21.189 --> 00:01:25.870
-JavaScript 的早期咒语感觉像是 JavaScript 开发者会认为
-The early incantation of JavaScript felt
-like JavaScript developers would think
+JavaScript的早期咒语感觉就像JavaScript开发人员会认为的那样
+The early incantation of JavaScript felt like JavaScript developers would think
 
 24
 00:01:25.870 --> 00:01:32.509
-它是一只虫子如果你带了一个 0 然后把它串化，然后在绳子上得到 -0 .
-that it was a bug if you took a -0 and
-stringified it and got -0 in the string.
+如果你取一个-0并将其字符串化为-0，然后在字符串中得到-0，那么它就是一个bug。
+that it was a bug if you took a -0 and stringified it and got -0 in the string.
 
 25
 00:01:33.729 --> 00:01:36.900
-感觉就像一个像一只虫子一样的最终用户
-It felt like that would look
-to the end user like a bug,
+感觉这对最终用户来说就像是一个bug，
+It felt like that would look to the end user like a bug,
 
 26
 00:01:36.900 --> 00:01:38.620
-而 JavaScript 会被指责
+JavaScript会受到指责
 and JavaScript would get blamed.
 
 27
 00:01:38.620 --> 00:01:42.960
-我觉得回想，语言应该做正确的事，
-I think in retrospect,
-languages should do the correct thing and
+我认为现在回想起来，语言应该做正确的事情
+I think in retrospect, languages should do the correct thing and
 
 28
 00:01:42.960 --> 00:01:46.950
-就是开发商做一些对用户合理的事情。
-it's on developers to do something
-that's reasonable to users.
+开发人员有责任做一些对用户合理的事情。
+it's on developers to do something that's reasonable to users.
 
 29
 00:01:46.950 --> 00:01:50.579
-语言不应该步进，并尝试对其开发者进行第二次猜测。
-Languages should not step in and
-try to second guess their developers.
+语言不应该介入并试图猜测它们的开发人员。
+Languages should not step in and try to second guess their developers.
 
 30
 00:01:50.579 --> 00:01:55.359
-在 JavaScript 中存在着一些历史上的怪异
-And there's a bunch of the historical
-weirdness in JavaScript where
+JavaScript中有一大堆历史上的怪异之处
+And there's a bunch of the historical weirdness in JavaScript where
 
 31
 00:01:55.359 --> 00:01:58.460
-他们尝试了各种不同的理由让他们更容易接受
-they tried for
-various reasons to be more palatable.
+他们出于各种原因试图变得更可口。
+they tried for various reasons to be more palatable.
 
 32
 00:01:58.460 --> 00:02:02.935
-我们得到了自动的半结肠插入和整个其他的东西
-We get automatic semi colon insertion and
-a whole, whole host of other things
+我们得到自动分号插入和一个完整的，整个主机的其他东西
+We get automatic semi colon insertion and a whole, whole host of other things
 
 33
 00:02:02.935 --> 00:02:06.219
-那里的语言试图让开发者很聪明
-where the language trying
-to out smart the developer.
+语言试图智胜开发者。
+where the language trying to out smart the developer.
 
 34
 00:02:06.219 --> 00:02:08.300
-事实证明，开发人员并不聪明。
-And it turns out don't
-out smart the developer.
+结果发现开发人员并不聪明。
+And it turns out don't out smart the developer.
 
 35
 00:02:08.300 --> 00:02:12.746
-让他们做他们能用合理的合理一致
-Just let them do what they can with
-the sensible reasonable coherent
+就让他们做他们能做的事，用合理的，连贯的
+Just let them do what they can with the sensible reasonable coherent
 
 36
 00:02:12.746 --> 00:02:14.156
-工具的集合好吗
+一套工具，好吗？
 set of tools, okay?
 
 37
 00:02:14.156 --> 00:02:17.650
-好吧那两条线就在我们之间
-Okay, so the two string lies to us and
-by the way,
+好的，所以这两根绳子对我们撒谎，顺便说一句，
+Okay, so the two string lies to us and by the way,
 
 38
 00:02:17.650 --> 00:02:22.699
-三等也等于我们， cus 它说 -0 等于 0 。
-the triple equals also lies to us,
-cuz it says the -0 is equal to a 0.
+三重等于也欺骗了我们，因为它说-0等于0。
+the triple equals also lies to us, cuz it says the -0 is equal to a 0.
 
 39
 00:02:22.699 --> 00:02:27.740
-同时， -0 也不小于 0 或大于 0。
-And in also -0 is neither less than 0 or
-greater than 0.
+并且在-0中既不小于0也不大于0。
+And in also -0 is neither less than 0 or greater than 0.
 
 40
 00:02:27.740 --> 00:02:31.752
-因此，我感到遗憾的是 :
-So, the less than and the less than or
-equal and the greater, I'm sorry,
+所以，小于和小于或等于和更大，我很抱歉，
+So, the less than and the less than or equal and the greater, I'm sorry,
 
 41
 00:02:31.752 --> 00:02:34.340
-比具体要少的多
-the less than and
-a greater than specifically,
+小于和大于具体的，
+the less than and a greater than specifically,
 
 42
 00:02:34.340 --> 00:02:36.651
-他们撒谎， > 凯尔 - 辛普森: 他们都在撒谎
-they lie
-&gt;&gt; Kyle Simpson: They all lie.
+他们说谎&凯尔·辛普森：他们都在说谎。
+they lie &gt;&gt; Kyle Simpson: They all lie.
 
 43
 00:02:36.651 --> 00:02:41.096
-所以很长一段时间我们都没有真正的建立
-So for a long time we didn't really have
-a built in way of determining if we had
+所以很长一段时间我们都没有一个内置的方式来确定我们是否有
+So for a long time we didn't really have a built in way of determining if we had
 
 44
 00:02:41.096 --> 00:02:45.550
-一 0，你可以得到 0 ，但是你不能确定你有一个。
-a -0, you could get -0s, but
-you couldn't determine that you had one.
+A-0，你可以得到-0，但是你不能确定你有一个。
+a -0, you could get -0s, but you couldn't determine that you had one.
 
 45
 00:02:46.813 --> 00:02:50.725
-在 ES6 之前，他们添加了一个名为 object.is的实用程序。
-Until ES6 they added
-a utility called object.is,
+在ES6之前，他们添加了一个名为object.is的实用程序，
+Until ES6 they added a utility called object.is,
 
 46
 00:02:50.725 --> 00:02:54.918
-我想说的是这就像四叉一样
-object.is, I like to refer to this
-as like the quadruple equals.
+object.is，我喜欢把这称为四倍等于。
+object.is, I like to refer to this as like the quadruple equals.
 
 47
 00:02:56.289 --> 00:03:00.336
-人们喜欢在双平等的问题上开玩笑，它能让所有这些不同的
-People like to joke about how double
-equals, it allows all these different
+人们喜欢开玩笑说双倍等于，它允许所有这些不同
+People like to joke about how double equals, it allows all these different
 
 48
 00:03:00.336 --> 00:03:03.849
-强迫我们去做一个质量的过程
-coercions and stuff we'll get into
-a course of a quality in bit.
+强制和一些东西，我们将进入一个高质量的课程。
+coercions and stuff we'll get into a course of a quality in bit.
 
 49
 00:03:03.849 --> 00:03:07.069
-他们喜欢讲双平等的笑话
-They like to joke about
-double equals is changing and
+他们喜欢开玩笑说双倍相等正在改变
+They like to joke about double equals is changing and
 
 50
 00:03:07.069 --> 00:03:11.069
-三等同值是精确的除了几个谎言之外
-triple equals is exact,
-it's strict except for a couple of lies.
+三重等于是精确的，除了几个谎言外，它是严格的。
+triple equals is exact, it's strict except for a couple of lies.
 
 51
 00:03:11.069 --> 00:03:13.969
-如果我们不希望那些谎言再加上一个平等的谎言
-Well, if we don't want those lies
-let's just add another equals on, so
+好吧，如果我们不想要那些谎言，那就再加一个等号，所以
+Well, if we don't want those lies let's just add another equals on, so
 
 52
 00:03:13.969 --> 00:03:16.229
-就像这里的第四个等号
+就像这里的第四个等号。
 it's like the fourth equals here.
 
 53
 00:03:16.229 --> 00:03:21.159
-它根本不撒谎，如果是 -0，如果是真的，如果不是的话，它就不存在了。
-It doesn't lie at all, if it's a -0,
-if it's true and otherwise, it doesn't.
+它根本不说谎，如果它是-0，如果它是真的，否则，它不说谎。
+It doesn't lie at all, if it's a -0, if it's true and otherwise, it doesn't.
 
 54
 00:03:21.159 --> 00:03:23.750
-如果是 0 ，它会给你真实或其他的，我的意思是，
-And if it's a zero,
-it gives you true or otherwise, I mean,
+如果它是零，它给出的是真还是假，我的意思是，
+And if it's a zero, it gives you true or otherwise, I mean,
 
 55
 00:03:23.750 --> 00:03:26.060
-否则就不知道了
+假的，否则它不会。
 false or otherwise it doesn't.
 
 56
 00:03:26.060 --> 00:03:29.199
-那是你唯一的选择如果你想考零号
-So that's your only option,
-if you wanna test for the zero.
+所以这是你唯一的选择，如果你想测试零的话。
+So that's your only option, if you wanna test for the zero.
 
 57
 00:03:29.199 --> 00:03:32.110
-事实上有个数学运算
-Actually, there's technically
-a mathematical operation and
+实际上，从技术上讲，有一个数学运算
+Actually, there's technically a mathematical operation and
 
 58
 00:03:32.110 --> 00:03:33.539
-那是个暗示
+这是以后的暗示。
 that's a hint for later.
 
 59
 00:03:33.539 --> 00:03:37.569
-有一个可以用来确定 -0的数学运算。
-There is a mathematical operation
-that you can use to determine -0.
+有一个数学运算可以用来确定-0。
+There is a mathematical operation that you can use to determine -0.
 
 60
 00:03:37.569 --> 00:03:43.449
-但在大多数情况下，最好的方法是使用内置的检查器和
-But for the most part, the best way to do
-this is to use this built-in checker and
+但在大多数情况下，做到这一点的最好方法是使用这个内置的检查器和
+But for the most part, the best way to do this is to use this built-in checker and
 
 61
 00:03:43.449 --> 00:03:47.229
-通过此方法，可以使用 object.is 来检查名称。
-by the way,
-object.is can be used to check names.
+顺便说一下，object.is可以用来检查姓名。
+by the way, object.is can be used to check names.
 
 62
 00:03:47.229 --> 00:03:50.659
-虽然我说 number.is 是一个比较语义的工具，但是
-Although I would say number.is is
-a more semantic tool for it, but
+虽然我会说number.是一个更有语义的工具，但是
+Although I would say number.is is a more semantic tool for it, but
 
 63
 00:03:50.659 --> 00:03:53.420
-也可以使用 object.is。
+也可以使用object.is。
 you can also use object.is.
 
 64
@@ -371,109 +322,93 @@ So now you're asking yourself,
 
 65
 00:03:54.599 --> 00:03:58.509
-好吧这奇怪的微妙问题没人在乎对吧
-okay great, there's this weird nuanced
-thing that no one cares about, right?
+好吧，很好，有个奇怪的细微差别的东西，没人关心，对吧？
+okay great, there's this weird nuanced thing that no one cares about, right?
 
 66
 00:03:58.509 --> 00:04:01.000
-谁会在乎负零呢 ?
+谁会在乎负零呢？
 Who would even care about a negative zero?
 
 67
 00:04:01.000 --> 00:04:03.169
-我觉得他们是合法的
-Well, I think they
-are legitimate purposes,
+嗯，我认为它们是合法的目的，
+Well, I think they are legitimate purposes,
 
 68
 00:04:03.169 --> 00:04:07.240
-我之前在我的节目中使用了负面的零。
-I have actually use negative
-zeros in my programs before.
+我以前实际上在我的程序中使用过负零。
+I have actually use negative zeros in my programs before.
 
 69
 00:04:07.240 --> 00:04:13.030
-从数学上来说我们是指两个独立的实体
-Mathematically it's very common for
-us to refer to two separate entities or
+在数学上，我们很常见的是指两个独立的实体或
+Mathematically it's very common for us to refer to two separate entities or
 
 70
 00:04:13.030 --> 00:04:16.670
-两个特征在同一个数字值中分隔。
-two separates characteristics
-in the same numeric value.
+两个分隔相同数值中的特征。
+two separates characteristics in the same numeric value.
 
 71
 00:04:16.670 --> 00:04:20.170
 例如，数字的绝对值表示
-For example, the absolute value
-of the number represents for
+For example, the absolute value of the number represents for
 
 72
 00:04:20.170 --> 00:04:22.720
-比如有多快的事情会发生
-example how fast something
-might be moving.
+例如，某物可能移动得有多快。
+example how fast something might be moving.
 
 73
 00:04:22.720 --> 00:04:25.240
-而这个符号代表了它的前进方向。
-And the sign represents
-what direction it's moving.
+这个标志代表了它移动的方向。
+And the sign represents what direction it's moving.
 
 74
 00:04:26.250 --> 00:04:30.050
-说你在地图上有车这就是我所拥有的
-Say you've got a little car on a map and
-this is actually what I had.
+假设你在地图上有一辆小汽车，这实际上就是我所拥有的。
+Say you've got a little car on a map and this is actually what I had.
 
 75
 00:04:30.050 --> 00:04:32.990
-我在一家公司工作，在那里构建了这个映射解决方案，
-I worked in a company where we
-built this mapping solution, and
+我在一家公司工作，我们在那里构建了这个地图解决方案，并且
+I worked in a company where we built this mapping solution, and
 
 76
 00:04:32.990 --> 00:04:35.159
-我们有辆小车在地图上移动
-we had this little car
-that moved around a map.
+我们有一辆绕着地图行驶的小车。
+we had this little car that moved around a map.
 
 77
 00:04:35.159 --> 00:04:37.829
-我需要知道车是这样还是这样移动的。
-And I needed to know whether the car
-was moving this way or this way.
+我需要知道这辆车是朝这个方向还是这个方向移动。
+And I needed to know whether the car was moving this way or this way.
 
 78
 00:04:39.319 --> 00:04:41.829
-我把它停在什么方向
-What direction do I make
-it look when it stops?
+当它停止时，我让它朝哪个方向看？
+What direction do I make it look when it stops?
 
 79
 00:04:43.019 --> 00:04:46.879
-我想让它看起来是在它停止之前的同一方向。
-Well, I wanted to make it look in the same
-direction that it was before it stopped.
+嗯，我想让它看起来和它停下来之前的方向一样。
+Well, I wanted to make it look in the same direction that it was before it stopped.
 
 80
 00:04:48.560 --> 00:04:52.649
-如何确定一个数字，是什么方向，如果是零，
-How do I determine what one number,
-what direction it was, if at zero,
+我如何确定一个数字，它是什么方向，如果是零，
+How do I determine what one number, what direction it was, if at zero,
 
 81
 00:04:52.649 --> 00:04:53.790
-我们失去信号了吗
+我们失去了标志？
 we lose the sign?
 
 82
 00:04:55.209 --> 00:04:58.709
-所以负零其实是有用的，我用的是游戏的
-So negative zero was actually useful
-there, and I use those in games for
+所以负零实际上是有用的，我在游戏中使用它们
+So negative zero was actually useful there, and I use those in games for
 
 83
 00:04:58.709 --> 00:04:59.925
@@ -482,117 +417,102 @@ very similar purposes.
 
 84
 00:04:59.925 --> 00:05:05.180
-所以我们的潮流，就像这个例子一样，就是
-So our trendRate,
-as the going example goes, is that
+所以我们的TrendRate，正如下面的例子所说的，是
+So our trendRate, as the going example goes, is that
 
 85
 00:05:05.180 --> 00:05:10.779
-我可以用这个号码的标志有一个叫 math.sign的实用程序
-I could use the sign of this number,
-there's a utility called math.sign,
+我可以使用这个数字的符号，有一个叫做math.sign的实用程序，
+I could use the sign of this number, there's a utility called math.sign,
 
 86
 00:05:10.779 --> 00:05:15.430
-这件事应该告诉我们这个东西没有符号
-which is supposedly gonna tell us is this
-thing doesn't have the sign bit or not.
+这应该是要告诉我们这东西是不是没有符号位。
+which is supposedly gonna tell us is this thing doesn't have the sign bit or not.
 
 87
 00:05:15.430 --> 00:05:18.839
-如果我们有一个负零点，那就应该可以告诉我们。
-And that should have been able to
-tell us if we had a negative zero.
+这应该可以告诉我们，如果我们有一个负的零。
+And that should have been able to tell us if we had a negative zero.
 
 88
 00:05:18.839 --> 00:05:22.514
-不幸的是他们做了一些超级愚蠢的事情
-Unfortunately, that went and did
-something super dumb which was that they
+不幸的是，他们做了一件超级愚蠢的事情
+Unfortunately, that went and did something super dumb which was that they
 
 89
 00:05:22.514 --> 00:05:28.100
-使 math.sign 返回负零和零，而不返回负 1 和 1。
-made math.sign return negative zero and
-zero instead of negative one and one.
+使math.sign返回负0和0而不是负1和1。
+made math.sign return negative zero and zero instead of negative one and one.
 
 90
 00:05:28.100 --> 00:05:31.430
-所以你不能用 Math.sign 来确定这个
-So you can't really use
-Math.sign to determine this.
+所以你不能真正使用Math.sign来确定这一点。
+So you can't really use Math.sign to determine this.
 
 91
 00:05:31.430 --> 00:05:33.699
-但如果你想自己做
+但如果你想做你自己的，
 But if you wanted to make your own,
 
 92
 00:05:33.699 --> 00:05:37.540
-在这里我用基本的方法来做我自己的工作
-here I'm making my own by basically
-fixing up the sign method.
+在这里，我基本上是通过修正符号方法来制作自己的。
+here I'm making my own by basically fixing up the sign method.
 
 93
 00:05:37.540 --> 00:05:44.994
-我正在检查，在两个 0s 中的一个上，这就是第 8 行发生的事情。
-And I'm checking if, on one of the two 0s,
-that's what happens on line 8.
+我在检查，如果，在两个0中的一个上，这就是在第8行发生的事情。
+And I'm checking if, on one of the two 0s, that's what happens on line 8.
 
 94
 00:05:44.994 --> 00:05:46.595
-在两个 0s 中的一个上
+在两个0中的一个上，
 And on one of the two 0s,
 
 95
 00:05:46.595 --> 00:05:50.340
-如果我不是两个人中的一个而不是我可以用这个符号
-if I'm not one of the two
-0srather than I can use the sign.
+如果我不是两个0中的一个，而不是我可以使用这个标志。
+if I'm not one of the two 0srather than I can use the sign.
 
 96
 00:05:50.340 --> 00:05:54.901
-如果我是两个零中的一个，我就需要使用对象。如果我是 0，就想知道。
-If I'm one of the two zeros, I need to
-use object.is to figure out if I'm a -0.
+如果我是两个零中的一个，我需要使用object.is来确定我是不是-0。
+If I'm one of the two zeros, I need to use object.is to figure out if I'm a -0.
 
 97
 00:05:54.901 --> 00:05:59.487
-所以这个固定签字的方法，你会在第 13 行通知下，
-So that fixed up sign method,
-you'll notice down there in line 13,
+所以固定的up sign方法，您会注意到第13行，
+So that fixed up sign method, you'll notice down there in line 13,
 
 98
 00:05:59.487 --> 00:06:02.069
-当有一个 -0时，它会返回 -1 。
+当存在-0时，它返回-1。
 it returns a -1 when there's a -0.
 
 99
 00:06:02.069 --> 00:06:07.860
-还有一种可能有用的方法让我们有一个符号的方法
-So yet another way that it might be useful
-for us to have a sign method that actually
+因此，另一种方法可能对我们有用，我们有一个符号方法，实际上
+So yet another way that it might be useful for us to have a sign method that actually
 
 100
 00:06:07.860 --> 00:06:12.279
-这就是我们可以用一种有用的方式进行签名的方法。
-works, and here's a way that we can make
-a sign method that works in a useful way.
+工作，这里有一种方法，我们可以用一种有用的方式来制作一个符号方法。
+works, and here's a way that we can make a sign method that works in a useful way.
 
 101
 00:06:12.279 --> 00:06:13.209
-这也有原因
+有一些原因
 There's some reason for
 
 102
 00:06:13.209 --> 00:06:18.370
-在他们的回返值中有 0 到 0 但我觉得这很有用
-the -0 thing in their return value,
-but I don't think it's very useful.
+返回值中的-0，但我不认为它很有用。
+the -0 thing in their return value, but I don't think it's very useful.
 
 103
 00:06:19.639 --> 00:06:21.439
-好的，正如我所说的趋势。
+好的，正如我所说的趋势例子。
 Okay, so the trend example as I said.
 
 104
@@ -602,188 +522,160 @@ The trend example,
 
 105
 00:06:23.279 --> 00:06:27.500
-如果我想追踪某件事情的方向
-if I wanted to keep track of what
-direction something was moving.
+如果我想知道什么东西在朝哪个方向移动。
+if I wanted to keep track of what direction something was moving.
 
 106
 00:06:27.500 --> 00:06:30.629
-比如这是个股票之类的我想继续追踪
-Like if this was a stock or something
-like that and I wanted to keep track of,
+比如，如果这是一只股票或类似的东西，我想要跟踪，
+Like if this was a stock or something like that and I wanted to keep track of,
 
 107
 00:06:30.629 --> 00:06:34.620
-就算是零，它是在掉下去还是在上升呢 ?
-even if it's at zero has it been
-falling or has it been going up?
+即使它是零，它是一直在下降还是一直在上升？
+even if it's at zero has it been falling or has it been going up?
 
 108
 00:06:34.620 --> 00:06:40.149
-我想展示的是它是在下跌还是以股价上涨为例。
-And I wanna show whether it's been falling
-or rising in it's stock price for example.
+例如，我想展示它的股票价格是在下降还是上升。
+And I wanna show whether it's been falling or rising in it's stock price for example.
 
 109
 00:06:40.149 --> 00:06:44.149
-在这里你会发现即使我追踪一个负的零我也可以证明
-Where here you notice that even if I track
-a negative zero I can show that it's been
+在这里，你注意到，即使我跟踪一个负零，我也可以显示它已经
+Where here you notice that even if I track a negative zero I can show that it's been
 
 110
 00:06:44.149 --> 00:06:45.790
-掉到那个点了
+在那个时候坠落。
 falling at that point.
 
 111
 00:06:45.790 --> 00:06:50.540
-当它达到零值时，它就会上升。
-As opposed to being rising when
-it gets at the zero value.
+与达到零值时的上升相反。
+As opposed to being rising when it gets at the zero value.
 
 112
 00:06:50.540 --> 00:06:54.519
-那么，即使它们看起来有点细微差别，也会带来负面的负面影响，
-So, negative zeros even though they seem
-like they may be a little bit nuanced,
+所以，负零，尽管它们看起来可能有一些细微的差别，
+So, negative zeros even though they seem like they may be a little bit nuanced,
 
 113
 00:06:54.519 --> 00:06:57.449
-它们是语言中存在的值，您应该了解它们，并且
-they're a value that exist in the language
-so, you should know about them and
+它们是语言中存在的一个值，因此，您应该了解它们，并且
+they're a value that exist in the language so, you should know about them and
 
 114
 00:06:57.449 --> 00:06:58.699
-知道如何测试它们。
+知道如何测试他们。
 know how to test for them.
 
 115
 00:06:58.699 --> 00:07:02.526
-现在你知道他们存在了，你甚至可以找到他们的用途。
-And now that you know that they exist, you
-might even be able to find uses for them.
+现在你知道了它们的存在，你甚至可以找到它们的用途。
+And now that you know that they exist, you might even be able to find uses for them.
 
 116
 00:07:05.033 --> 00:07:08.644
-> > 学生: 对我来说，不是这样，还是很难
-&gt;&gt; Student: For me it's not that,
-it's still hard for
+&gt；&gt；学生：对我来说不是那样，还是很难
+&gt;&gt; Student: For me it's not that, it's still hard for
 
 117
 00:07:08.644 --> 00:07:13.600
-我和我比较清楚的是方向
-me, and
-I would rather define direction versus.
+我，我宁愿定义方向与。
+me, and I would rather define direction versus.
 
 118
 00:07:13.600 --> 00:07:16.699
-对我来说没有数学价值
+对我来说很难，没有数学价值。
 For me it's hard there is no math value.
 
 119
 00:07:16.699 --> 00:07:22.360
-我的意思是，零的权利，它是一种支持它的语言。
-I mean, zero zero right,
-it's a language that supports it.
+我的意思是，零对，这是一种支持它的语言。
+I mean, zero zero right, it's a language that supports it.
 
 120
 00:07:22.360 --> 00:07:24.810
->> 凯尔 - 辛普森: 是的，我理解这个观点
-&gt;&gt; Kyle Simpson: Yeah,
-I understand that perspective and
+&gt；&gt；Kyle Simpson：是的，我理解这个观点
+&gt;&gt; Kyle Simpson: Yeah, I understand that perspective and
 
 121
 00:07:24.810 --> 00:07:27.850
-这完全是有效的但这对我来说
-that's entirely valid,
-but that's sounds to me
+那是完全有效的，但对我来说这听起来
+that's entirely valid, but that's sounds to me
 
 122
 00:07:27.850 --> 00:07:31.139
-比如有人说我不关心负数字
-like when somebody says I don't
-care about negative numbers at all.
+就像有人说我根本不在乎负数。
+like when somebody says I don't care about negative numbers at all.
 
 123
 00:07:31.139 --> 00:07:33.480
-我只拥有拥有绝对价值的数字
-I just have numbers that
-have absolute values,
+我只有一些有绝对值的数字，
+I just have numbers that have absolute values,
 
 124
 00:07:33.480 --> 00:07:36.569
-我用了没有符号的整数
+我用的是无符号整数什么的。
 I used unsigned integers or something.
 
 125
 00:07:36.569 --> 00:07:39.649
-签名号码是件事数学上也有问题
-Signed numbers are a thing and
-there a thing in math, so
+有符号的数字是一种东西，数学中也有一种东西，所以
+Signed numbers are a thing and there a thing in math, so
 
 126
 00:07:39.649 --> 00:07:42.769
-如果数学中有一个东西，那么负零也是一个有用的东西。
-if there's a thing in math then a negative
-zero is also a thing that can be useful.
+如果数学中有东西，那么负零也是一个有用的东西。
+if there's a thing in math then a negative zero is also a thing that can be useful.
 
 127
 00:07:46.110 --> 00:07:52.230
-好了这些特殊的价值将会出现在我们的节目中
-Okay, so those special values,
-they're gonna occur in our programs,
+好的，那么这些特殊的值，它们将出现在我们的程序中，
+Okay, so those special values, they're gonna occur in our programs,
 
 128
 00:07:52.230 --> 00:07:58.314
-并且对我们的计划中存在的类型和价值有敏锐的认识。
-and having an acute awareness of types and
-the values that can exist in our programs.
+并且对我们程序中可能存在的类型和价值有敏锐的意识。
+and having an acute awareness of types and the values that can exist in our programs.
 
 129
 00:07:58.314 --> 00:08:04.069
-他们会帮助我们不仅避免虫子，还能更好地利用我们的工具。
-They're gonna help us not only avoid bugs,
-but also make better usage of our tool.
+它们不仅可以帮助我们避免bug，还可以更好地使用我们的工具。
+They're gonna help us not only avoid bugs, but also make better usage of our tool.
 
 130
 00:08:04.069 --> 00:08:08.459
-不仅能做点什么但也许能在语义上做些什么
-Not only just be able to do something,
-but maybe do something more semantically,
+不仅可以做一些事情，还可以做一些语义上更多的事情，
+Not only just be able to do something, but maybe do something more semantically,
 
 131
 00:08:08.459 --> 00:08:12.120
-也许能让我们的代码更容易阅读或更容易理解
-maybe make something that makes our code
-more readable or more understandable.
+也许可以做一些使我们的代码更易读或更容易理解的东西。
+maybe make something that makes our code more readable or more understandable.
 
 132
 00:08:12.120 --> 00:08:16.470
-我想说如果我使用阳性或
-I would argue that it is much more
-consistent if I'm using positive or
+我会争辩说，如果我使用正数或正数，它会更加一致
+I would argue that it is much more consistent if I'm using positive or
 
 133
 00:08:16.470 --> 00:08:20.110
-在我的正常号码中指示方向
-negative in my regular numbers
-to indicate direction,
+在我的常规数字中为负数以指示方向，
+negative in my regular numbers to indicate direction,
 
 134
 00:08:20.110 --> 00:08:23.699
-我没有单独变量来跟踪零的方向
-that I'll not have separate
-variable to track zeros direction.
+我不会有单独的变量来跟踪零的方向。
+that I'll not have separate variable to track zeros direction.
 
 135
 00:08:23.699 --> 00:08:27.160
-这对我来说更符合我的想法而且我觉得更能沟通的是代码
-It's much more consistent to me, and
-I think more communicative in code,
+它对我来说更加一致，我认为在代码中更具交际性，
+It's much more consistent to me, and I think more communicative in code,
 
 136
 00:08:27.160 --> 00:08:30.040
-如果我用零的符号来指示方向
-if I use the sign of the zero
-to also indicate the direction.
+如果我用零的符号来表示方向。
+if I use the sign of the zero to also indicate the direction.

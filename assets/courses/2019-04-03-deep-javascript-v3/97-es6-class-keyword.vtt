@@ -2,144 +2,128 @@ WEBVTT
 
 1
 00:00:00.130 --> 00:00:01.970
->> 凯尔 - 辛普森: 现在我们有了基础。
-&gt;&gt; Kyle Simpson: So
-now we have the foundation in place.
+&gt；&gt；Kyle Simpson：现在我们有了基础。
+&gt;&gt; Kyle Simpson: So now we have the foundation in place.
 
 2
 00:00:01.970 --> 00:00:04.710
-我们可以理解我们在说什么
-We can understand what
-object we're talking about
+我们可以理解我们谈论的对象
+We can understand what object we're talking about
 
 3
 00:00:04.710 --> 00:00:06.339
-当我们绑定到这个关键词的时候
+当我们绑定到这个关键字时。
 when we bind to this key word.
 
 4
 00:00:07.660 --> 00:00:09.240
-让我们看看我们能做些什么
+让我们看看我们可以用它做些什么。
 Let's look at what we can do with it.
 
 5
 00:00:09.240 --> 00:00:14.118
-我们将首先关注类模式，因为它是
-We're gonna to focus first on
-the class pattern since it is
+我们将首先关注班级模式，因为它是
+We're gonna to focus first on the class pattern since it is
 
 6
 00:00:14.118 --> 00:00:18.707
-在 JavaScript 中使用的最常见的模式。
-by far the most prevalent
-pattern used in JavaScript.
+到目前为止，JavaScript中使用的最流行的模式。
+by far the most prevalent pattern used in JavaScript.
 
 7
 00:00:18.707 --> 00:00:23.582
-类关键字是在顶部的表面语法糖。
-The class keyword is ostensibly
-syntactic sugar layered on top of
+class关键字表面上是层叠在
+The class keyword is ostensibly syntactic sugar layered on top of
 
 8
 00:00:23.582 --> 00:00:27.759
-我们接下来要了解的原型系统
-the prototype system,
-which we will learn about next.
+原型系统，我们将在下一步学习。
+the prototype system, which we will learn about next.
 
 9
 00:00:30.193 --> 00:00:31.539
->> 凯尔 - 辛普森: 这就是它的样子。
-&gt;&gt; Kyle Simpson: So
-here's what it looks like.
+&gt；&gt；Kyle Simpson：看起来是这样的。
+&gt;&gt; Kyle Simpson: So here's what it looks like.
 
 10
 00:00:31.539 --> 00:00:36.280
-我们使用类关键字，使用类关键字的名称。
-We use a class keyword,
-we use a name for the class keyword.
+我们使用class关键字，我们使用class关键字的名称。
+We use a class keyword, we use a name for the class keyword.
 
 11
 00:00:36.280 --> 00:00:38.780
-顺便说一下，这是一个有点了解的事实。
+顺便说一下，这是一个众所周知的事实。
 By the way, this is a little know fact.
 
 12
 00:00:38.780 --> 00:00:42.869
 类不必是语句，类可以是表达式，并且
-Classes don't have to be statements,
-classes can be expressions, and
+Classes don't have to be statements, classes can be expressions, and
 
 13
 00:00:42.869 --> 00:00:44.750
-他们可以是匿名的
+他们可以是匿名的。
 they can be anonymous.
 
 14
 00:00:44.750 --> 00:00:47.520
-我不认为你应该去做匿名的课
-I don't ever think you should do
-an anonymous class expression but
+我从来不认为你应该做一个匿名的类表达式，但是
+I don't ever think you should do an anonymous class expression but
 
 15
 00:00:47.520 --> 00:00:48.579
-这其实是件事
+这实际上是一件事。
 that is actually a thing.
 
 16
 00:00:49.810 --> 00:00:54.920
-可以使用或不使用扩展子句来定义类。
-Classes can be defined with or
-without an extends clause.
+定义类时可以使用扩展子句，也可以不使用扩展子句。
+Classes can be defined with or without an extends clause.
 
 17
 00:00:54.920 --> 00:00:57.700
-在这里，我们只是在定义一个不延伸任何东西的等级，所以
-Here, we're just defining a class
-that doesn't extend anything, so
+在这里，我们只是定义了一个不扩展任何内容的类，所以
+Here, we're just defining a class that doesn't extend anything, so
 
 18
 00:00:57.700 --> 00:00:59.719
-是顶级类别的
+这是顶级班级。
 it's the top level class.
 
 19
 00:00:59.719 --> 00:01:03.509
-如果需要，您可以选择定义构造函数，如我们在第 2 行上做的那样，
-You can choose to define a constructor
-if you want, like we're doing on line 2,
+如果愿意，您可以选择定义一个构造函数，就像我们在第2行所做的那样，
+You can choose to define a constructor if you want, like we're doing on line 2,
 
 20
 00:01:03.509 --> 00:01:05.629
-并且您可以添加方法。
+您可以添加方法。
 and you can add methods.
 
 21
 00:01:05.629 --> 00:01:08.930
-请看第四行，我们甚至不需要它们之间的逗号。
-And look on line 4,
-we don't even need commas in between them.
+看一下第4行，它们之间甚至不需要逗号。
+And look on line 4, we don't even need commas in between them.
 
 22
 00:01:08.930 --> 00:01:13.409
-他们创造了一个绝妙的工作
-They did a fantastic job of just
-dribbling all kinds of syntactic sugar
+他们做了一件了不起的工作，只是运球各种句法糖分
+They did a fantastic job of just dribbling all kinds of syntactic sugar
 
 23
 00:01:13.409 --> 00:01:14.810
-在此功能部件上。
+在这个功能上。
 on this feature.
 
 24
 00:01:14.810 --> 00:01:16.469
-很有吸引力
+非常吸引人。
 It's very attractive.
 
 25
 00:01:16.469 --> 00:01:21.879
-然后我们看第 10 行它看起来就像在任何其他的
-Then we look at line 10, it looks exactly
-like instantiating classes in any other
+然后我们看一下第10行，它看起来完全像在其他任何地方实例化类
+Then we look at line 10, it looks exactly like instantiating classes in any other
 
 26
 00:01:21.879 --> 00:01:23.109
@@ -148,448 +132,383 @@ class oriented language.
 
 27
 00:01:23.109 --> 00:01:27.260
-我们刚刚说了新的，资本 W 的讲习班，我们得到了一个例子。
-We just say new, capital W Workshop,
-and we get an instance.
+我们只是说新的，大写的W工作坊，我们得到了一个实例。
+We just say new, capital W Workshop, and we get an instance.
 
 28
 00:01:27.260 --> 00:01:30.969
-我们调用 deepJS.ask 和方法调用工作。
-And we call deepJS.ask and
-the method call works.
+我们调用Deep JS.ask，方法调用起作用。
+And we call deepJS.ask and the method call works.
 
 29
 00:01:30.969 --> 00:01:32.770
-有一个这样的背景是有效的。
+这里有一个有用的上下文。
 And there's a this context that works.
 
 30
 00:01:34.909 --> 00:01:38.870
-这就是阶级语法的样子。
-So that's what the class
-syntax looks like.
+这就是类语法的样子。
+So that's what the class syntax looks like.
 
 31
 00:01:38.870 --> 00:01:42.450
-如果要将一个类扩展至另一个类，
-If you want to extend one
-class into another class,
+如果要将一个类扩展到另一个类，
+If you want to extend one class into another class,
 
 32
 00:01:42.450 --> 00:01:45.670
-在第 10 行的范围内使用扩展子句。
-you use the extends clause
-like here on line 10.
+您可以在第10行使用扩展子句，如下所示。
+you use the extends clause like here on line 10.
 
 33
 00:01:45.670 --> 00:01:48.439
-你不用重新定义任何其他方法
-You don't have to redefine
-any other methods that
+您不必重新定义任何其他方法
+You don't have to redefine any other methods that
 
 34
 00:01:48.439 --> 00:01:51.710
-已定义，因为它们将被称为继承。
-are already defined because they'll be so
-called inherited.
+已经定义了，因为它们将被称为继承。
+are already defined because they'll be so called inherited.
 
 35
 00:01:51.710 --> 00:01:55.700
-因此，您可以在第 11 行上定义类似 speakUp 方法的新方法，并且
-So you can define new methods like
-the speakUp method here on line 11 and
+因此，您可以定义新方法，如第11行上的SpeakUp方法
+So you can define new methods like the speakUp method here on line 11 and
 
 36
 00:01:55.700 --> 00:02:01.459
-当您实例化该子代类时，可以调用第 18 行，
-when you instantiate that Child class,
-you can then invoke line 18,
+当您实例化该Child类时，您可以调用第18行，
+when you instantiate that Child class, you can then invoke line 18,
 
 37
 00:02:01.459 --> 00:02:06.939
-你可以用这个方法，点说话，就像在对象上一样。
-you can invoke that method, dot speak up,
-exactly like it was on the object.
+你可以调用那个方法，点说话，就像它在对象上一样。
+you can invoke that method, dot speak up, exactly like it was on the object.
 
 38
 00:02:11.034 --> 00:02:16.224
-事实上，阶级制度现在也有一个超级关键词，
-As a matter of fact, the class system
-also now has a super keyword in it,
+事实上，班级系统现在也有一个超级关键字，
+As a matter of fact, the class system also now has a super keyword in it,
 
 39
 00:02:16.224 --> 00:02:18.875
-允许你做相对多态的多态性
-which allows you to do
-relative polymorphism.
+这允许你做相对多态。
+which allows you to do relative polymorphism.
 
 40
 00:02:18.875 --> 00:02:23.887
-如果您具有定义与父类同名的方法的子类，
-If you have a child class that defines a
-method of the same name as a parent class,
+如果您有一个定义与父类同名的方法的子类，
+If you have a child class that defines a method of the same name as a parent class,
 
 41
 00:02:23.887 --> 00:02:25.856
-所以被称为 " 影子"
+所谓的影子。
 so called shadowing.
 
 42
 00:02:25.856 --> 00:02:31.817
-如果您有一个定义与父代中相同的方法名的方法名。
-If you have one that defines the same
-method name in a child as in the parent.
+如果您在子级中定义了与父级中相同的方法名称。
+If you have one that defines the same method name in a child as in the parent.
 
 43
 00:02:31.817 --> 00:02:35.990
-您可以引用子代中的父代
+您可以从子引用父
 You can refer to the parent from the child
 
 44
 00:02:35.990 --> 00:02:40.906
-就像你在 12 线上看到的那样
-by saying super dot,
-like you see on line 12.
+通过说超级圆点，就像你在第12行看到的那样。
+by saying super dot, like you see on line 12.
 
 45
 00:02:42.490 --> 00:02:46.701
->> Kyle Simpson: 顺便说，这是扩展以外的示例
-&gt;&gt; Kyle Simpson: By the way,
-this is an example of extension beyond
+&gt；&gt；Kyle Simpson：顺便说一下，这是一个扩展到
+&gt;&gt; Kyle Simpson: By the way, this is an example of extension beyond
 
 46
 00:02:46.701 --> 00:02:50.817
-语法糖，因为在 ES6 类之前
-syntactic sugar because
-prior to ES6 classes,
+因为在ES6类之前，
+syntactic sugar because prior to ES6 classes,
 
 47
 00:02:50.817 --> 00:02:55.852
-基本上没有办法做相对多态的多态性。
-there was essentially no way
-to do relative polymorphism.
+基本上没有办法做相对多态性。
+there was essentially no way to do relative polymorphism.
 
 48
 00:02:55.852 --> 00:02:58.653
-不存在与超级关键字等同的值。
-There was no equivalent
-of the super keyword.
+没有超级关键字的等价物。
+There was no equivalent of the super keyword.
 
 49
 00:03:00.492 --> 00:03:02.783
->> 凯尔 - 辛普森: 我不是说这是不好的事，我只是说，
-&gt;&gt; Kyle Simpson: I'm not saying
-that's a bad thing, I'm just saying,
+&gt；&gt；Kyle Simpson：我不是说这是件坏事，我只是说，
+&gt;&gt; Kyle Simpson: I'm not saying that's a bad thing, I'm just saying,
 
 50
 00:03:02.783 --> 00:03:06.300
-当人们说这只是语法上的糖分，不是，不是。
-when people say, it's just syntactic
-sugar anyway, no, it isn't.
+当人们说，这只是语法糖，不，它不是。
+when people say, it's just syntactic sugar anyway, no, it isn't.
 
 51
 00:03:06.300 --> 00:03:09.990
-它是自己的机制，有自己的复杂性。
-It's its whole own mechanism,
-with its own set of complexities.
+这是它自己的机制，有它自己的一套复杂性。
+It's its whole own mechanism, with its own set of complexities.
 
 52
 00:03:09.990 --> 00:03:14.590
-如果你把注意力集中在任何东西上就会有一大堆东西
-And if you pay attention to the specs
-at all, there's a whole bunch of stuff,
+如果你注意到规格，有一大堆东西，
+And if you pay attention to the specs at all, there's a whole bunch of stuff,
 
 53
 00:03:14.590 --> 00:03:17.030
-就像一列大型货运火车去上课
-like a big freight train headed for
-classes.
+就像一列去上课的大货车。
+like a big freight train headed for classes.
 
 54
 00:03:17.030 --> 00:03:21.490
-它会以各种新的复杂，私人和公共领域的形式爆炸
-It's gonna explode with all kinds of new
-complexity, private and public fields, and
+它会爆炸出各种新的复杂性，私人和公共领域，而且
+It's gonna explode with all kinds of new complexity, private and public fields, and
 
 55
 00:03:21.490 --> 00:03:24.740
-私人和公共的方法以及其他的装饰和装饰
-private and public methods, and
-all these others, decorators and
+私人的和公共的方法，以及所有其他的，装饰师和
+private and public methods, and all these others, decorators and
 
 56
 00:03:24.740 --> 00:03:25.740
-都是些其他的东西
+所有这些其他的东西。
 all this other stuff.
 
 57
 00:03:25.740 --> 00:03:29.039
-因此，类是其自身的复杂性同步。
+因此类是它们自己的复杂性同步。
 So classes are their own complexity sync.
 
 58
 00:03:29.039 --> 00:03:31.889
-他们会得到各种新的功能
-They're gonna get all kinds of
-new features added into them.
+他们会加入各种各样的新功能。
+They're gonna get all kinds of new features added into them.
 
 59
 00:03:31.889 --> 00:03:37.745
-就像现在语言里的一种语言，不仅仅是语法上的糖分，
-It's like a language within a language at
-this point, it's not just syntactic sugar,
+在这一点上，它就像是一种语言中的一种语言，它不仅仅是句法上的糖，
+It's like a language within a language at this point, it's not just syntactic sugar,
 
 60
 00:03:37.745 --> 00:03:42.271
-但这对于这些最简单的例子来说是有用的
-but that is a useful, mental model for
-these simplest of examples.
+但对于这些最简单的例子来说，这是一个有用的心智模型。
+but that is a useful, mental model for these simplest of examples.
 
 61
 00:03:45.076 --> 00:03:48.216
->> 凯尔 - 辛普森: 我不得不说，虽然有很多句法
-&gt;&gt; Kyle Simpson: I do have to say that
-even though there's a bunch of syntactic
+&gt；&gt；Kyle Simpson：我不得不这么说，尽管有一大堆句法
+&gt;&gt; Kyle Simpson: I do have to say that even though there's a bunch of syntactic
 
 62
 00:03:48.216 --> 00:03:51.484
-糖根本没有改变什么
-sugar, they didn't change
-anything fundamentally about how
+糖，他们并没有从根本上改变
+sugar, they didn't change anything fundamentally about how
 
 63
 00:03:51.484 --> 00:03:54.810
-函数调用工作以及该关键字的绑定方式。
-function calls work and
-how that this keyword gets bound.
+函数调用工作以及如何绑定此关键字。
+function calls work and how that this keyword gets bound.
 
 64
 00:03:54.810 --> 00:03:58.520
-因此，即使您在类实例上定义方法，
-So, even if you define
-a method on a class instance,
+因此，即使您在类实例上定义了一个方法，
+So, even if you define a method on a class instance,
 
 65
 00:03:58.520 --> 00:04:01.189
-如果你把它传递到这个超时值中，猜测是什么 ?
-if you pass it into a said timeout,
-guess what?
+如果你把它传递到一个所说的超时，你猜怎么着？
+if you pass it into a said timeout, guess what?
 
 66
 00:04:01.189 --> 00:04:02.870
-它会失去它的束缚
+它会失去这种束缚。
 It's gonna lose its this binding.
 
 67
 00:04:04.349 --> 00:04:07.189
-他们不会在某种程度上自动地自动绑定。
+它们不是神奇的自动绑定。
 They're not somehow magically auto bound.
 
 68
 00:04:07.189 --> 00:04:08.669
-那些在课堂上的功能
+类上的那些函数，
 Those functions on class,
 
 69
 00:04:08.669 --> 00:04:12.180
-类实例上的方法与任何其他函数一样。
-the methods on class instances,
-behave just like any other function.
+类实例上的方法的行为就像任何其他函数一样。
+the methods on class instances, behave just like any other function.
 
 70
 00:04:12.180 --> 00:04:17.060
-有很多开发商对这一决定感到不满
-And there are a lot of developers
-that were upset at that decision,
+有很多开发人员对这个决定感到不安，
+And there are a lot of developers that were upset at that decision,
 
 71
 00:04:17.060 --> 00:04:21.889
-他们还真想让 JavaScript 更进一步
-they really wanted JavaScript to go
-one step further and force class
+他们真的希望JavaScript更进一步，强制类
+they really wanted JavaScript to go one step further and force class
 
 72
 00:04:21.889 --> 00:04:26.449
-用于在正常类或正常类中自动绑定的方法
-methods to be sort of autobound
-the way they are in normal class or
+方法是按照它们在普通类中的方式自动绑定的，或者
+methods to be sort of autobound the way they are in normal class or
 
 73
 00:04:26.449 --> 00:04:29.470
-以更传统的语言来定位语言
-in more traditional class
-orientated languages.
+在更传统的面向类的语言中。
+in more traditional class orientated languages.
 
 74
 00:04:29.470 --> 00:04:36.370
-这个方法的一个自动约束的想法就是为什么在这个过渡时期
-And that idea of having an autobound this
-method is why in this interim period for
+这种自动绑定这个方法的想法就是为什么在这个过渡时期
+And that idea of having an autobound this method is why in this interim period for
 
 75
 00:04:36.370 --> 00:04:40.370
-过去几年我们目睹了
-the last several years, we have
-seen an explosion of patterns where
+在过去的几年里，我们看到了模式的爆炸式增长
+the last several years, we have seen an explosion of patterns where
 
 76
 00:04:40.370 --> 00:04:45.170
-人们想要硬的或自动的方法，并且不是自动的。
-people want hardbound or autobound
-methods and they aren't automatically.
+人们想要硬绑定或自动绑定的方法，但它们不是自动的。
+people want hardbound or autobound methods and they aren't automatically.
 
 77
 00:04:45.170 --> 00:04:49.492
-所以你看到的很多事情都像是第四行
-So what you see a lot happening
-is something like line four,
+所以你看到的很多事情就像第四条线，
+So what you see a lot happening is something like line four,
 
 78
 00:04:49.492 --> 00:04:54.332
-而不是在原型上定义一个方法
-where instead of defining a method
-on the prototype, we added into
+我们没有在原型上定义方法，而是添加到
+where instead of defining a method on the prototype, we added into
 
 79
 00:04:54.332 --> 00:04:59.877
-构造函数，使用硬绑定方法或使用箭头函数，好吗 ?
-the constructor and use a hardbound
-method or use an arrow function, okay?
+构造函数并使用硬绑定方法或使用箭头函数，好吗？
+the constructor and use a hardbound method or use an arrow function, okay?
 
 80
 00:05:02.773 --> 00:05:07.170
->> 凯尔 - 辛普森: 这让我深深的困扰着这个成语的传播。
-&gt;&gt; Kyle Simpson: This deeply troubles me
-to see this propagation of this idiom.
+&gt；&gt；Kyle Simpson：看到这个成语的传播，我深感不安。
+&gt;&gt; Kyle Simpson: This deeply troubles me to see this propagation of this idiom.
 
 81
 00:05:07.170 --> 00:05:10.310
-这想法是很难受的
+这种想法，它必须是硬绑定的。
 This idea that it's got to be hard bound.
 
 82
 00:05:10.310 --> 00:05:15.240
-我不想给它带来任何动力所以我要用一个词法
-I don't want any dynamism to it all,
-so I'm gonna use a lexical this
+我不想让它有任何动态性，所以我将使用词法this
+I don't want any dynamism to it all, so I'm gonna use a lexical this
 
 83
 00:05:15.240 --> 00:05:19.250
-或者我要用一个硬的界限来完成这个任务
-from an arrow function or I'm gonna use
-a hard bound function to accomplish that.
+来自箭头函数，或者我将使用硬绑定函数来实现这一点。
+from an arrow function or I'm gonna use a hard bound function to accomplish that.
 
 84
 00:05:19.250 --> 00:05:24.341
-因为你本质上是背叛了阶级所建立的整个体系。
-Because you are essentially betraying the
-entire system that classes has built upon.
+因为你在本质上背叛了类构建的整个系统。
+Because you are essentially betraying the entire system that classes has built upon.
 
 85
 00:05:25.839 --> 00:05:30.769
-整个类系统基于此构想，即您的方法不存在
-The entire class system is built upon this
-idea that your methods don't exist on
+整个类系统都是基于这种思想构建的，而您的方法并不存在于此之上
+The entire class system is built upon this idea that your methods don't exist on
 
 86
 00:05:30.769 --> 00:05:35.350
-您的实例，它们存在于您的原型上，并且
-your instances,
-they exist on your prototypes and
+您的实例，它们存在于您的原型和
+your instances, they exist on your prototypes and
 
 87
 00:05:35.350 --> 00:05:39.870
-你猜你说的时候会发生什么然后你给它分配一个功能
-guess what happens when you say
-this.ask and you assign it a function?
+猜猜当你说this.ask并给它分配一个函数时会发生什么？
+guess what happens when you say this.ask and you assign it a function?
 
 88
 00:05:39.870 --> 00:05:43.389
-现在已经不再是样机了，就在你的例子里。
-It's no longer on the prototype anymore,
-it's on your instance.
+它不再在原型上，而是在您的实例上。
+It's no longer on the prototype anymore, it's on your instance.
 
 89
 00:05:43.389 --> 00:05:47.055
-所以每次你把一个功能都实例化了，你就会得到一个完整的
-So every single time you instantiate
-a function, you're getting a whole
+所以每次你实例化一个函数，你就得到了一个完整的
+So every single time you instantiate a function, you're getting a whole
 
 90
 00:05:47.055 --> 00:05:50.558
-将所有这些函数的副本单独复制到每个实例。
-separate copy of all those functions
-added to every single instance.
+添加到每个单个实例的所有这些函数的单独副本。
+separate copy of all those functions added to every single instance.
 
 91
 00:05:53.278 --> 00:05:55.798
->> 凯尔 - 辛普森: 这不是特别可怕的
-&gt;&gt; Kyle Simpson: It's not that
-that is particularly terrible for
+&gt；&gt；Kyle Simpson：这并不是特别糟糕
+&gt;&gt; Kyle Simpson: It's not that that is particularly terrible for
 
 92
 00:05:55.798 --> 00:06:00.209
-性能的 cuz JavaScript 引擎其实挺不错的
-performance cuz JavaScript engines
-are actually pretty good at it.
+性能，因为JavaScript引擎实际上非常擅长这一点。
+performance cuz JavaScript engines are actually pretty good at it.
 
 93
 00:06:00.209 --> 00:06:02.740
-我有个真正的问题就是
+我真正的问题是
 The real problem I have with that is it's
 
 94
 00:06:02.740 --> 00:06:04.899
-就像我们在这个关键词中所说的那样
-exactly like we talked
-about in this key word.
+就像我们在这个关键词里说的那样。
+exactly like we talked about in this key word.
 
 95
 00:06:04.899 --> 00:06:08.949
-你将会尽一切努力来完成这一联合战术
-You're going to all the trouble
-to do all this syntactic juggling
+你会不厌其烦地做这些语法上的杂耍
+You're going to all the trouble to do all this syntactic juggling
 
 96
 00:06:08.949 --> 00:06:13.240
-让自己成为一个具有超级动态的关键字的等级系统。
-to get yourself a class system with
-this key word that can be super dynamic.
+用这个关键字让你自己得到一个可以是超级动态的类系统。
+to get yourself a class system with this key word that can be super dynamic.
 
 97
 00:06:13.240 --> 00:06:16.730
-猜猜你刚刚创造了什么，一个非常糟糕的模块。
-And guess what you just created,
-a really terrible version of the module.
+猜猜你刚刚创建了什么，一个非常糟糕的模块版本。
+And guess what you just created, a really terrible version of the module.
 
 98
 00:06:18.139 --> 00:06:22.410
-一个令人困惑，丑陋的词汇模块的脆弱版本。
-A really confusing, and ugly, and
-brittle version of a lexical module.
+一个真正令人困惑，丑陋，脆弱的词汇模块版本。
+A really confusing, and ugly, and brittle version of a lexical module.
 
 99
 00:06:23.579 --> 00:06:27.459
-我们有 20 多年的词法模块模式。
-We've had lexical module pattern for
-20 plus years.
+我们已经有20多年的词汇模块模式。
+We've had lexical module pattern for 20 plus years.
 
 100
 00:06:27.459 --> 00:06:29.040
-我们应该拥抱和拥抱
+我们应该只是拥抱和
 And we ought to just be embracing and
 
 101
 00:06:29.040 --> 00:06:31.920
-语言中已存在的内容。
-using what was already
-there in the language.
+使用语言中已经存在的内容。
+using what was already there in the language.
 
 102
 00:06:31.920 --> 00:06:34.990
-这并不是说阶级制度没有好处。
-That's not to say there's no
-benefit to the class system.
+这并不是说对班级制度没有好处。
+That's not to say there's no benefit to the class system.
 
 103
 00:06:34.990 --> 00:06:36.769
@@ -598,40 +517,35 @@ There are definitely benefits.
 
 104
 00:06:36.769 --> 00:06:41.750
-如果你真的想做多态和多重的遗产
-If you really wanna do polymorphism and
-multiple levels of inheritance and
+如果你真的想做多态和多层次的遗传
+If you really wanna do polymorphism and multiple levels of inheritance and
 
 105
 00:06:41.750 --> 00:06:42.740
-超级大的
+超级等等。
 super and all that.
 
 106
 00:06:42.740 --> 00:06:44.129
-分类系统非常好。
+班级制度很棒。
 The class system is great.
 
 107
 00:06:45.290 --> 00:06:48.959
-只是绝大多数人都在使用这个类系统
-It's just that the vast majority of
-people that are using the class system,
+只是绝大多数使用阶级系统的人，
+It's just that the vast majority of people that are using the class system,
 
 108
 00:06:48.959 --> 00:06:52.800
-最终彻底切断它的膝盖
-end up completely cutting
-it off at its knees.
+最后在它的膝盖处完全切断了它。
+end up completely cutting it off at its knees.
 
 109
 00:06:52.800 --> 00:06:57.399
-割掉它的膝盖，失去所有的动态灵活性，
-Cutting it off its knees, losing all
-the dynamic flexibility, and getting
+切断它的膝盖，失去所有的动态灵活性，并得到
+Cutting it off its knees, losing all the dynamic flexibility, and getting
 
 110
 00:06:57.399 --> 00:07:00.009
-他们所拥有的模块模式的一个非常糟糕的版本
-a really terrible version of what they
-could have had with the module pattern.
+对于模块模式来说，这是一个非常糟糕的版本。
+a really terrible version of what they could have had with the module pattern.

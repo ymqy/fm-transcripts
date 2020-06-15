@@ -2,458 +2,395 @@ WEBVTT
 
 1
 00:00:00.120 --> 00:00:02.060
->> Kyle Simpson: 那么之前，我们描述了
-&gt;&gt; Kyle Simpson: So
-earlier, we described, and
+&gt；&gt；Kyle Simpson：所以之前，我们描述了，
+&gt;&gt; Kyle Simpson: So earlier, we described, and
 
 2
 00:00:02.060 --> 00:00:05.450
-我提到了一个叫抽象操作的东西。
-I mentioned a thing called
-an abstract operation.
+我提到了一个叫做抽象操作的东西。
+I mentioned a thing called an abstract operation.
 
 3
 00:00:05.450 --> 00:00:08.070
-如果你还记得我给你看了两个号码
-If you recall,
-I showed you the two number, and
+如果你还记得，我给你看了两个号码，然后
+If you recall, I showed you the two number, and
 
 4
 00:00:08.070 --> 00:00:09.570
-我说这是一个抽象的操作。
+我说那是个抽象的操作。
 I said that's an abstract operation.
 
 5
 00:00:09.570 --> 00:00:13.070
-那么让我们谈谈这些是什么，因为它们是我们的基本建筑
-So let's talk about what those are,
-because they are the fundamental building
+所以让我们来谈谈这些是什么，因为它们是基础建筑
+So let's talk about what those are, because they are the fundamental building
 
 6
 00:00:13.070 --> 00:00:17.510
-阻碍我们处理类型转换的方式。
-block that makes up how we
-deal with type conversion.
+块，它组成了我们处理类型转换的方式。
+block that makes up how we deal with type conversion.
 
 7
 00:00:17.510 --> 00:00:21.660
-你在这个规范中看到我们有这些抽象的操作，
-So you see here in the spec that we have
-these abstract operations which perform,
+所以你可以在规范中看到，我们有这些抽象的操作来执行，
+So you see here in the spec that we have these abstract operations which perform,
 
 8
 00:00:21.660 --> 00:00:24.559
-从根本上来说，类型转换的任务。
-fundamentally, the task
-of type conversion.
+从根本上讲，类型转换的任务。
+fundamentally, the task of type conversion.
 
 9
 00:00:24.559 --> 00:00:30.129
-在 JavaScript 中，我们将类型转换称为强制类型。
-In JavaScript,
-we refer to type conversion as coercion.
+在JavaScript中，我们将类型转换称为强制。
+In JavaScript, we refer to type conversion as coercion.
 
 10
 00:00:30.129 --> 00:00:31.050
-好吗 ?
+好吗？
 Okay?
 
 11
 00:00:31.050 --> 00:00:34.240
-所以当你想到转化和胁迫的时候你应该好好想想
-So when you think of conversion and
-coercion, you should really think of them
+所以当你想到转换和胁迫时，你真的应该想到它们
+So when you think of conversion and coercion, you should really think of them
 
 12
 00:00:34.240 --> 00:00:37.929
-是可以互换的至少在 JavaScript 方面是很重要的
-as interchangeable, at least as
-far as JavaScript is concerned.
+作为可互换性，至少就JavaScript而言。
+as interchangeable, at least as far as JavaScript is concerned.
 
 13
 00:00:37.929 --> 00:00:41.570
-我们的第一次抽象化操作叫做 ToPrimitive。
-The first abstract operation that
-we have is called ToPrimitive.
+我们拥有的第一个抽象操作称为ToPrimitive。
+The first abstract operation that we have is called ToPrimitive.
 
 14
 00:00:43.369 --> 00:00:45.490
-显然如果我们没有原始的
-Now obviously,
-if we don't have a primitive,
+显然，如果我们没有原始物，
+Now obviously, if we don't have a primitive,
 
 15
 00:00:45.490 --> 00:00:46.979
-我们得把它变成一个原始的
+我们需要把它变成原始物。
 we need to turn it into a primitive.
 
 16
 00:00:46.979 --> 00:00:51.460
-所以如果我们有一些非原始的，就像一个对象类型一样
-So if we have something non-primitive,
-like one of the object types, like
+所以如果我们有一些非原语的东西，比如其中一种对象类型，比如
+So if we have something non-primitive, like one of the object types, like
 
 17
 00:00:51.460 --> 00:00:56.340
-一个物体，一个数组，一个函数，什么的，我们要把它变成一个原始的，
-an object, an array, a function, whatever,
-and we need to make it into a primitive,
+一个对象，一个数组，一个函数，无论什么，我们需要把它变成一个原语，
+an object, an array, a function, whatever, and we need to make it into a primitive,
 
 18
 00:00:56.340 --> 00:01:00.450
-这是一个抽象的操作将会参与到这个过程中。
-this is the abstract operation that's
-going to be involved in doing that.
+这是将要涉及到的抽象操作。
+this is the abstract operation that's going to be involved in doing that.
 
 19
 00:01:00.450 --> 00:01:03.909
-顺便说下，抽象操作不是 JavaScript 引擎，
-By the way, the abstract operations
-are not a thing the JavaScript engine,
+顺便说一下，抽象操作不是JavaScript引擎的东西，
+By the way, the abstract operations are not a thing the JavaScript engine,
 
 20
 00:01:03.909 --> 00:01:06.129
-他们不像是某种能被调用的函数
-they're not like a function
-that could somehow be called.
+它们不像一个可以通过某种方式调用的函数。
+they're not like a function that could somehow be called.
 
 21
 00:01:06.129 --> 00:01:11.730
-实际上，可能是 JavaScript 引擎内部的实际方法或
-There may, in fact, be actual methods
-inside of a JavaScript engine or
+实际上，JavaScript引擎中可能有实际的方法，或者
+There may, in fact, be actual methods inside of a JavaScript engine or
 
 22
 00:01:11.730 --> 00:01:15.299
-不是，他们不喜欢做实际的事情。
-not, they're not like
-required to be actual things.
+不，他们不像被要求是真实的东西。
+not, they're not like required to be actual things.
 
 23
 00:01:15.299 --> 00:01:18.829
-但当我们称它们为抽象的时候，我们的意思是它们是一个概念上的操作。
-But when we call them abstract,
-we mean they're a conceptual operation.
+但当我们称它们为抽象时，我们的意思是它们是一个概念性的操作。
+But when we call them abstract, we mean they're a conceptual operation.
 
 24
 00:01:18.829 --> 00:01:22.189
-所以任何时候你都有不原始的东西要变成
-So any time you have something that is
-not a primitive and it needs to become
+所以任何时候你有一些东西不是原始物，它需要变成
+So any time you have something that is not a primitive and it needs to become
 
 25
 00:01:22.189 --> 00:01:26.769
-一个原始，概念上，我们需要做的就是这一套算法步骤，
-a primitive, conceptually, what we need to
-do is this set of algorithmic steps, and
+从概念上讲，我们需要做的就是这组算法步骤，以及
+a primitive, conceptually, what we need to do is this set of algorithmic steps, and
 
 26
 00:01:26.769 --> 00:01:31.549
-这叫做 ToPriimtive ，就像它是一个可以被调用的函数，好吗 ?
-that's called ToPrimitive, as if it were
-a function that could be invoked, okay?
+这叫做ToPrimitive，就好像它是一个可以被调用的函数，好吗？
+that's called ToPrimitive, as if it were a function that could be invoked, okay?
 
 27
 00:01:31.549 --> 00:01:37.659
-因此， ToPrimitive 抽象操作采用可选的类型提示。
-So the ToPrimitive abstract operation
-takes an optional type hint.
+因此，ToPrimitive抽象操作接受一个可选的类型提示。
+So the ToPrimitive abstract operation takes an optional type hint.
 
 28
 00:01:37.659 --> 00:01:41.180
-换句话说，它说，如果你有一些不是原始的东西，
-So in other words, it says, if you have
-something that is not a primitive,
+所以换句话说，它说，如果你有不是原始的东西，
+So in other words, it says, if you have something that is not a primitive,
 
 29
 00:01:41.180 --> 00:01:45.240
-告诉我你想做什么你会喜欢什么样的类型
-tell me what you think you would like,
-what kind of type you would like it to be.
+告诉我你认为你会喜欢什么，你希望它是什么样的类型。
+tell me what you think you would like, what kind of type you would like it to be.
 
 30
 00:01:46.930 --> 00:01:48.829
-如果你在做数字运算
+如果你在做数值运算
 If you're doing a numeric operation and
 
 31
 00:01:48.829 --> 00:01:52.049
-它会调用 " ToPrimitive " ，猜测它要发送什么提示 ?
-it invokes ToPrimitive,
-guess what hint it's gonna send in?
+它调用ToPrimitive，猜猜它将发送什么提示？
+it invokes ToPrimitive, guess what hint it's gonna send in?
 
 32
 00:01:52.049 --> 00:01:54.579
-我想说我想有个数字
-It's gonna say,
-I would like to have a number.
+它会说，我想要一个号码。
+It's gonna say, I would like to have a number.
 
 33
 00:01:54.579 --> 00:01:56.390
-顺便说下这不能保证你的号码
-That doesn't guarantee you a number,
-by the way.
+顺便说一下，这并不能保证你能得到一个数字。
+That doesn't guarantee you a number, by the way.
 
 34
 00:01:56.390 --> 00:01:59.409
-只是想说我在用它的地方
-It's just a hint to say,
-the place that I'm using it,
+只是暗示一下，我使用它的地方，
+It's just a hint to say, the place that I'm using it,
 
 35
 00:01:59.409 --> 00:02:00.930
-我想让它成为一个数字。
+我希望它是一个数字。
 I would like it to be a number.
 
 36
 00:02:00.930 --> 00:02:04.620
-如果你做的是基于字符串的，猜测它要发送什么提示。
-If you're doing something string-based,
-guess what hint it's going to send in.
+如果你正在做一些基于字符串的事情，猜猜它会发出什么提示。
+If you're doing something string-based, guess what hint it's going to send in.
 
 37
 00:02:04.620 --> 00:02:05.689
-它将以字符串方式发送。
+它将发送字符串。
 It's going to send in string.
 
 38
 00:02:05.689 --> 00:02:07.239
-这些基本上是仅有的两个提示。
+这基本上是唯一的两个提示。
 Those are basically the only two hints.
 
 39
 00:02:07.239 --> 00:02:10.449
-可以说，我希望它是一个数字，我希望它是一个字符串，或者
-It can say, I would like it to be a
-number, I would like it to be a string, or
+它可以说，我希望它是一个数字，我希望它是一个字符串，或者
+It can say, I would like it to be a number, I would like it to be a string, or
 
 40
 00:02:10.449 --> 00:02:13.439
-我根本不打算告诉你只要你能给我一些原始的东西
-I'm not going to tell you at all, so
-just give me whatever primitive you can.
+我不会告诉你的，所以只要你能给我任何原始的东西。
+I'm not going to tell you at all, so just give me whatever primitive you can.
 
 41
 00:02:13.439 --> 00:02:16.610
-好吗 ? 你需要了解的另一件事
-Okay?
-Another thing you need to understand about
+好吗？你需要了解的另一件事
+Okay? Another thing you need to understand about
 
 42
 00:02:16.610 --> 00:02:21.139
-JavaScript 内的算法就是它们本质上是递归的
-the algorithms within JavaScript is
-that they are inherently recursive,
+JavaScript中的算法是它们固有的递归，
+the algorithms within JavaScript is that they are inherently recursive,
 
 43
 00:02:21.139 --> 00:02:25.599
-这意味着他们定义了一些东西，例如 ToPriimtive。
-which means that they define something,
-for example to ToPrimitive.
+这意味着他们定义了一些东西，例如ToPrimitive。
+which means that they define something, for example to ToPrimitive.
 
 44
 00:02:25.599 --> 00:02:30.474
-如果 ToPrimitive 的返回结果不是原语，那么它是另一个原语
-If the return result from ToPrimitive
-is not a primitive, if it's another
+如果从ToPrimitive返回的结果不是一个原语，如果它是另一个
+If the return result from ToPrimitive is not a primitive, if it's another
 
 45
 00:02:30.474 --> 00:02:35.180
-不原始的，就像另一个物体，那么它就会再次唤起，
-non-primitive, like another object,
-then it's gonna get evoked again, and
+非原始的，就像另一个物体，然后它会再次被唤起，并且
+non-primitive, like another object, then it's gonna get evoked again, and
 
 46
 00:02:35.180 --> 00:02:38.930
-它会一直被调用直到我们能找到
-it's gonna keep getting invoked
-until we can get something that's
+它会一直被调用直到我们能得到一些
+it's gonna keep getting invoked until we can get something that's
 
 47
 00:02:38.930 --> 00:02:42.620
-或者在某些情况下会产生错误，好吗 ?
-an actual primitive, or
-in some cases get an error, okay?
+一个实际的原语，或者在某些情况下得到一个错误，好吗？
+an actual primitive, or in some cases get an error, okay?
 
 48
 00:02:42.620 --> 00:02:46.170
-所以有很多这样的规格的机器
-So there's a lot of these sort
-of spec machinations that happen
+所以有很多这样的规范阴谋发生
+So there's a lot of these sort of spec machinations that happen
 
 49
 00:02:46.170 --> 00:02:47.789
-是递归的
+它们是递归的。
 that are recursive.
 
 50
 00:02:47.789 --> 00:02:51.379
-当我们再看强制性的平等的时候，你会看到这个想法，
-And when we look at coercive equality a
-bit later, you'll see this idea that it's
+当我们稍后研究强制平等时，你会看到这个想法，它是
+And when we look at coercive equality a bit later, you'll see this idea that it's
 
 51
 00:02:51.379 --> 00:02:55.014
-在我们得到完整的结果之前再重新应用
-sort of being re-applied over and over and
-over again until we get a full result.
+一次又一次的重复应用直到我们得到一个完整的结果。
+sort of being re-applied over and over and over again until we get a full result.
 
 52
 00:02:55.014 --> 00:02:58.079
-所以 ToPrimitive，它的运作方式，本质上是沸腾了算法。
-So ToPrimitive, the way it works,
-essentially, boiling down the algorithm.
+所以到Primitive，它的工作方式，本质上，就是沸腾的算法。
+So ToPrimitive, the way it works, essentially, boiling down the algorithm.
 
 53
 00:02:58.079 --> 00:03:01.580
-工作方式是有两种方法可以
-The way it works is that there
-are two methods that can be
+它的工作方式是有两种方法可以
+The way it works is that there are two methods that can be
 
 54
 00:03:01.580 --> 00:03:04.120
-在任何非原始状态下可用。
+在任何非基本体上可用。
 available on any non-primitive.
 
 55
 00:03:04.120 --> 00:03:06.310
-任何对象，函数，数组，任何内容。
+任何对象，函数，数组，任何东西。
 Any object, function, array, whatever.
 
 56
 00:03:06.310 --> 00:03:08.539
-任何非原始的，都有这两个功能。
-Any non-primitive,
-there are these two functions.
+任何非原语，都有这两个函数。
+Any non-primitive, there are these two functions.
 
 57
 00:03:08.539 --> 00:03:11.039
-你之前几乎肯定见过这些
-And you've almost certainly
-seen these before.
+你几乎可以肯定以前见过这些。
+And you've almost certainly seen these before.
 
 58
 00:03:11.039 --> 00:03:13.930
-valueOf 函数() 和 toString() 函数。
-The valueOf function() and
-the toString() function.
+valueOf函数()和toString()函数。
+The valueOf function() and the toString() function.
 
 59
 00:03:13.930 --> 00:03:20.340
-这个算法说如果你告诉我提示是数字那我就去
-And this algorithm says, if you've told me
-that the hint is number, then I'm going
+这个算法说，如果你告诉我提示是数字，那么我会
+And this algorithm says, if you've told me that the hint is number, then I'm going
 
 60
 00:03:20.340 --> 00:03:25.629
-首先尝试调用 valueOf()，如果它在那里，然后查看它给我的内容。
-to first try to invoke the valueOf(),
-if it's there, and see what it gives me.
+首先尝试调用valueof()，如果它在那里，然后看看它给了我什么。
+to first try to invoke the valueOf(), if it's there, and see what it gives me.
 
 61
 00:03:25.629 --> 00:03:27.979
-如果它给我一个原始的，那么我们就完了。
-And if it gives me a primitive,
-then we're done.
+如果它给了我一个原语，那么我们就完了。
+And if it gives me a primitive, then we're done.
 
 62
 00:03:27.979 --> 00:03:32.579
-如果它不给我一个原语，或者它不存在，那么我们尝试 toString()。
-If it doesn't give me a primitive, or it
-doesn't exist, then we try the toString().
+如果它没有给我一个原语，或者它不存在，那么我们尝试toString()。
+If it doesn't give me a primitive, or it doesn't exist, then we try the toString().
 
 63
 00:03:32.579 --> 00:03:34.680
-我们要么得到一个原始的
+我们要么得到一个原始的，要么没有。
 And we either get a primitive or not.
 
 64
 00:03:34.680 --> 00:03:36.889
-如果我们俩都试过了
+如果我们两个都试了，而且
 And if we tried both of those, and
 
 65
 00:03:36.889 --> 00:03:41.159
-我们没有原始的东西一般都是会导致错误的好吗
-we don't get a primitive, generally that's
-gonna end up resulting in an error, okay?
+我们没有得到一个原语，通常这最终会导致一个错误，好吗？
+we don't get a primitive, generally that's gonna end up resulting in an error, okay?
 
 66
 00:03:42.389 --> 00:03:43.920
-如果提示是号码的话
+如果暗示是数字的话。
 That's if the hint was number.
 
 67
 00:03:43.920 --> 00:03:47.379
-如果提示是字符串，就会反转他们与他们协商的顺序，
-If the hint was string, they just reverse
-the order that they consult them in,
+如果提示是字符串，他们只需颠倒查询的顺序，
+If the hint was string, they just reverse the order that they consult them in,
 
 68
 00:03:47.379 --> 00:03:49.699
-但是他们基本上还是跟他们商量。
-but they still essentially
-consult both of them.
+但他们基本上还是会咨询这两个人。
+but they still essentially consult both of them.
 
 69
 00:03:49.699 --> 00:03:54.069
-所以如果提示是字符串，我们会问那个对象，那个非原始的，
-So if the hint is string, we would ask for
-that object, that non-primitives,
+因此，如果提示是字符串，我们将请求该对象，即非原语，
+So if the hint is string, we would ask for that object, that non-primitives,
 
 70
 00:03:54.069 --> 00:03:57.500
-toString() 方法，如果有，请使用它返回的内容。
-toString() method, and
-if it has it, use what it returns.
+toString()方法，如果有，请使用它返回的内容。
+toString() method, and if it has it, use what it returns.
 
 71
 00:03:57.500 --> 00:04:01.770
-如果它能给我们合法的原始字符串
-And if it gives us legitimately
-a primitive like a string,
+如果它合法地给我们一个像字符串一样的原语，
+And if it gives us legitimately a primitive like a string,
 
 72
 00:04:01.770 --> 00:04:04.900
-那我们就用这个吧
+它应该是这样的，那么我们就用它。
 which it should, then we'll just use that.
 
 73
 00:04:04.900 --> 00:04:06.990
-然后我们就去 valueOf() 好吗
+然后我们会尝试value of()，好吗？
 And then we'll try to valueOf(), okay?
 
 74
 00:04:06.990 --> 00:04:11.780
-请记住如果你想用一些不是原始的东西
-So just keep in mind, if you're gonna
-use something that is not a primitive in
+所以请记住，如果你要使用不是原语的东西
+So just keep in mind, if you're gonna use something that is not a primitive in
 
 75
 00:04:11.780 --> 00:04:16.709
-一个肯定需要原始的地方比如数学或并置
-some place that definitely needs
-primitives, like math or concatenation.
+一些肯定需要原语的地方，比如数学或连接。
+some place that definitely needs primitives, like math or concatenation.
 
 76
 00:04:17.829 --> 00:04:19.449
-在你的脑海里你应该明白
+在你的脑海里，你应该意识到，
 In your mind, you should realize,
 
 77
 00:04:19.449 --> 00:04:23.550
-它会通过这个 ToPrimitive 算法来强迫它
-it is going to end up coercing it
-through this ToPrimitive algorithm, and
+它最终将通过这个ToPrimitive算法来强制它，并且
+it is going to end up coercing it through this ToPrimitive algorithm, and
 
 78
 00:04:23.550 --> 00:04:26.959
-它会调用 valueOf() 或 toString()。
-it's gonna end up either invoking
-the valueOf() or the toString().
+它最终将调用valueOf()或toString()。
+it's gonna end up either invoking the valueOf() or the toString().
 
 79
 00:04:26.959 --> 00:04:29.329
-我们会在一些例子中看到这些例子。
-We'll see examples of the usage
-of those in a little bit.
+稍后我们将看到这些用法的示例。
+We'll see examples of the usage of those in a little bit.

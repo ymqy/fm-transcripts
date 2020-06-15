@@ -2,813 +2,695 @@ WEBVTT
 
 1
 00:00:00.130 --> 00:00:03.459
->> 凯尔: 那么让我们看看这四种不同的方法来调用函数。
-&gt;&gt; Kyle: So let's look at those four
-different ways to invoke a function.
+&gt；&gt；Kyle：让我们看看调用函数的四种不同方式。
+&gt;&gt; Kyle: So let's look at those four different ways to invoke a function.
 
 2
 00:00:03.459 --> 00:00:06.349
-我们首先会看到的是隐含的约束力。
-The first of them we'll look
-at is called implicit binding.
+我们将研究的第一个方法称为隐式绑定。
+The first of them we'll look at is called implicit binding.
 
 3
 00:00:06.349 --> 00:00:11.179
-您会注意到我有一个研讨会对象，其中一种方法是这个感知的。
-You'll notice I have a workshop object
-with a method on it that is this aware.
+你会注意到我有一个工作坊对象，它上面有一个方法，就是这一点。
+You'll notice I have a workshop object with a method on it that is this aware.
 
 4
 00:00:11.179 --> 00:00:13.970
-你应该很眼熟的因为我说
-That should look familiar to
-you because I called that
+这对你来说应该很眼熟，因为我把它叫做
+That should look familiar to you because I called that
 
 5
 00:00:13.970 --> 00:00:17.219
-我们讨论的另一个单位的名字空间模式
-the name space pattern in
-another unit of our discussion.
+我们讨论的另一个单元中的名称空间模式。
+the name space pattern in another unit of our discussion.
 
 6
 00:00:17.219 --> 00:00:19.899
-我们在这里重新审视这个名称空间模式
-We're revisiting that name
-space pattern here and
+我们在这里重新讨论命名空间模式
+We're revisiting that name space pattern here and
 
 7
 00:00:19.899 --> 00:00:24.890
-我们会问这个关键词在那个名称空间模式中是如何运作的 ?
-we're gonna ask how does the this key
-word behave in that namespace pattern?
+我们将问一下this关键字在该命名空间模式中的行为？
+we're gonna ask how does the this key word behave in that namespace pattern?
 
 8
 00:00:24.890 --> 00:00:27.920
-当我收到提问时
+当我调用问题时，
 When I get the ask question invoked,
 
 9
 00:00:27.920 --> 00:00:30.670
-如何计算此关键字应该指向的内容 ?
-how does it figure out what
-the this keyword should point at?
+它如何确定this关键字应该指向什么？
+how does it figure out what the this keyword should point at?
 
 10
 00:00:30.670 --> 00:00:34.920
-问题的答案是呼叫地点的问题。
-And the answer is because
-of the call site.
+答案是因为调用地点。
+And the answer is because of the call site.
 
 11
 00:00:34.920 --> 00:00:39.340
-由于调用站点，此关键字将结束指向对象
-Because of the call site, the this keyword
-is gonna end up pointing at the object
+由于调用位置的原因，this关键字最终将指向该对象
+Because of the call site, the this keyword is gonna end up pointing at the object
 
 12
 00:00:39.340 --> 00:00:43.685
-它用于调用它，在第 8 行的情况下，是车间对象。
-that is used to invoke it, which in this
-case on line 8 is the workshop object.
+用于调用它的，在本例中第8行是工作坊对象。
+that is used to invoke it, which in this case on line 8 is the workshop object.
 
 13
 00:00:43.685 --> 00:00:50.229
-workshop.ask 说，调用会指向研讨会中的此关键字。
-workshop.ask says invoke ask with
-the this keyword pointing at workshop.
+ask表示调用ask，并将this关键字指向工作坊。
+workshop.ask says invoke ask with the this keyword pointing at workshop.
 
 14
 00:00:51.240 --> 00:00:53.869
-这就是隐含约束规则的含义。
-That's what the implicit
-binding rule says.
+这就是隐式绑定规则所说的。
+That's what the implicit binding rule says.
 
 15
 00:00:53.869 --> 00:00:57.390
-顺便说下，这对你来说应该是直观的，因为这正是
-And by the way, that should be intuitive
-to you because that's exactly how
+顺便说一句，这对你来说应该是直观的，因为这就是
+And by the way, that should be intuitive to you because that's exactly how
 
 16
 00:00:57.390 --> 00:01:00.079
-此绑定以其他语言工作。
+this绑定可以在其他语言中工作。
 the this binding works in other languages.
 
 17
 00:01:00.079 --> 00:01:05.049
-所以这个特定规则是最常见最直观的
-So this particular rule is the most
-common and the most intuitive
+所以这个特殊的规则是最常见和最直观的
+So this particular rule is the most common and the most intuitive
 
 18
 00:01:05.049 --> 00:01:09.379
-因为它是根据你所谓的功能来决定的，我是说，
-because it decides the method based upon
-what function you call it from, I mean,
+因为它根据您从哪个函数调用它来决定方法，我的意思是，
+because it decides the method based upon what function you call it from, I mean,
 
 19
 00:01:09.379 --> 00:01:10.340
-你给它起了什么目的
+从哪个对象调用它。
 what object you call it from.
 
 20
 00:01:12.109 --> 00:01:14.823
-但这只是四种方式中的一种
+但这只是四种方法中的一种，而且
 But it's only one of the four ways, and
 
 21
 00:01:14.823 --> 00:01:18.121
-这才是额外困惑的地方
-that's where the extra
-confusion can come in.
+这就是额外的困惑可能出现的地方。
+that's where the extra confusion can come in.
 
 22
 00:01:22.590 --> 00:01:27.545
->> 键盘: 通过该方法，具有隐式绑定的想法很有用，因为
-&gt;&gt; Kyle: By the way, the idea of having
-implicit binding is useful because
+&gt；&gt；Kyle：顺便说一下，使用隐式绑定的想法很有用，因为
+&gt;&gt; Kyle: By the way, the idea of having implicit binding is useful because
 
 23
 00:01:27.545 --> 00:01:32.370
-这就是我们在不同情境中共享行为的方式。
-this is how we share behavior
-among different contexts.
+这就是我们如何在不同的上下文中共享行为。
+this is how we share behavior among different contexts.
 
 24
 00:01:32.370 --> 00:01:36.270
-在这里我只定义一个请求函数，但是
-Here I am defining just one ask function,
-but
+这里我只定义了一个Ask函数，但是
+Here I am defining just one ask function, but
 
 25
 00:01:36.270 --> 00:01:40.319
-我要在两个不同的对象之间分享这个问题的功能。
-I'm sharing the ask function
-across two different objects.
+我在两个不同的对象之间共享ask函数。
+I'm sharing the ask function across two different objects.
 
 26
 00:01:40.319 --> 00:01:41.150
-workshop1 和
+Workshop1和
 workshop1 and
 
 27
 00:01:41.150 --> 00:01:45.950
-workshop2，两个单独的对象，其中包含两个单独的数据。
-workshop2, two separate objects with
-two separate pieces of data in them.
+Workshop2，两个独立的对象，其中包含两个独立的数据片段。
+workshop2, two separate objects with two separate pieces of data in them.
 
 28
 00:01:45.950 --> 00:01:50.719
-但因为在第 7 行和第 12 行，我有对它的要求。
-But because on line 7 and line 12 I have
-a reference to the ask function on it.
+但因为在第7行和第12行，我在上面引用了ask函数。
+But because on line 7 and line 12 I have a reference to the ask function on it.
 
 29
 00:01:50.719 --> 00:01:55.359
-当我使用该引用来调用请求函数时，隐式
-When I use that reference to invoke
-the ask function, the implicit
+当我使用该引用调用ask函数时，隐式
+When I use that reference to invoke the ask function, the implicit
 
 30
 00:01:55.359 --> 00:02:00.959
-绑定规则会在每次不同的上下文中调用该函数。
-binding rule says invoke that one function
-in a different context each time.
+绑定规则说每次在不同的上下文中调用一个函数。
+binding rule says invoke that one function in a different context each time.
 
 31
 00:02:00.959 --> 00:02:03.743
-所以我们就没有两个要求的功能，就一个，
-So we don't have two ask functions there,
-just one, but
+所以我们没有两个Ask函数，只有一个，但是
+So we don't have two ask functions there, just one, but
 
 32
 00:02:03.743 --> 00:02:06.430
-它是在两种不同的环境中调用的
+它在两个不同的上下文中调用。
 it's invoked in two different contexts.
 
 33
 00:02:06.430 --> 00:02:09.320
-我可以做的不仅仅是 2 次，但我可以做 5 次，
-And I could do that not just 2 times,
-but I could do it 5 times,
+我可以做不止2次，但我可以做5次，
+And I could do that not just 2 times, but I could do it 5 times,
 
 34
 00:02:09.320 --> 00:02:11.349
-或 1000 次或 100 万次
+或者1000次，或者100万次。
 or 1,000 times, or 1 million times.
 
 35
 00:02:13.699 --> 00:02:16.194
-在许多不同上下文中使用了一个函数。
-One function used in lots
-of different contexts.
+在许多不同的上下文中使用的一个函数。
+One function used in lots of different contexts.
 
 36
 00:02:19.039 --> 00:02:23.635
->> 凯尔: 如果你思考我们如何描述词汇范围的概念，
-&gt;&gt; Kyle: If you think back to how we
-described the idea of lexical scope,
+&gt；&gt；Kyle：如果你回想一下我们是如何描述词汇范围的概念的，
+&gt;&gt; Kyle: If you think back to how we described the idea of lexical scope,
 
 37
 00:02:23.635 --> 00:02:28.909
-词法范围的概念是一个非常固定的，可预测的事情。
-the idea of lexical scope is a very fixed,
-predictable thing.
+词法范围的概念是一个非常固定的、可预测的东西。
+the idea of lexical scope is a very fixed, predictable thing.
 
 38
 00:02:28.909 --> 00:02:33.349
-它是在作者时间定义的，任何关于运行时都无法更改的内容。
-It's defined at author time, and nothing
-about the run time can ever change that.
+它是在作者时定义的，关于运行时的任何东西都不能改变这一点。
+It's defined at author time, and nothing about the run time can ever change that.
 
 39
 00:02:33.349 --> 00:02:35.310
-在这里我们有一些不固定的东西
-And here we have something
-which is not fixed and
+在这里，我们有一些不是固定的东西，
+And here we have something which is not fixed and
 
 40
 00:02:35.310 --> 00:02:40.900
-可预测，它完全是动态的，在运行时完全确定。
-predictable, it's entirely dynamic,
-it's entirely determined at run time.
+可预测，它完全是动态的，完全在运行时确定。
+predictable, it's entirely dynamic, it's entirely determined at run time.
 
 41
 00:02:40.900 --> 00:02:45.960
-这里的交易不是偶然的，这里的交易是很有预谋的，
-And the trade off here is not accidental,
-the trade off here is very intentional,
+这里的交易不是偶然的，这里的交易是非常有意的，
+And the trade off here is not accidental, the trade off here is very intentional,
 
 42
 00:02:45.960 --> 00:02:48.920
-我们真正得到的就是
-that what we really
-are getting is we're getting
+我们真正得到的是
+that what we really are getting is we're getting
 
 43
 00:02:48.920 --> 00:02:53.819
 可预测和灵活之间的选择。
-the choice between predictable and
-flexible.
+the choice between predictable and flexible.
 
 44
 00:02:55.090 --> 00:02:59.159
-在此，我从能够共享一个功能的灵活性中获益
-Here I benefit from the flexibility
-of being able to share one function
+在这里，我受益于能够共享一个功能的灵活性
+Here I benefit from the flexibility of being able to share one function
 
 45
 00:02:59.159 --> 00:03:00.669
-在不同的环境中
+跨越不同的背景。
 across different contexts.
 
 46
 00:03:00.669 --> 00:03:04.110
-但有时这种灵活性是负面的，
-But there are times when that
-flexibility is a downside and
+但有时这种灵活性是不利的
+But there are times when that flexibility is a downside and
 
 47
 00:03:04.110 --> 00:03:07.500
-我更希望能有可预测性
-what I would prefer is
-to have predictability.
+我更喜欢的是具有可预测性。
+what I would prefer is to have predictability.
 
 48
 00:03:07.500 --> 00:03:09.560
-不是那个是对的另一个是错的
-It's not that one is right and
-the other's wrong,
+不是说一个是对的另一个是错的，
+It's not that one is right and the other's wrong,
 
 49
 00:03:09.560 --> 00:03:13.219
-只是这些是不同的工具，有不同的好处。
-it's just that these are different
-tools and they have different benefits.
+只是这些是不同的工具，它们有不同的好处。
+it's just that these are different tools and they have different benefits.
 
 50
 00:03:13.219 --> 00:03:15.938
-在此，我们看到了此关键字的灵活性优势。
-Here we're seeing the flexibility
-benefit of the this keyword.
+在这里，我们看到了this关键字的灵活性优势。
+Here we're seeing the flexibility benefit of the this keyword.
 
 51
 00:03:21.569 --> 00:03:24.444
->> 凯尔: 还有一种调用函数的方法，
-&gt;&gt; Kyle: There's another
-way to invoke functions,
+&gt；&gt；Kyle：还有另一种调用函数的方法，
+&gt;&gt; Kyle: There's another way to invoke functions,
 
 52
 00:03:24.444 --> 00:03:28.373
-我们刚才看到这几张幻灯片的电话方法
-we saw this just a couple of slides ago,
-the .call method.
+我们在几张幻灯片前看到了这个.call方法。
+we saw this just a couple of slides ago, the .call method.
 
 53
 00:03:28.373 --> 00:03:32.090
-.call 方法和它的表弟 .dot apply 方法
-The .call method along with it's cousin,
-.dot apply method,
+call方法及其表亲.dot apply方法，
+The .call method along with it's cousin, .dot apply method,
 
 54
 00:03:32.090 --> 00:03:37.289
-它们都将此关键字作为其第一个参数。
-both of them take,
-as their first argument, a this keyword.
+它们都将this关键字作为第一个参数。
+both of them take, as their first argument, a this keyword.
 
 55
 00:03:37.289 --> 00:03:42.394
-所以在第 13 条，当我们说的时候，我们在 workshop1中通过，
-So on line 13, when we say .call and
-we pass in workshop1,
+所以在第13行，当我们说.call并传入Workshop1时，
+So on line 13, when we say .call and we pass in workshop1,
 
 56
 00:03:42.394 --> 00:03:48.498
-它是在此上下文中使用 workshop1 的上下文调用请求函数。
-it is saying invoke the ask function
-with the this context of workshop1.
+它是说调用带有workshop1的this上下文的ask函数。
+it is saying invoke the ask function with the this context of workshop1.
 
 57
 00:03:48.498 --> 00:03:52.459
-与前一张幻灯片很相似，我们仍在共享该功能，
-It's very similar to the previous slide,
-we are still sharing that function,
+它与上一张幻灯片非常相似，我们仍在共享该功能，
+It's very similar to the previous slide, we are still sharing that function,
 
 58
 00:03:52.459 --> 00:03:56.289
-但现在我们是明确而不是暗中进行的
-but now we're doing so
-explicitly rather than implicitly.
+但现在我们这样做是明确的，而不是隐含的。
+but now we're doing so explicitly rather than implicitly.
 
 59
 00:03:56.289 --> 00:03:59.300
-我们是说无论这个功能来自何方
-We're saying wherever
-this function comes from,
+我们的意思是无论这个函数是从哪里来的，
+We're saying wherever this function comes from,
 
 60
 00:03:59.300 --> 00:04:03.014
-请在我要指定的特定上下文中调用该内容。
-invoke it in a particular context
-which I'm going to specify.
+在我将要指定的特定上下文中调用它。
+invoke it in a particular context which I'm going to specify.
 
 61
 00:04:06.090 --> 00:04:07.717
->> 凯尔: 因此，我们可以使用 .call 和
+&gt；&gt；Kyle：所以我们可以使用.call和
 &gt;&gt; Kyle: So we can use .call and
 
 62
 00:04:07.717 --> 00:04:12.789
-. 适用于显式告知要在哪个上下文中调用该 JavaScript 。
-.apply to explicitly tell JavaScript
-which context to invoke it in.
+.application显式告诉JavaScript在哪个上下文中调用它。
+.apply to explicitly tell JavaScript which context to invoke it in.
 
 63
 00:04:15.099 --> 00:04:17.475
-现在我们要谈的是明确的约束力
-Now, we're gonna talk about
-a variation of explicit binding,
+现在，我们将讨论显式绑定的一种变体，
+Now, we're gonna talk about a variation of explicit binding,
 
 64
 00:04:17.475 --> 00:04:19.509
-这是我们所看到的第二条规则
-this is the second of the rules
-that we're looking at.
+这是我们正在研究的第二条规则。
+this is the second of the rules that we're looking at.
 
 65
 00:04:19.509 --> 00:04:24.487
-但这不是单独的规则而是一种子规则
-But this isn't a separate rule,
-but kind of a sub-rule or
+但这不是一个单独的规则，而是一种子规则或
+But this isn't a separate rule, but kind of a sub-rule or
 
 66
 00:04:24.487 --> 00:04:30.175
-此规则的子部分，这是极其常见的场景或
-a sub-part of this rule,
-which is an extremely common scenario or
+此规则的子部分，这是一个非常常见的场景或
+a sub-part of this rule, which is an extremely common scenario or
 
 67
 00:04:30.175 --> 00:04:34.759
-称为丢失此绑定的现象。
-phenomenon referred to as
-losing your this binding.
+现象称为丢失您的此绑定。
+phenomenon referred to as losing your this binding.
 
 68
 00:04:35.800 --> 00:04:39.120
-如果你曾经发挥过你所经历的功能
-If you've ever worked with
-a function that you pass around, and
+如果您曾经使用过传递的函数，并且
+If you've ever worked with a function that you pass around, and
 
 69
 00:04:39.120 --> 00:04:41.406
-突然之间就有了这种束缚
-all of a sudden,
-it used to have a this binding and
+突然之间，它曾经有一个这样的绑定
+all of a sudden, it used to have a this binding and
 
 70
 00:04:41.406 --> 00:04:44.069
-现在它没有这个装束你知道我在说什么
-now it doesn't have a this binding,
-you know what I'm talking about.
+现在它没有这个绑定，你知道我在说什么。
+now it doesn't have a this binding, you know what I'm talking about.
 
 71
 00:04:44.069 --> 00:04:49.500
-你觉得这个关键词是可以预测的
-It's very frustrating when you think of
-a this keyword as being predictable and
+当你认为this关键字是可预测的，这是非常令人沮丧的
+It's very frustrating when you think of a this keyword as being predictable and
 
 72
 00:04:49.500 --> 00:04:52.209
-然后你就会发现，实际上，它是不可预测的，它是灵活的。
-then you find out oops, actually,
-it's not predictable, it's flexible.
+然后你会发现，实际上，它是不可预测的，它是灵活的。
+then you find out oops, actually, it's not predictable, it's flexible.
 
 73
 00:04:53.610 --> 00:04:57.189
-因此，显式绑定的变体称为硬绑定。
-So variation of explicit
-binding is called hard binding.
+因此显式绑定的变体称为硬绑定。
+So variation of explicit binding is called hard binding.
 
 74
 00:04:58.509 --> 00:05:03.970
-查看第 8 行，如果我传入 workshop.ask ，该方法
-Looking at line 8,
-if I passed in workshop.ask, that method
+看一下第8行，如果我传入了workshop.ask，该方法
+Looking at line 8, if I passed in workshop.ask, that method
 
 75
 00:05:03.970 --> 00:05:09.470
-位于研讨会对象上，但第 8 行不是呼叫站点。
-is on the workshop object, but
-that line 8 is not the call site.
+在车间对象上，但第8行不是调用地点。
+is on the workshop object, but that line 8 is not the call site.
 
 76
 00:05:10.970 --> 00:05:14.757
-你要想象在你的脑中，呼叫站点是什么样的
-You have to imagine in your head,
-what would the call site look like for
+你必须在脑海中想象一下，呼叫地点会是什么样子
+You have to imagine in your head, what would the call site look like for
 
 77
 00:05:14.757 --> 00:05:18.298
-当计时器从现在开始运行 10 毫秒时的功能吗 ?
-the function whenever that timer
-ran ten milliseconds from now?
+从现在开始计时器运行十毫秒时的函数？
+the function whenever that timer ran ten milliseconds from now?
 
 78
 00:05:18.298 --> 00:05:24.250
-那个电话站点看起来像 cb[]，或者类似的东西。
-And that call site would look like cb[],
-or something like that.
+这个调用站点看起来像CB[]，或者类似的东西。
+And that call site would look like cb[], or something like that.
 
 79
 00:05:24.250 --> 00:05:29.220
-这不像是工作员的问题，因为它看起来不像这样，
-It's not going to look like workshop.ask,
-and because it doesn't look like that,
+它看起来不会像Workshop.ask，因为它看起来不像那样，
+It's not going to look like workshop.ask, and because it doesn't look like that,
 
 80
 00:05:29.220 --> 00:05:32.550
-它不会在工作坊的背景下进行询问
-it's not going to invoke
-ask in a workshop context.
+它不会在研讨会上下文中调用Ask。
+it's not going to invoke ask in a workshop context.
 
 81
 00:05:33.899 --> 00:05:37.903
-我们失去了这个束缚我们最终变得没有定义
-Which is we've lost our this binding,
-we end up getting undefined.
+这就是我们失去了我们的这个绑定，我们最终变得不确定。
+Which is we've lost our this binding, we end up getting undefined.
 
 82
 00:05:37.903 --> 00:05:43.266
-实际上，作为侧面说明，技术上来说，设置超时实用程序
-Actually just as side note,
-technically, the set timeout utility
+实际上就像附注一样，从技术上讲，设置超时实用程序
+Actually just as side note, technically, the set timeout utility
 
 83
 00:05:43.266 --> 00:05:48.721
-是由 HTML 定义的，它不是用缺省的调用来调用的，
-is defined by HTML, it's not evoking
-it just with the default call,
+是由HTML定义的，它不仅仅是通过默认调用来唤起它，
+is defined by HTML, it's not evoking it just with the default call,
 
 84
 00:05:48.721 --> 00:05:54.569
-它在全局的上下文中使用 .call 显式地调用它。
-it actually explicitly invokes it with
-a .call in the context of global.
+它实际上在global上下文中使用.call显式调用它。
+it actually explicitly invokes it with a .call in the context of global.
 
 85
 00:05:55.670 --> 00:06:03.990
-所以它实际上是通过 cb.call 窗口来调用 workshop.ask 。
-So it would actually invoke workshop.ask
-by saying cb.call window, essentially.
+因此它实际上会通过说cb.call window来调用workshop.ask。
+So it would actually invoke workshop.ask by saying cb.call window, essentially.
 
 86
 00:06:03.990 --> 00:06:07.610
-在全局对象上下文中调用它，是吗 ?
-Invoking it in the global object context,
-yes?
+在全局对象上下文中调用它，对吗？
+Invoking it in the global object context, yes?
 
 87
 00:06:08.980 --> 00:06:13.468
->> 演讲者 2: 如果要求我们找到一个箭头函数，那么这是不必要的吗 ?
-&gt;&gt; Speaker 2: Would this be unnecessary
-if ask were to find us an arrow function?
+&gt；&gt；Speaker 2：如果Ask为我们找到一个箭头函数，这是不是没有必要？
+&gt;&gt; Speaker 2: Would this be unnecessary if ask were to find us an arrow function?
 
 88
 00:06:15.500 --> 00:06:18.329
->> 凯尔: 作为箭头函数不能解决问题，但是
-&gt;&gt; Kyle: Ask here as an arrow function
-would not solve the problem, but
+&gt；&gt；Kyle：在这里询问，因为箭头函数不能解决问题，但是
+&gt;&gt; Kyle: Ask here as an arrow function would not solve the problem, but
 
 89
 00:06:18.329 --> 00:06:22.149
-我们会在一分钟内讨论到箭的功能所以我们会回来的
-we are gonna talk about arrow functions in
-just a moment, so we'll come back that.
+我们一会儿就会讨论箭头函数，我们会回来的。
+we are gonna talk about arrow functions in just a moment, so we'll come back that.
 
 90
 00:06:24.519 --> 00:06:26.434
-所以第 8 行我们失去了这个束缚
-So line 8,
-we're losing our this binding and
+所以第8行，我们失去了这个绑定
+So line 8, we're losing our this binding and
 
 91
 00:06:26.434 --> 00:06:29.980
-在这种情况下，它会反弹到其他的东西，在这种情况下是全球性的。
-it's actually getting rebound to something
-else, in this case the global object.
+它实际上正在反弹到其他东西，在本例中是全局对象。
+it's actually getting rebound to something else, in this case the global object.
 
 92
 00:06:29.980 --> 00:06:30.970
-这不是我们想要的
+这不是我们想要的。
 That's not what we want.
 
 93
 00:06:30.970 --> 00:06:38.279
-因此，一个非常常见的解决方案是第 11 行，传递一个硬约束函数。
-So a very common solution to this is
-line 11, passing a hard bound function.
+因此，一个非常常见的解决方案是第11行，它传递一个硬绑定函数。
+So a very common solution to this is line 11, passing a hard bound function.
 
 94
 00:06:38.279 --> 00:06:42.432
-如果我们使用 .bind 方法在硬绑定函数中传递，
-If we pass in a hard bound
-function using the .bind method,
+如果我们使用.bind方法传入硬绑定函数，
+If we pass in a hard bound function using the .bind method,
 
 95
 00:06:42.432 --> 00:06:45.920
-它会把整个柔性的东西拿走
-it will take away that
-whole flexibility thing and
+它会夺走整个灵活性
+it will take away that whole flexibility thing and
 
 96
 00:06:45.920 --> 00:06:50.423
-迫使它仅使用我们在第 11 行上指定的值。
-force it to only use the this
-that we've specified on line 11.
+强制它只使用我们在第11行指定的this。
+force it to only use the this that we've specified on line 11.
 
 97
 00:06:50.423 --> 00:06:53.961
-它说唤起这个功能不管你如何调用它
-It says evoke this function, and
-no matter how you invoke it,
+它说唤起这个函数，无论你如何调用它，
+It says evoke this function, and no matter how you invoke it,
 
 98
 00:06:53.961 --> 00:06:56.689
-总是用工作室的方式来做这方面的工作
+始终使用研讨会，因为它是这样的上下文。
 always use workshop as it's this context.
 
 99
 00:06:56.689 --> 00:07:01.819
-换句话说，对于 .bind 方法，它不调用函数，
-In other words the .bind method,
-it doesn't invoke the function,
+换句话说，.bind方法，它不调用函数，
+In other words the .bind method, it doesn't invoke the function,
 
 100
 00:07:01.819 --> 00:07:07.663
-它产生一个新函数，它与特定特定此上下文绑定。
-it produces a new function which is bound
-to a particular specific this context.
+它产生一个新函数，该函数绑定到特定的this上下文。
+it produces a new function which is bound to a particular specific this context.
 
 101
 00:07:08.939 --> 00:07:10.288
-所以你就在这里做个交易对吧
+所以你在这里看到了一个取舍，对吗？
 So you see a trade-off here, right?
 
 102
 00:07:11.300 --> 00:07:16.082
-您可以看到可预测的，灵活的绑定，但是您会看到一些
-You see the predictable, flexible
-this binding, but then you see some
+你看到的是可预测的，灵活的这种绑定，但随后你会看到一些
+You see the predictable, flexible this binding, but then you see some
 
 103
 00:07:16.082 --> 00:07:21.038
-在这些场景中， [ SOUND] 令人沮丧的是它是灵活的。
-scenarios where, [SOUND] it's kind
-of frustrating that it's flexible.
+在这样的情况下，(听起来)它的灵活性有点令人沮丧。
+scenarios where, [SOUND] it's kind of frustrating that it's flexible.
 
 104
 00:07:21.038 --> 00:07:23.540
-我想说的是超级可预测的
-And what I'd really like is for
-it to be super predictable.
+我真正想要的是它是超级可预测的。
+And what I'd really like is for it to be super predictable.
 
 105
 00:07:25.110 --> 00:07:26.399
-这里有张力
+这里有紧张气氛。
 There's a tension here.
 
 106
 00:07:26.399 --> 00:07:29.459
-不是说一个是对的，另一个是错的。
-It's not to say that one is right and
-the other is wrong.
+这并不是说一个是对的，另一个是错的。
+It's not to say that one is right and the other is wrong.
 
 107
 00:07:29.459 --> 00:07:34.297
-但如果你想在一些问题上做些什么
-But if you were to go to all the trouble
-to define a bunch of functions on some
+但如果你不厌其烦地定义一些函数
+But if you were to go to all the trouble to define a bunch of functions on some
 
 108
 00:07:34.297 --> 00:07:35.858
-名称空间对象，以及
+命名空间对象，以及
 namespace object, and
 
 109
 00:07:35.858 --> 00:07:40.870
-在每个属性引用和每个方法访问的前面都有这个点。
-have this dot in front of every property
-reference and every method access.
+将这个点放在每个属性引用和每个方法访问的前面。
+have this dot in front of every property reference and every method access.
 
 110
 00:07:41.899 --> 00:07:46.840
-然后您的所有功能调用都使用 .bind，
-And then all of your function
-calls use the .bind,
+然后所有的函数调用都使用.bind，
+And then all of your function calls use the .bind,
 
 111
 00:07:46.840 --> 00:07:49.269
-你就会跪下来
-you would be cutting
-yourself off at the knees.
+你会割断自己的膝盖。
+you would be cutting yourself off at the knees.
 
 112
 00:07:49.269 --> 00:07:54.098
-因为这个制度的整个目的，你交税后的全部原因，
-Because the whole purpose of this system,
-the whole reason that you pay the tax of
+因为这个系统的整个目的，你纳税的整个原因
+Because the whole purpose of this system, the whole reason that you pay the tax of
 
 113
 00:07:54.098 --> 00:07:58.019
-把这个点放在所有东西的前面就能得到炸药
-putting this dot in front of
-everything is to get the dynamicism.
+把这个点放在所有东西的前面就是为了获得动态性。
+putting this dot in front of everything is to get the dynamicism.
 
 114
 00:07:58.019 --> 00:08:00.721
-然后你要把整个动力系统和
-And then you're going and
-taking that whole dynamic system and
+然后你会把整个动力系统
+And then you're going and taking that whole dynamic system and
 
 115
 00:08:00.721 --> 00:08:03.129
-把它锁下来让它完全可以预测
-locking it down so
-that it's completely predictable.
+锁定它所以它是完全可预测的。
+locking it down so that it's completely predictable.
 
 116
 00:08:05.329 --> 00:08:09.579
-在那个时候你最好只是写个模块
-At that point, wouldn't you be better
-served simply writing a module
+在这一点上，编写一个模块不是更好吗
+At that point, wouldn't you be better served simply writing a module
 
 117
 00:08:09.579 --> 00:08:13.430
-利用封闭和固定可预测的行为
-that uses closure and has a fixed,
-predictable behavior?
+使用闭包并且有固定的，可预测的行为？
+that uses closure and has a fixed, predictable behavior?
 
 118
 00:08:15.319 --> 00:08:17.250
-那么我们如何应对这种紧张局势 ?
+那么我们如何处理这种紧张关系呢？
 So how do we deal with this tension?
 
 119
 00:08:17.250 --> 00:08:19.689
-我们喜欢用这个关键词对我们有用，但是
-We like using the this keyword,
-it can be useful to us, but
+我们喜欢使用this关键字，它可能对我们很有用，但是
+We like using the this keyword, it can be useful to us, but
 
 120
 00:08:19.689 --> 00:08:23.509
-有时我们需要它不要那么灵活
-there are times when we need
-it to not be so flexible.
+有时我们需要它不那么灵活。
+there are times when we need it to not be so flexible.
 
 121
 00:08:25.019 --> 00:08:27.120
-我不能让你紧张
+我不能为你解决这种紧张，但是
 I can't solve that tension for you, but
 
 122
 00:08:27.120 --> 00:08:29.399
 我可以给你一种我使用的启发式。
-I can just give you a sort
-of heuristic that I use.
+I can just give you a sort of heuristic that I use.
 
 123
 00:08:30.430 --> 00:08:34.330
-如果我去麻烦写这个代码的集合
-If I go to the trouble to write
-a this aware set of code, and
+如果我不厌其烦地编写一组可感知的代码，并且
+If I go to the trouble to write a this aware set of code, and
 
 124
 00:08:34.330 --> 00:08:39.509
-那么我的大部分核心位置都是用灵活的动力，
-then most of my core sites
-are using the flexible dynamism,
+然后我的大部分核心站点都在使用灵活的动态机制，
+then most of my core sites are using the flexible dynamism,
 
 125
 00:08:39.509 --> 00:08:43.389
-每一次我都得做一些很有约束力的事情
-and every once in a while I have to
-do something like a hard binding.
+每隔一段时间我就得做一些像硬装订一样的事情。
+and every once in a while I have to do something like a hard binding.
 
 126
 00:08:43.389 --> 00:08:45.809
-然后我从那个系统里得到很多好处
-Then I'm getting a lot of
-benefits out of that system,
+然后我从这个系统中得到了很多好处，
+Then I'm getting a lot of benefits out of that system,
 
 127
 00:08:45.809 --> 00:08:48.230
-似乎是合理的交易
+似乎是一个合理的取舍。
 seems like a reasonable trade-off.
 
 128
 00:08:48.230 --> 00:08:51.919
-另一方面，如果我去找所有麻烦去写这个感知系统
-On the other hand, if I go to all the
-trouble to write a this aware system and
+另一方面，如果我不厌其烦地写出一个有意识的系统
+On the other hand, if I go to all the trouble to write a this aware system and
 
 129
 00:08:51.919 --> 00:08:57.559
-那么每个人或者我的大部分的电话网站都要不要绑定，这就是我的一条线索。
-then everyone or most of my calls sites
-have to use not bind, that's a clue to me.
+然后每个人或者我的大部分呼叫站点都必须使用not bind，这对我来说是一条线索。
+then everyone or most of my calls sites have to use not bind, that's a clue to me.
 
 130
 00:08:57.559 --> 00:08:59.299
-我要硬了
+我在用艰难的方式做这件事。
 I'm doing this the hard way.
 
 131
 00:08:59.299 --> 00:09:03.460
-我应该回去用可预测的辞汇
-I should switch back and
-use the predictable lexical closure.
+我应该切换回并使用可预测的词法闭合。
+I should switch back and use the predictable lexical closure.
 
 132
 00:09:03.460 --> 00:09:08.129
-换句话说，有更好的工具使用，有更好的方法使用工具。
-In other words, there's a better tool use,
-there's a better way to use the tool.
+换句话说，有更好的工具使用，有更好的方法来使用工具。
+In other words, there's a better tool use, there's a better way to use the tool.
 
 133
 00:09:09.309 --> 00:09:10.980
-用它擅长的东西
+用它擅长的东西。
 Use what it's good at.
 
 134
 00:09:10.980 --> 00:09:15.335
-如果我们想要灵活的活力，请使用这个关键词，如果我们想要的是可预测性，
-If we want flexible dynamism, use a this
-keyword, if we want predictability,
+如果我们想要灵活的动态性，使用this关键字，如果我们想要可预测性，
+If we want flexible dynamism, use a this keyword, if we want predictability,
 
 135
 00:09:15.335 --> 00:09:17.288
-使用关闭，使用词法作用域。
+使用闭包，使用词法范围。
 use closures, use lexical scope.
 
 136
 00:09:20.960 --> 00:09:24.210
->> 凯尔: 因此，在使用 .bind 方法时，请记住这一点。
-&gt;&gt; Kyle: So just keep that in mind
-when you're using the .bind method.
+&gt；&gt；Kyle：所以在使用.bind方法时要记住这一点。
+&gt;&gt; Kyle: So just keep that in mind when you're using the .bind method.
 
 137
 00:09:24.210 --> 00:09:27.980
-不是说不好，不是邪恶，不是反模式。
-Not that it is bad, not that it is evil,
-not that it is an anti-pattern.
+不是说它是坏的，不是说它是邪恶的，也不是说它是一种反模式。
+Not that it is bad, not that it is evil, not that it is an anti-pattern.
 
 138
 00:09:27.980 --> 00:09:30.759
 但如果你发现这种情况经常发生
-But if you find that happening
-more often than not,
+But if you find that happening more often than not,
 
 139
 00:09:30.759 --> 00:09:32.480
-你可能是在做苦事
+你可能在用艰难的方式做事情。
 you're probably doing things the hard way.

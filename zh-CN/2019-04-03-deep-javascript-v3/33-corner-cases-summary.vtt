@@ -2,38 +2,33 @@ WEBVTT
 
 1
 00:00:00.220 --> 00:00:01.129
->> 凯尔 - 辛普森:
+&gt；&gt；Kyle Simpson：外卖，或
 &gt;&gt; Kyle Simpson: A takeaway, or
 
 2
 00:00:01.129 --> 00:00:06.870
-一种概括的方法，如何避免双等号的角落个案。
-a way to summarize, how to avoid these
-corner cases with the double equals.
+一种总结的方法，如何避免这些角落的情况与双重相等。
+a way to summarize, how to avoid these corner cases with the double equals.
 
 3
 00:00:06.870 --> 00:00:09.589
-这些是我认为你可以使用的一套准则。
-These are a set of guidelines
-that I think you can use.
+这些是我认为你可以使用的一套指导原则。
+These are a set of guidelines that I think you can use.
 
 4
 00:00:09.589 --> 00:00:12.699
-您可以使用双等号，但在这些特定方案中避免使用。
-You can use double equals, but
-avoid it in these particular scenarios.
+您可以使用Double Equals，但在这些特定情况下应避免使用。
+You can use double equals, but avoid it in these particular scenarios.
 
 5
 00:00:12.699 --> 00:00:16.940
-第一，当它们的任一侧可以是 0时，避免双等号，或者
-Number one, avoid the double equals
-when either side of them can be a 0, or
+第一，当两边都可以是0时，避免使用双等号，或者
+Number one, avoid the double equals when either side of them can be a 0, or
 
 6
 00:00:16.940 --> 00:00:21.140
-空字符串，甚至是其中只有空格的字符串。
-an empty string, or even one of those
-strings with only whitespace in it.
+空字符串，甚至是其中只有空格的字符串之一。
+an empty string, or even one of those strings with only whitespace in it.
 
 7
 00:00:21.140 --> 00:00:23.469
@@ -42,160 +37,140 @@ Don't use double equals in those cases.
 
 8
 00:00:25.030 --> 00:00:27.940
-你可能被咬了很多角的地方
-There's just a lot of corner cases
-that you might get bitten by.
+只是有很多角落的情况，你可能会被咬。
+There's just a lot of corner cases that you might get bitten by.
 
 9
 00:00:29.940 --> 00:00:31.530
-有些人说很好我不能
+有些人说，我不能，不。
 Some people say well, I can't, no.
 
 10
 00:00:32.689 --> 00:00:36.880
-好吧但你还是要重组你的代码好吗
-Okay, but is there anyway for
-you to restructure your codes so you can?
+好的，但是你有没有重构你的代码，这样你就可以了？
+Okay, but is there anyway for you to restructure your codes so you can?
 
 11
 00:00:36.880 --> 00:00:37.740
-我觉得这样好多了
+因为我觉得这样更好。
 Cuz I think that's better.
 
 12
 00:00:37.740 --> 00:00:41.200
-这至少是个更好的代码不管你喜欢不喜欢
-It's at least a better code, regardless
-of whether you like double equal or not.
+它至少是一个更好的代码，不管您是否喜欢double equals。
+It's at least a better code, regardless of whether you like double equal or not.
 
 13
 00:00:42.520 --> 00:00:44.149
-但让我们说你不能
+但是假设你不能。
 But let's say you can't.
 
 14
 00:00:44.149 --> 00:00:46.493
-那么另一个你应该问的
-Well, then another check
-that you should ask or
+嗯，那么另一张支票，你应该问或者
+Well, then another check that you should ask or
 
 15
 00:00:46.493 --> 00:00:51.231
-避免双重等号 >> 凯尔 - 辛普森: 不要用它
-to avoid the double equals,
-&gt;&gt; Kyle Simpson: Don't use it with
+为了避免双重相等，&gt；&gt；Kyle Simpson：不要将它与
+to avoid the double equals, &gt;&gt; Kyle Simpson: Don't use it with
 
 16
 00:00:51.231 --> 00:00:52.600
-非原语。
+非基本体。
 non-primitives.
 
 17
 00:00:52.600 --> 00:00:56.740
-我甚至不把它和他们的身份对比
-I don't even use it with
-the identity comparison on them,
+我甚至不会用它来比对他们的身份，
+I don't even use it with the identity comparison on them,
 
 18
 00:00:56.740 --> 00:00:58.259
-虽然我知道这很有用
+尽管我知道这很管用。
 even though I know it works.
 
 19
 00:00:58.259 --> 00:01:01.530
-但是要超级安全，我根本就不使用它。
-But just to be super safe,
-I don't use it with primitives at all.
+但为了超级安全起见，我根本不对原语使用它。
+But just to be super safe, I don't use it with primitives at all.
 
 20
 00:01:01.530 --> 00:01:05.519
-所以如果我真的要检查的是这个阵列
-So if I was really trying to check is
-this reference to the array the same as
+因此，如果我真的试图检查对数组的引用是否与
+So if I was really trying to check is this reference to the array the same as
 
 21
 00:01:05.519 --> 00:01:07.700
-这个对数组的引用，我不会使用双等号。
-this reference to the array,
-I'm not gonna use the double equals.
+对数组的引用，我不会使用双等号。
+this reference to the array, I'm not gonna use the double equals.
 
 22
 00:01:07.700 --> 00:01:10.239
-虽然它会在那个特定的中心工作
-Even though it would work in
-that one specific center,
+即使它会在一个特定的中心起作用，
+Even though it would work in that one specific center,
 
 23
 00:01:10.239 --> 00:01:12.359
-它离边缘足够近它不值得
-it's close enough to the edge
-that it's not worth it.
+它离边缘太近了，不值得。
+it's close enough to the edge that it's not worth it.
 
 24
 00:01:12.359 --> 00:01:16.890
-那是我的外卖还是我的选择好吗
-That's my takeaway, or
-my preference, okay?
+这是我的外卖，或者我的偏好，好吗？
+That's my takeaway, or my preference, okay?
 
 25
 00:01:16.890 --> 00:01:19.909
-所以在非原语使用时不要使用双等号，仅将其用于
-So don't use the double equals when
-they're non-primitives, only use it for
+因此，当它们是非原语时，不要使用double equals，只用于
+So don't use the double equals when they're non-primitives, only use it for
 
 26
 00:01:19.909 --> 00:01:21.329
-在原语之间进行强制。
+原始人之间的强制。
 coercion among the primitives.
 
 27
 00:01:23.539 --> 00:01:27.780
-并且绝对不使用双等于 true 或 double 等于 false。
-And definitely don't use double equals
-to true or double equals to false.
+而且绝对不要使用double等于true或double等于false。
+And definitely don't use double equals to true or double equals to false.
 
 28
 00:01:27.780 --> 00:01:30.243
-从本质上来说，只要允许 ToBoolean 发生，
-Essentially, just allow
-the ToBoolean to happen,
+本质上，只是允许ToBoolean发生，
+Essentially, just allow the ToBoolean to happen,
 
 29
 00:01:30.243 --> 00:01:31.980
-无论如何都是最好的结果
+无论如何，这是更好的结果。
 which is the better outcome anyway.
 
 30
 00:01:31.980 --> 00:01:37.039
-或者如果你真的不允许的话如果真的是真的
-Or if you really can't allow that,
-if it really has to exactly true or
+或者如果你真的不能允许，如果它真的必须是真的或者
+Or if you really can't allow that, if it really has to exactly true or
 
 31
 00:01:37.039 --> 00:01:42.039
-完全是错误的，有时会这样，然后使用三重等号。
-exactly false, which sometimes it does,
-then use triple equals.
+完全错误，有时确实如此，然后使用三重等于。
+exactly false, which sometimes it does, then use triple equals.
 
 32
 00:01:42.039 --> 00:01:44.400
-这是一个相对较短的列表。
+这是一个相对较短的名单。
 This is a relatively short list.
 
 33
 00:01:44.400 --> 00:01:47.469
-我就会让那些关心这个问题的人
-And I would make the case that any
-developer that cared to learn about
+并且我会提出这样的情况，任何关心学习的开发人员
+And I would make the case that any developer that cared to learn about
 
 34
 00:01:47.469 --> 00:01:50.979
-这些系统可以了解这一清单并有效地做到这一点，
-these systems could learn this list and
-effectively do so,
+这些系统可以学习这个列表并有效地这样做，
+these systems could learn this list and effectively do so,
 
 35
 00:01:50.979 --> 00:01:53.740
-在他们的代码中有效的沟通他们避免了这些问题
-effectively communicate in their code
-that they're avoiding these problems.
+在他们的代码中有效地传达他们正在避免这些问题。
+effectively communicate in their code that they're avoiding these problems.

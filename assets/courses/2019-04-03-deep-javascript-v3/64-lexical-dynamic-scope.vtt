@@ -2,255 +2,220 @@ WEBVTT
 
 1
 00:00:00.360 --> 00:00:02.979
->> 凯尔: 词法范围，这就是我们一直说的，
-&gt;&gt; Kyle: Lexical scope,
-that's what we've been talking about,
+&gt；&gt；Kyle：词法范围，这就是我们一直在讨论的，
+&gt;&gt; Kyle: Lexical scope, that's what we've been talking about,
 
 2
 00:00:02.979 --> 00:00:05.370
-我们现在就给它正式名字
+我们现在要给它起个正式的名字。
 we're gonna give it that formal name now.
 
 3
 00:00:05.370 --> 00:00:09.839
-这就是它的意思，这个作用域的概念嵌套在彼此之间。
-That is what it is referred to, this idea
-of scopes being nested within each other.
+这就是它所指的，作用域相互嵌套的想法。
+That is what it is referred to, this idea of scopes being nested within each other.
 
 4
 00:00:09.839 --> 00:00:14.717
-更确切地说，一个编译器，一个解析器，一个处理器，
-And specifically the idea that a compiler,
-a parser, a processor is figuring out all
+具体地说，编译器、解析器、处理器正在解决所有问题
+And specifically the idea that a compiler, a parser, a processor is figuring out all
 
 5
 00:00:14.717 --> 00:00:17.632
-在执行前的时间范围之前
-those scopes ahead of time
-before being executed,
+这些作用域在被执行之前提前，
+those scopes ahead of time before being executed,
 
 6
 00:00:17.632 --> 00:00:20.768
-这就是词汇作用域的概念。
-that's what we mean by
-the concept of lexical scopes.
+这就是我们所说的词汇范围的概念。
+that's what we mean by the concept of lexical scopes.
 
 7
 00:00:20.768 --> 00:00:23.998
-这就是名字的来源
+这就是那个名字的来历
 That's where that name even comes from,
 
 8
 00:00:23.998 --> 00:00:29.480
-该 lex 与第一个解析阶段相同，即 lexa。
-that lex shares the same root as
-the first stage of parsing, the lexa.
+lex与解析的第一阶段lexa共享相同的根。
+that lex shares the same root as the first stage of parsing, the lexa.
 
 9
 00:00:29.480 --> 00:00:34.957
-所以想想词法范围，当你听到这个词的时候，想想这个词的相关
-So think of lexical scope, when you
-hear that term, think of that as related
+所以想想词汇范围，当你听到这个术语时，就认为它是相关的
+So think of lexical scope, when you hear that term, think of that as related
 
 10
 00:00:34.957 --> 00:00:40.109
-与作者时间决定相关的编译器。
-to the compiler, related to,
-in essence, the author time decision.
+对编译器来说，本质上与作者的时间决定有关。
+to the compiler, related to, in essence, the author time decision.
 
 11
 00:00:40.109 --> 00:00:44.465
-或者我在作者时间做出的决定把这个功能放进去
-Or it's the decision I made at author time
-to put this function inside of this one
+或者是我在作者时代做出的将这个函数放在这个函数中的决定
+Or it's the decision I made at author time to put this function inside of this one
 
 12
 00:00:44.465 --> 00:00:48.240
-这个变量会最终成为这个大理石颜色
-and have this variable that's gonna
-end up being this marble color.
+这个变量最终会变成大理石颜色。
+and have this variable that's gonna end up being this marble color.
 
 13
 00:00:48.240 --> 00:00:51.030
-这是在编译时决定的
+它是在编译时决定的。
 It's decided at compile time.
 
 14
 00:00:51.030 --> 00:00:54.991
-不是在运行时间决定的，也不受任何形式的影响，形状，
-It's not decided at run time,
-it is not affected in any way, shape, or
+它不是在运行时决定的，它不会以任何方式、形状或
+It's not decided at run time, it is not affected in any way, shape, or
 
 15
 00:00:54.991 --> 00:00:57.048
-程序中发生的情况。
+根据程序中发生的情况形成。
 form by what happens in the program.
 
 16
 00:00:58.770 --> 00:01:02.850
->> 凯尔: 这是第一个，我绝对会说最主要的，
-&gt;&gt; Kyle: That is the first, and I would
-argue definitely the most predominant,
+&gt；&gt；Kyle：这是第一个，我认为绝对是最主要的，
+&gt;&gt; Kyle: That is the first, and I would argue definitely the most predominant,
 
 17
 00:01:02.850 --> 00:01:05.969
-用于对编程语言进行作用域限定的模型。
-model for
-scoping among programming languages.
+编程语言之间作用域的模型。
+model for scoping among programming languages.
 
 18
 00:01:05.969 --> 00:01:09.920
-实际上，绝大多数的编程语言都存在，而且
-In fact, the vast majority of all
-programming languages in existence, and
+事实上，绝大多数现有的编程语言，以及
+In fact, the vast majority of all programming languages in existence, and
 
 19
 00:01:09.920 --> 00:01:13.539
-几乎肯定所有你曾经使用过的编程语言
-almost certainly all programming
-languages that you've ever worked with,
+几乎可以肯定你曾经使用过的所有编程语言，
+almost certainly all programming languages that you've ever worked with,
 
 20
 00:01:13.539 --> 00:01:15.289
-都是词法限定的
+实际上是词汇范围的。
 are in fact lexically scoped.
 
 21
 00:01:15.289 --> 00:01:18.859
-有时，当人们说 JavaScript 没有词法作用域时，会对我进行错误
-Bugs me sometimes when people say
-JavaScript isn't lexically scoped
+当人们说JavaScript不是词汇范围时，有时会让我感到恼火
+Bugs me sometimes when people say JavaScript isn't lexically scoped
 
 22
 00:01:18.859 --> 00:01:22.329
-因为一些 JavaScript 行为的细微差别
-because of some of the nuances
-of JavaScript's behavior.
+因为JavaScript行为的一些细微差别。
+because of some of the nuances of JavaScript's behavior.
 
 23
 00:01:22.329 --> 00:01:27.180
-绝对绝对有 100% 的词法范围。
-It is absolutely, definitely,
-100% lexically scoped.
+它是绝对的，100%的词汇范围。
+It is absolutely, definitely, 100% lexically scoped.
 
 24
 00:01:27.180 --> 00:01:28.579
-这是毫无疑问的。
+毫无疑问。
 There's no question about it.
 
 25
 00:01:29.689 --> 00:01:32.810
-但是，还有另一个范围界定的模式。
-There is, however,
-another model for scoping.
+然而，还有另一种作用域模型。
+There is, however, another model for scoping.
 
 26
 00:01:32.810 --> 00:01:36.909
-一点都不普通，你一般只看到这个
-It is not very common at all,
-you generally only see this in
+这是不是很常见，你通常只看到这一点
+It is not very common at all, you generally only see this in
 
 27
 00:01:36.909 --> 00:01:40.469
-几种古老的学术语言也许有不同的模式
-a few old academic languages and
-maybe some different modes.
+一些古老的学术语言，也许还有一些不同的模式。
+a few old academic languages and maybe some different modes.
 
 28
 00:01:40.469 --> 00:01:45.770
-可能是动态范围限定模型的最主要示例
-Probably the most predominant
-example of the dynamic scoping model
+可能是动态作用域模型最主要的示例
+Probably the most predominant example of the dynamic scoping model
 
 29
 00:01:45.770 --> 00:01:47.229
-实际上是 Bash 脚本
+实际上是Bash脚本。
 is actually Bash script.
 
 30
 00:01:47.229 --> 00:01:50.189
-如果你在巴什做了大量的脚本
-If you've done any significant
-amount of scripting in Bash,
+如果您在Bash中做过大量的脚本编写工作，
+If you've done any significant amount of scripting in Bash,
 
 31
 00:01:50.189 --> 00:01:53.590
-它的作用域是动态的，而不是词法限定的。
-it is actually dynamically scoped
-rather than lexical scoped.
+它实际上是动态作用域，而不是词法作用域。
+it is actually dynamically scoped rather than lexical scoped.
 
 32
 00:01:53.590 --> 00:01:58.219
-这也符合我们早先的直觉 Bash 脚本是
-And that fits a bit with our
-intuition earlier that Bash script is
+这与我们之前的直觉有点吻合，即Bash脚本是
+And that fits a bit with our intuition earlier that Bash script is
 
 33
 00:01:58.219 --> 00:02:01.950
-其中一种被解释的语言不是被编译的语言之一
-one of those interpreted languages,
-it's not one of those compiled languages.
+这些解释语言中的一种，它不是那些编译语言中的一种。
+one of those interpreted languages, it's not one of those compiled languages.
 
 34
 00:02:01.950 --> 00:02:06.709
-所以它有点道理说没有编译时间
-So it sort of makes sense that
-it doesn't have a compile time
+所以它没有编译时间是有意义的
+So it sort of makes sense that it doesn't have a compile time
 
 35
 00:02:06.709 --> 00:02:10.628
-未编译的作用域限定模型，好吗 ?
-scoping model since it's not compiled,
-okay?
+作用域模型，因为它没有编译，好吗？
+scoping model since it's not compiled, okay?
 
 36
 00:02:10.628 --> 00:02:13.430
-我们的直觉是有一个匹配的。
+所以我们的直觉是吻合的。
 So there's a match in our intuition there.
 
 37
 00:02:13.430 --> 00:02:17.503
-所以让我们确定一个强有力的定义
-So let's make sure we put
-a strong definition, or
+所以让我们确保我们有一个强有力的定义，或者
+So let's make sure we put a strong definition, or
 
 38
 00:02:17.503 --> 00:02:20.899
-这个词法范围有一个强烈的想法。
+围绕这个词汇范围有一个很强的想法。
 a strong idea around this lexical scope.
 
 39
 00:02:20.899 --> 00:02:24.406
-我们的直觉是当我们想到词法范围时
-The intuition in our head is that
-when we think about lexical scope,
+我们头脑中的直觉是，当我们考虑词汇范围时，
+The intuition in our head is that when we think about lexical scope,
 
 40
 00:02:24.406 --> 00:02:27.298
-想想在作者时间和时间上
-we think about something that
-is fixed at author time and
+我们思考一些在作者时间固定的东西
+we think about something that is fixed at author time and
 
 41
 00:02:27.298 --> 00:02:31.189
-它是可预测的，它不受运行时条件的影响。
-it's predictable,
-it is not affected by run time conditions.
+它是可预测的，不受运行时条件的影响。
+it's predictable, it is not affected by run time conditions.
 
 42
 00:02:31.189 --> 00:02:35.063
-名称动态范围是相反的，对吗 ?
-The name dynamic scope
-implies the opposite, right?
+动态范围这个名称意味着相反的意思，对吗？
+The name dynamic scope implies the opposite, right?
 
 43
 00:02:35.063 --> 00:02:39.628
-它意味着运行时间条件，程序的动态条件，
-It implies that the run time conditions,
-the dynamic conditions of your program,
+它意味着运行时条件，程序的动态条件，
+It implies that the run time conditions, the dynamic conditions of your program,
 
 44
 00:02:39.628 --> 00:02:42.379
-会影响到范围界定的事情
-are going to affect
-something about the scoping.
+将影响范围的某些方面。
+are going to affect something about the scoping.

@@ -2,265 +2,230 @@ WEBVTT
 
 1
 00:00:00.150 --> 00:00:05.129
->> 凯尔 - 辛普森: 我刚才提到了一些神奇的行为
-&gt;&gt; Kyle Simpson: I referenced a bit
-earlier a sort of magical behavior like
+&gt；&gt；Kyle Simpson：我之前提到了一种神奇的行为，比如
+&gt;&gt; Kyle Simpson: I referenced a bit earlier a sort of magical behavior like
 
 2
 00:00:05.129 --> 00:00:08.519
-访问基本值上的属性。
+访问基元值的属性。
 accessing properties on primitive values.
 
 3
 00:00:08.519 --> 00:00:11.640
-记住，您可以在原始字符串上访问长度，或者
-Remember, you access a length
-on a primitive string or
+记住，您可以访问原始字符串的长度或
+Remember, you access a length on a primitive string or
 
 4
 00:00:11.640 --> 00:00:14.320
-例如，在原始编号上使用某些方法。
-some method on a primitive number,
-for example.
+例如，本原数上的一些方法。
+some method on a primitive number, for example.
 
 5
 00:00:15.419 --> 00:00:16.960
-那么这项工作是如何运作的呢 ?
+那这是怎么回事？
 So how does that work?
 
 6
 00:00:16.960 --> 00:00:22.030
-我们如何在此处访问某些字符串值的 .length ?
-How is it that we access the .length
-of some string value here?
+我们如何在这里访问某个字符串值的.length？
+How is it that we access the .length of some string value here?
 
 7
 00:00:23.039 --> 00:00:25.160
-此 DOM 元素值始终为字符串。
-This DOM elements value
-is always a string.
+此DOM元素值始终是字符串。
+This DOM elements value is always a string.
 
 8
 00:00:25.160 --> 00:00:27.760
-那么，我们如何访问该 .length?
+那么我们如何访问.length？
 So how do we access that .length?
 
 9
 00:00:27.760 --> 00:00:29.859
-这就是所谓的拳击赛
+嗯，原来这叫拳击。
 Well, it turns out that's called boxing.
 
 10
 00:00:31.079 --> 00:00:33.700
-这是一种隐含的胁迫形式。
+这是一种隐含的强迫。
 It's a form of implicit coercion.
 
 11
 00:00:33.700 --> 00:00:37.688
-在抽象的操作中，它也不是以同样的方式被调用的。
-It's not called out in the same
-way in the abstract operations.
+在抽象操作中，它不是以相同的方式调用的。
+It's not called out in the same way in the abstract operations.
 
 12
 00:00:37.688 --> 00:00:41.488
-但我认为这种精神绝对是一种隐含的胁迫。
-But I think it absolutely in
-spirit is an implicit coercion.
+但我认为它在精神上绝对是一种隐含的胁迫。
+But I think it absolutely in spirit is an implicit coercion.
 
 13
 00:00:41.488 --> 00:00:44.259
-说你有这个东西不是对象
-It is saying you have this
-thing that is not an object and
+它是说你有一个不是物体的东西
+It is saying you have this thing that is not an object and
 
 14
 00:00:44.259 --> 00:00:46.859
-你试图用它当它是一个物体
-you're trying to use it
-as if it is an object.
+你试图把它当作一个对象来使用。
+you're trying to use it as if it is an object.
 
 15
 00:00:46.859 --> 00:00:50.820
-我， JavaScript ，我会帮你做，然后把它变成一个对象。
-Me, JavaScript I'm gonna be helpful and go
-ahead and make it into an object for you.
+我，JavaScript，我会很有帮助的，继续把它变成你的对象。
+Me, JavaScript I'm gonna be helpful and go ahead and make it into an object for you.
 
 16
 00:00:52.810 --> 00:00:56.570
-唯一的其他选项将用于 JavaScript 抛出异常。
-The only other option would be for the
-JavaScript to throw an exception that said
+唯一的另一种选择是JavaScript抛出一个异常，该异常表示
+The only other option would be for the JavaScript to throw an exception that said
 
 17
 00:00:56.570 --> 00:00:59.234
-您正在尝试访问原始值上的属性。
-you're trying to access
-a property on an primitive value.
+您正在尝试访问原始值的属性。
+you're trying to access a property on an primitive value.
 
 18
 00:01:01.109 --> 00:01:06.829
-我很高兴 JavaScript 隐含地强制了这些原语
-I am actually quite happy that JavaScript
-implicitly coerces these primitives
+我实际上很高兴JavaScript隐含地强制这些原语
+I am actually quite happy that JavaScript implicitly coerces these primitives
 
 19
 00:01:06.829 --> 00:01:10.700
-从而使我能够访问它们的属性和方法。
-into their object counterpart so that I
-can access properties and methods on them.
+到它们的对象对应物中，以便我可以访问它们的属性和方法。
+into their object counterpart so that I can access properties and methods on them.
 
 20
 00:01:10.700 --> 00:01:12.719
 我认为这使得代码更加清晰。
-I think that makes
-the code much more clear.
+I think that makes the code much more clear.
 
 21
 00:01:12.719 --> 00:01:16.760
-如果我想写代码我得把一个原始对象变成一个对象
-If I wanted to write code where I had to
-turn a primitive into an object just to
+如果我想编写代码，我必须将原语转换为对象
+If I wanted to write code where I had to turn a primitive into an object just to
 
 22
 00:01:16.760 --> 00:01:18.310
-用它我就去写 Java
+用它，我会去写Java。
 use it, I'd go write Java.
 
 23
 00:01:19.489 --> 00:01:22.299
-我想这就是 JavaScript 中的无名英雄之一
-This, I think,
-is one of the unsung heroes of JavaScript,
+这，我认为，是JavaScript的无名英雄之一，
+This, I think, is one of the unsung heroes of JavaScript,
 
 24
 00:01:22.299 --> 00:01:24.299
-它能做这一拳击赛它也能做得好
-that it does this boxing and
-it does it well.
+它做这个拳击并且做得很好。
+that it does this boxing and it does it well.
 
 25
 00:01:25.349 --> 00:01:26.640
-但它是一种隐性的胁迫。
+但这是一种隐含的胁迫。
 But it is an implicit coercion.
 
 26
 00:01:26.640 --> 00:01:27.930
-怎么了 >> 演讲者 2:
-Yes?
-&gt;&gt; Speaker 2: Is that where
+是吗？&gt；&gt；演讲者2：是在那里吗
+Yes? &gt;&gt; Speaker 2: Is that where
 
 27
 00:01:27.930 --> 00:01:30.400
-这种东西的概念是来自一个物体吗 ?
-this notion of everything
-is an object comes from?
+这一切都是一个物体的概念是从哪里来的？
+this notion of everything is an object comes from?
 
 28
 00:01:30.400 --> 00:01:32.270
->> 凯尔 - 辛普森: 这就是我的意思
-&gt;&gt; Kyle Simpson: It is,
-that's exactly what I meant when I was
+&GT；&GT；Kyle Simpson：是的，这正是我在
+&gt;&gt; Kyle Simpson: It is, that's exactly what I meant when I was
 
 29
 00:01:32.270 --> 00:01:36.870
-在他的言谈中人们认为一切事物都是物体
-talking in the intro, that people
-think that everything's an object.
+在引言中说，人们认为一切都是一个对象。
+talking in the intro, that people think that everything's an object.
 
 30
 00:01:36.870 --> 00:01:39.799
-事实证明事物可以像物体一样
-And it turns out that things
-can behave as objects, but
+事实证明，事物可以表现为物体，但是
+And it turns out that things can behave as objects, but
 
 31
 00:01:39.799 --> 00:01:41.159
-这不可能让他们成为一个目标
+但这并不能让他们成为对象。
 that doesn't make them an object.
 
 32
 00:01:41.159 --> 00:01:42.159
-这不是对象。
+这不是一个物体。
 This is not an object.
 
 33
 00:01:42.159 --> 00:01:46.250
-它是一个基本字符串，在您可以访问的位置具有优化
-It is a primitive string that has
-an optimization in it where you can access
+它是一个原语字符串，其中包含优化，您可以在其中访问
+It is a primitive string that has an optimization in it where you can access
 
 34
 00:01:46.250 --> 00:01:48.620
-属性，就像它是对象一样。
+一种属性，就像它是一个对象一样。
 a property as if it was an object.
 
 35
 00:01:48.620 --> 00:01:52.680
-这些都是你的计划中发生的胁迫的例子。
-So these are all examples of coercion
-that are happening in your programs.
+所以这些都是在你的程序中发生的强迫的例子。
+So these are all examples of coercion that are happening in your programs.
 
 36
 00:01:52.680 --> 00:01:56.520
-我想说的更重要的一点是我们称之为胁迫还是
-And the larger point that I want to
-make is whether we call them coercion or
+我想说的更重要的一点是，我们是称它们为胁迫还是
+And the larger point that I want to make is whether we call them coercion or
 
 37
 00:01:56.520 --> 00:02:00.829
-我们称它们为每一种语言的转换
-we call them conversion every single
-language in existence that you've ever
+我们称它们为转换你曾经存在的每一种语言
+we call them conversion every single language in existence that you've ever
 
 38
 00:02:00.829 --> 00:02:03.180
-编程方式必须处理类型转换。
-programmed in has to deal
-with type conversions.
+编程的必须处理类型转换。
+programmed in has to deal with type conversions.
 
 39
 00:02:03.180 --> 00:02:06.549
-建议你写的完全是胡说八道
-It is complete nonsense to
-suggest that you can write
+建议你可以写作完全是胡说八道
+It is complete nonsense to suggest that you can write
 
 40
 00:02:06.549 --> 00:02:10.680
-有效的合理 JavaScript 程序，无需处理类型转换。
-valid reasonable JavaScript programs and
-not need to deal with type conversion.
+有效合理的JavaScript程序，不需要处理类型转换。
+valid reasonable JavaScript programs and not need to deal with type conversion.
 
 41
 00:02:10.680 --> 00:02:13.909
-你总是会有一个字符串作为一个数字
-You're always gonna have a string
-that you need to treat as a number or
+你总是会有一个字符串，你需要把它当作一个数字或者
+You're always gonna have a string that you need to treat as a number or
 
 42
 00:02:13.909 --> 00:02:15.629
-需要作为布尔值处理的数字。
-a number that you need
-to treat as a Boolean.
+需要将其视为布尔值的数字。
+a number that you need to treat as a Boolean.
 
 43
 00:02:15.629 --> 00:02:19.931
-你必须要处理转换的问题，也就是强迫。
-You are going to have to deal
-with conversions, aka coercion.
+你将不得不处理转换，也就是强制。
+You are going to have to deal with conversions, aka coercion.
 
 44
 00:02:21.954 --> 00:02:24.192
->> 凯尔 - 辛普森: 这是绝对必要的，所以
-&gt;&gt; Kyle Simpson: It's
-absolutely necessary, so,
+&gt；&gt；Kyle Simpson：这是绝对必要的，所以，
+&gt;&gt; Kyle Simpson: It's absolutely necessary, so,
 
 45
 00:02:24.192 --> 00:02:27.849
-你会用它不管你是否承认
-you're gonna use it whether
-you're admitting it or not.
+不管你承认与否你都要用它。
+you're gonna use it whether you're admitting it or not.
 
 46
 00:02:27.849 --> 00:02:29.949
-你真没选择
+因为你真的别无选择。
 Cuz you really have no choice.

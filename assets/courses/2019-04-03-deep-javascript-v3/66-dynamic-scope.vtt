@@ -2,212 +2,185 @@ WEBVTT
 
 1
 00:00:00.170 --> 00:00:01.560
->> 凯尔: 动态范围是什么 ?
+&gt；&gt；Kyle：动态范围怎么样？
 &gt;&gt; Kyle: What about dynamic scope?
 
 2
 00:00:01.560 --> 00:00:07.169
-我说，它以某些语言存在，在 JavaScript中不存在。
-I said that it exists in some languages,
-it does not exist in JavaScript.
+我说过它存在于一些语言中，它不存在于JavaScript中。
+I said that it exists in some languages, it does not exist in JavaScript.
 
 3
 00:00:07.169 --> 00:00:09.429
-这完全是理论上的。
+所以这完全是理论上的。
 So this is entirely theoretical.
 
 4
 00:00:09.429 --> 00:00:13.800
-但如果在 JavaScript 中确实存在这一点，那么动态代码就会起作用。
-But if this did exist in JavaScript,
-this is how dynamics code would work.
+但如果JavaScript中确实存在，这就是动态代码的工作方式。
+But if this did exist in JavaScript, this is how dynamics code would work.
 
 5
 00:00:13.800 --> 00:00:18.339
-您注意到第 3 行的功能，功能要求，正在引用
-You noticed the function on line 3,
-the function ask, is making reference to
+您注意到第3行的函数ask正在引用
+You noticed the function on line 3, the function ask, is making reference to
 
 6
 00:00:18.339 --> 00:00:21.640
-一个叫老师的变量在它自己的范围内不存在。
-a variable called teacher that
-does not exist in its own scope.
+在自己的作用域中不存在的名为Teacher的变量。
+a variable called teacher that does not exist in its own scope.
 
 7
 00:00:21.640 --> 00:00:26.039
-我们通常会把它想象成这个变量
-And we would normally think of
-it as resolving to that variable
+我们通常会认为它是对该变量的解析
+And we would normally think of it as resolving to that variable
 
 8
 00:00:26.039 --> 00:00:28.629
-因为这就是我们的思考方式
+因为这就是我们从词汇上思考的方式。
 because that's how we think lexically.
 
 9
 00:00:28.629 --> 00:00:32.810
-但是以动态范围的语言来说，它甚至不会参考词法范围
-But in a dynamically scoped language,
-it wouldn't even consult the lexical scope
+但是在动态限定作用域的语言中，它甚至不会查询词法作用域
+But in a dynamically scoped language, it wouldn't even consult the lexical scope
 
 10
 00:00:32.810 --> 00:00:36.259
-嵌套，它会说，哎，这个问题是从哪里来的。
-nesting, it would say, hey,
-where was ask called from.
+筑巢时，它会说，嘿，问是从哪里来的。
+nesting, it would say, hey, where was ask called from.
 
 11
 00:00:37.950 --> 00:00:39.219
-那是从哪里来的
+问是从哪里打来的？
 So where was ask called from?
 
 12
 00:00:39.219 --> 00:00:41.581
-它是从别的阶层的范围来的，
-It was called from the scope
-of other class and
+它是从其他类的作用域中调用的，并且
+It was called from the scope of other class and
 
 13
 00:00:41.581 --> 00:00:44.329
-就会把老师解决到那个变量上
-it would end up resolving
-teacher to that variable.
+它将最终将教师解析为该变量。
+it would end up resolving teacher to that variable.
 
 14
 00:00:46.506 --> 00:00:49.840
->> 凯尔: 您可以看到，动态范围的概念是一个概念
-&gt;&gt; Kyle: Can you see then that the idea
-of a dynamic scope is the idea
+&gt；&gt；Kyle：那么你能看到动态作用域的概念就是这个概念吗
+&gt;&gt; Kyle: Can you see then that the idea of a dynamic scope is the idea
 
 15
 00:00:49.840 --> 00:00:54.012
-函数对变量的引用取决于何处
-that a function's references to its
-variables are depended upon where
+函数对其变量的引用取决于
+that a function's references to its variables are depended upon where
 
 16
 00:00:54.012 --> 00:00:56.420
-那个功能是从哪来的
+那个函数是从哪里调用的？
 that function was called from?
 
 17
 00:00:56.420 --> 00:01:00.130
-来自 100 个不同地方的相同功能最终给出了 100 个
-The same function called from 100
-different places ends up giving 100
+从100个不同的地方调用相同的函数最终得到100
+The same function called from 100 different places ends up giving 100
 
 18
 00:01:00.130 --> 00:01:05.659
-对变量的不同答案可能就像混乱
-different answers to what the variables
-are, that may sound like chaos but
+对于变量是什么的不同答案，可能听起来像是混乱，但
+different answers to what the variables are, that may sound like chaos but
 
 19
 00:01:05.659 --> 00:01:09.629
-你也应该把它当作一种惊人的灵活性
-you should also think of that as sounding
-like an amazing amount of flexibility and
+你也应该认为这听起来像是惊人的灵活性和
+you should also think of that as sounding like an amazing amount of flexibility and
 
 20
 00:01:09.629 --> 00:01:10.260
-复用。
+重复使用。
 reuse.
 
 21
 00:01:10.260 --> 00:01:14.730
-想象一个函数可以在所有不同的函数中重新使用
-Imagine writing one function that could
-be re-used in all of those different
+想象一下编写一个可以在所有这些不同的函数中重用的函数
+Imagine writing one function that could be re-used in all of those different
 
 22
 00:01:14.730 --> 00:01:19.769
-顺便说下这些都是不对的或者不对的
-contexts, and these are not right or
-wrong, by the way.
+顺便说一句，这些都不是对或错的。
+contexts, and these are not right or wrong, by the way.
 
 23
 00:01:19.769 --> 00:01:23.780
-不像动态范围差，邪恶或怪异，就那么
-It's not like dynamic scope is bad and
-evil or weird, it's just so
+它并不像动态范围是坏的和邪恶的或奇怪的，它只是如此
+It's not like dynamic scope is bad and evil or weird, it's just so
 
 24
 00:01:23.780 --> 00:01:26.560
-不认识我们因为我们不这么想
-unfamiliar to us because we
-don't think of it that way.
+我们不熟悉，因为我们不是那样想的。
+unfamiliar to us because we don't think of it that way.
 
 25
 00:01:26.560 --> 00:01:29.579
-但如果你只写了一个动态范围和一个人解释
-But if you had only ever written
-dynamic scope and somebody explained
+但是如果你只写过动态作用域并且有人解释过
+But if you had only ever written dynamic scope and somebody explained
 
 26
 00:01:29.579 --> 00:01:33.155
-词法范围，他们会说，但是你喜欢重新使用你的功能吗 ?
-lexical scope, they'd say, but
-how do you like re-use your functions?
+他们会说，词法范围，但是你喜欢重用你的函数吗？
+lexical scope, they'd say, but how do you like re-use your functions?
 
 27
 00:01:33.155 --> 00:01:33.748
-对吧 ?
+[笑]对吧？
 [LAUGH] Right?
 
 28
 00:01:33.748 --> 00:01:38.423
-他们也会有同样的反应
-They'd have the same reaction that
-we might viscerally have to this
+他们会有和我们发自内心的一样的反应
+They'd have the same reaction that we might viscerally have to this
 
 29
 00:01:38.423 --> 00:01:39.520
-代码片段。
+代码片断。
 code snippet.
 
 30
 00:01:39.520 --> 00:01:43.450
-所以我们应该从动态范围得到的是它是确定的范围
-So what we should get from dynamic scope
-is that it is scope that is determined
+因此，我们应该从动态作用域中得到的是，它是确定的作用域
+So what we should get from dynamic scope is that it is scope that is determined
 
 31
 00:01:43.450 --> 00:01:46.030
-根据运行时的条件，
+基于运行时的条件，
 based upon the conditions at runtime,
 
 32
 00:01:46.030 --> 00:01:48.659
-而词法范围则在作者时间确定。
-whereas lexical scope is
-determined at author time.
+而词汇范围是在作者时确定的。
+whereas lexical scope is determined at author time.
 
 33
 00:01:50.099 --> 00:01:52.719
-即使 JavaScript 没有动态范围，
-Even though JavaScript does
-not have dynamic scope,
+即使JavaScript没有动态范围，
+Even though JavaScript does not have dynamic scope,
 
 34
 00:01:52.719 --> 00:01:57.670
-JavaScript 有一个机制让我们有同样的灵活性，
-JavaScript does have a mechanism that
-gives us this same kind of flexibility,
+JavaScript确实有一种机制为我们提供了同样的灵活性，
+JavaScript does have a mechanism that gives us this same kind of flexibility,
 
 35
 00:01:57.670 --> 00:01:59.370
-我们稍后再谈这个问题
-and we'll talk about
-that later in our course.
+我们稍后会在课程中谈到这一点。
+and we'll talk about that later in our course.
 
 36
 00:01:59.370 --> 00:02:03.810
-所以我希望你现在记住这两者之间的区别
-So I want you to keep in your mind right
-now this difference between fixed,
+所以我希望你现在把这个区别记在脑海里，
+So I want you to keep in your mind right now this difference between fixed,
 
 37
 00:02:03.810 --> 00:02:07.390
-可预测且动态且灵活。
+可预测的，动态的，灵活的。
 predictable, and dynamic, and flexible.

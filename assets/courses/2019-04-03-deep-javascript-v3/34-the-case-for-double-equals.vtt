@@ -2,796 +2,683 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:05.418
->> 凯尔 - 辛普森: 让我把这个给一个我想做的案件
-&gt;&gt; Kyle Simpson: So let me bring this
-down to a case that I wanna make,
+&gt；&gt；Kyle Simpson：让我把这个带到一个我想做的案例中，
+&gt;&gt; Kyle Simpson: So let me bring this down to a case that I wanna make,
 
 2
 00:00:05.418 --> 00:00:09.702
-这件案子比我们的案子更直接
-and this is much more
-of a direct case than
+这更像是一个直接的案件，而不是
+and this is much more of a direct case than
 
 3
 00:00:09.702 --> 00:00:14.237
-我从没说过这个话题
+我以前从来没有谈过这个话题。
 I've never made before about this topic.
 
 4
 00:00:14.237 --> 00:00:18.789
-在这之前的大部分时间里我的基本外卖
-Most of the time prior to this point,
-my essential takeaway or
+在此之前的大部分时间，我的基本外带或
+Most of the time prior to this point, my essential takeaway or
 
 5
 00:00:18.789 --> 00:00:24.564
-我给大家的基本信息是 == == = 可以在代码中共存
-my essential message to people was,
-== and === can coexist in your code,
+我向人们传达的基本信息是，=和=可以在您的代码中共存，
+my essential message to people was, == and === can coexist in your code,
 
 6
 00:00:24.564 --> 00:00:29.024
-你可以做出选择你不用躲过 ==
-and you can make choices,
-you don't have to avoid the ==,
+你可以做出选择，你不必回避=，
+and you can make choices, you don't have to avoid the ==,
 
 7
 00:00:29.024 --> 00:00:32.987
-我要对这一点提出更有力的论据。
-I'm going to make a stronger
-argument to this point.
+我将对这一点进行更有力的论证。
+I'm going to make a stronger argument to this point.
 
 8
 00:00:32.987 --> 00:00:40.698
-您应该在所有可能的位置中选择 " == " 的更强的自变量。
-The stronger argument that you should
-prefer == in all possible places.
+更强的论点是，您应该在所有可能的地方都倾向于=。
+The stronger argument that you should prefer == in all possible places.
 
 9
 00:00:40.698 --> 00:00:42.601
-我知道这会让一些人震惊
-And I know this gonna
-shock a few people but
+我知道这会让一些人震惊，但是
+And I know this gonna shock a few people but
 
 10
 00:00:42.601 --> 00:00:45.659
-你必须要有开放的头脑来倾听这个论点
-you're gonna have to have an open
-mind to listen to this argument.
+你必须要有一个开放的心态去听这个论点。
+you're gonna have to have an open mind to listen to this argument.
 
 11
 00:00:45.659 --> 00:00:50.469
-把我们讨论到的所有事情都放在一起
-Taking everything in whole in totality
-that we've talked about together,
+把我们一起讨论过的所有事情统统放在一起，
+Taking everything in whole in totality that we've talked about together,
 
 12
 00:00:50.469 --> 00:00:55.048
-包括我声称理解类型的代码是
-including the fact that it is my claim
-that code that understands types is
+包括这一事实，即我声称理解类型的代码是
+including the fact that it is my claim that code that understands types is
 
 13
 00:00:55.048 --> 00:00:57.542
-更好的代码不管选择如何
+无论选择什么，代码都会更好。
 better code regardless of the choice.
 
 14
 00:00:57.542 --> 00:01:03.698
-在此范围内，我认为可以说 == = === 。
-Within that context, I think I can make
-the case that == is preferable to ===.
+在这种情况下，我认为我可以证明=比=更可取。
+Within that context, I think I can make the case that == is preferable to ===.
 
 15
 00:01:05.935 --> 00:01:13.079
->> Kyle Simpson: 因此了解类型总比不了解类型好。
-&gt;&gt; Kyle Simpson: So knowing the types
-is always better than not knowing them.
+&GT；&GT；Kyle Simpson：所以知道类型总是比不知道类型好。
+&gt;&gt; Kyle Simpson: So knowing the types is always better than not knowing them.
 
 16
 00:01:13.079 --> 00:01:15.746
-密码的不确定性让代码难以理解
-The uncertainty of code is
-what make code hard to read,
+代码的不确定性是使代码难以阅读的原因，
+The uncertainty of code is what make code hard to read,
 
 17
 00:01:15.746 --> 00:01:17.489
-它使代码易受虫子的影响。
+它使代码容易受到错误的影响。
 it makes code susceptible to bugs.
 
 18
 00:01:17.489 --> 00:01:23.159
-有些人说不知道自己的类型的问题，我要
-Some people respond to that problem of not
-knowing their types by saying, I need to
+对于不知道自己类型的问题，有些人会说，我需要
+Some people respond to that problem of not knowing their types by saying, I need to
 
 19
 00:01:23.159 --> 00:01:28.599
-更改我的编码样式以使用静态输入，如 TypeScript 和其他类型。
-change my coding style to use static
-typing, like TypeScript and the others.
+将我的编码风格更改为使用静态键入，如typescript和其他。
+change my coding style to use static typing, like TypeScript and the others.
 
 20
 00:01:28.599 --> 00:01:31.932
-我们要在一段时间里讨论 TypeScript
-We're gonna talk about
-TypeScript in just a moment but
+我们稍后会讨论打字脚本，但是
+We're gonna talk about TypeScript in just a moment but
 
 21
 00:01:31.932 --> 00:01:35.709
-我不认为这是解决这个问题的唯一对策。
-I don't think that that is
-the only response to this problem.
+我认为这不是解决这个问题的唯一办法。
+I don't think that that is the only response to this problem.
 
 22
 00:01:35.709 --> 00:01:40.234
-这个问题还有一个反应， >> Kyle Simpson:
-There's another response to this problem,
-&gt;&gt; Kyle Simpson: So
+对这个问题还有另一种反应，&gt；&gt；Kyle Simpson：所以
+There's another response to this problem, &gt;&gt; Kyle Simpson: So
 
 23
 00:01:40.234 --> 00:01:46.063
-== 不是关于未知类型的比较，这不是它的对象，也不是
-== is not about comparisons with unknown
-type, that's not what it's for and that's
+=不是关于与未知类型的比较，这不是它的目的
+== is not about comparisons with unknown type, that's not what it's for and that's
 
 24
 00:01:46.063 --> 00:01:51.277
-而不是你应该用的，这和大多数人的说法是相反的。
-not what you should use it for, that is
-the opposite of what most people claim.
+不是你应该用它来做什么，这与大多数人声称的相反。
+not what you should use it for, that is the opposite of what most people claim.
 
 25
 00:01:51.277 --> 00:01:55.902
-大多数人声称他们在不知道类型的情况下使用 == ，然后
-Most people claim that they use == when
-they don't know the types, and then they
+大多数人声称他们在不知道类型时使用=，然后他们
+Most people claim that they use == when they don't know the types, and then they
 
 26
 00:01:55.902 --> 00:02:00.078
-就会掉到这些虫子里我是说别在那个场景里用它
-fall into these bugs and I'm saying
-don't use it in that scenario at all.
+落入这些bug中，我是说，在那种情况下，根本不要使用它。
+fall into these bugs and I'm saying don't use it in that scenario at all.
 
 27
 00:02:00.078 --> 00:02:05.390
-当您不知道类型时，永远不要使用 == 。
-Never use the == when you
-don't know the types, ever.
+当你不知道类型时，永远不要使用=。
+Never use the == when you don't know the types, ever.
 
 28
 00:02:05.390 --> 00:02:09.456
-仅当了解类型时才使用 == 。
+只有在知道类型时才使用=。
 Only use the == when you know the types.
 
 29
 00:02:09.456 --> 00:02:14.283
-就像我说的你应该努力了解你的
-And as I said, you should strive
-to know the types in your
+正如我所说的，您应该努力了解您的
+And as I said, you should strive to know the types in your
 
 30
 00:02:14.283 --> 00:02:17.280
-尽可能的比较。
+尽可能多的比较。
 comparisons as much as possible.
 
 31
 00:02:17.280 --> 00:02:21.832
-它是关于与已知类型和 ( 可选) 的比较，
-It's about comparisons with
-known types and optionally,
+它是关于与已知类型的比较，也是可选的，
+It's about comparisons with known types and optionally,
 
 32
 00:02:21.832 --> 00:02:24.210
-如果你想强迫他
+如果你喜欢强迫的话。
 if you like to have coercions.
 
 33
 00:02:24.210 --> 00:02:27.521
-也许你的所有比较都知道这些类型和
-Maybe all of your comparisons
-you know the types and
+也许你所有的比较你都知道类型和
+Maybe all of your comparisons you know the types and
 
 34
 00:02:27.521 --> 00:02:32.218
-也许所有这些类型都是平等的而且你从来没有使用过胁迫
-maybe all of those types are always
-equal and you never use coercion, and
+也许所有这些类型都是平等的，你从不使用强制，而且
+maybe all of those types are always equal and you never use coercion, and
 
 35
 00:02:32.218 --> 00:02:35.079
-仍在此场景中 == 是首选项。
+在这种情况下，=还是更可取的。
 still in that scenario == is preferable.
 
 36
 00:02:36.656 --> 00:02:39.280
->> 凯尔 - 辛普森: 但也许有些时候你想利用
-&gt;&gt; Kyle Simpson: But maybe some of
-the times you wanna take advantage
+&gt；&gt；Kyle Simpson：但也许有些时候你想利用
+&gt;&gt; Kyle Simpson: But maybe some of the times you wanna take advantage
 
 37
 00:02:39.280 --> 00:02:42.451
-而 == 是你唯一的选择
-of coercion, and
-then == is essentially your only option.
+强迫，然后=基本上是你唯一的选择。
+of coercion, and then == is essentially your only option.
 
 38
 00:02:44.218 --> 00:02:46.766
->> 凯尔 - 辛普森: 所以让我们在这里挖掘细微的细节因为我知道你们中的一些人
-&gt;&gt; Kyle Simpson: So let's dig into
-the nuance here because I know some of you
+&GT；&GT；Kyle Simpson：所以让我们深入了解这里的细微差别，因为我认识你们中的一些人
+&gt;&gt; Kyle Simpson: So let's dig into the nuance here because I know some of you
 
 39
 00:02:46.766 --> 00:02:49.164
-我就不会相信我了好吗
-are not gonna believe me just
-right off the bat, okay?
+不会一下子就相信我的，好吗？
+are not gonna believe me just right off the bat, okay?
 
 40
 00:02:49.164 --> 00:02:54.086
-如果你知道对比中的类型你就会发现
-Let's dig into the nuance here,
-if you know the types in a comparison,
+让我们深入了解这里的细微差别，如果你知道比较中的类型，
+Let's dig into the nuance here, if you know the types in a comparison,
 
 41
 00:02:54.086 --> 00:02:55.736
-我觉得你应该
+我觉得你应该。
 and I think you should.
 
 42
 00:02:55.736 --> 00:03:01.122
-如果您知道比较中的类型，并且这两种类型都是相同的，
-If you know the types in a comparison and
-both of the types are the same,
+如果您知道比较中的类型，并且这两种类型相同，
+If you know the types in a comparison and both of the types are the same,
 
 43
 00:03:01.122 --> 00:03:05.340
-那么我们已经知道 == = ===。
-then we already know that
-== is identical to ===.
+那么我们已经知道=等同于=。
+then we already know that == is identical to ===.
 
 44
 00:03:05.340 --> 00:03:09.652
-我们已经知道他们的互换性，在你了解他们的情况下
-We already know their interchangeable,
-in the case where you know them and
+我们已经知道它们的可互换性，在您了解它们的情况下
+We already know their interchangeable, in the case where you know them and
 
 45
 00:03:09.652 --> 00:03:10.757
-他们是一样的
+它们是一样的。
 they are the same.
 
 46
 00:03:10.757 --> 00:03:15.322
-你是说，是的，但这并不意味着我不知道如何使用它。
-So you're saying, yeah, but that doesn't
-mean that I don't know how to use it.
+所以你是说，是的，但这并不意味着我不知道如何使用它。
+So you're saying, yeah, but that doesn't mean that I don't know how to use it.
 
 47
 00:03:15.322 --> 00:03:20.115
-我的索赔是，在该方案中不需要使用 ===
-My claim is, using === is
-unnecessary in that scenario and
+我的主张是，在这种情况下使用=是不必要的，而且
+My claim is, using === is unnecessary in that scenario and
 
 48
 00:03:20.115 --> 00:03:22.984
-你应该更喜欢短的 ==
+你应该更喜欢较短的=。
 you should prefer the shorter ==.
 
 49
 00:03:22.984 --> 00:03:29.926
-这不仅仅是用一个更少的字符，好吗 ?
-That is not just about using
-one fewer character, okay?
+这不仅仅是少用一个角色，好吗？
+That is not just about using one fewer character, okay?
 
 50
 00:03:29.926 --> 00:03:32.986
-有些人知道 TypeScript 做了很多工作
-Some of you know that
-TypeScript does a lot of work,
+你们中的一些人知道打字稿做了很多工作，
+Some of you know that TypeScript does a lot of work,
 
 51
 00:03:32.986 --> 00:03:35.271
-即使你不做任何类型的人
+即使你根本不做任何类型的工作。
 even if you don’t do any types at all.
 
 52
 00:03:35.271 --> 00:03:38.132
-在这里我没有任何类型的注释
-Here I have no types annotated once so
-ever and
+在这里，我没有任何类型被注释过一次，所以一直都没有
+Here I have no types annotated once so ever and
 
 53
 00:03:38.132 --> 00:03:41.985
-还做一大堆推论，推断，好吗 ?
-it still does a bunch of inference,
-type inference, okay?
+它仍然会做一系列的推断，类型推断，好吗？
+it still does a bunch of inference, type inference, okay?
 
 54
 00:03:41.985 --> 00:03:48.125
-在此特定情况下，错误告诉我的是我不应该使用 ===
-In this particular case what the error
-is telling me is I should not use a ===
+在这种特殊的情况下，错误告诉我不应该使用a=
+In this particular case what the error is telling me is I should not use a ===
 
 55
 00:03:48.125 --> 00:03:53.334
-因为类型不同，这将始终为 false。
-because the types are different,
-and this will always be false.
+因为类型是不同的，这将永远是假的。
+because the types are different, and this will always be false.
 
 56
 00:03:53.334 --> 00:03:55.038
-现在我不知道你的事了
+现在我不知道你怎么想，但是
 Now I don't know about you, but
 
 57
 00:03:55.038 --> 00:03:57.951
-我认为这是一个特别有用的错误信息。
-I find that to be a particularly
-useful error message.
+我发现这是一个特别有用的错误消息。
+I find that to be a particularly useful error message.
 
 58
 00:03:57.951 --> 00:04:02.813
-告诉我别做傻事总是会失败的
-It is telling me don't do something
-stupid that would always fail,
+它告诉我不要做那些永远都会失败的蠢事，
+It is telling me don't do something stupid that would always fail,
 
 59
 00:04:02.813 --> 00:04:06.070
-百分百保证会失败好吗
+100%，保证会失败，好吗？
 100%, guaranteed to fail, all right?
 
 60
 00:04:06.070 --> 00:04:12.020
-它知道它会失败，它告诉我不要无谓地这样做。
-It knows that it'll fail, and
-it tells me don't do it unnecessarily.
+它知道它会失败，它告诉我不要做不必要的事情。
+It knows that it'll fail, and it tells me don't do it unnecessarily.
 
 61
 00:04:12.020 --> 00:04:15.425
-我的主张是如果我们认为合理
-My claim is that if we
-find to be reasonable,
+我的主张是，如果我们发现合理，
+My claim is that if we find to be reasonable,
 
 62
 00:04:15.425 --> 00:04:19.113
 那么反阳性也是合理的。
-then the counter positive
-is also reasonable.
+then the counter positive is also reasonable.
 
 63
 00:04:19.113 --> 00:04:22.197
-如果在类型不匹配时使用它是毫无意义的，
-If it is pointless to use it
-when the types don't match,
+如果在类型不匹配时使用它是没有意义的，
+If it is pointless to use it when the types don't match,
 
 64
 00:04:22.197 --> 00:04:25.029
-当类型匹配时，不需要使用它。
-it is unnecessary to use
-it when the types do match.
+当类型匹配时，没有必要使用它。
+it is unnecessary to use it when the types do match.
 
 65
 00:04:30.665 --> 00:04:33.548
->> 凯尔 - 辛普森: 如果我们喜欢我们的人抱怨什么时候没有意义的话，
-&gt;&gt; Kyle Simpson: If we like for our linter
-to complain when it'd be pointless,
+&gt；&gt；Kyle Simpson：如果我们喜欢让我们的Linter在毫无意义的时候抱怨，
+&gt;&gt; Kyle Simpson: If we like for our linter to complain when it'd be pointless,
 
 66
 00:04:33.548 --> 00:04:36.829
-那我们就应该有个在不必要的情况下抱怨的过客
-then we ought to have a linter that
-complains when it's unnecessary.
+那么我们应该有一个在不必要的时候抱怨的Linter。
+then we ought to have a linter that complains when it's unnecessary.
 
 67
 00:04:40.659 --> 00:04:45.178
->> 凯尔 - 辛普森: 如果你知道对比的类型，他们就不同了，
-&gt;&gt; Kyle Simpson: So if you know the types
-in a comparison, and they're different,
+&gt；&gt；Kyle Simpson：所以如果你知道比较中的类型，并且它们是不同的，
+&gt;&gt; Kyle Simpson: So if you know the types in a comparison, and they're different,
 
 68
 00:04:45.178 --> 00:04:47.841
-这才是有趣的地方
+这就是事情变得有趣的地方
 this is where things get interesting,
 
 69
 00:04:47.841 --> 00:04:52.699
-因为用 === 是在保护你，救你。
-because supposedly using the ===
-is protecting you and saving you.
+因为据说使用=就是保护你，拯救你。
+because supposedly using the === is protecting you and saving you.
 
 70
 00:04:52.699 --> 00:04:57.745
-但是你知道类型，你知道不一样的，一个 ===
-But if you know the types and you know
-them to be different, a single === will
+但是，如果您知道类型，并且知道它们是不同的，则单个=将
+But if you know the types and you know them to be different, a single === will
 
 71
 00:04:57.745 --> 00:05:03.338
-始终失败，这是我们刚刚讨论的 TypeScript 规则的全部原因。
-always fail, which is the whole reason for
-that TypeScript rule we just talked about.
+总是失败，这就是我们刚刚谈到的打字规则的全部原因。
+always fail, which is the whole reason for that TypeScript rule we just talked about.
 
 72
 00:05:04.944 --> 00:05:09.031
->> 凯尔 - 辛普森: 它肯定会被打破，你和我一起吗 ?
-&gt;&gt; Kyle Simpson: It would definitely
-be broken, you're with me?
+&GT；&GT；凯尔·辛普森：它肯定会被打破，你和我在一起吗？
+&gt;&gt; Kyle Simpson: It would definitely be broken, you're with me?
 
 73
 00:05:09.031 --> 00:05:13.141
-所以你只有两个选择如果你知道这些类型和
-So your only two options in that case,
-if you know the types and
+所以在这种情况下你唯一的两个选择，如果你知道类型和
+So your only two options in that case, if you know the types and
 
 74
 00:05:13.141 --> 00:05:16.384
-他们不匹配你有两种选择
-they don't match you,
-have one of two options,
+他们和你不匹配，有两种选择，
+they don't match you, have one of two options,
 
 75
 00:05:16.384 --> 00:05:20.122
-您可以不进行比较，也可以使用 ==。
-you can either not do the comparison or
-you can use ==.
+您可以不进行比较，也可以使用=。
+you can either not do the comparison or you can use ==.
 
 76
 00:05:20.122 --> 00:05:22.913
-那是你唯一的选择
+这是你唯一的两个选择
 Those are your only two options and
 
 77
 00:05:22.913 --> 00:05:28.110
-如果你知道对比的类型他们就不一样了
-if you know the types in a comparison,
-and they're different,
+如果你知道比较中的类型，并且它们是不同的，
+if you know the types in a comparison, and they're different,
 
 78
 00:05:28.110 --> 00:05:33.319
-仅相当于单个 == 的值为两个或更多 ===。
-the only equivalent to a single
-== would be two or more ===.
+唯一等同于单个=的将是两个或更多的=。
+the only equivalent to a single == would be two or more ===.
 
 79
 00:05:35.697 --> 00:05:37.699
->> 凯尔 - 辛普森: 你不能有 ===
-&gt;&gt; Kyle Simpson: You
-can not have a === and
+&gt；&gt；Kyle Simpson：你不能有a=和
+&gt;&gt; Kyle Simpson: You can not have a === and
 
 80
 00:05:37.699 --> 00:05:43.014
-如果类型不同，那么 == 是等效的，这是不可能的。
-a == be equivalent when the types
-are different, that is impossible.
+a=当类型不同时是等价的，这是不可能的。
+a == be equivalent when the types are different, that is impossible.
 
 81
 00:05:43.014 --> 00:05:49.574
-因此，如果您有一个可以使用一个 == 的方案，或者您可以使用两个或多个
-So if you have a scenario where you could
-use one ==, or you could use two or
+因此，如果您有一个场景，您可以使用一个=，或者您可以使用两个或
+So if you have a scenario where you could use one ==, or you could use two or
 
 82
 00:05:49.574 --> 00:05:55.634
-more === ，估计哪个要慢，两个 ===。
-more ===, guess which one is
-going to be slower, the two ===.
+更多=，猜猜哪个会比较慢，两个=。
+more ===, guess which one is going to be slower, the two ===.
 
 83
 00:05:55.634 --> 00:05:58.966
-让 JavaScript 进行胁迫的速度更快
-It is faster to let JavaScript
-do the coercion than it is for
+让JavaScript执行强制比使用JavaScript更快
+It is faster to let JavaScript do the coercion than it is for
 
 84
 00:05:58.966 --> 00:06:01.077
-你要做些露体的
+你要做一堆明确的。
 you to make a bunch of explicit ones.
 
 85
 00:06:01.077 --> 00:06:04.081
-如果你要做 3 个或者 3 个
-And it gets even worse if
-you have to do three or
+如果你必须做三次或三次，情况就会更糟
+And it gets even worse if you have to do three or
 
 86
 00:06:04.081 --> 00:06:07.653
-四取决于胁迫的复杂性
-four depending upon
-the complexity of the coercion.
+四取决于强制的复杂性。
+four depending upon the complexity of the coercion.
 
 87
 00:06:07.653 --> 00:06:14.029
-现在我说慢，用引号，因为我们说的是微秒。
-Now I say slower, in air quotes because
-we're talking about microseconds.
+现在我说慢一点，用空气引号，因为我们谈论的是微秒。
+Now I say slower, in air quotes because we're talking about microseconds.
 
 88
 00:06:14.029 --> 00:06:20.661
-但在此场景中， === 绝对不可能。
-But it is absolutely not possible for
-a === to be faster in this scenario.
+但在这种情况下，a=绝对不可能更快。
+But it is absolutely not possible for a === to be faster in this scenario.
 
 89
 00:06:20.661 --> 00:06:25.805
-在最好的情况下，它是平等的，实际上，
-In the best possible scenario,
-it's equal and actually, in reality,
+在最好的情况下，它是相等的，实际上，在现实中，
+In the best possible scenario, it's equal and actually, in reality,
 
 90
 00:06:25.805 --> 00:06:30.120
-只是几次把它们列出来比较慢
-it's just a tiny bit slower to
-list them out multiple times.
+多次列出它们只会稍微慢一点。
+it's just a tiny bit slower to list them out multiple times.
 
 91
 00:06:30.120 --> 00:06:34.235
-现在我不是在说仅在表演上是个论点
-Now I'm not making the case that on
-performance alone that's an argument,
+现在我并不是说仅仅从表现上来说这就是一个论点，
+Now I'm not making the case that on performance alone that's an argument,
 
 92
 00:06:34.235 --> 00:06:37.463
-因为微秒差异不是相关的。
-because the microsecond
-difference is not that relevant.
+因为微秒的差异并不是那么重要。
+because the microsecond difference is not that relevant.
 
 93
 00:06:37.463 --> 00:06:43.122
-但这就是 === 不高于 ==的大案的一部分。
-But this is part of the larger case
-that === is not somehow superior to ==.
+但是，这是更大的情况的一部分，=并不在某种程度上优于=。
+But this is part of the larger case that === is not somehow superior to ==.
 
 94
 00:06:43.122 --> 00:06:47.105
-很多人说 === 更快，不是强迫的。
-Many people have said === is
-faster cuz it doesn't coerce.
+很多人说=更快，因为它不会强迫。
+Many people have said === is faster cuz it doesn't coerce.
 
 95
 00:06:47.105 --> 00:06:49.353
-那是橘子和橘子的比较
+这是苹果和橙子的比较，
 That's a apples to oranges comparison,
 
 96
 00:06:49.353 --> 00:06:53.860
-cutz ，你说一个 === 快了一个 == ，不等于。
-cuz you're saying one === is faster
-than one == and they're not equivalent.
+因为你说一个=比一个=快，它们不相等。
+cuz you're saying one === is faster than one == and they're not equivalent.
 
 97
 00:06:55.649 --> 00:06:59.646
->> 凯尔 - 辛普森: 如果你真的在看苹果，两个 ===
-&gt;&gt; Kyle Simpson: If you actually looked
-at an apples to apples two === is always
+&gt；&gt；Kyle Simpson：如果你真的看着一个苹果对一个苹果，两个=总是
+&gt;&gt; Kyle Simpson: If you actually looked at an apples to apples two === is always
 
 98
 00:06:59.646 --> 00:07:02.464
-有点慢于一个 ==
-going to be a little
-bit slower than one ==.
+会比1=稍微慢一点。
+going to be a little bit slower than one ==.
 
 99
 00:07:04.862 --> 00:07:09.797
->> Kyle Simpson: 因此，如果您在此场景中，可以执行两个 === 或
-&gt;&gt; Kyle Simpson: So if you're in this
-scenario where you could do two === or
+&gt；&gt；Kyle Simpson：所以如果你在这种情况下，你可以做两个=或
+&gt;&gt; Kyle Simpson: So if you're in this scenario where you could do two === or
 
 100
 00:07:09.797 --> 00:07:13.084
-三，四，或者你可以做一个 ==，
+三四个，或者你可以做一个=，
 three or four, or you could do one ==,
 
 101
 00:07:13.084 --> 00:07:18.694
-我说你应该更喜欢那两个是单一的 ==
-I say you should prefer the faster
-of the two which is the single ==,
+我说你应该更喜欢这两个中较快的一个，那就是单一=，
+I say you should prefer the faster of the two which is the single ==,
 
 102
 00:07:18.694 --> 00:07:24.242
-这一论点的一部分，肯定不是整个论点的一部分。
-part of the argument, certainly
-not the entirety of the argument.
+论点的一部分，当然不是整个论点。
+part of the argument, certainly not the entirety of the argument.
 
 103
 00:07:24.242 --> 00:07:29.384
-最后，如果类型不同，而两个或更多的是比较，
-And finally, if the types are different,
-and two or more are what the comparisons,
+最后，如果类型不同，并且两个或更多是比较，
+And finally, if the types are different, and two or more are what the comparisons,
 
 104
 00:07:29.384 --> 00:07:32.862
-就是你要用的，就是两个或者两个以上的 ===，
-that's what you would use,
-is two or more of the ===,
+这就是你要使用的，是两个或两个以上的=，
+that's what you would use, is two or more of the ===,
 
 105
 00:07:32.862 --> 00:07:37.933
-我的说法是它让读者失去了不必要的信息
-my claim is that it's distracting the
-reader with unnecessary type information,
+我的主张是它用不必要的类型信息分散了读者的注意力，
+my claim is that it's distracting the reader with unnecessary type information,
 
 106
 00:07:37.933 --> 00:07:40.855
-例如，在 null 未定义的情况下。
-like in the null undefined case,
-for example.
+例如在未定义空值的情况下。
+like in the null undefined case, for example.
 
 107
 00:07:40.855 --> 00:07:44.761
-没有人发现你在分散读者的注意力
-And the no one find case, you're
-distracting the reader there is these two
+没有人找到案例，你分散了读者的注意力，就是这两个
+And the no one find case, you're distracting the reader there is these two
 
 108
 00:07:44.761 --> 00:07:48.547
-不同的空值和奇怪的古怪的差异
-different empty values and they sort
-of have weird quirky differences.
+不同的空值，它们有一些奇怪的差异。
+different empty values and they sort of have weird quirky differences.
 
 109
 00:07:48.547 --> 00:07:52.406
-在大多数情况下，读者不需要看到这种情况，
-That's not necessary for
-the reader to see in most cases,
+在大多数情况下，读者并不需要看到这一点，
+That's not necessary for the reader to see in most cases,
 
 110
 00:07:52.406 --> 00:07:57.605
-在大多数情况下，通过显式列出和您拥有的内容来分散它们的注意力
-in most cases you're distracting them
-by listing explicitly and what you have
+在大多数情况下，你通过明确列出你拥有的东西来分散他们的注意力
+in most cases you're distracting them by listing explicitly and what you have
 
 111
 00:07:57.605 --> 00:08:03.064
-要用的是更恰当的抽象性的强迫它是用 " ==" 来清除的
-to use is the more properly abstracted
-coercion that it's cleaner with the ==.
+使用的是更合适的抽象强制，使用=更干净。
+to use is the more properly abstracted coercion that it's cleaner with the ==.
 
 112
 00:08:03.064 --> 00:08:05.764
-记住这就是你知道的类型，对，
-Now remember,
-this is if you know the types, right,
+记住，这是如果你知道类型的话，对吧，
+Now remember, this is if you know the types, right,
 
 113
 00:08:05.764 --> 00:08:08.408
-我只是想说你知道这些类型
-I'm only making these claims
-if you know the types.
+我只是在你知道类型的情况下才会提出这些声明。
+I'm only making these claims if you know the types.
 
 114
 00:08:08.408 --> 00:08:09.576
-通过了解这些类型
+通过了解类型，
 And by know the types,
 
 115
 00:08:09.576 --> 00:08:13.278
-我的意思是，对代码的读者来说，这些类型的含义是显而易见的。
-I mean that it is obvious to the reader
-of the code what the types will be.
+我的意思是，对于代码的读者来说，类型是什么是显而易见的。
+I mean that it is obvious to the reader of the code what the types will be.
 
 116
 00:08:16.055 --> 00:08:19.737
->> 凯尔 - 辛普森: 那么，对不起，还有一个，摘要幻灯片，
-&gt;&gt; Kyle Simpson: So what about, sorry,
-there's one more, the summary slide,
+&gt；&gt；Kyle Simpson：那么，对不起，还有一个，摘要幻灯片，
+&gt;&gt; Kyle Simpson: So what about, sorry, there's one more, the summary slide,
 
 117
 00:08:19.737 --> 00:08:20.408
-当然
+当然可以。
 of course.
 
 118
 00:08:20.408 --> 00:08:26.552
-如果您知道类型，那么在摘要中，无论类型是否匹配，
-This is if you know the types, so in
-summary, whether the types match or not,
+这是如果你知道类型，所以概括地说，无论类型是否匹配，
+This is if you know the types, so in summary, whether the types match or not,
 
 119
 00:08:26.552 --> 00:08:31.673
-当你知道这些类型的时候， == 是更明智的选择，好吗 ?
-== is the more sensible choice
-when you know the types, okay?
+=当你知道类型时是更明智的选择，好吗？
+== is the more sensible choice when you know the types, okay?
 
 120
 00:08:31.673 --> 00:08:35.130
-当您了解类型时， == 是更明智的选择，因此
-When you know the types,
-== is the more sensible choice, so
+当您知道类型时，=是更明智的选择，所以
+When you know the types, == is the more sensible choice, so
 
 121
 00:08:35.130 --> 00:08:39.534
-让我们看看对方，在那些你不知道类型的情况下。
-let's look at the other side, in those
-cases where you don't know the types.
+让我们看看另一边，在那些你不知道类型的情况下。
+let's look at the other side, in those cases where you don't know the types.
 
 122
 00:08:39.534 --> 00:08:45.153
-如果您不知道类型，这意味着您不充分了解代码，
-If you do not know the types, that means
-you don't fully understand the code,
+如果您不知道类型，这意味着您不能完全理解代码，
+If you do not know the types, that means you don't fully understand the code,
 
 123
 00:08:45.153 --> 00:08:48.147
-这可能是不必要的要求
+这可能是一个不必要的要求。
 that may be an unnecessary requirement.
 
 124
 00:08:48.147 --> 00:08:52.006
-不能保证 100% ，你一直都知道
-It is not possible to guarantee 100%,
-you always know
+不可能保证100%，你总是知道
+It is not possible to guarantee 100%, you always know
 
 125
 00:08:52.006 --> 00:08:56.748
-整个系统的类型，不合理，不合理。
-the types in the entire system,
-that's not reasonable and rational.
+整个系统中的类型，这是不合理和合理的。
+the types in the entire system, that's not reasonable and rational.
 
 126
 00:08:56.748 --> 00:09:01.399
-因此，我承认有时会有比较的时候，
-So I recognize that there will be
-times when comparisons happen, and
+所以我认识到有时候会发生比较，而且
+So I recognize that there will be times when comparisons happen, and
 
 127
 00:09:01.399 --> 00:09:03.413
-还有一些不确定性
+有一些不确定性。
 there's some uncertainty.
 
 128
 00:09:03.413 --> 00:09:09.070
-我的主张是，这应该是一个稀有的，而不是现状。
-My claim is that that should be
-a rarity rather than the status quo.
+我的主张是，这应该是一种稀有，而不是现状。
+My claim is that that should be a rarity rather than the status quo.
 
 129
 00:09:09.070 --> 00:09:13.553
-但它的意思是，不管它是稀有的还是现状，
-But what it does mean, whether it's
-a rarity or the status quo, is that that
+但它确实意味着，无论是稀有还是现状，就是
+But what it does mean, whether it's a rarity or the status quo, is that that
 
 130
 00:09:13.553 --> 00:09:17.846
 由于这种不确定性，部分代码更难理解。
-part of the code is harder to understand
-as a result of that uncertainty.
+part of the code is harder to understand as a result of that uncertainty.
 
 131
 00:09:17.846 --> 00:09:22.840
-因此，不知道这些类型意味着您无法完全了解该代码。
-So not knowing the types means that
-you don't fully understand that code.
+所以不知道类型意味着你不能完全理解代码。
+So not knowing the types means that you don't fully understand that code.
 
 132
 00:09:22.840 --> 00:09:30.197
-最佳响应是对其进行折射，以便您可以了解类型( 如果可能) 。
-The best response is to refractor it so
-that you can know the types, if possible.
+最好的反应是折射它，这样你就可以知道类型，如果可能的话。
+The best response is to refractor it so that you can know the types, if possible.
 
 133
 00:09:30.197 --> 00:09:32.971
-如果你不知道这些类型
+如果你不知道类型，并且
 If you don't know the types, and
 
 134
 00:09:32.971 --> 00:09:37.135
-这种不明朗的因素必须得到处理
-that uncertainty of knowing
-just has to be dealt,
+需要解决的就是了解的不确定性，
+that uncertainty of knowing just has to be dealt,
 
 135
 00:09:37.135 --> 00:09:42.009
-然后至少让读者明白这一点。
-then at least make sure that
-that is obvious to the reader.
+那么至少要确保这一点对读者来说是显而易见的。
+then at least make sure that that is obvious to the reader.
 
 136
 00:09:42.009 --> 00:09:46.471
-请确保读者对此处存在某些不确定性是显而易见的。
-Make sure that it is obvious to the reader
-that there is some uncertainty here.
+确保读者清楚地看到这里存在一些不确定性。
+Make sure that it is obvious to the reader that there is some uncertainty here.
 
 137
 00:09:46.471 --> 00:09:47.503
@@ -800,255 +687,218 @@ Put a code comment,
 
 138
 00:09:47.503 --> 00:09:51.695
-这样的话读者就不会有虚假的安全感，
-structure it in such a way that the reader
-doesn't have a false sense of security,
+以一种不会让读者产生虚假安全感的方式来构建它，
+structure it in such a way that the reader doesn't have a false sense of security,
 
 139
 00:09:51.695 --> 00:09:55.490
-他们认为他们知道发生了什么，而且实际上是不确定的。
-they think they know what's happening,
-and actually it's uncertain.
+他们认为他们知道发生了什么，实际上这是不确定的。
+they think they know what's happening, and actually it's uncertain.
 
 140
 00:09:55.490 --> 00:09:59.754
-应该是很明显，不管你怎么做都不确定
-It should be super obvious that it's
-uncertain in whatever possible way you
+这应该是非常明显的，它在任何可能的方式下都是不确定的
+It should be super obvious that it's uncertain in whatever possible way you
 
 141
 00:09:59.754 --> 00:10:03.293
-因为我们再次试图传达我们的意图
-can, because again we're trying
-to communicate our intent.
+可以，因为我们又一次试图传达我们的意图。
+can, because again we're trying to communicate our intent.
 
 142
 00:10:03.293 --> 00:10:07.298
-我的意思是告诉你这很不确定
-My intent here is to tell you that
-it's uncertain, just so you know,
+我在这里的目的是告诉你，这是不确定的，就像你知道的，
+My intent here is to tell you that it's uncertain, just so you know,
 
 143
 00:10:07.298 --> 00:10:11.876
-就会有龙，对，这就是我们想用我们的代码来做的。
-beware there'll be dragons, right,
-that's what we wanna do with our code.
+小心会有龙，对吧，这就是我们想要用我们的代码做的事情。
+beware there'll be dragons, right, that's what we wanna do with our code.
 
 144
 00:10:11.876 --> 00:10:14.803
-这对读者来说应该是显而易见的
+所以它应该对读者来说是显而易见的，并且
 So it should be obvious to the reader, and
 
 145
 00:10:14.803 --> 00:10:19.749
-您可以使用的最明显的信号是 ===。
-the most obvious signal you can
-use about that uncertainty is ===.
+关于这种不确定性，你可以使用的最明显的信号是=。
+the most obvious signal you can use about that uncertainty is ===.
 
 146
 00:10:19.749 --> 00:10:23.000
-如果你遵循我在第一条条款中所主张的
-If you followed what I argued
-in the first set of clauses,
+如果你遵循我在第一组条款中的论点，
+If you followed what I argued in the first set of clauses,
 
 147
 00:10:23.000 --> 00:10:27.403
-即，当您了解类型时， == 是首选项，然后使用
-which is that the == is preferable when
-you know the types, then the usage of
+也就是说，当您知道类型时，=更可取，然后使用
+which is that the == is preferable when you know the types, then the usage of
 
 148
 00:10:27.403 --> 00:10:31.572
-=== 应该为您不知道类型的情况保留。
-=== should be reserved for
-the cases where you don't know the types.
+=应该为您不知道类型的情况保留。
+=== should be reserved for the cases where you don't know the types.
 
 149
 00:10:33.480 --> 00:10:36.178
->> 凯尔 - 辛普森: 所以它向读者发出信号，我不知道这些类型，
-&gt;&gt; Kyle Simpson: So that it signals to
-the reader, I don't know the types,
+&gt；&gt；Kyle Simpson：所以它向读者发出信号，我不知道类型，
+&gt;&gt; Kyle Simpson: So that it signals to the reader, I don't know the types,
 
 150
 00:10:36.178 --> 00:10:37.677
-我在努力保护自己
+我只是想保护自己。
 I'm trying to protect myself.
 
 151
 00:10:41.764 --> 00:10:45.929
->> 凯尔 - 辛普森: 它应该跳出来，读者应该看到，这里有一个 === 。
-&gt;&gt; Kyle Simpson: It should jump out,
-the reader should see, there's a === here.
+&gt；&gt；Kyle Simpson：它应该跳出来，读者应该看到，这里有a=。
+&gt;&gt; Kyle Simpson: It should jump out, the reader should see, there's a === here.
 
 152
 00:10:45.929 --> 00:10:48.663
-这意味着这些类型存在一些不确定性，并且
-That means there are some
-uncertainty of the types, and
+这意味着有一些类型的不确定性，并且
+That means there are some uncertainty of the types, and
 
 153
 00:10:48.663 --> 00:10:51.879
-我们得把自己限制在一个角落
-we need to restrict ourselves so
-we don't run into a corner case.
+我们需要限制自己，这样我们就不会陷入困境。
+we need to restrict ourselves so we don't run into a corner case.
 
 154
 00:10:54.822 --> 00:10:59.927
->> Kyle Simpson: 还有，我说不知道类型是等价的
-&gt;&gt; Kyle Simpson: Also, I would say that
-not knowing the types is equivalent
+&gt；&gt；Kyle Simpson：同样，我会说不知道类型是等效的
+&gt;&gt; Kyle Simpson: Also, I would say that not knowing the types is equivalent
 
 155
 00:10:59.927 --> 00:11:05.461
-以假定将发生类型转换或类型强制。
-to assuming that type conversion or
-type coercion will occur.
+到假设将发生类型转换或类型强制。
+to assuming that type conversion or type coercion will occur.
 
 156
 00:11:05.461 --> 00:11:09.462
-这相当于假设如果你不知道这些类型
-It's equivalent to assuming that
-because if you don't know the types,
+这相当于假设，因为如果你不知道类型，
+It's equivalent to assuming that because if you don't know the types,
 
 157
 00:11:09.462 --> 00:11:13.855
-最坏的情况是它们不匹配并且在某些情况下不匹配
-the worst case scenario is that they will
-not match and they will not match in some
+最坏的情况是它们不匹配，并且在某些情况下不匹配
+the worst case scenario is that they will not match and they will not match in some
 
 158
 00:11:13.855 --> 00:11:17.158
-一种奇怪的方式来引起一些奇怪的胁迫
-weird way that invokes some
-weird corner case of coercion.
+奇怪的方式唤起了一些奇怪的角落里的胁迫。
+weird way that invokes some weird corner case of coercion.
 
 159
 00:11:17.158 --> 00:11:19.659
-你得想好最坏的情况
+你需要做最坏的打算。
 You need to assume the worst case.
 
 160
 00:11:19.659 --> 00:11:24.947
-所以不知道这种情况的类型与最坏的情况是一样的。
-So not knowing the types of equivalent
-to that worst case coercion.
+所以不知道什么类型的等同于最坏情况下的胁迫。
+So not knowing the types of equivalent to that worst case coercion.
 
 161
 00:11:24.947 --> 00:11:27.585
-唯一明智的回应是
+对此唯一明智的回应是，
 And the only sensible response to that,
 
 162
 00:11:27.585 --> 00:11:32.485
-唯一安全的响应是使用 === 保护您自己。
-the only safe response to that is
-protect yourself from that with a ===.
+对此唯一安全的反应是用a=保护自己。
+the only safe response to that is protect yourself from that with a ===.
 
 163
 00:11:32.485 --> 00:11:38.682
-如果你不能也不能，用一个你能知道的，
-In summary if you can't or won't,
-use a style where you can know and
+总而言之，如果你不能或不愿意，使用一种你可以知道和
+In summary if you can't or won't, use a style where you can know and
 
 164
 00:11:38.682 --> 00:11:43.794
-有明显的类型，唯一明智的
-have obvious types,
-the only thing that is sensible and
+有明显的类型，唯一合理的和
+have obvious types, the only thing that is sensible and
 
 165
 00:11:43.794 --> 00:11:47.522
-== = 是合理的。
+合理的是你使用=。
 reasonable is for you to use the ===.
 
 166
 00:11:47.522 --> 00:11:51.470
-如果使用 ===，这不是针对您的攻击。
-This isn't meant to be an attack
-against you if use ===.
+如果使用=，这并不意味着对您的攻击。
+This isn't meant to be an attack against you if use ===.
 
 167
 00:11:51.470 --> 00:11:55.148
-我只是想以实际行动来重新讨论
-I'm just trying to reframe this
-discussion in a way that actually moves
+我只是试图以一种真正移动的方式重新构建这个讨论
+I'm just trying to reframe this discussion in a way that actually moves
 
 168
 00:11:55.148 --> 00:11:58.825
-而不是一场宗教争论的讨论
-the discussion forward rather than
-a sort of religious debate of well,
+讨论向前推进，而不是一种宗教辩论，
+the discussion forward rather than a sort of religious debate of well,
 
 169
 00:11:58.825 --> 00:12:03.018
-这本书说从来没有用过，我也从来没有考虑过别的。
-this one book said never use it, and
-I've never even considered anything else.
+这本书说永远不要用它，我甚至从来没有考虑过其他任何东西。
+this one book said never use it, and I've never even considered anything else.
 
 170
 00:12:03.018 --> 00:12:07.849
-我其实是想在这里做一套理性的分析
-I'm actually trying to make a rational
-set of analysis here to come to some real
+我实际上是在试着做一套合理的分析来得出一些真实的结论
+I'm actually trying to make a rational set of analysis here to come to some real
 
 171
 00:12:07.849 --> 00:12:11.447
-结论不只是一个人说的好吗
-conclusion, not just the thing
-that one guy said, okay?
+结论，不只是一个人说的话，好吗？
+conclusion, not just the thing that one guy said, okay?
 
 172
 00:12:11.447 --> 00:12:16.663
-你可以测试我的分析，如果你不同意我的理由，那就好。
-And you can test my analysis, if you don't
-agree with my rationale, that's okay.
+你可以测试我的分析，如果你不同意我的理论，没关系。
+And you can test my analysis, if you don't agree with my rationale, that's okay.
 
 173
 00:12:16.663 --> 00:12:20.854
-但我要搁置这件案子让你能测试理由
-But I'm laying out this case so
-that you can test the rationale.
+但我在陈述这个案子，这样你就可以测试理由了。
+But I'm laying out this case so that you can test the rationale.
 
 174
 00:12:20.854 --> 00:12:23.730
-即使在这种情况下我也会这样说
-And I would say this,
-even in that scenario,
+我要说的是，即使在那种情况下，
+And I would say this, even in that scenario,
 
 175
 00:12:23.730 --> 00:12:27.745
-你要用一个 === 的每个地方都是一样的，
-where every place that you would
-use a === would be the same,
+在那里你使用=的每个地方都是一样的，
+where every place that you would use a === would be the same,
 
 176
 00:12:27.745 --> 00:12:33.043
-就相当于一个 ==，所以你说，你知道，我们就是想简单的
-it would be equivalent to a ==, and so you
-say, you know, we just want the simpler
+它等同于a=，所以你说，你知道，我们只是想要更简单的
+it would be equivalent to a ==, and so you say, you know, we just want the simpler
 
 177
 00:12:33.043 --> 00:12:38.028
-因为林德赫斯特说的，我们想用的东西到处都是 == = 。
-thing we want to use === everywhere
-because that's what Lyndhurst says.
+我们想用=到处使用的东西，因为林德赫斯特是这么说的。
+thing we want to use === everywhere because that's what Lyndhurst says.
 
 178
 00:12:38.028 --> 00:12:41.745
-你实际做的是把错误的语义信号发送给
-What you are actually doing is sending
-the wrong semantic signal to a reader of
+实际上你所做的是向读者发送错误的语义信号
+What you are actually doing is sending the wrong semantic signal to a reader of
 
 179
 00:12:41.745 --> 00:12:42.327
-你的密码
+你的代码。
 your code.
 
 180
 00:12:42.327 --> 00:12:46.043
-我在这些案子里保护自己因为我不知道
-Which is I’m protecting myself in all of
-these cases because I don't know about
+我在所有这些情况下都是在保护自己，因为我不知道
+Which is I’m protecting myself in all of these cases because I don't know about
 
 181
 00:12:46.043 --> 00:12:46.605
@@ -1057,102 +907,88 @@ the types.
 
 182
 00:12:48.539 --> 00:12:51.790
->> 凯尔 - 辛普森: 那不是传达你要传达的信息
-&gt;&gt; Kyle Simpson: And that is not
-communicating what you put to communicate
+&gt；&gt；Kyle Simpson：这不是在传达你想要传达的东西
+&gt;&gt; Kyle Simpson: And that is not communicating what you put to communicate
 
 183
 00:12:51.790 --> 00:12:53.558
-向未来的读者提供密码
+面向代码的未来读者。
 to future readers of the code.
 
 184
 00:12:53.558 --> 00:12:57.062
-了解语义信号的代码的未来读者，
-Future readers of the code
-that see the semantic signal,
+看到语义信号的代码的未来读者，
+Future readers of the code that see the semantic signal,
 
 185
 00:12:57.062 --> 00:13:02.318
-我不知道类型，所以我要回一些 === 保护自己，
-I don't know about the types, so I've to
-fall back to some === to protect myself,
+我不知道类型，所以我不得不退回到一些=保护我自己，
+I don't know about the types, so I've to fall back to some === to protect myself,
 
 186
 00:13:02.318 --> 00:13:06.845
-这些代码的未来读者更有可能重写代码
-those future readers of the code are much
-more likely to rewrite the code,
+代码的那些未来的读取者更有可能重写代码，
+those future readers of the code are much more likely to rewrite the code,
 
 187
 00:13:06.845 --> 00:13:09.111
-因为他们不懂
+因为他们不明白。
 because they don't understand it.
 
 188
 00:13:09.111 --> 00:13:11.462
-他们会第一次做你该做的
-They're gonna do what you should
-have done the first time.
+他们会做你第一次就该做的事
+They're gonna do what you should have done the first time.
 
 189
 00:13:11.462 --> 00:13:15.402
-他们会把它重构到已知类型的地方
-They're gonna refactor it to
-where the types are known.
+他们会把它重构到已知类型的地方。
+They're gonna refactor it to where the types are known.
 
 190
 00:13:15.402 --> 00:13:17.667
-不确定对于您的代码并不是一件好事。
-Uncertainty is not a good thing for
-your code basis.
+不确定性对您的代码基础不是一件好事。
+Uncertainty is not a good thing for your code basis.
 
 191
 00:13:19.743 --> 00:13:23.384
->> Kyle Simpson: 因此，摘要中，使您的类型为已知和
-&gt;&gt; Kyle Simpson: So in summary,
-making your types known and
+&gt；&gt；Kyle Simpson：总之，让你的类型为人所知
+&gt;&gt; Kyle Simpson: So in summary, making your types known and
 
 192
 00:13:23.384 --> 00:13:26.426
-就会有更好的密码
+显然只会导致更好的代码。
 obvious just leads to better code.
 
 193
 00:13:26.426 --> 00:13:29.105
-没有任何理由可以提出相反的意见。
-There's no argument that can
-be made to the contrary.
+没有可以反驳的论点。
+There's no argument that can be made to the contrary.
 
 194
 00:13:29.105 --> 00:13:34.116
-了解类型可导致更好的代码，如果类型已知，那么 == 始终最好。
-Knowing the types leads to better code and
-if the types are known, == is always best.
+知道类型会导致更好的代码，如果类型是已知的，=总是最好的。
+Knowing the types leads to better code and if the types are known, == is always best.
 
 195
 00:13:35.869 --> 00:13:39.201
->> 凯尔 - 辛普森: 在每种情况下，最好是在已知类型的情况下 ==
-&gt;&gt; Kyle Simpson: In every scenario ==
-is best when the types are known and
+&gt；&gt；Kyle Simpson：在每种情况下，当类型已知且
+&gt;&gt; Kyle Simpson: In every scenario == is best when the types are known and
 
 196
 00:13:39.201 --> 00:13:42.965
-在任何情况下都不能返回到 ===。
-in any scenario where you can't
-you should fall back to ===.
+在任何不能的情况下，您都应该回退到=。
+in any scenario where you can't you should fall back to ===.
 
 197
 00:13:42.965 --> 00:13:48.498
-我很清楚这件案子很有争议
-I'm fully aware that case
-is quite controversial.
+我很清楚这个案子很有争议。
+I'm fully aware that case is quite controversial.
 
 198
 00:13:48.498 --> 00:13:52.294
-而你们中的任何一个人都不太相信
-And it's unlikely that any of you
-are convinced at the moment by that
+你们中的任何一个人目前都不太可能被这一点所说服
+And it's unlikely that any of you are convinced at the moment by that
 
 199
 00:13:52.294 --> 00:13:53.100
@@ -1161,35 +997,30 @@ discussion.
 
 200
 00:13:53.100 --> 00:14:00.231
-但我真正想问的是，你要回去思考。
-But what I would really like to ask
-you is to go back and think about it.
+但我真正想问你的是回去考虑一下。
+But what I would really like to ask you is to go back and think about it.
 
 201
 00:14:00.231 --> 00:14:03.346
-后退并测试此原理，并针对您的代码进行测试。
-Go back and test this rationale and
-test it against your code.
+回去测试这个基本原理，并根据您的代码对其进行测试。
+Go back and test this rationale and test it against your code.
 
 202
 00:14:03.346 --> 00:14:08.067
-问自己真的是写更清楚的代码吧
-Ask yourself if you really are writing
-better code that is more clearly
+问问你自己，你是否真的在写更好的更清晰的代码
+Ask yourself if you really are writing better code that is more clearly
 
 203
 00:14:08.067 --> 00:14:12.309
-通过简单使用 === 来传达其意图。
-communicating its intent by
-simply using === everywhere.
+通过简单地使用=Everywhere来传达其意图。
+communicating its intent by simply using === everywhere.
 
 204
 00:14:12.309 --> 00:14:14.510
-我不能为你做这些决定
+我不能为你做这些决定，但是
 I can't make those decisions for you but
 
 205
 00:14:14.510 --> 00:14:19.250
-我认为我已经做了最有力的例子，因为我可以重新分析他们的原因。
-I think I've made the most solid case that
-I can, for why they should be re-analysed.
+我想我已经尽我所能提出了最可靠的理由，为什么他们应该被重新分析。
+I think I've made the most solid case that I can, for why they should be re-analysed.

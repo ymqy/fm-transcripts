@@ -2,100 +2,85 @@ WEBVTT
 
 1
 00:00:00.020 --> 00:00:02.710
->> Kyle Simpson: 如果您对 TypeScript 和 Flow 感兴趣，并且
-&gt;&gt; Kyle Simpson: If you're curious
-about TypeScript and Flow and
+&gt；&gt；Kyle Simpson：如果你对打字稿和流程感兴趣，
+&gt;&gt; Kyle Simpson: If you're curious about TypeScript and Flow and
 
 2
 00:00:02.710 --> 00:00:06.000
-他们的不同之处，就是异同，但是
-their differences, this is both
-similarities and differences, but
+他们的不同之处，这既有相似之处，也有不同之处，但是
+their differences, this is both similarities and differences, but
 
 3
 00:00:06.000 --> 00:00:09.509
-尤其是不同之处，我觉得这篇文章很有帮助。
-especially differences, I found this
-particular article to be very helpful.
+特别是差异，我发现这篇特别的文章非常有帮助。
+especially differences, I found this particular article to be very helpful.
 
 4
 00:00:09.509 --> 00:00:12.525
-他们基本上都是通过两个项目
-They went through essentially
-both projects side by side,
+他们基本上肩并肩地完成了两个项目，
+They went through essentially both projects side by side,
 
 5
 00:00:12.525 --> 00:00:14.830
-所有不同特征的大长列表
-big long list of all
-the different characteristics and
+一大串不同的特征和
+big long list of all the different characteristics and
 
 6
 00:00:14.830 --> 00:00:17.789
-它们的位置相同，相同，相同，以及它们不同的位置。
-where they are the same, same, same, same,
-and the places where they are different.
+在哪里他们是相同的，在哪里他们是不同的。
+where they are the same, same, same, same, and the places where they are different.
 
 7
 00:00:17.789 --> 00:00:19.420
-这篇文章很不错我建议你看看
-It's a good article, so
-I'd recommend checking it out.
+这是一篇很好的文章，所以我建议你去看看。
+It's a good article, so I'd recommend checking it out.
 
 8
 00:00:21.239 --> 00:00:26.140
-总之，我要说的是 TypeScript 和流在
-In summary, what I would say is that
-TypeScript and flow are very useful in
+总之，我想说的是，类型脚本和流程在以下方面非常有用
+In summary, what I would say is that TypeScript and flow are very useful in
 
 9
 00:00:26.140 --> 00:00:31.609
-很多人认为他们帮助解决他们的打字问题
-that a lot of people are finding them to
-be helpful to solve their typing issues,
+很多人发现它们对解决他们的打字问题很有帮助，
+that a lot of people are finding them to be helpful to solve their typing issues,
 
 10
 00:00:31.609 --> 00:00:34.020
-更能让他们的类型变得更明显
+有助于使它们的类型更加明显。
 helpful to make their types more obvious.
 
 11
 00:00:35.200 --> 00:00:39.554
-我觉得他们很沮丧或者只是我很沮丧
-Where I find them to be frustrating or
-maybe it's just me frustrated about
+我发现他们令人沮丧，或者可能只是我感到沮丧
+Where I find them to be frustrating or maybe it's just me frustrated about
 
 12
 00:00:39.554 --> 00:00:44.909
-生态系统就是我们立刻跳的那是唯一的选择
-the ecosystem is that we seem to jump
-immediately to, that's the only option.
+生态系统是我们似乎立即跳到的，这是唯一的选择。
+the ecosystem is that we seem to jump immediately to, that's the only option.
 
 13
 00:00:45.969 --> 00:00:50.859
-如果您具有类型，那么可以完全忽略类型并使用三重等号，或者
-If you have types, you can either ignore
-types entirely and use triple equals, or
+如果有类型，则可以完全忽略类型并使用三重等于，或者
+If you have types, you can either ignore types entirely and use triple equals, or
 
 14
 00:00:50.859 --> 00:00:52.670
-你可以跳到另一个极端
+你可以跳到另一个极端，
 you can jump to this other extreme,
 
 15
 00:00:52.670 --> 00:00:55.789
-在 JavaScript 的上面有一层层
-which is layer on something
-on top of JavaScript,
+它是JavaScript之上的一层，
+which is layer on something on top of JavaScript,
 
 16
 00:00:55.789 --> 00:00:59.619
-我认为这根本不是 JavaScript的 DNA
-which I would argue is fundamentally
-not really the DNA of JavaScript.
+我认为这根本不是JavaScript的DNA。
+which I would argue is fundamentally not really the DNA of JavaScript.
 
 17
 00:01:00.909 --> 00:01:04.438
-我希望两者之间能有一点关系
-And I would like for
-there to be something in between.
+我希望在两者之间有一些东西。
+And I would like for there to be something in between.

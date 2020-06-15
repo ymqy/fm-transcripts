@@ -2,369 +2,320 @@ WEBVTT
 
 1
 00:00:00.160 --> 00:00:04.429
->> Kyle Simpson: 要将模块引入语法，请导入这些模块，
-&gt;&gt; Kyle Simpson: To bring modules
-into your syntax, to import them,
+&gt；&gt；Kyle Simpson：要将模块引入语法，要导入它们，
+&gt;&gt; Kyle Simpson: To bring modules into your syntax, to import them,
 
 2
 00:00:04.429 --> 00:00:06.750
-有两种主要的进口方式。
+有两种主要的导入样式。
 there are two major styles of import.
 
 3
 00:00:06.750 --> 00:00:09.800
-有一堆变体，但是两种主要的进口风格。
-There's a bunch of variations,
-but two major styles of import.
+有很多变化，但有两种主要的进口风格。
+There's a bunch of variations, but two major styles of import.
 
 4
 00:00:09.800 --> 00:00:15.109
-一个称为指定的导入语法，您在第 1 行上看到该语法。
-One is called the named import
-syntax which you see on line 1.
+一种称为命名导入语法，您可以在第1行中看到它。
+One is called the named import syntax which you see on line 1.
 
 5
 00:00:15.109 --> 00:00:20.170
-我导出缺省函数，因此在技术上其名称缺省为
-I exported the default function, so
-technically its name is default from
+我导出了默认函数，所以从技术上讲，它的名称是default from
+I exported the default function, so technically its name is default from
 
 6
 00:00:20.170 --> 00:00:25.173
-然后我决定了默认的进口要求
-the outside, and then I decided to
-name that default import ask on
+外部，然后我决定将默认导入命名为Ask On
+the outside, and then I decided to name that default import ask on
 
 7
 00:00:25.173 --> 00:00:30.570
-第 1 行，即现在在我的顶级范围内发生导入的范围，
-line 1, which means now in my top level
-scope of where the import happened,
+第1行，这意味着现在我的顶级导入发生的范围内，
+line 1, which means now in my top level scope of where the import happened,
 
 8
 00:00:30.570 --> 00:00:32.990
-我现在有个叫 " 问 " 的标识
+我现在有一个名为Ask的标识符，
 I now have an identifier called ask,
 
 9
 00:00:32.990 --> 00:00:36.759
-它是在模块中绑定到请求函数的引用。
-which is reference bound to the ask
-function inside of the module.
+它是绑定到模块内的ask函数的引用。
+which is reference bound to the ask function inside of the module.
 
 10
 00:00:38.070 --> 00:00:41.740
-这就是我们所说的 Java 样式
-That's what we sort of referred to
-as the Java style of import where
+这就是我们所说的Java风格的导入
+That's what we sort of referred to as the Java style of import where
 
 11
 00:00:41.740 --> 00:00:45.250
-导入意味着将标识导入到您的作用域中。
-import means literally to import
-identifiers into your scope.
+import的字面意思是将标识符导入到您的作用域中。
+import means literally to import identifiers into your scope.
 
 12
 00:00:46.880 --> 00:00:51.546
-第二个样式，如您在第 7 行上看到的，一般称为名称空间
-The second style, as you see on line 7,
-is referred to generally as the namespace
+第二种样式，如您在第7行中看到的，通常称为名称空间
+The second style, as you see on line 7, is referred to generally as the namespace
 
 13
 00:00:51.546 --> 00:00:55.536
-输入，即我想获取整个模块并收集所有
-import, which is to say I wanna get
-this whole module and collect all of
+导入，也就是说我想得到整个模块并收集所有
+import, which is to say I wanna get this whole module and collect all of
 
 14
 00:00:55.536 --> 00:01:00.159
-它的内容在一个名称间隔的变量中，在这个例子中称为工作坊。
-its contents onto a single name spaced
-variable, in this case called workshop.
+将其内容放到单个名称分隔的变量上，在本例中称为工作坊。
+its contents onto a single name spaced variable, in this case called workshop.
 
 15
 00:01:01.951 --> 00:01:03.506
->> 凯尔 - 辛普森:
-&gt;&gt; Kyle Simpson: So
-I do import * as workshop,
+&gt；&gt；Kyle Simpson：所以我做进口*作为车间，
+&gt;&gt; Kyle Simpson: So I do import * as workshop,
 
 16
 00:01:03.506 --> 00:01:06.189
-这叫名称空间导入
+这称为名称空间导入。
 that's called the namespace import.
 
 17
 00:01:06.189 --> 00:01:08.430
-那是另一个不同的想法
+这是一个不同的思想流派
 And that's a different school of thinking,
 
 18
 00:01:08.430 --> 00:01:11.890
-就是这些模块就像这些名称空间的东西。
-which is that modules are like
-these namespace things.
+也就是说，模块就像这些命名空间的东西。
+which is that modules are like these namespace things.
 
 19
 00:01:11.890 --> 00:01:16.829
-我认为这种风格代表了大多数模块的完成
-I think that style represents the vast
-majority of how modules have been done in
+我认为这种风格代表了绝大多数模块是如何完成的
+I think that style represents the vast majority of how modules have been done in
 
 20
 00:01:16.829 --> 00:01:19.043
-过去 20 年的 JavaScript
+过去20年的JavaScript。
 JavaScript for the last 20 years.
 
 21
 00:01:19.043 --> 00:01:23.819
-而命名的进口语法也代表了新的思维学校。
-And the named import syntax represents
-kinda the new school of thinking.
+命名的import语法代表了一种新的思想流派。
+And the named import syntax represents kinda the new school of thinking.
 
 22
 00:01:24.870 --> 00:01:27.260
-不是一个是对的，一个是错的，但是
-It's not that one is right and
-one is wrong, but
+不是说一个是对的，一个是错的，但是
+It's not that one is right and one is wrong, but
 
 23
 00:01:27.260 --> 00:01:31.140
-他们对你的消费方式有不同的思考方式
-they're different ways of thinking
-about how you consume stuff.
+它们是思考你如何消费东西的不同方式。
+they're different ways of thinking about how you consume stuff.
 
 24
 00:01:31.140 --> 00:01:35.200
-我当然在营地里喜欢输入一个名称空间，然后我就
-I certainly am in the camp that prefers
-to import a namespace, and then I
+我当然属于更喜欢导入名称空间的阵营，然后我
+I certainly am in the camp that prefers to import a namespace, and then I
 
 25
 00:01:35.200 --> 00:01:40.319
-有一个叫车间的东西，然后我又有个东西叫别的东西。
-have a thing called workshop, and then I
-have another thing called something else.
+有一个叫车间的东西，然后我有另一个东西叫别的东西。
+have a thing called workshop, and then I have another thing called something else.
 
 26
 00:01:40.319 --> 00:01:43.602
-这就是我的大脑运作方式，有些人喜欢被命名的进口产品，
-That's the way my brain works,
-some people like the named imports,
+我的大脑就是这样工作的，有些人喜欢有名字的进口，
+That's the way my brain works, some people like the named imports,
 
 27
 00:01:43.602 --> 00:01:45.289
-都是语法感谢
+谢天谢地，两种语法都有。
 both syntaxes,thankfully.
 
 28
 00:01:45.289 --> 00:01:47.700
-他们不会做空间导入和
-They weren't gonna do
-the name space import and
+他们不会做命名空间导入和
+They weren't gonna do the name space import and
 
 29
 00:01:47.700 --> 00:01:49.859
-然后在最后一刻加入
+然后他们在最后一分钟添加了它
 then they added it at the last minute and
 
 30
 00:01:49.859 --> 00:01:54.000
-我非常感谢，因为这就是我想处理它的方式。
-I was so thankful because that's the way
-that I would prefer to deal with it.
+我很感激，因为这是我更喜欢的处理方式。
+I was so thankful because that's the way that I would prefer to deal with it.
 
 31
 00:01:54.000 --> 00:01:59.340
-所以有您的 ES6 模块语法，例如，我们不期望语法
-So there's your ES6 module syntax, such
-as it is, we're not expecting syntactic
+所以这就是你的ES6模块语法，尽管它是，我们并不期待语法
+So there's your ES6 module syntax, such as it is, we're not expecting syntactic
 
 32
 00:01:59.340 --> 00:02:05.670
-更改，但在节点土地上使用时，会出现各种警告。
-changes but there will be a variety of
-caveats when you're using it in node land.
+改变，但当你在节点土地上使用它时，将会有各种各样的警告。
+changes but there will be a variety of caveats when you're using it in node land.
 
 33
 00:02:05.670 --> 00:02:08.909
-而且因为它会在陆地上很受欢迎你可以预料到
-And because it's gonna be so popular in
-node land, you can expect that those same
+而且因为它将在节点土地上非常流行，你可以期待那些相同的
+And because it's gonna be so popular in node land, you can expect that those same
 
 34
 00:02:08.909 --> 00:02:12.370
-caveat 可能也会转至您的浏览器 JavaScript 。
-caveats will probably carry over to
-your browser JavaScript, as well.
+警告可能也会传到您的浏览器JavaScript中。
+caveats will probably carry over to your browser JavaScript, as well.
 
 35
 00:02:12.370 --> 00:02:13.250
-你有问题
+你有问题。
 You got a question.
 
 36
 00:02:13.250 --> 00:02:17.556
->> 扬声器 2: 当您说您喜欢旧的模块样式时，
-&gt;&gt; Speaker 2: When you say you prefer
-the old module style you mean,
+&gt；&gt；扬声器2：当你说你更喜欢旧的模块风格时，你的意思是，
+&gt;&gt; Speaker 2: When you say you prefer the old module style you mean,
 
 37
 00:02:17.556 --> 00:02:21.150
-是否在一个文件中显示模块模式 ?
+在一个文件中显示模块模式？
 the revealing module pattern in one file?
 
 38
 00:02:21.150 --> 00:02:23.819
->> Kyle Simpson: 函数环绕在几张幻灯片之前。
-&gt;&gt; Kyle Simpson: The function
-wrapped around a couple slides ago.
+&gt；&gt；Kyle Simpson：该函数在几张幻灯片前包装。
+&gt;&gt; Kyle Simpson: The function wrapped around a couple slides ago.
 
 39
 00:02:23.819 --> 00:02:24.764
->> 扬声器 2: 谢谢。 >> 凯尔 - 辛普森:
-&gt;&gt; Speaker 2: Thank you.
-&gt;&gt; Kyle Simpson: Mm-hm.
+&gt；&gt；发言人2：谢谢。&gt；&gt；Kyle Simpson：嗯哼。
+&gt;&gt; Speaker 2: Thank you. &gt;&gt; Kyle Simpson: Mm-hm.
 
 40
 00:02:26.788 --> 00:02:30.010
->> Kyle Simpson: 具体地说，当我要执行模块时，
-&gt;&gt; Kyle Simpson: Specifically
-when I'm gonna do a module,
+&gt；&gt；Kyle Simpson：特别是当我要做一个模块的时候，
+&gt;&gt; Kyle Simpson: Specifically when I'm gonna do a module,
 
 41
 00:02:30.010 --> 00:02:33.150
-我将模块显示为 UMD 样式模块。
+我将我的模块公开为UMD样式的模块。
 I expose my modules as UMD style modules.
 
 42
 00:02:34.240 --> 00:02:36.199
-这是通用模块定义。
+这就是通用模块定义。
 That's the universal module definition.
 
 43
 00:02:36.199 --> 00:02:41.469
-它应该在浏览器，模块装入器和节点之间进行交互。
-It's supposed to kind of inter-operate
-between browsers, module loaders and node.
+它应该在浏览器、模块加载器和节点之间进行互操作。
+It's supposed to kind of inter-operate between browsers, module loaders and node.
 
 44
 00:02:42.620 --> 00:02:44.204
-这就是我选择写的格式。
+这就是我选择的写作格式。
 So that's the format I choose to write in.
 
 45
 00:02:46.550 --> 00:02:49.258
->> Kyle Simpson: 因此，您是否在您的
-&gt;&gt; Kyle Simpson: So whether you
-use a syntactic support in your
+&gt；&gt；Kyle Simpson：那么您是否在您的
+&gt;&gt; Kyle Simpson: So whether you use a syntactic support in your
 
 46
 00:02:49.258 --> 00:02:51.466
-定义模块的语言，或
+定义模块的语言，或者
 language to define your modules, or
 
 47
 00:02:51.466 --> 00:02:56.027
-你是否选择利用旧的学校展示模块模式
-whether you choose to hack it with
-the old school revealing module pattern,
+不管你是选择用老式的揭示模块模式来破解它，
+whether you choose to hack it with the old school revealing module pattern,
 
 48
 00:02:56.027 --> 00:03:00.943
-这个概念也适用，就是你要组织一套行为，
-the same concept applies, which is that
-you're organizing a set of behavior into
+同样的概念也适用，即您正在将一组行为组织到
+the same concept applies, which is that you're organizing a set of behavior into
 
 49
 00:03:00.943 --> 00:03:05.250
-一个内聚性单元将数据隐藏在其中，并暴露最小必需的 API。
-a cohesive unit hiding data in it and
-exposing a minimal necessary API.
+一个内聚单元，在其中隐藏数据并公开最少必要的API。
+a cohesive unit hiding data in it and exposing a minimal necessary API.
 
 50
 00:03:06.490 --> 00:03:08.210
 这就是你想要得到的设计模式。
-That's the design pattern
-that you wanna get.
+That's the design pattern that you wanna get.
 
 51
 00:03:08.210 --> 00:03:12.689
-然后，就像我说的，这是你能学到的最重要的事情之一
-And then, like I said, it’s one of the
-most important things that you can learn
+然后，就像我说的，这是你可以学到的最重要的事情之一
+And then, like I said, it’s one of the most important things that you can learn
 
 52
 00:03:12.689 --> 00:03:14.710
-有关组织您的 JavaScript的信息。
+关于组织你的JavaScript。
 about organizing your JavaScript.
 
 53
 00:03:14.710 --> 00:03:16.340
-其实你在里面做什么都不重要
-It actually doesn’t matter
-what you do on the inside.
+实际上你在里面做什么并不重要。
+It actually doesn’t matter what you do on the inside.
 
 54
 00:03:16.340 --> 00:03:19.550
-如果你真的想这样的话你可以在里面写课
-You could write classes all over place on
-the inside if that’s how you really wanted
+如果这是你真正想要的，你可以在内部到处写类
+You could write classes all over place on the inside if that’s how you really wanted
 
 55
 00:03:19.550 --> 00:03:24.710
-但是你还是想把所有这些行为
-to do stuff, but you're still gonna
-want to organize all of that behavior
+去做一些事情，但你仍然想要组织所有的行为
+to do stuff, but you're still gonna want to organize all of that behavior
 
 56
 00:03:24.710 --> 00:03:29.948
-在一个模块中，某人可以将该行为导入到其应用中并使用它。
-into a module, so that somebody can import
-that behavior into their app and use it.
+到一个模块中，这样某人就可以将该行为导入到他们的应用程序中并使用它。
+into a module, so that somebody can import that behavior into their app and use it.
 
 57
 00:03:29.948 --> 00:03:35.650
-模块模式一定要留在这里不会去任何地方
-Module pattern, is definitely here
-to stay, it's not gonna go anywhere.
+模块模式，肯定会留在这里，它不会去任何地方。
+Module pattern, is definitely here to stay, it's not gonna go anywhere.
 
 58
 00:03:37.079 --> 00:03:40.680
-好了，就这样，有模块模式。
-All right, so there you go,
-there is the module pattern.
+好的，就是这样，这就是模块模式。
+All right, so there you go, there is the module pattern.
 
 59
 00:03:40.680 --> 00:03:45.620
-在这个问题上我们对这个问题有了充分的理解
-And with that, we now have a full
-breadth of understanding of
+有鉴于此，我们现在对
+And with that, we now have a full breadth of understanding of
 
 60
 00:03:45.620 --> 00:03:50.270
-词法范围核心或主支柱，
+词汇范围核心或主要支柱，
 the lexical scope core or the main pillar,
 
 61
 00:03:50.270 --> 00:03:54.082
-这是 JavaScript 语言的主要支柱。
-this main pillar of
-the JavaScript language.
+这是JavaScript语言的主要支柱。
+this main pillar of the JavaScript language.
 
 62
 00:03:54.082 --> 00:03:58.868
-如果我要在三大支柱中煮沸，这个是最重要的。
-And if I were to boil down among the three
-pillars, this one is the most important.
+如果我要归结为三根支柱，这一根是最重要的。
+And if I were to boil down among the three pillars, this one is the most important.
 
 63
 00:03:58.868 --> 00:04:03.400
-它是用这种基本方式触摸所有其他事物的。
-It's the one that touches everything
-else in such a foundational way.
+这是一个以这样一种基本的方式接触到其他一切的人。
+It's the one that touches everything else in such a foundational way.
 
 64
 00:04:03.400 --> 00:04:08.879
-希望这能让你更好地了解词法技能。
-So hopefully that has provided you
-a better perspective on lexical skill.
+所以希望这为你提供了一个关于词汇技能的更好的视角。
+So hopefully that has provided you a better perspective on lexical skill.

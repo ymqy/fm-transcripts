@@ -2,562 +2,495 @@ WEBVTT
 
 1
 00:00:00.020 --> 00:00:01.044
->> 凯尔: 那么 ToNumber 怎么办 ?
+&GT；&GT；Kyle：那么ToNumber呢？
 &gt;&gt; Kyle: So what about ToNumber?
 
 2
 00:00:01.044 --> 00:00:04.509
-这件更有趣的地方还有更多的角处
-This one's a bit more interesting cuz
-there's a lot more corner cases involved.
+这个更有趣，因为涉及到更多的角落案件。
+This one's a bit more interesting cuz there's a lot more corner cases involved.
 
 3
 00:00:04.509 --> 00:00:07.588
-如果我们需要做点数字而我们没有数字
-Anytime we need to do something
-numeric and we don't have a number,
+任何时候，我们需要做一些数字，但我们没有一个数字，
+Anytime we need to do something numeric and we don't have a number,
 
 4
 00:00:07.588 --> 00:00:10.730
-我们要调用 ToNumber 抽象操作
-we're gonna invoke the ToNumber
-abstract operation.
+我们将调用ToNumber抽象操作。
+we're gonna invoke the ToNumber abstract operation.
 
 5
 00:00:10.730 --> 00:00:12.339
-那么，这些人的例子是什么呢 ?
+那么有哪些例子呢？
 So what are some examples of those?
 
 6
 00:00:12.339 --> 00:00:15.490
-有些是很不错的，但有些很奇怪。
-Some of them are well formed,
-but some of them are strange.
+他们中的一些人格式很好，但他们中的一些人是奇怪的。
+Some of them are well formed, but some of them are strange.
 
 7
 00:00:15.490 --> 00:00:20.570
-我认为空的字符串是最让我最幸运的一个。
-Empty string, I think, is the one
-that drives me the most bonkers.
+空线，我想，是最让我抓狂的。
+Empty string, I think, is the one that drives me the most bonkers.
 
 8
 00:00:20.570 --> 00:00:23.539
-空字符串，每当数字化，或
+空字符串，无论何时进行数字编码，或
 Empty string, whenever numericofied, or
 
 9
 00:00:23.539 --> 00:00:27.320
-不管用什么正确的词都变成了 0
-whatever the right word would be for
-that, becomes 0.
+不管合适的词是什么，都变成了0。
+whatever the right word would be for that, becomes 0.
 
 10
 00:00:27.320 --> 00:00:29.545
-就我所关心的
+现在就我而言
 Now as far as I'm concerned,
 
 11
 00:00:29.545 --> 00:00:34.268
-空字符串是您说我在字符串中没有值的方式。
-empty string is the way that you
-say I have no values in a string.
+空字符串是你说我在字符串中没有值的方式。
+empty string is the way that you say I have no values in a string.
 
 12
 00:00:36.009 --> 00:00:39.340
-在该类型中不存在任何字符串值。
-It's the absence of any string
-value within that type.
+这是因为该类型中没有任何字符串值。
+It's the absence of any string value within that type.
 
 13
 00:00:39.340 --> 00:00:43.429
-不存在字符串类型中缺少值的其他表示，
-There's no other representation of the
-absence of values within the string type,
+没有其他表示字符串类型中缺少值的表示，
+There's no other representation of the absence of values within the string type,
 
 14
 00:00:43.429 --> 00:00:46.100
-除了空的字串我还能看出来
-other than an empty string,
-as far as I can tell.
+据我所知，除了空字符串之外。
+other than an empty string, as far as I can tell.
 
 15
 00:00:46.100 --> 00:00:50.850
-所以如果没有价值，为什么在地球上，当它变成一个数字时，
-So if it's the absence of value, why on
-Earth does it, when it becomes a number,
+所以如果是价值的缺失，为什么要这么做，当它变成一个数字时，
+So if it's the absence of value, why on Earth does it, when it becomes a number,
 
 16
 00:00:50.850 --> 00:00:55.369
-成为实际数字，如数字 0 ，而不是已存在的数字
-become an actual number like the number 0
-instead of the number that already exist
+变成一个像数字0一样的实际数字，而不是已经存在的数字
+become an actual number like the number 0 instead of the number that already exist
 
 17
 00:00:55.369 --> 00:00:58.570
-在语言中，表示我们没有有效的号码?
-in the language, that represents
-we don't have a valid number?
+在语言中，这表示我们没有一个有效的数字？
+in the language, that represents we don't have a valid number?
 
 18
 00:00:58.570 --> 00:01:00.469
-那是 NaN
+应该是南。
 Which would have been NaN.
 
 19
 00:01:00.469 --> 00:01:03.859
-我在这一点上就在这一点因为事实证明了
-I'm ranting on this particular
-point because it turns out,
+我在这一点上大声疾呼是因为事实证明，
+I'm ranting on this particular point because it turns out,
 
 20
 00:01:03.859 --> 00:01:06.189
-我们会看到那是 JavaScript中所有邪恶的根源
-we're gonna see that's the root
-of all evil in JavaScript.
+我们将看到这是JavaScript中所有邪恶的根源。
+we're gonna see that's the root of all evil in JavaScript.
 
 21
 00:01:06.189 --> 00:01:09.890
-但大部分其他的都是非常明智的。
-But most of the rest of
-these are all very sensible.
+但其余大部分都是非常明智的。
+But most of the rest of these are all very sensible.
 
 22
 00:01:09.890 --> 00:01:12.174
-如果您有字符串 0，那么它将变为 0。
+如果您有字符串0，它将变为0。
 If you had the string 0, it becomes 0.
 
 23
 00:01:12.174 --> 00:01:17.106
-如果你有一个字符串 -0 ，这是一个意外，它实际上变成了 -0，
-If you had the string -0,
-here's a surprise, it actually becomes -0,
+如果你有字符串-0，这里有一个惊喜，它实际上变成了-0，
+If you had the string -0, here's a surprise, it actually becomes -0,
 
 24
 00:01:17.106 --> 00:01:17.885
-非常酷
+很酷。
 very cool.
 
 25
 00:01:17.885 --> 00:01:21.867
-它会去掉任何领先的空格，尾部空格，以及
-It strips off any leading white space,
-trailing whitespace, and
+它去掉了任何前导空格、尾随空格和
+It strips off any leading white space, trailing whitespace, and
 
 26
 00:01:21.867 --> 00:01:24.239
-所以我们只需要 9个
+前导零，所以我们只得到9。
 leading zeros, so we just get 9.
 
 27
 00:01:24.239 --> 00:01:26.293
-它能很好地处理浮点数。
+它可以很好地处理浮点。
 It handles floating points well.
 
 28
 00:01:26.293 --> 00:01:28.750
-一些古怪的线索和线索
-Some weirdness with the trailing and
-leading dots, but
+关于尾部和前导圆点的一些奇怪之处，但是
+Some weirdness with the trailing and leading dots, but
 
 29
 00:01:28.750 --> 00:01:30.579
-这些都在语法上有效。
+这些在句法上是有效的。
 those are syntactically valid.
 
 30
 00:01:30.579 --> 00:01:36.079
-它甚至可以处理其他的碱基，比如这个例子，十六进制。
-It even handles other's bases,
-like in this case, hexadecimal.
+它甚至处理其他的基数，就像本例中的十六进制一样。
+It even handles other's bases, like in this case, hexadecimal.
 
 31
 00:01:36.079 --> 00:01:40.259
-我不知道这个词应该是什么
-So the numerification,
-I don't know what that word should be,
+所以数字，我不知道这个词应该是什么，
+So the numerification, I don't know what that word should be,
 
 32
 00:01:40.259 --> 00:01:45.206
-一个字符串值是相当合理的，有几个奇怪的角个案。
-of a string value is fairly sensible,
-with a couple of weird corner cases.
+字符串值是相当合理的，有几种奇怪的角点情况。
+of a string value is fairly sensible, with a couple of weird corner cases.
 
 33
 00:01:45.206 --> 00:01:50.585
-如何处理谬误的数字或
-What about dealing with
-the numerification of falses or
+如何处理错误或错误的数值化
+What about dealing with the numerification of falses or
 
 34
 00:01:50.585 --> 00:01:53.750
-truees， nulls 或 undefined ?
+TRUE、NULL或UNDEFINED？
 trues, or nulls or undefined?
 
 35
 00:01:53.750 --> 00:01:54.891
-那些原始的人呢
+其他的原语呢？
 What about those other primitives?
 
 36
 00:01:54.891 --> 00:01:58.087
-那么 false 变为 0， true 变为 1。
+好的，假变成0，真变成1。
 Well, false becomes 0, true becomes 1.
 
 37
 00:01:58.087 --> 00:02:02.379
-从一开始，你也许会想，这完全有道理。
-And at the outset, you might think,
-well, that makes complete sense.
+在开始的时候，你可能会想，嗯，这是完全有道理的。
+And at the outset, you might think, well, that makes complete sense.
 
 38
 00:02:02.379 --> 00:02:05.299
-从历史上我们一直认为错误是 0
-Historically, we've always
-thought of false as being 0 and
+从历史上看，我们一直认为假是0，
+Historically, we've always thought of false as being 0 and
 
 39
 00:02:05.299 --> 00:02:09.590
-值为 1，从位角度来看。
-true as being 1,
-from bit-wise perspective.
+从逐位的角度来看，为1为真。
+true as being 1, from bit-wise perspective.
 
 40
 00:02:09.590 --> 00:02:14.234
-我要走了我要把脚放下来说这主意糟透了
-I'm gonna go, I'm gonna put my foot
-down and say that was a terrible idea,
+我要走了，我要坚定地说那是个糟糕的主意，
+I'm gonna go, I'm gonna put my foot down and say that was a terrible idea,
 
 41
 00:02:14.234 --> 00:02:19.426
-如果数字应该表示为 NaN，那么表示 false 和 true 。
-that false and true, when represented as
-numbers should have represented as NaN.
+该假和真，当表示为数字时，应该表示为NaN。
+that false and true, when represented as numbers should have represented as NaN.
 
 42
 00:02:19.426 --> 00:02:21.000
-你会知道为什么以后会这样
+稍后你就会明白为什么。
 And you'll see why a little bit later.
 
 43
 00:02:21.000 --> 00:02:23.719
-但我不喜欢这个决定
+但是那个，我不喜欢这个决定。
 But that, I don't like that decision.
 
 44
 00:02:23.719 --> 00:02:27.280
-但我明白为什么在更大的编程范围内
-But I understand why,
-within the context of greater programming,
+但我理解为什么在更大的规划范围内，
+But I understand why, within the context of greater programming,
 
 45
 00:02:27.280 --> 00:02:29.240
-这可能是大多数人所期待的
-that's probably what
-most people would expect.
+这可能是大多数人所期待的。
+that's probably what most people would expect.
 
 46
 00:02:29.240 --> 00:02:32.430
-空值为 0，好吗 ?
+NULL变成0，好吗？
 Null becomes 0, okay?
 
 47
 00:02:32.430 --> 00:02:35.050
-但未定义的是 NaN ，什么?
+但是undefined变成NaN，什么？
 But undefined becomes NaN, what?
 
 48
 00:02:36.569 --> 00:02:39.569
-在这里他们决定最后使用 NaN ，但它们不使用 NN吗 ?
-Here they decided to finally use NaN,
-but they didn't use it with null?
+在这里，他们最终决定使用NaN，但他们没有将其与null一起使用？
+Here they decided to finally use NaN, but they didn't use it with null?
 
 49
 00:02:41.379 --> 00:02:42.389
-有人向我解释
+谁来给我解释一下。
 Somebody explain that one to me.
 
 50
 00:02:42.389 --> 00:02:44.590
-NaN 应该是 NN，就像 NNaN 一样。
-Null should have been NaN,
-just like undefined should have been NaN.
+null应该是NaN，就像undefined应该是NaN一样。
+Null should have been NaN, just like undefined should have been NaN.
 
 51
 00:02:46.139 --> 00:02:51.370
-好吧当我们在非原始的非原始状态下使用 ToNumber 时
-Okay, so when we use ToNumber on
-a nonprimitive that's not a string,
+好的，所以当我们对不是字符串的非原语使用ToNumber时，
+Okay, so when we use ToNumber on a nonprimitive that's not a string,
 
 52
 00:02:51.370 --> 00:02:54.889
-或者不是一个没有定义的，或者是一个布尔值什么的，当我们在一个物体中使用它的时候，
-or not an undefined, or a boolean or
-whatever, when we use it in an object,
+或者不是未定义的，或者是布尔值或其他什么，当我们在对象中使用它时，
+or not an undefined, or a boolean or whatever, when we use it in an object,
 
 53
 00:02:54.889 --> 00:02:58.079
-记得它用数字提示唤起了托普里米蒂
-remember it evokes the ToPrimitive
-with the number hint.
+记住，它用数字提示唤起了ToPrimitive。
+remember it evokes the ToPrimitive with the number hint.
 
 54
 00:02:58.079 --> 00:03:01.180
-如果你还记得那就先把 valueOf
-And if you recall,
-that consults first the valueOf, and
+如果您还记得，它首先参考的是的值，并且
+And if you recall, that consults first the valueOf, and
 
 55
 00:03:01.180 --> 00:03:02.338
-然后它会咨询 toString。
+然后它查询toString。
 then it consults the toString.
 
 56
 00:03:03.810 --> 00:03:05.080
-那么这看起来是什么样的呢 ?
+那看起来像什么？
 So what does that look like?
 
 57
 00:03:05.080 --> 00:03:09.909
-那么对于任何数组或对象，缺省情况下，表示您
-Well, for any array or object,
-by default, meaning you
+嗯，对于任何数组或对象，默认情况下，意味着您
+Well, for any array or object, by default, meaning you
 
 58
 00:03:09.909 --> 00:03:14.939
-未覆盖这些值， valueOf 方法本质上仅返回自身。
-have not overridden these, the valueOf
-method essentially just returns itself.
+没有覆盖这些，valueOf方法本质上只是返回本身。
+have not overridden these, the valueOf method essentially just returns itself.
 
 59
 00:03:14.939 --> 00:03:17.469
-它本质上就是这样，把它退回去。
+它本质上是这样做的，返回这个。
 It essentially does this, return this.
 
 60
 00:03:17.469 --> 00:03:22.360
-这会影响仅忽略 toString 的 valueOf 和 dexing 。
-Which has the affect of just ignoring
-the valueOf and deferring to toString.
+其具有仅仅忽略value of并延迟到toString的影响。
+Which has the affect of just ignoring the valueOf and deferring to toString.
 
 61
 00:03:22.360 --> 00:03:25.219
-所以即使提示是数字也不重要。
-So it doesn’t even matter
-that the hint was number.
+所以暗示是数字并不重要。
+So it doesn’t even matter that the hint was number.
 
 62
 00:03:25.219 --> 00:03:27.849
-它直接转至 toString。
+它只是直接进入toString。
 It just goes directly to the toString.
 
 63
 00:03:27.849 --> 00:03:32.509
-你可以想象一个物体的数字化
-You can think of the numberification
-of an object as,
+你可以认为一个物体的编号是，
+You can think of the numberification of an object as,
 
 64
 00:03:32.509 --> 00:03:34.125
-本质上，它的平化。
+本质上，它的串行化。
 essentially, the stringification of it.
 
 65
 00:03:34.125 --> 00:03:39.469
-它会产生产生任何 toString 或 valueOf 的产品。
-It's that it's gonna end up producing
-whatever toString or valueOf produces.
+它最终会产生任何toString或value of产生的结果。
+It's that it's gonna end up producing whatever toString or valueOf produces.
 
 66
 00:03:39.469 --> 00:03:43.329
-那是个变态的选择但还是选择
-That's a perplexing choice, but
-it's the choice nonetheless,
+这是一个令人费解的选择，但它仍然是一个选择，
+That's a perplexing choice, but it's the choice nonetheless,
 
 67
 00:03:43.329 --> 00:03:46.050
-它会产生一个原始的字符串
-is that it's gonna actually
-produce a primitive string.
+它实际上会产生一个原始字符串。
+is that it's gonna actually produce a primitive string.
 
 68
 00:03:47.139 --> 00:03:51.090
-所以在你的各种行动中你预期会有一个原始的
-So then in your various operations where
-you were expecting a primitive, but
+因此，在您的各种操作中，您希望得到一个原语，但是
+So then in your various operations where you were expecting a primitive, but
 
 69
 00:03:51.090 --> 00:03:54.439
-你想要一个原始的数字实际上这里有一个原始的字符串
-you wanted a primitive number,
-there's actually a primitive string there.
+你想要一个本原数字，那里实际上有一个原语字符串。
+you wanted a primitive number, there's actually a primitive string there.
 
 70
 00:03:55.490 --> 00:03:58.030
-然后就会有更多的强迫
+然后进一步的胁迫就会发生。
 And then further coersions will kick in.
 
 71
 00:03:58.030 --> 00:04:00.555
-所以我们要推迟到 toString
-So we're gonna end up
-deferring to the toString and
+所以我们最终会遵循toString
+So we're gonna end up deferring to the toString and
 
 72
 00:04:00.555 --> 00:04:02.210
-任何 toString 返回的内容。
+toString返回的内容。
 whatever the toString returns.
 
 73
 00:04:02.210 --> 00:04:06.180
-记住如何在没有任何方括号的情况下对自己进行排列。
-Remember how arrays toStringify
-themselves without any brackets.
+记住数组是如何在没有任何括号的情况下对自身进行Stringify的。
+Remember how arrays toStringify themselves without any brackets.
 
 74
 00:04:06.180 --> 00:04:08.877
-因此，我们会得到一个数组，其中包含空字符串。
-So again, we get an array
-with an empty string in it.
+同样，我们得到一个包含空字符串的数组。
+So again, we get an array with an empty string in it.
 
 75
 00:04:08.877 --> 00:04:14.379
-当我们 ToNumber 它的时候，它就成了 0，是疯了。
-When we ToNumber it,
-it ends up as 0, which is nuts.
+当我们对它进行编号时，它最终是0，这是胡说八道。
+When we ToNumber it, it ends up as 0, which is nuts.
 
 76
 00:04:14.379 --> 00:04:17.759
-然后，在其中包含 0 的字符串变为 0 更有意义。
-And then the string with 0 in it,
-becoming 0 makes a lot more sense.
+然后是包含0的字符串，变成0更有意义。
+And then the string with 0 in it, becoming 0 makes a lot more sense.
 
 77
 00:04:17.759 --> 00:04:19.589
-- 0 比我更有道理
+而-0则更有意义。
 And -0 makes a lot more sense.
 
 78
 00:04:20.589 --> 00:04:21.990
-太离奇了
+这里有件奇怪的事情。
 Here's something bizarre.
 
 79
 00:04:21.990 --> 00:04:25.839
-如果数组为空或未定义，那么它将变为 0。
-If the array has either null or
-undefined, it becomes 0.
+如果数组为NULL或未定义，则为0。
+If the array has either null or undefined, it becomes 0.
 
 80
 00:04:25.839 --> 00:04:26.779
-看看你是否需要注意
+看看你有没有注意到。
 See if you're paying attention.
 
 81
 00:04:26.779 --> 00:04:29.819
-谁能告诉我为什么这两个人都成了 0
-Can anyone tell me why both
-of those become 0 here?
+有人能告诉我为什么这里这两个都变成0吗？
+Can anyone tell me why both of those become 0 here?
 
 82
 00:04:29.819 --> 00:04:31.860
->> 扬声器 2: 与以下项的其余部分不一致 -
-&gt;&gt; Speaker 2: Not consistent
-with the rest of the-
+&gt；&gt；扬声器2：与其余部分不一致-
+&gt;&gt; Speaker 2: Not consistent with the rest of the-
 
 83
 00:04:31.860 --> 00:04:33.220
->> 凯尔: 实际上，这很明显
+&gt；&gt；Kyle：实际上，这是非常显著的
 &gt;&gt; Kyle: Actually, this is remarkably
 
 84
 00:04:33.220 --> 00:04:35.870
-与我们已经看到的其他疯狂的情况相符
-consistent with the other
-craziness we've already seen.
+与我们已经看到的其他疯狂一致。
+consistent with the other craziness we've already seen.
 
 85
 00:04:35.870 --> 00:04:37.420
->> 扬声器 3: 因为它们首先成为空字符串吗 ?
-&gt;&gt; Speaker 3: Because they
-first become empty strings?
+&gt；&gt；扬声器3：因为它们首先变成空字符串？
+&gt;&gt; Speaker 3: Because they first become empty strings?
 
 86
 00:04:37.420 --> 00:04:41.090
->> 凯尔: 它们首先变为空字符串，然后空字符串变为 0。
-&gt;&gt; Kyle: They first become empty strings,
-and then empty string becomes 0.
+&gt；&gt；Kyle：它们首先变成空字符串，然后空字符串变成0。
+&gt;&gt; Kyle: They first become empty strings, and then empty string becomes 0.
 
 87
 00:04:41.090 --> 00:04:45.000
-记住空弦是所有高压恶魔的根
-Remember, empty string is the root
-of all coercion evil, okay?
+记住，空字符串是所有强迫邪恶的根源，好吗？
+Remember, empty string is the root of all coercion evil, okay?
 
 88
 00:04:45.000 --> 00:04:47.694
-空字符串变成 0 是所有强制邪恶的根源，好吗 ?
-Empty string becoming 0 is the root
-of all coercion evil, okay?
+空字符串变成0是所有强制邪恶的根源，好吗？
+Empty string becoming 0 is the root of all coercion evil, okay?
 
 89
 00:04:47.694 --> 00:04:50.269
-跟那个最底层疯狂的嵌套阵列一样
-Same thing with that bottom
-crazy nested array thing,
+下面那个疯狂的嵌套数组也是一样的，
+Same thing with that bottom crazy nested array thing,
 
 90
 00:04:50.269 --> 00:04:53.534
-就变成了一个空的字符串，就变成 0了，好吗 ?
-it just becomes an empty string,
-which then just becomes 0, okay?
+它只是变成一个空字符串，然后变成0，好吗？
+it just becomes an empty string, which then just becomes 0, okay?
 
 91
 00:04:56.401 --> 00:05:01.910
->> 凯尔: 好的，如果您有对象，那么它的 toString 将返回对象。
-&gt;&gt; Kyle: All right, so if you have an
-object, its toString returns the object.
+&gt；&gt；Kyle：好的，如果你有一个对象，它的toString返回对象。
+&gt;&gt; Kyle: All right, so if you have an object, its toString returns the object.
 
 92
 00:05:01.910 --> 00:05:04.480
-还记得默认情况下一个对象的干姜是什么
-And remember what a stringification
-of an object by default is,
+并且记住默认情况下对象的字符串标识是什么，
+And remember what a stringification of an object by default is,
 
 93
 00:05:04.480 --> 00:05:06.689
-就是那个方形支架对象物
-it's that square bracket
-object object thing.
+是那个方括号的东西。
+it's that square bracket object object thing.
 
 94
 00:05:06.689 --> 00:05:11.689
-这绝对不是一个数字的代表，所以我们得到 NaN。
-Which is definitely not a representation
-of a number, so we get NaN.
+这肯定不是一个数字的表示，所以我们得到NaN。
+Which is definitely not a representation of a number, so we get NaN.
 
 95
 00:05:11.689 --> 00:05:13.149
-这才是合理的
+这实际上是合理的。
 That's actually reasonable.
 
 96
 00:05:13.149 --> 00:05:14.730
-太傻了但这很合理
+这是愚蠢的，但它是合理的。
 It's dumb, but it's reasonable.
 
 97
 00:05:14.730 --> 00:05:17.009
-如果您覆盖某个对象的值，
-If you override the valueOf for
-some object,
+如果重写某个对象的value of，
+If you override the valueOf for some object,
 
 98
 00:05:17.009 --> 00:05:18.699
-你可以把你想要的东西都退回去
+你可以归还任何你想要的东西。
 you can return whatever thing you want.
 
 99
 00:05:18.699 --> 00:05:22.687
-在这种情况下，你可以返回 3 ，这就是它的编号。
-In this case, you could return 3, and
-that's the numberification for it.
+在本例中，您可以返回3，这就是它的编号。
+In this case, you could return 3, and that's the numberification for it.

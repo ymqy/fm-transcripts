@@ -2,359 +2,308 @@ WEBVTT
 
 1
 00:00:00.230 --> 00:00:01.940
->> 凯尔 - 辛普森: 好的，让我们深入到词法范围，
-&gt;&gt; Kyle Simpson: All right, so
-let's dig into lexical scope,
+&gt；&gt；Kyle Simpson：好的，让我们深入到词汇范围，
+&gt;&gt; Kyle Simpson: All right, so let's dig into lexical scope,
 
 2
 00:00:01.940 --> 00:00:04.080
-我们来看看这个特殊的代码
+让我们看看这段特殊的代码。
 let's take a look at this particular code.
 
 3
 00:00:04.080 --> 00:00:04.879
-这应该很眼熟
+这看起来很眼熟
 This should look familiar,
 
 4
 00:00:04.879 --> 00:00:07.169
-这是我们以前所做的一样的代码
-this is the same kind of code
-that we were doing before.
+这是我们之前做的相同类型的代码。
+this is the same kind of code that we were doing before.
 
 5
 00:00:07.169 --> 00:00:08.240
-在作者的时候
+在作者的时候，
 And at author time,
 
 6
 00:00:08.240 --> 00:00:13.109
-当我决定让函数在函数 otherClass() 中提问时。
-when I decided to put the function ask
-inside of the function otherClass().
+当我决定将该函数放入函数other Class()中时，请将其放入函数中。
+when I decided to put the function ask inside of the function otherClass().
 
 7
 00:00:13.109 --> 00:00:16.489
-我无可挽回地决定了变量的参考
-I irrevocably decided that
-the variable reference
+我不可挽回地决定变量引用
+I irrevocably decided that the variable reference
 
 8
 00:00:16.489 --> 00:00:21.329
-第 7 行将指向第 4 行中声明的变量。
-on line 7 is going to point at
-the variable that was declared on line 4.
+将指向第4行声明的变量。
+on line 7 is going to point at the variable that was declared on line 4.
 
 9
 00:00:21.329 --> 00:00:26.879
-换句话说，大理石颜色是在编译时决定的。
-In other words the marble color
-was decided at compile time.
+换句话说，大理石的颜色是在编译时决定的。
+In other words the marble color was decided at compile time.
 
 10
 00:00:26.879 --> 00:00:29.600
-其实不是这个样子
+实际上不是这个查找过程，
 It's not actually this look up process,
 
 11
 00:00:29.600 --> 00:00:32.652
-就像我们在运行时讨论的那样
-like we discussed during
-the run time phase.
+就像我们在运行时阶段讨论的那样。
+like we discussed during the run time phase.
 
 12
 00:00:32.652 --> 00:00:36.729
-当我用叙述式给你一个概念模型时，我就把它用在了一个纤维床上。
-I sort of fibbed when I used that in the
-narrative to give you a conceptual model.
+当我在叙述中使用它给你一个概念模型时，我有点撒谎了。
+I sort of fibbed when I used that in the narrative to give you a conceptual model.
 
 13
 00:00:36.729 --> 00:00:40.469
-但在运行时，不是要说哎，范围，问，
-But it is not the case that at run
-time it has to say hey, scope of ask,
+但不是在运行时它必须说嘿，问的范围，
+But it is not the case that at run time it has to say hey, scope of ask,
 
 14
 00:00:40.469 --> 00:00:42.130
-你听说过这个大理石吗
+你听说过这个大理石吗？
 have you ever heard of this marble?
 
 15
 00:00:42.130 --> 00:00:44.863
-还有其他课的范围你听说过这个大理石吗
-And hey, scope of other class,
-have you ever heard of this marble?
+嘿，其他课程的范围，你听说过这个大理石吗？
+And hey, scope of other class, have you ever heard of this marble?
 
 16
 00:00:44.863 --> 00:00:48.073
-因为至少这个节目的写方式
-Because at least the way
-this program's written,
+因为至少这个程序的编写方式，
+Because at least the way this program's written,
 
 17
 00:00:48.073 --> 00:00:51.880
-我们知道大理石是什么颜色
-we know at compile time
-what color the marble is.
+我们在编译时知道大理石是什么颜色。
+we know at compile time what color the marble is.
 
 18
 00:00:51.880 --> 00:00:54.948
-甚至在最坏的情形下
-And even in the worst case scenario,
-where we might for
+即使在最坏的情况下，我们也可能
+And even in the worst case scenario, where we might for
 
 19
 00:00:54.948 --> 00:00:58.832
-有些理由不知道这个颜色的大理石是什么时候的，
-some reason not know what the color
-marble was from the compile time.
+有些原因不知道编译时的颜色大理石是什么。
+some reason not know what the color marble was from the compile time.
 
 20
 00:00:58.832 --> 00:01:01.603
-我们会第一次把它弄明白
-We're gonna figure it out
-the very first time, and
+我们第一次就会弄明白的，而且
+We're gonna figure it out the very first time, and
 
 21
 00:01:01.603 --> 00:01:05.879
-那么我们就不需要再想办法了，我们永远不会改变的
-then we don’t need to figure it out
-ever again, cuz it’s never gonna change.
+那么我们就不需要再弄明白了，因为它永远不会改变。
+then we don’t need to figure it out ever again, cuz it’s never gonna change.
 
 22
 00:01:05.879 --> 00:01:08.099
-所以词法作用的原因之一是
-So one of the reasons why
-lexical scope is actually so
+所以词汇范围实际上是如此的原因之一
+So one of the reasons why lexical scope is actually so
 
 23
 00:01:08.099 --> 00:01:12.289
-流行的原因是它是如此的乐观主义。
+流行是因为它是如此的可优化。
 popular is because it’s so optimizable.
 
 24
 00:01:12.289 --> 00:01:15.980
-这个想法是你在整理东西的时候可以决定的
-This idea that you can decide
-when you're compiling things,
+你可以决定什么时候编辑东西，
+This idea that you can decide when you're compiling things,
 
 25
 00:01:15.980 --> 00:01:17.909
-所有这些变量都来自
+所有这些变量都是从哪里来的，
 where all of those variables come from,
 
 26
 00:01:17.909 --> 00:01:22.079
-这些弹珠的颜色是什么，我们不需要在运行时发现这些东西。
-what color the marbles are, we don’t need
-to figure that stuff out at runtime.
+弹珠是什么颜色，我们不需要在运行时弄清楚那些东西。
+what color the marbles are, we don’t need to figure that stuff out at runtime.
 
 27
 00:01:22.079 --> 00:01:24.579
-这就是你从词法范围中得到的东西。
-That’s what you should
-get from lexical scope.
+这就是你应该从词法范围得到的。
+That’s what you should get from lexical scope.
 
 28
 00:01:24.579 --> 00:01:27.656
-能帮我保住我脑袋里的界限的方法之一
-One of the ways that helps me
-keep those boundaries in my head.
+帮助我将这些界限留在脑中的方法之一。
+One of the ways that helps me keep those boundaries in my head.
 
 29
 00:01:27.656 --> 00:01:31.716
-这也是我喜欢写函数表达式的原因之一
-And it's also one of the reasons why I
-like writing out function expressions in
+这也是我喜欢写出函数表达式的原因之一
+And it's also one of the reasons why I like writing out function expressions in
 
 30
 00:01:31.716 --> 00:01:32.700
-他们的完整形式
+它们的完整形式和
 their full form and
 
 31
 00:01:32.700 --> 00:01:36.590
-嵌套而不是尝试在一行上一起字符串。
-nested rather than trying to string
-everything together on one line.
+嵌套而不是试图将所有内容串在一行上。
+nested rather than trying to string everything together on one line.
 
 32
 00:01:36.590 --> 00:01:40.329
-我喜欢看函数界和我喜欢的过程
-Is I like to see the function boundaries
-and I like to mentally process
+我喜欢看到功能边界，我喜欢在心理上处理
+Is I like to see the function boundaries and I like to mentally process
 
 33
 00:01:40.329 --> 00:01:43.450
-在每一个范围内都有一个气泡
-that there's essentially a bubble
-around each of these scopes.
+每个示波器周围基本上都有一个气泡。
+that there's essentially a bubble around each of these scopes.
 
 34
 00:01:43.450 --> 00:01:46.829
-周围有个泡沫，还有一个其他阶级的泡沫，然后一个泡沫
-There's a bubble around ask, and a bubble
-around other class, and then a bubble
+在Ask周围有一个泡泡，在其他班级周围有一个泡泡，然后是一个泡泡
+There's a bubble around ask, and a bubble around other class, and then a bubble
 
 35
 00:01:46.829 --> 00:01:51.670
-在全球范围内，这些气泡被严格地嵌套在彼此之间。
-around the global scope, and these bubbles
-are strictly nested inside of each other.
+围绕全局范围，并且这些气泡严格嵌套在彼此内部。
+around the global scope, and these bubbles are strictly nested inside of each other.
 
 36
 00:01:51.670 --> 00:01:55.009
-这样他们就不喜欢穿过线了
-So it's not like they're
-gonna cross the line.
+所以他们不会越界。
+So it's not like they're gonna cross the line.
 
 37
 00:01:55.009 --> 00:01:59.270
-我们不可能有一个范围在两个父母的范围内
-It's not like we're gonna have one scope
-that's partially in two parent scopes,
+不是说我们会有一个部分在两个父作用域中的作用域，
+It's not like we're gonna have one scope that's partially in two parent scopes,
 
 38
 00:01:59.270 --> 00:02:02.000
-它们完全包含在彼此之间
-they're entirely contained
-within each other.
+它们完全包含在彼此内部。
+they're entirely contained within each other.
 
 39
 00:02:03.819 --> 00:02:07.611
-事实上，在气泡的内部视觉化这些范围，
-As a matter of fact, visualizing
-these scopes inside of the bubbles,
+事实上，在气泡内部观察这些范围，
+As a matter of fact, visualizing these scopes inside of the bubbles,
 
 40
 00:02:07.611 --> 00:02:10.775
-而这也是我最喜欢的想法
-while it's kind of my preferred
-way of thinking about it.
+虽然这是我更喜欢的思考方式。
+while it's kind of my preferred way of thinking about it.
 
 41
 00:02:10.775 --> 00:02:14.135
-还有一种视觉视觉化的方法让它足够有效
-There's another way of visualizing
-this that is effective enough that it
+有另一种可视化的方法是足够有效的
+There's another way of visualizing this that is effective enough that it
 
 42
 00:02:14.135 --> 00:02:16.680
-可以在你的编辑里出现
-can actually show up
-inside of your editor.
+实际上可以出现在你的编辑器中。
+can actually show up inside of your editor.
 
 43
 00:02:16.680 --> 00:02:19.659
-在我的编辑中，我使用的是崇高的，我想我之前已经说过了。
-In my editor I use sublime,
-I think I've mentioned before.
+在我的编辑器中，我使用sublime，我想我之前已经提到过。
+In my editor I use sublime, I think I've mentioned before.
 
 44
 00:02:19.659 --> 00:02:22.729
-在我的编辑器中，我有一个插件，可以在方式上切换。
-In my editor, I have a plugin
-that I can switch on a mode.
+在我的编辑器中，我有一个可以打开模式的插件。
+In my editor, I have a plugin that I can switch on a mode.
 
 45
 00:02:22.729 --> 00:02:28.800
-它使用一个叫做 ES 级别的工具，它是一个分析
-It uses a tool called ES levels,
-which is a tool that analyzes
+它使用了一种名为ES Level的工具，这是一种分析
+It uses a tool called ES levels, which is a tool that analyzes
 
 46
 00:02:28.800 --> 00:02:33.439
-你的水桶和弹珠的作用范围
-the scope levels of where basically
-all your buckets and marbles are.
+基本上所有水桶和大理石所在的范围级别。
+the scope levels of where basically all your buckets and marbles are.
 
 47
 00:02:33.439 --> 00:02:36.379
-这就是当我用同一条代码的时候
-And this is what it looks like when
-I take that same piece of code and
+这就是当我拿到同样的一段代码时的样子
+And this is what it looks like when I take that same piece of code and
 
 48
 00:02:36.379 --> 00:02:38.300
-我把它放在我的编辑器里
+我在我的编辑器里面打开它。
 I turn it on inside of my editor.
 
 49
 00:02:38.300 --> 00:02:42.469
-您会注意到它正在对不同的变量引用进行着色，并且
-You'll notice that it is coloring
-the different variable references and
+您会注意到它正在给不同的变量引用着色，并且
+You'll notice that it is coloring the different variable references and
 
 50
 00:02:42.469 --> 00:02:45.629
-根据它们所属的范围来执行不同的代码段。
-the different pieces of code according
-to what scope they belong to.
+根据它们所属的范围来确定不同的代码片段。
+the different pieces of code according to what scope they belong to.
 
 51
 00:02:45.629 --> 00:02:50.379
-它基本上是给你你的斗彩颜色和大理石颜色。
-It's basically giving you your bucket
-colors and your marble colors.
+它基本上是给你的水桶颜色和大理石颜色。
+It's basically giving you your bucket colors and your marble colors.
 
 52
 00:02:50.379 --> 00:02:56.489
-你会注意到第 7 行有一个颜色被引用
-And you'll notice down on line 7 that
-there's a color being referenced for
+在第7行，您会注意到引用了一种颜色
+And you'll notice down on line 7 that there's a color being referenced for
 
 53
 00:02:56.489 --> 00:03:00.222
-与第 4 行的老师匹配。
-teacher and
-that matches the one from line 4.
+老师，它与第4行中的那个相匹配。
+teacher and that matches the one from line 4.
 
 54
 00:03:00.222 --> 00:03:04.564
->> [INAUDIBLE] >> 凯尔 - 辛普森:
-&gt;&gt; [INAUDIBLE]
-&gt;&gt; Kyle Simpson: So again,
+&gt；&gt；[INAUDIBLE]&gt；&gt；Kyle Simpson：所以，
+&gt;&gt; [INAUDIBLE] &gt;&gt; Kyle Simpson: So again,
 
 55
 00:03:04.564 --> 00:03:07.399
-这是一个叫做 ES 级别的插件。
+这是一个叫做ES级别的插件。
 this is a plugin that's called ES levels.
 
 56
 00:03:07.399 --> 00:03:11.716
-现在，这并不完美，它确实有一些问题。
-Now, it is not perfect,
-it does have some quirks to it.
+现在，它不是完美的，它确实有一些怪癖。
+Now, it is not perfect, it does have some quirks to it.
 
 57
 00:03:11.716 --> 00:03:15.325
-如果您注意到此特定示例，其中 I 具有名称函数表达式，
-If you notice this particular example,
-where I have a name function expression,
+如果您注意到这个特定示例，其中我有一个名称函数表达式，
+If you notice this particular example, where I have a name function expression,
 
 58
 00:03:15.325 --> 00:03:18.939
-记得我们谈过函数表达式的名称吗 ?
-remember what we talked about with
-the names of function expressions?
+还记得我们讨论过的函数表达式的名称吗？
+remember what we talked about with the names of function expressions?
 
 59
 00:03:18.939 --> 00:03:22.500
-这些名字应该在其外层范围内。
-Those names are supposed to go
-inside of their enclosing scope.
+这些名称应该放在它们的封闭范围内。
+Those names are supposed to go inside of their enclosing scope.
 
 60
 00:03:22.500 --> 00:03:28.490
-那么为什么第 1 行的 foo 就像在外部范围内那样 ?
-So why is that foo on line 1 colored
-as if it is in the outer scope?
+那么，为什么第1行上的foo被涂上了颜色，就好像它在外部范围中一样？
+So why is that foo on line 1 colored as if it is in the outer scope?
 
 61
 00:03:28.490 --> 00:03:32.050
-如果它是函数声明，但在这里他们会为
-It would if it was a function declaration,
-but here they're doing that for
+如果它是一个函数声明，它会这样做，但在这里，他们这样做是为了
+It would if it was a function declaration, but here they're doing that for
 
 62
 00:03:32.050 --> 00:03:33.310
@@ -363,76 +312,65 @@ a function expression.
 
 63
 00:03:33.310 --> 00:03:38.270
-多年前我向 ES 级的项目报告了这个
-Years ago I reported this
-to the ES level's project,
+几年前我向ES级的项目报告了这一点，
+Years ago I reported this to the ES level's project,
 
 64
 00:03:38.270 --> 00:03:42.969
-并且说这是一个应该有颜色的缺陷，就像它属于这个范围。
-and said this is a bug that should be
-colored as if it belongs to the scope.
+并说这是一个应该上色的bug，就好像它属于这个范围一样。
+and said this is a bug that should be colored as if it belongs to the scope.
 
 65
 00:03:42.969 --> 00:03:46.620
-他们做了一整一簇的工作
-And they did a whole bunch of well,
-actuallys on,
+他们做得很好，事实上，
+And they did a whole bunch of well, actuallys on,
 
 66
 00:03:46.620 --> 00:03:50.159
-从技术上来说名字就在它的中间范围内
-technically that name is in
-its own intermediate scope.
+从技术上讲，该名称在其自己的中间范围内。
+technically that name is in its own intermediate scope.
 
 67
 00:03:50.159 --> 00:03:53.050
-因此，赋予它同样的颜色也是对的。
-And so it would even be right
-to give it the same colors, and
+所以给它同样的颜色也是正确的，而且
+And so it would even be right to give it the same colors, and
 
 68
 00:03:53.050 --> 00:03:54.949
-然后他们就做了这么久的事
+然后他们进行了一个又大又长的事情。
 then they went on this big long thing.
 
 69
 00:03:54.949 --> 00:03:58.122
-他们会说如果我们真的这么做的话我们会有太多的颜色
-And they'd say we'd have too many
-colors if we did it the real way, so
+他们会说如果我们用真正的方法，我们会有太多的颜色，所以
+And they'd say we'd have too many colors if we did it the real way, so
 
 70
 00:03:58.122 --> 00:04:01.379
-我们只会让它单独离开我们会让它崩溃的
-we're just gonna leave it alone,
-we're just gonna leave it broken.
+我们就不管它了，我们就把它弄坏了。
+we're just gonna leave it alone, we're just gonna leave it broken.
 
 71
 00:04:02.629 --> 00:04:06.301
-所以它不是完美的，但有时会有很大的帮助，可以看到
-So it's not perfect, but it is super
-helpful at times to be able to see where
+所以它并不完美，但有时能看到哪里是非常有帮助的
+So it's not perfect, but it is super helpful at times to be able to see where
 
 72
 00:04:06.301 --> 00:04:10.525
-这些变量是来自这些变量，还是为什么我被这些变量混淆了 ?
-are these variables coming from, or why am
-I getting so confused by these variables?
+这些变量是来自，还是为什么我被这些变量弄得如此困惑？
+are these variables coming from, or why am I getting so confused by these variables?
 
 73
 00:04:10.525 --> 00:04:11.715
-那我就翻那个插件了
+所以我会把那个插件翻进去。
 So I'll flip that plugin in.
 
 74
 00:04:11.715 --> 00:04:15.710
-但我喜欢视觉化我的范围界限的想法。
-But I like the idea of
-visualizing my scope boundaries.
+但我喜欢可视化我的范围边界的想法。
+But I like the idea of visualizing my scope boundaries.
 
 75
 00:04:15.710 --> 00:04:17.980
-它能帮助我保持所有的词法范围
-It helps me keep all of
-the lexical scopes straight.
+它帮助我保持所有词法范围的直接性。
+It helps me keep all of the lexical scopes straight.

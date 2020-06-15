@@ -2,68 +2,58 @@ WEBVTT
 
 1
 00:00:00.130 --> 00:00:00.950
->> 凯尔 - 辛普森: 让我们潜水吧
+&GT；&GT；凯尔·辛普森：那么让我们开始吧。
 &gt;&gt; Kyle Simpson: So let's dive in.
 
 2
 00:00:03.229 --> 00:00:07.580
-我们要谈这个关键词这个关键词可能是
-We're gonna talk about the this keyword,
-and the this keyword is maybe
+我们将讨论this关键字，this关键字是可能
+We're gonna talk about the this keyword, and the this keyword is maybe
 
 3
 00:00:07.580 --> 00:00:11.179
-所有 JavaScript 特征的最严重的困惑
-the most perpetually confused
-of all the JavaScript features.
+所有JavaScript特性中最令人困惑的特性。
+the most perpetually confused of all the JavaScript features.
 
 4
 00:00:11.179 --> 00:00:15.179
-如果我们在这里对所有人进行调查
-I would imagine if we
-polled everyone here, or
+我可以想象如果我们调查了这里的每个人，或者
+I would imagine if we polled everyone here, or
 
 5
 00:00:15.179 --> 00:00:19.489
-在网上看，或者以后看这个，你几乎肯定是
-watching online, or watching this at
-a later time, you've almost certainly been
+在网上看，或者以后再看这个，你几乎可以肯定
+watching online, or watching this at a later time, you've almost certainly been
 
 6
 00:00:19.489 --> 00:00:23.559
-在您的 JavaScript 职业生涯中某个时间点对此关键字感到沮丧。
-frustrated by this keyword at some
-point in your JavaScript career.
+在您的JavaScript职业生涯中的某个时候对这个关键字感到沮丧。
+frustrated by this keyword at some point in your JavaScript career.
 
 7
 00:00:23.559 --> 00:00:26.920
-这很可悲因为它是一个非常强大的机制
-Which is sad because it's
-a very powerful mechanism, and
+这是可悲的，因为它是一个非常强大的机制，而且
+Which is sad because it's a very powerful mechanism, and
 
 8
 00:00:26.920 --> 00:00:30.800
-也很难过，因为它不需要这样。
-it's also sad because it
-didn't have to be that way.
+这也是可悲的，因为它不一定是那样的。
+it's also sad because it didn't have to be that way.
 
 9
 00:00:30.800 --> 00:00:33.890
-不必说这会让我们困惑但
-It didn't have to be that this
-would be confusing to us, but
+这并不一定会让我们感到困惑，但是
+It didn't have to be that this would be confusing to us, but
 
 10
 00:00:33.890 --> 00:00:36.750
-我想很多人被这个关键词搞糊涂了。
-I think a lot of people got
-confused by the this keyword.
+我认为很多人被this关键字搞糊涂了。
+I think a lot of people got confused by the this keyword.
 
 11
 00:00:36.750 --> 00:00:41.060
-仅仅是因为没有人告诉他们停止尝试使其成为此关键字的关键字
-Simply because no one ever told them stop
-trying to make it like this keyword in
+很简单，因为没有人告诉他们停止尝试使它像这样的关键字在
+Simply because no one ever told them stop trying to make it like this keyword in
 
 12
 00:00:41.060 --> 00:00:42.429
@@ -72,44 +62,38 @@ other languages.
 
 13
 00:00:42.429 --> 00:00:44.244
-所以我觉得
+所以我认为重要的是
 So I think it's important for
 
 14
 00:00:44.244 --> 00:00:47.738
-我们要把这些东西放在其他语言上
-us to set aside how these
-things work in other languages.
+让我们把这些东西在其他语言中的工作方式放在一边。
+us to set aside how these things work in other languages.
 
 15
 00:00:47.738 --> 00:00:54.600
-并不是这些是不重要的背景，而是在它帮助你伟大的程度上。
-Not that those are unimportant context,
-but to the extent that it helps you great.
+并不是说这些都是不重要的背景，而是在某种程度上它对你有很大的帮助。
+Not that those are unimportant context, but to the extent that it helps you great.
 
 16
 00:00:54.600 --> 00:00:58.560
-但在某种程度上其他语言行为会让你恢复
-But to the extent that some other
-languages behavior holds you back, and
+但是在某种程度上，其他一些语言的行为阻碍了您，并且
+But to the extent that some other languages behavior holds you back, and
 
 17
 00:00:58.560 --> 00:01:03.420
-使您更难理解或利用 JavaScript。
-makes it so it's harder for
-you to understand or leverage JavaScript.
+使您更难理解或利用JavaScript。
+makes it so it's harder for you to understand or leverage JavaScript.
 
 18
 00:01:03.420 --> 00:01:06.420
-那是你应该在门口留下的行李
-That is baggage that you
-should leave at the door, and
+那是你应该留在门口的行李，而且
+That is baggage that you should leave at the door, and
 
 19
 00:01:06.420 --> 00:01:09.640
-更具体地关注什么是 JavaScript ?
-focus more specifically
-on what is JavaScript do?
+更具体地关注JavaScript是做什么的？
+focus more specifically on what is JavaScript do?
 
 20
 00:01:09.640 --> 00:01:12.310
@@ -118,278 +102,238 @@ Well it turns out that this key word is
 
 21
 00:01:12.310 --> 00:01:15.870
-比你想象的要简单得多
-actually a bit more straightforward
-than you would imagine.
+实际上比你想象的更直截了当。
+actually a bit more straightforward than you would imagine.
 
 22
 00:01:15.870 --> 00:01:20.500
-它的威力比你想象的更强大
-It's more powerful than you would imagine,
-and it's just been explained and
+它比你想象的更强大，而且刚刚被解释
+It's more powerful than you would imagine, and it's just been explained and
 
 23
 00:01:20.500 --> 00:01:21.969
-教得不正确
+教学不正确。
 taught incorrectly.
 
 24
 00:01:21.969 --> 00:01:23.950
-所以我们要给这个话题带来一些澄清。
-So we're gonna bring some
-clarity to this topic.
+所以我们会给这个话题带来一些清晰度。
+So we're gonna bring some clarity to this topic.
 
 25
 00:01:25.700 --> 00:01:31.549
-此函数表示或引用该调用的执行上下文。
-A function's this represents or references
-an execution context for that call.
+函数的this表示或引用该调用的执行上下文。
+A function's this represents or references an execution context for that call.
 
 26
 00:01:31.549 --> 00:01:34.819
-正在进行调用的上下文。
-A context in which that
-call was being made.
+在其中进行调用的上下文。
+A context in which that call was being made.
 
 27
 00:01:34.819 --> 00:01:39.840
-这完全取决于调用该函数的方式。
-And that is determined entirely
-by how the function is called.
+这完全取决于函数的调用方式。
+And that is determined entirely by how the function is called.
 
 28
 00:01:41.729 --> 00:01:46.930
-换句话说，这个关键字赋值，如果你看一个函数，
-In other words, that this key word
-assignment, if you look at a function that
+换句话说，这个关键字赋值，如果你看一个函数
+In other words, that this key word assignment, if you look at a function that
 
 29
 00:01:46.930 --> 00:01:52.134
-在它中有此关键字，它是根据调用函数的方式分配的。
-has this keyword in it, it is assigned
-based upon how the function is called.
+包含此关键字，则根据调用函数的方式分配该关键字。
+has this keyword in it, it is assigned based upon how the function is called.
 
 30
 00:01:52.134 --> 00:01:56.487
-这就是反直觉的部分因为大多数人认为你可以看到
-Which is the counterintuitive part because
-most people think that you could look at
+这是违反直觉的部分，因为大多数人认为你可以看看
+Which is the counterintuitive part because most people think that you could look at
 
 31
 00:01:56.487 --> 00:02:00.650
-一个函数，并确定该关键字要指出的内容。
-a function, and figure out what
-this keyword is gonna point out.
+一个函数，并计算出这个关键字将指出什么。
+a function, and figure out what this keyword is gonna point out.
 
 32
 00:02:00.650 --> 00:02:04.560
-但功能的定义根本不重要
-But the definition of the function
-doesn't matter at all,
+但函数的定义根本无关紧要，
+But the definition of the function doesn't matter at all,
 
 33
 00:02:05.780 --> 00:02:07.870
-以确定此关键字。
+确定this关键字。
 to determining the this keyword.
 
 34
 00:02:07.870 --> 00:02:11.676
-唯一重要的是如何调用该函数 ?
-The only thing that matters is how
-does that function get invoked?
+唯一重要的是如何调用该函数？
+The only thing that matters is how does that function get invoked?
 
 35
 00:02:13.814 --> 00:02:16.002
->> 凯尔 - 辛普森: 如果听起来很熟悉
-&gt;&gt; Kyle Simpson: If that
-sounds familiar to you,
+&gt；&gt；Kyle Simpson：如果你听起来很熟悉，
+&gt;&gt; Kyle Simpson: If that sounds familiar to you,
 
 36
 00:02:16.002 --> 00:02:21.900
-因为我们已经谈论过一个灵活的可重复使用的情境。
-it's because we've sort of already talked
-about a flexible reusable context.
+这是因为我们已经讨论过灵活的可重用上下文。
+it's because we've sort of already talked about a flexible reusable context.
 
 37
 00:02:21.900 --> 00:02:25.431
-当我们谈论动态范围界定时我们谈论的是
-It was what we talk about when
-we talk about dynamic scoping,
+这就是我们在谈论动态作用域时所说的，
+It was what we talk about when we talk about dynamic scoping,
 
 38
 00:02:25.431 --> 00:02:28.430
-以及你需要我们讨论的范围
+以及你需要我们讨论的范围。
 and the scope you need of our discussion.
 
 39
 00:02:28.430 --> 00:02:33.668
-换句话说，这些关键字是 JavaScript的动态版本
-So in other words, that these keyword
-is JavaScript's version of dynamic
+换句话说，这些关键字是JavaScript动态版本
+So in other words, that these keyword is JavaScript's version of dynamic
 
 40
 00:02:33.668 --> 00:02:38.430
-作用域是这样一种灵活的，可复用的行为。
-scope if it's this way of having
-as flexible, reusable behavior.
+范围，如果它是具有灵活的，可重用的行为的这种方式的话。
+scope if it's this way of having as flexible, reusable behavior.
 
 41
 00:02:38.430 --> 00:02:42.210
-所以我有一个功能，就是这个意识，或者我很抱歉，
-So here I have a function that
-is this aware, or I'm sorry,
+所以在这里我有一个函数，这个函数就是这样的，或者我很抱歉，
+So here I have a function that is this aware, or I'm sorry,
 
 42
 00:02:42.210 --> 00:02:43.889
-我没有这方面的功能
-I don't have a function
-that is this aware.
+我没有这样的功能。
+I don't have a function that is this aware.
 
 43
 00:02:43.889 --> 00:02:47.400
-但你记得我有一个在动态范围内的功能
-But you remember that I have
-a function that in a dynamic scope
+但你记得我有一个函数在动态作用域中
+But you remember that I have a function that in a dynamic scope
 
 44
 00:02:49.599 --> 00:02:51.610
-动态上下文感知。
+动态环境感知。
 dynamically context aware.
 
 45
 00:02:51.610 --> 00:02:57.272
-而不是要求老师在第 4 行引用老师的时候
-So instead of asking teacher to get
-the teacher, on line 4, when it references
+所以不是让老师去找老师，在第4行，当它引用
+So instead of asking teacher to get the teacher, on line 4, when it references
 
 46
 00:02:57.272 --> 00:03:02.526
-老师，而不是用 1 个老师的方式，到第 8 行。
-teacher, instead of trying to line 1
-to get teacher, it goes to line 8.
+老师，不是试图通过线1得到老师，而是转到线8。
+teacher, instead of trying to line 1 to get teacher, it goes to line 8.
 
 47
 00:03:02.526 --> 00:03:07.454
-因为请求是从第 10 行的另一个级别的范围调用的，
-Because ask was called from line 10 it
-was called from the other class scope,
+因为Ask是从第10行调用的，所以它是从另一个类作用域调用的，
+Because ask was called from line 10 it was called from the other class scope,
 
 48
 00:03:07.454 --> 00:03:09.634
-这就是动态范围的作用
+这就是动态作用域的作用。
 that's what dynamic scope does.
 
 49
 00:03:09.634 --> 00:03:12.945
-在 JavaScript 中我们有非常相似的东西
-And in JavaScript we have
-something very similar, but
+在JavaScript中我们有非常相似的东西，但是
+And in JavaScript we have something very similar, but
 
 50
 00:03:12.945 --> 00:03:17.627
-它不是基于范围界限，也不是什么叫它的地方，
-it's not based upon scope boundaries,
-or where something's called from,
+它不是基于作用域边界，也不是从哪里调用的，
+it's not based upon scope boundaries, or where something's called from,
 
 51
 00:03:17.627 --> 00:03:20.304
-它是基于该函数是如何调用的。
+它基于函数的调用方式。
 it's based on how the function was called.
 
 52
 00:03:20.304 --> 00:03:22.431
-这就是我们要解决的问题
-And that's how we're gonna
-end up resolving it.
+这就是我们最终要解决这个问题的方法。
+And that's how we're gonna end up resolving it.
 
 53
 00:03:22.431 --> 00:03:26.537
-所以我在这里有一个版本的提问功能，
-So here I have a version of the ask
-function which is this aware,
+所以这里我有一个Ask函数的版本，它是这种感知的，
+So here I have a version of the ask function which is this aware,
 
 54
 00:03:26.537 --> 00:03:29.491
-它使用了这个关键词所以它就知道了
-it uses a this keyword,
-so it's this aware.
+它使用this关键字，所以它是这个感知的。
+it uses a this keyword, so it's this aware.
 
 55
 00:03:29.491 --> 00:03:33.111
-你会注意到我是从其他地方打来的
-And you'll notice that I'm calling
-it from some other location but
+你会注意到我在别的地方打电话，但是
+And you'll notice that I'm calling it from some other location but
 
 56
 00:03:33.111 --> 00:03:34.719
-这不重要
+那不重要。
 that doesn't matter.
 
 57
 00:03:34.719 --> 00:03:37.539
-这不是我的电话我是怎么称呼它的
-It's not where I call from,
-it's how I call it.
+不是我从哪里打的，而是我怎么打的。
+It's not where I call from, it's how I call it.
 
 58
 00:03:39.460 --> 00:03:44.150
-如果我在这里用 ask.call ，我是说用这个
-If I use ask.call here,
-I am saying use this
+如果我在这里使用ask.call，我是说使用这个
+If I use ask.call here, I am saying use this
 
 59
 00:03:44.150 --> 00:03:49.449
-作为此关键字的特定对象，并在该上下文中调用该函数。
-particular object as your this keyword,
-and invoke the function in that context.
+特定对象作为this关键字，并在该上下文中调用函数。
+particular object as your this keyword, and invoke the function in that context.
 
 60
 00:03:49.449 --> 00:03:53.750
-因此，在此特定情况下，此关键字将指向我的上下文。
-So this keyword in this particular case,
-will end up pointing at my context.
+所以这个关键字在这个特殊的情况下，最终会指向我的上下文。
+So this keyword in this particular case, will end up pointing at my context.
 
 61
 00:03:54.840 --> 00:03:58.379
-你可以看到这种动态的灵活性在这里发生了。
-So you see that sort of dynamic
-flexibility happening here.
+所以你可以看到这种动态的灵活性在这里发生。
+So you see that sort of dynamic flexibility happening here.
 
 62
 00:03:58.379 --> 00:04:03.659
-你看到我可以称之为同一个要求函数，很多不同的方法。
-You see that I could call that same
-ask function, lots of different ways.
+你看，我可以调用同样的Ask函数，有很多不同的方式。
+You see that I could call that same ask function, lots of different ways.
 
 63
 00:04:03.659 --> 00:04:08.669
-并且为该关键字点提供大量不同的上下文对象，
-And provide lots of different context
-objects for the this keyword point on,
+并为该关键字点提供许多不同的上下文对象，
+And provide lots of different context objects for the this keyword point on,
 
 64
 00:04:08.669 --> 00:04:12.870
-这是此关键字的动态灵活重用性。
-that's the dynamic flexible
-reusability of the this keyword.
+这就是this关键字的动态灵活可重用性。
+that's the dynamic flexible reusability of the this keyword.
 
 65
 00:04:12.870 --> 00:04:15.661
-这就是为什么它存在的原因
-That's why it exists by the way,
-it exists so
+这就是为什么它存在的方式，它存在如此
+That's why it exists by the way, it exists so
 
 66
 00:04:15.661 --> 00:04:19.343
-我们可以在不同的环境中调用函数。
-that we can invoke functions
-in these different contexts.
+我们可以在这些不同的上下文中调用函数。
+that we can invoke functions in these different contexts.
 
 67
 00:04:22.934 --> 00:04:27.696
->> 凯尔 - 辛普森: 原来有四种不同的方法
-&gt;&gt; Kyle Simpson: So it turns out that
-there are four different ways to
+&gt；&gt；Kyle Simpson：原来有四种不同的方式
+&gt;&gt; Kyle Simpson: So it turns out that there are four different ways to
 
 68
 00:04:27.696 --> 00:04:30.220
@@ -398,27 +342,23 @@ invoke a function.
 
 69
 00:04:30.220 --> 00:04:33.509
-这也许是对你的消息，因为你可能是
-That might come as news to you,
-because you might be
+这对你来说可能是新闻，因为你可能是
+That might come as news to you, because you might be
 
 70
 00:04:33.509 --> 00:04:37.980
-用于思考仅以一种方式调用的函数。
-used to thinking about functions
-as only being invoked in one way.
+习惯于认为函数只以一种方式调用。
+used to thinking about functions as only being invoked in one way.
 
 71
 00:04:37.980 --> 00:04:41.170
-在 JavaScript 中，有四种不同的方法来执行此操作，并且每个方法都是
-In JavaScript there are four different
-ways to do so, and each one of them is
+在JavaScript中，有四种不同的方法可以做到这一点，每种方法都是
+In JavaScript there are four different ways to do so, and each one of them is
 
 72
 00:04:41.170 --> 00:04:45.060
-要回答这个问题，这个关键词是什么不同?
-gonna answer the question,
-what is the this keyword differently?
+要回答的问题是，this关键字有什么不同？
+gonna answer the question, what is the this keyword differently?
 
 73
 00:04:45.060 --> 00:04:47.829
@@ -427,75 +367,65 @@ So we just need to learn those four ways.
 
 74
 00:04:47.829 --> 00:04:51.430
-在概念上，如果您可以回顾我们的讨论，
-This keyword conceptually if you
-can recall from our discussion,
+这个关键字在概念上如果你能回忆起我们的讨论，
+This keyword conceptually if you can recall from our discussion,
 
 75
 00:04:51.430 --> 00:04:53.370
-这栋楼的隐喻
+建筑的隐喻。
 the metaphor of the building.
 
 76
 00:04:53.370 --> 00:04:57.159
-在词法范围的土地上，我们从现在的范围开始，
-In lexical scope land,
-we start at the current scope,
+在词汇范围中，我们从当前范围开始，
+In lexical scope land, we start at the current scope,
 
 77
 00:04:57.159 --> 00:04:59.899
-并在全球范围内工作
+并以我们的方式向全球范围发展。
 and work our way up to the global scope.
 
 78
 00:04:59.899 --> 00:05:02.560
-在这里我们要有一个不同的建筑
-Well here we are gonna have
-a different building involved.
+好的，在这里，我们将涉及到一个不同的建筑。
+Well here we are gonna have a different building involved.
 
 79
 00:05:02.560 --> 00:05:07.199
-我们要开始工作了我们要从大楼的底部开始
-We're gonna start our way, we're gonna
-to start at the bottom of a building.
+我们要开始我们的方式，我们要从建筑物的底部开始。
+We're gonna start our way, we're gonna to start at the bottom of a building.
 
 80
 00:05:07.199 --> 00:05:09.769
-但真正的问题是，哪一栋楼 ?
+但真正的问题是，哪栋楼？
 But the real question is, which building?
 
 81
 00:05:09.769 --> 00:05:14.922
-如果有人让你明天中午和他们见面他们说
-If somebody asked you to meet them for
-lunch tomorrow, and they said come
+如果有人邀请你明天和他们一起吃午饭，他们说来
+If somebody asked you to meet them for lunch tomorrow, and they said come
 
 82
 00:05:14.922 --> 00:05:21.185
-317号办公室见我你的第一个问题是什么楼
-meet me in office 317, your natural first
-question is gonna be, but what building?
+317号办公室见我，你自然的第一个问题是，但是什么楼？
+meet me in office 317, your natural first question is gonna be, but what building?
 
 83
 00:05:21.185 --> 00:05:24.028
-因为有很多办公室 317在我的城市里
-Cause there's lots of
-office 317's in my city.
+因为在我的城市有很多办公室317。
+Cause there's lots of office 317's in my city.
 
 84
 00:05:25.129 --> 00:05:29.310
-所以我们需要了解我们在讨论的具体背景
-So we need to understand which
-particular context we're talking about
+所以我们需要了解我们谈论的是哪个特定的背景
+So we need to understand which particular context we're talking about
 
 85
 00:05:29.310 --> 00:05:31.970
-在我们了解这方面的情况之前
-before we understand how we look for
-things in that context.
+在我们了解如何在这种情况下寻找事物之前。
+before we understand how we look for things in that context.
 
 86
 00:05:32.970 --> 00:05:37.850
-而最关键的问题是我们的关键词规则会告诉我们什么。
-And the which building question is what
-our this keyword rules are gonna tell us.
+哪个建筑的问题是我们的this关键字规则将告诉我们什么。
+And the which building question is what our this keyword rules are gonna tell us.

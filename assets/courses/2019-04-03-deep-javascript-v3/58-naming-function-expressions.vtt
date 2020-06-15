@@ -2,304 +2,258 @@ WEBVTT
 
 1
 00:00:00.297 --> 00:00:03.646
->> 凯尔 - 辛普森: 你在想为什么，谢谢你问我，我有三个
-&gt;&gt; Kyle Simpson: And you're wondering
-why and thanks for asking, I have three
+&gt；&gt；Kyle Simpson：你想知道为什么，谢谢你问我，我有三个
+&gt;&gt; Kyle Simpson: And you're wondering why and thanks for asking, I have three
 
 2
 00:00:03.646 --> 00:00:08.157
-你为什么总是更喜欢这件事情
-reasons why you should always prefer this
-thing that's gonna take you more time and
+为什么你总是喜欢这个东西，因为它会花费你更多的时间和
+reasons why you should always prefer this thing that's gonna take you more time and
 
 3
 00:00:08.157 --> 00:00:11.650
-努力把这些名字写出来吧
-effort to write out all those
-names to those functions, right?
+努力写出这些函数的所有名称，对吗？
+effort to write out all those names to those functions, right?
 
 4
 00:00:11.650 --> 00:00:15.089
-我们知道计算机科学的经典难题之一就是
-We know that one of the classic hard
-problems in computer science is naming
+我们知道计算机科学中经典的难题之一是命名
+We know that one of the classic hard problems in computer science is naming
 
 5
 00:00:15.089 --> 00:00:18.760
-你跟我说我要把这些名字都给我
-things, and, you're telling me I gotta
-go come up with all these names.
+事情，而且，你告诉我必须去想出所有这些名字。
+things, and, you're telling me I gotta go come up with all these names.
 
 6
 00:00:18.760 --> 00:00:22.672
-相信我，我在同一条船上，每次写功能，我都不知道
-Trust me, I'm in the same boat, every time
-I write a function, I'm like, I don't know
+相信我，我也在同一条船上，每次我写函数，我都会说，我不知道
+Trust me, I'm in the same boat, every time I write a function, I'm like, I don't know
 
 7
 00:00:22.672 --> 00:00:26.082
-怎么称呼呢，不能叫个好名字，我明白。
-what to call this thing, can't come up
-with a good name, I understand that.
+怎么称呼这个东西，想不出一个好名字，我明白。
+what to call this thing, can't come up with a good name, I understand that.
 
 8
 00:00:26.082 --> 00:00:30.653
-但是有三个原因，我想，一起做个实案，
-But there are three reasons which I think,
-together, make a solid case,
+但有三个原因，我认为，一起，使一个坚实的理由，
+But there are three reasons which I think, together, make a solid case,
 
 9
 00:00:30.653 --> 00:00:34.048
-这一努力是至关重要的，这是必要的，
-that that effort is critical,
-that it's necessary,
+这种努力是至关重要的，这是必要的，
+that that effort is critical, that it's necessary,
 
 10
 00:00:34.048 --> 00:00:38.290
-您应该始终使用名称函数表达式。
-that you should always,
-always use name-function expressions.
+您应该始终使用名称-函数表达式。
+that you should always, always use name-function expressions.
 
 11
 00:00:38.290 --> 00:00:43.591
-所以数字更喜欢命名函数表达式，因为名称产生或
-So number one prefer a name function
-expression, because the name produces or
+因此，第一个首选名称函数表达式，因为名称产生或
+So number one prefer a name function expression, because the name produces or
 
 12
 00:00:43.591 --> 00:00:48.746
-从自身内部创建对功能的可靠的自我引用。
-creates a reliable self-reference to
-the function from inside of itself.
+从函数内部创建对函数的可靠自引用。
+creates a reliable self-reference to the function from inside of itself.
 
 13
 00:00:48.746 --> 00:00:51.908
-如果要使函数递归，那么这很有用。
-That is useful if you're going
-to make the function recursive.
+如果要使函数递归，这是很有用的。
+That is useful if you're going to make the function recursive.
 
 14
 00:00:51.908 --> 00:00:55.634
-如果该函数是某种类型的事件处理程序，那么它很有用。
-It's useful if that function is
-an event handler of some sort and
+如果该函数是某种事件处理程序且
+It's useful if that function is an event handler of some sort and
 
 15
 00:00:55.634 --> 00:00:58.404
-它需要自我约束才能解除束缚
-it needs to reference
-itself to unbind itself.
+它需要引用自身来解除绑定。
+it needs to reference itself to unbind itself.
 
 16
 00:00:58.404 --> 00:01:01.435
-如果您需要访问任何属性，那么它很有用
-It's useful if you need to
-access any properties on that
+如果您需要访问其上的任何属性，则此选项非常有用
+It's useful if you need to access any properties on that
 
 17
 00:01:01.435 --> 00:01:05.323
-函数对象，例如其链接或其名称或该排序的其他内容。
-function object such as its link or
-its name or other thing of that sort.
+函数对象，例如它的链接或名称或其他类似的东西。
+function object such as its link or its name or other thing of that sort.
 
 18
 00:01:05.323 --> 00:01:09.149
-任何时候你都可能需要自己的功能
-Anytime you might need a self
-reference to the function,
+任何时候您可能需要对函数的自我引用，
+Anytime you might need a self reference to the function,
 
 19
 00:01:09.149 --> 00:01:14.100
-这个问题的唯一正确答案是它需要有一个名字
-the single only right answer to that
-question is, it needs to have a name.
+对这个问题唯一正确的答案是，它需要一个名字。
+the single only right answer to that question is, it needs to have a name.
 
 20
 00:01:14.100 --> 00:01:18.807
-有一些 EES6 之前的 hacks 或 Es5 pre Es5 之前的 hacks，
-There were some pre ES6 sorts of hacks or
-an even pre ES5 sorts of hacks,
+有一些ES6之前的黑客攻击或者甚至是ES5之前的黑客攻击，
+There were some pre ES6 sorts of hacks or an even pre ES5 sorts of hacks,
 
 21
 00:01:18.807 --> 00:01:23.745
-您可以使用自变量开始调用作为函数的引用，
-where you could use arguments start
-calling as a reference to the function,
+您可以使用参数start call作为对函数的引用，
+where you could use arguments start calling as a reference to the function,
 
 22
 00:01:23.745 --> 00:01:26.850
-它没有被损坏但实际上是不推荐的
-it's not broken but
-essentially deprecated.
+它没有坏掉，但本质上已经过时了。
+it's not broken but essentially deprecated.
 
 23
 00:01:26.850 --> 00:01:30.805
-从自身内部获取功能的方法和
-The way to get a reference to
-a function from inside of itself and
+从函数内部获取对函数的引用的方法
+The way to get a reference to a function from inside of itself and
 
 24
 00:01:30.805 --> 00:01:35.438
-有可靠的引用是使用函数表达式的名称。
-have a reliable reference is to use
-the name of your function expression.
+有一个可靠的参考就是使用你的函数表达式的名称。
+have a reliable reference is to use the name of your function expression.
 
 25
 00:01:35.438 --> 00:01:39.388
-在前面的示例中，当我具有全局变量名称时
-In that previous example, when I had
-a variable name that was in the global
+在前面示例中，当我有一个全局变量名时
+In that previous example, when I had a variable name that was in the global
 
 26
 00:01:39.388 --> 00:01:41.950
-范围，然后我就有了我的功能表达。
-scope, and
-then I had my function expression.
+作用域，然后我有了我的函数表达式。
+scope, and then I had my function expression.
 
 27
 00:01:41.950 --> 00:01:44.243
-这会不会更可靠
+它是更可靠还是更不可靠
 Would it be more or less reliable for
 
 28
 00:01:44.243 --> 00:01:48.603
-我要在自己的范围内引用一个大理石
-me to make a reference to a marble in
-my own scope that is read only, or
+让我引用我自己范围内只读的大理石，或者
+me to make a reference to a marble in my own scope that is read only, or
 
 29
 00:01:48.603 --> 00:01:52.826
-在不只读的外层范围内引用大理石吗 ?
-to reference a marble in an enclosing
-scope that is not read only?
+引用非只读封闭范围中的大理石？
+to reference a marble in an enclosing scope that is not read only?
 
 30
 00:01:56.106 --> 00:02:00.373
->> Kyle Simpson: 如果我想从功能的内部引用自己，并且
-&gt;&gt; Kyle Simpson: If I wanted to reference
-myself from inside of the function, and
+&gt；&gt；Kyle Simpson：如果我想从函数内部引用自己，并且
+&gt;&gt; Kyle Simpson: If I wanted to reference myself from inside of the function, and
 
 31
 00:02:00.373 --> 00:02:04.718
-我自己也有自己的选择
-I had the choice between referencing
-myself with a marble in my own
+我可以选择是用自己的大理石来指代自己
+I had the choice between referencing myself with a marble in my own
 
 32
 00:02:04.718 --> 00:02:08.828
-范围，它是只读的，是我的函数表达式的名称。
-scope that is read only,
-the name of my function expression.
+范围为只读，我的函数表达式的名称。
+scope that is read only, the name of my function expression.
 
 33
 00:02:08.828 --> 00:02:13.806
-或者我可以用自己的功能来自我反省
-Or I could self-reference myself with
-the variable that my function had
+或者我可以用函数中的变量自引用自己
+Or I could self-reference myself with the variable that my function had
 
 34
 00:02:13.806 --> 00:02:18.637
-在外部作用域中分配，这不是缺省情况下的只读。
-be assigned to in the outer scope,
-which isn't by default read only.
+在外部作用域中分配给，默认情况下不是只读的。
+be assigned to in the outer scope, which isn't by default read only.
 
 35
 00:02:18.637 --> 00:02:22.030
-这两者中的哪一个会是更好的自我参考呢 ?
-Which one of those two would
-be the better self reference?
+这两个中的哪一个会是更好的自我引用？
+Which one of those two would be the better self reference?
 
 36
 00:02:22.030 --> 00:02:22.933
->> 扬声器 2: 第一个。
+&gt；&gt；扬声器2：第一个。
 &gt;&gt; Speaker 2: The first one.
 
 37
 00:02:22.933 --> 00:02:25.585
->> 凯尔 - 辛普森: 第一，对，你自己和
-&gt;&gt; Kyle Simpson: First one,
-right, the one that you own and
+&gt；&gt；Kyle Simpson：第一个，对，你拥有的那个
+&gt;&gt; Kyle Simpson: First one, right, the one that you own and
 
 38
 00:02:25.585 --> 00:02:28.835
-这是一个更可靠的自我参考。
-that is read only is a more
-reliable self reference.
+即只读是更可靠的自我引用。
+that is read only is a more reliable self reference.
 
 39
 00:02:28.835 --> 00:02:32.881
-第一，如果有任何可能的机会，你会
-So, number one, if there's any possible
-chance remotely that you're gonna
+所以，第一，如果有任何可能远程你将
+So, number one, if there's any possible chance remotely that you're gonna
 
 40
 00:02:32.881 --> 00:02:35.899
-需要一个自我的参考，最好是把它命名。
-need a self reference,
-it's best to go ahead and name it.
+需要一个自我引用，最好继续并命名它。
+need a self reference, it's best to go ahead and name it.
 
 41
 00:02:35.899 --> 00:02:39.216
-即使你现在不需要它将来也可能需要它，
-Even if you don't need it now,
-you might need it in the future,
+即使你现在不需要它，你将来也可能需要它，
+Even if you don't need it now, you might need it in the future,
 
 42
 00:02:39.216 --> 00:02:42.543
-最好把它命名为第一个名字
-it's best to go ahead and
-name it, that's reason number one.
+最好是继续命名，这是第一个原因。
+it's best to go ahead and name it, that's reason number one.
 
 43
 00:02:42.543 --> 00:02:48.319
-原因二，您应该始终选择指定的函数表达式。
-Reason number two, why you should always
-prefer named function expressions.
+第二个原因，为什么你总是喜欢命名函数表达式。
+Reason number two, why you should always prefer named function expressions.
 
 44
 00:02:48.319 --> 00:02:52.485
-您有多少人曾经遇到过 JavaScript 异常，您必须在其中进行调试
-How many of you have ever had a JavaScript
-exception where you had to debug it by
+你们中有多少人曾经遇到过JavaScript异常，必须通过以下方式进行调试
+How many of you have ever had a JavaScript exception where you had to debug it by
 
 45
 00:02:52.485 --> 00:02:53.906
-查看堆栈跟踪吗 ?
+在看堆栈跟踪吗？
 looking at a stack trace?
 
 46
 00:02:53.906 --> 00:02:58.391
-你有多少人喜欢看到匿名的功能
-Okay, how many of you love seeing
-anonymous function, over and over again,
+好的，有多少人喜欢看匿名函数，一遍又一遍，
+Okay, how many of you love seeing anonymous function, over and over again,
 
 47
 00:02:58.391 --> 00:03:00.610
-在您的堆栈跟踪中的行后面的行吗 ?
+在你的堆栈痕迹中一行又一行？
 line after line in your stack traces?
 
 48
 00:03:00.610 --> 00:03:05.550
-尤其是当我们讨论的生产代码是迷你化的时候
-Especially, when we're talking about
-production code that's been minified, so
+特别是当我们谈论被缩小的生产代码时，所以
+Especially, when we're talking about production code that's been minified, so
 
 49
 00:03:05.550 --> 00:03:08.403
-他们都说第一行 32，712 ，
+他们都说第1行，字符32，712，
 they all say line 1, character 32,712,
 
 50
 00:03:08.403 --> 00:03:11.687
-我们都知道那是什么功能对吧
-cuz we all know exactly which
-function that is, right?
+因为我们都知道那是哪个函数，对吧？
+cuz we all know exactly which function that is, right?
 
 51
 00:03:11.687 --> 00:03:15.674
-如果您使用函数表达式的名称，那么会发生什么情况 ?
-Guess what happens if you use a name for
-your function expressions?
+猜猜如果为函数表达式使用名称会发生什么？
+Guess what happens if you use a name for your function expressions?
 
 52
 00:03:15.674 --> 00:03:19.305
@@ -308,32 +262,28 @@ It shows up in the stack trace.
 
 53
 00:03:19.305 --> 00:03:23.391
-如果您使用的名称不像食物条，但就像处理用户点击一样，
-If you use a good name not like food bar,
-but like handle user click,
+如果您使用一个好名称，而不是像Food Bar那样，而是像处理用户单击那样，
+If you use a good name not like food bar, but like handle user click,
 
 54
 00:03:23.391 --> 00:03:25.917
-它就会出现在堆栈跟踪中
+它将显示在堆栈跟踪中。
 it's going to show up in the stack trace.
 
 55
 00:03:25.917 --> 00:03:30.106
-通过命名函数，使代码更可调试，
-So automatically by naming your functions,
-you make your code more debuggable,
+因此，通过自动命名您的函数，您可以使代码更易于调试，
+So automatically by naming your functions, you make your code more debuggable,
 
 56
 00:03:30.106 --> 00:03:32.425
-使堆栈跟踪更可调试。
-you make your stack
-traces more debuggable.
+您可以使堆栈跟踪更可调试。
+you make your stack traces more debuggable.
 
 57
 00:03:32.425 --> 00:03:37.088
-说实话我曾多次研究过一个很有好处的
-Truth, I have on multiple occasions,
-looked at a stack trace that had good,
+事实上，我在很多场合看过堆栈跟踪，
+Truth, I have on multiple occasions, looked at a stack trace that had good,
 
 58
 00:03:37.088 --> 00:03:39.098
@@ -342,802 +292,688 @@ useful semantic names in it, and
 
 59
 00:03:39.098 --> 00:03:43.329
-只要看看这些名字和名字就能告诉他的消息来源
-been able to tell the source of the bug
-simply by looking at the names and
+能够简单地通过查看名称和
+been able to tell the source of the bug simply by looking at the names and
 
 60
 00:03:43.329 --> 00:03:48.034
-什么叫什么叫什么叫什么叫什么叫什么叫什么。
-the order of the functions, what didn't
-get called and what did get called.
+函数的顺序，什么没有被调用，什么被调用了。
+the order of the functions, what didn't get called and what did get called.
 
 61
 00:03:48.034 --> 00:03:49.483
-甚至都没看密码
+甚至不需要看代码
 Didn't even have to look at the code,
 
 62
 00:03:49.483 --> 00:03:51.901
-我立刻就知道这个病毒的名字是什么
-I knew immediately what the bug
-was just from having the names.
+有了名字，我立刻就知道了漏洞是什么。
+I knew immediately what the bug was just from having the names.
 
 63
 00:03:51.901 --> 00:03:55.866
-就算你得看密码你还在接近代码
-And even if you do have to look at the
-code, you're still approaching the code
+即使您必须查看代码，您仍然在接近代码
+And even if you do have to look at the code, you're still approaching the code
 
 64
 00:03:55.866 --> 00:03:59.466
-从那个堆栈跟踪中得到的更多的精神背景比你之前的更多
-with more mental context from that
-stack trace than you would before.
+从堆栈跟踪中获得比以前更多的心理环境。
+with more mental context from that stack trace than you would before.
 
 65
 00:03:59.466 --> 00:04:00.977
-现在我觉得这条规则
+现在我认为规则在和
 Now I think that rule in and
 
 66
 00:04:00.977 --> 00:04:04.419
-本身就足以证明你的职责
-of itself is enough to justify
-always name your functions.
+本身就足以证明总是为您的函数命名。
+of itself is enough to justify always name your functions.
 
 67
 00:04:04.419 --> 00:04:08.574
-我不知道你的情况，但我需要帮助我调试我的程序。
-I don't know about you, but I need all
-the help I can debugging my programs.
+我不知道你，但我需要所有的帮助，我可以调试我的程序。
+I don't know about you, but I need all the help I can debugging my programs.
 
 68
 00:04:08.574 --> 00:04:13.561
-那么额外的努力就是每次我要调试的时候都要分红
-So, the extra effort is gonna pay off
-in dividends every time I have to debug
+所以，每次我必须调试时，额外的努力都会得到回报
+So, the extra effort is gonna pay off in dividends every time I have to debug
 
 69
 00:04:13.561 --> 00:04:14.283
-代码。
+密码。
 the code.
 
 70
 00:04:14.283 --> 00:04:17.624
 第二，我们希望有可调试的堆栈跟踪。
-Number two,
-we want to have debuggable stack traces.
+Number two, we want to have debuggable stack traces.
 
 71
 00:04:17.624 --> 00:04:22.346
-第三个我个人认为这可能是最重要的
-And number three, and I think personally
-this might be the most important of all,
+第三，我个人认为这可能是最重要的，
+And number three, and I think personally this might be the most important of all,
 
 72
 00:04:22.346 --> 00:04:25.495
-但肯定是最不明显的
-but it's certainly the one
-that seems least obvious or
+但它肯定是看起来最不明显的一个
+but it's certainly the one that seems least obvious or
 
 73
 00:04:25.495 --> 00:04:28.867
-也许对其他人更有争议
-maybe it's a little more
-controversial to other people.
+也许这对其他人来说更具争议性。
+maybe it's a little more controversial to other people.
 
 74
 00:04:28.867 --> 00:04:32.072
-第三个名字在你的功能上
-Number three,
-by putting a name on your function,
+第三，通过在你的函数上加上一个名字，
+Number three, by putting a name on your function,
 
 75
 00:04:32.072 --> 00:04:34.913
-你会让那个代码更自我记录
+您使代码更具自我文档化。
 you make that code more self-documenting.
 
 76
 00:04:34.913 --> 00:04:39.269
-如果我有匿名的功能我看着那个功能
-If I have a function that is anonymous,
-and I look at that function to figure out
+如果我有一个匿名函数，我查看该函数来找出
+If I have a function that is anonymous, and I look at that function to figure out
 
 77
 00:04:39.269 --> 00:04:43.427
-这个匿名函数在做什么我得读函数体
-what that anonymous function is doing,
-I have to read the function body and
+匿名函数正在做什么，我必须读取函数体和
+what that anonymous function is doing, I have to read the function body and
 
 78
 00:04:43.427 --> 00:04:47.387
-我还得看它被解析的地方
-I also probably have to read
-where it's being parsed.
+我可能还必须读取它被解析的位置。
+I also probably have to read where it's being parsed.
 
 79
 00:04:47.387 --> 00:04:51.399
->> 凯尔 - 辛普森: 我要从这两条信息中推断，
-&gt;&gt; Kyle Simpson: And I have to infer
-from those two pieces of information,
+&gt；&gt；Kyle Simpson：我必须从这两条信息中推断，
+&gt;&gt; Kyle Simpson: And I have to infer from those two pieces of information,
 
 80
 00:04:51.399 --> 00:04:53.497
-功能的用途。
+函数的目的。
 the purpose of the function.
 
 81
 00:04:53.497 --> 00:04:57.677
-我可以推断其处理用户单击的目的。
-I may be able to infer the purposes
-that it handles user clicks.
+我也许能够推断出它处理用户点击的目的。
+I may be able to infer the purposes that it handles user clicks.
 
 82
 00:04:57.677 --> 00:05:02.514
-但我宁愿读者不要推断它的目的是为了处理
-But I would rather the reader not have
-to infer that its purpose is to handle
+但我宁愿读者不必推断它的目的是处理
+But I would rather the reader not have to infer that its purpose is to handle
 
 83
 00:05:02.514 --> 00:05:06.961
-当我能把名字放进去的时候
-user clicks when I could put a name
-there that makes it completely and
+用户点击时，我可以把一个名称，使它完全和
+user clicks when I could put a name there that makes it completely and
 
 84
 00:05:06.961 --> 00:05:08.536
-毫不含糊
+完全明确。
 totally unambiguous.
 
 85
 00:05:08.536 --> 00:05:12.266
-名为 " 句柄用户单击 " 的功能不需要任何其他
-The function named handle user
-clicks doesn't require any other
+名为handle user click的函数不需要任何其他
+The function named handle user clicks doesn't require any other
 
 86
 00:05:12.266 --> 00:05:15.312
-读其他的代码让我明白
-reading of the rest of the code,
-for me to figure out,
+读完剩下的代码，让我弄明白，
+reading of the rest of the code, for me to figure out,
 
 87
 00:05:15.312 --> 00:05:18.726
-你想让我用这个功能来处理用户的点击，是吗 ?
-you want me to handle user
-clicks with this function, yes?
+你想让我用这个功能处理用户点击，是吗？
+you want me to handle user clicks with this function, yes?
 
 88
 00:05:18.726 --> 00:05:23.497
->> 扬声器 3: 因此，这更多的最佳实践问题似乎很有说服力。
-&gt;&gt; Speaker 3: So this is more of a best
-practices question seems very compelling.
+&gt；&gt；演讲者3：所以这更像是一个最佳实践问题，看起来非常有说服力。
+&gt;&gt; Speaker 3: So this is more of a best practices question seems very compelling.
 
 89
 00:05:23.497 --> 00:05:27.457
-然后我的第一直觉是说，好吧，我就叫这个表情
-My first instinct is then to say,
-okay, I'll just name the expression
+我的第一反应是说，好吧，我就说出这个表达式的名字
+My first instinct is then to say, okay, I'll just name the expression
 
 90
 00:05:27.457 --> 00:05:31.879
-我就会把这个范围的变量命名为
-the same thing that I will name the
-variable of the scope above, I'm assuming,
+我将命名上面作用域的变量，我假设，
+the same thing that I will name the variable of the scope above, I'm assuming,
 
 91
 00:05:31.879 --> 00:05:33.663
-a，是否有阴影的情况 ?
+一，那是一起跟踪案件吗？
 a, is that a case of shadowing?
 
 92
 00:05:33.663 --> 00:05:35.052
-还有 b，- >> Kyle Simpson:
-And b,-
-&gt;&gt; Kyle Simpson: It is a case of
+和b，-&gt；&gt；Kyle Simpson：这是一个案例
+And b,- &gt;&gt; Kyle Simpson: It is a case of
 
 93
 00:05:35.052 --> 00:05:35.567
-阴暗
+跟踪。
 shadowing.
 
 94
 00:05:35.567 --> 00:05:39.601
-> 演讲者 3: 在 B，可能对碎片造成极大的问题，或者
-&gt;&gt; Speaker 3: And at B, that's probably
-incredibly problematic for debris or is
+&gt；&gt；扬声器3：在B，这可能是令人难以置信的碎片问题，或者是
+&gt;&gt; Speaker 3: And at B, that's probably incredibly problematic for debris or is
 
 95
 00:05:39.601 --> 00:05:43.480
-会被考虑的事情 -- >凯尔 - 辛普森: 我不考虑
-that something that would be considered-
-&gt;&gt; Kyle Simpson: I wouldn't consider
+这是会被考虑的事情-&gt；&gt；Kyle Simpson：我不会考虑
+that something that would be considered- &gt;&gt; Kyle Simpson: I wouldn't consider
 
 96
 00:05:43.480 --> 00:05:46.119
-阴影是问题还是不是问题。
-shadowing to be a problem or
-not a problem.
+影子是个问题还是不是个问题。
+shadowing to be a problem or not a problem.
 
 97
 00:05:46.119 --> 00:05:50.911
-在特定情况下，我认为您不太可能需要
-In that particular scenario, I think it is
-unlikely that you're gonna need to have
+在这种情况下，我认为你不太可能需要
+In that particular scenario, I think it is unlikely that you're gonna need to have
 
 98
 00:05:50.911 --> 00:05:52.901
-都是对函数的引用。
+两个对函数的引用。
 both references to the function.
 
 99
 00:05:52.901 --> 00:05:56.762
-也许你需要这样做你得给他们命名
-Maybe you're gonna need to and if you do,
-you're gonna have to name them something
+也许你需要这样做，如果你这样做了，你就得给他们起个名字
+Maybe you're gonna need to and if you do, you're gonna have to name them something
 
 100
 00:05:56.762 --> 00:05:59.423
-不一样你现在就得躲躲避让
-different, you're now gonna
-have to avoid shadowing.
+不同的是，你现在必须避免跟踪。
+different, you're now gonna have to avoid shadowing.
 
 101
 00:05:59.423 --> 00:06:04.415
-但在大多数情况下，如果这件事有一个明确的名称，
-But in most cases, if there is one
-definitive name for what this thing is,
+但在大多数情况下，如果这个东西有一个明确的名字，
+But in most cases, if there is one definitive name for what this thing is,
 
 102
 00:06:04.415 --> 00:06:06.841
-如果你想的话现在都叫他们俩
+如果你想的话现在就说出他们的名字。
 name both of them now if you want to.
 
 103
 00:06:06.841 --> 00:06:11.110
-我的个人意见是对变量的函数表达式是不起作用的，
-My personal opinion is don't do function
-expression on the variable anyway,
+我个人的观点是无论如何不要对变量做函数表达式，
+My personal opinion is don't do function expression on the variable anyway,
 
 104
 00:06:11.110 --> 00:06:15.120
-做一个功能声明还有一个名字如果你要去的话
-do a function declaration and there's
-just one name but, if you are going
+做一个函数声明，只有一个名字，但是，如果你要
+do a function declaration and there's just one name but, if you are going
 
 105
 00:06:15.120 --> 00:06:19.410
-如果只有一个名字的话，那就更有道理了。
-to make a variable then it probably makes
-more sense if there's only one name.
+为了制造一个变量，如果只有一个名字，可能会更有意义。
+to make a variable then it probably makes more sense if there's only one name.
 
 106
 00:06:19.410 --> 00:06:23.880
-但这一点也有一些警告，因为有的时候，这种功能的使用，
-There are caveats to this, though, because
-sometimes, the usage of that function,
+不过，这里有一些警告，因为有时，该函数的使用，
+There are caveats to this, though, because sometimes, the usage of that function,
 
 107
 00:06:23.880 --> 00:06:26.755
-它被转移到的地方或者它要做什么
-where it's being passed to,
-or what it's going to do,
+它被传递到哪里，或者它将要做什么，
+where it's being passed to, or what it's going to do,
 
 108
 00:06:26.755 --> 00:06:30.952
-它的目的可能与你想描述它本身的方式不同
-it may have a different purpose than how
-you wanna describe it, in and of itself.
+它可能有一个不同的目的，而不是你想要描述它的方式，无论是它本身还是它本身。
+it may have a different purpose than how you wanna describe it, in and of itself.
 
 109
 00:06:30.952 --> 00:06:34.516
-所以也许会有另一个更合适的名字
-So it might in fact be that there's
-a different, more appropriate name for
+所以实际上可能有一个不同的，更合适的名字
+So it might in fact be that there's a different, more appropriate name for
 
 110
 00:06:34.516 --> 00:06:37.913
-它的功能，而不是它所分配给的属性，或者
-the function, as opposed to what
-property it's being assigned to, or
+函数，而不是分配给它的属性，或
+the function, as opposed to what property it's being assigned to, or
 
 111
 00:06:37.913 --> 00:06:39.858
-所分配给的变量。
+它被赋值给了什么变量。
 what variable it's being assigned to.
 
 112
 00:06:39.858 --> 00:06:46.572
-因此，他们不一定相同，但有时可能有帮助吗 ?
-So they are not necessarily the same,
-but sometimes they might be, helpful?
+所以它们不一定是相同的，但有时它们可能是有用的？
+So they are not necessarily the same, but sometimes they might be, helpful?
 
 113
 00:06:46.572 --> 00:06:52.365
-好了这三个我想起来了
-Good, so these three I think,
-taken together,
+很好，所以我认为这三个加在一起，
+Good, so these three I think, taken together,
 
 114
 00:06:52.365 --> 00:06:58.019
-你的功能就会被你的
-make an ironclad case
-that your functions would
+做一个铁一般的例子，你的函数将
+make an ironclad case that your functions would
 
 115
 00:06:58.019 --> 00:07:03.550
-如果您的功能被命名，那么会生成更好的代码。
-make better code if your
-functions are named.
+如果您的函数是命名的，则编写更好的代码。
+make better code if your functions are named.
 
 116
 00:07:03.550 --> 00:07:08.428
-现在我知道对大多数有这种情况的人有问题
-Now I understand that that is problematic
-for most people that have that
+现在我明白这对大多数人来说是有问题的
+Now I understand that that is problematic for most people that have that
 
 117
 00:07:08.428 --> 00:07:12.673
-指以匿名方式书写功能的手指肌肉记忆。
-finger muscle memory of writing
-the functions anonymously.
+匿名编写函数的手指肌肉记忆。
+finger muscle memory of writing the functions anonymously.
 
 118
 00:07:12.673 --> 00:07:18.026
-自 JQuery 天数以来，我使用匿名功能查看了每个博客。
-That I've seen every single blog since the
-jQuery days, using anonymous functions.
+自从jQuery出现以来，我看到的每一个博客都在使用匿名函数。
+That I've seen every single blog since the jQuery days, using anonymous functions.
 
 119
 00:07:18.026 --> 00:07:21.702
-你对匿名功能有任何访问权
-That every piece of code you've ever
-had any access to anonymous functions
+你曾经有权访问匿名函数的每一段代码
+That every piece of code you've ever had any access to anonymous functions
 
 120
 00:07:21.702 --> 00:07:22.413
-到处都是
+到处都是。
 everywhere.
 
 121
 00:07:22.413 --> 00:07:24.942
-突然有一个人跟你说不不不
-And all of a sudden, here's this
-one guy telling you, no, no, no,
+突然，有个人告诉你，不，
+And all of a sudden, here's this one guy telling you, no, no, no,
 
 122
 00:07:24.942 --> 00:07:25.781
-都需要名字
+那些都需要名字。
 those all need names.
 
 123
 00:07:25.781 --> 00:07:29.336
-我明白，这很麻烦，麻烦，额外的工作。
-I get it, that's problematic,
-it's troublesome, it's extra work.
+我明白，这是有问题的，很麻烦的，是额外的工作。
+I get it, that's problematic, it's troublesome, it's extra work.
 
 124
 00:07:29.336 --> 00:07:33.978
-但你必须回到我所说的代码的目的
-But you have to go back to what I
-said about the purpose of code.
+但是你必须回到我所说的关于代码的目的。
+But you have to go back to what I said about the purpose of code.
 
 125
 00:07:33.978 --> 00:07:36.891
-代码的用途不方便您输入。
-The purpose of code is not to
-be convenient for you to type.
+编写代码的目的不是为了方便您键入。
+The purpose of code is not to be convenient for you to type.
 
 126
 00:07:36.891 --> 00:07:41.605
 代码的目的是让您更清楚地传达您的意图。
-The purpose of code is for you to
-communicate more clearly your intent.
+The purpose of code is for you to communicate more clearly your intent.
 
 127
 00:07:41.605 --> 00:07:45.319
-有办法解决这些问题，但是
-There are ways to solve
-each of these problems but
+这些问题都有解决的方法，但是
+There are ways to solve each of these problems but
 
 128
 00:07:45.319 --> 00:07:49.949
-解决这些问题的最佳方法是命名函数。
-the best way to solve these
-problems is to name the function.
+解决这些问题的最好方法是命名函数。
+the best way to solve these problems is to name the function.
 
 129
 00:07:49.949 --> 00:07:53.422
-刚才有人问我如果分配匿名功能会发生什么
-So someone asked just a moment ago, what
-happens if I assign an anonymous function
+所以刚才有人问我，如果我给一个匿名函数赋值会发生什么
+So someone asked just a moment ago, what happens if I assign an anonymous function
 
 130
 00:07:53.422 --> 00:07:56.463
-财产，或者变量什么的，名字发生了什么 ?
-to property, or to a variable or
-something, what happens to the name?
+对于属性或变量之类的东西，名称会发生什么变化？
+to property, or to a variable or something, what happens to the name?
 
 131
 00:07:56.463 --> 00:07:59.218
-这仍然是一个匿名的功能
+嗯，它仍然是一个匿名函数，
 Well, it's still an anonymous function,
 
 132
 00:07:59.218 --> 00:08:03.098
-它本身也没有词法自调。
-it still doesn't have a lexical
-self-reference to itself.
+它仍然没有对自己的词汇自我引用。
+it still doesn't have a lexical self-reference to itself.
 
 133
 00:08:03.098 --> 00:08:05.208
-您可以引用外部作用域中的变量吗 ?
-Could you reference the variable
-in the outer scope?
+你能引用外部作用域中的变量吗？
+Could you reference the variable in the outer scope?
 
 134
 00:08:05.208 --> 00:08:10.018
-当然你可以但少得多可靠一点也不可信
-Of course you can, but it's a little less
-reliable, a little less trustable, and
+当然可以，但它不太可靠，不太可信，而且
+Of course you can, but it's a little less reliable, a little less trustable, and
 
 135
 00:08:10.018 --> 00:08:12.230
-我想说一点语意
+我会争辩少一点语义。
 I would argue a little less semantic.
 
 136
 00:08:12.230 --> 00:08:14.819
-它会在堆栈跟踪中显示名称吗 ?
-Is it gonna show up with
-a name in the stack trace?
+它会在堆栈跟踪中显示名称吗？
+Is it gonna show up with a name in the stack trace?
 
 137
 00:08:14.819 --> 00:08:17.795
-根据该函数表达式的位置，
-Depending upon where that
-function expression exists,
+取决于该函数表达式存在的位置，
+Depending upon where that function expression exists,
 
 138
 00:08:17.795 --> 00:08:19.908
-也许能推断出一个名字
+它也许可以推断出一个名字。
 it might be able to have a name inferred.
 
 139
 00:08:19.908 --> 00:08:22.800
-例如，如果分配给变量，
-For example,
-if it's assigned to a variable,
+例如，如果它被赋值给一个变量，
+For example, if it's assigned to a variable,
 
 140
 00:08:22.800 --> 00:08:27.790
-那么一般只要没有什么复杂的破坏代码到位，
-then generally as long as there isn't
-some complex destructuring code in place,
+然后通常只要没有一些复杂的解构代码在适当的地方，
+then generally as long as there isn't some complex destructuring code in place,
 
 141
 00:08:27.790 --> 00:08:32.493
-一般都是用这个名字和推断来
-generally it's going to just take the name
-and infer that's what you mean for
+一般情况下，它只会取名字并推断这就是你的意思
+generally it's going to just take the name and infer that's what you mean for
 
 142
 00:08:32.493 --> 00:08:37.193
-堆栈跟踪的目的，但在此处是大问题， 99.9%
-the purposes of the stack trace,
-except here is the big problem, 99.9%
+堆栈跟踪的目的，除了这里有个大问题，99.9%
+the purposes of the stack trace, except here is the big problem, 99.9%
 
 143
 00:08:37.193 --> 00:08:42.158
-使用匿名函数表达式的所有个案都是回调。
-of all cases where people use anonymous
-functions expressions is as callbacks.
+在人们使用匿名函数的所有情况中，表达式是作为回调的。
+of all cases where people use anonymous functions expressions is as callbacks.
 
 144
 00:08:42.158 --> 00:08:47.140
-它们直接传递给其他函数如 .map ，然后
-They pass them in line directly to
-other functions like .map, .then,
+它们直接以行方式将它们传递给其他函数，如.map，然后，
+They pass them in line directly to other functions like .map, .then,
 
 145
 00:08:47.140 --> 00:08:48.946
-所有这些猜测是什么
+所有这些你猜怎么着？
 all those and guess what?
 
 146
 00:08:48.946 --> 00:08:52.413
 当您在调用位置传递函数表达式时，
-When you pass a function
-expression in a call position,
+When you pass a function expression in a call position,
 
 147
 00:08:52.413 --> 00:08:55.006
-没有办法从上面推断任何名字
+没有办法从它推断出任何名字。
 there's no way to infer any name from it.
 
 148
 00:08:55.006 --> 00:08:57.548
-所以你没有得到这个名字推论的好处
-So you don't get the benefit
-of that name inference,
+所以你得不到那个名字推断的好处，
+So you don't get the benefit of that name inference,
 
 149
 00:08:57.548 --> 00:09:01.172
-您必须将其分配给变量以获取名称推论或属性。
-you have to assign it to a variable to
-get the name inference or to a property.
+您必须将其分配给变量以获得名称推断或分配给属性。
+you have to assign it to a variable to get the name inference or to a property.
 
 150
 00:09:01.172 --> 00:09:03.980
-如果你想把它分配给一个变量
-And if you're gonna go to the trouble
-to assign it to a variable why
+如果你想麻烦地把它赋值给一个变量，为什么
+And if you're gonna go to the trouble to assign it to a variable why
 
 151
 00:09:03.980 --> 00:09:05.370
-不只是声明吗
+而不仅仅是一份声明？
 not just make it a declaration?
 
 152
 00:09:05.370 --> 00:09:08.402
-为什么写变量，然后又要写两次 ?
-Why write a variable and
-then have to write the name twice?
+为什么要写一个变量，然后必须写两次名字？
+Why write a variable and then have to write the name twice?
 
 153
 00:09:08.402 --> 00:09:12.460
-我看不出有什么理由你更喜欢做更多的工作
-I don't see any reason why you should
-strongly prefer making more work for
+我看不出有什么理由你会强烈地喜欢做更多的工作
+I don't see any reason why you should strongly prefer making more work for
 
 154
 00:09:12.460 --> 00:09:15.937
-你自己也会让人更困惑
-yourself and making it a little
-bit more confusing for people.
+让你自己变得更让人困惑。
+yourself and making it a little bit more confusing for people.
 
 155
 00:09:15.937 --> 00:09:19.179
-而这甚至不是唯一的区别，当我们谈论提升的时候，
-And that's not even the only difference,
-when we talk about hoisting later we're
+这甚至不是唯一的区别，当我们稍后谈到提升时，我们是
+And that's not even the only difference, when we talk about hoisting later we're
 
 156
 00:09:19.179 --> 00:09:21.140
-会发现有很大的差异
-gonna see there's a big
-difference in hoisting.
+会看到吊装有很大的不同。
+gonna see there's a big difference in hoisting.
 
 157
 00:09:21.140 --> 00:09:24.788
-所以我觉得你应该喜欢用名字命名的函数声明
-So I think you should prefer function
-declarations with names if you're
+所以我认为你应该更喜欢有名字的函数声明，如果你是
+So I think you should prefer function declarations with names if you're
 
 158
 00:09:24.788 --> 00:09:28.850
-能在一个函数表达式中传递一个名字
-gonna pass in a function expression, put a
-name on it just like you would have if it
+传入一个函数表达式，给它加上一个名字，就像如果它的话你会有的一样
+gonna pass in a function expression, put a name on it just like you would have if it
 
 159
 00:09:28.850 --> 00:09:31.570
-是函数声明，为其指定相同的名称。
-were a function declaration,
-give it the same name.
+是一个函数声明，则给它以相同的名称。
+were a function declaration, give it the same name.
 
 160
 00:09:31.570 --> 00:09:36.040
-现在我知道命名很难，但真正的原因是你为什么
-Now I understand that naming is hard but
-really the only legitimate reason why you
+现在我明白了命名很难，但实际上是你唯一合法的理由
+Now I understand that naming is hard but really the only legitimate reason why you
 
 161
 00:09:36.040 --> 00:09:40.722
-别给你的功能命名你太懒了或者没有创意来找个名字
-don't name your functions cuz you're too
-lazy or uncreative to come up with a name.
+不要因为你太懒或没有创意而给你的函数命名。
+don't name your functions cuz you're too lazy or uncreative to come up with a name.
 
 162
 00:09:40.722 --> 00:09:44.485
-匿名函数的 preferable 没有任何原因。
-There is no reason why an anonymous
-function is preferrable.
+没有理由认为匿名函数更可取。
+There is no reason why an anonymous function is preferrable.
 
 163
 00:09:44.485 --> 00:09:48.741
-没有任何自变量可以表明该名称正在提取或
-There is no argument that can be made
-that that name is distracting or
+没有理由认为名字会分散注意力或
+There is no argument that can be made that that name is distracting or
 
 164
 00:09:48.741 --> 00:09:52.037
-对代码可读性的目的无帮助。
-is unhelpful for
-the purposes of code readability.
+对代码可读性没有帮助。
+is unhelpful for the purposes of code readability.
 
 165
 00:09:52.037 --> 00:09:56.945
-任何人士在这方面所提出的论据，都是完整的。
-Any argument that people have made
-to that extent is complete bunk.
+人们提出的任何论点到那种程度都是胡说八道。
+Any argument that people have made to that extent is complete bunk.
 
 166
 00:09:56.945 --> 00:10:00.130
-大家都在书和博客里都告诉你，不，不，
-People tell you all over the place
-in books and blogs, no, no,
+人们在书和博客里到处告诉你，不，
+People tell you all over the place in books and blogs, no, no,
 
 167
 00:10:00.130 --> 00:10:02.735
-不所有额外的东西都是不必要的
-no, all that extra stuff
-is totally unnecessary.
+不，所有那些额外的东西都是完全不必要的。
+no, all that extra stuff is totally unnecessary.
 
 168
 00:10:02.735 --> 00:10:05.301
-他们的想法是完全错误的
-And they're thinking
-completely wrongly about this,
+他们对此的想法是完全错误的，
+And they're thinking completely wrongly about this,
 
 169
 00:10:05.301 --> 00:10:08.471
-他们不是在考虑好的语义名称的目的
-cuz they're not thinking about
-the purpose of good semantic names.
+因为他们没有考虑好的语义名称的目的。
+cuz they're not thinking about the purpose of good semantic names.
 
 170
 00:10:08.471 --> 00:10:13.706
-函数名的目的是告诉您此东西存在的原因。
-The purpose of a function name is to
-tell you why does this thing exist.
+函数名的目的是告诉你为什么这个东西存在。
+The purpose of a function name is to tell you why does this thing exist.
 
 171
 00:10:13.706 --> 00:10:18.312
-我的断言是你的程序中存在的每一项功能
-My assertion is that every function
-that exists in your program,
+我的断言是，程序中存在的每个函数，
+My assertion is that every function that exists in your program,
 
 172
 00:10:18.312 --> 00:10:21.004
-每个功能都有目的
+每一个功能都有一个目的。
 every single function has a purpose.
 
 173
 00:10:21.004 --> 00:10:24.654
-如果每个函数都有一个目的，就意味着每个函数都有一个名称。
-And if every function has a purpose,
-it means every function has a name.
+如果每个函数都有用途，这意味着每个函数都有名称。
+And if every function has a purpose, it means every function has a name.
 
 174
 00:10:24.654 --> 00:10:28.884
-你要用那个名字来把它放进你的代码里
-And it's up to you to come up with that
-name and put it in your code, not make
+这取决于您想出这个名称并将其放入您的代码中，而不是Make
+And it's up to you to come up with that name and put it in your code, not make
 
 175
 00:10:28.884 --> 00:10:33.557
-您的代码的读者每次阅读代码时都必须将其计算出来。
-the reader of your code have to figure it
-out every single time they read the code.
+代码的阅读器必须在每次读取代码时都弄明白。
+the reader of your code have to figure it out every single time they read the code.
 
 176
 00:10:33.557 --> 00:10:36.851
-如果你不能用这个函数来命名，
-If you can not come up with a name for
-the function,
+如果你找不出函数的名字，
+If you can not come up with a name for the function,
 
 177
 00:10:36.851 --> 00:10:41.182
-这可能意味着你还不明白这个功能
-it probably means that you don't
-understand that function yet.
+这可能意味着你还不理解这个函数。
+it probably means that you don't understand that function yet.
 
 178
 00:10:41.182 --> 00:10:44.561
-这可能意味着这个功能太复杂了
-It probably means,
-that function is too complex,
+这可能意味着，这个函数太复杂了，
+It probably means, that function is too complex,
 
 179
 00:10:44.561 --> 00:10:48.725
-需要被分解成更小的碎片
-and needs to be broken down into
-smaller pieces until such a time
+并且需要被分解成更小的碎片，直到这样的时候
+and needs to be broken down into smaller pieces until such a time
 
 180
 00:10:48.725 --> 00:10:53.379
-因为这些名字是完全自明的，然后把它们放在那里。
-as those names are completely self
-obvious, and then put them there.
+因为这些名字完全是显而易见的，然后把它们放在那里。
+as those names are completely self obvious, and then put them there.
 
 181
 00:10:53.379 --> 00:10:57.388
-当你不能去的时候它是一个更有问题的代码的领先指标
-It's a leading indicator of more
-problematic code when you can't
+它是更有问题的代码的先行指示器，当您不能
+It's a leading indicator of more problematic code when you can't
 
 182
 00:10:57.388 --> 00:10:58.602
-提出一个名字
+想出一个名字或者
 come up with a name or
 
 183
 00:10:58.602 --> 00:11:03.198
-你能给我的名字有 14 个字就像在 Java 里一样好吗
-the name that you can come up with is
-14 words long like we do in Java, okay?
+你能想出的名字有14个字长，就像我们在Java中做的那样，好吗？
+the name that you can come up with is 14 words long like we do in Java, okay?
 
 184
 00:11:03.198 --> 00:11:06.783
-这通常意味着此功能在执行过多操作。
-That usually means this
-function is doing too much.
+这通常意味着这个函数做的太多了。
+That usually means this function is doing too much.
 
 185
 00:11:06.783 --> 00:11:08.220
-这里有个问题是吗
+这里有个问题，是吗？
 There was a question over here, yes?
 
 186
 00:11:08.220 --> 00:11:13.600
->> 扬声器 4: 你是说使用匿名功能
-&gt;&gt; Speaker 4: So are you saying
-that the use of anonymous functions
+&gt；&gt；扬声器4：那么你是说匿名函数的使用
+&gt;&gt; Speaker 4: So are you saying that the use of anonymous functions
 
 187
 00:11:13.600 --> 00:11:18.740
-其实就是少了一点，其实都是这样。
-is really just to type less,
-that's really all.
+就是少打字，真的就是这样。
+is really just to type less, that's really all.
 
 188
 00:11:18.740 --> 00:11:20.663
->> 凯尔 - 辛普森: 这正是我要说的
-&gt;&gt; Kyle Simpson: That's
-exactly what I'm saying, and
+&gt；&gt；Kyle Simpson：这正是我想说的，而且
+&gt;&gt; Kyle Simpson: That's exactly what I'm saying, and
 
 189
 00:11:20.663 --> 00:11:23.000
-我们下下一张幻灯片会变得更糟
-it gets worse when we go
-to the next slide, yes.
+当我们转到下一张幻灯片时，情况会变得更糟，是的。
+it gets worse when we go to the next slide, yes.
 
 190
 00:11:23.000 --> 00:11:26.863
->> 扬声器 5: 所以听起来你肯定喜欢声明，
-&gt;&gt; Speaker 5: So it sounds like you
-definitely prefer declarations,
+&gt；&gt；演讲者5：所以听起来你肯定更喜欢声明，
+&gt;&gt; Speaker 5: So it sounds like you definitely prefer declarations,
 
 191
 00:11:26.863 --> 00:11:31.147
-有吗，功能表达式有什么好的用法吗 ?
-is there ever, is there a good use for
-a function expression?
+函数表达式有没有很好的用途？
+is there ever, is there a good use for a function expression?
 
 192
 00:11:31.147 --> 00:11:32.559
->> 凯尔 - 辛普森: 是的，绝对的，
+&GT；&GT；Kyle Simpson：是的，当然，
 &gt;&gt; Kyle Simpson: Yeah, absolutely,
 
 193
 00:11:32.559 --> 00:11:36.566
 函数表达式有时是绝对必要的。
-function expression sometimes
-are absolutely necessary.
+function expression sometimes are absolutely necessary.
 
 194
 00:11:36.566 --> 00:11:39.884
-我的经验法则除了你要去的地方
-My personal rule of thumb,
-other than places where you have to,
+我个人的经验，除了你必须去的地方，
+My personal rule of thumb, other than places where you have to,
 
 195
 00:11:39.884 --> 00:11:44.065
-我的个人经验法则是我更喜欢功能宣言
-my personal rule of thumb is that I prefer
-function declaration if it's more than
+我个人的经验是，如果函数声明超过
+my personal rule of thumb is that I prefer function declaration if it's more than
 
 196
 00:11:44.065 --> 00:11:45.179
@@ -1146,119 +982,102 @@ three lines of code.
 
 197
 00:11:45.179 --> 00:11:47.140
-如果是一，两，三行代码，
+如果只有一行、两行或三行代码，
 If it's one, two, or three lines of code,
 
 198
 00:11:47.140 --> 00:11:50.006
-通常我要做一个内联函数表达式。
-generally I'm gonna make that
-an inline function expression.
+通常我会让它成为一个内联函数表达式。
+generally I'm gonna make that an inline function expression.
 
 199
 00:11:50.006 --> 00:11:53.067
-除非这个东西需要多次调用，在这种情况下，
-Unless, that thing needs to be called
-multiple times, in which case,
+除非，那个东西需要被多次调用，在这种情况下，
+Unless, that thing needs to be called multiple times, in which case,
 
 200
 00:11:53.067 --> 00:11:55.975
-我要把它作为一个功能宣言即使它是一条直线
-I'm gonna make it a function declaration,
-even if it's one line.
+我将使它成为一个函数声明，即使它只有一行。
+I'm gonna make it a function declaration, even if it's one line.
 
 201
 00:11:58.755 --> 00:12:02.528
->> 凯尔 - 辛普森: 但这些只是一般的指引
-&gt;&gt; Kyle Simpson: But those are just
-sort of general guidelines in case,
+&gt；&gt；Kyle Simpson：但这些只是一般的指导方针，以防万一，
+&gt;&gt; Kyle Simpson: But those are just sort of general guidelines in case,
 
 202
 00:12:02.528 --> 00:12:05.568
-你的飞行哩数可能随他们的不同而不同
+你的里程可能会有所不同，就像他们说的，好吗？
 your mileage may vary, as they say, okay?
 
 203
 00:12:05.568 --> 00:12:09.169
-所以你猜我还是很挣扎
-So guess what, I still struggle with this,
-even though for
+所以你猜怎么着，我仍然在挣扎，尽管
+So guess what, I still struggle with this, even though for
 
 204
 00:12:09.169 --> 00:12:12.926
-我一直在宣扬这个信息告诉人们
-years I've been preaching this message and
-telling people.
+多年来，我一直在宣扬这个信息，并告诉人们。
+years I've been preaching this message and telling people.
 
 205
 00:12:12.926 --> 00:12:16.783
-你是一万零的学生听我说这事对吧
-And you're the 10,000th student
-to ever hear me say this, right?
+你是第万个听我这么说的学生，对吧？
+And you're the 10,000th student to ever hear me say this, right?
 
 206
 00:12:16.783 --> 00:12:19.162
-我已经说了这么多年了
-I've said this all over the world for
-years and
+我已经在全世界说了这么多年了
+I've said this all over the world for years and
 
 207
 00:12:19.162 --> 00:12:22.657
-我仍然挣扎在这个问题上，这就是我所使用的诡计。
-I still struggle with this problem and
-here's the trick that I use.
+我仍然在这个问题上挣扎，这里是我使用的技巧。
+I still struggle with this problem and here's the trick that I use.
 
 208
 00:12:22.657 --> 00:12:26.163
-第一，我从来没有写过代码，然后我就完成了，
-Number one, I don't ever write code
-just once and then I'm done with it,
+第一，我从来不会只写一次代码然后就结束了，
+Number one, I don't ever write code just once and then I'm done with it,
 
 209
 00:12:26.163 --> 00:12:29.232
-代码始终是一个迭代过程，我在其中对其进行重构。
-code is always an iterative
-process where I'm refactoring it.
+在我重构代码的过程中，代码总是一个迭代的过程。
+code is always an iterative process where I'm refactoring it.
 
 210
 00:12:29.232 --> 00:12:33.268
-当我开始写函数的时候，我几乎肯定还不知道如何和
-When I start to write a function, I almost
-certainly don't know yet exactly how and
+当我开始编写函数时，我几乎肯定还不知道具体是如何和
+When I start to write a function, I almost certainly don't know yet exactly how and
 
 211
 00:12:33.268 --> 00:12:36.683
-那个功能会是什么或者什么结构
-what that function's gonna be for
-or what the structure's gonna be.
+这个函数是用来做什么的或者这个结构是用来做什么的。
+what that function's gonna be for or what the structure's gonna be.
 
 212
 00:12:36.683 --> 00:12:40.875
-所以我承认我所提出的任何名字都不是写在
-So I just accept the fact that whatever
-name I come up with is not written in
+所以我只能接受这样一个事实，无论我想出的名字都不是用来写的
+So I just accept the fact that whatever name I come up with is not written in
 
 213
 00:12:40.875 --> 00:12:43.650
-石头和我要多次改变
-stone and
-I'm gonna change it multiple times.
+斯通和我要换好几次。
+stone and I'm gonna change it multiple times.
 
 214
 00:12:43.650 --> 00:12:47.764
-如果我还不知道有什么好名字
-And if I legitimately can't
-come up with any good name yet,
+如果我还不能合法地想出任何好名字，
+And if I legitimately can't come up with any good name yet,
 
 215
 00:12:47.764 --> 00:12:53.197
-我以 " TODO， T-O-D-O " 开头，因为我习惯了
-I start with the name TODO, T-O-D-O
-because I'm in a habit of searching for
+我从名字TODO开始，T-O-D-O，因为我有搜索的习惯
+I start with the name TODO, T-O-D-O because I'm in a habit of searching for
 
 216
 00:12:53.197 --> 00:12:55.942
-在我落实操作之前，请进行 TODO 注释。
+在我提交东西之前要做的评论。
 TODO comments before I commit things.
 
 217
@@ -1268,24 +1087,20 @@ And I'll find those unnamed functions and
 
 218
 00:12:58.756 --> 00:13:03.222
-在这一点上也许能更好地理解它应该被称作什么
-at that point maybe have a better
-sense of what it ought to be called.
+在这一点上，也许对它应该叫什么有更好的感觉。
+at that point maybe have a better sense of what it ought to be called.
 
 219
 00:13:03.222 --> 00:13:07.163
-还是要努力的，还是努力，还是我的
-Still a process that you have to work on,
-it is still an effort, and it still my
+仍然是一个你必须工作的过程，它仍然是一个努力，它仍然是我的
+Still a process that you have to work on, it is still an effort, and it still my
 
 220
 00:13:07.163 --> 00:13:10.984
-即使这些年之后我开始用匿名的身份开始
-extinctual habit even all these years
-later that I start with the anonymous
+灭绝的习惯，即使这么多年后，我从匿名开始
+extinctual habit even all these years later that I start with the anonymous
 
 221
 00:13:10.984 --> 00:13:15.013
-但后来我意识到了这些好处然后我就回去了
-function but then I realized all of these
-benefits and I go back and I name them.
+函数，但后来我意识到所有这些好处，我回去给它们命名。
+function but then I realized all of these benefits and I go back and I name them.

@@ -2,670 +2,670 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:04.067
-&gt；&gt；[音樂]&gt；&gt；[音樂]
-&gt；&gt；[音乐] &gt;&gt; [MUSIC]
+&gt；&gt；[音乐]
+&gt;&gt; [MUSIC]
 
 2
 00:00:04.067 --> 00:00:06.682
-&gt；&gt；道格拉斯·克羅克福德：我們為語言添加了嚴格模式，因為有一個&gt；&gt；道格拉斯·克羅克福德：我們在語言中添加了嚴格的模式，因為
-&gt；&gt；Douglas Crockford：我们为语言添加了严格模式，因为有一个 &gt;&gt; Douglas Crockford: We added a strict mode to the language because there are a
+&gt；&gt；Douglas Crockford：我们为语言添加了严格模式，因为有一个
+&gt;&gt; Douglas Crockford: We added a strict mode to the language because there are a
 
 3
 00:00:06.682 --> 00:00:11.189
-我們想要修復的語言中有很多明顯錯誤的地方.語言中有很多明顯錯誤的地方，我們想要修復。
-我们想要修复的语言中有很多明显错误的地方。 lot of things in the language that were clearly wrong that we wanted to repair.
+我们想要修复的语言中有很多明显错误的地方。
+lot of things in the language that were clearly wrong that we wanted to repair.
 
 4
-00:00:11.189 --> 00:00:13.368
-但他們將是突破性的變化.但他們會破壞變革。
-但他们将是突破性的变化。 But they would be breaking changes.
+00:00:11.189 --> 00:00:13.369
+但他们将是突破性的变化。
+But they would be breaking changes.
 
 5
-00:00:13.368 --> 00:00:17.428
-所以我們需要某種選擇，所以，所以我們需要有某種選擇，所以
-所以我们需要某种选择，所以 And so we needed to have some kind of opt in, so
+00:00:13.369 --> 00:00:17.429
+所以我们需要某种选择，所以
+And so we needed to have some kind of opt in, so
 
 6
-00:00:17.428 --> 00:00:21.219
-你會說是的，我已經為這可能導致的破壞做好了準備.你會說是的，我已經為這可能造成的破壞做好了準備。
-你会说是的，我已经为这可能导致的破坏做好了准备。 you'd say yes, I'm prepared for the breakage this might cause.
+00:00:17.429 --> 00:00:21.219
+你会说是的，我已经为这可能导致的破坏做好了准备。
+you'd say yes, I'm prepared for the breakage this might cause.
 
 7
 00:00:21.219 --> 00:00:23.050
-因為我想用更好的語言.因為我想用更好的語言。
-因为我想用更好的语言。 Because I want to be using the better language.
+因为我想用更好的语言。
+Because I want to be using the better language.
 
 8
 00:00:24.820 --> 00:00:28.399
-我們在詳細說明這一點時遇到的困難是，我們在具體說明這一點時遇到的困難是，
-我们在详细说明这一点时遇到的困难是， The difficulty we had in specifying this was,
+我们在详细说明这一点时遇到的困难是，
+The difficulty we had in specifying this was,
 
 9
 00:00:28.399 --> 00:00:33.929
-如何在不引入新語法的情況下使用嚴格模式？如何說我想要嚴格模式而不引入新語法？
-如何在不引入新语法的情况下使用严格模式？ how do you say I want strict mode without introducing new syntax?
+如何在不引入新语法的情况下使用严格模式？
+how do you say I want strict mode without introducing new syntax?
 
 10
-00:00:33.929 --> 00:00:38.118
-因為我們想要舊的瀏覽器簡單地忽略我們處於嚴格模式這一事實，因為我們希望較舊的瀏覽器簡單地忽略我們處於嚴格模式這一事實
-因为我们想要旧的浏览器简单地忽略我们处于严格模式这一事实 Because we wanted older browsers to simply ignore the fact that we're in strict mode
+00:00:33.929 --> 00:00:38.119
+因为我们想要旧的浏览器简单地忽略我们处于严格模式这一事实
+Because we wanted older browsers to simply ignore the fact that we're in strict mode
 
 11
-00:00:38.118 --> 00:00:39.250
-以他們一貫的方式工作.以他們一貫的方式工作。
-以他们一贯的方式工作。 and work the way they always have.
+00:00:38.119 --> 00:00:39.250
+以他们一贯的方式工作。
+and work the way they always have.
 
 12
 00:00:40.469 --> 00:00:43.630
-所以我們花了很多時間試圖找出如何做到這一點，並且所以我們花了很多時間試圖弄清楚如何做到這一點，而且
-所以我们花了很多时间试图找出如何做到这一点，并且 So we spent a lot of time trying to figure out how to do that, and
+所以我们花了很多时间试图找出如何做到这一点，并且
+So we spent a lot of time trying to figure out how to do that, and
 
 13
 00:00:43.630 --> 00:00:45.399
-最終，我們想出了一個可怕的黑客.最後，我們想出了一個可怕的黑客。
-最终，我们想出了一个可怕的黑客。 eventually, we came up with a terrible hack.
+最终，我们想出了一个可怕的黑客。
+eventually, we came up with a terrible hack.
 
 14
 00:00:46.429 --> 00:00:51.350
-我們使用了無用的表達語句，我是我們使用了無用的表示式語句，我是
-我们使用了无用的表达语句，我是 We used the useless expression statement that I was
+我们使用了无用的表达语句，我是
+We used the useless expression statement that I was
 
 15
-00:00:51.350 --> 00:00:55.228
-抱怨早先指定雜注.抱怨早先指定的語料庫。
-抱怨早先指定杂注。 complaining about earlier to specify the pragma.
+00:00:51.350 --> 00:00:55.229
+抱怨早先指定杂注。
+complaining about earlier to specify the pragma.
 
 16
-00:00:55.228 --> 00:01:00.939
-因此，如果函式或檔案的第一個語句是字串，所以如果函式或檔案的第一個語句是字串，
-因此，如果函数或文件的第一个语句是字符串， So if the first statement of a function or a file is the string,
+00:00:55.229 --> 00:01:00.939
+因此，如果函数或文件的第一个语句是字符串，
+So if the first statement of a function or a file is the string,
 
 17
 00:01:00.939 --> 00:01:05.870
-使用Strict；，這會將該檔案或該函式置於嚴格模式.使用Strict；，這會將該檔案或函式置於嚴格模式。
-使用Strict；，这会将该文件或该函数置于严格模式。 use strict ;, that puts that file or that function into strict mode.
+使用Strict；，这会将该文件或该函数置于严格模式。
+use strict ;, that puts that file or that function into strict mode.
 
 18
 00:01:07.260 --> 00:01:13.650
-而在較老的瀏覽器上，它只是被忽略了，什麼也不做，所以這是可行的.在較舊的瀏覽器上，它只是被忽略，什麼也不做，所以這是可行的。
-而在较老的浏览器上，它只是被忽略了，什么也不做，所以这是可行的。 And on older browsers, it's simply ignored and does nothing, so that works out.
+而在较老的浏览器上，它只是被忽略了，什么也不做，所以这是可行的。
+And on older browsers, it's simply ignored and does nothing, so that works out.
 
 19
-00:01:13.650 --> 00:01:18.688
-我們有檔案表格，如果你在節點上，這是很好的。我們有檔案表格，如果您在Node上，這是很好的。
-我们有文件表格，如果你在Node上，这是很好的。 We've got the file form, which is good if you're on Node.
+00:01:13.650 --> 00:01:18.689
+我们有文件表格，如果你在Node上，这是很好的。
+We've got the file form, which is good if you're on Node.
 
 20
-00:01:18.688 --> 00:01:21.718
-如果您使用的是瀏覽器，我建議您只使用函式表單.如果您使用的是瀏覽器，我建議您只使用函式形式。
-如果您使用的是浏览器，我建议您只使用函数表单。 If you're on a browser, I recommend you only use the function form.
+00:01:18.689 --> 00:01:21.718
+如果您使用的是浏览器，我建议您只使用函数表单。
+If you're on a browser, I recommend you only use the function form.
 
 21
 00:01:24.158 --> 00:01:24.914
-&gt；&gt；道格拉斯·克羅克福德：原因&gt；&gt；道格拉斯·克羅克福德：原因
-&gt；&gt；Douglas Crockford：原因 &gt;&gt; Douglas Crockford: The reason for
+&gt；&gt；Douglas Crockford：原因
+&gt;&gt; Douglas Crockford: The reason for
 
 22
 00:01:24.914 --> 00:01:29.840
-也就是說，史蒂夫·蘇德斯會告訴您將所有檔案連線在一起。也就是說，Steve Souders會告訴您將所有檔案連線在一起。
-也就是说，Steve Souders会告诉您将所有文件连接在一起。 that is Steve Souders will tell you to concatenate all of your files together.
+也就是说，Steve Souders会告诉您将所有文件连接在一起。
+that is Steve Souders will tell you to concatenate all of your files together.
 
 23
-00:01:29.840 --> 00:01:34.128
-這意味著您的所有檔案都將具有與第一個檔案相同的嚴格程度，這意味著您的所有檔案都將具有與第一個檔案相同的嚴格程度
-这意味着您的所有文件都将具有与第一个文件相同的严格程度 And that means that all of your files will have the same strictness as the first
+00:01:29.840 --> 00:01:34.129
+这意味着您的所有文件都将具有与第一个文件相同的严格程度
+And that means that all of your files will have the same strictness as the first
 
 24
-00:01:34.128 --> 00:01:38.700
-檔案，這可能在很多方面都是不好的.檔案，這在很多方面都可能是不好的。
-文件，这可能在很多方面都是不好的。 file, and that could be bad in any number of ways.
+00:01:34.129 --> 00:01:38.700
+文件，这可能在很多方面都是不好的。
+file, and that could be bad in any number of ways.
 
 25
 00:01:38.700 --> 00:01:44.200
-因此在瀏覽器中，我們建議您只使用函式形式.因此，在瀏覽器中，我們建議您只使用函式形式。
-因此在浏览器中，我们建议您只使用函数形式。 So in browsers, we recommend you only use the function form.
+因此在浏览器中，我们建议您只使用函数形式。
+So in browsers, we recommend you only use the function form.
 
 26
 00:01:47.364 --> 00:01:51.450
-嚴格模式添加了許多新的保留字.嚴格模式新增許多新的保留字。
-严格模式添加了许多新的保留字。 Strict mode adds a number of new reserved words.
+严格模式添加了许多新的保留字。
+Strict mode adds a number of new reserved words.
 
 27
-00:01:51.450 --> 00:01:51.978
-到目前為止，到目前為止
-到目前为止 So far,
+00:01:51.450 --> 00:01:51.979
+到目前为止
+So far,
 
 28
-00:01:51.978 --> 00:01:55.930
-我只知道在該語言的下一個版本中使用了讓和YOUTER。我只知道let和Year會在下一版語言中使用。
-我只知道在该语言的下一个版本中使用了let和YOUTER。 I'm only aware of let and yield being used in the next edition of the language.
+00:01:51.979 --> 00:01:55.930
+我只知道在该语言的下一个版本中使用了let和YOUTER。
+I'm only aware of let and yield being used in the next edition of the language.
 
 29
-00:01:55.930 --> 00:01:58.117
-其他版本可能會也可能不會在其他版本中使用.其他版本可能在其他版本中使用，也可能不在其他版本中使用。
-其他版本可能会也可能不会在其他版本中使用。 The others may or may not be used in other editions.
+00:01:55.930 --> 00:01:58.118
+其他版本可能会也可能不会在其他版本中使用。
+The others may or may not be used in other editions.
 
 30
 00:01:59.609 --> 00:02:02.760
-這是嚴格模式提供的內容列表.這是嚴格模式提供的內容列表。
-这是严格模式提供的内容列表。 This is the list of things that are provided by strict mode.
+这是严格模式提供的内容列表。
+This is the list of things that are provided by strict mode.
 
 31
 00:02:02.760 --> 00:02:05.790
-不幸的是，這是一個無聊的清單.不幸的是，這是一份無聊的清單。
-不幸的是，这是一个无聊的清单。 Unfortunately, it's a boring list.
+不幸的是，这是一个无聊的清单。
+Unfortunately, it's a boring list.
 
 32
 00:02:05.790 --> 00:02:07.510
-所以我只想看看無聊的單子.所以我就把無聊的單子讀一讀。
-所以我只想看看无聊的单子。 So I'm just gonna read the boring list.
+所以我只想看看无聊的单子。
+So I'm just gonna read the boring list.
 
 33
 00:02:08.650 --> 00:02:11.419
-函式中不再有隱含的全域性變數.函式中不再有隱含的全域性變數。
-函数中不再有隐含的全局变量。 There are no more implied global variables within functions.
+函数中不再有隐含的全局变量。
+There are no more implied global variables within functions.
 
 34
 00:02:11.419 --> 00:02:13.669
-這是JavaScript中的一個巨大的設計錯誤。這在JavaScript中是一個巨大的設計錯誤。
-这是JavaScript中的一个巨大的设计错误。 This was a huge design error in JavaScript.
+这是JavaScript中的一个巨大的设计错误。
+This was a huge design error in JavaScript.
 
 35
-00:02:13.669 --> 00:02:17.128
-所以現在如果您忘記在函式中宣告變數，所以現在如果您忘記在函式中宣告變數，
-所以现在如果您忘记在函数中声明变量， So now if you forget to declare a variable in a function,
+00:02:13.669 --> 00:02:17.129
+所以现在如果您忘记在函数中声明变量，
+So now if you forget to declare a variable in a function,
 
 36
-00:02:17.128 --> 00:02:18.800
-這將是一個語法錯誤.這會是一個語法錯誤。
-这将是一个语法错误。 it's gonna be a syntax error.
+00:02:17.129 --> 00:02:18.800
+这将是一个语法错误。
+it's gonna be a syntax error.
 
 37
-00:02:18.800 --> 00:02:21.438
-它不會預設為全域性變數.它不會預設為全域性變數。
-它不会默认为全局变量。 It's not going to default to global variables.
+00:02:18.800 --> 00:02:21.439
+它不会默认为全局变量。
+It's not going to default to global variables.
 
 38
-00:02:21.438 --> 00:02:22.620
-所以這很好.所以這很好。
-所以这很好。 So that's good.
+00:02:21.439 --> 00:02:22.620
+所以这很好。
+So that's good.
 
 39
-00:02:24.728 --> 00:02:28.840
-這不再通過函式形式繫結到全域性物件.這不再由函式形式繫結到全域性物件。
-这不再通过函数形式绑定到全局对象。 This is no longer bound to the global object by the function form.
+00:02:24.729 --> 00:02:28.840
+这不再通过函数形式绑定到全局对象。
+This is no longer bound to the global object by the function form.
 
 40
 00:02:28.840 --> 00:02:33.668
-因此，如果將方法作為函式呼叫，則會將其繫結到因此，如果您將方法作為函式呼叫，則會將其繫結到未定義的和和
-因此，如果您将方法作为函数调用，则会将其绑定到未定义的和 So if you call a method as a function, this will get bound to undefined and
+因此，如果您将方法作为函数调用，则会将其绑定到未定义的和
+So if you call a method as a function, this will get bound to undefined and
 
 41
 00:02:33.668 --> 00:02:35.259
-不是全域性物件.而不是全域性物件。
-不是全局对象。 not the global object.
+不是全局对象。
+not the global object.
 
 42
-00:02:35.259 --> 00:02:37.468
-事實證明，這對安全非常重要.事實證明，這對安全非常重要。
-事实证明，这对安全非常重要。 That turned out to be really important for security.
+00:02:35.259 --> 00:02:37.469
+事实证明，这对安全非常重要。
+That turned out to be really important for security.
 
 43
 00:02:39.090 --> 00:02:42.680
-呼叫和Apply方法不再預設為全域性物件。呼叫和應用方法不再預設為全域性物件。
-call和apply方法不再默认为全局对象。 The call and apply methods no longer default to the global object.
+call和apply方法不再默认为全局对象。
+The call and apply methods no longer default to the global object.
 
 44
 00:02:42.680 --> 00:02:47.590
-以前如果呼叫Apply方法並傳入NULL或UNDEFINED，因此過去如果呼叫Apply方法並傳入NULL或UNDEFINED，
-以前如果调用Apply方法并传入null或undefined， So it used to be if you called the apply method and passed in null or undefined,
+以前如果调用Apply方法并传入null或undefined，
+So it used to be if you called the apply method and passed in null or undefined,
 
 45
 00:02:47.590 --> 00:02:52.699
-意思是你不想讓這個繫結到任何東西，javascript會走，你不能意思是你不想把它繫結到任何東西上，javascript會去的，你不能
-意思是你不想让这个绑定到任何东西，JavaScript会走，你不能 meaning you don't want this to get bound to anything, JavaScript will go, you can't
+意思是你不想让这个绑定到任何东西，JavaScript会走，你不能
+meaning you don't want this to get bound to anything, JavaScript will go, you can't
 
 46
 00:02:52.699 --> 00:02:57.270
-意思是，你可能指的是全域性物件，並會進行替換.意思是，您可能指的是全域性物件，並且會進行替換。
-意思是，你可能指的是全局对象，并会进行替换。 mean that, you probably mean the global object and would do that substitution.
+意思是，你可能指的是全局对象，并会进行替换。
+mean that, you probably mean the global object and would do that substitution.
 
 47
-00:02:57.270 --> 00:02:59.598
-它不再那樣做了.它不再那樣做了。
-它不再那样做了。 It doesn't do that anymore.
+00:02:57.270 --> 00:02:59.599
+它不再那样做了。
+It doesn't do that anymore.
 
 48
-00:02:59.598 --> 00:03:01.098
-我們去掉了和語句在一起。我們去掉了with語句。
-我们去掉了WITH语句。 We got rid of the with statement.
+00:02:59.599 --> 00:03:01.099
+我们去掉了WITH语句。
+We got rid of the with statement.
 
 49
-00:03:02.468 --> 00:03:07.169
-如果您嘗試分配給不可寫的內容，如果您嘗試為不可寫的物件賦值，
-如果您尝试分配给不可写的内容， If you try to assign to something which is not writeable,
+00:03:02.469 --> 00:03:07.169
+如果您尝试分配给不可写的内容，
+If you try to assign to something which is not writeable,
 
 50
-00:03:07.169 --> 00:03:08.818
-現在您將丟擲一個異常.現在您將丟擲一個異常。
-现在您将抛出一个异常。 you will now throw an exception.
+00:03:07.169 --> 00:03:08.819
+现在您将抛出一个异常。
+you will now throw an exception.
 
 51
-00:03:08.818 --> 00:03:12.360
-它過去常常悄無聲息地失敗，這對完整性非常不利.它過去常常默默地失敗，這真的不利於誠信。
-它过去常常悄无声息地失败，这对完整性非常不利。 It used to fail silently, which is really bad for integrity.
+00:03:08.819 --> 00:03:12.360
+它过去常常悄无声息地失败，这对完整性非常不利。
+It used to fail silently, which is really bad for integrity.
 
 52
 00:03:12.360 --> 00:03:14.530
-因為程式碼可能已經做了更改，因為程式碼可能做了更改，
-因为代码可能已经做了更改， Because the code may have made a change,
+因为代码可能已经做了更改，
+Because the code may have made a change,
 
 53
-00:03:14.530 --> 00:03:19.568
-假設它成功地進行了更改，並且如果更改失敗並且假設它成功地進行了更改，並且如果更改失敗，並且
-假设它成功地进行了更改，并且如果更改失败并且 assuming that it succeeded in making the change, and if the change failed and
+00:03:14.530 --> 00:03:19.569
+假设它成功地进行了更改，并且如果更改失败并且
+assuming that it succeeded in making the change, and if the change failed and
 
 54
-00:03:19.568 --> 00:03:21.848
-如果沒有通知，則可能會變得不一致.如果沒有通知，那麼它可能會變得不一致。
-如果没有通知，则可能会变得不一致。 it isn't notified, then it could become inconsistent.
+00:03:19.569 --> 00:03:21.849
+如果没有通知，则可能会变得不一致。
+it isn't notified, then it could become inconsistent.
 
 55
 00:03:22.889 --> 00:03:26.579
-我們在刪除不可配置屬性時也做了類似的事情.我們在刪除不可配置屬性時做了類似的事情。
-我们在删除不可配置属性时也做了类似的事情。 We did a similar thing with deleting non-configurable properties.
+我们在删除不可配置属性时也做了类似的事情。
+We did a similar thing with deleting non-configurable properties.
 
 56
 00:03:26.579 --> 00:03:28.091
-我們對求值進行了限制.我們對EVAL做了限制。
-我们对求值进行了限制。 We put restrictions on eval.
+我们对求值进行了限制。
+We put restrictions on eval.
 
 57
 00:03:28.091 --> 00:03:32.060
-這周我根本沒有談論過Eval，我也不會這樣做.這周我根本沒談過艾娃，我也不會再談了。
-这周我根本没有谈论过eval，我也不会这样做。 I haven't talked at all this week about eval, and I'm not going to.
+这周我根本没有谈论过eval，我也不会这样做。
+I haven't talked at all this week about eval, and I'm not going to.
 
 58
 00:03:32.060 --> 00:03:35.860
-伊瓦爾·是該語言中最易被濫用的特性，我不推薦使用它。Eval是該語言中使用最多的功能，我不推薦使用它。
-Eval是该语言中最易被滥用的特性，我不推荐使用它。 Eval is the most misused feature of the language, and I don't recommend using it.
+Eval是该语言中最易被滥用的特性，我不推荐使用它。
+Eval is the most misused feature of the language, and I don't recommend using it.
 
 59
-00:03:37.348 --> 00:03:41.938
-它在舊語言中的實現真的很可怕，而它在舊語言中的實現真的非常可怕，
-它在旧语言中的实现真的很可怕， And the implementation of it in the old language was really quite horrible,
+00:03:37.349 --> 00:03:41.939
+它在旧语言中的实现真的很可怕，
+And the implementation of it in the old language was really quite horrible,
 
 60
-00:03:41.938 --> 00:03:47.110
-它給了給它一根繩子的人極大的力量.它賦予了任何給它提供弦的人極大的力量。
-它给了给它一根绳子的人极大的力量。 that it gave extreme powers to whoever provided a string to it.
+00:03:41.939 --> 00:03:47.110
+它给了给它一根绳子的人极大的力量。
+that it gave extreme powers to whoever provided a string to it.
 
 61
 00:03:48.490 --> 00:03:51.060
-所以我們對Eval做了一些限制。所以我們對eval設定了一些限制。
-所以我们对eval做了一些限制。 And so we put some limits on eval.
+所以我们对eval做了一些限制。
+And so we put some limits on eval.
 
 62
 00:03:52.280 --> 00:03:56.286
-我抱怨的事情與爭論奇怪地聯絡在一起我抱怨的那件事，爭論被奇怪地捆綁在一起
-我抱怨的事情与争论奇怪地联系在一起 The thing I complained about with arguments getting bound strangely to
+我抱怨的事情与争论奇怪地联系在一起
+The thing I complained about with arguments getting bound strangely to
 
 63
 00:03:56.286 --> 00:03:59.270
-引數，已經修復了.引數，已經修好了。
-参数，已经修复了。 the parameters, that's been fixed.
+参数，已经修复了。
+the parameters, that's been fixed.
 
 64
 00:03:59.270 --> 00:04:03.000
-我們擺脫了Arguments.Caller和Arguments.calllee.我們去掉了爭論。來電者和爭論。被叫者。
-我们摆脱了arguments.caller和arguments.calllee。 We got rid of arguments.caller and arguments.callee.
+我们摆脱了arguments.caller和arguments.calllee。
+We got rid of arguments.caller and arguments.callee.
 
 65
 00:04:03.000 --> 00:04:06.840
-而且擺脫這些令人驚訝的困難，因為arguments.caller和清除這些異常困難，因為arguments.caller
-而且摆脱这些令人惊讶的困难，因为arguments.caller And getting rid of those was surprisingly difficult because arguments.caller had
+而且摆脱这些令人惊讶的困难，因为arguments.caller
+And getting rid of those was surprisingly difficult because arguments.caller had
 
 66
 00:04:06.840 --> 00:04:08.770
-從來沒有進入過標準.從來沒進過國家隊。
-从来没有进入过标准。 never been in the standard.
+从来没有进入过标准。
+never been in the standard.
 
 67
 00:04:08.770 --> 00:04:12.251
-因此，我們不能簡單地轉到某一行標準並將其刪除.因此，我們不能簡單地轉到標準的一行並將其刪除。
-因此，我们不能简单地转到某一行标准并将其删除。 So we couldn't simply go to a line of the standard and delete it.
+因此，我们不能简单地转到某一行标准并将其删除。
+So we couldn't simply go to a line of the standard and delete it.
 
 68
 00:04:12.251 --> 00:04:18.750
-相反，我們必須將呼叫者新增到語言中，然後毒害它.相反，我們必須將呼叫者新增到語言中，然後毒化它。
-相反，我们必须将调用者添加到语言中，然后毒害它。 Instead, we had to add caller to the language and then poison it.
+相反，我们必须将调用者添加到语言中，然后毒害它。
+Instead, we had to add caller to the language and then poison it.
 
 69
 00:04:18.750 --> 00:04:23.949
-我們去掉了八進位制文字，因為我們發現它們對人類來說是混淆的.我們去掉了八進位制文字，因為我們發現它們讓人類感到困惑。
-我们去掉了八进制文字，因为我们发现它们对人类来说是混淆的。 We got rid of octal literals because we found that they are confusing to humans.
+我们去掉了八进制文字，因为我们发现它们对人类来说是混淆的。
+We got rid of octal literals because we found that they are confusing to humans.
 
 70
 00:04:23.949 --> 00:04:27.110
-學校裡的大多數人都知道數字前面的前導零大多數學校的人都知道數字前面的前導零
-学校里的大多数人都知道数字前面的前导零 Most people in school learned that a leading zero in front of a number
+学校里的大多数人都知道数字前面的前导零
+Most people in school learned that a leading zero in front of a number
 
 71
 00:04:27.110 --> 00:04:28.329
-並不重要.並不重要。
-并不重要。 is not significant.
+并不重要。
+is not significant.
 
 72
 00:04:28.329 --> 00:04:32.850
-但JavaScript說它是，並把你變成了基數8.但JavaScript說是然後把你變成了八壘手。
-但JavaScript说它是，并把你变成了基数8。 But JavaScript said it was and turned you into base eight.
+但JavaScript说它是，并把你变成了基数8。
+But JavaScript said it was and turned you into base eight.
 
 73
 00:04:32.850 --> 00:04:37.509
-所以我們解決了這個問題，這讓我們從節點社群收到了很多抱怨。所以我們解決了這個問題，這引起了Node社群的很多抱怨。
-所以我们解决了这个问题，这让我们从Node社区收到了很多抱怨。 So we fixed that, and that got us a lot of complaints from the Node community.
+所以我们解决了这个问题，这让我们从Node社区收到了很多抱怨。
+So we fixed that, and that got us a lot of complaints from the Node community.
 
 74
 00:04:37.509 --> 00:04:40.920
-顯然節點的傢伙還在使用八進位制文字顯然節點人員仍在使用八進位制文字
-显然Node的家伙还在使用八进制文字 Apparently that the Node guys are still using octal literals for
+显然Node的家伙还在使用八进制文字
+Apparently that the Node guys are still using octal literals for
 
 75
 00:04:40.920 --> 00:04:42.360
-正在設定檔案許可權.正在設定檔案許可權。
-正在设置文件权限。 setting file permissions.
+正在设置文件权限。
+setting file permissions.
 
 76
 00:04:42.360 --> 00:04:45.870
-我不知道有人還在做這件事，但他們確實在做.我不知道有人還在這麼做，但他們確實在做。
-我不知道有人还在做这件事，但他们确实在做。 I didn't know anybody was still doing that, but they are.
+我不知道有人还在做这件事，但他们确实在做。
+I didn't know anybody was still doing that, but they are.
 
 77
 00:04:45.870 --> 00:04:49.920
-所以是的，6又加入了八進位制，但以一種稍微不那麼可怕的方式.所以，是的，6又增加了八進位制數，但以一種稍微不那麼糟糕的方式。
-所以是的，6又加入了八进制，但以一种稍微不那么可怕的方式。 So yes, 6 added octal back in, but in a slightly less awful way.
+所以是的，6又加入了八进制，但以一种稍微不那么可怕的方式。
+So yes, 6 added octal back in, but in a slightly less awful way.
 
 78
 00:04:51.449 --> 00:04:54.720
-然後在物件文字或中重複名稱，然後在物件文字中重複名稱，或者
-然后在对象文字或中重复名称 And then duplicate names in an object literal or
+然后在对象文字或中重复名称
+And then duplicate names in an object literal or
 
 79
 00:04:54.720 --> 00:04:57.350
-函式引數現在語法錯誤.函式引數現在是語法錯誤。
-函数参数现在语法错误。 function parameters are now syntax error.
+函数参数现在语法错误。
+function parameters are now syntax error.
 
 80
 00:04:57.350 --> 00:05:00.579
-所以，如果你說功能食品是逗號，所以，如果你說功能食品是逗號，
-所以，如果你说功能食品是逗号， So, if you say function food a comma a,
+所以，如果你说功能食品是逗号，
+So, if you say function food a comma a,
 
 81
 00:05:00.579 --> 00:05:03.160
-現在它將認識到第二個a是一個錯誤.它現在將認識到第二個a是錯誤的。
-现在它将认识到第二个a是一个错误。 it will now recognize that the second a is an error.
+现在它将认识到第二个a是一个错误。
+it will now recognize that the second a is an error.
 
 82
 00:05:05.379 --> 00:05:10.329
-我們修復了new運算子，因此忘記了使用new字首我們修正了新運算子，所以忘記了使用新字首
-我们修复了new运算符，因此忘记了使用new前缀 We fixed the new operator, so forgetting to use the new prefix
+我们修复了new运算符，因此忘记了使用new前缀
+We fixed the new operator, so forgetting to use the new prefix
 
 83
 00:05:10.329 --> 00:05:15.550
-在嚴格模式下，現在將丟擲一個異常，而不是默默地重擊全域性變數.在嚴格模式下，現在將丟擲異常，而不是靜默地破壞全域性變數。
-在严格模式下，现在将抛出一个异常，而不是默默地重击全局变量。 in strict mode will now throw an exception and not silently clobber global variables.
+在严格模式下，现在将抛出一个异常，而不是默默地重击全局变量。
+in strict mode will now throw an exception and not silently clobber global variables.
 
 84
 00:05:15.550 --> 00:05:16.500
-所以這很好.所以這很好。
-所以这很好。 So that's good.
+所以这很好。
+So that's good.
 
 85
 00:05:16.500 --> 00:05:20.620
-我們知道有一些東西因為嚴格模式而中斷了.我們知道，由於嚴格模式，確實有一些東西被破壞了。
-我们知道有一些东西因为严格模式而中断了。 There are a few things that we know did break because of strict mode.
+我们知道有一些东西因为严格模式而中断了。
+There are a few things that we know did break because of strict mode.
 
 86
 00:05:22.269 --> 00:05:27.370
-例如，如果在瀏覽器中呼叫新增事件偵聽器例如，如果您在瀏覽器中呼叫addEventListener
-例如，如果在浏览器中调用addEventListener For example, if you call addEventListener in a browser intending
+例如，如果在浏览器中调用addEventListener
+For example, if you call addEventListener in a browser intending
 
 87
 00:05:27.370 --> 00:05:33.848
-向Window物件新增事件，意外地在舊語言中起作用。要向Window物件新增事件，意外地在舊語言中工作。
-向Window对象添加事件，意外地在旧语言中起作用。 to add an event to the window object, that accidentally worked in the old language.
+向Window对象添加事件，意外地在旧语言中起作用。
+to add an event to the window object, that accidentally worked in the old language.
 
 88
 00:05:33.848 --> 00:05:38.812
-它意外工作的原因是在瀏覽器中，而它意外工作的原因是在瀏覽器中，
-它意外工作的原因是在浏览器中， And the reason it accidentally worked was in the browser,
+它意外工作的原因是在浏览器中，
+And the reason it accidentally worked was in the browser,
 
 89
 00:05:38.812 --> 00:05:42.266
-視窗物件是全域性物件.視窗物件是全域性物件。
-窗口对象是全局对象。 the window object is the global object.
+窗口对象是全局对象。
+the window object is the global object.
 
 90
 00:05:42.266 --> 00:05:43.750
-只是碰巧是一回事.它們只是碰巧是一回事。
-只是碰巧是一回事。 They just happen to be the same thing.
+只是碰巧是一回事。
+They just happen to be the same thing.
 
 91
 00:05:43.750 --> 00:05:48.865
-當您將函式作為函式呼叫時，它將繫結到全域性，當您將函式作為函式呼叫時，它將繫結到全域性
-当您将函数作为函数调用时，它将绑定到全局 And when you call a function as a function, this gets bound to the global
+当您将函数作为函数调用时，它将绑定到全局
+And when you call a function as a function, this gets bound to the global
 
 92
 00:05:48.865 --> 00:05:52.935
-物件，它恰好是視窗物件，所以它起作用了.物件，該物件恰好是視窗物件，所以它起作用了。
-对象，它恰好是窗口对象，所以它起作用了。 object, which happens to be the window object, so it worked.
+对象，它恰好是窗口对象，所以它起作用了。
+object, which happens to be the window object, so it worked.
 
 93
 00:05:52.935 --> 00:05:55.807
-它從來沒有打算起作用，它只是意外地起作用了.它從來沒有打算起作用，只是意外地起作用了。
-它从来没有打算起作用，它只是意外地起作用了。 It was never intended to work, it just accidentally worked.
+它从来没有打算起作用，它只是意外地起作用了。
+It was never intended to work, it just accidentally worked.
 
 94
 00:05:55.807 --> 00:05:58.754
-所以現在嚴格模式下，你必須明確.所以現在在嚴格模式下，您必須明確。
-所以现在严格模式下，你必须明确。 So now in strict mode, you have to be explicit.
+所以现在严格模式下，你必须明确。
+So now in strict mode, you have to be explicit.
 
 95
 00:05:58.754 --> 00:06:04.004
-如果你想新增一個事件監聽器到視窗，你必須說視窗點.如果要向視窗新增事件偵聽器，則必須使用Window點。
-如果你想添加一个事件监听器到窗口，你必须说窗口点。 If you want to add an event listener to the window, you have to say window dot.
+如果你想添加一个事件监听器到窗口，你必须说窗口点。
+If you want to add an event listener to the window, you have to say window dot.
 
 96
 00:06:06.125 --> 00:06:10.194
-語言中沒有任何內容可以告訴您是否處於嚴格模式或語言中沒有任何內容可以告訴您是處於嚴格模式還是
-语言中没有任何内容可以告诉您是否处于严格模式或 There is nothing in the language that will tell you if you are in strict mode or
+语言中没有任何内容可以告诉您是否处于严格模式或
+There is nothing in the language that will tell you if you are in strict mode or
 
 97
 00:06:10.194 --> 00:06:14.689
-如果嚴格模式可用，但您可以編寫這些小函式中的任何一個，如果嚴格模式可用，但您可以編寫這兩個小函式中的任何一個，
-如果严格模式可用，但您可以编写这些小函数中的任何一个， if strict mode is available, but you can write either of these little functions,
+如果严格模式可用，但您可以编写这些小函数中的任何一个，
+if strict mode is available, but you can write either of these little functions,
 
 98
 00:06:14.689 --> 00:06:16.509
-他們會準確地告訴你需要知道的.他們會準確地告訴你你需要知道的。
-他们会准确地告诉你需要知道的。 and they will tell you exactly what you need to know.
+他们会准确地告诉你需要知道的。
+and they will tell you exactly what you need to know.
 
 99
 00:06:19.199 --> 00:06:24.028
-嚴格模式的設計是由jslint告知的，它們並不完全相同嚴格模式的設計是由jslint通知的，它們並不完全一樣
-严格模式的设计是由JSLint告知的，它们并不完全相同 The design of strict mode was informed by JSLint, they're not entirely the same
+严格模式的设计是由JSLint告知的，它们并不完全相同
+The design of strict mode was informed by JSLint, they're not entirely the same
 
 100
 00:06:24.028 --> 00:06:27.151
-因為jslint強制執行靜態分析，並且，因為jslint已強制執行靜態分析和
-因为JSLint强制执行静态分析，并且 because JSLint has forced to do a static analysis and
+因为JSLint强制执行静态分析，并且
+because JSLint has forced to do a static analysis and
 
 101
 00:06:27.151 --> 00:06:29.855
-嚴格模式可以動態地做一些事情.嚴格模式可以動態地做一些事情。
-严格模式可以动态地做一些事情。 strict mode can do some things dynamically.
+严格模式可以动态地做一些事情。
+strict mode can do some things dynamically.
 
 102
 00:06:29.855 --> 00:06:32.038
-但如果你正在使用jslint、並且你應該使用，但是如果您正在使用jslint，並且您應該這樣做，
-但如果你正在使用JSLint，并且你应该使用， But if you're using JSLint, and you should,
+但如果你正在使用JSLint，并且你应该使用，
+But if you're using JSLint, and you should,
 
 103
 00:06:32.038 --> 00:06:34.290
-那麼你應該對嚴格模式非常滿意.那麼你應該對嚴格模式非常滿意。
-那么你应该对严格模式非常满意。 then you should be very happy with strict mode.
+那么你应该对严格模式非常满意。
+then you should be very happy with strict mode.
 
 104
 00:06:36.250 --> 00:06:40.939
-我們所做的許多工作都是由混搭的問題引起的。我們所做的很多工作都是受mashup問題的推動。
-我们所做的许多工作都是由mashup的问题引起的。 A lot of the work that we did was motivated by the problems of mashups.
+我们所做的许多工作都是由mashup的问题引起的。
+A lot of the work that we did was motivated by the problems of mashups.
 
 105
 00:06:40.939 --> 00:06:44.699
-混搭是您獲得代表兩方的程式碼的地方，它們希望混搭是一種混搭，您可以在其中獲得表示兩方的程式碼，這些雙方希望
-mashup是您获得代表两方的代码的地方，它们希望 A mashup is where you've got code representing two parties that wants to
+mashup是您获得代表两方的代码的地方，它们希望
+A mashup is where you've got code representing two parties that wants to
 
 106
 00:06:44.699 --> 00:06:50.420
-在同一個頁面中協同工作，使使用者受益，而不需要在同一個頁面中協同工作，從而使使用者在沒有一個頁面的情況下也能從中受益
-在同一个页面中协同工作，使用户受益，而不需要 work together in the same page for the benefit of the user without one
+在同一个页面中协同工作，使用户受益，而不需要
+work together in the same page for the benefit of the user without one
 
 107
 00:06:50.420 --> 00:06:54.939
-能夠腐蝕另一個人，這是一個非常困難的問題.能夠腐化對方，這被證明是一個非常困難的問題。
-能够腐蚀另一个人，这是一个非常困难的问题。 being able to corrupt the other, and that turns out to be a very difficult problem.
+能够腐蚀另一个人，这是一个非常困难的问题。
+being able to corrupt the other, and that turns out to be a very difficult problem.
 
 108
-00:06:54.939 --> 00:06:58.158
-所以我們沒有一個完整的解決方案，所以我們沒有一個完整的解決方案，
-所以我们没有一个完整的解决方案， So we don't have a complete solution to that,
+00:06:54.939 --> 00:06:58.159
+所以我们没有一个完整的解决方案，
+So we don't have a complete solution to that,
 
 109
-00:06:58.158 --> 00:07:01.889
-但我們正在解決這個問題的道路上.但我們正走在解決這個問題的道路上。
-但我们正在解决这个问题的道路上。 but we are on the road to solving that.
+00:06:58.159 --> 00:07:01.889
+但我们正在解决这个问题的道路上。
+but we are on the road to solving that.
 
 110
-00:07:01.889 --> 00:07:07.963
-所以我們放入語言中的混搭解決方案的設計所以我們將混搭解決方案的設計放入語言中
-所以我们放入语言中的mashup解决方案的设计 So the design of the mashup solutions that we put into the language
+00:07:01.889 --> 00:07:07.964
+所以我们放入语言中的mashup解决方案的设计
+So the design of the mashup solutions that we put into the language
 
 111
-00:07:07.963 --> 00:07:14.379
-來自google的caja專案和我自己的adsafe專案.源自Google的Caja專案和我自己的Adsafe專案。
-来自Google的Caja项目和我自己的Adsafe项目。 were derived from Google's Caja project and my own ADsafe project.
+00:07:07.964 --> 00:07:14.379
+来自Google的Caja项目和我自己的Adsafe项目。
+were derived from Google's Caja project and my own ADsafe project.
 
 112
 00:07:15.980 --> 00:07:18.519
-通過修復一些東西，比如這個和，並通過修復一些東西，比如這個和
-通过修复一些东西，比如这个和 And by fixing things, like the binding of this and
+通过修复一些东西，比如这个和
+And by fixing things, like the binding of this and
 
 113
 00:07:18.519 --> 00:07:23.290
-其他一些問題，我們現在可以得到安全解決方案，還有其他一些問題，我們現在可以得到安全解決方案，
-其他一些问题，我们现在可以得到安全解决方案， some of the other problems, we can now get security solutions,
+其他一些问题，我们现在可以得到安全解决方案，
+some of the other problems, we can now get security solutions,
 
 114
 00:07:23.290 --> 00:07:27.199
-它們提供了這兩者的所有好處，這應該是一件好事.它們提供了這兩者的所有好處，這應該是一件好事。
-它们提供了这两者的所有好处，这应该是一件好事。 which provide all the benefits of both of these, which should be a good thing.
+它们提供了这两者的所有好处，这应该是一件好事。
+which provide all the benefits of both of these, which should be a good thing.
 
 115
 00:07:29.410 --> 00:07:31.920
-那麼關於ES5的任何東西有什麼問題嗎？關於ES5有什麼問題嗎？
-那么关于ES5的任何东西有什么问题吗？ So any questions about any of the stuff about ES5?
+那么关于ES5的任何东西有什么问题吗？
+So any questions about any of the stuff about ES5?
 
 116
 00:07:33.560 --> 00:07:35.322
-或者任何關於今天的事情，或者或任何關於今天的事情，或者
-或者任何关于今天的事情，或者 Or anything about anything today, or
+或者任何关于今天的事情，或者
+Or anything about anything today, or
 
 117
 00:07:35.322 --> 00:07:39.170
-什麼都沒有？&gt；&gt；道格拉斯·克羅克福德：只是什麼都沒有？&gt；&gt；道格拉斯·克羅克福德：只是
-什么都没有？&gt；&gt；Douglas Crockford：只是 anything at all? &gt;&gt; Douglas Crockford: Just
+什么都没有？&gt；&gt；Douglas Crockford：只是
+anything at all? &gt;&gt; Douglas Crockford: Just
 
 118
-00:07:39.170 --> 00:07:43.528
-在討論中，我們都在談論ES6之類的東西，但是。在討論中，我們都在談論ES6之類的東西，但是。
-在讨论中，我们都在谈论ES6之类的东西，但是。 in the discussion, we're all talking about ES6 and stuff like that, but.
+00:07:39.170 --> 00:07:43.529
+在讨论中，我们都在谈论ES6之类的东西，但是。
+in the discussion, we're all talking about ES6 and stuff like that, but.
 
 119
-00:07:43.528 --> 00:07:47.180
-我們會在第三天到達ES6.&gt；&gt；揚聲器2：是的，就是這個，是的。我們將在第三天到達ES6。&gt；&gt；揚聲器2：是的，是的。
-我们会在第三天到达ES6。&gt；&gt；扬声器2：是的，就是这个，是的。 We'll get to ES6 on the third day. &gt;&gt; Speaker 2: Yeah, that's what the, yeah.
+00:07:43.529 --> 00:07:47.180
+我们会在第三天到达ES6。&gt；&gt；扬声器2：是的，就是这个，是的。
+We'll get to ES6 on the third day. &gt;&gt; Speaker 2: Yeah, that's what the, yeah.
 
 120
 00:07:47.180 --> 00:07:50.040
-你在日程表裡有，所以.&gt；&gt；道格拉斯·克羅克福德：好的，你的日程安排裡有這個，所以。道格拉斯·克羅克福德：好的，
-你在日程表里有，所以。&gt；&gt；Douglas Crockford：好的， You had that in the schedule, so. &gt;&gt; Douglas Crockford: Okay,
+你在日程表里有，所以。&gt；&gt；Douglas Crockford：好的，
+You had that in the schedule, so. &gt;&gt; Douglas Crockford: Okay,
 
 121
 00:07:50.040 --> 00:07:52.987
-還有其他人嗎？&gt；&gt；演講者3：當你談到如何其他人？&gt；&gt；演講者3：當您談到如何
-还有其他人吗？&gt；&gt；演讲者3：当你谈到如何 anybody else? &gt;&gt; Speaker 3: When you talked about how
+还有其他人吗？&gt；&gt；演讲者3：当你谈到如何
+anybody else? &gt;&gt; Speaker 3: When you talked about how
 
 122
 00:07:52.987 --> 00:07:56.242
-無處不在的某些構造在網路中存在，並且無處不在某些結構在Web中已經存在，並且
-无处不在的某些构造在网络中存在，并且 pervasive certain constructs are out in the web and
+无处不在的某些构造在网络中存在，并且
+pervasive certain constructs are out in the web and
 
 123
 00:07:56.242 --> 00:07:59.341
-算出它的破損程度和諸如此類的東西，算一下它折斷了多少，諸如此類的東西
-算出它的破损程度和诸如此类的东西， figure out how much it break and stuff like that,
+算出它的破损程度和诸如此类的东西，
+figure out how much it break and stuff like that,
 
 124
 00:07:59.341 --> 00:08:03.262
-你是如何收集這些指標的？&gt；&gt；道格拉斯·克羅克福德：這真的很難，你是怎麼收集這些指標的？&gt；&gt；道格拉斯·克羅克福德：真的很難，
-你是如何收集这些指标的？&gt；&gt；Douglas Crockford：这真的很难， how did you gather those metrics? &gt;&gt; Douglas Crockford: It's really hard,
+你是如何收集这些指标的？&gt；&gt；Douglas Crockford：这真的很难，
+how did you gather those metrics? &gt;&gt; Douglas Crockford: It's really hard,
 
 125
 00:08:03.262 --> 00:08:07.800
-有些只是，我覺得有人做了什麼.有些只是，我覺得有人做了什麼。
-有些只是，我觉得有人做了什么。 some of it was just, I think somebody did something.
+有些只是，我觉得有人做了什么。
+some of it was just, I think somebody did something.
 
 126
 00:08:07.800 --> 00:08:09.569
-我聽說有個人做了些什麼.我聽說有個人做了一些事。
-我听说有个人做了些什么。 I heard about a guy who did something.
+我听说有个人做了些什么。
+I heard about a guy who did something.
 
 127
 00:08:09.569 --> 00:08:13.230
-很多是這樣的，其中一些是挖掘谷歌程式碼.很多都是這樣的，其中一些是在挖掘谷歌程式碼。
-很多是这样的，其中一些是挖掘谷歌代码。 A lot of it was that, some of it was mining Google code.
+很多是这样的，其中一些是挖掘谷歌代码。
+A lot of it was that, some of it was mining Google code.
 
 128
 00:08:13.230 --> 00:08:18.542
-微軟也有一個廣泛的程式碼資料庫，我們將針對這一點進行挖掘.微軟也有一個龐大的程式碼資料庫，我們將對此進行挖掘。
-微软也有一个广泛的代码数据库，我们将针对这一点进行挖掘。 Microsoft also had an extensive database of code, and we would mine against that.
+微软也有一个广泛的代码数据库，我们将针对这一点进行挖掘。
+Microsoft also had an extensive database of code, and we would mine against that.
 
 129
 00:08:18.542 --> 00:08:22.144
-我不確定我們的工具在所有情況下是否有效，因為有些我不確定我們的工具在所有情況下都有多有效，因為有些
-我不确定我们的工具在所有情况下是否有效，因为有些 I'm not confident how effective our tools were in all cases because some of
+我不确定我们的工具在所有情况下是否有效，因为有些
+I'm not confident how effective our tools were in all cases because some of
 
 130
 00:08:22.144 --> 00:08:24.730
-我們要尋找的模式真的很複雜.我們要找的圖案真的很複雜。
-我们要寻找的模式真的很复杂。 the patterns we're looking for are really complex.
+我们要寻找的模式真的很复杂。
+the patterns we're looking for are really complex.
 
 131
 00:08:24.730 --> 00:08:29.572
-而且有些程式碼編寫得非常糟糕，您可能不一定能夠識別和某些程式碼編寫得如此糟糕，以至於您可能不一定能夠識別
-而且有些代码编写得非常糟糕，您可能不一定能够识别 And some code is so badly written that you might not necessarily be able to recognize
+而且有些代码编写得非常糟糕，您可能不一定能够识别
+And some code is so badly written that you might not necessarily be able to recognize
 
 132
 00:08:29.572 --> 00:08:30.480
-模式.這些圖案。
-模式。 the patterns.
+模式。
+the patterns.
 
 133
-00:08:30.480 --> 00:08:32.639
-但我們盡了最大的努力，但我們已經盡力了
-但我们尽了最大的努力， But we tried as much as was possible,
+00:08:30.480 --> 00:08:32.640
+但我们尽了最大的努力，
+But we tried as much as was possible,
 
 134
-00:08:32.639 --> 00:08:37.259
-考慮到現有的技術可以將內容與網路所做的事情相匹配.考慮到可用的技術可以將東西與網路正在做的事情進行匹配。
-考虑到现有的技术可以将内容与网络所做的事情相匹配。 given the technology available to match stuff against what the web was doing.
+00:08:32.640 --> 00:08:37.259
+考虑到现有的技术可以将内容与网络所做的事情相匹配。
+given the technology available to match stuff against what the web was doing.

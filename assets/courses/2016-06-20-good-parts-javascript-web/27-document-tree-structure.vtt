@@ -1,35 +1,441 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Server Error</title>
-  <style>
-    ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-    ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
-    html { padding: 30px 10px; font-size: 20px; line-height: 1.4; color: #737373; background: #f0f0f0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-    html, input { font-family: "Lato", Helvetica, Arial, sans-serif; }
-    body { max-width: 500px; _width: 500px; padding: 30px 20px 50px; border: 1px solid #b3b3b3; border-radius: 4px; margin: 0 auto; box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff; background: #fcfcfc; }
-    h1 { margin: 0 10px; font-size: 50px; text-align: center; }
-    h1 span { color: #bbb; }
-    h3 { margin: 1.5em 0 0.5em; }
-    p { margin: 1em 0; }
-    ul { padding: 0 0 0 40px; margin: 1em 0; }
-    .container { max-width: 380px; _width: 380px; margin: 0 auto; }
-    /* google search */
-    #goog-fixurl ul { list-style: none; padding: 0; margin: 0; }
-    #goog-fixurl form { margin: 0; }
-    #goog-wm-qt, #goog-wm-sb { border: 1px solid #bbb; font-size: 16px; line-height: normal; vertical-align: top; color: #444; border-radius: 2px; }
-    #goog-wm-qt { width: 220px; height: 20px; padding: 5px; margin: 5px 10px 0 0; box-shadow: inset 0 1px 1px #ccc; }
-    #goog-wm-sb { display: inline-block; height: 32px; padding: 0 10px; margin: 5px 0 0; white-space: nowrap; cursor: pointer; background-color: #f5f5f5; background-image: -webkit-linear-gradient(rgba(255,255,255,0), #f1f1f1); background-image: -moz-linear-gradient(rgba(255,255,255,0), #f1f1f1); background-image: -ms-linear-gradient(rgba(255,255,255,0), #f1f1f1); background-image: -o-linear-gradient(rgba(255,255,255,0), #f1f1f1); -webkit-appearance: none; -moz-appearance: none; appearance: none; *overflow: visible; *display: inline; *zoom: 1; }
-    #goog-wm-sb:hover, #goog-wm-sb:focus { border-color: #aaa; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); background-color: #f8f8f8; }
-    #goog-wm-qt:focus, #goog-wm-sb:focus { border-color: #105cb6; outline: 0; color: #222; }
-    input::-moz-focus-inner { padding: 0; border: 0; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Server Error <span>:(</span></h1>
-    <p>Sorry, but the server encountered an error while processing your request.</p>
-  </div>
-</body>
-</html>
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.851
+[音乐]
+[MUSIC]
+
+2
+00:00:03.851 --> 00:00:06.980
+&gt；&gt；Douglas Crockford：我们讨论了解析和生成树。
+&gt;&gt; Douglas Crockford: We talked about parsing and making trees.
+
+3
+00:00:06.980 --> 00:00:09.689
+这是一些HTML文本。
+So this is some HTML text.
+
+4
+00:00:09.689 --> 00:00:12.630
+这是一棵它扩展成的树
+This is a tree that it expands into and
+
+5
+00:00:13.900 --> 00:00:17.100
+关于这一点，有一些有趣的事情需要观察。
+there are some interesting things to observe about this.
+
+6
+00:00:17.100 --> 00:00:21.079
+一个是首先我们这里有小写的，这里有大写的。
+One is first we've got lowercase here and uppercase here.
+
+7
+00:00:21.079 --> 00:00:25.969
+所以当网络刚开始的时候，第一代站长输入他们的
+So when the web first started, the first generation of webmasters typed their
+
+8
+00:00:25.969 --> 00:00:29.734
+标记都是大写的，因为他们想脱颖而出。
+markup all in upper case cuz they wanted to stand out.
+
+9
+00:00:29.734 --> 00:00:32.030
+他们想让加价变得非常明显
+They wanted make it really obvious what was markup and
+
+10
+00:00:32.030 --> 00:00:35.299
+什么是内容，并且全部用大写字母书写使这一点更加清楚。
+what was content, and writing it all in uppercase made that clearer.
+
+11
+00:00:37.189 --> 00:00:40.060
+几年后，他们厌倦了依靠Shift键
+After a few years of that, they got tired of leaning on the Shift key and
+
+12
+00:00:40.060 --> 00:00:42.140
+他们决定什么见鬼了，现在都是小写了。
+they decided what the hell and it's all lowercase now.
+
+13
+00:00:43.439 --> 00:00:46.780
+这个转变发生在Brendon设计DOM的时候。
+That transition happened just as Brendon was designing the DOM.
+
+14
+00:00:48.119 --> 00:00:53.420
+所以DOM必须选择一个约定和约定
+And so the DOM had to pick a convention and the convention
+
+15
+00:00:53.420 --> 00:00:57.390
+让我们用大写字母，因为那是当时人们使用的。
+was let's go with uppercase because that's what people were using at the time.
+
+16
+00:00:57.390 --> 00:01:00.880
+所以这里所有小写的东西都会上移到那里的大写字母。
+So everything that's lowercase here gets shifted up to uppercase there.
+
+17
+00:01:00.880 --> 00:01:04.120
+你需要意识到这一点，因为有时候这并不重要，但是
+And you need to be aware of that because sometimes it doesn't matter but
+
+18
+00:01:04.120 --> 00:01:05.579
+有时候确实很重要。
+sometimes it does matter.
+
+19
+00:01:05.579 --> 00:01:06.370
+所以你需要注意。
+So you need to be aware.
+
+20
+00:01:07.450 --> 00:01:11.219
+然后在树中有文本中没有的特征。
+Then there are features in the tree that are not in the text.
+
+21
+00:01:11.219 --> 00:01:16.180
+例如，我没有指定head标记，但树中有head标记。
+For example, I did not specify a head tag, but there is a head tag in the tree.
+
+22
+00:01:17.640 --> 00:01:20.280
+所以它会向标记中添加额外的位。
+So it'll add extra bits to the markup.
+
+23
+00:01:22.219 --> 00:01:24.829
+我们要做的另一个地方是在一张桌子上。
+Another place we'll do that is in a table.
+
+24
+00:01:24.829 --> 00:01:28.810
+如果你不指定一个tbody，它会为你插入一个tbody。
+If you don't specify a tbody, it'll stick a tbody in there for you.
+
+25
+00:01:28.810 --> 00:01:32.520
+如果你试图分析事物，这可能会给你带来麻烦，
+And that can get you into trouble if you're trying to parse around things,
+
+26
+00:01:32.520 --> 00:01:36.650
+你会发现你没有料到的内容水平。
+and you'll find levels of content that you didn't expect to find.
+
+27
+00:01:38.620 --> 00:01:44.270
+然后，这里的另一件事是，这是理想的Microsoft树。
+Then the other thing here is that this is the ideal Microsoft tree.
+
+28
+00:01:44.270 --> 00:01:47.920
+所以微软IE6会制作这样一棵树。
+So Microsoft IE6 would make a tree like this one.
+
+29
+00:01:47.920 --> 00:01:52.579
+W3C在SGL社区的影响下说不，
+W3C under the influence of the SGL community said no,
+
+30
+00:01:52.579 --> 00:01:55.439
+你需要更多的东西。
+you need to have more stuff than that.
+
+31
+00:01:55.439 --> 00:01:57.640
+例如，此处和之间的空格
+For example the whitespace between here and
+
+32
+00:01:57.640 --> 00:02:02.620
+在这里，你通常会忽略它，它必须进入树中。
+here, which you would ordinarily ignore, that has to go into the tree.
+
+33
+00:02:03.680 --> 00:02:05.540
+微软正确地决定，
+Microsoft correctly decided,
+
+34
+00:02:05.540 --> 00:02:07.980
+不，我们不应该那样做，因为那只是浪费空间。
+no we shouldn't do that because that's just a waste of space.
+
+35
+00:02:09.509 --> 00:02:12.750
+但其他人都这么做了，现在微软也这么做了，每个人都这么做了。
+But everybody else did and now Microsoft did, everybody does that.
+
+36
+00:02:12.750 --> 00:02:16.991
+但我选择了微软树，因为真正的树太多毛了
+But I went with Microsoft tree because the real tree is too hairy and
+
+37
+00:02:16.991 --> 00:02:21.560
+这很难谈论，所以我选择了更简单的树。
+it's hard to talk about, so I'm going with the simpler tree instead.
+
+38
+00:02:21.560 --> 00:02:24.159
+这里面有一些隐含的层级。
+Then there's some implied hierarchy in this.
+
+39
+00:02:24.159 --> 00:02:28.001
+例如，你有h1，h2和
+For example, you've got h1, h2 and
+
+40
+00:02:28.001 --> 00:02:33.016
+它看起来有点像H2从属于H1。
+it kind of looks like the h2 is subordinate to h1.
+
+41
+00:02:33.016 --> 00:02:38.031
+P从属于此，但它们不是。
+And the Ps are subordinate to that, but they're not.
+
+42
+00:02:38.031 --> 00:02:40.909
+它们都在树上的同一层。
+They're all at the same level in the tree.
+
+43
+00:02:40.909 --> 00:02:42.588
+所以你需要意识到这一点。
+So you need to be aware of that.
+
+44
+00:02:43.990 --> 00:02:47.469
+然后在JavaScript端，在浏览器中，
+Then on the JavaScript side, in the browser,
+
+45
+00:02:47.469 --> 00:02:50.849
+有一个称为document的全局变量，它是树的根。
+there is a global variable called document, which is the root of the tree.
+
+46
+00:02:52.110 --> 00:02:55.449
+而document.body是访问Body节点的快捷方式。
+And document.body is a shortcut for getting to the body node.
+
+47
+00:02:57.340 --> 00:02:58.460
+还有一个快捷方式
+There is also a shortcut for
+
+48
+00:02:58.460 --> 00:03:03.719
+到达HTML节点，称为文档元素。
+getting to the HTML node, which is called document element.
+
+49
+00:03:03.719 --> 00:03:06.879
+哪一个是你的东西可以叫做HTML对吗？
+Which is your thing can be called HTML right?
+
+50
+00:03:06.879 --> 00:03:07.979
+因为它属于那个。
+Cuz it goes to that one.
+
+51
+00:03:07.979 --> 00:03:13.293
+而不是的原因是因为在创建文档元素时，
+And the reason it isn't is because at the time that document element was created,
+
+52
+00:03:13.293 --> 00:03:15.449
+W3C计划终止HTML和
+W3C was planning to kill HTML and
+
+53
+00:03:15.449 --> 00:03:18.840
+他们不想把证据留在DOM里
+they didn't want to leave that evidence in the DOM.
+
+54
+00:03:19.879 --> 00:03:23.759
+所以他们用了一个更长的名字，这样就没有人会知道了。
+So they went with a longer name, so that no one would know.
+
+55
+00:03:23.759 --> 00:03:26.110
+但是那个阴谋没有起作用。
+But that plot didn't work.
+
+56
+00:03:27.650 --> 00:03:30.500
+所以这是同一棵树的一个子集，
+So this is a subset of the same tree,
+
+57
+00:03:30.500 --> 00:03:33.620
+我把它转到一边来演示下一件事。
+I turned it sideways to demonstrate the next thing.
+
+58
+00:03:33.620 --> 00:03:38.030
+因此每个节点都有指向其他节点的指针。
+So each node has pointers to other nodes.
+
+59
+00:03:38.030 --> 00:03:43.349
+例如，每个节点都有第一个子节点和最后一个子节点。
+For example, each node has a first child and a last child node.
+
+60
+00:03:43.349 --> 00:03:45.889
+指向孩子们。
+Which points to the children.
+
+61
+00:03:45.889 --> 00:03:48.620
+这些是被忽视的中间儿童，他们得不到指示。
+These are neglected middle children, they don't get pointers.
+
+62
+00:03:50.400 --> 00:03:53.793
+那么每个P节点都只有一个子节点，所以
+Then each of those P node only has one child, so
+
+63
+00:03:53.793 --> 00:03:59.408
+两个指针都指向同一个元素。&gt；&gt；Douglas Crockford：那么
+both pointers point to the same element. &gt;&gt; Douglas Crockford: Then
+
+64
+00:03:59.408 --> 00:04:04.127
+存在兄弟指针、下一个兄弟指针和前一个兄弟指针
+there are sibling pointers, next sibling and previous sibling when at that way
+
+65
+00:04:04.127 --> 00:04:07.729
+body将与head标记具有兄弟关系。
+the body will have a sibling relationship with the head tag.
+
+66
+00:04:10.050 --> 00:04:13.397
+这些人是表亲，你会很高兴知道没有表亲
+These guys are cousins, and you'll be glad to know there are no cousin
+
+67
+00:04:13.397 --> 00:04:17.143
+指针。&gt；&gt；Douglas Crockford：那就有了
+pointers. &gt;&gt; Douglas Crockford: Then there is
+
+68
+00:04:17.143 --> 00:04:19.550
+上升的父节点指针。
+the parent node pointer which goes up.
+
+69
+00:04:19.550 --> 00:04:22.879
+主体将有一个转到html的父节点。
+The body will have a parent node going to html.
+
+70
+00:04:22.879 --> 00:04:25.220
+HTML将上升到文档根目录。
+HTML will go up to the document root.
+
+71
+00:04:27.360 --> 00:04:30.740
+而且你可能会变得高贵，这是一个很多的指针。
+And you might be going lordy that's a lot of pointers.
+
+72
+00:04:30.740 --> 00:04:34.170
+所以如果我编辑这个树，我是否必须更新所有这些指针，
+So if I edit this tree, do I have to update all those pointers,
+
+73
+00:04:34.170 --> 00:04:35.810
+可能有点毛茸茸的。
+that could be kinda hairy.
+
+74
+00:04:35.810 --> 00:04:39.879
+答案是否定的，事实上你不能编辑树。
+And the answer is no, that in fact you cannot edit the tree.
+
+75
+00:04:39.879 --> 00:04:42.000
+从你的角度来看，这些都是只读的，
+These are all read only from your perspective,
+
+76
+00:04:42.000 --> 00:04:45.990
+如果要编辑此树，则必须使用DOMAPI。
+you have to use the DOM API if you want to edit this tree.
+
+77
+00:04:45.990 --> 00:04:47.720
+稍后我将向您展示该API。
+And I'll show you that API in a moment.
+
+78
+00:04:48.949 --> 00:04:52.019
+现在如果结果是您想要做的就是遍历树，因为
+Now if it turns out all you want to do is traverse the tree, for
+
+79
+00:04:52.019 --> 00:04:55.189
+例如，如果您想要访问显示顺序中的每个节点。
+example if you want to visit every node in display order.
+
+80
+00:04:56.810 --> 00:04:59.370
+你不需要这些指点，对吧？
+You don't need all these pointers, right?
+
+81
+00:04:59.370 --> 00:05:03.660
+如果你理解递归的工作原理，你只需要一个二叉树，对吗？
+If you understand how recursion works, you only need a binary tree, right?
+
+82
+00:05:03.660 --> 00:05:05.579
+你可以用两个指针做到这一点。
+You can make that with two pointers.
+
+83
+00:05:05.579 --> 00:05:11.254
+所以我可以使用第一个孩子，下一个兄弟姐妹，和一个遍历DOM函数。
+So I can use first child the next sibling with a walk the DOM function.
+
+84
+00:05:11.254 --> 00:05:15.540
+它是一个递归函数，它知道如何进行遍历。
+It's recursive function which knows how to do that traversal.
+
+85
+00:05:15.540 --> 00:05:18.850
+这允许我做一些事情，比如实现按名称获取元素。
+And that allows me to do things like implement get elements by name.
+
+86
+00:05:19.959 --> 00:05:24.759
+通过传入一个函数，该函数将查找名称并将内容编译成列表。
+By passing in a function which will look for names and compile things into a list.
+
+87
+00:05:26.910 --> 00:05:32.069
+除了所有这些指针之外，每个节点还具有一个子节点列表
+In addition to all of those pointers, each node also has a list of child nodes
+
+88
+00:05:32.069 --> 00:05:36.319
+这有点像一个数组，其中包含所有的孩子。
+which is kind of like an array which will have all of the children in it.

@@ -2,532 +2,458 @@ WEBVTT
 
 1
 00:00:00.190 --> 00:00:03.669
->> 凯尔 - 辛普森: 我们一直在谈论这个单位的词法范围，
-&gt;&gt; Kyle Simpson: We've been talking
-about lexical scope in this unit, and
+&gt；&gt；Kyle Simpson：我们一直在讨论这个单元中的词法范围，以及
+&gt;&gt; Kyle Simpson: We've been talking about lexical scope in this unit, and
 
 2
 00:00:03.669 --> 00:00:09.259
-这是一个基本的理解让它能够进入封闭状态
-that is a foundational understanding
-to be able to jump into closure.
+这是一种能够跳入终结的基本理解。
+that is a foundational understanding to be able to jump into closure.
 
 3
 00:00:09.259 --> 00:00:13.609
-你们当中有多少人曾经听过或接受过这个采访的问题，
-How many of you have ever heard or
-given that interview question before,
+你们中有多少人以前听过或回答过这个采访问题，
+How many of you have ever heard or given that interview question before,
 
 4
 00:00:13.609 --> 00:00:18.500
-什么是封闭的然后答案好像有点模糊
-what is closure and then the answer
-seems to sort of fumble around like,
+什么是闭合，然后答案似乎就像这样摸索着，
+what is closure and then the answer seems to sort of fumble around like,
 
 5
 00:00:19.739 --> 00:00:22.570
-有关异步回调的信息吗 ?
+关于异步回调？
 something about asynchronous callbacks?
 
 6
 00:00:22.570 --> 00:00:26.940
-我认为封闭是最主要的，它肯定是最常见的
-I think closure is one of the most, it's
-certainly one of the most prevalent and
+我认为闭合是最普遍的，它当然是最流行的
+I think closure is one of the most, it's certainly one of the most prevalent and
 
 7
 00:00:26.940 --> 00:00:31.269
-也许是计算机科学发明的最重要的想法之一
-maybe one of the most important ideas
-ever invented in computer science.
+也许是计算机科学中发明的最重要的想法之一。
+maybe one of the most important ideas ever invented in computer science.
 
 8
 00:00:32.539 --> 00:00:36.789
-平心而论，我在这过程中提到过几次我有一些
-In all fairness, I've mentioned a few
-times in this course that I have some
+公平地说，我在这门课程中提到过几次，我有一些
+In all fairness, I've mentioned a few times in this course that I have some
 
 9
 00:00:36.789 --> 00:00:42.590
-和道格的意见分岐但是他道格 - 克劳福有很多
-disagreements with Doug, but he,
-Doug Crawford, has had a lot of
+与道格意见不合，但他道格·克劳福德有很多
+disagreements with Doug, but he, Doug Crawford, has had a lot of
 
 10
 00:00:42.590 --> 00:00:46.570
-他为我们的产业做了很多事情，做了很多他说的事情。
-really great things that he's done for our
-industry and a lot of things that he said.
+他为我们的行业做了很多很棒的事情，他说了很多话。
+really great things that he's done for our industry and a lot of things that he said.
 
 11
 00:00:46.570 --> 00:00:50.560
-当他说一些聪明的东西时，他应该得到它的功劳。
-And when he says something brilliant,
-he deserves credit for it.
+当他说了一些精彩的话，他应该得到赞扬。
+And when he says something brilliant, he deserves credit for it.
 
 12
 00:00:50.560 --> 00:00:56.189
-多年前他有个演讲说他在讲计算机科学
-Years ago, he had a conference talk that
-he was giving about computer science
+几年前，他有一次关于计算机科学的会议演讲
+Years ago, he had a conference talk that he was giving about computer science
 
 13
 00:00:56.189 --> 00:01:01.689
-在计算机科学历史的过程中创造的东西
-things that have been created over the
-course of the history of computer science.
+在计算机科学史上创造的东西。
+things that have been created over the course of the history of computer science.
 
 14
 00:01:01.689 --> 00:01:07.709
-他想说的是，本质上，所有伟大的想法都需要一个整体
-And he was making a point that,
-essentially, all great ideas take a whole
+他的观点是，从本质上说，所有伟大的想法都需要一个整体
+And he was making a point that, essentially, all great ideas take a whole
 
 15
 00:01:07.709 --> 00:01:13.210
-在他们开始实施之前，先生成程序员，然后再开始流行。
-generation of programmers before they get
-implemented, before they become popular.
+在他们被实现之前，在他们变得流行之前，产生程序员。
+generation of programmers before they get implemented, before they become popular.
 
 16
 00:01:13.210 --> 00:01:16.230
-他给出了各种各样的例子。
+他举了很多例子。
 And he gave a variety of examples.
 
 17
 00:01:16.230 --> 00:01:20.579
-当他去解释为什么这种现象存在的时候
-And when he went to explain
-why that phenomenon exists,
+当他去解释这种现象存在的原因时，
+And when he went to explain why that phenomenon exists,
 
 18
 00:01:20.579 --> 00:01:25.560
-是一种以脸颊为反应的舌头
-it was sort of a tongue in
-cheek kind of response or
+这是一种敷衍了事的回应或
+it was sort of a tongue in cheek kind of response or
 
 19
 00:01:25.560 --> 00:01:30.085
-解释，这有点半真半假。
-explanation, which is kind
-of half-true and half-funny.
+解释，这是一种一半真实，一半有趣的解释。
+explanation, which is kind of half-true and half-funny.
 
 20
 00:01:30.085 --> 00:01:33.795
-他说，好吧，之所以花一代人的时间，是因为我们如此
-He said, well, the reason why it takes
-a full generation is because we're so
+他说，嗯，这需要整整一代人的原因是因为我们
+He said, well, the reason why it takes a full generation is because we're so
 
 21
 00:01:33.795 --> 00:01:34.295
-固执的
+固执。
 stubborn.
 
 22
 00:01:34.295 --> 00:01:35.805
-我们被困住了
+我们被困在我们的方式中。
 We're stuck in our ways.
 
 23
 00:01:35.805 --> 00:01:40.700
-所以我们得等现在这一代人都死了
-So we have to wait around for
-all of the current generation to die or
+所以我们必须等待当代人全部死亡或者
+So we have to wait around for all of the current generation to die or
 
 24
 00:01:40.700 --> 00:01:44.259
-在新的伟大构想开始之前就退休了
-retire llll before the new
-great idea picks up.
+在新的好主意出现之前退休。
+retire llll before the new great idea picks up.
 
 25
 00:01:44.259 --> 00:01:49.200
-再一次，这就像是半真半乐。
-[LAUGH] Again,
-it's like half-true and half-funny.
+[笑]再一次，这就像是一半真实，一半有趣。
+[LAUGH] Again, it's like half-true and half-funny.
 
 26
 00:01:49.200 --> 00:01:54.168
-但他继续说我们知道关闭一定很棒
-But he went on to say we know that closure
-must be truly great cuz it took two
+但他接着说，我们知道结束必须是真正伟大的，因为它需要两个
+But he went on to say we know that closure must be truly great cuz it took two
 
 27
 00:01:54.168 --> 00:01:56.295
-让我们的世代都能抓住
+整整几代人都能赶上。
 full generations to catch on.
 
 28
 00:01:56.295 --> 00:02:00.810
-我们真的要等很多人死或退休了
-[LAUGH] We really had to wait for
-a lot of people to die or retire.
+[笑]我们真的不得不等待很多人死去或退休。
+[LAUGH] We really had to wait for a lot of people to die or retire.
 
 29
 00:02:00.810 --> 00:02:04.870
-它是所有编程中最普遍的概念之一。
-It's one of the most prevalent
-concepts in all of programming.
+这是所有编程中最流行的概念之一。
+It's one of the most prevalent concepts in all of programming.
 
 30
 00:02:04.870 --> 00:02:09.659
-然而当它在 90 年代中期引入 JavaScript 的时候
-And yet, when it was introduced in
-JavaScript in the mid to late 90s,
+然而，当它在90年代中期到后期被引入JavaScript时，
+And yet, when it was introduced in JavaScript in the mid to late 90s,
 
 31
 00:02:09.659 --> 00:02:14.180
-在某种程度上是一种革命性的想法
-it was somewhat of a revolutionary
-idea that we would take
+这在某种程度上是一个革命性的想法，我们将采取
+it was somewhat of a revolutionary idea that we would take
 
 32
 00:02:14.180 --> 00:02:19.039
-一种表面上为普通男人设计的语言
-a language that was ostensibly
-designed for the common man,
+一种表面上是为普通人设计的语言，
+a language that was ostensibly designed for the common man,
 
 33
 00:02:19.039 --> 00:02:22.240
-以消费为导向的开发者，而不是学术机构。
-the consumer-oriented developer,
-not the academic.
+面向消费者的开发人员，而不是学术人员。
+the consumer-oriented developer, not the academic.
 
 34
 00:02:22.240 --> 00:02:27.462
-专为他们设计，旨在构建面向客户的应用程序和
-Designed for them, designed to build
-consumer-oriented applications and
+专为他们设计，旨在构建面向消费者的应用程序和
+Designed for them, designed to build consumer-oriented applications and
 
 35
 00:02:27.462 --> 00:02:29.889
-消费驱动的应用。
+消费者驱动的应用程序。
 consumer-driven applications.
 
 36
 00:02:29.889 --> 00:02:33.150
-通常情况下，这些语言没有在功能部件上进行选择。
-Those sorts of languages didn't
-pick up on features, typically,
+这些类型的语言并没有掌握特性，通常情况下，
+Those sorts of languages didn't pick up on features, typically,
 
 37
 00:02:33.150 --> 00:02:38.240
-都是用学术语言来的
-that had only really been
-in academic languages.
+只有真正的学术语言。
+that had only really been in academic languages.
 
 38
 00:02:38.240 --> 00:02:41.942
-所以封闭并不是新的，它是从一开始就开始的，非常早的几天。
-So closure was not new, that was around
-from the very beginning, very early days.
+因此，关闭并不是新的，这是从一开始，非常早期的日子。
+So closure was not new, that was around from the very beginning, very early days.
 
 39
 00:02:41.942 --> 00:02:44.864
-在 Lisp 和其他类似的地方
+在Lisp和其他类似的东西中。
 In Lisp and other things like that.
 
 40
 00:02:44.864 --> 00:02:47.293
-但是它有点分裂
+但有点分歧，
 But it was somewhat of a divide,
 
 41
 00:02:47.293 --> 00:02:52.965
-那里有被认为是没有真正的开发者的地方
-where there were features that were
-considered to be, no real developer,
+在那些被认为是没有真正的开发者的特性的地方，
+where there were features that were considered to be, no real developer,
 
 42
 00:02:52.965 --> 00:02:58.650
-没有一个非学术的开发者会用类似的封闭物
-no non-academic developer will ever
-use something like closure, okay?
+任何非学术的开发者都不会使用像闭包这样的东西，好吗？
+no non-academic developer will ever use something like closure, okay?
 
 43
 00:02:58.650 --> 00:03:03.871
-然后在 1995年布伦丹 - 艾希被雇去网景时
-And then in 1995, when Brendan Eich was
-hired to go to Netscape, the story goes
+然后在1995年，当Brendan Eich被雇去网景公司时，故事是这样的
+And then in 1995, when Brendan Eich was hired to go to Netscape, the story goes
 
 44
 00:03:03.871 --> 00:03:09.360
-他表面上是去了，他想把方案放在浏览器里。
-that ostensibly he was going there and he
-was wanting to put scheme in the browser.
+表面上他是要去那里，他想把计划放在浏览器里。
+that ostensibly he was going there and he was wanting to put scheme in the browser.
 
 45
 00:03:09.360 --> 00:03:12.969
-计划是一种旧的功能性编程语言。
-Scheme being an old functional
-programming language.
+Scheme是一种古老的函数式编程语言。
+Scheme being an old functional programming language.
 
 46
 00:03:12.969 --> 00:03:16.556
-这不一定是学术语言，
-It is not necessarily
-an academic language, but
+它不一定是一种学术语言，但是
+It is not necessarily an academic language, but
 
 47
 00:03:16.556 --> 00:03:21.020
-我认为可以说是一九九五年的一种学术语言。
-I think it can arguably be
-an academic language in 1995.
+我认为它可以在1995年成为一种学术语言。
+I think it can arguably be an academic language in 1995.
 
 48
 00:03:21.020 --> 00:03:24.370
 所以他想把它放在浏览器里。
-And so
-he wanted to put that in the browser.
+And so he wanted to put that in the browser.
 
 49
 00:03:24.370 --> 00:03:27.329
-Netscape 的人说，不，不，那永远不起作用。
-And the Netscape folks said,
-no, no, no, that'll never work.
+网景公司的人说，不，这永远不会奏效。
+And the Netscape folks said, no, no, no, that'll never work.
 
 50
 00:03:27.329 --> 00:03:29.789
-没人会写那种语言
+没有人会写出那种语言。
 Nobody will ever write that language.
 
 51
 00:03:29.789 --> 00:03:32.460
-您需要使用类似于 Java的语言。
-You need to make a language
-that looks like Java.
+您需要制作一种看起来像Java的语言。
+You need to make a language that looks like Java.
 
 52
 00:03:32.460 --> 00:03:33.844
-现在我不在那儿
+现在，我不在那里，
 Now, I wasn't there,
 
 53
 00:03:33.844 --> 00:03:38.206
-但我想知道布兰登对他的态度有点不灵
-but I like to imagine in my mind that
-Brendan is sort of sauntering back to his
+但我喜欢在脑海中想象布兰登正在悠闲地回到他的身边
+but I like to imagine in my mind that Brendan is sort of sauntering back to his
 
 54
 00:03:38.206 --> 00:03:42.939
-令人失望的是，愚蠢的 Netscape 不会让我在浏览器上实施计划。
-disappointed, like, stupid Netscape
-won't let me put scheme on the browser.
+失望，就像，愚蠢的网景不让我把方案放在浏览器上。
+disappointed, like, stupid Netscape won't let me put scheme on the browser.
 
 55
 00:03:42.939 --> 00:03:45.608
-然后他就有了那个灯泡的想法他说我知道我会怎么做
-And then he has that light bulb idea and
-he says, I know what I'll do,
+然后他有了那个灯泡的想法，他说，我知道我要做什么，
+And then he has that light bulb idea and he says, I know what I'll do,
 
 56
 00:03:45.608 --> 00:03:48.030
-我会把计划放在浏览器里，但我会称之为 " JavaScript" 。
-I'll put scheme in the browser but
-I'll call it JavaScript.
+我将在浏览器中放置Scheme，但我将其命名为JavaScript。
+I'll put scheme in the browser but I'll call it JavaScript.
 
 57
 00:03:48.030 --> 00:03:50.090
-我让它看起来像 Java 我把它叫做 " JavaScript"
-I'll make it look like Java and
-I'll call it JavaScript.
+我将使它看起来像Java，并将其命名为JavaScript。
+I'll make it look like Java and I'll call it JavaScript.
 
 58
 00:03:50.090 --> 00:03:52.110
-这就是它的本质。
+本质上就是这样。
 And that's essentially what it is.
 
 59
 00:03:52.110 --> 00:03:55.430
-这种 JavaScript 很可能在某些方面
-That JavaScript is probably,
-in some respects,
+在某些方面，JavaScript可能
+That JavaScript is probably, in some respects,
 
 60
 00:03:55.430 --> 00:03:59.500
-与类似计划有关，甚至与 Java 或 C++ 相关。
-related to something like Scheme,
-than even to Java or C++.
+与Scheme相关，甚至与Java或C+相关。
+related to something like Scheme, than even to Java or C++.
 
 61
 00:03:59.500 --> 00:04:01.557
-是啊我们用花括号和分号
+是的，我们使用花括号和分号。
 Yeah, we use curly braces and semicolons.
 
 62
 00:04:01.557 --> 00:04:03.530
-这很困难
+真的很难。
 And it's real hard.
 
 63
 00:04:03.530 --> 00:04:07.689
-来自功能编程语言的一些核心概念是
-Some of those core concepts from
-functional programming languages were
+函数式编程语言中的一些核心概念是
+Some of those core concepts from functional programming languages were
 
 64
 00:04:07.689 --> 00:04:13.240
-或者至少计划从那一天起就开始了
-there, or at least planned,
-from really the day one of the language.
+在那里，或者至少是有计划的，从真正的语言的第一天开始。
+there, or at least planned, from really the day one of the language.
 
 65
 00:04:13.240 --> 00:04:18.949
-我认为这是 JavaScript 成功的原因之一
-And I think that's one of the reasons
-why JavaScript succeeded and
+我认为这是JavaScript成功的原因之一
+And I think that's one of the reasons why JavaScript succeeded and
 
 66
 00:04:18.949 --> 00:04:23.680
-幸免于会，成为当今普遍存在的语言。
-survived, and thrived and became
-the ubiquitous language that it is today.
+幸存下来，茁壮成长，成为今天无处不在的语言。
+survived, and thrived and became the ubiquitous language that it is today.
 
 67
 00:04:23.680 --> 00:04:26.290
-事实上我想说的是
-Matter of fact,
-I like to suggest, essentially,
+事实上，我想建议，本质上，
+Matter of fact, I like to suggest, essentially,
 
 68
 00:04:26.290 --> 00:04:30.100
-他是个意外的天才
-that this was kind of
-accidental genius on his part.
+就他而言，这是一种偶然的天才。
+that this was kind of accidental genius on his part.
 
 69
 00:04:30.100 --> 00:04:33.490
-不要以任何方式贬低他，但我不认为有任何可能的方法
-Not to disparage him in any way, but
-I don't think there's any possible way any
+我不是在以任何方式贬低他，但我认为没有任何可能的方式
+Not to disparage him in any way, but I don't think there's any possible way any
 
 70
 00:04:33.490 --> 00:04:38.189
-人类可以想象到 1995 年
-human being could have imagined
-in 1995 that this little
+人类在1995年可能会想象到这个小小的
+human being could have imagined in 1995 that this little
 
 71
 00:04:38.189 --> 00:04:42.639
-原型语言 [LAUGH] 最终会被普遍存在。
-prototype language [LAUGH] would end
-up being as ubiquitous is today.
+原型语言(笑声)最终会像今天一样无处不在。
+prototype language [LAUGH] would end up being as ubiquitous is today.
 
 72
 00:04:42.639 --> 00:04:47.209
-电视，冰箱，手表，眼镜，还有
-That it is in TVs and refrigerators,
-and watches, and glasses, and
+它存在于电视、冰箱、手表和眼镜中，以及
+That it is in TVs and refrigerators, and watches, and glasses, and
 
 73
 00:04:47.209 --> 00:04:51.079
-灯泡和电脑还有智能手机
-light bulbs, and computers,
-and smartphones.
+灯泡，电脑和智能手机。
+light bulbs, and computers, and smartphones.
 
 74
 00:04:51.079 --> 00:04:54.250
-全球数十亿美元的设备。
-Billions and
-billions of devices worldwide.
+全球数十亿台设备。
+Billions and billions of devices worldwide.
 
 75
 00:04:54.250 --> 00:04:57.209
-机器人我是说我不认为你能想象
-Robots, I mean, I don't think you
-could have possibly imagined that
+机器人，我的意思是，我认为你不可能想象到
+Robots, I mean, I don't think you could have possibly imagined that
 
 76
 00:04:57.209 --> 00:05:02.589
-这种语言将会成为一个普遍的用例。
-the language would have served
-such a widespread use case.
+这种语言本可以服务于如此广泛的用例。
+the language would have served such a widespread use case.
 
 77
 00:05:02.589 --> 00:05:09.750
-我想证明这一点的原因是语言能得到认可
-And I think a testament to it is because
-the language embraced an approachable
+我认为这证明了这一点，因为这种语言包含了一种平易近人的
+And I think a testament to it is because the language embraced an approachable
 
 78
 00:05:09.750 --> 00:05:13.649
-语法，或至少当时认为是可核准的语法。
-syntax, or at least what was felt to
-be an approachable syntax at the time.
+语法，或者至少是当时被认为是平易近人的语法。
+syntax, or at least what was felt to be an approachable syntax at the time.
 
 79
 00:05:13.649 --> 00:05:17.350
-但给它带来了一些前所未有的最强大的特征。
-But brought it some of the most powerful
-features that had ever been invented.
+但却带来了一些有史以来最强大的功能。
+But brought it some of the most powerful features that had ever been invented.
 
 80
 00:05:17.350 --> 00:05:18.879
-在这种情况下，关闭。
+如果是那样的话，结束。
 In that case, closure.
 
 81
 00:05:18.879 --> 00:05:23.899
-在那个地方，它真的是第一个重要的搬家公司。
-And it was really kind of one of
-the first major movers in that space.
+它真的是那个领域最早的主要推动者之一。
+And it was really kind of one of the first major movers in that space.
 
 82
 00:05:23.899 --> 00:05:27.163
-我是说你可以说唯一的其他语言
-I mean, arguably,
-you could say that the only other language
+我的意思是，可以说，你可以说唯一的另一种语言
+I mean, arguably, you could say that the only other language
 
 83
 00:05:27.163 --> 00:05:31.434
-在当时真的开始变得更加消费导向型的时候
-at the time that was really maybe starting
-to become more consumer-oriented and
+在当时，这可能真的开始变得更加以消费者为导向，
+at the time that was really maybe starting to become more consumer-oriented and
 
 84
 00:05:31.434 --> 00:05:33.345
-那就是明珠
+如果关闭的话，就会是珀尔了。
 had closure would have been Pearl.
 
 85
 00:05:33.345 --> 00:05:35.639
-所以 JavaScript要么是第一个要么是
+所以JavaScript要么是第一个，要么是
 So JavaScript's either the first or
 
 86
 00:05:35.639 --> 00:05:39.300
-几乎是朝那个方向移动的第一语言
-nearly the first language
-to move in that direction.
+几乎是第一种朝这个方向发展的语言。
+nearly the first language to move in that direction.
 
 87
 00:05:39.300 --> 00:05:43.800
-而在 24 年后的今天，每一种语言都有
-And as things stand today,
-24 years later, every single language has
+24年后的今天，每一种语言都有
+And as things stand today, 24 years later, every single language has
 
 88
 00:05:43.800 --> 00:05:47.629
-因为事实证明关闭才是最重要的
-closure because it turns out that
-closure is just that important.
+结束，因为事实证明，结束就是那么重要。
+closure because it turns out that closure is just that important.
 
 89
 00:05:48.659 --> 00:05:51.990
-那么在这个基础上，
+所以有了这个基础，
 And so with that foundation, then,
 
 90
 00:05:51.990 --> 00:05:56.909
-让我觉得很麻烦的事情
-it strikes me as troublesome
-that something that is so
+让我觉得很麻烦的是这样的事情
+it strikes me as troublesome that something that is so
 
 91
 00:05:56.909 --> 00:06:01.279
-伟大而又无处不在的事物是我们仍然会跌跌跌去的
-great and so pervasive is something
-that we still stumble over.
+伟大而无处不在的东西是我们仍然跌跌撞撞的。
+great and so pervasive is something that we still stumble over.
 
 92
 00:06:01.279 --> 00:06:03.379
@@ -536,214 +462,185 @@ And we can't even give a definition of.
 
 93
 00:06:03.379 --> 00:06:06.660
-我们甚至无法给出精确的例子。
-We can't even really
-give precise examples of.
+我们甚至不能给出确切的例子。
+We can't even really give precise examples of.
 
 94
 00:06:06.660 --> 00:06:10.310
-事实上我想说的是你们每个人都是 JavaScript 开发人员
-In fact, I'd go so far as to say every one
-of you that is a JavaScript developer,
+事实上，我甚至可以说你们每个人都是JavaScript开发人员，
+In fact, I'd go so far as to say every one of you that is a JavaScript developer,
 
 95
 00:06:10.310 --> 00:06:11.329
-如果你写了 JavaScript
+如果您已经编写了JavaScript
 if you've written JavaScript for
 
 96
 00:06:11.329 --> 00:06:16.660
-超过三个小时，您已通过某种方式，形状或表单与关闭进行交互。
-more than three hours, you have interacted
-with closure in some way, shape, or form.
+三个多小时以来，你已经以某种方式、形状或形式与闭合进行了互动。
+more than three hours, you have interacted with closure in some way, shape, or form.
 
 97
 00:06:16.660 --> 00:06:18.970
-事实上大多数人都是整天都在做
-And in fact,
-most of you do it all the time, all day,
+事实上，你们中的大多数人整天都在这样做，
+And in fact, most of you do it all the time, all day,
 
 98
 00:06:18.970 --> 00:06:24.189
-每天都没有实现，在各种不同的范例中。
-every day without even realizing it,
-in various different paradigms.
+每天都没有意识到这一点，在各种不同的范式中。
+every day without even realizing it, in various different paradigms.
 
 99
 00:06:24.189 --> 00:06:26.769
-它不仅是使用闭包的功能编程
-It's not only functional
-programming that uses closure, but
+使用闭包的不仅是函数式编程，而且
+It's not only functional programming that uses closure, but
 
 100
 00:06:26.769 --> 00:06:29.339
-在许多不同的地方使用了封闭物。
-closure is used in lots
-of different places.
+闭合被用在很多不同的地方。
+closure is used in lots of different places.
 
 101
 00:06:29.339 --> 00:06:30.910
-它用于异步 AJAX。
+它用于异步Ajax。
 It's used for asynchronous AJAX.
 
 102
 00:06:30.910 --> 00:06:33.659
-它用于各种不同的事物。
-It's use for
-all sorts of different things.
+它用于各种不同的东西。
+It's use for all sorts of different things.
 
 103
 00:06:33.659 --> 00:06:38.050
-因此，我希望我们花一点时间来更确切地说明这一点。
-And so I want us to take a moment
-to be more precise about it.
+所以我想让我们花点时间来更精确地了解它。
+And so I want us to take a moment to be more precise about it.
 
 104
 00:06:38.050 --> 00:06:42.139
-现在，作为一个想法的结束实际上是在预测计算机科学，
-Now, closure as an idea is actually
-predating computer science,
+现在，封闭性作为一种想法实际上早于计算机科学，
+Now, closure as an idea is actually predating computer science,
 
 105
 00:06:42.139 --> 00:06:44.769
-它实际上是从 lambda 演算出来的
-it actually comes to us
-from lambda calculus.
+它实际上来自于lambda演算。
+it actually comes to us from lambda calculus.
 
 106
 00:06:44.769 --> 00:06:46.759
-这个封闭的想法
+这种结束的想法
 This idea of closure,
 
 107
 00:06:46.759 --> 00:06:50.500
-它甚至在这个意义上预先设想了一种编程语言的概念。
-it even predates the idea of
-a programming language in that sense.
+从这个意义上讲，它甚至早于编程语言的概念。
+it even predates the idea of a programming language in that sense.
 
 108
 00:06:50.500 --> 00:06:53.420
-如果我想给你看一堆符号
-And so if I were to try to show
-you a bunch of symbols and
+所以如果我试着给你看一堆符号
+And so if I were to try to show you a bunch of symbols and
 
 109
 00:06:53.420 --> 00:06:56.810
-教你 lambda 演算我完全不知道这个任务
-teach you lambda calculus,
-I am completely not up to that task.
+教你Lambda微积分，我完全不能胜任那个任务。
+teach you lambda calculus, I am completely not up to that task.
 
 110
 00:06:56.810 --> 00:07:00.069
-我读过 Wikipedia 的 lambda 演算。
-I have read the Wikipedia page for
-lambda calculus.
+我已经阅读了拉姆达演算的维基百科页面。
+I have read the Wikipedia page for lambda calculus.
 
 111
 00:07:00.069 --> 00:07:01.410
-我知道这是件事
+我知道这是一件事。
 I know it is a thing.
 
 112
 00:07:01.410 --> 00:07:02.509
-我什么都不知道
+我对此一无所知。
 I don't know anything about it.
 
 113
 00:07:02.509 --> 00:07:04.160
-我一点都不明白
+我一点也不明白。
 I don't understand it at all.
 
 114
 00:07:04.160 --> 00:07:06.629
-我有个 CS 背景但我还是不明白
-And I have a CS background and
-I still don't get it.
+我有CS背景，但我还是不明白。
+And I have a CS background and I still don't get it.
 
 115
 00:07:06.629 --> 00:07:10.360
-所以至少从我的角度来看
-So it turns out that,
-at least from my perspective,
+所以事实证明，至少从我的角度来看，
+So it turns out that, at least from my perspective,
 
 116
 00:07:10.360 --> 00:07:15.100
-学术定义，关闭的数学定义，不有用。
-the academic definition, the mathematical
-definition for closure, not useful.
+学术定义，闭包的数学定义，没有用处。
+the academic definition, the mathematical definition for closure, not useful.
 
 117
 00:07:15.100 --> 00:07:16.750
-事实上，就算你去维基百科
-Matter of fact,
-even if you go to Wikipedia and
+事实上，即使你去维基百科
+Matter of fact, even if you go to Wikipedia and
 
 118
 00:07:16.750 --> 00:07:19.089
-你想问问维基百科什么是封闭的
-you try to ask Wikipedia what is closure,
-or
+你试着问维基百科什么是封闭性，或者
+you try to ask Wikipedia what is closure, or
 
 119
 00:07:19.089 --> 00:07:22.589
-如果你去找一本电脑科学教科书问它，什么是封闭的 ?
-if you try to go to a computer science
-textbook and ask it, what is closure?
+如果你试图去看一本计算机科学教科书并问它，什么是闭合？
+if you try to go to a computer science textbook and ask it, what is closure?
 
 120
 00:07:22.589 --> 00:07:27.269
-我的意思是，我在学校教过这些东西，但没有任何东西卡住了。
-I mean, I was taught those things in
-school, but none of that ever stuck.
+我的意思是，我在学校里学过这些东西，但这些都没有坚持住。
+I mean, I was taught those things in school, but none of that ever stuck.
 
 121
 00:07:27.269 --> 00:07:30.100
-从没有过任何点击
+没有一个点击过。
 None of it ever clicked.
 
 122
 00:07:30.100 --> 00:07:34.930
-所以我要用另一个定义代替
-So I'm gonna try to substitute a different
-definition, which instead of focusing on
+所以我将尝试替换一个不同的定义，而不是专注于
+So I'm gonna try to substitute a different definition, which instead of focusing on
 
 123
 00:07:34.930 --> 00:07:39.269
-学者们关注我们在我们的节目中能观察到的
-the academics, focuses on what we can
-observe in our programs that is different
+学术，重点是我们可以在我们的项目中观察到的不同之处
+the academics, focuses on what we can observe in our programs that is different
 
 124
 00:07:39.269 --> 00:07:43.399
-因为关闭是语言的特征。
-as a result of closure being
-a characteristic of the language.
+由于闭合是语言的一个特征。
+as a result of closure being a characteristic of the language.
 
 125
 00:07:43.399 --> 00:07:47.300
-要了解此定义，您必须了解词法作用域。
-To understand this definition,
-you have to understand lexical scope.
+要理解这个定义，您必须了解词法范围。
+To understand this definition, you have to understand lexical scope.
 
 126
 00:07:47.300 --> 00:07:49.689
-这就是我们在这方面建立自己的原因。
-That's why we've built
-ourselves in this direction.
+这就是为什么我们朝这个方向建设自己。
+That's why we've built ourselves in this direction.
 
 127
 00:07:49.689 --> 00:07:51.533
-我们正朝模块模式前进
+我们正朝着模块模式前进，
 We're headed towards the module pattern,
 
 128
 00:07:51.533 --> 00:07:54.519
-沿着这条路走的路是我们必须明白的
-and a step along the way is
-we've gotta understand closure.
+前进的一步是我们必须理解结束。
+and a step along the way is we've gotta understand closure.
 
 129
 00:07:54.519 --> 00:07:57.769
-如果你不理解词法范围就不能去了
-Can't get there if you don't
-understand lexical scope.
+如果你不理解词法范围，你就不能做到这一点。
+Can't get there if you don't understand lexical scope.

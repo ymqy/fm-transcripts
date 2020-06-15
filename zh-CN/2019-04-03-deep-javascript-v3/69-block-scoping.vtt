@@ -2,623 +2,540 @@ WEBVTT
 
 1
 00:00:00.280 --> 00:00:02.509
->> 凯尔: 我们谈到了职能范围界定，
-&gt;&gt; Kyle: We've talked
-about function scoping,
+&gt；&gt；Kyle：我们已经讨论过函数作用域，
+&gt;&gt; Kyle: We've talked about function scoping,
 
 2
 00:00:02.509 --> 00:00:05.549
-现在我们转移注意力去阻止范围界定
-let's shift our attention
-now to block scoping.
+现在让我们将注意力转移到阻止作用域。
+let's shift our attention now to block scoping.
 
 3
 00:00:05.549 --> 00:00:08.500
-像它听起来一样
+像听起来那样阻止范围，
 Block scoping like it sounds,
 
 4
 00:00:08.500 --> 00:00:13.980
-它的作用是使用块中的花括号而不是函数来进行。
-it's scoping that's done with blocks aka
-curly braces instead of with functions.
+它的作用域是用块(也称为花括号)而不是函数完成的。
+it's scoping that's done with blocks aka curly braces instead of with functions.
 
 5
 00:00:13.980 --> 00:00:16.300
-同样的原则也要适用
+同样的原则也适用。
 Same principle is gonna apply.
 
 6
 00:00:16.300 --> 00:00:21.129
-我们想把东西放在一个街区里而不是包围
-We wanna put something inside of a block
-instead of inside of the enclosing
+我们想把一些东西放在一个块里而不是封闭的里面
+We wanna put something inside of a block instead of inside of the enclosing
 
 7
 00:00:21.129 --> 00:00:25.789
-因为我们想把它藏起来所以名字碰撞的机会就更少了
-scope because we wanna hide it, so that
-it has fewer chances of name collision.
+作用域，因为我们想要隐藏它，以便它有更少的名称冲突的机会。
+scope because we wanna hide it, so that it has fewer chances of name collision.
 
 8
 00:00:25.789 --> 00:00:29.100
-我们想保护一个细节保护未来的重构
-We wanna protect a detail,
-protect future refactoring,
+我们想保护细节，保护未来的重构，
+We wanna protect a detail, protect future refactoring,
 
 9
 00:00:29.100 --> 00:00:30.890
-这个道理都是一样的。
+所有的原则都适用。
 all the same principle applies.
 
 10
 00:00:30.890 --> 00:00:35.213
-只是我们现在使用的机制是块范围声明而不是
-It's just the mechanism we use is now
-a block scope declaration instead of
+只是我们现在使用的机制是块范围声明，而不是
+It's just the mechanism we use is now a block scope declaration instead of
 
 11
 00:00:35.213 --> 00:00:36.616
-例如， IIFE 。
+例如，一种生活。
 an IIFE, for example.
 
 12
 00:00:36.616 --> 00:00:43.588
-所以，让我们用一块方块来写，而不是写 IIFE 。
-So Instead of writing an IIFE,
-let's write it with a block.
+所以，与其写生命，不如用一块木块来写。
+So Instead of writing an IIFE, let's write it with a block.
 
 13
 00:00:43.588 --> 00:00:48.267
-您可以将该示例与该示例之间的差异进行比较
-And you can compare mentally
-the difference between that example with
+你可以从心理上比较这个例子和
+And you can compare mentally the difference between that example with
 
 14
 00:00:48.267 --> 00:00:52.942
-一个 IIFE 或仅使用一个卷曲的括号，并使用一个类似的语句
-an IIFE or just using a curly braced
-block and using a let statement like
+一种生活方式，或者只是使用花括号块并使用let语句，如
+an IIFE or just using a curly braced block and using a let statement like
 
 15
 00:00:52.942 --> 00:00:56.917
-块作用域装饰， >> 凯尔: 它很轻
-a block scope decoration,
-&gt;&gt; Kyle: It's a lot lighter
+块状范围装饰，&gt；&gt；Kyle：它要轻得多
+a block scope decoration, &gt;&gt; Kyle: It's a lot lighter
 
 16
 00:00:56.917 --> 00:00:58.380
-体重不是吗?
+重量不是吗？
 weight isn't it?.
 
 17
 00:00:58.380 --> 00:01:03.140
-它也没有什么副作用，没有重新定义任何关于
-It also has less side effects in the sense
-it doesn't redefined anything about
+它也有较少的副作用，因为它没有重新定义任何东西
+It also has less side effects in the sense it doesn't redefined anything about
 
 18
 00:01:03.140 --> 00:01:07.469
-返回或中断，或者任何其他的内容，所以块更容易
-returns or breaks or any of that other
-stuff, so blocks are a bit easier and
+返回或中断或任何其他内容，因此块更容易一些，
+returns or breaks or any of that other stuff, so blocks are a bit easier and
 
 19
 00:01:07.469 --> 00:01:10.269
-更轻的放进去的重量
+将较轻的重量放在适当的地方。
 lighter weight to put into places.
 
 20
 00:01:10.269 --> 00:01:12.045
-不是表情，所以
+它们不是表情，所以
 They're not expressions, so
 
 21
 00:01:12.045 --> 00:01:15.344
-不能在可以使用表达式的位置使用它们。
-you can't use them in places
-where you can use expressions.
+不能在可以使用表达式的地方使用它们。
+you can't use them in places where you can use expressions.
 
 22
 00:01:15.344 --> 00:01:19.495
-但如果你把它们放在一个声明里，那就完全可以了。
-But if you have them in a place that's
-a statement, it's totally okay.
+但如果你把它们放在一个声明的地方，那是完全没问题的。
+But if you have them in a place that's a statement, it's totally okay.
 
 23
 00:01:19.495 --> 00:01:23.572
-有时候更喜欢做这么轻的重量形式
-And sometimes often a lot more preferable
-to just do this lighter weight form,
+有时更可取的是只做这种重量较轻的形式，
+And sometimes often a lot more preferable to just do this lighter weight form,
 
 24
 00:01:23.572 --> 00:01:25.858
-围绕着一些东西
-wrap a curly brace pair
-around something and
+将一对卷曲的大括号包在某物上，然后
+wrap a curly brace pair around something and
 
 25
 00:01:25.858 --> 00:01:28.234
-在其中进行块作用域声明。
-make a block scope
-declaration inside of it.
+在它里面做一个块作用域声明。
+make a block scope declaration inside of it.
 
 26
 00:01:28.234 --> 00:01:32.948
-现在你不能在这里做个变量因为历史上的
-Now you can't just do a var here
-because historically vars have been
+现在你不能只在这里做var，因为历史上var一直是
+Now you can't just do a var here because historically vars have been
 
 27
 00:01:32.948 --> 00:01:37.670
-将自身附加到外部函数作用域或全局作用域。
-attaching themselves to the outer
-function scope or global scope.
+将自己附加到外部函数作用域或全局作用域。
+attaching themselves to the outer function scope or global scope.
 
 28
 00:01:37.670 --> 00:01:41.432
-所以这里的 var 会把它自身附着在外域而不是卷曲的
-So a var here would have attached itself
-to the outer scope rather than the curly
+所以这里的var会将自己附加到外部范围而不是卷曲的范围
+So a var here would have attached itself to the outer scope rather than the curly
 
 29
 00:01:41.432 --> 00:01:42.069
-花括号对。
+支架对。
 brace pair.
 
 30
 00:01:43.998 --> 00:01:48.252
->> 凯尔: 不破坏旧的旧代码或旧的旧代码，
-&gt;&gt; Kyle: Instead of breaking old
-backward or old previous code,
+&gt；&gt；Kyle：不是打破旧的向后或旧的先前代码，
+&gt;&gt; Kyle: Instead of breaking old backward or old previous code,
 
 31
 00:01:48.252 --> 00:01:51.609
-他们决定增加新的申报表格
+他们决定增加新的申报单。
 they decided to add new declaration forms.
 
 32
 00:01:51.609 --> 00:01:54.640
-这就是我们从哪里得到的
-So it's where we get the let and
-the const from.
+所以这就是我们得到let和const的地方。
+So it's where we get the let and the const from.
 
 33
 00:01:54.640 --> 00:01:58.909
-让你和康斯特这样做你可以在一个街区里发表声明
-Let and const are so that you can make
-a declaration inside of a block and
+let和const，以便您可以在块内进行声明，并
+Let and const are so that you can make a declaration inside of a block and
 
 34
 00:01:58.909 --> 00:02:00.989
-把那个街区变成了一个范围
+它把那个块变成了一个示波器。
 it turns that block into a scope.
 
 35
 00:02:02.239 --> 00:02:07.120
-在它们有一个或多个内部的位置之前，这些块才是作用域。
-Blocks are not scopes until they have
-a let or const inside of them and
+块不是作用域，除非它们内部有let或const，并且
+Blocks are not scopes until they have a let or const inside of them and
 
 36
 00:02:07.120 --> 00:02:09.129
-那么这种暗示就会使他们成为一个范围。
-then that sort of implicitly
-makes them a scope.
+那么这种隐含地使它们成为一个作用域。
+then that sort of implicitly makes them a scope.
 
 37
 00:02:10.669 --> 00:02:14.620
-那是人们的关键所在
-That's a key place where
-people sort of get,
+那是一个关键的地方，人们可以在那里得到，
+That's a key place where people sort of get,
 
 38
 00:02:14.620 --> 00:02:18.400
-他们认为所有花括号都是范围，不是所有范围。
-they think that all curly braces
-are scopes, and they're not all scopes.
+他们认为所有的花括号都是作用域，它们并不都是作用域。
+they think that all curly braces are scopes, and they're not all scopes.
 
 39
 00:02:18.400 --> 00:02:21.110
-如果里面有一个或一个常量，它们只是一个范围。
-They're only a scope if there's a let or
-a const inside of it.
+如果里面有let或const，它们只是一个作用域。
+They're only a scope if there's a let or a const inside of it.
 
 40
 00:02:23.789 --> 00:02:27.199
-好，所以这是一个很轻的方式来做这个特定的例子。
-Okay, so this was a lightweight way
-of doing this particular example.
+好的，所以这是一个轻量级的方式来做这个特别的例子。
+Okay, so this was a lightweight way of doing this particular example.
 
 41
 00:02:27.199 --> 00:02:31.409
-但在事情的更大范围内，范围界定的范围是怎样的呢 ?
-But where does block scoping fit
-in the larger scope of things?
+但是块作用域在更大的范围内适合在哪里呢？
+But where does block scoping fit in the larger scope of things?
 
 42
 00:02:31.409 --> 00:02:35.110
-我要声明你应该做的事情
-I'm gonna make the claim that what you
-should be doing with block scoping
+我要声明你应该用块作用域做什么
+I'm gonna make the claim that what you should be doing with block scoping
 
 43
 00:02:35.110 --> 00:02:39.319
-正在使用类似的关键字来加强
-is using something like
-the let keyword to reinforce
+使用类似let关键字的内容来加强
+is using something like the let keyword to reinforce
 
 44
 00:02:39.319 --> 00:02:42.938
-你就会很自然地向你的读者发出信号
-something that you would have already
-naturally wanted to signal to your reader.
+一些你本来就很自然地想要传达给你的读者的东西。
+something that you would have already naturally wanted to signal to your reader.
 
 45
 00:02:44.030 --> 00:02:45.060
-举个例子。
+这里有一个例子。
 Here's an example.
 
 46
 00:02:45.060 --> 00:02:49.639
-如果您正在编写代码，如果您有一个需要临时的语句
-If you were writing code where you had
-an if statement that needed a temporary
+如果您正在编写需要临时语句的if语句的代码
+If you were writing code where you had an if statement that needed a temporary
 
 47
 00:02:49.639 --> 00:02:52.110
-变量用于执行某些操作，在此情况下要交换两个值。
-variable to do something,
-in this case to swap two values.
+变量来做一些事情，在这种情况下交换两个值。
+variable to do something, in this case to swap two values.
 
 48
 00:02:53.389 --> 00:02:56.969
-你给它打了个电话给读者
-And you called it tmp to
-signal to the reader,
+你叫它tmp是为了给读者发信号，
+And you called it tmp to signal to the reader,
 
 49
 00:02:56.969 --> 00:03:00.560
-只是暂时的占位符我不太想用它
-it's just a temporary placeholder,
-I'm not really using it for much.
+这只是一个临时的占位符，我并不是真的用得太多。
+it's just a temporary placeholder, I'm not really using it for much.
 
 50
 00:03:00.560 --> 00:03:04.689
-我一定要把他的王牌放进去因为我想说
-And definitely, I put the var tmp inside
-of the if because I'm trying to say to
+当然，我把var tmp放在if里面，因为我想说
+And definitely, I put the var tmp inside of the if because I'm trying to say to
 
 51
 00:03:04.689 --> 00:03:08.840
-读者，您无需访问此文件或在任何其他地方使用此信息。
-the reader, you don't need to access
-this or use this anywhere else.
+读者，你不需要访问这个或在其他任何地方使用这个。
+the reader, you don't need to access this or use this anywhere else.
 
 52
 00:03:08.840 --> 00:03:13.539
-我们知道， var 的行为方式是它会将自身附加到
-We know that the way var behaves
-is that it'll attach itself to
+我们知道var的行为方式是它将自己附着在
+We know that the way var behaves is that it'll attach itself to
 
 53
 00:03:13.539 --> 00:03:15.479
-蓝镜对吧
+蓝色的望远镜，对吧？
 the blue scope, right?
 
 54
 00:03:15.479 --> 00:03:19.939
-它会是一个蓝色的大理石
-It'll be a blue marble attached
-to the whole function if.
+它将是一个蓝色的大理石附在整个功能上，如果。
+It'll be a blue marble attached to the whole function if.
 
 55
 00:03:19.939 --> 00:03:22.545
-但我们在暗示些什么
-But we're signaling
-something stylistically,
+但我们发出的是某种风格上的信号，
+But we're signaling something stylistically,
 
 56
 00:03:22.545 --> 00:03:27.020
-在语义上向读者说明此变量属于 if 语句。
-semantically to the reader which is to say
-this variable belongs to the if statement.
+在语义上对读者来说，也就是说，这个变量属于if语句。
+semantically to the reader which is to say this variable belongs to the if statement.
 
 57
 00:03:28.860 --> 00:03:32.770
-如果你这样做有些人也许会把你的 vars 放进去
-If you do stuff like this, and some of
-you may have put your vars inside of if
+如果你做这样的事情，你们中的一些人可能把你的vars放在if里面
+If you do stuff like this, and some of you may have put your vars inside of if
 
 58
 00:03:32.770 --> 00:03:35.670
-语句或其他类型的块之前或
-statements or
-other sorts of blocks before or
+语句或之前的其他类型的块
+statements or other sorts of blocks before or
 
 59
 00:03:35.670 --> 00:03:38.030
-也许你把你的 var 语句放进去循环
-maybe you put your var
-statements inside of for loops.
+也许您将var语句放在for循环中。
+maybe you put your var statements inside of for loops.
 
 60
 00:03:38.030 --> 00:03:39.670
-这是很普通的事情。
+这是很常见的事情。
 That's a very common thing.
 
 61
 00:03:39.670 --> 00:03:43.150
-如果你做到了那你已经发信号了
-If you've done that,
-then what you were already signalling was,
+如果你已经这样做了，那么你已经在发出的信号是，
+If you've done that, then what you were already signalling was,
 
 62
 00:03:43.150 --> 00:03:47.520
-不管你意识到与否，嘿读者，这是一个区块范围的变量。
-whether you realized it or not, hey
-reader, this is a block scoped variable.
+无论您是否意识到，嘿读者，这是一个块范围的变量。
+whether you realized it or not, hey reader, this is a block scoped variable.
 
 63
 00:03:48.879 --> 00:03:54.949
-现在我们有了一个街区范围的声明你可以安全地
-And now that we have a block scope
-declaration, you can safely replace those
+现在我们有了块范围声明，您可以安全地替换这些
+And now that we have a block scope declaration, you can safely replace those
 
 64
 00:03:54.949 --> 00:03:58.699
-现在你在强制执行你已经很有造型的信号了
-and now you are enforcing the thing that
-you were already stylistically signalling.
+现在你正在实施你已经在文体上发出信号的东西。
+and now you are enforcing the thing that you were already stylistically signalling.
 
 65
 00:04:01.840 --> 00:04:06.659
-我认为这才是解决这个问题的适当方式
-That I think is the appropriate way to
-approach this feature which is to say,
+我认为这是接近这个特征的适当方式，也就是说，
+That I think is the appropriate way to approach this feature which is to say,
 
 66
 00:04:06.659 --> 00:04:11.480
-你应该把它放在已经很明显，正确设计的地方
-you should use it in places where it is
-already obvious and correct design for
+您应该在已经很明显且设计正确的地方使用它
+you should use it in places where it is already obvious and correct design for
 
 67
 00:04:11.480 --> 00:04:13.460
-你要封锁范围
+你要阻挡范围内的东西。
 you to block scope something.
 
 68
 00:04:14.800 --> 00:04:19.180
-我不认为你应该去找机会
-I do not think that you should go
-looking for opportunities to more
+我认为你不应该去寻找更多的机会
+I do not think that you should go looking for opportunities to more
 
 69
 00:04:19.180 --> 00:04:23.399
-通过多块作用域限定来完成代码
-complexify your code by
-having more block scoping for
+通过更多的块作用域使代码复杂化
+complexify your code by having more block scoping for
 
 70
 00:04:23.399 --> 00:04:27.300
-没有特定的原因，因此您可以使用此热门的新 let 关键字。
-no particular reason, just so
-you can use this hot new let keyword.
+没有特别的原因，只是为了你可以使用这个热门的新的let关键字。
+no particular reason, just so you can use this hot new let keyword.
 
 71
 00:04:28.800 --> 00:04:35.259
-你应该把它用在已经有阻碍作用的地方，好吗 ?
-You should use it in places where it
-already makes sense to block scope, okay?
+你应该在阻止作用域已经有意义的地方使用它，好吗？
+You should use it in places where it already makes sense to block scope, okay?
 
 72
 00:04:35.259 --> 00:04:38.925
-那是我第一次想在你的
-So that's the first shift
-that I wanna have in your
+所以这是我想要在你的第一次轮班
+So that's the first shift that I wanna have in your
 
 73
 00:04:38.925 --> 00:04:43.204
-思想是想把它作为替代
-mental thinking is to think
-about that as a replacement for
+心智思考就是把它看作是对
+mental thinking is to think about that as a replacement for
 
 74
 00:04:43.204 --> 00:04:47.060
-已在语义上发送的块作用域。
-your already semantically
-signalled block scope.
+您已经用语义标记的块作用域。
+your already semantically signalled block scope.
 
 75
 00:04:47.060 --> 00:04:51.156
-我不是一个大影迷因为我被劫持的方式
-I'm not a big fan by the way of
-this hijacking of scopes because I
+顺便说一句，我不是这种劫持望远镜的狂热粉丝，因为我
+I'm not a big fan by the way of this hijacking of scopes because I
 
 76
 00:04:51.156 --> 00:04:54.959
-通常认为一个 if 语句只是一个 if 语句。
-normally think of an if statement
-as just an if statement.
+通常认为if语句只是if语句。
+normally think of an if statement as just an if statement.
 
 77
 00:04:54.959 --> 00:04:59.247
-但现在我要看一个 if 语句的全部内容
-But now I have to look through the entire
-contents of an if statement to figure out
+但现在我必须查看if语句的全部内容才能弄清楚
+But now I have to look through the entire contents of an if statement to figure out
 
 78
 00:04:59.247 --> 00:05:03.269
-如果里面有一个允许的关键词并确定这是否也是一个范围
-if there's a let keyword in it and
-figure out if that's also a scope.
+如果其中有let关键字，并确定这是否也是一个作用域。
+if there's a let keyword in it and figure out if that's also a scope.
 
 79
 00:05:03.269 --> 00:05:06.660
-如果是范围我得更仔细地考虑我的行动
-And if it is a scope I have to be more
-careful about what I move around and
+如果它是一个示波器，我必须更加小心我移动的东西和
+And if it is a scope I have to be more careful about what I move around and
 
 80
 00:05:06.660 --> 00:05:08.129
-我能把它放在哪里
+我可以把什么放在哪里。
 where I can put what.
 
 81
 00:05:08.129 --> 00:05:12.529
-所以我不是那种隐含劫持事件的大粉丝
-So I'm not a big fan of that whole
-implicit hijacking thing but
+所以我不是很喜欢这种隐含的劫机行为，但是
+So I'm not a big fan of that whole implicit hijacking thing but
 
 82
 00:05:12.529 --> 00:05:17.509
-我是一个能够执行我们已经发出信号的粉丝
-I am a fan of being able to enforce
-the thing that we were already signaling
+我很喜欢能够执行我们已经发出信号的东西
+I am a fan of being able to enforce the thing that we were already signaling
 
 83
 00:05:17.509 --> 00:05:20.100
-我想让这件事成为当地的事
+也就是说，我希望这个东西是本地化的。
 which is, I want this thing to be local.
 
 84
 00:05:21.100 --> 00:05:24.069
-那么，这个全新的东西呢 ?
-So what about this whole
-let is the new var thing?
+那么这整个let是新的var的东西呢？
+So what about this whole let is the new var thing?
 
 85
 00:05:24.069 --> 00:05:25.860
-我肯定你以前听过
+我相信你以前也听过这句话
 I'm sure you've heard this before,
 
 86
 00:05:25.860 --> 00:05:29.250
-事实上已经被替换成了新的 let了
-as a matter of fact that's been replaced
-even with const is the new let.
+事实上，即使用const替换的是新的let。
+as a matter of fact that's been replaced even with const is the new let.
 
 87
 00:05:30.300 --> 00:05:32.189
-确实有 T 恤
+有字面上的T恤衫，和
 There were literally T-Shirts made, and
 
 88
 00:05:32.189 --> 00:05:37.170
-被一些 TC39 年的成员所戴的背所戴的，让我们是新的 var。
-worn by some members of TC39 years
-back that said, let is the new var.
+穿着TC39年前的一些成员说，让是新的var。
+worn by some members of TC39 years back that said, let is the new var.
 
 89
 00:05:37.170 --> 00:05:38.090
-这是个横幅
+这是一个横幅。
 This was a banner.
 
 90
 00:05:38.090 --> 00:05:43.439
-有一个 TC39 会员的博客帖子说，只要做个全球性的发现
-And there was a blog post by a TC39 member
-that said, just do a global find and
+有一个TC39成员的博客帖子说，只要做一个全球搜索，
+And there was a blog post by a TC39 member that said, just do a global find and
 
 91
 00:05:43.439 --> 00:05:47.439
-替换您的程序，并将所有出现的值替换为带有 let的变量。
-replace on your program and replace
-all occurrences with var with a let.
+在您的程序上替换，并用一个let替换所有出现的var。
+replace on your program and replace all occurrences with var with a let.
 
 92
 00:05:49.250 --> 00:05:52.319
-这真是个愚蠢的建议
-That is an enormously
-stupid piece of advice.
+这是一个非常愚蠢的建议。
+That is an enormously stupid piece of advice.
 
 93
 00:05:52.319 --> 00:05:53.139
-请不要这样做。
+请不要那样做。
 Please do not do that.
 
 94
 00:05:54.480 --> 00:05:57.009
-这主意糟透了
+这是个糟糕的主意。
 It's a terrible idea.
 
 95
 00:05:57.009 --> 00:06:00.509
-不仅你几乎肯定会制造虫子
-Not only are you almost
-certainly to create bugs, but
+您不仅几乎肯定会产生bug，而且
+Not only are you almost certainly to create bugs, but
 
 96
 00:06:00.509 --> 00:06:03.579
-最重要的是你滥用了那个功能
-importantly than that,
-you're misusing that feature.
+更重要的是，您正在误用该功能。
+importantly than that, you're misusing that feature.
 
 97
 00:06:04.759 --> 00:06:08.680
-根据你从我这里看到的一切
-Consistent with everything you've
-already seen from me in this course,
+与你在这门课上从我身上看到的一切一致，
+Consistent with everything you've already seen from me in this course,
 
 98
 00:06:08.680 --> 00:06:12.500
-我要告诉你这不仅仅是一个全面的
-I'm gonna tell you that let is
-not just some across-the-board
+我要告诉你的是，let不仅仅是一些全面的
+I'm gonna tell you that let is not just some across-the-board
 
 99
 00:06:12.500 --> 00:06:14.370
-替换 var 关键字。
+var关键字的替换。
 replacement of the var keyword.
 
 100
 00:06:14.370 --> 00:06:19.680
-但它是我们应该添加到现有用途的附加工具
-But it is an additional tool that we
-should add on to our existing usage
+但它是一个额外的工具，我们应该添加到现有的使用中
+But it is an additional tool that we should add on to our existing usage
 
 101
 00:06:19.680 --> 00:06:25.060
-这意味着仍有使用 var 关键字的原因。
-which means that there are still
-reasons to use the var keyword.
+这意味着仍然有理由使用var关键字。
+which means that there are still reasons to use the var keyword.
 
 102
 00:06:25.060 --> 00:06:29.846
-与我的同龄人相比，这种情况也同样有争议或不寻常。
-And that is similarly controversial or
-unusual compared to my peers who
+与我的同龄人相比，这同样具有争议性或不同寻常
+And that is similarly controversial or unusual compared to my peers who
 
 103
 00:06:29.846 --> 00:06:34.939
-会告诉你永远永远不会再使用 " var " 关键字
-would tell you never, ever,
-ever use the var keyword ever again.
+会告诉你永远，永远不要再使用var关键字。
+would tell you never, ever, ever use the var keyword ever again.
 
 104
 00:06:34.939 --> 00:06:38.370
-我会一直告诉你瓦尔的关键词是有目的的
-And I'm gonna keep telling you
-the var keyword has purpose.
+我会一直告诉你var关键字是有目的。
+And I'm gonna keep telling you the var keyword has purpose.
 
 105
 00:06:38.370 --> 00:06:39.048
-举个例子。
+这里有一个例子。
 Here's an example.
 
 106
 00:06:39.048 --> 00:06:42.319
-在这个代码中，我们有两个 vars。
+在这段代码中，我们有两个var。
 In this code, we have two vars.
 
 107
 00:06:42.319 --> 00:06:44.384
-我们有个在循环的变量
+我们有一个var，它在for循环中，并且
 We have a var that's on a for loop, and
 
 108
 00:06:44.384 --> 00:06:48.399
-我们有一个可以在整个功能上使用的变量
-we have a var that's essentially being
-used across the entire function.
+我们有一个var，它基本上在整个函数中使用。
+we have a var that's essentially being used across the entire function.

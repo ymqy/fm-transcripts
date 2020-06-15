@@ -2,184 +2,158 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:02.710
->> 凯尔: 因为所有语言都具有类型转换，
-&gt;&gt; Kyle: Because all languages
-have type conversions,
+&gt；&gt；Kyle：因为所有语言都有类型转换，
+&gt;&gt; Kyle: Because all languages have type conversions,
 
 2
 00:00:02.710 --> 00:00:06.719
-这意味着所有语言都有角式案例，包括 JavaScript。
-that means all languages have
-corner cases, including JavaScript.
+这意味着所有语言都有角大小写，包括JavaScript。
+that means all languages have corner cases, including JavaScript.
 
 3
 00:00:06.719 --> 00:00:11.319
-人们喜欢用 JavaScript 的角落
-It is interesting that people
-like to use JavaScript's corner
+有趣的是，人们喜欢使用JavaScript的角落
+It is interesting that people like to use JavaScript's corner
 
 4
 00:00:11.319 --> 00:00:15.237
-对整个语文的弹药。
-cases as ammunition against
-the language as a whole.
+案例作为对整个语言的弹药。
+cases as ammunition against the language as a whole.
 
 5
 00:00:15.237 --> 00:00:16.768
-把眼罩戴上
+只是戴上眼罩
 Just putting blinders on and
 
 6
 00:00:16.768 --> 00:00:20.405
-假装其他语言没有那些角落
-pretending that other languages
-don't have those corner cases and
+假装其他语言没有这些角落的情况
+pretending that other languages don't have those corner cases and
 
 7
 00:00:20.405 --> 00:00:25.082
-我们不能制作 C++ 的视频，比如说我们肯定能，对吧 ?
-we can't make work videos about C++, for
-example, cuz we definitely can, right?
+例如，我们不能制作关于C+的工作视频，因为我们肯定可以，对吗？
+we can't make work videos about C++, for example, cuz we definitely can, right?
 
 8
 00:00:25.082 --> 00:00:28.998
-设计一个没有角箱的系统是不可能的。
-It is impossible to design a system
-that won't have corner cases.
+设计一个不会有拐角箱的系统是不可能的。
+It is impossible to design a system that won't have corner cases.
 
 9
 00:00:28.998 --> 00:00:31.207
-JavaScript 有一些角例。
+JavaScript有一些角落情况。
 JavaScript has some corner cases.
 
 10
 00:00:31.207 --> 00:00:34.570
-与其制作有关视频的视频，我们应该了解这些角落案例和
-Rather than making wap videos about them,
-we should learn those corner cases and
+与其制作关于他们的wap视频，我们应该学习那些角落的案例和
+Rather than making wap videos about them, we should learn those corner cases and
 
 11
 00:00:34.570 --> 00:00:36.862
-了解如何有效管理和处理这些问题。
-learn how to effectively manage and
-work around them.
+学习如何有效地管理和解决这些问题。
+learn how to effectively manage and work around them.
 
 12
 00:00:36.862 --> 00:00:39.978
->> 演讲者 2: 他们比其他语言有更多的边角案例吗 ?
-&gt;&gt; Speaker 2: Do they have more
-corner cases than other languages?
+&gt；&gt；演讲者2：他们是否比其他语言有更多的角落案例？
+&gt;&gt; Speaker 2: Do they have more corner cases than other languages?
 
 13
 00:00:39.978 --> 00:00:42.241
->> 凯尔: 这是一个有趣的问题，但是
-&gt;&gt; Kyle: That's an interesting question,
-but
+&gt；&gt；Kyle：这是一个有趣的问题，但是
+&gt;&gt; Kyle: That's an interesting question, but
 
 14
 00:00:42.241 --> 00:00:45.475
-不是我想任何人能有效回答的问题
-not one that I think anybody
-could effectively answer.
+我认为没有人能有效地回答这个问题。
+not one that I think anybody could effectively answer.
 
 15
 00:00:45.475 --> 00:00:49.478
-因为什么是更重要的，我们才会喜欢上一个账户。
-Because what is even more mean, and
-we're just gonna like keep up account.
+因为更卑鄙的是，我们只是想跟上客户。
+Because what is even more mean, and we're just gonna like keep up account.
 
 16
 00:00:49.478 --> 00:00:52.923
-你怎么知道这个是不同的夸克还是
-How can you tell whether this is
-the distinct different quark or
+你怎么知道这是截然不同的不同夸克还是
+How can you tell whether this is the distinct different quark or
 
 17
 00:00:52.923 --> 00:00:55.399
-就能从不同角度的角度来区分
-the same corner case
-from a different angle?
+从不同的角度看同一个角落的箱子？
+the same corner case from a different angle?
 
 18
 00:00:55.399 --> 00:00:57.746
-我不确定你是否真的能那样做
-I'm not sure that you could
-really do that sort of account.
+我不确定你是否真的能做那种帐户。
+I'm not sure that you could really do that sort of account.
 
 19
 00:00:57.746 --> 00:01:00.030
-更重要的问题是
+对于你的问题，
 And to the larger point of your question,
 
 20
 00:01:00.030 --> 00:01:04.287
-我唯一能理解的语言是 JavaScript
-the only language that I even remotely
-have understanding of is JavaScript.
+我唯一能远程理解的语言就是JavaScript。
+the only language that I even remotely have understanding of is JavaScript.
 
 21
 00:01:04.287 --> 00:01:09.054
-所以我不能告诉你它是不是比 Python更有角。
-So I can't tell you whether it's more or
-less corner casey than Python.
+所以我不能告诉你它是更多还是更少角落Casey而不是Python。
+So I can't tell you whether it's more or less corner casey than Python.
 
 22
 00:01:09.054 --> 00:01:14.180
-但我知道， JavaScript 有角落，我知道你可以在他们身边工作。
-But I know JavaScript has corner cases,
-and I know you can work around them.
+但我知道JavaScript有拐角情况，并且我知道您可以解决它们。
+But I know JavaScript has corner cases, and I know you can work around them.
 
 23
 00:01:14.180 --> 00:01:16.864
-以下是其中一些角例的示例。
-Here's an example of some
-of these corner cases.
+这里有一个例子，其中一些角落的情况。
+Here's an example of some of these corner cases.
 
 24
 00:01:16.864 --> 00:01:20.225
-正如我所说，其中很多都与数字有关。
-A lot of them have to do with numbers,
-as I said.
+他们中的很多人都和数字有关，就像我说的。
+A lot of them have to do with numbers, as I said.
 
 25
 00:01:20.225 --> 00:01:22.658
-这里有很多空弦记得那个
-Here we've got number of empty string,
-remember that one,
+这里我们得到了一些空字符串，记住这一条，
+Here we've got number of empty string, remember that one,
 
 26
 00:01:22.658 --> 00:01:23.859
-那是所有邪恶的根源
+这是万恶之源。
 that's the root of all evil.
 
 27
 00:01:23.859 --> 00:01:26.442
-我们一会儿再谈这事
+稍后我们将详细讨论这一点。
 We'll talk about that more in a second.
 
 28
 00:01:26.442 --> 00:01:29.088
-诺尔斯和未定义的人有一些奇怪的地方
-Knowles and
-undefined have some weird corner cases.
+Knowles和Undefined有一些奇怪的角落情况。
+Knowles and undefined have some weird corner cases.
 
 29
 00:01:29.088 --> 00:01:32.091
-本质上很多谬误都变成了数字
-Essentially a lot of the falsy
-values becoming numbers,
+从本质上讲，很多错误的值变成了数字，
+Essentially a lot of the falsy values becoming numbers,
 
 30
 00:01:32.091 --> 00:01:34.475
-那里有很多角落的例子
-those there were a lot
-of the corner cases ar.
+那里有很多角落的箱子。
+those there were a lot of the corner cases ar.
 
 31
 00:01:34.475 --> 00:01:38.985
-如果我们不做空的
-We could have eliminated most of
-those if we just not made empty
+如果我们不把它们变成空的，我们本可以消除其中的大部分
+We could have eliminated most of those if we just not made empty
 
 32
 00:01:38.985 --> 00:01:40.639
@@ -188,312 +162,270 @@ string becomes zero.
 
 33
 00:01:40.639 --> 00:01:41.727
-大部分都消失了
+大多数这些都会消失。
 Most of these would go away.
 
 34
 00:01:45.337 --> 00:01:47.585
->> 凯尔: 下面有一个有趣的例子，
-&gt;&gt; Kyle: Down at the bottom
-there is an interesting example,
+&gt；&gt；Kyle：下面有一个有趣的例子，
+&gt;&gt; Kyle: Down at the bottom there is an interesting example,
 
 35
 00:01:47.585 --> 00:01:48.920
-几乎没人会这样做
+几乎没有人这样做过。
 almost nobody ever does this.
 
 36
 00:01:48.920 --> 00:01:53.579
-但是如果您构造布尔对象的实例并提供
-But if you construct an instance of
-the boolean object and you give it
+但是如果你构造了一个布尔对象的实例并给出了它
+But if you construct an instance of the boolean object and you give it
 
 37
 00:01:53.579 --> 00:01:58.808
-原始值为 false，将像 truthy 一样行事，因为
-the primitive value false, it is going
-to behave as if it is truthy, because
+原始值FALSE，它将表现得好像它是真的一样，因为
+the primitive value false, it is going to behave as if it is truthy, because
 
 38
 00:01:58.808 --> 00:02:03.984
-我们不做两个原始的事，我们只是问它是否在虚无的名单上 ?
-we don't do a two primitive on it, we
-just ask is it on the falsy list or not?
+我们不会对它做两个原语，我们只是问它是否在虚假列表上？
+we don't do a two primitive on it, we just ask is it on the falsy list or not?
 
 39
 00:02:03.984 --> 00:02:07.286
-所以它是一个谬误的对象，对吧 ?
+所以这是一个虚假的物体，对吗？
 So it is a falsy object, right?
 
 40
 00:02:10.072 --> 00:02:14.388
->> 凯尔: 但另一个例子说明了为什么您不应该使用这些
-&gt;&gt; Kyle: Yet another illustration of why
-you should never use those particular
+&gt；&gt；Kyle：又一次说明了为什么你永远不应该使用那些特殊的
+&gt;&gt; Kyle: Yet another illustration of why you should never use those particular
 
 41
 00:02:14.388 --> 00:02:16.521
-" 努基 " 一词的基本要素
+Nuki单词的基础知识。
 fundamentals with the Nuki word.
 
 42
 00:02:18.489 --> 00:02:21.170
->> 凯尔: 好的，我们来谈谈所有胁迫邪恶的根源，
-&gt;&gt; Kyle: All right, let's talk about
-that root of all coercion evil,
+&GT；&GT；Kyle：好吧，让我们谈谈所有强迫邪恶的根源，
+&gt;&gt; Kyle: All right, let's talk about that root of all coercion evil,
 
 43
 00:02:21.170 --> 00:02:23.298
-确保我们在这里绝对安全
-just to make sure we're
-absolutely clear here.
+只是为了确保我们在这里绝对清楚。
+just to make sure we're absolutely clear here.
 
 44
 00:02:23.298 --> 00:02:26.777
-空字符串不仅变为零，而且
-Not only does the empty
-string become zero, but
+不仅空字符串变为零，而且
+Not only does the empty string become zero, but
 
 45
 00:02:26.777 --> 00:02:31.045
-任何满白空间的字符串也会变为零。
-any string that's full of
-white space also becomes zero.
+任何充满空白的字符串也将变为零。
+any string that's full of white space also becomes zero.
 
 46
 00:02:31.045 --> 00:02:35.570
-因为两个号码操作都是第一条
-Because the two number operations
-first strips off all leading and
+因为这两个数字运算首先去掉了所有前导和
+Because the two number operations first strips off all leading and
 
 47
 00:02:35.570 --> 00:02:38.978
-在进行强制之前跟踪空格。
-trailing whitespace before
-doing its coercion.
+在执行强制操作之前尾随空格。
+trailing whitespace before doing its coercion.
 
 48
 00:02:38.978 --> 00:02:43.204
-所有白色太空串的例子
-So all examples of white
-space strings of all forms,
+所以所有形式的空白字符串的所有示例，
+So all examples of white space strings of all forms,
 
 49
 00:02:43.204 --> 00:02:46.670
-最终还是会产生同样的零
+但最终还是会产生同样的零。
 still all end up producing that same zero.
 
 50
 00:02:49.180 --> 00:02:53.025
->> 凯尔: 字面上，如果我能时间旅行并解决任何关于 JavaScript的事情，
-&gt;&gt; Kyle: Literally, if I could time travel
-and fix any one thing about JavaScript,
+&gt；&gt；Kyle：字面上，如果我可以穿越时间旅行并修复JavaScript的任何一件事情，
+&gt;&gt; Kyle: Literally, if I could time travel and fix any one thing about JavaScript,
 
 51
 00:02:53.025 --> 00:02:54.437
-这就是我要解决的问题
+这就是我要修的东西。
 this is the thing I'd fix.
 
 52
 00:02:54.437 --> 00:02:57.490
-我要回去告诉布伦东，不，不，这主意糟透了
-I'd go back and tell Brendon, no,
-no, no, that's a terrible idea.
+我会回去告诉Brendon，不，这是个糟糕的主意。
+I'd go back and tell Brendon, no, no, no, that's a terrible idea.
 
 53
 00:02:57.490 --> 00:03:01.848
-不要使空字符串变为零，使其成为名称。
-Don't make empty string become zero,
-make it become name.
+不要让空字符串变成零，让它变成名字。
+Don't make empty string become zero, make it become name.
 
 54
 00:03:01.848 --> 00:03:04.772
-所有这些问题都将自行解决。
-All these other problems
-would fix themselves.
+所有这些其他问题都会自行解决。
+All these other problems would fix themselves.
 
 55
 00:03:04.772 --> 00:03:08.788
-顺便说下还有没有那么明显的角落
-By the way, there are corner
-cases that are not as obvious,
+顺便说一句，有些角落的情况不是很明显，
+By the way, there are corner cases that are not as obvious,
 
 56
 00:03:08.788 --> 00:03:12.739
-因为我们不是在对付典型的行动
-because we're not dealing
-with our typical operations.
+因为我们不是在处理我们的典型操作。
+because we're not dealing with our typical operations.
 
 57
 00:03:12.739 --> 00:03:19.193
-记得我说过我认为数字化或数字化
-So, remember I said that I thought that
-the numberification or numerification or
+所以，记得我说过我认为数值化或者
+So, remember I said that I thought that the numberification or numerification or
 
 58
 00:03:19.193 --> 00:03:24.259
-不管这个词是什么我会在某种程度上决定
-whatever that word is,
-I'll decide on some word at some point.
+不管那个词是什么，我都会在某个时候决定用什么词。
+whatever that word is, I'll decide on some word at some point.
 
 59
 00:03:24.259 --> 00:03:29.218
-但不管这个词是什么，要对我说的一个布尔值进行编号，
-But whatever that word is, to numbering
-a boolean I said to you, 1s and
+但不管这个词是什么，对我对你说的布尔值进行编号，1和
+But whatever that word is, to numbering a boolean I said to you, 1s and
 
 60
 00:03:29.218 --> 00:03:30.554
-0s 是个坏主意
+0不是个好主意
 0s are a bad idea.
 
 61
 00:03:30.554 --> 00:03:33.438
-可能，你们所有人都说，不，他们是个好主意。
-And probably, all of you said,
-no, they're a great idea.
+也许，你们所有人都说，不，他们是个好主意。
+And probably, all of you said, no, they're a great idea.
 
 62
 00:03:33.438 --> 00:03:36.701
-这里有一个这样的例子。
+嗯，这里有一个这样的例子。
 Well, here's one such example.
 
 63
 00:03:36.701 --> 00:03:41.312
-1 小于 2，我们都以数学方式了解情况，因此
-1 less than 2, we all know mathematically
-that that is the case, and so
+1小于2，我们在数学上都知道是这样的，所以
+1 less than 2, we all know mathematically that that is the case, and so
 
 64
 00:03:41.312 --> 00:03:44.352
-它让我们觉得 JavaScript 是真实的
-it makes sense that
-JavaScript gives us a true.
+JavaScript给我们提供了一个真实的。
+it makes sense that JavaScript gives us a true.
 
 65
 00:03:44.352 --> 00:03:47.675
-2 小于 3 也是 true。
+2小于3也是真的。
 2 less than 3 is also true.
 
 66
 00:03:47.675 --> 00:03:51.332
-但是我们尝试了 1 比 2 小于 3 ，然后我们得到了真实的，
-But then we try 1 less than 2 less than 3,
-and we get true, and
+但是然后我们尝试1小于2小于3，我们得到了真的，并且
+But then we try 1 less than 2 less than 3, and we get true, and
 
 67
 00:03:51.332 --> 00:03:55.903
-我们认为 JavaScript 是聪明的，做的正是正确的事情。
-we think well JavaScript is just smart and
-doing exactly the right thing.
+我们认为JavaScript只是聪明，而且做的正是正确的事情。
+we think well JavaScript is just smart and doing exactly the right thing.
 
 68
 00:03:55.903 --> 00:04:00.360
-并不是，因为实际发生的是一场意外。
-Not exactly, because what's actually
-happening there is an accident.
+不完全是，因为那里实际发生的是一场事故。
+Not exactly, because what's actually happening there is an accident.
 
 69
 00:04:00.360 --> 00:04:04.812
-实际发生的情况是 1 小于 2 的人先进行评估，
-What's actually happening is that 1
-less than 2 gets evaluated first,
+实际发生的是1比2首先被评估，
+What's actually happening is that 1 less than 2 gets evaluated first,
 
 70
 00:04:04.812 --> 00:04:07.122
-这将被求值为真正的第 9 行
+其被评估为真行9。
 which gets evaluated to true line 9.
 
 71
 00:04:07.122 --> 00:04:11.729
-那是因为你有一个非数字用的数字
-And then because you have a non-numeric
-being used with the less than operator,
+然后因为有一个非数字与小于运算符一起使用，
+And then because you have a non-numeric being used with the less than operator,
 
 72
 00:04:11.729 --> 00:04:14.048
-它会把它变成一个数字
+它会试着把它变成一个数字。
 it's gonna try to turn it into a number.
 
 73
 00:04:14.048 --> 00:04:16.670
-所以要把它变成一号
-So it's gonna turn it into the number 1,
-and
+所以它会把它变成数字1，然后
+So it's gonna turn it into the number 1, and
 
 74
 00:04:16.670 --> 00:04:21.382
-你无意中把那个 1 比 3 不到，那就是真正的工作的原因。
-you accidentally get that 1 is less than
-3, that's the reason why true works.
+你意外地得到1小于3，这就是True有效的原因。
+you accidentally get that 1 is less than 3, that's the reason why true works.
 
 75
 00:04:21.382 --> 00:04:25.060
-而事故也不是建立你的计划的良好基础。
-And accidents are not a good foundation
-upon which to build your programs.
+而且意外事件并不是构建程序的良好基础。
+And accidents are not a good foundation upon which to build your programs.
 
 76
 00:04:25.060 --> 00:04:27.064
-库兹让我们来看下一个例子。
-Cuz let's watch what happens
-in the next example.
+因为让我们看看下一个例子中发生了什么。
+Cuz let's watch what happens in the next example.
 
 77
 00:04:27.064 --> 00:04:31.454
-我们尝试 3 大于 2 ， 2 大于 1 ，但操作，
-We try the 3 greater than 2, and
-the 2 greater than 1, but oops,
+我们尝试大于2的3和大于1的2，但是，
+We try the 3 greater than 2, and the 2 greater than 1, but oops,
 
 78
 00:04:31.454 --> 00:04:34.624
-3 大于 2 大于 1，但失败。
-3 greater than 2 greater than 1,
-that fails.
+3大于2大于1，则失败。
+3 greater than 2 greater than 1, that fails.
 
 79
 00:04:34.624 --> 00:04:37.877
-因为 3 大于 2 为 true。
+因为3大于2是真的。
 Because 3 greater than 2 is true.
 
 80
 00:04:37.877 --> 00:04:42.697
-大于 1 的 True 大于 1，为 false。
-True greater than 1 is 1 greater than 1,
-which is false.
+TRUE大于1表示1大于1，即为FALSE。
+True greater than 1 is 1 greater than 1, which is false.
 
 81
 00:04:45.139 --> 00:04:47.372
-> > 凯尔: 所以我觉得这是个糟糕的想法
-&gt;&gt; Kyle: So
-I think it's a terrible idea for
+&GT；&GT；Kyle：所以我认为这是一个糟糕的主意
+&gt;&gt; Kyle: So I think it's a terrible idea for
 
 82
 00:04:47.372 --> 00:04:50.997
-有胆量的胆量强迫自己去做数字
-booleans to implicitly coerce
-themselves to numbers.
+布尔值隐含地强迫自己使用数字。
+booleans to implicitly coerce themselves to numbers.
 
 83
 00:04:50.997 --> 00:04:56.136
-从 1970 年开始的任何编程方式都依赖于能力
-And any programming style from 1970
-onward, that has relied upon the ability
+以及从1970年开始的任何编程风格，都依赖于这种能力
+And any programming style from 1970 onward, that has relied upon the ability
 
 84
 00:04:56.136 --> 00:05:01.197
-我想是为了拿一个布尔值减去或加减
-to take something that's boolean and
-subtract or add it or something, I think,
+取一些布尔型的东西，然后减去或者加起来，我想，
+to take something that's boolean and subtract or add it or something, I think,
 
 85
 00:05:01.197 --> 00:05:06.057
-一直在利用这个黑客但基本上是在做更糟的代码
-has been taking advantage of that hack,
-but basically making worse of code.
+一直在利用这个漏洞，但基本上让代码变得更糟。
+has been taking advantage of that hack, but basically making worse of code.
 
 86
 00:05:06.057 --> 00:05:11.920
-如果我能治好东西我就能把他的名字命名为优秀的名字
-I would make the number coercion of
-brilliant be name if I could fix things.
+如果我能修好东西，我会做辉煌的名字的号码强制。
+I would make the number coercion of brilliant be name if I could fix things.

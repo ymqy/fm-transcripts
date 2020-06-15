@@ -2,158 +2,138 @@ WEBVTT
 
 1
 00:00:00.190 --> 00:00:02.640
->> 演讲者 1: 关于提升的最后一个注释。
+&gt；&gt；扬声器1：关于吊装的最后一个注意事项。
 &gt;&gt; Speaker 1: One last note on hoisting.
 
 2
 00:00:02.640 --> 00:00:04.570
-有些人以前听说过
+你们中的一些人以前听过这句话，
 Some of you have heard the phrase before,
 
 3
 00:00:04.570 --> 00:00:08.330
-而不会对块作用域进行提升。
-let doesn't hoist with
-respect to the block scope.
+让不提升关于块范围。
+let doesn't hoist with respect to the block scope.
 
 4
 00:00:08.330 --> 00:00:13.070
-因为当你写这样的代码时，第 2 行的老师分配
-Because when you write code like this,
-the teacher assignment on line 2
+因为当你写这样的代码时，老师在第2行的作业
+Because when you write code like this, the teacher assignment on line 2
 
 5
 00:00:13.070 --> 00:00:17.699
-会抛出错误，所谓的 TDZ 错误，时间死区错误，好吗 ?
-will throw an error, a so-called TDZ
-error, temporal dead zone error, okay?
+会抛出一个错误，一个所谓的TDZ错误，临时死区错误，好吗？
+will throw an error, a so-called TDZ error, temporal dead zone error, okay?
 
 6
 00:00:19.339 --> 00:00:21.690
-这个说法，不要再吊起，
+这句话，让我们不要举起，
 This statement, let doesn't hoist,
 
 7
 00:00:21.690 --> 00:00:25.280
-是善意的但却不准确
-is meant in good spirit,
-but it is inaccurate.
+是出于好的精神，但它是不准确的。
+is meant in good spirit, but it is inaccurate.
 
 8
 00:00:26.539 --> 00:00:30.012
-我可以向你证明这不准确因为我们已经看到
-And I can prove to you that it's
-inaccurate, because we've already seen
+我可以向你证明这是不准确的，因为我们已经看到
+And I can prove to you that it's inaccurate, because we've already seen
 
 9
 00:00:30.012 --> 00:00:32.868
-一个吊起的概念，我们已经看到了一个代码的例子。
-a notion of hoisting and
-we've already seen a code example.
+提升的概念，我们已经看到了一个代码示例。
+a notion of hoisting and we've already seen a code example.
 
 10
 00:00:32.868 --> 00:00:38.921
-如果老师没被提升到现在还不存在
-Where if teacher didn't get hoisted and
-therefore didn't exist in the scope yet,
+如果老师没有被提升，因此还不存在于范围内，
+Where if teacher didn't get hoisted and therefore didn't exist in the scope yet,
 
 11
 00:00:38.921 --> 00:00:42.219
-那节目就会有不同的表现
+那么程序的行为就会有所不同。
 then the program would behave differently.
 
 12
 00:00:42.219 --> 00:00:44.030
-这是一个例子。
+所以这里有一个这样的例子。
 So here is such an example.
 
 13
 00:00:45.409 --> 00:00:50.090
-在此代码中，如果第 5 行上的老师未托管，
-In this code,
-if the teacher on line 5 did not host,
+在这段代码中，如果第5行的老师没有主持，
+In this code, if the teacher on line 5 did not host,
 
 14
 00:00:50.090 --> 00:00:52.469
-那么第 4 行应该打印出 "凯尔"
+然后第4行应该打印出“Kyle”。
 then line 4 should print out "Kyle".
 
 15
 00:00:53.979 --> 00:00:57.969
-因为第四行没有老师，应该去外域，
-Because there is no teacher as of line 4
-and it should go to the outer scope and
+因为在第4行没有教师，它应该转到外部范围和
+Because there is no teacher as of line 4 and it should go to the outer scope and
 
 16
 00:00:57.969 --> 00:01:00.209
-从第 1 行查找变量。
+找到第1行中的变量。
 find the variable from line 1.
 
 17
 00:01:01.490 --> 00:01:04.560
-但此代码仍会抛出 TDZ 错误，并且
-But this code still throws a TDZ error,
-and
+但此代码仍然抛出TDZ错误，并且
+But this code still throws a TDZ error, and
 
 18
 00:01:04.560 --> 00:01:08.569
-它仍然抛出 TDZ 错误的原因是，允许和 consts 仍处于挂起状态。
-the reason it still throws a TDZ error
-is because lets and consts still hoist.
+它仍然抛出TDZ错误的原因是因为let和consts仍然提升。
+the reason it still throws a TDZ error is because lets and consts still hoist.
 
 19
 00:01:09.909 --> 00:01:12.159
-但他们的吊重机是有区别的
-But there is a difference
-between how they hoist.
+但它们的升降方式是不同的。
+But there is a difference between how they hoist.
 
 20
 00:01:13.260 --> 00:01:17.769
-第一个，让和应征者只提升到一个街区，而桨则提升到一个功能。
-Number one, lets and consts only hoist to
-a block, whereas vars hoist to a function.
+第一，let和const只提升到一个块，而vars提升到一个函数。
+Number one, lets and consts only hoist to a block, whereas vars hoist to a function.
 
 21
 00:01:17.769 --> 00:01:21.725
-但第二，这才是最重要的事情，
-But number two, and
-this is the more important thing,
+但是第二，这是更重要的事情，
+But number two, and this is the more important thing,
 
 22
 00:01:21.725 --> 00:01:26.713
-var 和 let const 之间的差异是 var在创建时
-the difference between var and
-let const is that var, when it creates
+var和let const之间区别是var，当它创建
+the difference between var and let const is that var, when it creates
 
 23
 00:01:26.713 --> 00:01:31.798
-在您的作用域的编译时间内，它的变量和计划。
-its variables and has the plan during
-the compile time for your scope.
+它的变量，并在编译时为您的作用域制定计划。
+its variables and has the plan during the compile time for your scope.
 
 24
 00:01:31.798 --> 00:01:36.604
-它说在这个范围里会有一个叫老师的变量
-And it says there's gonna be a variable
-called teacher in this scope,
+它说在这个范围内会有一个叫做教师的变量，
+And it says there's gonna be a variable called teacher in this scope,
 
 25
 00:01:36.604 --> 00:01:41.098
-它还表示作用域启动时，将其初始化为未定义。
-it also says when the scope starts,
-initialize it to undefined.
+它还说当作用域开始时，将其初始化为undefined。
+it also says when the scope starts, initialize it to undefined.
 
 26
 00:01:42.686 --> 00:01:47.756
->> 扬声器 1: 当将变量放入其块作用域时，它表示
-&gt;&gt; Speaker 1: When let hoists its
-variables into its block scope it says
+&gt；&gt；Speaker 1：当let将其变量提升到其块范围内时，它表示
+&gt;&gt; Speaker 1: When let hoists its variables into its block scope it says
 
 27
 00:01:47.756 --> 00:01:53.359
-创建一个名为 " 老师 " 的位置，但不进行初始化。
-create a location called teacher,
-but don't initialize it.
+创建一个名为Teacher的位置，但不要初始化它。
+create a location called teacher, but don't initialize it.
 
 28
 00:01:54.599 --> 00:01:56.810
@@ -162,312 +142,268 @@ It is in an uninitialized state,
 
 29
 00:01:58.359 --> 00:02:00.759
-未初始化的情况与未定义的不同。
-uninitialized being
-different than undefined.
+未初始化与未定义不同。
+uninitialized being different than undefined.
 
 30
 00:02:01.849 --> 00:02:05.230
-未初始化表示您无法触摸它。
-Uninitialized meaning
-you can't touch it yet.
+未初始化意味着您还不能触摸它。
+Uninitialized meaning you can't touch it yet.
 
 31
 00:02:05.230 --> 00:02:10.312
-它不会被初始化直到在那个块中运行
-And it doesn't get initialized until
-in that block you run across the let or
+直到您在该块中遇到let或
+And it doesn't get initialized until in that block you run across the let or
 
 32
 00:02:10.312 --> 00:02:12.014
-const 声明。
+常量声明。
 the const declaration.
 
 33
 00:02:16.068 --> 00:02:17.603
->演讲者 1: 所以这绝对是吊重机，
-&gt;&gt; Speaker 1: So
-these absolutely do hoist,
+&GT；&GT；扬声器1：所以这些绝对是吊装的，
+&gt;&gt; Speaker 1: So these absolutely do hoist,
 
 34
 00:02:17.603 --> 00:02:21.747
-这就是为什么我们仍然有一个 TDZ 错误，只是它们没有被初始化。
-which is why we still get a TDZ error,
-it's just that they don't get initialized.
+这就是为什么我们仍然收到TDZ错误，只是它们没有初始化。
+which is why we still get a TDZ error, it's just that they don't get initialized.
 
 35
 00:02:25.719 --> 00:02:30.250
->> 演讲者 1: 顺便说一下，我有时会问为什么 TDZ 出错?
-&gt;&gt; Speaker 1: By the way,
-I sometimes get asked why the TDZ error?
+&gt；&gt；扬声器1：顺便问一下，有时有人问我为什么TDZ错误？
+&gt;&gt; Speaker 1: By the way, I sometimes get asked why the TDZ error?
 
 36
 00:02:30.250 --> 00:02:31.509
-他们为什么会这样做呢 ?
+他们为什么犯了一个错误？
 Why did they make this an error?
 
 37
 00:02:32.920 --> 00:02:36.670
-这比你能意识到的要多
-It is much more nuance
-than you might realize.
+它的细微差别比你可能意识到的要多得多。
+It is much more nuance than you might realize.
 
 38
 00:02:36.670 --> 00:02:40.849
-我曾认为此场景中 TDZ 错误的主要原因
-I used to believe that the primary reason
-for the TDZ error in this scenario
+我过去认为在这种情况下TDZ错误的主要原因
+I used to believe that the primary reason for the TDZ error in this scenario
 
 39
 00:02:40.849 --> 00:02:45.889
-本质上是 TC39 试图对你进行社会改造
-was that, essentially,
-TC39 was trying to socially engineer you.
+本质上是，TC39试图让你成为社会工程师。
+was that, essentially, TC39 was trying to socially engineer you.
 
 40
 00:02:45.889 --> 00:02:50.620
-要停止对先前在作用域中的变量进行分配，请将其分配到您已声明它们的位置。
-To stop assigning to variables earlier in
-scopes than where you've declared them.
+停止在作用域中早于声明变量的位置为变量赋值。
+To stop assigning to variables earlier in scopes than where you've declared them.
 
 41
 00:02:50.620 --> 00:02:55.009
-我也大体同意，但是当语言如此的时候，我有点恼火。
-Which again, I generally agree with, but
-I'm a little annoyed when a language is so
+同样，我大体上同意这一点，但当一种语言是如此的时候，我会有点恼火
+Which again, I generally agree with, but I'm a little annoyed when a language is so
 
 42
 00:02:55.009 --> 00:02:58.170
-都是很有意见的好吗
+粗暴地表达自己的观点，好吗？
 heavy handed with its opinions, okay?
 
 43
 00:02:58.170 --> 00:03:00.990
-所以我一般都同意，我也习惯了
-So I generally would agree with that,
-and I used to just sort of chaff
+所以我大体上会同意这一点，而且我过去只是有点胡说八道
+So I generally would agree with that, and I used to just sort of chaff
 
 44
 00:03:00.990 --> 00:03:04.389
-他们会逼我做出这个决定的
-at the idea that they would have
-forced me into that decision.
+一想到他们会强迫我做出那个决定。
+at the idea that they would have forced me into that decision.
 
 45
 00:03:06.090 --> 00:03:07.819
-但事实证明这比这更微妙
-But turns out it's much
-more nuance than that.
+但事实证明，这比那要细微得多。
+But turns out it's much more nuance than that.
 
 46
 00:03:08.884 --> 00:03:13.400
-这几乎是学术上的细微差别
-This is almost the height
-of kind of academic nuance,
+这几乎是学术细微差别的高度，
+This is almost the height of kind of academic nuance,
 
 47
 00:03:13.400 --> 00:03:17.579
-但我会和你分享让你能全面了解 TDZ的情况
-but I'll share it with you so
-that you have the full perspective on TDZ.
+但我会和你分享它，让你对TDZ有一个完整的看法。
+but I'll share it with you so that you have the full perspective on TDZ.
 
 48
 00:03:18.759 --> 00:03:23.879
-TDZ 存在的原因根本不存在， TDZ 因为常量而存在。
-The reason TDZ exists is not even for
-let, TDZ exists because of const.
+TDZ存在的原因甚至不是因为let，TDZ存在是因为const。
+The reason TDZ exists is not even for let, TDZ exists because of const.
 
 49
 00:03:24.939 --> 00:03:28.590
-请考虑在块作用域中附加的常量。
-Think about const being attached
-inside of a block scope.
+考虑在块范围内附加const。
+Think about const being attached inside of a block scope.
 
 50
 00:03:28.590 --> 00:03:32.590
-想象如果常量初始化为未定义的。
-Imagine if const initialized
-itself to undefined.
+想象一下，如果const将自身初始化为undefined。
+Imagine if const initialized itself to undefined.
 
 51
 00:03:33.729 --> 00:03:38.770
-然后在一个块的第 1 行中，您对该变量进行了 console.log 。
-And then on line 1 of a block,
-you did console.log of that variable and
+然后在块的第1行，您对该变量执行console.log，然后
+And then on line 1 of a block, you did console.log of that variable and
 
 52
 00:03:38.770 --> 00:03:44.409
-你看到它未定义，然后你看到它的值是 42。
-you saw it undefined, and
-then later you saw it with the value 42.
+您看到它未定义，然后您看到它的值为42。
+you saw it undefined, and then later you saw it with the value 42.
 
 53
 00:03:44.409 --> 00:03:49.229
-从技术上来说，这个常量在两个不同的时间会有两个不同的值，
-Technically, that const would have had two
-different values at two different times,
+从技术上讲，const在两个不同的时间有两个不同的值，
+Technically, that const would have had two different values at two different times,
 
 54
 00:03:49.229 --> 00:03:52.539
-在学术上违背了一个人的概念
-which academically violates
-the concept of a const.
+这在学术上违反了常量的概念。
+which academically violates the concept of a const.
 
 55
 00:03:53.569 --> 00:03:58.750
-所以他们说我们要防止你提前在范围内访问一个变量
-So they said we have to prevent you from
-accessing a variable earlier in the scope
+所以他们说我们必须防止你在作用域的早期访问变量
+So they said we have to prevent you from accessing a variable earlier in the scope
 
 56
 00:03:58.750 --> 00:04:02.189
-只有一个和一个只有一个值的时候
-than when it's been assigned that one and
-only one value, so
+当它被分配一个且只有一个值时，所以
+than when it's been assigned that one and only one value, so
 
 57
 00:04:02.189 --> 00:04:05.389
-你不能在中间状态下观察它
-that you can't observe it
-in that intermediate state.
+在中间状态下你不能观察到它。
+that you can't observe it in that intermediate state.
 
 58
 00:04:06.479 --> 00:04:10.533
-于是他们发明了 TDZ for const 然后他们说
-So they invented TDZ for
-const and then they said, well,
+所以他们为const发明了TDZ，然后他们说，
+So they invented TDZ for const and then they said, well,
 
 59
 00:04:10.533 --> 00:04:14.937
-如果我们要为康斯特做我们也可以这么做
-if we're gonna do it for const,
-we might as well do it for let.
+如果我们要为const做，我们也可以为let做。
+if we're gonna do it for const, we might as well do it for let.
 
 60
 00:04:14.937 --> 00:04:17.839
->> 扬声器 2: [INAUDIBLE] >> 演讲者 1: 这是事实。
-&gt;&gt; Speaker 2: [INAUDIBLE]
-&gt;&gt; Speaker 1: That's the fact.
+&gt；&gt；扬声器2：[听不到]&gt；&gt；扬声器1：这是事实。
+&gt;&gt; Speaker 2: [INAUDIBLE] &gt;&gt; Speaker 1: That's the fact.
 
 61
 00:04:19.490 --> 00:04:23.860
-因此，让我们有一个 TDZ ，因为在学术上需要一个 TDZ。
-So let's have a TDZ,
-because const academically needed a TDZ.
+所以让我们有一个TDZ，因为const在学术上需要一个TDZ。
+So let's have a TDZ, because const academically needed a TDZ.
 
 62
 00:04:25.170 --> 00:04:26.370
-我的建议
+我的建议？
 My advice?
 
 63
 00:04:26.370 --> 00:04:31.000
-就像我之前说的把你的一切都放了或者你真的坚持
-Just exactly as I said before, put all
-your lets, or if you really insist on
+就像我之前说的，把你所有的字母，或者如果你真的坚持
+Just exactly as I said before, put all your lets, or if you really insist on
 
 64
 00:04:31.000 --> 00:04:34.930
-冒号把它们放在最上面的第一条线上
-colons, put them all at the very top
-of the block, on the very first line.
+冒号，把他们都放在最顶端，在第一行。
+colons, put them all at the very top of the block, on the very first line.
 
 65
 00:04:34.930 --> 00:04:37.000
-然后你就无法观察到 TDZ了
-And then you'll never be
-able to observe a TDZ.
+然后你就永远无法观察到TDZ了
+And then you'll never be able to observe a TDZ.
 
 66
 00:04:37.000 --> 00:04:41.189
-别把它们串在这些范围内，这是个坏主意。
-[LAUGH] Don't string them throughout
-those scopes, that's a bad idea.
+[笑]不要把它们串在那些范围内，那是个坏主意。
+[LAUGH] Don't string them throughout those scopes, that's a bad idea.
 
 67
 00:04:42.310 --> 00:04:45.000
-这样我们就不说话了
+这样我们就不会说话了
 Just so that we don't say things,
 
 68
 00:04:45.000 --> 00:04:48.680
-我有一些人在这些问题上有时会不同意我的意见
-and I have people that sometimes will
-disagree with me on these topics.
+有些人有时会在这些话题上与我意见相左。
+and I have people that sometimes will disagree with me on these topics.
 
 69
 00:04:48.680 --> 00:04:54.326
-所以我们在这个话题上是完全清楚的，
-And just so that we're entirely
-clear on this topic of whether or
+这样我们就能完全清楚这个话题是不是或者
+And just so that we're entirely clear on this topic of whether or
 
 70
 00:04:54.326 --> 00:04:56.529
-不要让它吊起
+不让不升起。
 not let doesn't hoist.
 
 71
 00:04:56.529 --> 00:05:01.459
-实际上，在规范中，它表示变量是在它们的
-Here is actually in the spec where it says
-that the variables are created when their
+这里实际上是在规范中，它说变量是在它们的
+Here is actually in the spec where it says that the variables are created when their
 
 72
 00:05:01.459 --> 00:05:04.620
-包含词法环境的实例。
-containing lexical
-environment is instantiated.
+实例化包含词汇环境。
+containing lexical environment is instantiated.
 
 73
 00:05:04.620 --> 00:05:08.610
-当对词法绑定进行求值时，不会在创建变量时进行求值。
-When the lexical binding is evaluated,
-not when the variable's created.
+在计算词法绑定时，而不是在创建变量时。
+When the lexical binding is evaluated, not when the variable's created.
 
 74
 00:05:09.910 --> 00:05:11.464
-所以它就在这个规范中。
+所以它就在说明书里。
 So it's right there in the spec.
 
 75
 00:05:11.464 --> 00:05:15.814
-最近有一场大的推特战争人们告诉我我错了
-There was a big Twitter war recently where
-people were telling me that I was wrong on
+最近有一场很大的推特大战，人们告诉我错了
+There was a big Twitter war recently where people were telling me that I was wrong on
 
 76
 00:05:15.814 --> 00:05:18.829
-这就是它在规范中的内容
+说明书上就是这么说的。
 this, and that's what it says in the spec.
 
 77
 00:05:18.829 --> 00:05:21.209
-虽然我们可能喜欢不同的心理模型
-Even though we might like to have
-different mental models for it,
+即使我们可能希望有不同的心理模型，
+Even though we might like to have different mental models for it,
 
 78
 00:05:21.209 --> 00:05:22.098
-这就是它在规范中的内容
+说明书上是这么说的。
 it's what it says in the spec.
 
 79
 00:05:23.180 --> 00:05:26.079
->> 扬声器 3: 为什么不提升函数表达式 ?
-&gt;&gt; Speaker 3: Why do function
-expressions not hoist?
+&gt；&gt；Speaker 3：为什么函数表达式不提升？
+&gt;&gt; Speaker 3: Why do function expressions not hoist?
 
 80
 00:05:27.589 --> 00:05:31.720
-在编译时间与运行时间的上下文中，我们能否讨论这个问题 ?
-Could we talk about that in the context
-of compile time versus run time?
+我们可以在编译时与运行时的上下文中讨论这一点吗？
+Could we talk about that in the context of compile time versus run time?
 
 81
 00:05:31.720 --> 00:05:32.720
->> 演讲者 1: 好的。 >> 扬声器 3: 发生的情况
-&gt;&gt; Speaker 1: Okay.
-&gt;&gt; Speaker 3: Things that happen for
+&gt；&gt；扬声器1：好的。&gt；&gt；扬声器3：发生的事情
+&gt;&gt; Speaker 1: Okay. &gt;&gt; Speaker 3: Things that happen for
 
 82
 00:05:32.720 --> 00:05:33.409
@@ -476,74 +412,63 @@ the function expression.
 
 83
 00:05:33.409 --> 00:05:34.990
->> 演讲者 1: 是的，这是个好问题。
-&gt;&gt; Speaker 1: Yeah,
-that's a good question.
+&gt；&gt；演讲者1：是的，这是一个好问题。
+&gt;&gt; Speaker 1: Yeah, that's a good question.
 
 84
 00:05:34.990 --> 00:05:38.590
-所以我不知道我是否能找到这张幻灯片但如果你还记得
-So I don't know if I could find the slide,
-but if you recall back,
+所以我不知道我能不能找到那张幻灯片，但如果你回想起来，
+So I don't know if I could find the slide, but if you recall back,
 
 85
 00:05:38.590 --> 00:05:42.399
-当您将函数表达式分配给变量时，
-when you assign a function
-expression to a variable,
+当您将函数表达式赋给变量时，
+when you assign a function expression to a variable,
 
 86
 00:05:42.399 --> 00:05:48.220
-变量修饰本身已挂起，但分配是运行时事件。
-the variables decoration itself hoisted,
-but the assignment is a run time thing.
+变量装饰本身提升了，但赋值是运行时的事情。
+the variables decoration itself hoisted, but the assignment is a run time thing.
 
 87
 00:05:48.220 --> 00:05:53.480
-想象一下 JavaScript 对可执行代码进行重新排序的想法。
-Imagine mentally the idea of JavaScript
-reordering your executable code.
+想象一下JavaScript对可执行代码重新排序的想法。
+Imagine mentally the idea of JavaScript reordering your executable code.
 
 88
 00:05:53.480 --> 00:05:56.220
-我们会很快陷入混乱对吧
-We would quickly descend into chaos,
-right?
+我们很快就会陷入混乱，对吧？
+We would quickly descend into chaos, right?
 
 89
 00:05:56.220 --> 00:06:02.310
-因此，可执行代码在概念上不能被重新排序，只是声明式代码。
-So executable code can't conceptually
-be reordered, only declarative code.
+所以可执行代码不能在概念上重新排序，只能是声明性代码。
+So executable code can't conceptually be reordered, only declarative code.
 
 90
 00:06:02.310 --> 00:06:07.230
-所以我们可以说有一个叫 X的东西，或者说一个叫老师的东西，
-So we can say that there is a thing
-called X, or a thing called teacher, and
+所以我们可以说有一个叫X的东西，或者一个叫老师的东西，还有
+So we can say that there is a thing called X, or a thing called teacher, and
 
 91
 00:06:07.230 --> 00:06:12.889
-甚至有一个叫 X 的东西会提到这个功能的范围。
-even there is a thing called X that's
-gonna reference this function scope.
+即使有一个叫做X的东西，它也会引用这个函数作用域。
+even there is a thing called X that's gonna reference this function scope.
 
 92
 00:06:12.889 --> 00:06:14.600
-我们可以宣言性地做到这一点。
+我们可以声明性地做到这一点。
 We can do that declaratively.
 
 93
 00:06:14.600 --> 00:06:19.629
-但如果它是可以明显观察到的
-But if it's something that is literally
-observable as an execution operation
+但如果它是可以作为执行操作观察到的东西
+But if it's something that is literally observable as an execution operation
 
 94
 00:06:19.629 --> 00:06:23.189
-在一个程序中，不能在编译时发生，不能在编译时发生。
-in a program, that can't hoist,
-that can't happen at compile time.
+在程序中，不能提升，不能在编译时发生。
+in a program, that can't hoist, that can't happen at compile time.
 
 95
 00:06:23.189 --> 00:06:24.199
@@ -552,121 +477,105 @@ It has to happen at run time.
 
 96
 00:06:24.199 --> 00:06:28.610
-它必须发生在它通常会发生的程序中。
-And it has to happen where in
-the program it would normally happen.
+它必须发生在程序中通常会发生的地方。
+And it has to happen where in the program it would normally happen.
 
 97
 00:06:28.610 --> 00:06:32.009
-否则，您永远无法预测您的 JavaScript。
-Otherwise you would never be
-able to predict your JavaScript.
+否则，您将永远无法预测您的JavaScript。
+Otherwise you would never be able to predict your JavaScript.
 
 98
 00:06:32.009 --> 00:06:36.829
->> 扬声器 3: 在运行时，如果正在分配函数表达式
-&gt;&gt; Speaker 3: So at run time if you're
-assigning a function expression
+&gt；&gt；Speaker 3：因此，如果在运行时指定函数表达式
+&gt;&gt; Speaker 3: So at run time if you're assigning a function expression
 
 99
 00:06:36.829 --> 00:06:39.680
-以可变目标为目标
+针对可变目标，
 to a variable targeting,
 
 100
 00:06:41.300 --> 00:06:45.560
-那么是在该运行时过程中创建的新作用域吗 ?
-then is a new scope created
-during that run time process?
+那么在该运行时过程中是否创建了一个新的作用域？
+then is a new scope created during that run time process?
 
 101
 00:06:45.560 --> 00:06:46.699
->> 演讲者 1: 好的，让我们说清楚。
+&gt；&gt；演讲者1：好吧，让我们把话说清楚。
 &gt;&gt; Speaker 1: Well, let's be clear.
 
 102
 00:06:46.699 --> 00:06:51.050
-你在问一个非常重要的问题，但这两个层次都在上面。
-You're asking a very important question,
-but there's this two layered on top.
+你问的是一个非常重要的问题，但上面有两层。
+You're asking a very important question, but there's this two layered on top.
 
 103
 00:06:51.050 --> 00:06:53.529
-第一，编译时间仍处理该功能。
-Number one,
-compile time still handled the function.
+第一，编译时仍然处理函数。
+Number one, compile time still handled the function.
 
 104
 00:06:54.689 --> 00:06:56.090
-它没有推迟处理
+它没有推迟处理，
 It didn't defer handling,
 
 105
 00:06:56.090 --> 00:06:58.300
-不像说我不知道那里有什么功能
-it's not like it said I don't know
-that there's a function there.
+它不像它说的那样，我不知道那里有一个函数。
+it's not like it said I don't know that there's a function there.
 
 106
 00:06:58.300 --> 00:07:00.737
-它还是一个功能，还得有一个计划，
-It's still a function,
-it still has to have a plan,
+它仍然是一个函数，它仍然需要有一个计划，
+It's still a function, it still has to have a plan,
 
 107
 00:07:00.737 --> 00:07:05.449
-一张地图上彩色的弹珠和其他的东西
-a map for its colored marbles and
-all of that other stuff.
+它的彩色弹珠和所有其他东西的地图。
+a map for its colored marbles and all of that other stuff.
 
 108
 00:07:05.449 --> 00:07:08.930
-没有发生的是在编译时没有得到
-What didn't happen is it didn't get,
-at compile time,
+没有发生的是它在编译时没有得到，
+What didn't happen is it didn't get, at compile time,
 
 109
 00:07:08.930 --> 00:07:14.889
-与范围中的某个标识关联，但它仍被编译好吗 ?
-associated with some identifier in the
-scope, but it still got compiled, okay?
+与作用域中的某个标识符关联，但它仍然被编译了，好吗？
+associated with some identifier in the scope, but it still got compiled, okay?
 
 110
 00:07:14.889 --> 00:07:15.920
-这就是第一
+所以这是第一位。
 So that's number one.
 
 111
 00:07:15.920 --> 00:07:20.403
-第二，所有功能都有其范围的计划，直到
-Number two, all functions have a plan for
-their scope, until,
+第二，所有功能都有其范围的计划，直到，
+Number two, all functions have a plan for their scope, until,
 
 112
 00:07:20.403 --> 00:07:22.819
-每次被处决的时候
+每次他们被处死。
 and every time they get executed.
 
 113
 00:07:22.819 --> 00:07:27.374
-所以当它被执行时它是一个声明还是一个表达式，当它被执行的时候
-So whether it was a declaration or an
-expression, when it gets executed is when
+因此，无论它是声明还是表达式，当它被执行时
+So whether it was a declaration or an expression, when it gets executed is when
 
 114
 00:07:27.374 --> 00:07:30.754
-整个映射器计划变成了一个真实的记忆
-that whole mapper plan becomes
-a real thing in memory, and
+整个地图绘制计划在记忆中变成了真实的东西，而且
+that whole mapper plan becomes a real thing in memory, and
 
 115
 00:07:30.754 --> 00:07:33.519
-每次执行死刑都是如此
-every time it gets executed,
-that is the case.
+每次它被执行，情况就是这样。
+every time it gets executed, that is the case.
 
 116
 00:07:34.529 --> 00:07:37.170
-所以这在声明和表达之间是不一样的。
-So that's no different between
-declarations or expressions.
+所以这在声明和表达式之间没有区别。
+So that's no different between declarations or expressions.

@@ -2,617 +2,533 @@ WEBVTT
 
 1
 00:00:00.250 --> 00:00:02.370
->> 凯尔 - 辛普森: 如果我们不谈论诺尔斯和我们的定义，
-&gt;&gt; Kyle Simpson: If we're not talking
-about Knowles and undefines, but
+&gt；&gt；Kyle Simpson：如果我们不是在谈论Knowles和Undefined，但是
+&gt;&gt; Kyle Simpson: If we're not talking about Knowles and undefines, but
 
 2
 00:00:02.370 --> 00:00:07.900
-我们讨论的是弦，数字和 Booleans，这里有一种普遍的感觉
-we're talking about strings, numbers and
-Booleans, there's a prevailing sense here,
+我们谈论的是字符串，数字和布尔值，这里有一种流行的感觉，
+we're talking about strings, numbers and Booleans, there's a prevailing sense here,
 
 3
 00:00:07.900 --> 00:00:11.630
-从草案第 4 条到第 7 条
-from clauses four through seven,
-that essentially,
+从第四条到第七条，基本上，
+from clauses four through seven, that essentially,
 
 4
 00:00:11.630 --> 00:00:16.620
-此算法更倾向于进行数字比较。
-this algorithm prefers to
-do numeric comparison.
+这个算法更喜欢做数值比较。
+this algorithm prefers to do numeric comparison.
 
 5
 00:00:17.920 --> 00:00:21.300
-你会注意到有四个不同的地方它叫这两个号码
-You'll notice four different
-places it calls the two number.
+你会注意到四个不同的地方它叫两个号码。
+You'll notice four different places it calls the two number.
 
 6
 00:00:21.300 --> 00:00:25.190
-上面说 X 类型是数字，但另一个是字符串，
-It says if the type X is number,
-but the other one is string,
+它说如果类型X是数字，而另一个是字符串，
+It says if the type X is number, but the other one is string,
 
 7
 00:00:25.190 --> 00:00:29.196
-然后在字符串上调用两个数字，这样我就可以进行数字比较。
-then call two number on the string,
-so I can do a numeric comparison.
+然后调用字符串上的两个数字，这样我就可以进行数值比较。
+then call two number on the string, so I can do a numeric comparison.
 
 8
 00:00:29.196 --> 00:00:31.750
-五个都一样六次都一样
+五个人都一样，六个人也一样。
 Same thing in five, same thing in six.
 
 9
 00:00:31.750 --> 00:00:37.030
-如果其中一个是布尔值，请在其中执行两个数字，然后进行比较。
-If one of them's Boolean, then do a two
-number on it, and make the comparison.
+如果其中一个是布尔值，那么对它做两个数字，并进行比较。
+If one of them's Boolean, then do a two number on it, and make the comparison.
 
 10
 00:00:37.030 --> 00:00:40.670
-因此，它倾向于将所有内容减少到数字，以进行比较。
-So it prefers to reduce everything down
-to numbers to make the comparison.
+因此，它更愿意将所有内容简化为数字来进行比较。
+So it prefers to reduce everything down to numbers to make the comparison.
 
 11
 00:00:41.780 --> 00:00:44.869
-现在你可能不喜欢这个算法的运作方式
-Now you may not like that that's
-the way the algorithm works, but
+现在你可能不喜欢算法就是这样工作的，但是
+Now you may not like that that's the way the algorithm works, but
 
 12
 00:00:44.869 --> 00:00:48.579
-只要知道它能帮助你了解这些行为
-just by knowing that it helps you
-to understand the behaviors and
+只要知道它能帮助你理解行为和
+just by knowing that it helps you to understand the behaviors and
 
 13
 00:00:48.579 --> 00:00:51.521
-预测双等号算法的行为。
-predict the behaviors of
-the double equals algorithm.
+预测双等于算法的行为。
+predict the behaviors of the double equals algorithm.
 
 14
 00:00:52.689 --> 00:00:55.049
-在某些情况下你认为发生了一件事
-That in some cases you thought
-one thing was happening, but
+在某些情况下你认为发生了一件事，但是
+That in some cases you thought one thing was happening, but
 
 15
 00:00:55.049 --> 00:00:57.219
-实际上是完全不同的事情发生了
-actually an entirely different
-thing was happening.
+实际上，发生了一件完全不同的事情。
+actually an entirely different thing was happening.
 
 16
 00:00:57.219 --> 00:01:00.530
-而不是两个字符串得到比较，而是两个数字比较。
-Instead of two strings getting compared,
-it's two numbers getting compared.
+不是两个字符串进行比较，而是两个数字进行比较。
+Instead of two strings getting compared, it's two numbers getting compared.
 
 17
 00:01:00.530 --> 00:01:04.469
-只知道你的头在后面是平等的比较喜欢数字比较。
-Just knowing in the back of your head
-double equals prefers numeric comparison.
+只是在你的脑后知道双等于更喜欢数字比较。
+Just knowing in the back of your head double equals prefers numeric comparison.
 
 18
 00:01:05.590 --> 00:01:09.870
-这一事实将您与所有 JavaScript 开发人员的 99.99% 隔开，
-That one fact separates you from
-99.99% of all JavaScript developers,
+有一个事实将您与99.99%的JavaScript开发人员区分开来，
+That one fact separates you from 99.99% of all JavaScript developers,
 
 19
 00:01:09.870 --> 00:01:12.000
-他们甚至都没看过规格
+因为他们从来没有读过说明书。
 cuz they've never even read the spec.
 
 20
 00:01:13.400 --> 00:01:14.629
-那么我们怎么看呢 ?
+那么，我们如何看待这种情况的发展呢？
 So how do we see that playing out?
 
 21
 00:01:14.629 --> 00:01:17.349
-如果我有个数字
+好吧，如果我有一个数字上的字符串，
 Well, if I have a string on a number,
 
 22
 00:01:17.349 --> 00:01:21.260
-就像我在网上一样，也是一个数字和网络，是一个字符串。
-like I am on line one, that's a number and
-online too, it's a string.
+就像我在一号线上一样，这是一个数字，也是在线的，它是一个字符串。
+like I am on line one, that's a number and online too, it's a string.
 
 23
 00:01:21.260 --> 00:01:25.849
-如果我重三等当然我得强迫
-If I do a triple equals, of course,
-I'm gonna have to forcibly make
+如果我做三倍等于，当然，我必须强制
+If I do a triple equals, of course, I'm gonna have to forcibly make
 
 24
 00:01:25.849 --> 00:01:29.079
-要做一个比较，就必须是同一类型的。
-the numbers to do a comparison,
-they're gonna have to be the same type.
+要做比较的数字，它们必须是相同的类型。
+the numbers to do a comparison, they're gonna have to be the same type.
 
 25
 00:01:29.079 --> 00:01:32.200
-如果我有三等同等性的，它们是不同的类型，总是会失败的。
-If I had a triple equals and they were
-different types, it's always gonna fail.
+如果我有一个三倍的等值，并且他们是不同的类型，它总是会失败。
+If I had a triple equals and they were different types, it's always gonna fail.
 
 26
 00:01:33.200 --> 00:01:35.270
-所以我得去做数字
+所以我得做个数字。
 So I'm gonna have to make numbers.
 
 27
 00:01:35.270 --> 00:01:39.750
-但如果我知道只能是数字或字符串，特别是其中一个是
-But if I know there can only be number or
-string, especially if one of them is
+但如果我知道只能有数字或字符串，特别是如果其中一个是
+But if I know there can only be number or string, especially if one of them is
 
 28
 00:01:39.750 --> 00:01:44.789
-一定是一个数字，就跟我最后一个的一样
-definitely a number, then an exactly
-the same way as I allow this with the last
+绝对是一个数字，然后是一个完全相同的方式，就像我对最后一个数字所允许的那样
+definitely a number, then an exactly the same way as I allow this with the last
 
 29
 00:01:44.789 --> 00:01:49.319
-东西标志，几个面前，为什么不允许双等号，
-things sign, several sides ago,
-why not also allow with the double equals,
+东西签了，几面前，为什么不也允许和双等，
+things sign, several sides ago, why not also allow with the double equals,
 
 30
 00:01:50.349 --> 00:01:55.840
-为什么不这样说这个网上的这个代码是不必要的
-why not say that this code online for
-is more noisy unnecessarily so
+为什么不在网上说这个代码比较吵呢，不必要的这样
+why not say that this code online for is more noisy unnecessarily so
 
 31
 00:01:55.840 --> 00:01:59.319
-这两个人的抽象概念在这里很有帮助
-and the abstraction of the double
-equals it's helpful here.
+双重等号的抽象在这里很有帮助。
+and the abstraction of the double equals it's helpful here.
 
 32
 00:01:59.319 --> 00:02:00.959
-说他们是个数字还是
+它说的是他们是一个数字还是
 It's saying whether they're a number or
 
 33
 00:02:00.959 --> 00:02:03.329
-一个字符串，让它们互相比较。
-a string,
-let's let them compare to each other.
+字符串，让它们相互比较。
+a string, let's let them compare to each other.
 
 34
 00:02:03.329 --> 00:02:05.040
-如果他们是平等的，伟大的，如果不是，那么伟大。
-And if they're equal,
-great, and if not, great.
+如果他们是平等的，很好，如果不是，很好。
+And if they're equal, great, and if not, great.
 
 35
 00:02:06.269 --> 00:02:08.365
-但是，使用工具的抽象。
+但是使用工具的抽象。
 But use the abstraction of the tools.
 
 36
 00:02:13.415 --> 00:02:17.675
->> Kyle Simpson: 我可以这样做，因为我设计了此特定功能或
-&gt;&gt; Kyle Simpson: I can do this because
-I designed this particular function or
+&gt；&gt；Kyle Simpson：我可以这样做，因为我设计了这个特定的功能
+&gt;&gt; Kyle Simpson: I can do this because I designed this particular function or
 
 37
 00:02:17.675 --> 00:02:21.508
-这条特定的代码限制了类型
-this particular piece of
-code to restrict the types,
+这段特定的代码限制类型，
+this particular piece of code to restrict the types,
 
 38
 00:02:21.508 --> 00:02:25.509
 说这里唯一可以考虑的类型
-to say that the only types here
-that can be considered for
+to say that the only types here that can be considered for
 
 39
 00:02:25.509 --> 00:02:29.530
 相等比较是字符串和数字。
-the equality comparison are the string and
-the number.
+the equality comparison are the string and the number.
 
 40
 00:02:30.639 --> 00:02:34.550
-如果我允许数组和值，那么这将是一个更复杂的代码。
-This would be a significantly more
-complex code if I would allow arrays and
+如果我允许数组和
+This would be a significantly more complex code if I would allow arrays and
 
 41
 00:02:34.550 --> 00:02:38.310
-物体和恶霸以及各种类型的其他类型来进行对比。
-objects and bullions and all kinds of
-other types to come into that comparison.
+物体和金条以及所有其他类型的东西来进行比较。
+objects and bullions and all kinds of other types to come into that comparison.
 
 42
 00:02:38.310 --> 00:02:40.349
-所以我一直做的就是
+所以我一直在做的案子是，
 So the case that I keep making is,
 
 43
 00:02:40.349 --> 00:02:45.509
-您可以选择以这种方式使用强制方式来构造代码，并且
-you can choose to structure your code in
-such a way that coercion is a useful and
+您可以选择以这样一种方式来构造代码，即强制是一种有用的和
+you can choose to structure your code in such a way that coercion is a useful and
 
 44
 00:02:45.509 --> 00:02:49.379
-明显的系统，而不是一些人感觉的复杂魔术。
-obvious system, rather than the complex
-magic that some people feel.
+明显的系统，而不是一些人感觉到的复杂魔术。
+obvious system, rather than the complex magic that some people feel.
 
 45
 00:02:50.610 --> 00:02:54.300
-它把它带回了一个合理而实际的领域
-It brings it back within the realm
-of reasonable and practical for
+它把它带回合理和实用的领域
+It brings it back within the realm of reasonable and practical for
 
 46
 00:02:54.300 --> 00:02:54.979
-你的密码基础
+您的代码基础。
 your code basis.
 
 47
 00:02:54.979 --> 00:02:58.270
-不仅是为了你还有你的所有成员
-Not just for you, but for
-all the members of your development.
+不仅仅是为了你，而是为了你发展中的所有成员。
+Not just for you, but for all the members of your development.
 
 48
 00:02:58.270 --> 00:03:01.512
->> 演讲者 2: 在这两种情况下，数字强度都有可能爆炸，
-&gt;&gt; Speaker 2: Look, numerical strengths
-in both cases, they could blow up,
+&GT；&GT；演讲者2：看，两种情况下的数字强度，它们都可能爆炸，
+&gt;&gt; Speaker 2: Look, numerical strengths in both cases, they could blow up,
 
 49
 00:03:01.512 --> 00:03:03.069
-是吧
+他们不会吗？
 wouldn't they?
 
 50
 00:03:03.069 --> 00:03:06.109
-这并不是两个数字的优势，比如论坛。
-It wasn't both numerical
-strengths like from forum.
+这并不是两个数字的力量，就像论坛上的一样。
+It wasn't both numerical strengths like from forum.
 
 51
 00:03:06.109 --> 00:03:07.521
->> Kyle Simpson: 如果两者都是字符串，
-&gt;&gt; Kyle Simpson: So
-if they were both strings,
+&gt；&gt；Kyle Simpson：所以如果它们都是字符串，
+&gt;&gt; Kyle Simpson: So if they were both strings,
 
 52
 00:03:07.521 --> 00:03:10.219
-让我们回去思考这个算法
-let's go back to thinking
-about the algorithm.
+让我们回到思考算法。
+let's go back to thinking about the algorithm.
 
 53
 00:03:10.219 --> 00:03:14.197
-如果两者都是字符串，算法会做什么 ?
-If both of them were strings,
-what does the algorithm do?
+如果它们都是字符串，算法会做什么？
+If both of them were strings, what does the algorithm do?
 
 54
 00:03:14.197 --> 00:03:16.831
->> 扬声器 2: 传输数字。
+&gt；&gt；扬声器2：传输号码。
 &gt;&gt; Speaker 2: Transmit the numbers.
 
 55
 00:03:16.831 --> 00:03:18.545
->> Kyle Simpson: Nope，如果两者都是字符串，
-&gt;&gt; Kyle Simpson: Nope,
-if they are both strings,
+&gt；&gt；Kyle Simpson：不，如果它们都是字符串，
+&gt;&gt; Kyle Simpson: Nope, if they are both strings,
 
 56
 00:03:18.545 --> 00:03:22.414
-这意味着它们都是同一类型的，那么算法是做什么的呢 ?
-that means they are both of the same type,
-then what does the algorithm do?
+这意味着它们都是同一类型的，那么算法做什么呢？
+that means they are both of the same type, then what does the algorithm do?
 
 57
 00:03:22.414 --> 00:03:23.358
->> 扬声器 3: 它执行三重等号。
+&gt；&gt；扬声器3：它做三重等于。
 &gt;&gt; Speaker 3: It does the triple equals.
 
 58
 00:03:23.358 --> 00:03:24.793
->> 凯尔 - 辛普森: 这三大平等。
-&gt;&gt; Kyle Simpson: It
-does the triple equals.
+&gt；&gt；Kyle Simpson：它做三重等于。
+&gt;&gt; Kyle Simpson: It does the triple equals.
 
 59
 00:03:24.793 --> 00:03:28.715
-所以我对你的回应就是如果这些字符串完全相同你会得到真实的
-So my response to you is, if those strings
-were literally identical, you'd get true,
+所以我对你的回应是，如果这些字符串是完全相同的，你就会得到真的，
+So my response to you is, if those strings were literally identical, you'd get true,
 
 60
 00:03:28.715 --> 00:03:30.360
-否则你不会的
+否则你就不会。
 and otherwise you wouldn't.
 
 61
 00:03:30.360 --> 00:03:32.620
-但你做的每一串都是一样的
-But that's the same for
-every string that you do.
+但你做的每一根弦都是一样的。
+But that's the same for every string that you do.
 
 62
 00:03:32.620 --> 00:03:38.000
-你不能合理地期待一个由 3.7 和一个字符串组成的字符串。
-You couldn't reasonably expect a string
-that said 3.7 and a string that said.
+你不能合理地期望一个字符串是3.7，一个字符串是。
+You couldn't reasonably expect a string that said 3.7 and a string that said.
 
 63
 00:03:38.000 --> 00:03:43.120
-3.07 彼此相等，这些字符串是相等的，而这些数字是学习的。
-3.07 to equal each other, those strings
-are equal and those numbers learn.
+3.07为了彼此相等，这些字符串是相等的，这些数字是学习的。
+3.07 to equal each other, those strings are equal and those numbers learn.
 
 64
 00:03:43.120 --> 00:03:45.259
->> 扬声器 2: 与一些在前面的输出库中输入的表单一样，
-&gt;&gt; Speaker 2: Like a form input that
-some outputs base in front of it,
+&gt；&gt；Speaker 2：就像一些输出基于它前面的表单输入一样，
+&gt;&gt; Speaker 2: Like a form input that some outputs base in front of it,
 
 65
 00:03:45.259 --> 00:03:50.650
-例如，它们变得很奇怪，但如果它是前面的空间的一个数字。
-for example, they become weird but
-if it's a number about the space in front.
+例如，它们变得很奇怪，但如果它是一个关于前面空间的数字。
+for example, they become weird but if it's a number about the space in front.
 
 66
 00:03:50.650 --> 00:03:52.460
->> Kyle Simpson: 再次，让我们重新回到上下文中，
-&gt;&gt; Kyle Simpson: Again,
-let's reset back to the context,
+&gt；&gt；Kyle Simpson：再次，让我们重新回到上下文，
+&gt;&gt; Kyle Simpson: Again, let's reset back to the context,
 
 67
 00:03:52.460 --> 00:03:57.139
-当类型不同时，双等号将允许进行强制。
-the double equals is going to allow
-coercion when the types are different.
+当类型不同时，双等号将允许强制。
+the double equals is going to allow coercion when the types are different.
 
 68
 00:03:57.139 --> 00:03:59.840
-如果您处于不同类型的场景中，
-If you're in a scenario where
-the types are not different,
+如果您所处的场景中的类型没有不同，
+If you're in a scenario where the types are not different,
 
 69
 00:03:59.840 --> 00:04:04.939
-如果类型相同，那么它就永远不会调用强制了，永远不会。
-where the types are the same, then it's
-not ever going to invoke coercion, ever.
+如果类型相同，则永远不会调用强制，永远不会。
+where the types are the same, then it's not ever going to invoke coercion, ever.
 
 70
 00:04:06.240 --> 00:04:09.080
-如果您想要其他其他行为，
-If you want some other
-additional behavior,
+如果你想要一些其他的行为，
+If you want some other additional behavior,
 
 71
 00:04:09.080 --> 00:04:11.419
-你所希望的不是胁迫
-the thing that you want
-is not coercion here,
+你想要的不是强迫，
+the thing that you want is not coercion here,
 
 72
 00:04:11.419 --> 00:04:15.689
-您想要的是字符串修剪或字符串格式或类似的内容。
-the thing you want is string trimming, or
-string formatting or something like that.
+你想要的是字符串修剪，或者字符串格式化或类似的东西。
+the thing you want is string trimming, or string formatting or something like that.
 
 73
 00:04:15.689 --> 00:04:18.529
-如果您有一个案例，其中有两个字符串可能具有
-If you have a case where you
-have two strings that could have
+如果你有一个案例，你有两个字符串
+If you have a case where you have two strings that could have
 
 74
 00:04:18.529 --> 00:04:22.189
-在任何一方的空格里，你真的只在乎两者之间的关系。
-whitespace on either side, and you really
-only care about the stuff in between.
+两边都有空格，你真的只关心中间的东西。
+whitespace on either side, and you really only care about the stuff in between.
 
 75
 00:04:22.189 --> 00:04:25.120
-太好了这件事有个办法叫做弦切
-Great, there's a thing for that and
-it's called string trimming.
+太好了，这就是所谓的字符串修剪。
+Great, there's a thing for that and it's called string trimming.
 
 76
 00:04:25.120 --> 00:04:26.139
-但那不是胁迫
+但这不是强迫。
 But that isn't coercion.
 
 77
 00:04:27.180 --> 00:04:29.269
-当我有一个字符串和一个数字的时候
-Coercion is when I have a string and
-a number, and
+强制是当我有一个字符串和一个数字，并且
+Coercion is when I have a string and a number, and
 
 78
 00:04:29.269 --> 00:04:31.660
-我希望那些能被比较的人
-I'd like those to be
-compared to each other.
+我希望这些可以互相比较。
+I'd like those to be compared to each other.
 
 79
 00:04:31.660 --> 00:04:32.579
-有什么帮助吗
+这有帮助吗？
 Does that help?
 
 80
 00:04:32.579 --> 00:04:33.139
->> 演讲者 2: 是的，是的。
+&gt；&gt；扬声器2：是的，是的。
 &gt;&gt; Speaker 2: Yeah, yeah.
 
 81
 00:04:33.139 --> 00:04:38.019
->> 凯尔 - 辛普森: 好的，好的。
+&gt；&gt；Kyle Simpson：好的，好的。
 &gt;&gt; Kyle Simpson: Okay, all right.
 
 82
 00:04:38.019 --> 00:04:41.550
-回到我们的算法最后部分第 8 课
-So back to our algorithm,
-the final part, classes 8 and
+所以回到我们的算法，最后一部分，类8和
+So back to our algorithm, the final part, classes 8 and
 
 83
 00:04:41.550 --> 00:04:47.060
-9，如果你用的是一个不是已经很原始的东西，
-9, if you use a double equals with
-something that's not already a primitive,
+9，如果您将双等号与还不是原语的内容一起使用，
+9, if you use a double equals with something that's not already a primitive,
 
 84
 00:04:47.060 --> 00:04:50.370
-猜猜我们将我们的朋友调至原始人
-guess what we invoke our
-friend to primitive.
+猜猜我们把我们的朋友召唤到了原始人身上。
+guess what we invoke our friend to primitive.
 
 85
 00:04:50.370 --> 00:04:53.350
 我们调用两个原始抽象操作。
-We invoke the two primitive
-abstract operation.
+We invoke the two primitive abstract operation.
 
 86
 00:04:53.350 --> 00:04:54.199
-我们已经研究过了
+我们已经看过了。
 We already looked at that.
 
 87
 00:04:54.199 --> 00:04:58.502
-记住这就是所谓的两弦或任何东西的价值。
-Remember that's the one that calls
-value over two string or whatever.
+记住，这是一个调用两个字符串或其他值的函数。
+Remember that's the one that calls value over two string or whatever.
 
 88
 00:04:58.502 --> 00:05:03.310
-这里的外卖只相当于比较图元。
-The takeaway here is that double
-equals only compares primitives.
+这里的要点是Double Equals只比较原语。
+The takeaway here is that double equals only compares primitives.
 
 89
 00:05:03.310 --> 00:05:06.800
-如果你用它不是一个原始的东西，它会怎么做 ?
-If you use it with something that's
-not a primitive, what's it gonna do?
+如果你把它和不是原语的东西一起使用，它会做什么？
+If you use it with something that's not a primitive, what's it gonna do?
 
 90
 00:05:08.399 --> 00:05:10.692
-把它变成一个原始的
+把它变成原始物。
 Turn it into a primitive.
 
 91
 00:05:10.692 --> 00:05:15.211
-唯一不原始的事情就是当他们是一模一样的
-The only time it does something with non
-primitives is when they're the exact same
+只有当它们完全相同时，它才会对非原语执行某些操作
+The only time it does something with non primitives is when they're the exact same
 
 92
 00:05:15.211 --> 00:05:19.790
-类型，然后仅执行相同的值三重相等比较。
-type and then it just does the same
-value triple equals comparison.
+类型，然后它只做相同的值三重等于比较。
+type and then it just does the same value triple equals comparison.
 
 93
 00:05:19.790 --> 00:05:21.117
-否则它说听着
+否则，它说，听着，
 Otherwise, it says, listen,
 
 94
 00:05:21.117 --> 00:05:25.560
-我现在唯一关心的强制措施就是让你成为一个原始的人
-the only coercion step I care about right
-now is getting you to be a primitive.
+我现在唯一关心的强制步骤就是让你成为一个原始人。
+the only coercion step I care about right now is getting you to be a primitive.
 
 95
 00:05:25.560 --> 00:05:28.730
-然后，我们将重新考虑该图元是否为同一类型。
-And then we'll reconsider whether the
-primitives are at the same type or not.
+然后我们将重新考虑基元是否是相同类型的。
+And then we'll reconsider whether the primitives are at the same type or not.
 
 96
 00:05:29.949 --> 00:05:32.060
-记得我刚才说的
+还记得我之前在课程中说过的话吗？
 Remember how I said earlier in the course,
 
 97
 00:05:32.060 --> 00:05:36.000
-这些算法本质上是递归的
-that these algorithms are sorta
-inherently recursive.
+这些算法在某种程度上是递归的。
+that these algorithms are sorta inherently recursive.
 
 98
 00:05:36.000 --> 00:05:40.519
-双等号运算符说我得把它弄明白
-The double equals operator says,
-I need to get it to the point,
+双等于运算符说，我需要直截了当，
+The double equals operator says, I need to get it to the point,
 
 99
 00:05:40.519 --> 00:05:42.920
-其中一个子句匹配。
+其中一个条款匹配。
 where one of these clauses matches.
 
 100
 00:05:42.920 --> 00:05:46.629
-如果你给我点不匹配的场景
-If you give me some scenario where
-it doesn't match completely,
+如果你给我一个不完全匹配的场景，
+If you give me some scenario where it doesn't match completely,
 
 101
 00:05:46.629 --> 00:05:48.829
-然后我就会重新运行算法
-then I'm gonna re-run
-the algorithm over and over and
+然后我会一遍又一遍地运行算法
+then I'm gonna re-run the algorithm over and over and
 
 102
 00:05:48.829 --> 00:05:52.590
-再重复一次，直到我找到两个属于同一类型的图元。
-over again, until I get it down to two
-primitives that are of the same type.
+一遍又一遍，直到我把它归结为两个相同类型的基元。
+over again, until I get it down to two primitives that are of the same type.
 
 103
 00:05:52.590 --> 00:05:55.709
-或者两个可以被强迫相等的原语。
-Or two primitives that can be
-coercively equal to each other.
+或者可以强制地彼此相等的两个原语。
+Or two primitives that can be coercively equal to each other.
 
 104
 00:05:55.709 --> 00:05:59.290
-如果我没找到这一点，你猜是什么，假的，他们不平等。
-And if I never get to that point,
-guess what, false, they are not equal.
+如果我永远都到不了那个点，你猜怎么着，假的，它们是不相等的。
+And if I never get to that point, guess what, false, they are not equal.
 
 105
 00:06:00.920 --> 00:06:04.399
-换句话说，我们会调用这两个原语并获取两个原语，并且
-So in other words, we would invoke the two
-primitive and get two primitives, and
+换句话说，我们将调用两个原语并获得两个原语，然后
+So in other words, we would invoke the two primitive and get two primitives, and
 
 106
 00:06:04.399 --> 00:06:07.649
-然后用我们的两个原语返回算法
-then come back to the algorithm
-with our two primitives, and
+然后使用我们的两个原语返回算法，并且
+then come back to the algorithm with our two primitives, and
 
 107
 00:06:07.649 --> 00:06:09.509

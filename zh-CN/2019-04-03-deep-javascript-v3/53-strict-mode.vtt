@@ -2,250 +2,218 @@ WEBVTT
 
 1
 00:00:00.040 --> 00:00:03.120
->> Kyle Simpson: 那么现在，如果我们以严格方式翻转，您将
-&gt;&gt; Kyle Simpson: So
-now if we flip on strict mode, which you
+&gt；&gt；Kyle Simpson：那么现在如果我们切换到严格模式，您
+&gt;&gt; Kyle Simpson: So now if we flip on strict mode, which you
 
 2
 00:00:03.120 --> 00:00:06.980
-通过将此严格方式片段置于任何作用域的顶部，最好是在
-do by putting this strict mode fragment
-at the top of any scope, preferably at
+通过将这个严格模式片段放在任何作用域的顶部来完成，最好是在
+do by putting this strict mode fragment at the top of any scope, preferably at
 
 3
 00:00:06.980 --> 00:00:10.970
-程序的顶部，文件顶部或任何功能的顶部。
-the top of your program, the top of your
-file, or at the top of any function.
+程序的顶部，文件的顶部，或任何函数的顶部。
+the top of your program, the top of your file, or at the top of any function.
 
 4
 00:00:10.970 --> 00:00:15.919
-如果开启严格方式，那么将发生所有相同的处理。
-If you turn on strict mode, all
-the same processing is going to happen.
+如果打开严格模式，所有相同的处理都将发生。
+If you turn on strict mode, all the same processing is going to happen.
 
 5
 00:00:15.919 --> 00:00:19.039
-因此，既然我们已经经历过这一点，我们就不必再费力地处理这个问题了。
-So since we've run through this, we don't
-have to keep belaboring this point.
+所以既然我们已经讲过了，我们就不需要继续强调这一点了。
+So since we've run through this, we don't have to keep belaboring this point.
 
 6
 00:00:19.039 --> 00:00:23.170
-但当我们到达这条线时我们说
-But when we arrive at this line and
-we say, hey,
+但当我们到达这条线，我们说，嘿，
+But when we arrive at this line and we say, hey,
 
 7
 00:00:23.170 --> 00:00:28.239
-其他类别的范围，我有这个目标的参考，这个题目是听过的。
-scope of other class, I have this target
-reference for topic ever heard of it.
+在其他类的范围内，我曾经听说过这个主题的目标引用。
+scope of other class, I have this target reference for topic ever heard of it.
 
 8
 00:00:28.239 --> 00:00:31.282
-没有蓝色大理石我们到全球范围说
-There's no blue marble,
-we go to the global scope and we say,
+没有蓝色大理石，我们去全球范围说，
+There's no blue marble, we go to the global scope and we say,
 
 9
 00:00:31.282 --> 00:00:33.564
-全球范围都有你听过的话题
-global scope have you ever heard of topic,
-and
+全球范围你听说过主题吗？
+global scope have you ever heard of topic, and
 
 10
 00:00:33.564 --> 00:00:35.716
-全局作用域类型 : >> 演讲者 1: 否
-the global scope kind of respond with
-&gt;&gt; Speaker 1: No
+全局作用域使用&gt；&gt；Speaker 1：NO进行响应
+the global scope kind of respond with &gt;&gt; Speaker 1: No
 
 11
 00:00:35.716 --> 00:00:37.156
->> 凯尔 - 辛普森: 参考错误，
+&gt；&gt；Kyle Simpson：引用错误，
 &gt;&gt; Kyle Simpson: Reference error,
 
 12
 00:00:37.156 --> 00:00:38.600
-从没听说过
+从没听说过。
 never heard of it.
 
 13
 00:00:39.719 --> 00:00:42.420
-这是一种不同于类型错误的错误。
-That's a different kind of
-error than a type error.
+这是一种与类型错误不同的错误。
+That's a different kind of error than a type error.
 
 14
 00:00:42.420 --> 00:00:46.399
-当您发现变量及其值时，输入错误。
-Type errors are when you found
-the variable and the value that it is
+类型错误是在找到变量及其值时出现的错误
+Type errors are when you found the variable and the value that it is
 
 15
 00:00:46.399 --> 00:00:49.850
-目前持有的不合法，不做你想做的事情。
-currently holding is not legal to do
-whatever you're trying to do with it.
+目前持有是不合法的，无论你想用它做什么。
+currently holding is not legal to do whatever you're trying to do with it.
 
 16
 00:00:49.850 --> 00:00:54.460
-与执行函数一样，访问未定义的 Null 上的属性，
-Like execute a function,
-access a property on an undefined null,
+例如执行函数，访问未定义NULL上的属性，
+Like execute a function, access a property on an undefined null,
 
 17
 00:00:54.460 --> 00:00:55.979
-这种情况是错误的
+诸如此类的事情，那是类型错误。
 things like that, that's type error.
 
 18
 00:00:55.979 --> 00:00:58.979
-参考错误，我找不到那个变量，
-A reference error is,
-I couldn't find that variable,
+引用错误是，我找不到那个变量，
+A reference error is, I couldn't find that variable,
 
 19
 00:00:58.979 --> 00:01:01.990
-我不能给你一个变量好吗
+我不能给你一个变量来使用，好吗？
 I can't give you a variable to use, okay?
 
 20
 00:01:01.990 --> 00:01:04.629
-这就是我们希望在所有时间发生的事情。
-That's what we would like
-to happen all of the time.
+这就是我们希望一直发生的事情。
+That's what we would like to happen all of the time.
 
 21
 00:01:04.629 --> 00:01:07.590
-现在，由于严格方式的结果而发生引用错误。
-It now happens as the result of strict
-mode, you get a reference error.
+现在它是严格模式的结果，您会得到一个引用错误。
+It now happens as the result of strict mode, you get a reference error.
 
 22
 00:01:07.590 --> 00:01:09.890
-对不起，没有大理石，运气不好。
+抱歉，没有大理石，运气不好。
 Sorry, no marble, tough luck.
 
 23
 00:01:11.469 --> 00:01:15.599
-所以有很多原因有很多理由
-So one of the many,
-many reasons why it would be good for
+所以很多理由中的一个就是为什么它会对
+So one of the many, many reasons why it would be good for
 
 24
 00:01:15.599 --> 00:01:17.030
-你要用严格的方式
+您使用的是严格模式。
 you to be using strict mode.
 
 25
 00:01:17.030 --> 00:01:20.638
-它会避免这样的错误，它几乎肯定是个错误，
-It will avoid mistakes like this,
-cuz it almost certainly a mistake,
+它会避免这样的错误，因为几乎可以肯定这是一个错误，
+It will avoid mistakes like this, cuz it almost certainly a mistake,
 
 26
 00:01:20.638 --> 00:01:24.442
-你不应该故意去创造全球的，是吗 ?
-it should not be something you
-intentionally try to create global, yes?
+它不应该是你有意创建的全球性的东西，对吗？
+it should not be something you intentionally try to create global, yes?
 
 27
 00:01:24.442 --> 00:01:26.519
->> 演讲者 1: 严格方式始终在 ES6 上
-&gt;&gt; Speaker 1: Is strict
-mode always pretty on ES6
+&gt；&gt；扬声器1：严格模式在ES6上总是漂亮吗
+&gt;&gt; Speaker 1: Is strict mode always pretty on ES6
 
 28
 00:01:27.560 --> 00:01:28.439
->> 凯尔 - 辛普森: 严格方式不是
+&gt；&gt；Kyle Simpson：严格模式不是
 &gt;&gt; Kyle Simpson: Strict mode is not
 
 29
 00:01:28.439 --> 00:01:29.430
-一直都是
+一直开着。
 always on.
 
 30
 00:01:29.430 --> 00:01:32.359
-像泡泡之类的工具
+像气泡和气泡这样的工具是真的
 It's true that tools like Bubble and
 
 31
 00:01:32.359 --> 00:01:36.750
-其他的人总是把严格的方式放在那里
-other transpilers basically always
-put the strict mode in there for you.
+其他传送器基本上总是把严格的模式放在那里。
+other transpilers basically always put the strict mode in there for you.
 
 32
 00:01:36.750 --> 00:01:38.752
-所以如果你用的是密码
+所以如果你用的是泄露的代码
 So if you're using transpired code,
 
 33
 00:01:38.752 --> 00:01:42.700
-几乎可以确定您的代码在严格的方式下运行。
-it was almost a virtual certainty that
-your code is running in strict mode.
+几乎可以肯定，您的代码正在严格模式下运行。
+it was almost a virtual certainty that your code is running in strict mode.
 
 34
 00:01:42.700 --> 00:01:45.887
-但是 JavaScript 不是缺省的严格方式，因为这样会破坏一个
-But JavaScript is not default the strict
-mode because then that would break a bunch
+但JavaScript不是默认的严格模式，因为那样会打破一大堆
+But JavaScript is not default the strict mode because then that would break a bunch
 
 35
 00:01:45.887 --> 00:01:46.450
-节目的相关信息。
+程序。
 of programs.
 
 36
 00:01:46.450 --> 00:01:49.799
-那是 20 年前写的
-So that were written 20 years ago or
-something.
+所以这是20年前写的什么的。
+So that were written 20 years ago or something.
 
 37
 00:01:49.799 --> 00:01:54.310
-因此，由于向后兼容，您总是必须选择严格的方式。
-So because of backwards compatible, you
-will always have to opt into strict mode.
+因此，由于向后兼容，您将始终必须选择严格模式。
+So because of backwards compatible, you will always have to opt into strict mode.
 
 38
 00:01:54.310 --> 00:01:59.509
-在 ES6 内部的某些类型的机制中的另一个小问题
-Another little caveat inside of certain
-kinds of mechanisms within ES6 and
+ES6和ES6中某些机制内部的另一个小警告
+Another little caveat inside of certain kinds of mechanisms within ES6 and
 
 39
 00:01:59.509 --> 00:02:02.849
-在前进的过程中，它被认为处于严格模式。
-going forward,
-it is assumed to be in strict mode.
+展望未来，假设它处于严格模式。
+going forward, it is assumed to be in strict mode.
 
 40
 00:02:02.849 --> 00:02:07.290
-所以你甚至都没有输入，所以在课里面的时候就可以说，
-So you don't even type it, so inside of
-a class to talk about later in the course,
+所以你甚至不输入它，所以在课堂上稍后讨论，
+So you don't even type it, so inside of a class to talk about later in the course,
 
 41
 00:02:07.290 --> 00:02:11.400
-或 ES6 模块内部，稍后我们将在此单元中讨论。
-or inside of ES6 module,
-which we'll talk about later in this unit.
+或者在ES6模块内部，我们将在本单元的后面讨论。
+or inside of ES6 module, which we'll talk about later in this unit.
 
 42
 00:02:11.400 --> 00:02:14.969
-在这两种情况下，假设严格模式，你都不需要
-Inside of both of those, strict mode
-is assumed, you don't even have to put
+在这两种模式中，假设是严格模式，您甚至不需要将
+Inside of both of those, strict mode is assumed, you don't even have to put
 
 43
 00:02:14.969 --> 00:02:18.400
-严格方式，仅假定代码在严格方式下运行。
-the strict mode, is just assume that,
-that code is running in strict mode.
+严格模式，只是假设代码在严格模式下运行。
+the strict mode, is just assume that, that code is running in strict mode.
 
 44
 00:02:18.400 --> 00:02:20.840
@@ -254,237 +222,205 @@ But as a general rule for
 
 45
 00:02:20.840 --> 00:02:24.860
-JavaScript 本身不处于严格模式，除非您选择。
-JavaScript itself,
-it's not in strict mode unless you opt-in.
+JavaScript本身，除非您选择加入，否则它不是严格模式。
+JavaScript itself, it's not in strict mode unless you opt-in.
 
 46
 00:02:24.860 --> 00:02:26.930
-严格的方式你应该知道的是
+关于严格模式，您应该了解的是，
 What you should know about strict mode is,
 
 47
 00:02:26.930 --> 00:02:29.634
-它本质上是语言的未来
-it's essentially the future
-of the language, more and
+它本质上是语言的未来，更多和
+it's essentially the future of the language, more and
 
 48
 00:02:29.634 --> 00:02:32.817
-更多的将类似于类和模块并采用严格方式。
-more will be like classes and
-modules and assume the strict mode.
+更多的类和模块将采用严格模式。
+more will be like classes and modules and assume the strict mode.
 
 49
 00:02:32.817 --> 00:02:34.490
-所以你最好直接咬那颗子弹
-So you might as well just go ahead and
-bite that bullet.
+所以你还是去咬子弹吧。
+So you might as well just go ahead and bite that bullet.
 
 50
 00:02:34.490 --> 00:02:38.030
-大约十年来，它已经存在了将近十年。
-It's been around now for
-almost a decade basically a decade.
+它已经存在了将近十年，基本上是十年。
+It's been around now for almost a decade basically a decade.
 
 51
 00:02:38.030 --> 00:02:40.840
-所以如果你不是用严格的方式
-So it's definitely time if
-you're not using strict mode,
+所以如果你不使用严格模式的话肯定是时候了，
+So it's definitely time if you're not using strict mode,
 
 52
 00:02:40.840 --> 00:02:43.180
-你先把痛和开关给我吧
-go ahead and take the pain and
-switch, yes?
+继续承受痛苦和转换，好吗？
+go ahead and take the pain and switch, yes?
 
 53
 00:02:43.180 --> 00:02:47.378
->> 演讲者 1: 如果您不使用严格的内容，那么有更新的功能将不起作用吗 ?
-&gt;&gt; Speaker 1: If you don't use strict
-are there newer features that won't work?
+&gt；&gt；扬声器1：如果你不使用严格的，有没有新的功能不起作用？
+&gt;&gt; Speaker 1: If you don't use strict are there newer features that won't work?
 
 54
 00:02:48.810 --> 00:02:53.120
->> 凯尔 - 辛普森: 他们有时会谈论或讨论，
-&gt;&gt; Kyle Simpson: They do
-sometimes talk about or discuss,
+&gt；&gt；Kyle Simpson：他们有时确实会谈论或讨论，
+&gt;&gt; Kyle Simpson: They do sometimes talk about or discuss,
 
 55
 00:02:53.120 --> 00:02:57.509
-此功能仅在严格方式或非严格方式下工作。
-this feature will only work a certain
-way in strict mode or not-strict mode.
+此功能仅在严格模式或非严格模式下以特定方式工作。
+this feature will only work a certain way in strict mode or not-strict mode.
 
 56
 00:02:57.509 --> 00:02:59.099
-因为如果他们添加了一个新功能
+因为如果他们增加了一个新功能，
 Because if they add a new feature,
 
 57
 00:02:59.099 --> 00:03:03.310
-他们在 20 年前就没有机会破解某人的密码了
-they don't have any chances of having
-broken somebody's code from 20 years ago.
+他们没有任何机会破解20年前的某个人的代码。
+they don't have any chances of having broken somebody's code from 20 years ago.
 
 58
 00:03:03.310 --> 00:03:07.330
-我不知道有什么特别的例子
-I'm not aware of any
-specific examples where this
+我不知道有什么具体的例子
+I'm not aware of any specific examples where this
 
 59
 00:03:07.330 --> 00:03:12.159
-如果您未在严格方式下切换，那么语法不可用。
-syntax is not even available,
-if you haven't switched on strict mode.
+如果您没有切换到严格模式，语法甚至不可用。
+syntax is not even available, if you haven't switched on strict mode.
 
 60
 00:03:12.159 --> 00:03:15.300
-但在这种可能性的范围内，
-But it is certainly within the realm of
-possibility that things like that may
+但这肯定是在可能的范围内，这样的事情可能
+But it is certainly within the realm of possibility that things like that may
 
 61
 00:03:15.300 --> 00:03:17.479
-或者这些行为将不同。
-occur, or
-that behaviors will be different.
+否则行为会有所不同。
+occur, or that behaviors will be different.
 
 62
 00:03:17.479 --> 00:03:20.360
-就像我们在这里看到的那样，可以有细微差别的行为。
-There can be nuanced different behaviors,
-like we're seeing here.
+可以有细微差别的不同行为，就像我们在这里看到的。
+There can be nuanced different behaviors, like we're seeing here.
 
 63
 00:03:20.360 --> 00:03:23.340
-一个可能是允许的，另一个可能不允许。
-One might be permissive and
-one might be not.
+一种可能是宽容的，另一种可能不是。
+One might be permissive and one might be not.
 
 64
 00:03:23.340 --> 00:03:25.530
-另一个严格方式有区别的示例
-Another example of strict
-mode having a difference and
+严格模式的另一个示例具有差异和
+Another example of strict mode having a difference and
 
 65
 00:03:25.530 --> 00:03:27.210
-它与 ES6 无关
+它与ES6无关。
 it has nothing to do with ES6.
 
 66
 00:03:27.210 --> 00:03:33.270
-回到 ES5，当引入严格模式时，
-Back in ES5,
-when strict mode was introduced,
+回到ES5，当引入严格模式时，
+Back in ES5, when strict mode was introduced,
 
 67
 00:03:33.270 --> 00:03:38.250
-我们有几种不同的错误如果你不在
-we had several different kinds of
-errors that if you were not in
+我们有几种不同的错误，如果你不在
+we had several different kinds of errors that if you were not in
 
 68
 00:03:38.250 --> 00:03:42.530
-严格的方式是错误的，但都是无声的，只是没有发生。
-strict mode they were errors, but they
-were silent, they just nothing happened.
+严格模式他们是错误的，但他们是沉默的，他们只是什么都没发生。
+strict mode they were errors, but they were silent, they just nothing happened.
 
 69
 00:03:42.530 --> 00:03:45.409
-例如，尝试分配到只读属性，或者
-So for example, trying to assign
-to a read only property, or
+例如，尝试分配给只读属性，或者
+So for example, trying to assign to a read only property, or
 
 70
 00:03:45.409 --> 00:03:48.949
-一个只读变量，它只会默默地不做任何事情。
-a read only variable,
-it just would silently not do anything.
+一个只读变量，它只是默默地不做任何事情。
+a read only variable, it just would silently not do anything.
 
 71
 00:03:48.949 --> 00:03:51.039
-它不会实际执行任务。
+它不会真的完成任务。
 It wouldn't actually do the assignment.
 
 72
 00:03:51.039 --> 00:03:53.719
-一旦开启严格方式，现在就开始为这些错误获取错误。
-Once you turn on strict mode,
-now you start getting errors for those.
+一旦你打开严格模式，现在你开始得到这些错误。
+Once you turn on strict mode, now you start getting errors for those.
 
 73
 00:03:53.719 --> 00:03:58.329
-因此，可以观察到的行为有不同的结果，但是
-So there are differences in observable
-behavior as a result of that, but
+因此，可观察到的行为会因此而有所不同，但是
+So there are differences in observable behavior as a result of that, but
 
 74
 00:03:58.329 --> 00:04:02.379
-我也不会说有太多的特点是你不能
-I wouldn't necessarily say that there's a
-lot of ostensible features that you can't
+我不一定要说有很多表面上的特性是你不能做到的
+I wouldn't necessarily say that there's a lot of ostensible features that you can't
 
 75
 00:04:02.379 --> 00:04:06.699
-在没有它们的情况下使用 >> 演讲者 1: 问题，因此
-use without them
-&gt;&gt; Speaker 1: Question, so
+在没有它们的情况下使用&gt；&gt；扬声器1：问题，所以
+use without them &gt;&gt; Speaker 1: Question, so
 
 76
 00:04:06.699 --> 00:04:11.030
-这个话题呢，在严格的模式下，总是要定的，对，差不多吗 ?
-the topic, in strict mode, they always
-have to be defined, right, pretty much?
+主题，在严格模式下，它们总是必须被定义，对吧，差不多？
+the topic, in strict mode, they always have to be defined, right, pretty much?
 
 77
 00:04:11.030 --> 00:04:14.750
-我的问题是，如果主题在全球范围内，仍然是同一错误，对吗 ?
-My question is if topic was in a global
-scope, it's still the same error, right?
+我的问题是，如果主题在全局范围内，它仍然是相同的错误，对吗？
+My question is if topic was in a global scope, it's still the same error, right?
 
 78
 00:04:15.870 --> 00:04:17.370
->> 凯尔 - 辛普森: 我不知道。
+凯尔·辛普森：我不知道。
 &gt;&gt; Kyle Simpson: I don't know.
 
 79
 00:04:17.370 --> 00:04:19.220
->> 演讲者 1: 如果 - >> 凯尔 - 辛普森: 如果第 7 行
-&gt;&gt; Speaker 1: If the-
-&gt;&gt; Kyle Simpson: If line 7 was in
+&gt；&gt；扬声器1：如果-&gt；&gt；Kyle Simpson：如果线路7在
+&gt;&gt; Speaker 1: If the- &gt;&gt; Kyle Simpson: If line 7 was in
 
 80
 00:04:19.220 --> 00:04:19.930
-全球范围?
+全球范围？
 the global scope?
 
 81
 00:04:19.930 --> 00:04:20.819
->> 扬声器 1: 精确。 >> 凯尔 - 辛普森: 是的，是的
-&gt;&gt; Speaker 1: Exactly.
-&gt;&gt; Kyle Simpson: Yeah, yeah, yeah.
+&gt；&gt；扬声器1：没错。&gt；&gt；Kyle Simpson：是的，是的。
+&gt;&gt; Speaker 1: Exactly. &gt;&gt; Kyle Simpson: Yeah, yeah, yeah.
 
 82
 00:04:20.819 --> 00:04:21.810
->> 扬声器 1: 它还会爆炸吗 ?
+&gt；&gt；扬声器1：它还会爆炸吗？
 &gt;&gt; Speaker 1: It would still blow up?
 
 83
 00:04:21.810 --> 00:04:22.389
->> 凯尔 - 辛普森: 它还在爆炸中。
+&gt；&gt；Kyle Simpson：它仍然会爆炸。
 &gt;&gt; Kyle Simpson: It still blows up.
 
 84
 00:04:22.389 --> 00:04:22.959
->> 扬声器 1: 好，全部。
+&gt；&gt；扬声器1：好的，就这样。
 &gt;&gt; Speaker 1: Okay, that's all.
 
 85
 00:04:22.959 --> 00:04:26.230
->> 凯尔 - 辛普森: 您不能自动创建变量，必须声明这些变量。
-&gt;&gt; Kyle Simpson: You cannot auto create
-variables, you have to declare them.
+&gt；&gt；Kyle Simpson：您不能自动创建变量，必须声明它们。
+&gt;&gt; Kyle Simpson: You cannot auto create variables, you have to declare them.

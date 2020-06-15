@@ -2,66 +2,57 @@ WEBVTT
 
 1
 00:00:00.040 --> 00:00:03.450
->> 凯尔 - 辛普森: 我最大的负面影响是他们选择了
-&gt;&gt; Kyle Simpson: I guess my biggest
-negative is that they chose to
+&gt；&gt；Kyle Simpson：我想我最大的负面影响是他们选择了
+&gt;&gt; Kyle Simpson: I guess my biggest negative is that they chose to
 
 2
 00:00:03.450 --> 00:00:07.459
-使用在 JavaScript 顶部必须层的语法。
-use a syntax that they had to
-layer on top of JavaScript.
+使用他们必须在JavaScript之上分层的语法。
+use a syntax that they had to layer on top of JavaScript.
 
 3
 00:00:07.459 --> 00:00:13.445
-有时， JavaScript 会使语法中的语法标准化。
-And some day, maybe JavaScript
-standardizes this syntax in it.
+也许有一天，JavaScript会在其中标准化这种语法。
+And some day, maybe JavaScript standardizes this syntax in it.
 
 4
 00:00:13.445 --> 00:00:19.164
-他们必须做的基本上是去为它定义一个外部标准。
-What they've had to do is essentially go
-and define an external standard for it.
+他们必须做的就是为它定义一个外部标准。
+What they've had to do is essentially go and define an external standard for it.
 
 5
 00:00:19.164 --> 00:00:22.285
-不是没有规格，而是外部的标准，
-It's not that there is no spec,
-but it's an external standard,
+并不是没有规范，而是一种外部标准，
+It's not that there is no spec, but it's an external standard,
 
 6
 00:00:22.285 --> 00:00:23.754
-不是 JavaScript 标准。
+不是JavaScript标准。
 not a JavaScript standard.
 
 7
 00:00:23.754 --> 00:00:28.065
-在我们看到的这一点上肯定没有任何保证，甚至是很有可能的。
-And there's certainly no guarantee or even
-likelihood at this point that we see in
+当然，在这一点上我们看不到任何保证，甚至是可能性
+And there's certainly no guarantee or even likelihood at this point that we see in
 
 8
 00:00:28.065 --> 00:00:32.914
-TypeScript 或 Flow 正好可能在某些假设的 JavaScript中结束。
-TypeScript or Flow is exactly what might
-end up in some hypothetical JavaScript.
+TypeScript或Flow正是可能最终出现在一些假想JavaScript中的东西。
+TypeScript or Flow is exactly what might end up in some hypothetical JavaScript.
 
 9
 00:00:32.914 --> 00:00:36.854
-但现在已经是好几年了，不像我们有第三阶段的提案
-But it is years away, it's not like
-we have a stage three proposal to
+但这是几年后的事了，我们又不是有第三阶段的提议
+But it is years away, it's not like we have a stage three proposal to
 
 10
 00:00:36.854 --> 00:00:41.369
-在任何时间点向 JavaScript 添加输入。
-add typing to JavaScript
-at any point soon.
+很快就会在JavaScript中添加类型。
+add typing to JavaScript at any point soon.
 
 11
 00:00:41.369 --> 00:00:43.979
-如果发生这种情况，这是非常遥远的事情。
+如果真的发生了，那就太离谱了。
 This is way far out if it ever happens.
 
 12
@@ -71,369 +62,313 @@ And I think it creates a sort of ecosystem
 
 13
 00:00:48.072 --> 00:00:53.020
-每当您选择特定语法和特定类型的工具时锁定
-lock-in whenever you choose a particular
-syntax and a particular kind of tooling
+无论何时选择特定语法和特定类型的工具，都要锁定
+lock-in whenever you choose a particular syntax and a particular kind of tooling
 
 14
 00:00:53.020 --> 00:00:57.909
-无法移植，因为它与 JavaScript 的情况不同。
-that isn't portable, because it isn't
-the same as what JavaScript is.
+这不是可移植的，因为它与JavaScript不同。
+that isn't portable, because it isn't the same as what JavaScript is.
 
 15
 00:00:57.909 --> 00:01:03.099
-JavaScript 获胜是因为它无处不在，但现在我们将自己锁定到
-JavaScript won because it's so ubiquitous,
-but then now we're locking ourselves into
+JavaScript之所以获胜，是因为它是如此无处不在，但现在我们将自己锁定在
+JavaScript won because it's so ubiquitous, but then now we're locking ourselves into
 
 16
 00:01:03.099 --> 00:01:08.096
-这个生态系统虽然很受欢迎，但并不是无所不在的。
-this ecosystems that even though it's
-popular, is not necessarily as ubiquitous.
+这种生态系统虽然很受欢迎，但并不一定是无处不在的。
+this ecosystems that even though it's popular, is not necessarily as ubiquitous.
 
 17
 00:01:08.096 --> 00:01:13.665
-所以我想那是我最大的挫折或是最大的犹豫
-And so I guess that's one of my biggest
-frustrations or my biggest hesitations.
+所以我想这是我最大的挫折之一，或者说是我最大的犹豫。
+And so I guess that's one of my biggest frustrations or my biggest hesitations.
 
 18
 00:01:13.665 --> 00:01:18.051
-现在，当我看到这些工具出现的时候，我真的很高兴。
-Now, it is true that I was actually very
-pleased when I saw that these tools came
+现在，当我看到这些工具出现时，我确实非常高兴
+Now, it is true that I was actually very pleased when I saw that these tools came
 
 19
 00:01:18.051 --> 00:01:21.903
-使用只能使用代码来完成输入注释的方法
-out with a way that you can do their
-typing annotations using only code
+提供了一种只使用代码就可以进行键入注释的方法
+out with a way that you can do their typing annotations using only code
 
 20
 00:01:21.903 --> 00:01:22.879
-注释。
+评论。
 comments.
 
 21
 00:01:22.879 --> 00:01:27.400
-所以至少在这种情况下你没有把自己锁在
-So at least in that scenario,
-you haven't locked yourself into
+所以至少在这种情况下，你没有把自己锁在
+So at least in that scenario, you haven't locked yourself into
 
 22
 00:01:27.400 --> 00:01:32.150
-如果我不用这个工具这个代码真的不能运行好吗
-if I don't use this tool this code
-literally can't run, all right?
+如果我不使用这个工具，这个代码就不能运行，好吗？
+if I don't use this tool this code literally can't run, all right?
 
 23
 00:01:32.150 --> 00:01:36.170
-如果你愿意的话那是个脱逃的办法
-That's sort of an escape valve if you
-will, and that's a good thing, but
+如果你愿意，那是一种逃逸阀，这是一件好事，但是
+That's sort of an escape valve if you will, and that's a good thing, but
 
 24
 00:01:36.170 --> 00:01:37.939
-几乎没有人在使用代码注释
+几乎没有人使用代码注释。
 almost nobody's using the code comments.
 
 25
 00:01:37.939 --> 00:01:42.189
-每个人都使用内联语法注释。
-Everybody's using the inline
-syntax annotations.
+每个人都在使用内联语法注释。
+Everybody's using the inline syntax annotations.
 
 26
 00:01:42.189 --> 00:01:44.829
-所以有很多洛克的事情发生了
-And so
-there is a lot of lock-in that happens and
+因此会发生很多锁定现象
+And so there is a lot of lock-in that happens and
 
 27
 00:01:44.829 --> 00:01:48.539
-我想我已经够长时间担心这些锁了
-I guess I've been around long enough
-to be wary of those sorts of lock-ins.
+我想我已经呆了足够长的时间，对这种锁定保持警惕。
+I guess I've been around long enough to be wary of those sorts of lock-ins.
 
 28
 00:01:50.280 --> 00:01:53.819
-还有一件事我在这里有个星号但基本上用的是
-Another thing, and I've got an asterisk
-here on purpose, but essentially using
+还有一件事，我特意在这里加了一个星号，但本质上是使用
+Another thing, and I've got an asterisk here on purpose, but essentially using
 
 29
 00:01:53.819 --> 00:01:58.990
-这些工具要求建立一种使屏障进入的建筑过程。
-those tools requires a build process
-which kinda raises the barrier to entry.
+这些工具需要一个构建过程，这在某种程度上提高了进入的壁垒。
+those tools requires a build process which kinda raises the barrier to entry.
 
 30
 00:01:58.990 --> 00:02:02.609
-而您无需拥有构建过程的唯一原因
-And the only reason that you wouldn't
-be required to have the build process
+唯一的原因就是你不需要有构建过程
+And the only reason that you wouldn't be required to have the build process
 
 31
 00:02:02.609 --> 00:02:05.459
-如果您执行了该代码注释方法，并且
-is if you did that code
-comments approach and
+如果您使用代码注释方法和
+is if you did that code comments approach and
 
 32
 00:02:05.459 --> 00:02:07.590
-那就没有什么好处了
-then got no benefit from
-the system whatsoever.
+然后就没有从系统中得到任何好处。
+then got no benefit from the system whatsoever.
 
 33
 00:02:09.430 --> 00:02:10.419
-所以没人会这么做
+所以没人会这么做。
 So nobody would do that.
 
 34
 00:02:10.419 --> 00:02:13.669
-没人会有麻烦去写那些代码评论
-Nobody would go to all the trouble
-to write all those code comments and
+没有人会不厌其烦地编写所有这些代码注释和
+Nobody would go to all the trouble to write all those code comments and
 
 35
 00:02:13.669 --> 00:02:17.229
-然后在编译器中不使用该工具，然后直接发货。
-then not use the tool at all in
-the compiler and then ship it directly.
+然后根本不在编译器中使用该工具，然后直接发布它。
+then not use the tool at all in the compiler and then ship it directly.
 
 36
 00:02:17.229 --> 00:02:21.079
-因此，它们本质上需要此构建过程。
-So they're essentially
-requiring this build process.
+所以他们本质上需要这个构建过程。
+So they're essentially requiring this build process.
 
 37
 00:02:21.079 --> 00:02:27.079
-这几天建筑过程是很普遍的
-And build processes are definitely
-common these days, but
+和构建过程现在确实很常见，但是
+And build processes are definitely common these days, but
 
 38
 00:02:27.079 --> 00:02:32.280
-又像以前的学人一样能写出一个 JavaScript 文件
-again as an old schooler it's nice to just
-be able to write a JavaScript file and
+同样，作为一个老学生，能够编写JavaScript文件和
+again as an old schooler it's nice to just be able to write a JavaScript file and
 
 39
 00:02:32.280 --> 00:02:36.920
-直接将其装入到页面中而不具有复杂性
-load it directly into a page
-without having the complexity of
+直接将其加载到页面中，而不具有以下复杂性
+load it directly into a page without having the complexity of
 
 40
 00:02:36.920 --> 00:02:39.900
-在某些特定管道中使用了十几种工具。
+一些特定管道中的十几个工具。
 a dozen tools in some particular pipeline.
 
 41
 00:02:39.900 --> 00:02:44.759
-所以我不是我们的粉丝对未来的开发商说
-And so I'm not a big fan of us saying
-to future developers that wanna learn
+所以我并不是很喜欢我们对未来想学习的开发人员说
+And so I'm not a big fan of us saying to future developers that wanna learn
 
 42
 00:02:44.759 --> 00:02:47.960
-JavaScript，您还需要了解所有这些 DevOps 和
-JavaScript, by the way,
-you also have to learn all this DevOps and
+顺便说一句，JavaScript，你还必须学习所有这些DevOps和
+JavaScript, by the way, you also have to learn all this DevOps and
 
 43
 00:02:47.960 --> 00:02:52.000
-写你第一条 JavaScript的东西
-stuff just to write your
-first line of JavaScript.
+只是为了编写您的第一行JavaScript。
+stuff just to write your first line of JavaScript.
 
 44
 00:02:52.000 --> 00:02:56.030
-如果 TypeScript 代表了我希望未来 JavaScript 的内容，
-If TypeScript represented what I hope
-the future of JavaScript would be,
+如果TypeScript代表了我希望JavaScript的未来，
+If TypeScript represented what I hope the future of JavaScript would be,
 
 45
 00:02:56.030 --> 00:02:59.250
-困扰我的是 TypeScript 是这样做的
-what bothers me is that
-TypeScript is done in such a way
+令我烦恼的是打字稿是这样做的
+what bothers me is that TypeScript is done in such a way
 
 46
 00:02:59.250 --> 00:03:01.689
-他们会永远被关在那个建筑里
-that they're gonna be locked
-into that build process forever.
+他们将永远被锁定在构建过程中。
+that they're gonna be locked into that build process forever.
 
 47
 00:03:02.939 --> 00:03:05.097
-我认为这并不是一个进入的障碍。
-And I don't think that's
-great as a barrier to entry.
+我不认为这是一个很好的进入壁垒。
+And I don't think that's great as a barrier to entry.
 
 48
 00:03:07.602 --> 00:03:12.324
->> Kyle Simpson: 从同一讨论中流出的类型为 :
-&gt;&gt; Kyle Simpson: Kind of flowing from that
-same discussion would be that there is
+&gt；&gt；Kyle Simpson：从同样的讨论中流出的是
+&gt;&gt; Kyle Simpson: Kind of flowing from that same discussion would be that there is
 
 49
 00:03:12.324 --> 00:03:16.602
-当你制造精密的工具时
-a trade-off when you make
-really sophisticated tools,
+当你制作非常复杂的工具时，
+a trade-off when you make really sophisticated tools,
 
 50
 00:03:16.602 --> 00:03:22.460
-就是你创造了一个快速复杂的表面区域
-is that you create a surface area
-which gets complex very quickly.
+就是你创造了一个表面区域，它很快就变得复杂了。
+is that you create a surface area which gets complex very quickly.
 
 51
 00:03:22.460 --> 00:03:26.360
-我所展示的这些例子之间的区别就是
-The difference between the examples that
-I've showed, which were just some sort of
+我所展示的例子之间的区别，只是某种
+The difference between the examples that I've showed, which were just some sort of
 
 52
 00:03:26.360 --> 00:03:31.020
-基本分层的类型，以及当您开始分层之类的类时
-basic layered-on types, and when you start
-layering in things like generics and
+基本的分层类型，当您开始分层时，例如泛型和
+basic layered-on types, and when you start layering in things like generics and
 
 53
 00:03:31.020 --> 00:03:35.884
-接口之类的，你快速，快速的，快速的
-interfaces and other things like that,
-you rapidly, rapidly get to a style of
+接口和其他类似的东西，你很快就会得到一种风格
+interfaces and other things like that, you rapidly, rapidly get to a style of
 
 54
 00:03:35.884 --> 00:03:38.685
-不像 JavaScript一样的代码
-code that doesn't look even
-remotely like JavaScript.
+看起来根本不像JavaScript的代码。
+code that doesn't look even remotely like JavaScript.
 
 55
 00:03:38.685 --> 00:03:40.921
-我估计是哈斯克尔
+在我看来，它看起来像Haskel。
 It looks like Haskel, in my estimation.
 
 56
 00:03:40.921 --> 00:03:45.655
-我并不是说在某种程度上我并不是说
-And I don't mean that in a sort of,
-I don't mean that in a way to say,
+我不是那种意思，我不是说，
+And I don't mean that in a sort of, I don't mean that in a way to say,
 
 57
 00:03:45.655 --> 00:03:51.840
-TypeScript不好，因为是这样，但这很吓人。
-TypeScript's bad because that's
-the case but that is very intimidating.
+打字是不好的，因为情况就是这样，但那是非常可怕的。
+TypeScript's bad because that's the case but that is very intimidating.
 
 58
 00:03:51.840 --> 00:03:55.759
-我是说我在这里花时间和精神努力
-I mean I'm spending time and lots of
-mental effort here trying in the research
+我的意思是我花了很多时间和精力在这里尝试研究
+I mean I'm spending time and lots of mental effort here trying in the research
 
 59
 00:03:55.759 --> 00:03:58.412
-因为这个课程想把这些东西弄明白
-for this course trying to
-figure this stuff out, and
+在这门课上试图弄清楚这件事，而且
+for this course trying to figure this stuff out, and
 
 60
 00:03:58.412 --> 00:04:01.729
-我开始阅读这方面的一些高级功能。
-I start reading through some of
-the advanced features of this.
+我开始阅读它的一些高级功能。
+I start reading through some of the advanced features of this.
 
 61
 00:04:01.729 --> 00:04:05.268
-我完全失去了所有这些角括号都嵌套在
-And I just got completely lost with all
-these angles brackets nested all over
+我只是完全迷失了所有这些角括号嵌套在一起
+And I just got completely lost with all these angles brackets nested all over
 
 62
 00:04:05.268 --> 00:04:06.610
-地方和东西
+那个地方什么的。
 the place and stuff.
 
 63
 00:04:06.610 --> 00:04:11.819
-语法在复杂性中成倍增长。
-The syntax explodes
-exponentially in complexity.
+语法的复杂性呈指数级爆炸。
+The syntax explodes exponentially in complexity.
 
 64
 00:04:11.819 --> 00:04:15.349
-我想如果有人利用这些精密的功能
-And I think if anyone were using
-those sophisticated features,
+我认为如果有人使用这些复杂的功能，
+And I think if anyone were using those sophisticated features,
 
 65
 00:04:15.349 --> 00:04:20.540
-我无法想象他们雇佣一个开发商还不是很，非常非常的
-I cannot imagine them hiring a developer
-on that was not already very, very
+我无法想象他们雇佣一个开发人员不是已经非常，非常
+I cannot imagine them hiring a developer on that was not already very, very
 
 66
 00:04:20.540 --> 00:04:24.910
-强大的 TypeScript 开发者，他们知道如何使用代码库。
-strong TypeScript developer, them having
-any clue what to do with the code base.
+强大的类型脚本开发人员，他们有任何线索如何处理代码库。
+strong TypeScript developer, them having any clue what to do with the code base.
 
 67
 00:04:24.910 --> 00:04:28.069
-再次，这个阻碍进入的障碍非常严重，
-So again,
-that barrier to entry ramps up very,
+所以再一次，进入壁垒上升得非常快，
+So again, that barrier to entry ramps up very,
 
 68
 00:04:28.069 --> 00:04:32.026
-就像你开始使用更多的工具一样
-very quickly as your start to use more and
-more of that tool.
+随着您开始使用越来越多的工具，速度非常快。
+very quickly as your start to use more and more of that tool.
 
 69
 00:04:32.026 --> 00:04:36.581
-我想也许最后的挫折感
-And I guess maybe the final
-frustration that I have or
+我想可能是我最后的挫败感或者
+And I guess maybe the final frustration that I have or
 
 70
 00:04:36.581 --> 00:04:41.757
-我和这些工具的不同之处在于
-the difference that I share with
-these tools is that I don't
+我与这些工具共享的不同之处在于，我不
+the difference that I share with these tools is that I don't
 
 71
 00:04:41.757 --> 00:04:48.300
-认为是用 JavaScript 的 DNA 来考虑静态打字的想法
-think it's in the DNA of JavaScript to
-consider the idea of static typing.
+我认为考虑静态类型的想法是JavaScript的DNA。
+think it's in the DNA of JavaScript to consider the idea of static typing.
 
 72
 00:04:48.300 --> 00:04:51.990
-就是那些容器像变量和参数之类的东西
-That is that containers, things like
-variables and parameters and returns and
+也就是说容器，诸如变量和参数以及返回和
+That is that containers, things like variables and parameters and returns and
 
 73
 00:04:51.990 --> 00:04:58.750
-属性，这些属性必须始终只有一种类型。
-properties, that they necessarily must
-only have one type always and forever.
+属性，它们必须永远只有一种类型。
+properties, that they necessarily must only have one type always and forever.
 
 74
 00:04:58.750 --> 00:05:02.480
-有些地方的好处就像退货式的
-There can be some places where that's
-beneficial like the return type-over
+可能有一些地方这样做是有益的，比如返回类型转换
+There can be some places where that's beneficial like the return type-over
 
 75
 00:05:02.480 --> 00:05:04.360
@@ -442,130 +377,110 @@ function but variables, I guess,
 
 76
 00:05:04.360 --> 00:05:09.069
-我不认为那是在 DNA 里输入我们的变量
-specifically, I don't think that's
-within the DNA to type our variables.
+具体地说，我不认为这是在DNA中键入我们的变量。
+specifically, I don't think that's within the DNA to type our variables.
 
 77
 00:05:09.069 --> 00:05:13.040
-如果您认为 JavaScript 是真实的，实际上是任何动态语言
-If you think of what JavaScript really
-is and in fact any dynamic language
+如果你想到JavaScript到底是什么，实际上是任何动态语言
+If you think of what JavaScript really is and in fact any dynamic language
 
 78
 00:05:13.040 --> 00:05:17.759
-它是一种值输入，而不是变量输入的语言。
-it's a language that is value typing,
-not variable typing.
+它是一种值类型语言，而不是变量类型语言。
+it's a language that is value typing, not variable typing.
 
 79
 00:05:17.759 --> 00:05:22.762
-所以这种感觉就像是被错误的东西放在了 JavaScript 之上。
-And so this feels like the wrong
-thing foisted on top of JavaScript.
+所以这感觉像是强加在JavaScript之上的错误的东西。
+And so this feels like the wrong thing foisted on top of JavaScript.
 
 80
 00:05:22.762 --> 00:05:27.143
-从根本上来说我觉得这不是背叛
-It feels fundamentally to me
-like it's not, it's a betrayal,
+从根本上来说，我觉得这不是，这是一种背叛，
+It feels fundamentally to me like it's not, it's a betrayal,
 
 81
 00:05:27.143 --> 00:05:30.740
-它不尊重 JavaScript 的运作方式
-it's not respecting
-the way JavaScript works.
+它不尊重JavaScript的工作方式。
+it's not respecting the way JavaScript works.
 
 82
 00:05:30.740 --> 00:05:33.100
-它试图让它变成另一个不同的东西。
-It's trying to make it
-into something different.
+它试图把它变成不同的东西。
+It's trying to make it into something different.
 
 83
 00:05:33.100 --> 00:05:36.000
-有些人想把它变成不同的东西因为他们认为
-And some people are trying to make it into
-something different because they think
+有些人试图把它变成不同的东西，因为他们认为
+And some people are trying to make it into something different because they think
 
 84
 00:05:36.000 --> 00:05:38.733
-当前的 JavaScript 不足。
-what JavaScript currently is,
-is insufficient.
+JavaScript目前是不够的。
+what JavaScript currently is, is insufficient.
 
 85
 00:05:39.810 --> 00:05:42.699
-它坏掉了还不够好
-That it's broken,
-that it's not good enough.
+它坏了，还不够好。
+That it's broken, that it's not good enough.
 
 86
 00:05:42.699 --> 00:05:44.730
-我觉得 JavaScript 太棒了
+我认为JavaScript非常棒。
 I think JavaScript is fantastic.
 
 87
 00:05:44.730 --> 00:05:46.850
-因此，我认为我们不需要修复 JavaScript。
-So I don't think we
-need to fix JavaScript.
+所以我不认为我们需要修复JavaScript。
+So I don't think we need to fix JavaScript.
 
 88
 00:05:48.050 --> 00:05:52.040
-我认为可能是最强壮的小人之一
-That I think is probably one
-of the strongest callings.
+我认为这可能是最强烈的呼唤之一。
+That I think is probably one of the strongest callings.
 
 89
 00:05:52.040 --> 00:05:56.350
-所以在这个工具可以做的事情之间有很大的分岐。
-So there's a big divide there, between the
-great things that this tooling can do for
+所以这里有一个很大的分歧，在这个工具可以做的伟大的事情之间
+So there's a big divide there, between the great things that this tooling can do for
 
 90
 00:05:56.350 --> 00:05:59.329
-生态系统和使用它的团队
-the ecosystem, and for
-the teams that are using it, and
+生态系统，以及使用它的团队，以及
+the ecosystem, and for the teams that are using it, and
 
 91
 00:05:59.329 --> 00:06:04.180
-我认为有些人真的很强烈，在两者之间应该有更多的选择。
-I think some really strong downsides, and
-there should be more options in between.
+我认为有一些非常严重的不利因素，在两者之间应该有更多的选择。
+I think some really strong downsides, and there should be more options in between.
 
 92
 00:06:04.180 --> 00:06:08.160
-所以我开始讨论的原因是我想扩大讨论范围
-And it's why I started this discussion
-by saying I wanna broaden the discussion
+这就是为什么我开始讨论的时候说我想扩大讨论范围
+And it's why I started this discussion by saying I wanna broaden the discussion
 
 93
 00:06:08.160 --> 00:06:11.250
-这两个商标就像 TypeScript 和
-from just specifically these two
-trademarks like TypeScript and
+来自这两个商标，比如TypeScript和
+from just specifically these two trademarks like TypeScript and
 
 94
 00:06:11.250 --> 00:06:15.560
-有关 " 感知类型 " 的概念的更广泛的讨论流。
-Flow to a larger discussion about
-the idea of type aware linting.
+流到关于类型感知衬里的想法的更大的讨论。
+Flow to a larger discussion about the idea of type aware linting.
 
 95
 00:06:16.740 --> 00:06:20.613
-以感知为概念的类型感知是有用的，也很重要。
-The type aware linting as
-an idea is useful and important.
+类型感知衬里作为一个想法是有用的和重要的。
+The type aware linting as an idea is useful and important.
 
 96
 00:06:20.613 --> 00:06:23.720
-而 TypeScript 和 Flow 是两种特殊的方法，但是
-And TypeScript and Flow are two
-particular ways of doing it, but
+TypeScript和Flow是两种特殊的方式，但是
+And TypeScript and Flow are two particular ways of doing it, but
 
 97
 00:06:23.720 --> 00:06:25.000
-而不是唯一的方法
+不是唯一的方法。
 not the only ways of doing it.

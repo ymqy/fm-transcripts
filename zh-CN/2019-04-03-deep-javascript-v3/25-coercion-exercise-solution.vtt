@@ -2,32 +2,28 @@ WEBVTT
 
 1
 00:00:00.230 --> 00:00:05.379
->> 凯尔 - 辛普森: 好的，欢迎回来。
-&gt;&gt; Kyle Simpson: Okay,
-welcome back from the coercion exercise.
+&gt；&gt；Kyle Simpson：好的，欢迎从强制练习中回来。
+&gt;&gt; Kyle Simpson: Okay, welcome back from the coercion exercise.
 
 2
 00:00:05.379 --> 00:00:08.759
-希望你能找到一个有趣的挑战
-Hopefully you found that
-an interesting challenge.
+希望你发现这是一个有趣的挑战。
+Hopefully you found that an interesting challenge.
 
 3
 00:00:08.759 --> 00:00:14.070
-让我们重新开始，记住阅读过的我说我们想要一个有效的名字函数。
-Let's start, again, remember the read me
-says we want an is valid name function.
+让我们再次开始，记住read me说我们需要一个is valid name函数。
+Let's start, again, remember the read me says we want an is valid name function.
 
 4
 00:00:14.070 --> 00:00:16.679
-因此，我们将首先定义 isValidName()。
+因此，我们将从定义isValidName()开始。
 So we'll start by defining isValidName().
 
 5
 00:00:16.679 --> 00:00:21.879
-它需要命名，它需要声明几个东西。
-It needs to take a name, and
-it needs to assert several things.
+它需要一个名称，它需要断言几个东西。
+It needs to take a name, and it needs to assert several things.
 
 6
 00:00:21.879 --> 00:00:24.660
@@ -36,643 +32,563 @@ First off, that it is a string.
 
 7
 00:00:24.660 --> 00:00:30.199
-其次，它至少包含了一些不仅是白色的空间，
-Secondly, that it contains at least
-something that's not only white space,
+其次，它至少包含一些不仅仅是空白的东西，
+Secondly, that it contains at least something that's not only white space,
 
 8
 00:00:30.199 --> 00:00:34.600
-它所包含的不是白种空间的东西至少要
-and the stuff that it contains that's
-not white space has to be at least
+并且它包含的不是空白的内容至少必须是
+and the stuff that it contains that's not white space has to be at least
 
 9
 00:00:34.600 --> 00:00:35.423
-三个字好吗
+三个字符长，好吗？
 three characters long, okay?
 
 10
 00:00:36.700 --> 00:00:42.442
-首先，我们要确保输入名称 == "string"。
-So first off, we wanna make sure
-that the typeof name == "string".
+因此，首先，我们要确保typeof name=“string”。
+So first off, we wanna make sure that the typeof name == "string".
 
 11
 00:00:42.442 --> 00:00:46.895
-在此我使用的是与运算符类型的双等号，因为我们
-Here I'm using the double equals
-with the type of operator because we
+在这里，我将双等号与运算符的类型一起使用，因为我们
+Here I'm using the double equals with the type of operator because we
 
 12
 00:00:46.895 --> 00:00:50.518
 知道运算符的类型总是返回字符串。
-know that the type of operator
-always returns strings.
+know that the type of operator always returns strings.
 
 13
 00:00:50.518 --> 00:00:54.142
-我们知道它总是会返回非空字符串
-And we know that it always
-returns non-empty strings,
+我们知道它总是返回非空字符串，
+And we know that it always returns non-empty strings,
 
 14
 00:00:54.142 --> 00:00:58.162
-所以如果你愿意的话我们就能安全地走出角落
-so we know we're safely out of
-the corner cases, if you will.
+所以我们知道，如果你愿意的话，我们已经安全地走出了角落的箱子。
+so we know we're safely out of the corner cases, if you will.
 
 15
 00:00:58.162 --> 00:01:01.878
-所以如果 (typeof name == "string")，
+因此如果(typeof name=“string”)，
 So if (typeof name == "string"),
 
 16
 00:01:01.878 --> 00:01:09.028
-然后， >> 凯尔 - 辛普森: 我们也想
-and,
-&gt;&gt; Kyle Simpson: We also wanna
+还有，&gt；&gt；Kyle Simpson：我们也想
+and, &gt;&gt; Kyle Simpson: We also wanna
 
 17
 00:01:09.028 --> 00:01:14.418
-确保我们不会只考虑字符串中可能出现的空白
-make sure that we don't consider any only
-white space that may be in the string,
+确保我们不会只考虑字符串中可能存在的任何空白，
+make sure that we don't consider any only white space that may be in the string,
 
 18
 00:01:14.418 --> 00:01:17.495
-关于我们的长度检查就是这样
+在我们的长度检查方面，也就是说。
 in terms of our length check, that is.
 
 19
 00:01:17.495 --> 00:01:23.920
-因此，使用 JavaScript 字符串来执行此操作的一个内置方法是修剪方法。
-So one built-in way to do that with
-JavaScript strings is the trim method.
+因此，使用JavaScript字符串实现这一点的一个内置方法是trim方法。
+So one built-in way to do that with JavaScript strings is the trim method.
 
 20
 00:01:23.920 --> 00:01:29.257
-所以我们可以说如果 name.trim() 在任何重量空间上
-So we can say if name.trim(),
-which trims off any weight space
+所以我们可以说if name.trim()，它可以修剪掉任何权重空间
+So we can say if name.trim(), which trims off any weight space
 
 21
 00:01:29.257 --> 00:01:34.594
-从任何一方开始，如果剩下的至少是三种长度的话，
-from either side, and if what is
-left is at least of length three,
+从两边，如果剩下的长度至少是3，
+from either side, and if what is left is at least of length three,
 
 22
 00:01:34.594 --> 00:01:37.525
-我们就知道有一个有效的字符串
+那么我们就知道我们有一个有效的字符串。
 then we know we have a valid string.
 
 23
 00:01:43.420 --> 00:01:46.097
->> 凯尔 - 辛普森: 我使用的是大于还是大于等于 ?
-&gt;&gt; Kyle Simpson: Did I use greater than,
-or greater than or equal?
+&gt；&gt；Kyle Simpson：我使用的是大于，还是大于或等于？
+&gt;&gt; Kyle Simpson: Did I use greater than, or greater than or equal?
 
 24
 00:01:46.097 --> 00:01:48.240
-嗯，对不起， >= 3，好吗 ?
+是的，对不起，&gt；=3，好吗？
 Yeah, I'm sorry, &gt;= 3, okay?
 
 25
 00:01:48.240 --> 00:01:53.710
-在这种情况下，我们要返回 true ，否则，我们可以返回 false。
-In that case, we wanna return true,
-and otherwise we can return false.
+在这种情况下，我们希望返回TRUE，否则可以返回FALSE。
+In that case, we wanna return true, and otherwise we can return false.
 
 26
 00:01:54.939 --> 00:01:57.729
-现在你可以简化这一点
-Now, you could simplify
-this a little bit to simply
+现在，您可以将其简化为简单地
+Now, you could simplify this a little bit to simply
 
 27
 00:01:57.729 --> 00:02:00.790
-返回该表达式 ( 如果是您的首选项 ) 。
-return that expression if
-that's your preference.
+如果这是您的偏好，请返回该表达式。
+return that expression if that's your preference.
 
 28
 00:02:00.790 --> 00:02:02.859
-您在此处不能有一个 if 语句。
+这里不能有if语句。
 You could not have an if statement here.
 
 29
 00:02:02.859 --> 00:02:05.680
-只是为了说明我们做出的决定
-Just being illustrative of
-the decision making that we make,
+只是为了说明我们所做的决定，
+Just being illustrative of the decision making that we make,
 
 30
 00:02:05.680 --> 00:02:08.330
-我们的成功条件是什么
+我们处于成功状态是什么？
 which is are we in a success condition?
 
 31
 00:02:08.330 --> 00:02:12.060
-太好了，我们回到现实，否则我们就不回来了，我们就会返回 false。
-Great, we return true,
-otherwise we're not, and we return false.
+很好，我们返回TRUE，否则我们不是，并且我们返回FALSE。
+Great, we return true, otherwise we're not, and we return false.
 
 32
 00:02:12.060 --> 00:02:16.439
-所以如果我们马上测试这一测试，我们就应该通过测试，
-So if we just test this right away,
-we should get that test to pass, and
+所以如果我们现在就测试一下，我们应该让测试通过，并且
+So if we just test this right away, we should get that test to pass, and
 
 33
 00:02:16.439 --> 00:02:22.250
-我们应该让这六次测试通过否则一切都不可能成功
-we should get these six tests to pass,
-and everything else should fail.
+我们应该通过这六个测试，其他的都应该失败。
+we should get these six tests to pass, and everything else should fail.
 
 34
 00:02:22.250 --> 00:02:27.181
-我不想出错所以我要定义
-I don't wanna get errors,
-so I'm gonna just define
+我不想出错，所以我只想定义
+I don't wanna get errors, so I'm gonna just define
 
 35
 00:02:27.181 --> 00:02:32.960
-一个 hoursAttended() ，并且它没有为我们返回任何内容。
-an hoursAttended() and
-have it return nothing for us.
+一个hoursAttendant()，并让它不为我们返回任何内容。
+an hoursAttended() and have it return nothing for us.
 
 36
 00:02:32.960 --> 00:02:34.960
-所以所有其他的都应该失败。
+所以其余的都应该失败。
 So all the rest of those should fail.
 
 37
 00:02:34.960 --> 00:02:41.520
-所以让我们尝试， >> 凯尔 - 辛普森: 在控制台里。
-So let's try,
-&gt;&gt; Kyle Simpson: Over in the console.
+所以让我们试试，&gt；&gt；Kyle Simpson：在控制台上。
+So let's try, &gt;&gt; Kyle Simpson: Over in the console.
 
 38
 00:02:41.520 --> 00:02:44.479
-再一次，你可以通过节点来运行，如果你觉得更舒适的话。
-Again, you could run that via Node,
-if that feels more comfortable to you.
+同样，您可以通过Node运行它，如果您觉得更舒服的话。
+Again, you could run that via Node, if that feels more comfortable to you.
 
 39
 00:02:44.479 --> 00:02:46.460
-但让我们把它在控制台上运行
-But let's run it over here in the console,
-and
+但是让我们在控制台上运行它，并且
+But let's run it over here in the console, and
 
 40
 00:02:46.460 --> 00:02:50.920
-让我们看看它是否显示出我们预期的结果
-let's see if it prints out
-the results we're expecting.
+让我们看看它是否打印出我们期望的结果。
+let's see if it prints out the results we're expecting.
 
 41
 00:02:50.920 --> 00:02:56.000
-因此，第一个测试返回 true，这是好的，然后我们有几次失败。
-So the first test returns true, which is
-good, and then we have several failures.
+所以第一个测试返回TRUE，这很好，然后我们有几个失败。
+So the first test returns true, which is good, and then we have several failures.
 
 42
 00:02:56.000 --> 00:03:00.419
-4 次失败，然后我们有一，二，三，四，五，六次成功，
-Four failures, and then we have one, two,
-three, four, five, six successes, so
+四次失败，然后我们有一，二，三，四，五，六次成功，所以
+Four failures, and then we have one, two, three, four, five, six successes, so
 
 43
 00:03:00.419 --> 00:03:04.360
-我们看到的是有效的名字通过了我们的测试
-we see that is valid name is
-passing our test three, okay?
+我们看到有效的名字通过了我们的测试三，好吗？
+we see that is valid name is passing our test three, okay?
 
 44
 00:03:05.580 --> 00:03:07.210
-进展不错啊
+这是很好的进展。
 That's good progress.
 
 45
 00:03:07.210 --> 00:03:09.900
-让我们一起去个小时
+让我们转到小时关注。
 Let's move on to hoursAttended.
 
 46
 00:03:09.900 --> 00:03:13.050
-现在这个有点复杂但不太重要
-Now, this one was a little bit more
-complex but not significantly so,
+现在，这个稍微复杂一点，但不是很明显，
+Now, this one was a little bit more complex but not significantly so,
 
 47
 00:03:13.050 --> 00:03:15.020
-它有两个参数
+它接受两个参数。
 it takes in two parameters.
 
 48
 00:03:15.020 --> 00:03:18.401
-记得我们会打电话给那些参加过的人
-Remember we're gonna call those attended,
-meaning the number of hours that you
+记住我们将呼叫那些出席的人，意思是你的小时数
+Remember we're gonna call those attended, meaning the number of hours that you
 
 49
 00:03:18.401 --> 00:03:20.750
-参加了一个讲习班，以及讲习班的时间。
-attended a workshop, and
-the length of the workshop.
+参加了一个研讨会，以及研讨会的长度。
+attended a workshop, and the length of the workshop.
 
 50
 00:03:20.750 --> 00:03:25.180
-现在我们要确保输入的是有效的
-Now, we're trying to make sure
-that what was inputted is valid,
+现在，我们正在努力确保输入的内容是有效的，
+Now, we're trying to make sure that what was inputted is valid,
 
 51
 00:03:25.180 --> 00:03:29.219
-你参加的时间比参加研讨会的时间不多
-that you attended not more hours
-than the workshop actually attended,
+你参加的时间不超过研讨会实际参加的时间，
+that you attended not more hours than the workshop actually attended,
 
 52
 00:03:29.219 --> 00:03:30.602
-你不想在那里得到额外的贷款
+你不会想在那里得到额外的学分的。
 you don't wanna get extra credit there.
 
 53
 00:03:30.602 --> 00:03:39.229
-所以我说我们想确保这些都是字符串或数字
-So the read me says we wanna make sure
-that these are either strings or numbers,
+所以Read Me说我们要确保这些是字符串或数字，
+So the read me says we wanna make sure that these are either strings or numbers,
 
 54
 00:03:39.229 --> 00:03:42.770
-不管他们是什么人我们都要把他们当成数字
-and that regardless of which one they
-are we're gonna treat them as numbers.
+不管他们是哪一个我们都会把他们当成数字。
+and that regardless of which one they are we're gonna treat them as numbers.
 
 55
 00:03:42.770 --> 00:03:50.435
-所以如果有人参加的话，我们就想把它变成一个数字，好吗 ?
-So if the attended is a string then
-we wanna turn it into a number, okay?
+所以如果Attended是一个字符串，那么我们想把它变成一个数字，好吗？
+So if the attended is a string then we wanna turn it into a number, okay?
 
 56
 00:03:50.435 --> 00:03:58.719
-首先，我们可以说 ( typeof soteding == "string")。
-So first off we could say if
-the (typeof attended == "string").
+因此，首先我们可以说如果(typeof attended=“string”)。
+So first off we could say if the (typeof attended == "string").
 
 57
 00:03:59.719 --> 00:04:07.379
-你还记得我要在这里重复检查
-And you recall that it's going to,
-I'll just double check here.
+你还记得它会的，我会在这里再检查一遍。
+And you recall that it's going to, I'll just double check here.
 
 58
 00:04:07.379 --> 00:04:11.099
-是啊我们记得我们要确保
+是的，我们记得我们需要确保
 Yep, we recall that we need to make sure
 
 59
 00:04:11.099 --> 00:04:15.280
-我们不能把一个空的字符串变成一个零
-that we're not getting an empty
-string coerced into a zero,
+我们不会把空字符串强制为零，
+that we're not getting an empty string coerced into a zero,
 
 60
 00:04:15.280 --> 00:04:18.750
-这不是一个在这里打字的人
-cuz that's not the same thing
-as somebody typing in zero here.
+因为这和有人在这里键入零不是一回事。
+cuz that's not the same thing as somebody typing in zero here.
 
 61
 00:04:18.750 --> 00:04:20.839
-这就是我们想要照顾的小角落。
-So that's a little corner case
-that we wanna take care of.
+所以这就是我们想要处理的一个小角落的案子。
+So that's a little corner case that we wanna take care of.
 
 62
 00:04:20.839 --> 00:04:24.819
-所以我们要说服务员的类型是否为字符串，以及
-So we're gonna say if type of
-attendant is a string, and
+所以我们要说的是如果服务员的类型是字符串，并且
+So we're gonna say if type of attendant is a string, and
 
 63
 00:04:24.819 --> 00:04:27.279
-我们要用我们的小伙伴装饰
-we're gonna use our
-little friend trim again.
+我们又要用我们的小朋友修剪了。
+we're gonna use our little friend trim again.
 
 64
 00:04:27.279 --> 00:04:34.959
-Antended.trim() 不等于空字符串。
-And attended.trim() is not
-equal to empty string.
+Attended.trim()不等于空字符串。
+And attended.trim() is not equal to empty string.
 
 65
 00:04:34.959 --> 00:04:39.550
-所以我们不需要任何白色的空间或者空的字符串来适应这里。
-So we don't want any white space only or
-empty strings to fit in here.
+因此，我们不希望这里只有任何空白或空字符串。
+So we don't want any white space only or empty strings to fit in here.
 
 66
 00:04:39.550 --> 00:04:42.949
-但如果我们有一个非空的字符串，那么我们就开始吧
-But if we have a non-empty string,
-then let's go ahead and
+但是如果我们有一个非空字符串，那么让我们继续
+But if we have a non-empty string, then let's go ahead and
 
 67
 00:04:42.949 --> 00:04:44.310
-试着把它变成一个数字
+试着把它变成一个数字。
 try to make it into a number.
 
 68
 00:04:44.310 --> 00:04:51.930
-所以我们可以说出席人数 ( 出席人数 ) 。
-So here we could say
-attended = Number(attended).
+所以在这里我们可以说Attended=number(Attended)。
+So here we could say attended = Number(attended).
 
 69
 00:04:51.930 --> 00:04:55.850
-这就是我从标准人群中分化的地方比如
-Now, here's where I diverge a bit from
-standard crowd that, for example,
+现在，这就是我与标准人群的一些不同之处，例如，
+Now, here's where I diverge a bit from standard crowd that, for example,
 
 70
 00:04:55.850 --> 00:05:01.930
-如静态打字，他们不喜欢将变量重新分配给它的新类型。
-like static typing, cuz they don't like
-to reassign a variable to its new type.
+像静态类型一样，因为他们不喜欢将变量重新分配给它的新类型。
+like static typing, cuz they don't like to reassign a variable to its new type.
 
 71
 00:05:01.930 --> 00:05:07.199
-我认为这是一个完全有效的示例，用于重新分配具有不同变量的变量
-I think this is a perfectly valid example
-of reassigning variables with a different
+我认为这是用不同的
+I think this is a perfectly valid example of reassigning variables with a different
 
 72
 00:05:07.199 --> 00:05:12.290
-类型，当显式地更改某种类型的类型时，就像我们在这里一样。
-type, when you are explicitly changing the
-type for some purpose, like we are here.
+类型，当您出于某种目的显式更改类型时，就像我们在这里一样。
+type, when you are explicitly changing the type for some purpose, like we are here.
 
 73
 00:05:12.290 --> 00:05:13.999
-所以这也是为什么
+所以这就是为什么
 So that's one of the reasons why
 
 74
 00:05:15.100 --> 00:05:20.180
-我不喜欢当工具向我抱怨重新分配类型时的情况。
-I don't like it when tools complain
-at me about reassigning over types.
+我不喜欢工具抱怨我重新分配类型。
+I don't like it when tools complain at me about reassigning over types.
 
 75
 00:05:20.180 --> 00:05:23.420
-好吧那我们就会做同样的事
-Okay, so we're gonna do the same
-thing that we just did for attended,
+好的，我们要做和刚才参加的一样的事情，
+Okay, so we're gonna do the same thing that we just did for attended,
 
 76
 00:05:23.420 --> 00:05:26.040
-对于长度变量，我们也要这样做。
-we also wanna do that for
-the length variable.
+我们也想对长度变量这样做。
+we also wanna do that for the length variable.
 
 77
 00:05:26.040 --> 00:05:33.000
-因此，我将只复制该变量，并将变量更改为长度。
-So I will just duplicate that and
-change the variable to length.
+所以我将复制它，并将变量更改为length。
+So I will just duplicate that and change the variable to length.
 
 78
 00:05:33.000 --> 00:05:37.201
-也许我们可以把它变成一个函数，但是 [SOUND] 谁在乎呢 ?
-We could probably factor that out into
-a function, but [SOUND] who cares?
+我们可能会把它分解成一个函数，但[声音]谁在乎呢？
+We could probably factor that out into a function, but [SOUND] who cares?
 
 79
 00:05:37.201 --> 00:05:44.579
-好，现在我们知道，如果把它作为一个字符串传入，它就成了一个数字。
-Okay, so now we know that if it was passed
-in as a string, it has become a number.
+好的，现在我们知道了，如果它是以字符串的形式传入的，那么它就变成了一个数字。
+Okay, so now we know that if it was passed in as a string, it has become a number.
 
 80
 00:05:44.579 --> 00:05:46.709
-如果是一个数字，它仍然是一个数字。
+如果它是一个数字，它仍然是一个数字。
 If it was a number, it's still a number.
 
 81
 00:05:46.709 --> 00:05:49.610
-但我们不知道你在什么地方
-But we don't know that you might have
-passed in something like null or
+但我们不知道您是否传入了类似null或
+But we don't know that you might have passed in something like null or
 
 82
 00:05:49.610 --> 00:05:53.250
-未定义，所以我们还是实际需要检查这两者都是数字
-undefined, so we still actually need
-to check that both of these are numbers
+未定义，所以我们实际上仍然需要检查这两个数字
+undefined, so we still actually need to check that both of these are numbers
 
 83
 00:05:53.250 --> 00:05:54.639
-在我们做点什么之前
+在我们做什么之前。
 before we do something.
 
 84
 00:05:54.639 --> 00:05:58.725
-所以我们首先要说的是
+所以我们的支票意味着首先说，
 So our check means to first say,
 
 85
 00:05:58.725 --> 00:06:03.262
-如果输入的类型为 == "number"
+如果typeof attended=“number”
 if typeof attended == "number"
 
 86
 00:06:03.262 --> 00:06:08.730
-&& 类型长度 == "number"。
+&amp；&amp；typeof length=“number”。
 &amp;&amp; typeof length == "number".
 
 87
 00:06:08.730 --> 00:06:11.459
-如果其中一个不是真的我们会被保释的对吧
-If either one of those is not true,
-we're gonna bail out, right?
+如果这两个都不是真的，我们就会跳伞，对吧？
+If either one of those is not true, we're gonna bail out, right?
 
 88
 00:06:11.459 --> 00:06:14.240
-这就是我们的声明
+这是我们的if语句，并且
 So here is our if statement, and
 
 89
 00:06:14.240 --> 00:06:18.319
-那我们就得保释期了这就意味着我们要回去了
-then we're gonna bail out, and
-that means we end up returning false.
+然后我们会跳伞，这意味着我们最终会返回错误。
+then we're gonna bail out, and that means we end up returning false.
 
 90
 00:06:18.319 --> 00:06:20.410
-这未通过验证。
+这个没有通过验证。
 This didn't pass the validation.
 
 91
 00:06:20.410 --> 00:06:23.279
-但我们还有更多的需要去检查
-But there's more that we need
-to check besides just the fact
+但除了事实之外，我们还需要检查更多
+But there's more that we need to check besides just the fact
 
 92
 00:06:23.279 --> 00:06:24.600
-他们是数字
+它们是数字。
 that they are numbers.
 
 93
 00:06:24.600 --> 00:06:26.269
-如果你还记得我的话
+如果你回想起读我这本书，
 If you recall in the read me,
 
 94
 00:06:26.269 --> 00:06:29.060
-说我们想确保他们被视为数字
-it said we wanna make sure that
-they're treated as numbers.
+它说我们要确保他们被当作数字对待。
+it said we wanna make sure that they're treated as numbers.
 
 95
 00:06:29.060 --> 00:06:31.519
-它们必须是 0 或更高。
+它们必须为0或更高。
 They need to be 0 or higher.
 
 96
 00:06:31.519 --> 00:06:37.293
-所以我们不仅要检查这些数字
-So we need to check not
-only that they are numbers,
+所以我们不仅要检查它们是不是数字，
+So we need to check not only that they are numbers,
 
 97
 00:06:37.293 --> 00:06:44.860
-但我们还需要看到有人出席了 > = 0，长度 >= 0。
-but we need to also see that
-attended &gt;= 0, and length &gt;= 0.
+但我们还需要看到attended&gt；=0，length&gt；=0。
+but we need to also see that attended &gt;= 0, and length &gt;= 0.
 
 98
 00:06:45.886 --> 00:06:48.680
-我还说他们需要完整的数字
-The read me also says that
-they need to be whole numbers,
+Read Me还说它们需要是整数，
+The read me also says that they need to be whole numbers,
 
 99
 00:06:48.680 --> 00:06:54.449
-意味着它们不能像测试用例中的 3.14或 9.1 。
-meaning they can't be like 3.14,
-or 9.1 as in the test cases.
+这意味着它们不能像测试用例中那样是3.14或9.1。
+meaning they can't be like 3.14, or 9.1 as in the test cases.
 
 100
 00:06:54.449 --> 00:06:59.060
-如果你对 mdn 做了快速检查你可能发现
-So if you did a quick check on
-mdn you might have found that
+因此，如果您对MDN进行了快速检查，您可能会发现
+So if you did a quick check on mdn you might have found that
 
 101
 00:06:59.060 --> 00:07:03.040
-专用于 JavaScript 的实用程序。
-there is a utility built into
-JavaScript specially for this.
+JavaScript中有一个专门为此而构建的实用程序。
+there is a utility built into JavaScript specially for this.
 
 102
 00:07:03.040 --> 00:07:11.100
-它叫做 Number.isInteger ，它告诉我们我们是否有一个东西，是吗 ?
-And it's called Number.isInteger, that
-tells us if we have a thing that is, yeah?
+它叫做Number.isInteger，它告诉我们是否有东西，是吗？
+And it's called Number.isInteger, that tells us if we have a thing that is, yeah?
 
 103
 00:07:11.100 --> 00:07:13.519
->> 扬声器 2: 我的意思是，我认为你实际上是把它作为一个数字
-&gt;&gt; Speaker 2: I mean, I think you actually
-casted it as a number in the first
+&gt；&gt；演讲者2：我的意思是，我认为你实际上把它作为第一个数字
+&gt;&gt; Speaker 2: I mean, I think you actually casted it as a number in the first
 
 104
 00:07:13.519 --> 00:07:14.810
-部分，对吧 ?
+一部分对吧？
 part, right?
 
 105
 00:07:14.810 --> 00:07:15.382
->> 凯尔 - 辛普森: 是的。 >> 扬声器 2:
-&gt;&gt; Kyle Simpson: Yes.
-&gt;&gt; Speaker 2: So
+&gt；&gt；Kyle Simpson：是的。&gt；&gt；扬声器2：SO
+&gt;&gt; Kyle Simpson: Yes. &gt;&gt; Speaker 2: So
 
 106
 00:07:15.382 --> 00:07:18.343
-他们在后面总是号码很可能是 [ CROSSTALK]
-they're are always gonna be numbers
-afterwards probably [CROSSTALK]
+它们以后可能永远都是数字[CROSSTALK]
+they're are always gonna be numbers afterwards probably [CROSSTALK]
 
 107
 00:07:18.343 --> 00:07:18.917
->> 凯尔 - 辛普森: 他们是
+&gt；&gt；Kyle Simpson：他们是，
 &gt;&gt; Kyle Simpson: They are,
 
 108
 00:07:18.917 --> 00:07:22.803
-因为如果我在这里过空就不会进这条款了
-because if I pass in a null here then
-it's not gonna go into this clause and
+因为如果我在这里传递一个NULL，那么它就不会进入这个子句
+because if I pass in a null here then it's not gonna go into this clause and
 
 109
 00:07:22.803 --> 00:07:24.574
-这里还会是空的
+这里仍然是空的。
 it's gonna still be null here.
 
 110
 00:07:24.574 --> 00:07:25.610
->> 扬声器 2: 嗯。
+&gt；&gt；扬声器2：嗯哼。
 &gt;&gt; Speaker 2: Uh-huh.
 
 111
 00:07:25.610 --> 00:07:26.612
->> 凯尔 - 辛普森: 所以我要去看看
-&gt;&gt; Kyle Simpson: So
-that's why I have to check to
+&gt；&gt；Kyle Simpson：所以这就是为什么我必须检查
+&gt;&gt; Kyle Simpson: So that's why I have to check to
 
 112
 00:07:26.612 --> 00:07:27.932
-确保它实际上是一个数字。
+确保它确实是一个数字。
 make sure that it's actually a number.
 
 113
 00:07:30.707 --> 00:07:31.740
->> 演讲者 2: 好的。
+&gt；&gt；扬声器2：好的。
 &gt;&gt; Speaker 2: Okay.
 
 114
 00:07:31.740 --> 00:07:35.659
->> Kyle Simpson: 对，我们希望允许字符串和数字，但是
-&gt;&gt; Kyle Simpson: Right, cuz we want
-to allow strings and numbers, but
+&gt；&gt；Kyle Simpson：对，因为我们希望允许字符串和数字，但是
+&gt;&gt; Kyle Simpson: Right, cuz we want to allow strings and numbers, but
 
 115
 00:07:35.659 --> 00:07:39.980
-如果你还有别的事你会失败的如果你愿意的话
-if you pass in anything else, you're
-gonna fail the validation, if you will.
+如果你传入任何其他东西，你将会通过验证，如果你会的话。
+if you pass in anything else, you're gonna fail the validation, if you will.
 
 116
 00:07:39.980 --> 00:07:41.930
-传递空值将失败验证。
+传递NULL将使验证失败。
 Passing a null fails the validation.
 
 117
 00:07:41.930 --> 00:07:48.329
-好了我们要检查下是否有一个整数
-Okay, so we're gonna check to make sure
-that attended is actually an integer.
+好的，所以我们要检查一下，以确保Attended实际上是一个整数。
+Okay, so we're gonna check to make sure that attended is actually an integer.
 
 118
 00:07:48.329 --> 00:07:53.071
-我们将检查， >> Kyle Simpson: 长度为
-And we're gonna check that,
-&gt;&gt; Kyle Simpson: Length is
+我们要检查一下，&gt；&gt；Kyle Simpson：长度是
+And we're gonna check that, &gt;&gt; Kyle Simpson: Length is
 
 119
 00:07:53.071 --> 00:07:54.370
@@ -681,196 +597,170 @@ actually an integer.
 
 120
 00:07:55.610 --> 00:07:59.879
-这真的只是说上面没有分数的成分
-That really literally just says doesn't
-have any fractional component on it,
+它实际上只是说它上面没有任何小数成分，
+That really literally just says doesn't have any fractional component on it,
 
 121
 00:07:59.879 --> 00:08:01.060
-基本上它在做什么对吗
+基本上就是它在做什么，对吧？
 basically what it's doing, right?
 
 122
 00:08:01.060 --> 00:08:03.490
-所以查一下那是个数字好吗
-So checking that it's a whole number,
-all right?
+所以检查它是不是一个整数，好吗？
+So checking that it's a whole number, all right?
 
 123
 00:08:03.490 --> 00:08:05.959
-然后读我说的最后一件事
-And then the final thing
-that the read me says
+然后最后一件事，读我说
+And then the final thing that the read me says
 
 124
 00:08:05.959 --> 00:08:09.040
-所参与的值必须小于或等于长度。
-is that attended has to be less than or
-equal to length.
+出席的人必须小于或等于长度。
+is that attended has to be less than or equal to length.
 
 125
 00:08:09.040 --> 00:08:12.194
-既然我们知道我们在处理这个问题
-Well, since we definitely know we're
-dealing with well formed numbers at this
+好吧，因为我们肯定知道我们处理的是格式良好的数字
+Well, since we definitely know we're dealing with well formed numbers at this
 
 126
 00:08:12.194 --> 00:08:15.266
-我们没有任何 NN，或者无穷大，或者任何其他的东西。
-point, we don't have any NaNs, or
-infinities, or any of that other stuff.
+点，我们没有任何nans，或无穷大，或任何其他东西。
+point, we don't have any NaNs, or infinities, or any of that other stuff.
 
 127
 00:08:15.266 --> 00:08:21.408
-对我们来说这是一个非常安全的检查 <= 长度。
-Then it's a very safe check for
-us to say, attended &lt;= length.
+那么对我们来说这是一个非常安全的检查，Attended&lt；=length。
+Then it's a very safe check for us to say, attended &lt;= length.
 
 128
 00:08:25.021 --> 00:08:29.112
->> 凯尔 - 辛普森: 所以我们限制了整个地表面积
-&gt;&gt; Kyle Simpson: So we've restricted
-the overall surface area that could
+&gt；&gt；Kyle Simpson：所以我们限制了可以
+&gt;&gt; Kyle Simpson: So we've restricted the overall surface area that could
 
 129
 00:08:29.112 --> 00:08:32.274
-可能让我们陷入了转角处
+可能会让我们陷入困境。
 have possibly gotten us into corner cases.
 
 130
 00:08:32.274 --> 00:08:36.263
-成为一个相当直接的验证集合
-Into what is a fairly straightforward
-set of checks to validate
+到什么是一组相当直接的检查来验证
+Into what is a fairly straightforward set of checks to validate
 
 131
 00:08:36.263 --> 00:08:40.409
-我们要通过的就是我们想要传递的东西
-that what we're passing in is
-what we want to be passed in.
+我们所传递的就是我们想要被传递的。
+that what we're passing in is what we want to be passed in.
 
 132
 00:08:40.409 --> 00:08:44.652
-我们正在消灭任何一个角落
-And we're eliminating any
-of those corner cases,
+我们正在消除任何一个角落的案子，
+And we're eliminating any of those corner cases,
 
 133
 00:08:44.652 --> 00:08:48.991
-就像一个人在一个数组中通过一个数字
-like somebody passed in
-an array with a number in it or
+比如有人传入了一个包含数字的数组，或者
+like somebody passed in an array with a number in it or
 
 134
 00:08:48.991 --> 00:08:52.460
-其他的让人喜欢的东西好吗
+任何其他像那样疯狂的事，好吗？
 anything else bonkers like that, okay?
 
 135
 00:08:52.460 --> 00:08:54.626
-如果我们通过了所有这些检查结果我们就能恢复真实
-If we have passed all of these
-checks then we can return true,
+如果我们通过了所有这些检查，那么我们可以返回TRUE，
+If we have passed all of these checks then we can return true,
 
 136
 00:08:54.626 --> 00:08:56.879
-如果那不合格的话我们就可以回去了
-and if that didn't pass,
-then we can return false.
+如果没有通过，那么我们可以返回FALSE。
+and if that didn't pass, then we can return false.
 
 137
 00:08:56.879 --> 00:08:57.799
-和以前一样
+和以前一样，
 Same thing as before,
 
 138
 00:08:57.799 --> 00:09:00.625
-我们现在可以把它重构为一个回返式的声明
-we could now refactor that to
-a single return statement.
+现在我们可以将其重构为一个返回语句。
+we could now refactor that to a single return statement.
 
 139
 00:09:00.625 --> 00:09:04.889
-我只是想让你知道我们如何构建这些测试用例，好吗 ?
-I just wanted you to get the point of
-how we build up those test cases, okay?
+我只是想让你了解我们是如何构建这些测试用例的，好吗？
+I just wanted you to get the point of how we build up those test cases, okay?
 
 140
 00:09:04.889 --> 00:09:11.150
-现在让我们在控制台上测试这个代码
-So let's now test this
-code over in our console,
+现在让我们在控制台中测试此代码，
+So let's now test this code over in our console,
 
 141
 00:09:11.150 --> 00:09:15.578
-我们现在就应该得到所有真相
+我们现在应该拿到所有的真货，所以
 and we should get all trues now, so
 
 142
 00:09:15.578 --> 00:09:20.787
-运行此代码并获取所有 truees ， yay。
+运行这段代码，我们就会得到所有的真值，耶。
 run this code and we get all trues, yay.
 
 143
 00:09:20.787 --> 00:09:24.783
-好吧我们写了几个验证器函数
-All right, so we've written
-a couple of validator functions,
+好的，我们已经编写了几个验证器函数，
+All right, so we've written a couple of validator functions,
 
 144
 00:09:24.783 --> 00:09:27.965
 想让你熟悉这个想法
-point being wanted to get
-you familiar with the idea
+point being wanted to get you familiar with the idea
 
 145
 00:09:27.965 --> 00:09:33.029
-使用这些原始值以及它们可以被胁迫的方式。
-working with these primitive values and
-the ways that they can be coerced.
+使用这些原始值以及它们可以被强迫的方式。
+working with these primitive values and the ways that they can be coerced.
 
 146
 00:09:33.029 --> 00:09:36.580
-还不能把铁轨关在那些疯狂的角落里
-And still not go off the rails
-into those crazy corner cases.
+仍然不会偏离轨道进入那些疯狂的角落案件。
+And still not go off the rails into those crazy corner cases.
 
 147
 00:09:36.580 --> 00:09:39.210
-保护自己免遭这些角例的侵害。
-Protect yourself against
-those corner cases.
+保护自己免受那些角落案件的侵袭。
+Protect yourself against those corner cases.
 
 148
 00:09:39.210 --> 00:09:42.169
-当然有很多方法可以实现其中的任何一个
-There are of course lots of ways that you
-could have implemented either one of these
+当然，有很多方法可以实现这两种方法中的任何一种
+There are of course lots of ways that you could have implemented either one of these
 
 149
 00:09:42.169 --> 00:09:42.820
-职能。
+函数。
 functions.
 
 150
 00:09:43.980 --> 00:09:48.183
-不做点长度或检查什么的
-Instead of doing a .length or
-checking for something,
+而不是做一个.length或检查一些东西，
+Instead of doing a .length or checking for something,
 
 151
 00:09:48.183 --> 00:09:50.364
-你可以用正则表达式
+您可以使用正则表达式。
 you could have used a regular expression.
 
 152
 00:09:50.364 --> 00:09:53.663
-但它的精神是利用我们对原始类型的了解
-But the spirit of this was to use what
-we know about primitive types and
+但它的精神是利用我们所知道的原始类型和
+But the spirit of this was to use what we know about primitive types and
 
 153
 00:09:53.663 --> 00:09:58.097
-关于我们的强制手段的检查好吗
-about the checks that our coercion say,
-okay?
+关于我们强制说的支票，好吗？
+about the checks that our coercion say, okay?

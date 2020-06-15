@@ -2,338 +2,300 @@ WEBVTT
 
 1
 00:00:00.090 --> 00:00:01.669
->> Kyle Simpson: 您还记得构造函数
-&gt;&gt; Kyle Simpson: You
-remember the constructor
+&gt；&gt；Kyle Simpson：还记得构造函数吗
+&gt;&gt; Kyle Simpson: You remember the constructor
 
 2
 00:00:01.669 --> 00:00:03.279
-财产在我们的图上是吧
+属性在我们的图表中，对吗？
 property in our diagram, right?
 
 3
 00:00:03.279 --> 00:00:08.269
-从 workshop.prototype 指向工作室的那个。
-The one that was pointing from
-the workshop.prototype back to workshop.
+从车间指出来的那个。原型回到车间。
+The one that was pointing from the workshop.prototype back to workshop.
 
 4
 00:00:08.269 --> 00:00:12.300
-为什么 10 个我可以说 deepJS.constructor?
-Why is it online ten that I
-can say deepJS.constructor?
+为什么在线十个我可以说是Deep JS.structor？
+Why is it online ten that I can say deepJS.constructor?
 
 5
 00:00:12.300 --> 00:00:16.039
-deepJS 上没有构造函数属性。
-There is no constructor
-property on deepJS.
+Deep JS上没有构造函数属性。
+There is no constructor property on deepJS.
 
 6
 00:00:16.039 --> 00:00:19.190
-但出于同样的原因当我要求
-But for the exact same reason,
-when I asked for
+但原因完全相同，当我要求
+But for the exact same reason, when I asked for
 
 7
 00:00:19.190 --> 00:00:24.530
-deepJS 上的构造函数属性，它在该对象上找不到该属性。
-a constructor property on deepJS,
-it doesn't find it on that object.
+Deep JS上的构造函数属性，它在该对象上找不到它。
+a constructor property on deepJS, it doesn't find it on that object.
 
 8
 00:00:24.530 --> 00:00:25.969
-但下一步该怎么办呢 ?
+但是接下来它会去哪里呢？
 But where does it go next?
 
 9
 00:00:25.969 --> 00:00:31.879
-它从 deepJS 一直追溯到 workshop.prototype。
-It goes from deepJS all the way
-up to workshop.prototype.
+它从Deep JS一直到Workshop.Prototype。
+It goes from deepJS all the way up to workshop.prototype.
 
 10
 00:00:31.879 --> 00:00:37.155
-workshop.prototype 在其上具有构造函数属性吗 ?
-And does workshop.prototype have
-a constructor property on it?
+Workshop.Prototype上有构造函数属性吗？
+And does workshop.prototype have a constructor property on it?
 
 11
 00:00:37.155 --> 00:00:39.000
-它指向什么呢 ?
+它指向什么？
 And what does it point at?
 
 12
 00:00:39.000 --> 00:00:40.570
-它是在研讨会上提出的。
+它指向车间。
 It points at workshop.
 
 13
 00:00:41.789 --> 00:00:46.640
-这就是为什么 deepJSF.constructor 与车间相同。
-So that's why deepJS.constructor
-is the same thing as workshop.
+所以这就是Deep JS.structor与工作坊是一回事的原因。
+So that's why deepJS.constructor is the same thing as workshop.
 
 14
 00:00:46.640 --> 00:00:53.340
-现在，这似乎意味着深度 JS 是由工作室建造的，不是吗 ?
-Now, that seems to imply that deepJS was
-constructed by workshop, doesn't it?
+现在，这似乎意味着Deep JS是由车间建造的，不是吗？
+Now, that seems to imply that deepJS was constructed by workshop, doesn't it?
 
 15
 00:00:55.200 --> 00:00:59.179
-但我们知道，新的构造函数是实际上创造的。
-But we know that the new constructor
-is the one that actually created it.
+但是我们知道新的构造函数是真正创建它的那个。
+But we know that the new constructor is the one that actually created it.
 
 16
 00:00:59.179 --> 00:01:03.359
-讲习班的对象几乎与它无关。
-And the workshop object almost
-had nothing to do with it.
+而车间的物品几乎与此无关。
+And the workshop object almost had nothing to do with it.
 
 17
 00:01:03.359 --> 00:01:06.239
-正好这些房产已经到位了
-It just happens to be that
-these properties are in place,
+只是碰巧这些属性已经到位了，
+It just happens to be that these properties are in place,
 
 18
 00:01:06.239 --> 00:01:07.950
-这些关系已经存在了
+这些关系已经到位
 these relationships are in place,
 
 19
 00:01:07.950 --> 00:01:12.400
-试图告诉我们一个阶级系统已经发生了
-to try to tell this narrative
-that a class system has occurred.
+试图告诉这个故事，阶级制度已经发生了。
+to try to tell this narrative that a class system has occurred.
 
 20
 00:01:15.082 --> 00:01:21.978
->> Kyle Simpson: 现在第 12 行， deepJS.__proto__， oops sorry.
-&gt;&gt; Kyle Simpson: Now line 12,
-deepJS.__proto__, oops sorry.
+&gt；&gt；Kyle Simpson：现在第12行，深度JS_PROTO_，对不起。
+&gt;&gt; Kyle Simpson: Now line 12, deepJS.__proto__, oops sorry.
 
 21
 00:01:23.280 --> 00:01:25.653
-点击错误的按钮
+这里按错了按钮。
 Hit the wrong button here.
 
 22
 00:01:25.653 --> 00:01:30.719
-deepJS.__ 原型机 __
+深度JS_PROTO_，
 deepJS.__ proto__,
 
 23
 00:01:30.719 --> 00:01:35.150
-我真的很想说我不想再这么说了
-that's a really long thing to say,
-and I don't wanna say that ever again.
+这真的是一件很长的事情，我不想再说一遍了。
+that's a really long thing to say, and I don't wanna say that ever again.
 
 24
 00:01:35.150 --> 00:01:37.189
-所以我们来找个更好的名字
-So let's come up with a better name for
-that.
+所以让我们给它取个更好的名字。
+So let's come up with a better name for that.
 
 25
 00:01:37.189 --> 00:01:40.069
-结果显示您可以使用下划线下划线，并且
-It turns out that you can take
-underscore underscore, and
+事实证明，您可以使用下划线，和
+It turns out that you can take underscore underscore, and
 
 26
 00:01:40.069 --> 00:01:41.759
-你可以让它加倍强调
+您可以将其设为双下划线。
 you can make it double underscore.
 
 27
 00:01:41.759 --> 00:01:44.151
-或者你可以把它缩短
+或者你甚至可以缩短它，
 Or and then you can even shorten that,
 
 28
 00:01:44.151 --> 00:01:49.323
-有一些很酷的孩子喜欢把这一财产称为 dunderproto，好吗 ?
-the cool kids in JavaScript like to refer
-to this property as dunderproto, okay?
+JavaScript中的酷孩子喜欢将这个属性称为Dunderproto，好吗？
+the cool kids in JavaScript like to refer to this property as dunderproto, okay?
 
 29
 00:01:49.323 --> 00:01:51.936
-因此，第 12 行表示 deepJS.dunderproto，并且
+所以第12行写着Deep JS.dunderproto，并且
 So line 12 says deepJS.dunderproto, and
 
 30
 00:01:51.936 --> 00:01:56.310
-看看它指向什么，它指向的是 workshop.prototype。
-look at what it's pointing at,
-it's pointing at workshop.prototype.
+看它指的是什么，它指的是Workshop.Prototype。
+look at what it's pointing at, it's pointing at workshop.prototype.
 
 31
 00:01:56.310 --> 00:02:02.049
-换句话说 deepJS 好像有个属性
-In other words,
-deepJS seems like it has a property on it,
+换句话说，Deep JS似乎在它上面有一个属性，
+In other words, deepJS seems like it has a property on it,
 
 32
 00:02:02.049 --> 00:02:04.629
-指向它所链接到的东西
-that points to the thing
-that it's linked to.
+指向它所链接的东西。
+that points to the thing that it's linked to.
 
 33
 00:02:06.750 --> 00:02:10.750
-除非 deepJS 没有一个名为 don proto的属性。
-Except deepJS doesn't have a property
-on it called dunder proto.
+除了Deep JS没有一个名为Dunder proto的属性。
+Except deepJS doesn't have a property on it called dunder proto.
 
 34
 00:02:13.020 --> 00:02:17.400
-那么当 deepJS 尝试访问受影响的 proto时，您认为会发生什么 ?
-So what do you think happens when
-deepJS tries to access a dunder proto?
+那么，当Deep JS试图访问Dunder Proto时，您认为会发生什么？
+So what do you think happens when deepJS tries to access a dunder proto?
 
 35
 00:02:17.400 --> 00:02:18.289
-下一步该往哪里去 ?
+下一步去哪里？
 Where does it go next?
 
 36
 00:02:20.556 --> 00:02:23.349
->> Kyle Simpson: 从 deepJS 到哪里?
-&gt;&gt; Kyle Simpson: It goes
-from deepJS up to where?
+&gt；&gt；Kyle Simpson：它从深JS到哪里？
+&gt;&gt; Kyle Simpson: It goes from deepJS up to where?
 
 37
 00:02:25.540 --> 00:02:27.829
->> Kyle Simpson: Up 到 workshop.prototype。
+&gt；&gt；Kyle Simpson：up to workshop.prototype。
 &gt;&gt; Kyle Simpson: Up to workshop.prototype.
 
 38
 00:02:27.829 --> 00:02:29.530
-不是研讨会，而是 workshop.prototype。
+不是车间，而是工作间。原型。
 Not workshop but workshop.prototype.
 
 39
 00:02:29.530 --> 00:02:31.240
-它会上升到那个物体上。
+它上升到那个物体。
 It goes up to that object.
 
 40
 00:02:31.240 --> 00:02:33.129
-你的意思是你有个 dproto吗
+它会问你有没有Dunder Proto？
 And it asks do you have a dunder proto?
 
 41
 00:02:33.129 --> 00:02:35.909
-答案是没有。
+答案是，不。
 And the answer is, no.
 
 42
 00:02:35.909 --> 00:02:39.639
-链接的 workshop.prototype 在哪里 ?
+那么工作车间在哪里原型链接了吗？
 So where was workshop.prototype linked?
 
 43
 00:02:39.639 --> 00:02:42.865
-它已链接到 object.prototype。
+它被链接到对象原型。
 It was linked to object.prototype.
 
 44
 00:02:42.865 --> 00:02:46.409
-如果你愿意的话，我们会把一个向上级的环境提高到零排放的环境。
-So we would go one up level to
-the line zero environment if you will.
+因此，如果您愿意，我们将向零线环境升级一级。
+So we would go one up level to the line zero environment if you will.
 
 45
 00:02:46.409 --> 00:02:48.859
-我们要去物化原型机
+我们会去找对象。原型，然后
 We'd go up to the object.prototype, and
 
 46
 00:02:48.859 --> 00:02:51.719
-估计那里有个 don proto
-guess what there is
-a dunder proto on there.
+猜猜那里有个Dunder Proto
+guess what there is a dunder proto on there.
 
 47
 00:02:51.719 --> 00:02:56.425
-猜猜还有什么，它甚至不是一个财产，它是一个吸气功能。
-And guess what else, it's not even
-a property, it's a getter function.
+猜猜还有什么，它甚至不是一个属性，它是一个getter函数。
+And guess what else, it's not even a property, it's a getter function.
 
 48
 00:02:56.425 --> 00:03:03.145
-Object.prototype 具有名为 dproto 的 getter 函数。
-Object.prototype has a getter
-function called dunder proto.
+Prototype有一个名为Dunder proto的getter函数。
+Object.prototype has a getter function called dunder proto.
 
 49
 00:03:03.145 --> 00:03:06.330
-现在你把它放在第 12 行，就像它是一个财产一样。
-Now you're accessing it on
-line 12 as if it's a property.
+现在您在第12行访问它，就好像它是一个属性一样。
+Now you're accessing it on line 12 as if it's a property.
 
 50
 00:03:06.330 --> 00:03:10.599
-但是一个 getter 函数，所以它将调用它，就像它是一个函数一样。
-But a getter function so it's going to
-invoke it as if it's was a function.
+而是一个getter函数，所以它将调用它，就像它是一个函数一样。
+But a getter function so it's going to invoke it as if it's was a function.
 
 51
 00:03:10.599 --> 00:03:13.759
-当它在 object.prototype 上调用该函数时，
-When it invokes that function
-on object.prototype,
+当它在object.prototype上调用该函数时，
+When it invokes that function on object.prototype,
 
 52
 00:03:13.759 --> 00:03:15.989
-它的这个关键词是什么呢 ?
+在内部，这个关键字是什么？
 internally what will it's this keyword be?
 
 53
 00:03:19.189 --> 00:03:21.067
-呼叫地点是什么
+呼叫地点是什么？
 What's the call site?
 
 54
 00:03:21.067 --> 00:03:22.090
->> Student: DeepJS。
+&gt；&gt；学生：DeepJS。
 &gt;&gt; Student: DeepJS.
 
 55
 00:03:22.090 --> 00:03:23.969
->> 凯尔 - 辛普森: 呼叫地点为 deepJS，对。
-&gt;&gt; Kyle Simpson: The call site is deepJS,
-right.
+&gt；&gt；Kyle Simpson：呼叫地点是Deep JS，对。
+&gt;&gt; Kyle Simpson: The call site is deepJS, right.
 
 56
 00:03:23.969 --> 00:03:26.530
-这就像一个函数调用，即使没有括号。
-This is like a function call even
-though there's no parenthesis.
+这就像一个函数调用，尽管没有括号。
+This is like a function call even though there's no parenthesis.
 
 57
 00:03:27.639 --> 00:03:33.569
-因此，即使在这种情况下，仍然适用的不一致规则仍然适用。
-So it's still that same disbinding rule
-consistently applied even in this case.
+所以即使在这种情况下，仍然是一致地应用相同的解除绑定规则。
+So it's still that same disbinding rule consistently applied even in this case.
 
 58
 00:03:33.569 --> 00:03:38.229
-它在对象的原型中调用 getter 函数
-It invokes that getter function
-on the object.prototype in
+它在对象上调用getter函数。
+It invokes that getter function on the object.prototype in
 
 59
 00:03:38.229 --> 00:03:42.240
-您的实例的上下文，并将其转换为
-this context of your instance,
-which reaches into it and
+您的实例的这个上下文，它到达它并且
+this context of your instance, which reaches into it and
 
 60
 00:03:42.240 --> 00:03:45.509
-把这个隐藏的内部联系称为原型链。
-gives you this hidden internal
-linkage called the prototype chain.
+给你这个隐藏的内部链接叫做原型链。
+gives you this hidden internal linkage called the prototype chain.

@@ -2,26 +2,23 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:03.012
->> 凯尔 - 辛普森: 好，我们来谈谈这个模块的练习，
-&gt;&gt; Kyle Simpson: All right,
-let's talk about this module's exercise,
+&gt；&gt；Kyle Simpson：好的，让我们谈谈这个模块的练习，
+&gt;&gt; Kyle Simpson: All right, let's talk about this module's exercise,
 
 2
 00:00:03.012 --> 00:00:05.027
-我们会通过一个解决方案
+我们将逐步解决这个问题。
 we'll walk through a solution to it.
 
 3
 00:00:05.027 --> 00:00:10.227
-当自述文件显示时，您希望执行以下功能 :
-As the ReadMe lays out, you want to take
-these functions, the ones that are at
+正如ReadMe所展示的那样，您希望采用这些功能，即
+As the ReadMe lays out, you want to take these functions, the ones that are at
 
 4
 00:00:10.227 --> 00:00:15.919
-底部，并基本将它们包裹在一个称为 " 定义研讨会" 的大型函数中。
-the bottom, and essentially wrap them in
-one big function called define workshop.
+底部，并实质上将它们包装在一个称为定义工作坊的大函数中。
+the bottom, and essentially wrap them in one big function called define workshop.
 
 5
 00:00:15.919 --> 00:00:17.582
@@ -30,295 +27,263 @@ That'll be our module factory function.
 
 6
 00:00:17.582 --> 00:00:22.929
-所以我开始做这个，我要说 defineWorkshop。
-So I'll start by doing that,
-I'll say defineWorkshop.
+所以我会从这个开始，我会说定义工作坊。
+So I'll start by doing that, I'll say defineWorkshop.
 
 7
 00:00:22.929 --> 00:00:29.678
-这一巨大的功能将包括其中的所有内容。
-And this one big function is going to
-include all of these inside of it.
+这个大函数将包括它里面的所有这些。
+And this one big function is going to include all of these inside of it.
 
 8
 00:00:29.678 --> 00:00:32.872
-就像其他的一样
+所以就像其他的一样，
 And so just like with the other ones,
 
 9
 00:00:32.872 --> 00:00:37.729
-我会在这个范围的底部保留这些功能。
-I'll keep those functions at
-the bottom of that scope.
+我会将这些函数保持在该作用域的底部。
+I'll keep those functions at the bottom of that scope.
 
 10
 00:00:37.729 --> 00:00:40.722
-我要做一个公共 API
+我将创建并返回一个公共API。
 I'm gonna make and return a public API.
 
 11
 00:00:48.884 --> 00:00:54.835
->> Kyle Simpson: 然后，我还需要此模块的一些数据以关闭使用。
-&gt;&gt; Kyle Simpson: And then I also need some
-data for this module to close over to use.
+&gt；&gt；Kyle Simpson：然后我还需要一些数据供这个模块关闭使用。
+&gt;&gt; Kyle Simpson: And then I also need some data for this module to close over to use.
 
 12
 00:00:54.835 --> 00:00:58.862
-我要结束的数据就是 currentEnrollment 和
-And the data that I'm gonna be
-closing over is currentEnrollment and
+我将要关闭的数据是currentEnrollment和
+And the data that I'm gonna be closing over is currentEnrollment and
 
 13
 00:00:58.862 --> 00:01:02.273
-studentRecords，我需要这里的两个阵列。
-studentRecords, I need those
-two arrays Inside of here.
+StudentRecords，我需要这两个数组在这里。
+studentRecords, I need those two arrays Inside of here.
 
 14
 00:01:02.273 --> 00:01:06.358
-所以我会安排和安排 currentEnrollment ，
-So I will make and
-arrange called currentEnrollment,
+因此，我将创建并安排名为currentEnrollment，
+So I will make and arrange called currentEnrollment,
 
 15
 00:01:11.567 --> 00:01:12.787
->> Kyle Simpson: 另一个已调用
+&gt；&gt；Kyle Simpson：另一个叫
 &gt;&gt; Kyle Simpson: Another one called
 
 16
 00:01:12.787 --> 00:01:18.757
-studentRecords， >> Kyle Simpson: 在我的公用 API上，
-studentRecords,
-&gt;&gt; Kyle Simpson: On my public API,
+StudentRecords，&gt；&gt；Kyle Simpson：在我的公共API上，
+studentRecords, &gt;&gt; Kyle Simpson: On my public API,
 
 17
 00:01:18.757 --> 00:01:21.884
-我需要根据自述文件的要求
+我需要根据ReadMe
 I need to have according to the ReadMe,
 
 18
 00:01:21.884 --> 00:01:26.543
-这五个功能， addStudent 和 enrollStudents。
-these five functions,
-addStudent and enrollStudents.
+这五个函数是addStudent和regilStudents。
+these five functions, addStudent and enrollStudents.
 
 19
 00:01:26.543 --> 00:01:28.865
-所以，让我们先做这些，然后定义这些。
+所以，让我们先做这些，然后定义那些。
 So, let's do those first and define those.
 
 20
 00:01:31.067 --> 00:01:32.012
->> Kyle Simpson: 如何工作?
+&gt；&gt；Kyle Simpson：这些是如何工作的？
 &gt;&gt; Kyle Simpson: How do those work?
 
 21
 00:01:32.012 --> 00:01:37.819
-首先我们有 addStudent
+好的，首先，我们有addStudent。
 Well, first, we have addStudent.
 
 22
 00:01:37.819 --> 00:01:41.325
-它会把 ID和名字以及他们的报酬
-It's gonna take the ID, the name and
-whether they're paid and
+它将采取的ID，姓名和他们是否支付和
+It's gonna take the ID, the name and whether they're paid and
 
 23
 00:01:41.325 --> 00:01:43.256
-创造出一个记录和其他的东西
+创建一个记录并将其填入其中。
 create a record and stuff that in.
 
 24
 00:01:43.256 --> 00:01:47.960
-所以我们要把 id和名字
+所以，我们要记下身份，姓名，
 So, we're gonna take id, name,
 
 25
 00:01:47.960 --> 00:01:51.052
-并作为输入支付。
+并作为输入付费。
 and paid as the input.
 
 26
 00:01:51.052 --> 00:01:54.131
-我们要把它推到树桩上
-And we're going to push
-into the studentRecords
+我们将进入学生记录
+And we're going to push into the studentRecords
 
 27
 00:01:54.131 --> 00:01:58.396
-数组， >> Kyle Simpson: 一个对象
-array,
-&gt;&gt; Kyle Simpson: An object that
+数组，&gt；&gt；Kyle Simpson：一个对象
+array, &gt;&gt; Kyle Simpson: An object that
 
 28
 00:01:58.396 --> 00:02:01.676
-包括 id， name和付费。
+包括id，name和payed。
 includes id, name, and paid.
 
 29
 00:02:08.811 --> 00:02:10.836
->> Kyle Simpson: EnrollStudent 相似，
+&gt；&gt；Kyle Simpson：EnrollStudent类似，
 &gt;&gt; Kyle Simpson: EnrollStudent is similar,
 
 30
 00:02:10.836 --> 00:02:17.463
-学生， >> 凯尔 - 辛普森:
-enrollStudent,
-&gt;&gt; Kyle Simpson: Takes a student id,
+entrlStudent，&gt；&gt；Kyle Simpson：接受学生ID，
+enrollStudent, &gt;&gt; Kyle Simpson: Takes a student id,
 
 31
 00:02:17.463 --> 00:02:22.454
-并将其推送到 currentEnrollment 数组中。
-and it pushes that into
-the currentEnrollment array.
+并将其推送到currentEnrollment数组中。
+and it pushes that into the currentEnrollment array.
 
 32
 00:02:22.454 --> 00:02:27.497
-我要做一次额外的检查因为这是 API 而不是被设置
-I'm gonna do one extra check since this
-is an API now rather than being set up,
+我要做一个额外的检查，因为这是一个API现在而不是被设置，
+I'm gonna do one extra check since this is an API now rather than being set up,
 
 33
 00:02:27.497 --> 00:02:32.151
-我要做个额外的检查确保我不会想
-it's I'm gonna do an extra check that
-makes sure that I'm not try to add
+这是我要做一个额外的检查，以确保我没有试图添加
+it's I'm gonna do an extra check that makes sure that I'm not try to add
 
 34
 00:02:32.151 --> 00:02:34.182
-阵列中存在重复的标识。
+将ID复制到数组中。
 duplicate IDs into the array.
 
 35
 00:02:34.182 --> 00:02:36.426
-那我就去吧
+所以我会做的如果
 So I will do if
 
 36
 00:02:36.426 --> 00:02:45.000
-(!currentEnrollment.包含(id)，和
+(！currentEnrollment.includes(Id)，和
 (!currentEnrollment.includes(id), and
 
 37
 00:02:45.000 --> 00:02:51.331
-currentEnrollment.push (id)。
+currentEnrollment.push(Id)。
 currentEnrollment.push(id).
 
 38
 00:02:51.331 --> 00:02:56.223
-自述文件随后表示，我们需要一个 printCurrentEnrollment 。
-ReadMe then says we need
-a printCurrentEnrollment.
+自述文件然后说我们需要一个printCurrentEnrollment。
+ReadMe then says we need a printCurrentEnrollment.
 
 39
 00:02:56.223 --> 00:02:59.058
-那么，打印货币的内容是什么 ?
+那么printCurrenEregilment会做什么呢？
 So what would printCurrenEenrollment do?
 
 40
 00:03:02.653 --> 00:03:05.204
->> 凯尔 - 辛普森: 它没有任何投入，
-&gt;&gt; Kyle Simpson: It
-doesn't take any inputs,
+&gt；&gt；Kyle Simpson：它不需要任何输入，
+&gt;&gt; Kyle Simpson: It doesn't take any inputs,
 
 41
 00:03:05.204 --> 00:03:09.084
-它基本上占据了这个电话的位置
-it essentially takes
-the place of this call.
+它本质上取代了这个调用。
+it essentially takes the place of this call.
 
 42
 00:03:09.084 --> 00:03:13.544
-这个是打印 currentEnrollment ，所以
-This one is printing
-the currentEnrollment, so
+这个正在打印currentEnrollment，所以
+This one is printing the currentEnrollment, so
 
 43
 00:03:13.544 --> 00:03:19.868
-让我们把它复制到我们的 printCurrentEnrollment 中
-let's literally just copy that
-into our printCurrentEnrollment.
+让我们从字面上将其复制到printCurrentEnrollment中。
+let's literally just copy that into our printCurrentEnrollment.
 
 44
 00:03:19.868 --> 00:03:23.179
-我们不希望他们提供他们自己的身份证清单
-We don't want them to provide
-their own list of IDs,
+我们不希望他们提供自己的ID列表，
+We don't want them to provide their own list of IDs,
 
 45
 00:03:23.179 --> 00:03:28.070
-因为这个模块的目的就是把细节和细节
-because that's the whole purpose of
-the module is to abstract that detail and
+因为这就是模块的全部目的是抽象细节和
+because that's the whole purpose of the module is to abstract that detail and
 
 46
 00:03:28.070 --> 00:03:30.868
-把它作为一个隐藏的实施，好吗 ?
+把它作为隐藏的实现，好吗？
 keep it as a hidden implementation, okay?
 
 47
 00:03:30.868 --> 00:03:34.754
-接下来，自述文件中说我们需要一个注册学生。
-Next the readme says we
-need an enrollPaidStudents.
+接下来，自述文件说我们需要一个regilPaidStudents。
+Next the readme says we need an enrollPaidStudents.
 
 48
 00:03:34.754 --> 00:03:40.320
-一模一样的学生都和这件事一样
-Exactly the same, enrollPaidStudents
-is doing the same thing as this,
+完全一样，entenlPaidStudents也在做同样的事情，
+Exactly the same, enrollPaidStudents is doing the same thing as this,
 
 49
 00:03:40.320 --> 00:03:43.787
-就是叫有酬学生报名，
-which is to call paid students to enroll,
-and
+也就是打电话给付费学生注册，并且
+which is to call paid students to enroll, and
 
 50
 00:03:43.787 --> 00:03:47.727
-然后用它更新当前的注册队列。
-then update the current
-enrollment array with it.
+然后用它更新当前注册数组。
+then update the current enrollment array with it.
 
 51
 00:03:47.727 --> 00:03:54.384
-那么，让我们做， >> 凯尔 - 辛普森:
-So, let's do,
-&gt;&gt; Kyle Simpson: What's
+那么，让我们做，&gt；&gt；Kyle Simpson：什么是
+So, let's do, &gt;&gt; Kyle Simpson: What's
 
 52
 00:03:54.384 --> 00:04:00.768
-它再次调用了注册学生
+它再次调用了regilPaidStudent。
 it called again, enrollPaidStudent.
 
 53
 00:04:18.906 --> 00:04:23.754
->> 凯尔 - 辛普森: 最后，我们需要一个学生。
-&gt;&gt; Kyle Simpson: And then finally,
-we need a remindUnpaidStudents.
+&gt；&gt；Kyle Simpson：最后，我们需要提醒UnpaidStudents。
+&gt;&gt; Kyle Simpson: And then finally, we need a remindUnpaidStudents.
 
 54
 00:04:23.754 --> 00:04:26.822
-同样地，这基本上是取代了这个地方，
+再说一遍，这基本上就是取而代之的地方，
 Again, that is basically taking the place,
 
 55
 00:04:26.822 --> 00:04:30.634
-使用我们的 currentEnrollment 调用reminidUn薪。
-of calling remindUnpaid
-with our currentEnrollment.
+用我们的currentEnrollment呼叫remindunpay。
+of calling remindUnpaid with our currentEnrollment.
 
 56
 00:04:30.634 --> 00:04:34.511
-所以我们需要这个， >> 凯尔 - 辛普森: 还有一个功能。
-So we need that,
-&gt;&gt; Kyle Simpson: And a function.
+所以我们需要它，&gt；&gt；Kyle Simpson：和一个函数。
+So we need that, &gt;&gt; Kyle Simpson: And a function.
 
 57
 00:04:58.843 --> 00:05:03.375
->> Kyle Simpson: 因此，我们现在已在模块内部隐藏这些实施详细信息
-&gt;&gt; Kyle Simpson: So we've now hidden those
-implementation details inside of a module
+&gt；&gt；Kyle Simpson：所以我们现在已经将这些实现细节隐藏在一个模块中
+&gt;&gt; Kyle Simpson: So we've now hidden those implementation details inside of a module
 
 58
 00:05:03.375 --> 00:05:04.315
@@ -327,224 +292,195 @@ definition.
 
 59
 00:05:04.315 --> 00:05:10.598
-我们有， >> 凯尔 - 辛普森:
-We have,
-&gt;&gt; Kyle Simpson: So,
+我们有，&gt；&gt；Kyle Simpson：那么，
+We have, &gt;&gt; Kyle Simpson: So,
 
 60
 00:05:10.598 --> 00:05:14.675
-我们公开了五种公共空气污染指数
-we expose five public API methods and
-we keep everything else private.
+我们公开了五个公共API方法，并将其他所有方法都保密。
+we expose five public API methods and we keep everything else private.
 
 61
 00:05:14.675 --> 00:05:20.065
-我们保留数据隐私，关闭状态是我们在一段时间内保持该状态的方式。
-We keep the data private, and closure is
-how we maintain that state over time.
+我们保持数据的私密性，封闭性是我们随着时间的推移保持这种状态的方式。
+We keep the data private, and closure is how we maintain that state over time.
 
 62
 00:05:20.065 --> 00:05:26.893
-最后一步，然后是 >> Kyle Simpson: Setting
-Last step, then, is instead of,
-&gt;&gt; Kyle Simpson: Setting
+那么，最后一步是&gt；&gt；Kyle Simpson：Setting(&gt；&gt；Kyle Simpson：设置
+Last step, then, is instead of, &gt;&gt; Kyle Simpson: Setting
 
 63
 00:05:26.893 --> 00:05:31.603
-这些阵列我们需要进行实际的制作和实例化
-up these arrays we need to actually
-make and instantiate, I guess is not
+在这些数组上，我们需要实际创建和实例化，我猜不是
+up these arrays we need to actually make and instantiate, I guess is not
 
 64
 00:05:31.603 --> 00:05:36.408
-最后一个步骤，但是下一步，我们是否需要实例化我们的研讨会。
-the last step but the next step,
-is we need to instantiate our workshop.
+最后一步是下一步，我们需要实例化我们的工作坊。
+the last step but the next step, is we need to instantiate our workshop.
 
 65
 00:05:36.408 --> 00:05:42.634
-所以我们要叫 defineWorkshop ，我们要开始使用它。
-So we're gonna call defineWorkshop,
-and we're gonna start using it.
+所以我们将调用define工作坊，并开始使用它。
+So we're gonna call defineWorkshop, and we're gonna start using it.
 
 66
 00:05:42.634 --> 00:05:47.053
-我们先给学生记录
+我们先建立学生档案，
 We'll first set up the student records,
 
 67
 00:05:47.053 --> 00:05:51.725
-所以我要去因为我超级懒惰
+所以我要去，因为我超级懒，
 so I'm going to, because I'm super lazy,
 
 68
 00:05:51.725 --> 00:05:57.802
-请使用一些正则表达式替换来定义这些表达式。
-use some regular expression
-replacing to define those.
+使用一些正则表达式替换来定义这些。
+use some regular expression replacing to define those.
 
 69
 00:06:01.154 --> 00:06:03.101
->> 凯尔 - 辛普森: 我已经为自己写了一个
-&gt;&gt; Kyle Simpson: I have one
-already written for myself so
+&gt；&gt；Kyle Simpson：我已经为自己写了一个
+&gt;&gt; Kyle Simpson: I have one already written for myself so
 
 70
 00:06:03.101 --> 00:06:04.526
-我不需要重写它
+我不需要重写。
 I don't have to rewrite it.
 
 71
 00:06:17.627 --> 00:06:19.615
->> Kyle Simpson: 我需要开启正则表达式方式。
-&gt;&gt; Kyle Simpson: I need to turn
-on regular expression mode.
+&gt；&gt；Kyle Simpson：我需要打开正则表达式模式。
+&gt;&gt; Kyle Simpson: I need to turn on regular expression mode.
 
 72
 00:06:19.615 --> 00:06:25.793
-好了现在这些都是我的功能了
-All right, so
-now those are all my function calls.
+好了，这些都是我的函数调用。
+All right, so now those are all my function calls.
 
 73
 00:06:30.815 --> 00:06:39.225
->> Kyle Simpson: 然后在此，我们将调用 deepJS.enrollStudent 。
-&gt;&gt; Kyle Simpson: And then similarly here
-we're gonna call deepJS.enrollStudent.
+&gt；&gt；Kyle Simpson：然后类似地，在这里我们将调用Deep JS.entenlStudent。
+&gt;&gt; Kyle Simpson: And then similarly here we're gonna call deepJS.enrollStudent.
 
 74
 00:06:39.225 --> 00:06:41.331
-这就是我所谓的学生吗
-That's what I called it,
-right, enrollStudent?
+我就是这么叫的，对吧，招生？
+That's what I called it, right, enrollStudent?
 
 75
 00:06:43.406 --> 00:06:49.591
->> 凯尔 - 辛普森: 是的， >> 凯尔 - 辛普森: 好的，
-&gt;&gt; Kyle Simpson: Yeah,
-&gt;&gt; Kyle Simpson: All right,
+&gt；&gt；Kyle Simpson：是的，&gt；&gt；Kyle Simpson：好的，
+&gt;&gt; Kyle Simpson: Yeah, &gt;&gt; Kyle Simpson: All right,
 
 76
 00:06:49.591 --> 00:06:51.271
-我就把这些都输入出去
+我只是把这些打出来。
 I'll just type these out.
 
 77
 00:07:02.428 --> 00:07:08.009
->> 凯尔 - 辛普森: 现在事情已经结束了，剩下的就是
-&gt;&gt; Kyle Simpson: Now that stuff's done,
-and then all that's left is for
+&gt；&gt；Kyle Simpson：现在这些事情都做完了，剩下的就是
+&gt;&gt; Kyle Simpson: Now that stuff's done, and then all that's left is for
 
 78
 00:07:08.009 --> 00:07:11.466
-我们要更新这些电话
+我们更新这些调用以打印，
 us to update these calls to print,
 
 79
 00:07:14.759 --> 00:07:17.411
->> Kyle Simpson: PrintCurrentEnrollment 。
+&gt；&gt；Kyle Simpson：PrintCurrentEnrollment。
 &gt;&gt; Kyle Simpson: PrintCurrentEnrollment.
 
 80
 00:07:25.492 --> 00:07:27.211
->> 凯尔 - 辛普森: 我想我错过了一个细节。
-&gt;&gt; Kyle Simpson: I think
-I missed a detail there.
+&gt；&gt；Kyle Simpson：我想我错过了一个细节。
+&gt;&gt; Kyle Simpson: I think I missed a detail there.
 
 81
 00:07:29.946 --> 00:07:33.105
->> 凯尔 - 辛普森: 我不仅要更新它，
-&gt;&gt; Kyle Simpson: I not only
-need to update it, but
+&gt；&gt；Kyle Simpson：我不仅需要更新它，而且
+&gt;&gt; Kyle Simpson: I not only need to update it, but
 
 82
 00:07:33.105 --> 00:07:38.850
-我们要打印记录，所以我错过了这个 [ INAUDIBLE]。
-we need to print the records,
-so I missed that [INAUDIBLE].
+我们需要打印记录，所以我错过了[INAUDIBLE]。
+we need to print the records, so I missed that [INAUDIBLE].
 
 83
 00:07:38.850 --> 00:07:47.019
-我们的注册学生需要更新注册并打印这些记录。
-Our enroll paid students needs to update
-the enrollment and print those records.
+我们的注册付费学生需要更新注册并打印这些记录。
+Our enroll paid students needs to update the enrollment and print those records.
 
 84
 00:07:53.422 --> 00:07:58.653
->> Kyle Simpson: 我们调用 deepJS.enrollPaidStudents。
-&gt;&gt; Kyle Simpson: We call
-deepJS.enrollPaidStudents.
+&gt；&gt；Kyle Simpson：我们将其称为Deep JS.regilPaidStudents。
+&gt;&gt; Kyle Simpson: We call deepJS.enrollPaidStudents.
 
 85
 00:07:58.653 --> 00:08:05.579
-然后是最后一个但不重要的是 ddeepJS。RemindUnpaidSod学生们。
-And then last but not least,
-ddeepJS.RemindUnpaidSstudents.
+最后但并非最不重要的是，ddeep JS.RemindUnpaidSStudents。
+And then last but not least, ddeepJS.RemindUnpaidSstudents.
 
 86
 00:08:07.985 --> 00:08:09.675
->> 凯尔 - 辛普森: 我们完成了。
+&GT；&GT；凯尔·辛普森：我们结束了。
 &gt;&gt; Kyle Simpson: And we're done.
 
 87
 00:08:09.675 --> 00:08:13.516
-我一开始就说模块真的是最重要的代码之一
-As I said at the outset, modules really
-is one of the most important code
+正如我在开始时所说的，模块确实是最重要的代码之一
+As I said at the outset, modules really is one of the most important code
 
 88
 00:08:13.516 --> 00:08:17.420
-所有 JavaScript中的组织模式，可能在所有软件中，
-organization patterns in all of
-JavaScript, maybe in all of software,
+所有JavaScript中的组织模式，可能是所有软件中的组织模式，
+organization patterns in all of JavaScript, maybe in all of software,
 
 89
 00:08:17.420 --> 00:08:19.410
-但在所有 JavaScript中都是这样
+但肯定是在所有JavaScript中。
 but certainly in all of JavaScript.
 
 90
 00:08:19.410 --> 00:08:23.355
-这样你就会得到很多关于这个模式的想法
-So you're gonna get a lot of mileage
-out of thinking about this pattern,
+所以你会从这个模式中得到很多好处，
+So you're gonna get a lot of mileage out of thinking about this pattern,
 
 91
 00:08:23.355 --> 00:08:25.891
-正在练习，尝试更有效的实施。
-practicing it,
-trying to implement it more.
+练习它，尝试更多地实现它。
+practicing it, trying to implement it more.
 
 92
 00:08:25.891 --> 00:08:29.725
-所以我强烈建议在这个过程中确定一切
-So I would strongly recommend
-everything in this course for sure but
+所以我会强烈推荐这门课的所有内容，但是
+So I would strongly recommend everything in this course for sure but
 
 93
 00:08:29.725 --> 00:08:30.810
-尤其是这个
+尤其是这个。
 especially this.
 
 94
 00:08:30.810 --> 00:08:33.533
-如果你愿意回去做些作业
-Try to go back and
-do some homework, if you will.
+如果你愿意，试着回去做一些家庭作业。
+Try to go back and do some homework, if you will.
 
 95
 00:08:33.533 --> 00:08:34.919
-你试着回去找
+试着回去找找
 Try to go back and look for
 
 96
 00:08:34.919 --> 00:08:38.946
-在您的代码中有一些地方可以使用更完善的组织和
-some place in your code where that
-could use some better organization and
+代码中某个地方可以使用一些更好的组织和
+some place in your code where that could use some better organization and
 
 97
 00:08:38.946 --> 00:08:42.779
-看看是否有办法为一个模块提取一个简单的定义。
-see if there's a way to extract out
-a simple definition for a module.
+看看是否有一种方法可以提取出模块的简单定义。
+see if there's a way to extract out a simple definition for a module.

@@ -2,560 +2,485 @@ WEBVTT
 
 1
 00:00:00.170 --> 00:00:01.439
->> 凯尔 - 辛普森: 我们理解原型，
+&gt；&gt；Kyle Simpson：我们了解原型，
 &gt;&gt; Kyle Simpson: We understand prototypes,
 
 2
 00:00:01.439 --> 00:00:05.269
-我们知道它们上面的句法糖分是阶级制度
-we understand the syntactic sugar on
-top of them which is the class system.
+我们理解它们上面的句法糖分，这就是类系统。
+we understand the syntactic sugar on top of them which is the class system.
 
 3
 00:00:06.389 --> 00:00:11.109
-但让我们再看看使用这个原型系统的另一种方式，我相信
-But let's look at another way of using
-this prototype system, which I believe
+但是让我们看看使用这个原型系统的另一种方式，我相信
+But let's look at another way of using this prototype system, which I believe
 
 4
 00:00:11.109 --> 00:00:15.900
-将在 JavaScript 中发现更多潜在的未来探索。
-will uncover more potential future
-exploration within JavaScript.
+将在JavaScript中发现更多潜在的未来探索。
+will uncover more potential future exploration within JavaScript.
 
 5
 00:00:15.900 --> 00:00:19.410
-我相信我们还有更多的事情可以完成
-I believe there's more things
-that we can accomplish, and
+我相信我们还可以完成更多的事情，而且
+I believe there's more things that we can accomplish, and
 
 6
 00:00:19.410 --> 00:00:21.829
-我觉得我们可以更简单的做
+我认为我们可以用一种更简单的方式来做。
 I think we can do it in a simpler way.
 
 7
 00:00:21.829 --> 00:00:22.870
-所以我想让我们简化
+所以我想让我们简化。
 So I want us to simplify.
 
 8
 00:00:24.010 --> 00:00:27.609
-我的风格与我们使用物体的方式不同
-I have a different style of approaching
-the way we use objects, and
+我有一种不同的风格来处理我们使用对象的方式，并且
+I have a different style of approaching the way we use objects, and
 
 9
 00:00:27.609 --> 00:00:29.510
-他们之间的原型语言
+它们之间的原型语言
 the prototype language between them and
 
 10
 00:00:29.510 --> 00:00:34.539
-我将这种编码称为 OLOO，链接到其他对象的对象。
-I call this style of coding OLOO,
-Objects Linked to Other Objects.
+我把这种编码风格称为Oloo，即链接到其他对象的对象。
+I call this style of coding OLOO, Objects Linked to Other Objects.
 
 11
 00:00:34.539 --> 00:00:39.600
-我需要一些与 OO 和 OO 形成鲜明对比的术语
-I needed some kind of catchy
-term to contrast with OO and
+我需要一些朗朗上口的术语来与OO和
+I needed some kind of catchy term to contrast with OO and
 
 12
 00:00:39.600 --> 00:00:44.359
-可悲的现实是，面向对象实际上是最好的术语。
-the sad reality is that object
-oriented is actually the best term.
+可悲的现实是面向对象实际上是最好的术语。
+the sad reality is that object oriented is actually the best term.
 
 13
 00:00:45.659 --> 00:00:49.130
-你想想班上的语言
-If you think about it,
-class oriented languages
+如果你仔细想想，面向类的语言
+If you think about it, class oriented languages
 
 14
 00:00:49.130 --> 00:00:52.500
-不应该被称为面向对象的语言。
-should never have really called
-themselves object oriented languages.
+不应该真的称自己为面向对象的语言。
+should never have really called themselves object oriented languages.
 
 15
 00:00:52.500 --> 00:00:54.920
-他们应该把自己称为阶级式。
-They should have called
-themselves class oriented.
+他们应该称自己是以班级为导向的。
+They should have called themselves class oriented.
 
 16
 00:00:56.000 --> 00:01:00.390
-但他们拿走了那个面向对象的怪物现在它卡住了
-But they took on that object oriented
-moniker, and now it's stuck and
+但是他们接受了那个面向对象的绰号，现在它被卡住了
+But they took on that object oriented moniker, and now it's stuck and
 
 17
 00:01:00.390 --> 00:01:04.090
-我们不能重新定位目标的意义
-we can't re-purpose
-the meaning of object oriented.
+我们不能重新使用面向对象的含义。
+we can't re-purpose the meaning of object oriented.
 
 18
 00:01:04.090 --> 00:01:07.719
-但如果你真的认为存在两种语言
-But if you really think about it
-there are two languages in existence,
+但如果你真的想一想，有两种语言存在，
+But if you really think about it there are two languages in existence,
 
 19
 00:01:07.719 --> 00:01:10.920
-JavaScript 是其中一个， OLOO 是另一个。
-JavaScript being one of them,
-OLOO being the other.
+JavaScript是其中之一，Oloo是另一个。
+JavaScript being one of them, OLOO being the other.
 
 20
 00:01:10.920 --> 00:01:14.840
-我的知识有两种语言
+据我所知有两种语言
 Two languages in existence to my knowledge
 
 21
 00:01:14.840 --> 00:01:18.069
-其中，您可以在没有任何类的情况下创建对象。
-where in you can create
-an object without any class.
+在中，您可以创建没有任何类的对象。
+where in you can create an object without any class.
 
 22
 00:01:20.409 --> 00:01:24.646
-所以当你真正想的时候，只有两种真正面向对象的语言
-So when you really think about it, the
-only two truly object oriented languages
+所以当你真正想一想的时候，唯一两种真正面向对象的语言
+So when you really think about it, the only two truly object oriented languages
 
 23
 00:01:24.646 --> 00:01:28.060
-是 OLOO 和 JavaScript。
+是Oloo和JavaScript。
 are OLOO and JavaScript.
 
 24
 00:01:28.060 --> 00:01:29.510
-但那艘船已经航行了
+但那艘船已经启航了。
 But that ship has sailed.
 
 25
 00:01:29.510 --> 00:01:33.789
-我们不能使用 OO，所以我们将它称为 OLOO，链接到其他对象的对象。
-We can't use OO, so let's call it OLOO,
-Objects Linked to Other Objects.
+我们不能使用OO，所以让我们称之为Oloo，即链接到其他对象的对象。
+We can't use OO, so let's call it OLOO, Objects Linked to Other Objects.
 
 26
 00:01:33.789 --> 00:01:34.670
-这就是有商标的
+这是商标，
 And that is trademarked,
 
 27
 00:01:34.670 --> 00:01:37.530
-所以如果你想用的话你得给我很多钱
-so you need to pay me lots of
-money if you want to use it.
+所以如果你想用的话你需要付给我很多钱。
+so you need to pay me lots of money if you want to use it.
 
 28
 00:01:37.530 --> 00:01:38.030
-我开玩笑的
+我开玩笑的。
 I'm kidding.
 
 29
 00:01:40.200 --> 00:01:43.740
-让我们来看看 OLOO 如何处理事情。
-So let's look at how
-OLOO approaches things.
+让我们看看Oloo是如何处理事情的。
+So let's look at how OLOO approaches things.
 
 30
 00:01:43.740 --> 00:01:45.140
-请记住类语法。
+记住类语法。
 Remember the class syntax.
 
 31
 00:01:45.140 --> 00:01:47.129
-这就是我们之前说过的
-This is what we talked
-about a little bit before.
+这就是我们之前谈到的。
+This is what we talked about a little bit before.
 
 32
 00:01:47.129 --> 00:01:49.829
-类是一种图样化的方法
+类是模式的一种方式
 Classes are a way of patterning
 
 33
 00:01:49.829 --> 00:01:53.870
-不同实体之间的某种关系，并将其实例化。
-some relationship between different
-entities and instantiating them.
+不同实体之间的一些关系并实例化它们。
+some relationship between different entities and instantiating them.
 
 34
 00:01:53.870 --> 00:01:55.299
-但在封面下记住
+但在被子底下记住
 But under the covers, remember,
 
 35
 00:01:55.299 --> 00:01:59.400
-那个课实际上是在暗示这个枪支的权利吗
-that that class is actually
-implying all of this gunk right?
+那个类实际上暗示了所有这些粘性物质，对吗？
+that that class is actually implying all of this gunk right?
 
 36
 00:01:59.400 --> 00:02:02.370
-它实际上是在暗示所有这些原始类型。
-It's actually implying
-all of these prototypes.
+它实际上暗示了所有这些原型。
+It's actually implying all of these prototypes.
 
 37
 00:02:02.370 --> 00:02:07.060
-所以如果我们能做一个编码方式来完成同样的事情
-So what if we could do a style of coding
-that accomplishes the same thing but
+所以如果我们可以做一种风格的编码来完成同样的事情，但是
+So what if we could do a style of coding that accomplishes the same thing but
 
 38
 00:02:07.060 --> 00:02:11.710
-没有任何思考或设计课程的包袱
-without any of the baggage of thinking or
-designing with classes,
+没有任何用类思考或设计的包袱，
+without any of the baggage of thinking or designing with classes,
 
 39
 00:02:11.710 --> 00:02:15.780
-需要担心原型，或者超级，或者任何其他的东西，以及
-needing to worry about prototypes, or
-super, or any of that other stuff, and
+需要担心原型，或超级，或任何其他东西，以及
+needing to worry about prototypes, or super, or any of that other stuff, and
 
 40
 00:02:15.780 --> 00:02:17.938
-肯定不需要再使用新的关键词了
-certainly never needing to
-use the new key word again.
+当然再也不需要使用新的关键字了。
+certainly never needing to use the new key word again.
 
 41
 00:02:18.960 --> 00:02:22.605
-如果我们能让对象链接到其他对象呢 ?
-What if we could just make
-objects link to other objects?
+如果我们可以让对象链接到其他对象会怎么样？
+What if we could just make objects link to other objects?
 
 42
 00:02:22.605 --> 00:02:29.229
-以下是该代码的 OLOO 样式表示。
-Here's the OLOO style
-representation of that code.
+下面是该代码的Oloo风格表示。
+Here's the OLOO style representation of that code.
 
 43
 00:02:31.159 --> 00:02:35.629
-我要你在这里看到的是我现在只有东西了
-What I want you to see here is
-that I have only objects now.
+我想让你在这里看到的是，我现在只有物体了。
+What I want you to see here is that I have only objects now.
 
 44
 00:02:35.629 --> 00:02:37.900
-讲习班不是一项职能。
+车间不是一个功能。
 Workshop is not a function.
 
 45
 00:02:37.900 --> 00:02:39.319
-这不是一类人
+这不是一门课。
 It's not a class.
 
 46
 00:02:39.319 --> 00:02:41.250
-这只是个物体
+这只是一个物体。
 It's just an object.
 
 47
 00:02:41.250 --> 00:02:43.849
-AnotherWorkshop 只是一个对象。
+另一个工作坊只是一个对象。
 AnotherWorkshop is just an object.
 
 48
 00:02:43.849 --> 00:02:49.550
-我正在通过 Object.create 链接它，但它只是一个对象。
-I am linking it via Object.create
-the workshop but it is just an object.
+我正在通过对象链接它。创建工作坊，但它只是一个对象。
+I am linking it via Object.create the workshop but it is just an object.
 
 49
 00:02:49.550 --> 00:02:56.120
-JJSRecentParts 只是链接到另一个研讨会的对象。
-And the JSRecentParts is just an object
-that is linked to another workshop.
+而JSRecentParts只是一个链接到另一个工作坊的对象。
+And the JSRecentParts is just an object that is linked to another workshop.
 
 50
 00:02:56.120 --> 00:03:01.099
-所以当我打电话给JSRecentPart.sett师资时，它没有那个方法，但是它
-So when I call JSRecentPart.setteacher,
-it doesn't have that method but it
+因此，当我调用JSRecentPart.setTeacher时，它没有该方法，但它
+So when I call JSRecentPart.setteacher, it doesn't have that method but it
 
 51
 00:03:01.099 --> 00:03:06.740
-再去另一个没有这个办法的车间，但是去了这个车间。
-goes to another workshop who doesn't have
-that method, but it goes to this workshop.
+去了另一个没有那个方法的研讨会，但是它去了这个研讨会。
+goes to another workshop who doesn't have that method, but it goes to this workshop.
 
 52
 00:03:06.740 --> 00:03:11.419
-然后发现老师，用这个电话的装订
-And then it finds set teacher, and
-it uses this binding of the call site
+然后它找到SET Teacher，并使用调用站点的这个绑定
+And then it finds set teacher, and it uses this binding of the call site
 
 53
 00:03:11.419 --> 00:03:15.439
-在 JSRecentPart上设置属性。
+若要设置JSRecentPart的属性，请执行以下操作。
 to set a property on JSRecentPart's.
 
 54
 00:03:15.439 --> 00:03:18.579
-所以我们从阶级制度中得到了同样的好处。
-So we're getting the same
-benefits of a class system.
+所以我们得到了同样的阶级制度的好处。
+So we're getting the same benefits of a class system.
 
 55
 00:03:18.579 --> 00:03:20.629
-但是注意现在缺少的东西。
+但请注意现在缺少了什么。
 But notice what is missing now.
 
 56
 00:03:20.629 --> 00:03:25.240
-我们没有更多的样机我们没有更多的构造函数
-We don't have any more .prototypes, we
-don't have any more constructor functions,
+我们没有更多的.Prototype，我们没有更多的构造函数，
+We don't have any more .prototypes, we don't have any more constructor functions,
 
 57
 00:03:25.240 --> 00:03:27.579
-我们又没有新的关键词了
+而且我们没有更多的新关键词。
 and we don't have any more new keywords.
 
 58
 00:03:27.579 --> 00:03:32.729
-我们只拥有与其他物体相连的物体
-We just have objects
-linked to other objects,
+我们只是将对象链接到其他对象，
+We just have objects linked to other objects,
 
 59
 00:03:34.030 --> 00:03:38.634
-这里的魔术是我们用这个小东西叫
-and the magic trick here is that
-we use this little thing called
+这里的魔术是我们用这个小东西叫做
+and the magic trick here is that we use this little thing called
 
 60
 00:03:38.634 --> 00:03:43.519
-object.create 以创建和链接我们的对象。
-object.create to make and
-link our objects.
+创建对象来创建和链接我们的对象。
+object.create to make and link our objects.
 
 61
 00:03:43.519 --> 00:03:46.689
-所以，物化，我显然没有发明。
-So object.create,
-I obviously didn't invent that.
+所以反对。创建，显然不是我发明的。
+So object.create, I obviously didn't invent that.
 
 62
 00:03:46.689 --> 00:03:49.840
-在 ES5语言中添加了该语言。
-That was added to
-the language back in ES5.
+这是在ES5中添加到语言中的。
+That was added to the language back in ES5.
 
 63
 00:03:49.840 --> 00:03:55.750
-这实际上是我们的好友道格 - 克罗克福德提议的。
-That was actually proposed for JavaScript
-by our good friend Doug Crockford.
+这实际上是我们的好朋友Doug Crockford为JavaScript提出的。
+That was actually proposed for JavaScript by our good friend Doug Crockford.
 
 64
 00:03:55.750 --> 00:03:58.620
-他想出了 " 物化 " 的概念
-He came up with the idea for
-object.create and
+他想出了对象的想法。创建和
+He came up with the idea for object.create and
 
 65
 00:03:58.620 --> 00:04:02.590
-他把它推到了委员会里然后加到了 ES5
-he got it pushed through the committee and
-added to ES5.
+他让委员会通过了，并加入了ES5。
+he got it pushed through the committee and added to ES5.
 
 66
 00:04:02.590 --> 00:04:03.639
-好主意道格
+好主意道格。
 Great idea Doug.
 
 67
 00:04:03.639 --> 00:04:04.560
-太棒了
+太棒了。
 Fantastic.
 
 68
 00:04:04.560 --> 00:04:07.789
-这是我在 JavaScript中最喜欢的功能之一。
-This is one of my favorite
-features in JavaScript.
+这是我在JavaScript中最喜欢的功能之一。
+This is one of my favorite features in JavaScript.
 
 69
 00:04:07.789 --> 00:04:13.949
-道格 - 克罗克福德 ( Doug Crockford ) 从没有拥有的对象创造和
-As a little sad side note, Doug Crockford
-has since disowned object.create and
+作为一个有点悲哀的附注，Doug Crockford后来否认了object。create和
+As a little sad side note, Doug Crockford has since disowned object.create and
 
 70
 00:04:13.949 --> 00:04:19.269
-不再认为我们应该用它来让我流泪
-no longer thinks that we should use it at
-all, which makes me a cry a little tear.
+不再认为我们应该使用它，这让我哭了一滴眼泪。
+no longer thinks that we should use it at all, which makes me a cry a little tear.
 
 71
 00:04:19.269 --> 00:04:22.389
-我喜欢这个功能因为我喜欢做物体
-I love this feature because I love
-being able to make objects and
+我喜欢这个功能，因为我喜欢能够制作对象和
+I love this feature because I love being able to make objects and
 
 72
 00:04:22.389 --> 00:04:26.439
-把它们联系在一起而没有任何新的胡扯
-link them together without any
-of the nonsense of new, and
+将它们链接在一起，而不会有任何关于new的废话，并且
+link them together without any of the nonsense of new, and
 
 73
 00:04:26.439 --> 00:04:30.829
-原始类型，构造函数和类，以及扩展，以及所有其他内容。
-prototypes, and constructors, and classes,
-and extends, and all of that other stuff.
+原型、构造函数、类、扩展以及所有其他东西。
+prototypes, and constructors, and classes, and extends, and all of that other stuff.
 
 74
 00:04:30.829 --> 00:04:35.601
-我喜欢能充分利用物体的优势
-I love just being able to take full
-advantage of the objects oriented
+我喜欢能够充分利用面向对象的优势
+I love just being able to take full advantage of the objects oriented
 
 75
 00:04:35.601 --> 00:04:37.283
-在 JavaScript 中使用。
+JavaScript中的系统。
 system in JavaScript.
 
 76
 00:04:40.569 --> 00:04:43.386
->> 凯尔 - 辛普森: 我不仅认为这是一个简单的风格
-&gt;&gt; Kyle Simpson: Not only do I argue
-that this is a simpler style and
+&gt；&gt；Kyle Simpson：我不仅认为这是一种更简单的风格，而且
+&gt;&gt; Kyle Simpson: Not only do I argue that this is a simpler style and
 
 77
 00:04:43.386 --> 00:04:48.199
-如果按行比较，基本的语法非常小
-if you looked line by line comparison,
-there is essentially very little syntactic
+如果您逐行比较，基本上很少有语法
+if you looked line by line comparison, there is essentially very little syntactic
 
 78
 00:04:48.199 --> 00:04:51.899
-此值与类等效值之间的差异。
-difference between this and
-the class equivalent.
+这个和类的等价物之间的区别。
+difference between this and the class equivalent.
 
 79
 00:04:51.899 --> 00:04:56.350
-这并不是等同的等级等同更多的含糖或其他东西。
-It's not that class equivalent is just
-massively more sugary or something.
+这并不是说类的等价物只是大量的含糖或其他东西。
+It's not that class equivalent is just massively more sugary or something.
 
 80
 00:04:56.350 --> 00:04:59.649
-它们本质上是非常接近等价的。
-They're essentially very
-close in equivalence.
+它们在本质上是非常接近的。
+They're essentially very close in equivalence.
 
 81
 00:04:59.649 --> 00:05:03.225
 但是这个直接暴露给你的地方
-But where this one is exposing
-to you directly instead
+But where this one is exposing to you directly instead
 
 82
 00:05:03.225 --> 00:05:07.838
-假装有一件事是不重要的
-of pretending with an artifice
-that it's something that it's not,
+假装它不是什么东西，
+of pretending with an artifice that it's something that it's not,
 
 83
 00:05:07.838 --> 00:05:13.343
-它直接暴露给你这些只是与其他物体相连的物体
-it's exposing to you directly, these
-are just objects linked to other objects.
+它直接暴露给你，这些只是链接到其他对象的对象。
+it's exposing to you directly, these are just objects linked to other objects.
 
 84
 00:05:14.872 --> 00:05:18.028
->> 凯尔 - 辛普森: 现在，物化如何创造魔法?
-&gt;&gt; Kyle Simpson: Now,
-how does object.create do that magic?
+&gt；&gt；Kyle Simpson：那么，object.create是如何做到这一点的呢？
+&gt;&gt; Kyle Simpson: Now, how does object.create do that magic?
 
 85
 00:05:19.060 --> 00:05:21.709
-这是一个旧的填充对象，用于 object.create。
-Well this is an old polyfill for
-object.create.
+好的，这是一个旧的对象填充。创建。
+Well this is an old polyfill for object.create.
 
 86
 00:05:21.709 --> 00:05:24.889
-我们不需要多填充预 ES5 的填充。
-We don't need polyfills mostly for
-pre-ES5 anymore.
+我们不再需要主要用于ES5之前的聚合填充。
+We don't need polyfills mostly for pre-ES5 anymore.
 
 87
 00:05:24.889 --> 00:05:29.279
-但这是针对对象的 ES5 预填充。
-But this was the pre-ES5 polyfill for
-object.create.
+但这是针对object.create的ES5之前的polyfill。
+But this was the pre-ES5 polyfill for object.create.
 
 88
 00:05:29.279 --> 00:05:34.170
-看看它的作用，它是否真的起到了一个空虚的作用。
-And look at what it does,
-is it literally makes an empty function.
+看看它做了什么，是不是真的产生了一个空函数。
+And look at what it does, is it literally makes an empty function.
 
 89
 00:05:34.170 --> 00:05:36.759
-我们甚至都不关心它的功能
-Cuz we don't even care
-what the function is.
+因为我们甚至不关心函数是什么。
+Cuz we don't even care what the function is.
 
 90
 00:05:36.759 --> 00:05:40.730
-它将它的雏形设置为 " O " 的雏形
-It sets its prototype to sum O,
-and it calls new on
+它将其原型设置为sum O，并调用new on
+It sets its prototype to sum O, and it calls new on
 
 91
 00:05:40.730 --> 00:05:46.079
-谁管什么功能给我们新创建的对象。
-that who cares whatever function to
-give us the newly created object.
+关心给我们新创建的对象的任何功能的人。
+that who cares whatever function to give us the newly created object.
 
 92
 00:05:46.079 --> 00:05:51.430
-换句话说，物化的方式创造了 OLOO的魔力
-So, in other words, the way
-object.create does the magic of OLOO,
+所以，换句话说，方式object.create就是Oloo的魔力，
+So, in other words, the way object.create does the magic of OLOO,
 
 93
 00:05:51.430 --> 00:05:55.860
-我们把所有没人在乎的构造函数都带走
-is we take all of those constructor
-functions that nobody cares about and
+就是我们把所有那些没人关心的构造函数
+is we take all of those constructor functions that nobody cares about and
 
 94
 00:05:55.860 --> 00:05:58.639
-所有没有人想写的样机
-all those .prototypes that
-nobody wants to write, and
+所有那些没人想写的.原型，而且
+all those .prototypes that nobody wants to write, and
 
 95
 00:05:58.639 --> 00:06:01.589
-所有这些都是混乱的新关键词
-all those new keywords
-that are just confusing.
+所有那些新的关键词都是令人困惑的。
+all those new keywords that are just confusing.
 
 96
 00:06:01.589 --> 00:06:05.839
-我们把他们藏在物化的内部
-And we hide them inside of object.create,
-okay,
+我们把它们藏在物体里面。创造，好的，
+And we hide them inside of object.create, okay,
 
 97
 00:06:05.839 --> 00:06:11.100
-在我们的代码中只留下一个干净简单的物体之间的联系
-leaving in our code just this clean,
-simple linkage between objects.
+在我们的代码中只留下对象之间这种干净、简单的链接。
+leaving in our code just this clean, simple linkage between objects.

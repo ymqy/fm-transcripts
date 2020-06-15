@@ -2,458 +2,400 @@ WEBVTT
 
 1
 00:00:00.640 --> 00:00:03.529
->> 凯尔 - 辛普森: 你一定是在问自己，
-&gt;&gt; Kyle Simpson: You certainly must
-be asking yourself at this point,
+&gt；&gt；Kyle Simpson：在这一点上，你肯定会问自己，
+&gt;&gt; Kyle Simpson: You certainly must be asking yourself at this point,
 
 2
 00:00:03.529 --> 00:00:05.580
-但那箭的功能呢
+但是，箭头函数呢？
 but, what about arrow functions?
 
 3
 00:00:07.110 --> 00:00:08.468
-我们的好友是箭的作用
+我们的好朋友箭头功能。
 Our good friend the arrow function.
 
 4
 00:00:08.468 --> 00:00:12.627
-让我们返回箭头函数并在以下内容的上下文中对其进行检查
-Let's come back to arrow functions and
-examine them within the context of what
+让我们回到箭头函数并在以下上下文中检查它们
+Let's come back to arrow functions and examine them within the context of what
 
 5
 00:00:12.627 --> 00:00:15.400
-我们刚刚讨论过这个关键词
-we've just discussed,
-which is the this keyword.
+我们刚才已经讨论过了，这就是this关键字。
+we've just discussed, which is the this keyword.
 
 6
 00:00:17.089 --> 00:00:21.600
-在这里，您会注意到我在工作坊对象上有一个提问方法。
-Here you'll notice that I have
-an ask method on my workshop object.
+在这里，您会注意到我在工作坊对象上有一个ask方法。
+Here you'll notice that I have an ask method on my workshop object.
 
 7
 00:00:21.600 --> 00:00:26.559
-在它里面，我正在将回调传递到 setTimeout 和
-And inside of it, I'm making
-a callback pass to setTimeout and
+在它内部，我对setTimeout和
+And inside of it, I'm making a callback pass to setTimeout and
 
 8
 00:00:26.559 --> 00:00:27.460
-它是一个箭头函数
+这是一个箭头函数。
 it's an arrow function.
 
 9
 00:00:29.120 --> 00:00:33.183
-当调用箭头函数时，此关键字
-And that this keyword,
-when the arrow function is invoked,
+并且这个关键字，当箭头函数被调用时，
+And that this keyword, when the arrow function is invoked,
 
 10
 00:00:33.183 --> 00:00:36.539
-正在正确地指向研讨会对象。
-is correctly is pointing
-at the workshop object.
+正确地指向车间对象。
+is correctly is pointing at the workshop object.
 
 11
 00:00:38.479 --> 00:00:44.691
->> 凯尔 - 辛普森: 这就是我们所说的词法。
-&gt;&gt; Kyle Simpson: This is what we
-refer to as lexical this behavior.
+&gt；&gt；Kyle Simpson：这就是我们所说的词法这个行为。
+&gt;&gt; Kyle Simpson: This is what we refer to as lexical this behavior.
 
 12
 00:00:44.691 --> 00:00:48.439
-让我明确地为你解释一下这意味着什么
-So let me clearly state for
-you what lexical this means,
+所以让我清楚地告诉你这意味着什么，
+So let me clearly state for you what lexical this means,
 
 13
 00:00:48.439 --> 00:00:51.639
-这个话题有很多困惑。
-there's a lot of confusion
-around this topic.
+关于这个话题有很多混淆。
+there's a lot of confusion around this topic.
 
 14
 00:00:51.639 --> 00:00:56.290
-很多人心里都有一个心理模型，
-Many people have in their
-minds a mental model that
+许多人的脑海中都有这样一种心理模型
+Many people have in their minds a mental model that
 
 15
 00:00:56.290 --> 00:01:01.277
-箭头函数本质上是硬约束函数
-a arrow function is essentially
-a hardbound function
+箭头函数本质上是硬绑定函数
+a arrow function is essentially a hardbound function
 
 16
 00:01:01.277 --> 00:01:05.390
-给家长的这个不准确的。
+对父母来说这，那是不准确的。
 to the parents this, that is not accurate.
 
 17
 00:01:06.799 --> 00:01:10.640
-思考一个箭头函数的正确方法
-The proper way to think about
-what an arrow function is,
+思考箭头函数是什么的正确方式，
+The proper way to think about what an arrow function is,
 
 18
 00:01:10.640 --> 00:01:15.750
-箭头函数根本不定义此关键字。
-an arrow function does not
-define a this keyword at all.
+箭头函数根本没有定义this关键字。
+an arrow function does not define a this keyword at all.
 
 19
 00:01:17.739 --> 00:01:22.510
-在箭头函数中不存在此关键字之类的内容。
-There is no such thing as a this
-keyword in an arrow function.
+箭头函数中没有this关键字这样的东西。
+There is no such thing as a this keyword in an arrow function.
 
 20
 00:01:22.510 --> 00:01:26.859
-这意味着如果你把这个关键词放进一个箭头函数中
-Which means if you put a this
-keyword inside of an arrow function,
+这意味着如果将this关键字放在箭头函数中，
+Which means if you put a this keyword inside of an arrow function,
 
 21
 00:01:26.859 --> 00:01:30.079
-就会像其他变量一样
-it's gonna behave exactly
-like any other variable.
+它的行为就像任何其他变量一样。
+it's gonna behave exactly like any other variable.
 
 22
 00:01:31.569 --> 00:01:36.151
-这意味着它将在词法上解析为外层
-Which means it's going to lexically
-resolve to some enclosing
+这意味着它将在词汇上解析为某种封闭
+Which means it's going to lexically resolve to some enclosing
 
 23
 00:01:36.151 --> 00:01:39.098
-定义此关键字的作用域。
+定义此关键字的范围。
 scope that does define of this key word.
 
 24
 00:01:39.098 --> 00:01:43.239
-那么当这个特殊情况，箭头函数线 5 ，当我们说
-So when this particular case,
-the arrow function line 5, when we say
+所以当这个特殊的情况，箭头函数行5，当我们说
+So when this particular case, the arrow function line 5, when we say
 
 25
 00:01:43.239 --> 00:01:47.938
-这个点没有这个箭头的函数，不管它是怎么调用的，所以
-this dot there is no this in that arrow
-function no matter how it gets invoked, so
+这个点在箭头函数中没有这个，无论它是如何调用的，所以
+this dot there is no this in that arrow function no matter how it gets invoked, so
 
 26
 00:01:47.938 --> 00:01:51.746
-我们在词法上建立一个作用域，它是一个函数吗 ?
-we lexically go up one level of
-scope which is, which function?
+我们在词汇上升了一个层次的范围，也就是，哪个功能？
+we lexically go up one level of scope which is, which function?
 
 27
 00:01:51.746 --> 00:01:54.040
->> 扬声器 2: [INAUDIBLE]。
+&gt；&gt；扬声器2：[听不到]。
 &gt;&gt; Speaker 2: [INAUDIBLE].
 
 28
 00:01:54.040 --> 00:01:57.770
->> Kyle Simpson: 请求函数。
+&gt；&gt；Kyle Simpson：Ask函数。
 &gt;&gt; Kyle Simpson: The ask function.
 
 29
 00:01:57.770 --> 00:02:00.888
-讲习班不是一项职能，讲习班是一个对象。
-Workshop is not a function,
-workshop is an object.
+车间不是一个功能，车间是一个对象。
+Workshop is not a function, workshop is an object.
 
 30
 00:02:00.888 --> 00:02:06.230
-它从回回函数，箭头函数，
-It goes out from the call back function,
-the arrow function,
+它从回调函数，箭头函数，
+It goes out from the call back function, the arrow function,
 
 31
 00:02:06.230 --> 00:02:10.259
-覆盖范围的范围，是吗 ?
-that scope to the enclosing scope,
-which is?
+范围到封闭范围，是什么？
+that scope to the enclosing scope, which is?
 
 32
 00:02:10.259 --> 00:02:17.889
-问，这个关键词的定义是什么 ?
-Ask, and what is asks definition
-of the this key word?
+问，问这个关键词的定义是什么？
+Ask, and what is asks definition of the this key word?
 
 33
 00:02:17.889 --> 00:02:22.009
-什么代码行控制此关键字在询问中指出的内容。
-What line of code controls what the this
-keyword will point out inside of ask.
+哪一行代码控制着this关键字将在ask中指出的内容。
+What line of code controls what the this keyword will point out inside of ask.
 
 34
 00:02:23.829 --> 00:02:29.530
-第 10 行，因为此关键字的请求函数由调用站点设置。
-Line 10, because the ask functions this
-keyword gets set by the call site.
+第10行，因为ask函数这个关键字是由调用站点设置的。
+Line 10, because the ask functions this keyword gets set by the call site.
 
 35
 00:02:30.689 --> 00:02:36.800
-然后当那个回叫被重新调用时，它基本上就被关闭了。
-And then when that call back gets later
-invoked, it’s essentially closed over.
+然后当该回调稍后被调用时，它基本上是关闭的。
+And then when that call back gets later invoked, it’s essentially closed over.
 
 36
 00:02:36.800 --> 00:02:40.610
-具有指向研讨会对象的此关键字的父作用域。
-That parent scope that had a this
-keyword pointing at the workshop object.
+具有指向工作坊对象的this关键字的父作用域。
+That parent scope that had a this keyword pointing at the workshop object.
 
 37
 00:02:42.319 --> 00:02:44.879
-这就是我们的词法。
+这就是我们所说的词汇this的意思。
 That's what we mean by lexical this.
 
 38
 00:02:44.879 --> 00:02:46.659
-这不是难以约束的功能。
+它不是硬绑定函数。
 It's not a hard bound function.
 
 39
 00:02:46.659 --> 00:02:50.228
-它是一个完全没有这个功能的功能。
-It's a function that
-doesn't have a this at all.
+它是一个完全没有this的函数。
+It's a function that doesn't have a this at all.
 
 40
 00:02:50.228 --> 00:02:55.406
-它是在词法上旋转的，这意味着如果它必须上五个级别，
-And so it revolves lexically, that means
-if it had to go up, five levels because
+所以它在词汇上旋转，这意味着如果它必须上升，五个层次，因为
+And so it revolves lexically, that means if it had to go up, five levels because
 
 41
 00:02:55.406 --> 00:03:00.509
-你有五个嵌套的箭头功能，就是不停地去
-you had five nested arrow functions,
-it just keeps going and going and going up
+你有五个嵌套的箭头函数，它一直在不断上升
+you had five nested arrow functions, it just keeps going and going and going up
 
 42
 00:03:00.509 --> 00:03:05.580
-建筑物升降机，直至找到定义该关键字的函数。
-the building elevator until it finds
-a function that defines a this keyword.
+建筑电梯直到找到定义this关键字的函数。
+the building elevator until it finds a function that defines a this keyword.
 
 43
 00:03:05.580 --> 00:03:09.348
-无论这个关键的关键点是什么，都是它所使用的。
-And whatever the this keyword points at
-for that function, that's what it uses.
+无论this关键字针对该函数指向什么，这就是它所使用的。
+And whatever the this keyword points at for that function, that's what it uses.
 
 44
 00:03:13.819 --> 00:03:17.425
->> 凯尔 - 辛普森: 这不是一个正确的解释
-&gt;&gt; Kyle Simpson: That is just not
-the correct explanation to describe it and
+&gt；&gt；Kyle Simpson：这不是描述它的正确解释
+&gt;&gt; Kyle Simpson: That is just not the correct explanation to describe it and
 
 45
 00:03:17.425 --> 00:03:21.693
-最近有很多人在推特上跟我争论说，
-many people have been arguing with
-me recently on Twitter saying,
+最近很多人在推特上和我争论说，
+many people have been arguing with me recently on Twitter saying,
 
 46
 00:03:21.693 --> 00:03:23.699
-但这不重要
+，但这无关紧要。
 ,but it doesn't matter.
 
 47
 00:03:23.699 --> 00:03:27.610
-是这样而且这里是规范的规范
-Yes it does and
-here is the spec, the spec says,
+是的，这是说明书，说明书上说，
+Yes it does and here is the spec, the spec says,
 
 48
 00:03:27.610 --> 00:03:31.280
-箭头函数未定义本地绑定
-an arrow function does not
-define local bindings for
+箭头函数没有为定义局部绑定
+an arrow function does not define local bindings for
 
 49
 00:03:31.280 --> 00:03:36.180
-参数 super 此值或 new.target。
+参数超过this或new.target。
 arguments super this or new.target.
 
 50
 00:03:36.180 --> 00:03:38.479
-有时人们喜欢拍摄信使
-People sometimes like
-to shoot the messenger.
+人们有时喜欢射杀信使。
+People sometimes like to shoot the messenger.
 
 51
 00:03:38.479 --> 00:03:39.670
-我没写规格
+规格不是我写的。
 I didn't write the spec.
 
 52
 00:03:39.670 --> 00:03:42.520
-我只是在告诉你这个规范是什么好吗
-I'm just telling you what the spec says,
-okay?
+我只是告诉你说明书上说了什么，好吗？
+I'm just telling you what the spec says, okay?
 
 53
 00:03:42.520 --> 00:03:44.719
-该规范表示没有此关键字。
+规范说没有this关键字。
 The spec says there is no this keyword.
 
 54
 00:03:44.719 --> 00:03:49.530
-所以我觉得你最好的结果就是你觉得像电脑
-So I think the best outcome for you is
-when you think like the computer instead
+所以我认为对你来说最好的结果是当你像电脑一样思考
+So I think the best outcome for you is when you think like the computer instead
 
 55
 00:03:49.530 --> 00:03:53.969
-试图发明你自己的解释那也许会有偏差
-of trying to invent your own explanations,
-that may or may not deviate and
+试图发明你自己的解释，可能会也可能不会偏离
+of trying to invent your own explanations, that may or may not deviate and
 
 56
 00:03:53.969 --> 00:03:58.439
-创造，让错误的思考和错误永久化。
-create, and
-perpetuate wrong thinking and bugs.
+创造，并使错误的想法和错误永久化。
+create, and perpetuate wrong thinking and bugs.
 
 57
 00:03:59.829 --> 00:04:01.759
-我之前在课程里说过
+我在课程的前面已经说过了。
 I've said this earlier in the course.
 
 58
 00:04:01.759 --> 00:04:05.759
-当你不正确地思考一个密码是如何工作的时候
-When you think incorrectly about
-how a piece of code works,
+当您错误地思考一段代码如何工作时，
+When you think incorrectly about how a piece of code works,
 
 59
 00:04:05.759 --> 00:04:10.469
-即使是在那一刻意外地工作你也不正确
-even if it accidentally works
-at that moment, you're incorrect
+即使它在那一刻偶然起作用，你也是不正确的
+even if it accidentally works at that moment, you're incorrect
 
 60
 00:04:10.469 --> 00:04:13.969
-思维会导致更多虫子被感染
-thinking will systemically lead
-to more bugs down the line.
+思考会在系统上导致更多的bug。
+thinking will systemically lead to more bugs down the line.
 
 61
 00:04:15.479 --> 00:04:17.319
-只有一个人能解决这个问题
+只有一个办法可以解决这个问题。
 And there's only one fix for that.
 
 62
 00:04:17.319 --> 00:04:19.639
-就像 JavaScript 认为的那样
+它是思考，就像JavaScript认为的那样。
 It's to think, like JavaScript thinks.
 
 63
 00:04:21.180 --> 00:04:24.319
-这就是为什么我不断地在这个过程中反复引用。
-That's why I keep referencing in this
-course over and over and over again.
+这就是为什么我在这门课上一遍又一遍地引用。
+That's why I keep referencing in this course over and over and over again.
 
 64
 00:04:24.319 --> 00:04:25.769
-那个规范说什么
+说明书上说什么？
 What does the spec say?
 
 65
 00:04:25.769 --> 00:04:27.459
-而且这也很重要
+规格说明的内容很重要
 And it matters what the spec says so
 
 66
 00:04:27.459 --> 00:04:32.560
-我们不能把我们的大脑从错误的轨道上思考，思考一些事情。
-that we don't get our brains off on
-the wrong track and think about something.
+我们不会让我们的大脑走上错误的轨道去思考一些事情。
+that we don't get our brains off on the wrong track and think about something.
 
 67
 00:04:32.560 --> 00:04:36.680
-你可能不认为一个箭的功能没有硬的界限
-You might not think it would ever matter
-that an arrow function's not hard bound.
+你可能认为箭头函数不是硬绑定就不重要了。
+You might not think it would ever matter that an arrow function's not hard bound.
 
 68
 00:04:38.040 --> 00:04:40.409
-这里有个非常疯狂的角落
-Well here's a really crazy corner
-case where it could matter.
+好吧，这里有一个非常疯狂的角落案例，它可能很重要。
+Well here's a really crazy corner case where it could matter.
 
 69
 00:04:41.939 --> 00:04:45.439
-记住这个关键词的行为
+还记得这个关键字的行为，
 Remember how that this keyword behavior,
 
 70
 00:04:45.439 --> 00:04:50.499
-新关键字比硬绑定函数更有先例。
-the new keyword is more precedent
-than a hardbound function.
+new关键字比硬绑定函数更具先例。
+the new keyword is more precedent than a hardbound function.
 
 71
 00:04:50.499 --> 00:04:55.113
-因为某种疯狂的原因，如果你在一个硬的函数上调用新的
-That somehow for some crazy reason,
-if you call new on a hardbound function it
+不知为什么，由于某种疯狂的原因，如果你对硬绑定函数调用new，它
+That somehow for some crazy reason, if you call new on a hardbound function it
 
 72
 00:04:55.113 --> 00:04:59.370
-将覆盖硬绑定并使其成为新对象。
-overrides the hardbound and
-it makes it the new object.
+覆盖硬绑定并使其成为新对象。
+overrides the hardbound and it makes it the new object.
 
 73
 00:04:59.370 --> 00:05:01.608
-猜猜当你对一个箭头函数进行新的调用时发生了什么。
-Guess what happens when you
-call new on an arrow function.
+猜猜当您对箭头函数调用new时会发生什么。
+Guess what happens when you call new on an arrow function.
 
 74
 00:05:03.209 --> 00:05:06.490
-如果一个箭头的功能很硬你应该能在一个箭头上
-If an arrow function's hard bound, you
-ought to be able to call new on an arrow
+如果箭头函数是硬绑定的，您应该能够在箭头上调用new
+If an arrow function's hard bound, you ought to be able to call new on an arrow
 
 75
 00:05:06.490 --> 00:05:08.709
-函数并覆盖它的这个关键字。
+函数并重写其this关键字。
 function and override its this key word.
 
 76
 00:05:10.740 --> 00:05:13.750
-当你调用一个箭功能的时候会发生什么呢，任何人之前都试过吗 ?
-What happens when you call new on an arrow
-function, anybody ever try that before?
+当你对箭头函数调用new时会发生什么，以前有人试过吗？
+What happens when you call new on an arrow function, anybody ever try that before?
 
 77
 00:05:15.639 --> 00:05:16.790
-你其实是有例外的
+你实际上得到了一个例外。
 You actually get an exception.
 
 78
 00:05:16.790 --> 00:05:18.800
-不允许在箭头功能上调用新项。
-You're not allowed to call
-new on an arrow function.
+不允许对箭头函数调用new。
+You're not allowed to call new on an arrow function.
 
 79
 00:05:19.949 --> 00:05:22.379
-所以这不是一个硬性的功能。
+所以它不是硬绑定函数。
 So it's not a hard bound function.
 
 80
 00:05:25.071 --> 00:05:27.600
->> Kyle Simpson: 它是在此关键字上未定义的函数。
-&gt;&gt; Kyle Simpson: It is a function
-that doesn't define on this keyword.
+&gt；&gt；Kyle Simpson：这是一个没有在此关键字上定义的函数。
+&gt;&gt; Kyle Simpson: It is a function that doesn't define on this keyword.

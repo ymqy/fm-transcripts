@@ -2,144 +2,127 @@ WEBVTT
 
 1
 00:00:00.220 --> 00:00:04.250
->> Kyle Simpson: 如果您在此情况下使用双等号，那么在此情况下，
-&gt;&gt; Kyle Simpson: If you use a double
-equals between, in this case, a number and
+&gt；&gt；Kyle Simpson：如果在本例中使用数字和之间的双等号
+&gt;&gt; Kyle Simpson: If you use a double equals between, in this case, a number and
 
 2
 00:00:04.250 --> 00:00:05.549
-一个包含数字的数组。
+保存数字的数组。
 an array that holds the number.
 
 3
 00:00:06.820 --> 00:00:08.890
-这真是太可怕了
+这真是个糟糕的主意。
 This is a really terrible idea.
 
 4
 00:00:08.890 --> 00:00:13.000
-您不应该编写将原语与类似数组进行比较的代码。
-You should never write code that compares
-a primitive to an array like that.
+您永远不应该编写像这样将基元与数组进行比较的代码。
+You should never write code that compares a primitive to an array like that.
 
 5
 00:00:13.000 --> 00:00:17.039
-但如果你有原因的话如果你写了一个
-But if you did, if for some reason
-you wrote a function that couldn't
+但是如果你这样做了，如果由于某种原因你写了一个不能
+But if you did, if for some reason you wrote a function that couldn't
 
 6
 00:00:17.039 --> 00:00:19.570
-控制某人是否通过了数字或
-control whether somebody
-passed a number or
+控制某人是否传递了一个数字或
+control whether somebody passed a number or
 
 7
 00:00:19.570 --> 00:00:24.329
-一个数字的数组，它会被强迫地工作吗 ?
-an array with a number in it,
-would it work coercively?
+一个包含数字的数组，它会强制工作吗？
+an array with a number in it, would it work coercively?
 
 8
 00:00:24.329 --> 00:00:28.829
-在这宗个案中，是，但是否应该这样做 ?
-In this particular case,
-yes, but should it?
+在这个特殊的情况下，是的，但它应该吗？
+In this particular case, yes, but should it?
 
 9
 00:00:28.829 --> 00:00:33.920
-还有比工作更重要的原因吗
-Ooh, and why is more important,
-even, than does it work?
+哦，为什么比起作用更重要呢？
+Ooh, and why is more important, even, than does it work?
 
 10
 00:00:33.920 --> 00:00:35.280
-为什么这一工作 ?
+为什么这个会管用？
 Why would this one work?
 
 11
 00:00:36.570 --> 00:00:41.058
-为什么一个数字在某种程度上被强迫等同于一个持有该数字的数组 ?
-Why would a number somehow be coercively
-equal to an array holding that number?
+为什么一个数字会以某种方式强制等于保存该数字的数组？
+Why would a number somehow be coercively equal to an array holding that number?
 
 12
 00:00:42.310 --> 00:00:46.130
-而且只有在那个阵列只有一个号码的情况下
-And certainly only in the case where
-that array only has the single number,
+并且当然仅在该阵列仅具有单个数字的情况下，
+And certainly only in the case where that array only has the single number,
 
 13
 00:00:46.130 --> 00:00:48.399
-如果有多个号码不是吗
+如果它有多个数字就不会了，对吧？
 not if it had multiple numbers, right?
 
 14
 00:00:48.399 --> 00:00:49.869
-我们再来一次
+所以我们再来一次
 So let's again,
 
 15
 00:00:49.869 --> 00:00:53.979
-让我们调用该算法来了解在封面下实际发生了什么。
-let's invoke that algorithm to see what
-is actually happening under the covers.
+让我们调用该算法来查看幕后实际发生了什么。
+let's invoke that algorithm to see what is actually happening under the covers.
 
 16
 00:00:53.979 --> 00:00:56.369
-去感受双重平等的意义
-To get a sense of what
-double equals is doing.
+来了解Double Equals在做什么。
+To get a sense of what double equals is doing.
 
 17
 00:00:58.179 --> 00:01:02.048
-首先，它尝试比较 workshoplCount 和 workshop2Count。
-First, it tries to compare
-workshop1Count and workshop2Count.
+首先，它试图比较workshop1Count和workshop2Count。
+First, it tries to compare workshop1Count and workshop2Count.
 
 18
 00:01:02.048 --> 00:01:03.990
-那是 ==
+这就是=。
 That's the ==.
 
 19
 00:01:03.990 --> 00:01:09.750
-它将 workshoplCount 转换为其基本形式，即其编号。
-It turns workshop1Count into its
-primitive form, which is its number.
+它将workshop1Count转换为其原始形式，即其编号。
+It turns workshop1Count into its primitive form, which is its number.
 
 20
 00:01:09.750 --> 00:01:14.620
-但是 workshop2Count 是一个数组，所以它首先执行的是 toPrimitive。
-But workshop2Count is an array, so
-what it first does is say toPrimitive.
+但是workshop2Count是一个数组，所以它首先要做的是说to Primitive。
+But workshop2Count is an array, so what it first does is say toPrimitive.
 
 21
 00:01:14.620 --> 00:01:18.319
-对数组的 toPrimitive 有什么影响 ?
-What happens to
-the toPrimitive of an array?
+数组的toPrimitive发生了什么？
+What happens to the toPrimitive of an array?
 
 22
 00:01:18.319 --> 00:01:23.432
-它会让自己干干干死所以我们最终以第 5 行
-It stringifies itself, so
-then we end up with line 5,
+它自己串起来，所以我们最后得到第5行，
+It stringifies itself, so then we end up with line 5,
 
 23
 00:01:23.432 --> 00:01:26.920
-42 == "42" ，对吗 ?
+42=“42”，对吗？
 42 == "42", right?
 
 24
 00:01:26.920 --> 00:01:30.049
-但那是因为那个奇怪的阵列
-But that’s only because of that
-weird array stringification
+但那只是因为那个奇怪的数组字符串化
+But that’s only because of that weird array stringification
 
 25
 00:01:30.049 --> 00:01:32.460
-不包含方括号的内容。
+这不包括括号。
 that doesn’t include the brackets.
 
 26
@@ -149,273 +132,238 @@ So it’s almost accidentally working here.
 
 27
 00:01:35.530 --> 00:01:38.229
-由于阵列中只有一个值，因此仅意外地工作。
-And only accidentally working because
-there is only one value in the array.
+并且只是意外地工作，因为数组中只有一个值。
+And only accidentally working because there is only one value in the array.
 
 28
 00:01:39.329 --> 00:01:40.460
-你和我一起吗
+你和我一起吗？
 You with me?
 
 29
 00:01:40.460 --> 00:01:44.490
 现在我们有两种不同的类型，我们有一个数字和一个字符串。
-Now we have two different types,
-we have a number and a string.
+Now we have two different types, we have a number and a string.
 
 30
 00:01:44.490 --> 00:01:45.680
-这里有两个选择
+这里有两个选择。
 There's two options here.
 
 31
 00:01:45.680 --> 00:01:48.009
-我们要么把数字变成一个字符串
-We could either make
-the number into a string and
+我们可以把数字变成一个字符串
+We could either make the number into a string and
 
 32
 00:01:48.009 --> 00:01:51.710
-比较字符串，或将字符串设置为数字并比较数字。
-compare the strings, or make the string
-into a number and compare the numbers.
+比较字符串，或将字符串转换为数字并比较数字。
+compare the strings, or make the string into a number and compare the numbers.
 
 33
 00:01:53.189 --> 00:01:54.780
-算法中哪个发生了
+算法中发生哪种情况？
 Which one happens in the algorithm?
 
 34
 00:01:55.939 --> 00:01:58.104
-它倾向于- >> 扬声器 2: 数字化。
-It prefers-
-&gt;&gt; Speaker 2: Numerification.
+它更喜欢-&gt；&gt；扬声器2：数学化。
+It prefers- &gt;&gt; Speaker 2: Numerification.
 
 35
 00:01:58.104 --> 00:02:01.790
->> 凯尔 - 辛普森: 数字比较，因此字符串将成为数字，并且
-&gt;&gt; Kyle Simpson: Numeric comparison,
-so the string becomes the number, and
+&gt；&gt；Kyle Simpson：数字比较，因此字符串成为数字，并且
+&gt;&gt; Kyle Simpson: Numeric comparison, so the string becomes the number, and
 
 36
 00:02:01.790 --> 00:02:06.790
-请注意，第 6 行，第 3 行等于 3 ，因为现在的类型相同。
-notice here, line 6, it does a triple
-equals because the types are now the same.
+注意这里，第6行，它做了一个三重等于，因为现在类型是相同的。
+notice here, line 6, it does a triple equals because the types are now the same.
 
 37
 00:02:09.300 --> 00:02:10.979
->> 凯尔 - 辛普森: 你遵循这一推理吗 ?
-&gt;&gt; Kyle Simpson: You follow
-that line of reasoning?
+&GT；&GT；凯尔·辛普森：你遵循这条推理路线吗？
+&gt;&gt; Kyle Simpson: You follow that line of reasoning?
 
 38
 00:02:10.979 --> 00:02:13.419
-这显然是一个典型的例子，但是
-Now this is obviously a contrived example,
-but
+这显然是一个人为的例子，但是
+Now this is obviously a contrived example, but
 
 39
 00:02:13.419 --> 00:02:18.479
-问题是即使有用也不代表你应该用它
-the point here is that even if it works,
-that doesn't mean you should use it.
+这里的重点是，即使它起作用，也不意味着你应该使用它。
+the point here is that even if it works, that doesn't mean you should use it.
 
 40
 00:02:19.990 --> 00:02:22.430
-这是我认为最明显的例子之一
-This is one of those
-clear examples I think
+我认为这是一个明显的例子
+This is one of those clear examples I think
 
 41
 00:02:22.430 --> 00:02:25.210
-在那里胁迫对我们来说是件坏事
+强迫对我们来说是一件非常不好的事情。
 where coercion is a very bad thing for us.
 
 42
 00:02:25.210 --> 00:02:29.639
-您应该缩小面积，不要在数字之间进行比较，
-You should reduce the surface area and
-not make comparisons between numbers and
+你应该减少表面积，而不是比较数字和
+You should reduce the surface area and not make comparisons between numbers and
 
 43
 00:02:29.639 --> 00:02:30.990
-数字的数组。
+数字数组。
 arrays of numbers.
 
 44
 00:02:30.990 --> 00:02:33.439
-这甚至在编程上都没有意义。
-That doesn't even make
-any sense in programming.
+这在编程中甚至没有任何意义。
+That doesn't even make any sense in programming.
 
 45
 00:02:33.439 --> 00:02:37.469
-而这正是我们被咬的大部分角落的地方
-And yet that's where most of our corner
-cases that we get bitten by are,
+然而，这就是我们大多数被咬的角落里的箱子所在的地方，
+And yet that's where most of our corner cases that we get bitten by are,
 
 46
 00:02:37.469 --> 00:02:39.789
-因为我们都做了这些多态的打字
-because we do all of that
-polymorphic typing stuff.
+因为我们做的都是多态打字。
+because we do all of that polymorphic typing stuff.
 
 47
 00:02:41.349 --> 00:02:42.550
-我们不应该这样做。
+我们永远不应该那样做。
 We should never do that.
 
 48
 00:02:42.550 --> 00:02:46.389
-您不应该通过使用三重等号来解决此问题。
-And you shouldn't fix this
-problem by using triple equals.
+并且您不应该通过使用三重等于来修复这个问题。
+And you shouldn't fix this problem by using triple equals.
 
 49
 00:02:46.389 --> 00:02:51.500
-好的，这里最重要的是，这里的修订是不使用三重等号。
-Okay, most important take-away here,
-the fix here is not to use triple equals.
+好的，这里最重要的外带，这里的修复是不使用三重等于。
+Okay, most important take-away here, the fix here is not to use triple equals.
 
 50
 00:02:51.500 --> 00:02:54.530
-三等号能防止你看到真正的问题
-Triple equals prevents you
-from seeing the real problem,
+三倍等于会让你看不到真正的问题，
+Triple equals prevents you from seeing the real problem,
 
 51
 00:02:54.530 --> 00:02:57.210
-这就是你第一次做的比较糟糕的对比
-which is that you're making a terrible
-comparison in the first place.
+那就是你一开始就做了一个糟糕的比较。
+which is that you're making a terrible comparison in the first place.
 
 52
 00:02:59.030 --> 00:03:02.175
-您应该做的是修正它，从而使您所做的比较有意义。
-What you should do is fix it so that the
-comparisons that you're making make sense.
+你应该做的就是修复它，这样你所做的比较才有意义。
+What you should do is fix it so that the comparisons that you're making make sense.
 
 53
 00:03:04.205 --> 00:03:05.036
->> 凯尔 - 辛普森: 是的。
+&gt；&gt；Kyle Simpson：是的。
 &gt;&gt; Kyle Simpson: Yes.
 
 54
 00:03:05.036 --> 00:03:08.449
->> 演讲者 3: 我的意思是，我知道你这样做是为了说明一点，
-&gt;&gt; Speaker 3: I mean, I understand
-you did this to demonstrate a point,
+&gt；&gt；演讲者3：我的意思是，我知道你这样做是为了证明一个观点，
+&gt;&gt; Speaker 3: I mean, I understand you did this to demonstrate a point,
 
 55
 00:03:08.449 --> 00:03:10.610
-但如果我能看到这样的代码
+但如果我像这样看代码，
 but if I would look at code like this,
 
 56
 00:03:10.610 --> 00:03:14.629
-你不会说那个人有更大的问题吗
-wouldn't you say that that person
-has bigger problems than that?
+你不会说那个人有更大的问题吗？
+wouldn't you say that that person has bigger problems than that?
 
 57
 00:03:14.629 --> 00:03:15.900
->> 凯尔 - 辛普森: 这正是我的意思。
+&GT；&GT；Kyle Simpson：这正是我的观点。
 &gt;&gt; Kyle Simpson: That's exactly my point.
 
 58
 00:03:15.900 --> 00:03:16.430
->> 演讲者 3: 是的。
+&gt；&gt；扬声器3：是的。
 &gt;&gt; Speaker 3: Yeah.
 
 59
 00:03:16.430 --> 00:03:17.870
->> 凯尔 - 辛普森: 这里有更大的问题。
-&gt;&gt; Kyle Simpson: There
-are bigger problems here.
+&gt；&gt；Kyle Simpson：这里有更大的问题。
+&gt;&gt; Kyle Simpson: There are bigger problems here.
 
 60
 00:03:17.870 --> 00:03:20.960
-这不是一个，你应该用这个双等号。
-This is not a,
-you should go use double equals this way.
+这不是一个，你应该这样去使用双等于。
+This is not a, you should go use double equals this way.
 
 61
 00:03:20.960 --> 00:03:24.550
-这就是人们抱怨的双重平等
-This is, this is what people
-complain about with double equals,
+这是，这就是人们抱怨的双等号，
+This is, this is what people complain about with double equals,
 
 62
 00:03:24.550 --> 00:03:26.849
-他们说双重等于是问题
-and they're saying that
-double equals is the problem.
+他们说双倍等于是问题所在。
+and they're saying that double equals is the problem.
 
 63
 00:03:26.849 --> 00:03:30.460
-真正的问题是你做了一个非感性的对比。
-And the real problem is that you're
-making a nonsensical comparison.
+真正的问题是你在做一个毫无意义的比较。
+And the real problem is that you're making a nonsensical comparison.
 
 64
 00:03:32.219 --> 00:03:34.376
-双重平等不是你的错
-Double equals isn't
-the one that's at fault.
+双等于不是错的那个。
+Double equals isn't the one that's at fault.
 
 65
 00:03:34.376 --> 00:03:37.590
-而三重等于只覆盖它，它没有解决真正的问题。
-And triple equals only covers it up,
-it doesn't fix the real problem.
+而三倍等于只会掩盖它，它并不能解决真正的问题。
+And triple equals only covers it up, it doesn't fix the real problem.
 
 66
 00:03:39.099 --> 00:03:40.906
-如果你做出合理的比较
+如果你做了明智的比较，
 If you make sensible comparisons,
 
 67
 00:03:40.906 --> 00:03:44.102
-就像一个数字的字符串表示实际数字，
-like a string representation of
-a number to the actual number,
+就像数字到实际数字的字符串表示一样，
+like a string representation of a number to the actual number,
 
 68
 00:03:44.102 --> 00:03:47.852
-这是一个明智的对比和胁迫在那里完全有道理。
-that's a sensible comparison and
-coercion makes complete sense there.
+这是一个明智的比较，强迫在那里是完全有意义的。
+that's a sensible comparison and coercion makes complete sense there.
 
 69
 00:03:47.852 --> 00:03:51.466
-但如果你把某样东西完全不同
-But if you compare something to
-something entirely different and
+但是如果你把一些东西和一些完全不同的东西进行比较
+But if you compare something to something entirely different and
 
 70
 00:03:51.466 --> 00:03:54.170
-不小心工作太不理智了
-it accidentally works,
-that's not sensible.
+它偶然起作用了，这是不明智的。
+it accidentally works, that's not sensible.
 
 71
 00:03:54.170 --> 00:03:56.020
-这不太合理
+这不合理。
 That's not reasonable.
 
 72
 00:03:56.020 --> 00:04:03.669
-我同意你的看法，我们看到的结果是，你为什么要这样做 ?
-I agree with you that the outcome that
-we see is, why would you do that?
+我同意你的观点，我们看到的结果是，你为什么要这么做？
+I agree with you that the outcome that we see is, why would you do that?
 
 73
 00:04:03.669 --> 00:04:09.862
-但我不喜欢的是说 JavaScript 在这里设计不好
-But what I don't tend to do is say
-JavaScript was poorly designed here.
+但我不倾向于说JavaScript在这里设计得很差。
+But what I don't tend to do is say JavaScript was poorly designed here.
 
 74
 00:04:09.862 --> 00:04:12.174
@@ -424,81 +372,70 @@ There are historical reasons for
 
 75
 00:04:12.174 --> 00:04:16.057
-为什么它甚至可以允许两个图元进行比较。
-why it allowed even the two
-primitives in a comparison.
+为什么它甚至允许两个原语进行比较。
+why it allowed even the two primitives in a comparison.
 
 76
 00:04:16.057 --> 00:04:19.865
-如果我在设计这种胁迫的话我就会把所有其他的强迫
-If I were designing the coercion, I would
-of done all the other coercions but
+如果我是设计强制的，我会做所有其他的强制，但是
+If I were designing the coercion, I would of done all the other coercions but
 
 77
 00:04:19.865 --> 00:04:23.437
-不包括这两个原语，因为在我看来
-not included the two primitives,
-because in my opinion the only kind of
+不包括这两个原语，因为在我看来唯一的一种
+not included the two primitives, because in my opinion the only kind of
 
 78
 00:04:23.437 --> 00:04:27.810
-非原始比较应该是可能的，这是身份比较。
-non-primitive comparison that should ever
-be possible is the identity comparison.
+应该可能的非原始比较是身份比较。
+non-primitive comparison that should ever be possible is the identity comparison.
 
 79
 00:04:28.819 --> 00:04:31.139
-用原语进行胁迫是疯狂的。
+对原始人的强迫是疯狂的。
 Coercion with primitives is crazy.
 
 80
 00:04:31.139 --> 00:04:35.653
-但以图元胁迫的历史原因之一就是
-But one of the historical reasons for
-the coercion with primitives is that in
+但是，对原语进行强制的历史原因之一是
+But one of the historical reasons for the coercion with primitives is that in
 
 81
 00:04:35.653 --> 00:04:39.334
-你做了新字符串的时候，现在你有了一个对象。
-the olden days you did newString,
-and now you have an object.
+以前你做了newString，现在你有了一个对象。
+the olden days you did newString, and now you have an object.
 
 82
 00:04:39.334 --> 00:04:41.447
-但你不认为它是一个物体
-But you don't think of
-it as being an object,
+但你不认为它是一个物体，
+But you don't think of it as being an object,
 
 83
 00:04:41.447 --> 00:04:43.290
-你认为它是原始的
+你认为它是原始的。
 you think of it as being the primitive.
 
 84
 00:04:43.290 --> 00:04:48.045
-所以他们允许那个非原始的人强迫
-So they allowed that non-primitive
-to coercively down coerce
+所以他们允许非原始的强制下来
+So they allowed that non-primitive to coercively down coerce
 
 85
 00:04:48.045 --> 00:04:51.159
-它的原始当量
+其原始等价物。
 itself to its primitive equivalent.
 
 86
 00:04:51.159 --> 00:04:53.459
 这就是为什么算法有类似的东西。
-That's why the algorithm
-has something like that.
+That's why the algorithm has something like that.
 
 87
 00:04:53.459 --> 00:04:55.560
-我不会写那个代码但这就是为什么
-I wouldn't write that code,
-but that's why it's there.
+我不会写那个代码，但这就是它存在的原因。
+I wouldn't write that code, but that's why it's there.
 
 88
 00:04:55.560 --> 00:04:59.149
-我认为这很难说这是一个糟糕的设计。
-So it's hard to say that's a poor design,
-in my opinion.
+因此，在我看来，很难说这是一个糟糕的设计。
+So it's hard to say that's a poor design, in my opinion.

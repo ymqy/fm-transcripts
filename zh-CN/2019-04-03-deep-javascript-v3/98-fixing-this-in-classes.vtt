@@ -2,334 +2,290 @@ WEBVTT
 
 1
 00:00:00.130 --> 00:00:03.334
->> 凯尔 - 辛普森: 我在思考这个问题的时候
-&gt;&gt; Kyle Simpson: A while back I was
-thinking about this question of why people
+&gt；&gt；Kyle Simpson：不久前我在想为什么人们
+&gt;&gt; Kyle Simpson: A while back I was thinking about this question of why people
 
 2
 00:00:03.334 --> 00:00:06.359
-说你为什么不能让他们自说自话
-say well,
-why couldn't you just make them autobound?
+说得好，你为什么不能让它们自动绑定呢？
+say well, why couldn't you just make them autobound?
 
 3
 00:00:06.359 --> 00:00:10.801
-这样我就不用每次都做这个任务了吗
-And make it so that I don't have
-to do this assignment every time?
+这样我就不必每次都做这个作业了？
+And make it so that I don't have to do this assignment every time?
 
 4
 00:00:10.801 --> 00:00:13.230
-无法为我自动执行此操作吗 ?
-Couldn't JavaScript just do
-this automatically for me?
+JavaScript不能自动为我做这件事吗？
+Couldn't JavaScript just do this automatically for me?
 
 5
 00:00:13.230 --> 00:00:15.339
-其实我觉得有一个方案。
+事实上，我认为有一个建议。
 In fact I think there is a proposal.
 
 6
 00:00:15.339 --> 00:00:19.021
-我不知道它是否会发生但我认为
-I don't know if it's ever gonna happen,
-but I think there is a proposal for
+我不知道它是否会发生，但我认为有一个提议
+I don't know if it's ever gonna happen, but I think there is a proposal for
 
 7
 00:00:19.021 --> 00:00:20.775
-名为 @bound的类修饰符
+一个名为@Bound的类装饰符，
 a class decorator called @bound,
 
 8
 00:00:20.775 --> 00:00:23.510
 这将使您的所有类方法自动绑定。
-which would make all your
-class methods auto-bound.
+which would make all your class methods auto-bound.
 
 9
 00:00:23.510 --> 00:00:27.960
-所以这至少是他们在某种程度上正在考虑的事情
-So this is at least something that
-they're considering doing at some point,
+所以这至少是他们考虑在某个时候做的事情，
+So this is at least something that they're considering doing at some point,
 
 10
 00:00:27.960 --> 00:00:31.118
-使您能够选择此自动绑定。
-is making it so
-that you can opt into this auto-bound.
+是为了让你可以选择加入这个自动绑定。
+is making it so that you can opt into this auto-bound.
 
 11
 00:00:31.118 --> 00:00:34.097
-你也许能从我的语调里看出来
+你也许可以从我的语气中看出，
 And you probably can tell from my tone,
 
 12
 00:00:34.097 --> 00:00:38.439
-在这一点上我不认为这是个好主意
-at this point,
-that I don't think that's a great idea.
+在这一点上，我认为这不是一个好主意。
+at this point, that I don't think that's a great idea.
 
 13
 00:00:38.439 --> 00:00:44.725
-但我想通过一个代码思考实验来说明为什么这个想法很糟糕。
-But I wanna illustrate why it's such a bad
-idea through a code thought experiment.
+但我想通过一个代码思维实验来说明为什么这是一个坏主意。
+But I wanna illustrate why it's such a bad idea through a code thought experiment.
 
 14
 00:00:44.725 --> 00:00:48.027
-我坐下来想，我们怎么做呢 ?
-I sat down and I thought,
-how would we make it so
+我坐下来，我想，我们怎么才能做到这一点呢？
+I sat down and I thought, how would we make it so
 
 15
 00:00:48.027 --> 00:00:51.332
-我们可以在原型上使用
-that we could have methods on a prototype,
-but
+我们可以在原型上有方法，但是
+that we could have methods on a prototype, but
 
 16
 00:00:51.332 --> 00:00:56.619
-还会有自动硬绑定的方法来响应这些实例吗 ?
-somehow also have auto hardbound
-methods that respond to the instances?
+不知何故也有响应实例的自动硬绑定方法？
+somehow also have auto hardbound methods that respond to the instances?
 
 17
 00:00:56.619 --> 00:00:59.899
-我得出结论，这有一个黑客。
-And I came to the conclusion,
-there's a hack for this.
+我得出的结论是，这是一个黑客。
+And I came to the conclusion, there's a hack for this.
 
 18
 00:00:59.899 --> 00:01:01.979
-这就是它的样子
+看起来是这样的。
 And here's what it looks like.
 
 19
 00:01:01.979 --> 00:01:05.760
-我们要做的是，我不希望你读这个代码。
-What we will do is, and
-I'm not expecting you to read this code.
+我们要做的是，我不指望你读这个代码。
+What we will do is, and I'm not expecting you to read this code.
 
 20
 00:01:05.760 --> 00:01:08.509
-如果你真的有兴趣的话我可以放大
-I could zoom in if you were
-really interested, but
+如果你真的感兴趣，我可以放大，但是
+I could zoom in if you were really interested, but
 
 21
 00:01:08.509 --> 00:01:10.808
-我不希望你读这个代码
+我不指望你读这个代码。
 I'm not expecting you to read this code.
 
 22
 00:01:10.808 --> 00:01:15.840
-只是这个特殊的实用程序
-It's just that this particular
-utility method takes an existing
+只是这个特定的实用程序方法接受现有的
+It's just that this particular utility method takes an existing
 
 23
 00:01:15.840 --> 00:01:21.430
-对一个原型对象进行方法，并将其替换为 getter方法。
-method on one of your prototype objects,
-and replaces it with a getter.
+方法，并将其替换为getter。
+method on one of your prototype objects, and replaces it with a getter.
 
 24
 00:01:21.430 --> 00:01:25.820
-换句话说，不是用你的真实方法在你的类原型上，
-So in other words, instead of having your
-real method on your class prototype,
+所以换句话说，不是让你的真正方法在你的类原型上，
+So in other words, instead of having your real method on your class prototype,
 
 25
 00:01:25.820 --> 00:01:27.469
-你会有一个消气的
+你会有一个吸气剂。
 you're gonna have a getter.
 
 26
 00:01:27.469 --> 00:01:32.521
-因此当您通过 getter 方法访问该属性名时，
-So when you access that property
-name through the getter,
+因此当您通过getter访问属性名称时，
+So when you access that property name through the getter,
 
 27
 00:01:32.521 --> 00:01:36.748
-自动创建硬绑定方法
-it automatically creates
-a hard bound method for
+它自动为以下对象创建硬绑定方法
+it automatically creates a hard bound method for
 
 28
 00:01:36.748 --> 00:01:40.992
-你会飞了然后把它保存到 WeakMap里
-you on the fly, and
-then saves it into a WeakMap.
+然后将其保存到WeakMap中。
+you on the fly, and then saves it into a WeakMap.
 
 29
 00:01:40.992 --> 00:01:42.927
-它将它高速缓存到 WeakMap 和
+因此它将其缓存到WeakMap中并
 So it caches it into a WeakMap and
 
 30
 00:01:42.927 --> 00:01:45.950
-然后通过吸气剂把它发给你
-then sends it out to you
-through by way of a getter.
+然后通过getter的方式发送给您。
+then sends it out to you through by way of a getter.
 
 31
 00:01:45.950 --> 00:01:50.731
-换句话说， getter 方法就像代理程序自动发送这些硬
-In other words, the getter is acting like
-a proxy to automatically vend these hard
+换句话说，getter就像一个代理，自动销售这些硬件
+In other words, the getter is acting like a proxy to automatically vend these hard
 
 32
 00:01:50.731 --> 00:01:53.658
-绑定或这些自动绑定功能。
-bound or
-these auto hard bound functions for you.
+绑定或这些自动硬绑定函数为您。
+bound or these auto hard bound functions for you.
 
 33
 00:01:53.658 --> 00:01:57.640
-这样你就能得到一个在原型上拥有一个功能的好处
-And so you get the benefit of having
-a function on the prototype that can
+因此，您可以在原型上获得一个函数，该函数可以
+And so you get the benefit of having a function on the prototype that can
 
 34
 00:01:57.640 --> 00:01:58.530
-继承。
+被继承。
 be inherited.
 
 35
 00:01:58.530 --> 00:02:02.828
-但每次你把它当作一个背景点
-But every time you access
-it as a context dot,
+但是每次你把它作为上下文点访问时，
+But every time you access it as a context dot,
 
 36
 00:02:02.828 --> 00:02:07.140
-你会得到一个硬版的
-you're gonna get a hard
-bound version of it.
+你会得到它的硬装订版本。
+you're gonna get a hard bound version of it.
 
 37
 00:02:07.140 --> 00:02:10.389
-这说明了为什么这是一个糟糕的想法。
-This is an illustration of why
-this is such a terrible idea.
+这就是为什么这是一个如此糟糕的想法的例证。
+This is an illustration of why this is such a terrible idea.
 
 38
 00:02:10.389 --> 00:02:15.189
-要去那种程度的丑陋的奇事才能找到工作
-To have to go to that kinda level of
-ugly hackery to get something to work,
+为了得到一些有用的东西而不得不去做那种丑陋的工作，
+To have to go to that kinda level of ugly hackery to get something to work,
 
 39
 00:02:15.189 --> 00:02:19.378
-它只是不符合 JavaScript 函数的 DNA
-it just doesn't fit with the DNA
-of JavaScript's functions.
+它只是不符合JavaScript函数的DNA。
+it just doesn't fit with the DNA of JavaScript's functions.
 
 40
 00:02:19.378 --> 00:02:23.819
-此感知函数的整个目的是使它们可以是动态的。
-The whole purpose of this aware functions
-is so that they can be dynamic.
+这个感知函数的全部目的是使它们可以是动态的。
+The whole purpose of this aware functions is so that they can be dynamic.
 
 41
 00:02:23.819 --> 00:02:28.283
-试图强迫他们进入另一个工作模式
-And trying to force them into
-this other mode of working,
+并试图迫使他们进入另一种工作模式，
+And trying to force them into this other mode of working,
 
 42
 00:02:28.283 --> 00:02:31.633
-就像其他语言一样
+就像其他语言的类一样，
 which is like classes in other languages,
 
 43
 00:02:31.633 --> 00:02:35.740
-所以我们才会有这么大的烂烂
-is why we wind up with
-terrible hacky crap like that.
+就是为什么我们会落得这样糟糕的下场。
+is why we wind up with terrible hacky crap like that.
 
 44
 00:02:35.740 --> 00:02:37.793
-但是人们喜欢这样做
+但是，人们喜欢这样做
 But, people like to do that and
 
 45
 00:02:37.793 --> 00:02:42.614
-这可能最终直接降落在 JavaScript中
-this might actually end up landing
-natively, directly in JavaScript.
+这可能最终会直接在JavaScript中本机登陆。
+this might actually end up landing natively, directly in JavaScript.
 
 46
 00:02:45.098 --> 00:02:49.430
->> 凯尔 - 辛普森: 你是这样用的，这个疯狂的小实用程序。
-&gt;&gt; Kyle Simpson: Here's how you use that
-by the way, this crazy little utility.
+&gt；&gt；Kyle Simpson：顺便说一下，你是如何使用这个疯狂的小工具的。
+&gt;&gt; Kyle Simpson: Here's how you use that by the way, this crazy little utility.
 
 47
 00:02:49.430 --> 00:02:53.759
-只需调用该绑定方法即可使用它
-You can use it by simply
-calling that bind methods
+只需调用绑定方法即可使用它
+You can use it by simply calling that bind methods
 
 48
 00:02:53.759 --> 00:02:57.250
-任何类的原型的实用程序。
+任何类的原型上的实用工具。
 utility on the prototype of any class.
 
 49
 00:02:57.250 --> 00:03:02.120
-它会自动完成所有种类的原型
-And it'll automatically go through
-all of your class prototype methods,
+它会自动遍历所有的类原型方法，
+And it'll automatically go through all of your class prototype methods,
 
 50
 00:03:02.120 --> 00:03:06.695
-并将其替换为自动绑定方法的 getter 版本。
-and replace them with getter versions
-that do the auto-bind method.
+并用执行自动绑定方法的getter版本替换它们。
+and replace them with getter versions that do the auto-bind method.
 
 51
 00:03:06.695 --> 00:03:10.949
-在我的恐惧中我在另一天发推特说
-And to my horror, I tweeted this
-out the other day to say hey,
+令我恐惧的是，前几天我在推特上发了这个来打招呼，
+And to my horror, I tweeted this out the other day to say hey,
 
 52
 00:03:10.949 --> 00:03:13.879
-这是个很糟糕的主意这就是原因
+这是一个非常糟糕的主意，原因如下。
 this is a really bad idea and here's why.
 
 53
 00:03:13.879 --> 00:03:16.778
-然后我接到一些人的回应说
-And then I got several
-responses from people saying
+然后我收到了一些人的回复说
+And then I got several responses from people saying
 
 54
 00:03:16.778 --> 00:03:18.637
-我现在正用这个来做我的项目
+我现在我的项目中使用这个。
 I'm now using this in my projects.
 
 55
 00:03:18.637 --> 00:03:20.870
->> 扬声器 2: [LAUGH] >> 凯尔 - 辛普森: 因此，
-&gt;&gt; Speaker 2: [LAUGH]
-&gt;&gt; Kyle Simpson: So,
+&gt；&gt；扬声器2：[笑]&gt；&gt；Kyle Simpson：所以，
+&gt;&gt; Speaker 2: [LAUGH] &gt;&gt; Kyle Simpson: So,
 
 56
 00:03:22.039 --> 00:03:23.439
->> 凯尔 - 辛普森:
+&gt；&gt；Kyle Simpson：著名的名言之一，
 &gt;&gt; Kyle Simpson: One of the famous quotes,
 
 57
 00:03:23.439 --> 00:03:27.832
-我都不知道是谁给的，但我喜欢的名言就是
-I don't even know who to attribute it to,
-but famous quotes that I love is there's
+我甚至不知道该归功于谁，但我喜欢的名言是
+I don't even know who to attribute it to, but famous quotes that I love is there's
 
 58
 00:03:27.832 --> 00:03:30.525
-没有比临时黑客更长久的了
-nothing more permanent
-than a temporary hacker.
+没有什么比临时黑客更永久的了。
+nothing more permanent than a temporary hacker.

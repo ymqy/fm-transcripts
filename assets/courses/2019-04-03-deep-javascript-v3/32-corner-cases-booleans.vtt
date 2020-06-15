@@ -2,591 +2,515 @@ WEBVTT
 
 1
 00:00:00.006 --> 00:00:04.190
->> 凯尔 - 辛普森: 让我们来谈谈 == 具体与 Booleans的情况。
-&gt;&gt; Kyle Simpson: Let's talk about
-== specifically with Booleans.
+&gt；&gt；Kyle Simpson：让我们专门讨论布尔值。
+&gt;&gt; Kyle Simpson: Let's talk about == specifically with Booleans.
 
 2
 00:00:04.190 --> 00:00:08.279
-这是另一个你不应该做的最邪恶角落的例子。
-This is another one of those really
-evil corner cases that you shouldn't do.
+这是另一个真正邪恶的角落案件，你不应该做的。
+This is another one of those really evil corner cases that you shouldn't do.
 
 3
 00:00:08.279 --> 00:00:11.019
-你在密码里做了很多事情
-This is something that
-you do a lot in code, and
+这是您在代码中经常做的事情，而且
+This is something that you do a lot in code, and
 
 4
 00:00:11.019 --> 00:00:13.619
-那肯定是你不该做的
-it's something you should
-definitely not do.
+这是你绝对不应该做的事情。
+it's something you should definitely not do.
 
 5
 00:00:13.619 --> 00:00:17.050
-这是因为你习惯用其他语言来做这件事
-It's something you do because you're used
-to doing this in other languages, and
+你这样做是因为你习惯于用其他语言来做这件事，而且
+It's something you do because you're used to doing this in other languages, and
 
 6
 00:00:17.050 --> 00:00:19.521
-这会让你惹上麻烦的
+在这里，它会给你带来麻烦的。
 here, it's gonna get you into trouble.
 
 7
 00:00:19.521 --> 00:00:23.449
-好吧如果你想看看你是否愿意
-Okay, if you wanna check
-if you want to allow
+好的，如果你想检查是否允许
+Okay, if you wanna check if you want to allow
 
 8
 00:00:23.449 --> 00:00:26.949
-将数组的布尔值强制为 true。
-the Boolean coercion of
-an array to be true.
+数组的布尔强制为真。
+the Boolean coercion of an array to be true.
 
 9
 00:00:26.949 --> 00:00:30.089
-换句话说，你想说它的真实的构造。
-In other words, you wanna say
-its truthy sort of construct.
+换句话说，你想说它真实的构造。
+In other words, you wanna say its truthy sort of construct.
 
 10
 00:00:30.089 --> 00:00:31.839
-那是我可以接受的
+这是我可以接受的事情。
 That is something that I'm okay with.
 
 11
 00:00:31.839 --> 00:00:33.079
-有些人一点也不明白
+有些人对此并不满意。
 Some people are not okay with that.
 
 12
 00:00:33.079 --> 00:00:35.710
-但让我们说你是暂时的
+但假设你暂时这么做了。
 But let's say that you do for the moment.
 
 13
 00:00:35.710 --> 00:00:38.168
-有一种方法，就是做一个 if 语句。
-There's one way of doing it,
-which is just just to do an if statement.
+有一种方法可以做到这一点，那就是做一个if语句。
+There's one way of doing it, which is just just to do an if statement.
 
 14
 00:00:39.219 --> 00:00:43.740
-允许 if 语句在数组上调用布尔运算，
-Allow the if statement to invoke the to
-Boolean operation on the array, which,
+允许if语句调用数组上的to布尔操作，
+Allow the if statement to invoke the to Boolean operation on the array, which,
 
 15
 00:00:43.740 --> 00:00:47.649
-在这种情况下，是一种查找，表示数组不在表上，因此，
-in this case, is a lookup that says
-the array is not on the table, so,
+在本例中，是一个查找，表明数组不在表上，所以，
+in this case, is a lookup that says the array is not on the table, so,
 
 16
 00:00:47.649 --> 00:00:49.259
-所以，这是真的。
+因此，这是真的。
 therefore, it's true.
 
 17
 00:00:49.259 --> 00:00:53.109
-这是一个完全理性的布尔胁迫的暗示。
-That's a perfectly rational
-implicit to Boolean coercion.
+这是布尔强制的完全理性隐含。
+That's a perfectly rational implicit to Boolean coercion.
 
 18
 00:00:55.198 --> 00:00:58.347
->> 凯尔 - 辛普森: 但如果你试着变得更聪明，更狡猾，
-&gt;&gt; Kyle Simpson: But if you try to get
-more clever and tricky with it and say,
+&GT；&GT；凯尔·辛普森：但是如果你试图用它变得更聪明和更狡猾，你会说，
+&gt;&gt; Kyle Simpson: But if you try to get more clever and tricky with it and say,
 
 19
 00:00:58.347 --> 00:00:59.695
-如果它是真实的
+好吧，如果是真的，
 well, if it's truthy,
 
 20
 00:00:59.695 --> 00:01:02.920
-也许我该做的就是做一个真正的双方面的人
-then maybe what I ought to do
-is do a double equals with true.
+那么也许我应该做的是做一个与真相等的双倍。
+then maybe what I ought to do is do a double equals with true.
 
 21
 00:01:04.890 --> 00:01:07.530
-好吧现在突然都不起作用了
+好吧，现在突然之间它不起作用了。
 Well, now all of a sudden it doesn't work.
 
 22
 00:01:07.530 --> 00:01:10.459
-顺便说下，三等功也不起作用。
-And by the way, it wouldn't
-work with triple equals either.
+顺便说一句，它也不适用于三重等于。
+And by the way, it wouldn't work with triple equals either.
 
 23
 00:01:10.459 --> 00:01:15.213
-将与 Boolean 的比较 Cuz 将通过一系列的
-Cuz the comparison with a Boolean to an
-array is gonna go through a bunch of those
+因为将布尔值与数组进行比较将经历一大堆这样的比较
+Cuz the comparison with a Boolean to an array is gonna go through a bunch of those
 
 24
 00:01:15.213 --> 00:01:20.346
-我们已经辨认出来了我们要重新确认
-corner cases, which we've already
-identified and we're about to re-identify.
+拐角案件，我们已经确认了，我们正准备重新确认。
+corner cases, which we've already identified and we're about to re-identify.
 
 25
 00:01:20.346 --> 00:01:24.400
-而且这也会是假的
+而且它也会等于假。
 And also it's gonna be equal to false.
 
 26
 00:01:24.400 --> 00:01:27.762
-所以现在你要把你的直觉告诉我
-So now you're gonna get the backwards
-of what you would intuitively expect.
+所以现在你会得到你直觉上所期望的东西的倒退。
+So now you're gonna get the backwards of what you would intuitively expect.
 
 27
 00:01:29.109 --> 00:01:32.979
-你觉得这件事是真实的不是真的
-You think this thing is truthy,
-it is not double equal to true, but
+你认为这件事是真的，它不是双倍等于真的，但是
+You think this thing is truthy, it is not double equal to true, but
 
 28
 00:01:32.979 --> 00:01:34.500
-它是双等于假的。
+它是双倍等于假的。
 it is double equal to false.
 
 29
 00:01:35.520 --> 00:01:38.689
-毫无疑问这是一个 " gotcha" 。
-And there's no question
-that this is a gotcha.
+毫无疑问，这是一个难题。
+And there's no question that this is a gotcha.
 
 30
 00:01:40.060 --> 00:01:45.174
-但在我解释这个问题之前，我的答案是永远不会有双重的结果，
-But before I even explain the gotcha, my
-answer to this is don't ever do a double,
+但在我解释这个问题之前，我的答案是永远不要重复，
+But before I even explain the gotcha, my answer to this is don't ever do a double,
 
 31
 00:01:45.174 --> 00:01:48.079
-如果你能避免三重的情况的话
-or even in that case,
-if you can avoid triple.
+或者即使在这种情况下，如果你能避免三倍。
+or even in that case, if you can avoid triple.
 
 32
 00:01:48.079 --> 00:01:53.060
-但绝对不能双等于真假或双数等于假。
-But definitely, never do a double equals
-with true or a double equals with false.
+但绝对不要用true做双等号或用false做双等号。
+But definitely, never do a double equals with true or a double equals with false.
 
 33
 00:01:53.060 --> 00:01:56.859
-因为没有场景你需要用真实的和真实的
-Because there's no scenario where you
-need to do a double equals with true or
+因为没有需要用true或
+Because there's no scenario where you need to do a double equals with true or
 
 34
 00:01:56.859 --> 00:02:03.430
-当您只能隐式地执行布尔运算时，双值等于 false 。
-double equals with false when you could
-just do the to Boolean implicitly.
+当您只需隐式执行to Boolean时，double等于false。
+double equals with false when you could just do the to Boolean implicitly.
 
 35
 00:02:03.430 --> 00:02:05.939
-没必要那样做更好
-There's no case where that or
-that is better.
+没有比这更好的情况了。
+There's no case where that or that is better.
 
 36
 00:02:05.939 --> 00:02:10.840
-还有一堆情况比这个更糟好吗
-And there's a bunch of cases where
-it's worse, like this one, okay?
+有一大堆情况更糟，就像这个，好吗？
+And there's a bunch of cases where it's worse, like this one, okay?
 
 37
 00:02:11.879 --> 00:02:18.699
-因此，让我们解释 == true 如何失败，但 == false 是有效的。
-So let's explain how the == true fails but
-the == false works.
+因此，让我们解释一下=true如何失败，而=false是如何工作的。
+So let's explain how the == true fails but the == false works.
 
 38
 00:02:18.699 --> 00:02:20.443
-相同步骤，相同算法。
+同样的步骤，同样的算法。
 Same steps, same algorithm.
 
 39
 00:02:20.443 --> 00:02:28.349
-我们从最上面的一个开始
+我们从最上面的开始。
 We start with the top one.
 
 40
 00:02:28.349 --> 00:02:32.219
-当然，如果是作坊学生，我们只是在这方面做一个布尔值。
-Of course if workshop students,
-we just do a to Boolean on it.
+当然如果车间的学生，我们只是做一个布尔值就可以了。
+Of course if workshop students, we just do a to Boolean on it.
 
 41
 00:02:32.219 --> 00:02:35.129
-第四行我们检查它的布尔值
-Line 4, we check for
-the Boolean on it, and
+第4行，我们检查它的布尔值，然后
+Line 4, we check for the Boolean on it, and
 
 42
 00:02:35.129 --> 00:02:38.990
-如果它很匹配，那么在这种情况下，我们就会运行这个核心分支。
-if it matches great, in this case it does,
-so we run that core branch.
+如果匹配得很好，在本例中是匹配的，所以我们运行核心分支。
+if it matches great, in this case it does, so we run that core branch.
 
 43
 00:02:40.210 --> 00:02:43.430
-但当我们试图把它等同于真实的时候会发生什么呢 ?
-But what happens when we're trying
-to double equal it with true?
+但是，当我们试图将其与真相等时，会发生什么呢？
+But what happens when we're trying to double equal it with true?
 
 44
 00:02:43.430 --> 00:02:47.365
-我们有一个很原始的非原始的
-Well, we have a non-primitive
-which need to became primitive, so
+嗯，我们有一个非原始的，需要变成原始的，所以
+Well, we have a non-primitive which need to became primitive, so
 
 45
 00:02:47.365 --> 00:02:49.439
-它会变成空字符串。
+它变成空字符串。
 it becomes empty string.
 
 46
 00:02:49.439 --> 00:02:52.449
-我们有一个空的字符串和一个真实的
+我们有一个空字符串和一个true。
 We have an empty string and a true.
 
 47
 00:02:52.449 --> 00:02:56.750
-这些类型不是相同的类型，因此它们都需要成为数字。
-These are not the same type, so
-they need to both become numbers.
+这些不是相同的类型，所以它们都需要成为数字。
+These are not the same type, so they need to both become numbers.
 
 48
 00:02:56.750 --> 00:03:01.542
-其中一个变为 0，应该是 NaN，另一个变为 1。
-One of them becomes 0, which should
-have been NaN, the other one becomes 1.
+其中一个变成0，应该是NaN，另一个变成1。
+One of them becomes 0, which should have been NaN, the other one becomes 1.
 
 49
 00:03:01.542 --> 00:03:06.474
 这两个数字肯定不相等，所以我们不运行那个代码分支。
-And those two numbers are definitely not
-equal, so we don't run that code branch.
+And those two numbers are definitely not equal, so we don't run that code branch.
 
 50
 00:03:08.610 --> 00:03:11.210
-在另一个代码分支中，我们做了同样的事情。
-In the other code branch
-we do the exact same thing.
+在另一个代码分支中，我们做了完全相同的事情。
+In the other code branch we do the exact same thing.
 
 51
 00:03:11.210 --> 00:03:13.990
-我们从作坊开始，学生是假的。
-We start off with workshop
-students = false.
+我们从车间学生开始=假。
+We start off with workshop students = false.
 
 52
 00:03:13.990 --> 00:03:18.750
-我们到达一个字符串 = false，该字符串将变为 0 ，而与 0 相比，
-We get to a string = false,
-which becomes a 0 compared to a 0, and
+我们得到一个字符串=false，它变成0而不是0，并且
+We get to a string = false, which becomes a 0 compared to a 0, and
 
 53
 00:03:18.750 --> 00:03:20.789
-这些都是真实的
+那些0等于真。
 those 0s are equal to true.
 
 54
 00:03:22.060 --> 00:03:27.808
-这是一个非耸耸听的结果。这是一个非耸耸听的构造。
-That's a nonsensical outcome to
-what was a nonsensical construct.
+这是一个无稽之谈的结果，这是一个无稽之谈。
+That's a nonsensical outcome to what was a nonsensical construct.
 
 55
 00:03:29.099 --> 00:03:31.550
-你不需要双重等于是真的
-You don't need to double equals to true,
-or
+您不需要将等于值加倍为true，或者
+You don't need to double equals to true, or
 
 56
 00:03:31.550 --> 00:03:35.759
-double 等于 false，允许隐式发生布尔值。
-double equals to false,
-allow the to Boolean to happen implicitly.
+Double等于false，则允许隐式发生to Boolean。
+double equals to false, allow the to Boolean to happen implicitly.
 
 57
 00:03:35.759 --> 00:03:36.949
-但又一次
+所以再一次
 So yet again,
 
 58
 00:03:36.949 --> 00:03:40.370
-我想说的是暗示有时比显的好得多
-what I'm saying is that implicit is
-sometimes much better than explicit.
+我想说的是，隐含有时比显性好得多。
+what I'm saying is that implicit is sometimes much better than explicit.
 
 59
 00:03:41.770 --> 00:03:46.949
-在此情况下，隐式不包含 gotcha 和 explicit 。
-In this case, the implicit doesn't
-have the gotcha and the explicit does.
+在这种情况下，隐式没有明白，显式有。
+In this case, the implicit doesn't have the gotcha and the explicit does.
 
 60
 00:03:46.949 --> 00:03:50.884
->> 演讲者 1: 这可能是一个过于宽泛的问题，太笼统，但在其他情况下
-&gt;&gt; Speaker 1: This is maybe too broad a
-question, too generic, but in other cases
+&gt；&gt；演讲者1：这个问题可能太宽泛，太笼统，但在其他情况下
+&gt;&gt; Speaker 1: This is maybe too broad a question, too generic, but in other cases
 
 61
 00:03:50.884 --> 00:03:55.526
-在那里你会更进一步，而不是在作坊学生的时候跑出来。
-where you would go a step further and
-rather than running if workshop students.
+在那里你会走得更远，而不是跑IF车间的学生。
+where you would go a step further and rather than running if workshop students.
 
 62
 00:03:55.526 --> 00:03:59.004
-你会检查所有车间学生的情况
-You would check if and
-then method all workshop students,
+你会检查所有的车间学生是否都有方法，
+You would check if and then method all workshop students,
 
 63
 00:03:59.004 --> 00:04:02.768
-检查是否存在 .length 以确保其为字符串或
-checking the presence of .length
-to make sure it's a string or
+检查.length的存在以确保它是字符串或
+checking the presence of .length to make sure it's a string or
 
 64
 00:04:02.768 --> 00:04:06.490
-或者您正在检查其他类型的特定类型。
-an array, or
-you're checking other type specific.
+数组，或者您正在检查其他类型特定的。
+an array, or you're checking other type specific.
 
 65
 00:04:06.490 --> 00:04:09.250
->> Kyle Simpson: 因此，此构造的方案是
-&gt;&gt; Kyle Simpson: So
-the scenario of this construct is
+&gt；&gt；Kyle Simpson：所以这个构造的场景是
+&gt;&gt; Kyle Simpson: So the scenario of this construct is
 
 66
 00:04:09.250 --> 00:04:11.669
-我只想知道不管有没有设定
+我只想知道它是否设置好了。
 I only wanna know whether it's set or not.
 
 67
 00:04:11.669 --> 00:04:14.039
-我知道它可以被解开
+我知道它既可以是未设置的，也可以是
 And I know that it can either be unset or
 
 68
 00:04:14.039 --> 00:04:18.290
-它可以被设置成一个数组，就是这个场景的心理构造。
-it can be set to an array, that was
-the mental construct of this scenario.
+它可以设置为一个数组，这就是这个场景的心理构造。
+it can be set to an array, that was the mental construct of this scenario.
 
 69
 00:04:18.290 --> 00:04:21.990
-那么周围的代码的其余部分都是显而易见的
-So that would have been obvious by
-the rest of the surrounding code or
+所以这在其余的周围代码中是很明显的，或者
+So that would have been obvious by the rest of the surrounding code or
 
 70
 00:04:21.990 --> 00:04:25.050
-至少有希望能从周围的代码中清楚显示
-at least hopefully obvious from
-the rest of the surrounding code.
+至少希望周围代码的其余部分是显而易见的。
+at least hopefully obvious from the rest of the surrounding code.
 
 71
 00:04:25.050 --> 00:04:28.519
-如果我们不知道，如果我们知道它可能是未设的，或者它可以被设定和
-If we didn't know that, if we knew that
-it could be unset, or it could be set and
+如果我们不知道，如果我们知道它可以被取消，或者它可以被设置
+If we didn't know that, if we knew that it could be unset, or it could be set and
 
 72
 00:04:28.519 --> 00:04:31.980
-它可以被设置成各种不同的事物，也许是一个数组，也许是一个物体，
-it could be set to a variety of different
-things, maybe an array, maybe an object,
+它可以设置为各种不同的东西，可能是一个数组，也可能是一个对象，
+it could be set to a variety of different things, maybe an array, maybe an object,
 
 73
 00:04:31.980 --> 00:04:33.209
-也许是绳子
+也许是一根绳子。
 maybe a string.
 
 74
 00:04:33.209 --> 00:04:38.088
-那我们就想做些更深入的调查
-Then we would wanna do some sort of
-deeper checking than just the to Boolean
+然后我们会想要做一些更深层次的检查，而不仅仅是to boolean
+Then we would wanna do some sort of deeper checking than just the to Boolean
 
 75
 00:04:38.088 --> 00:04:38.750
-强迫。
+胁迫。
 coercion.
 
 76
 00:04:38.750 --> 00:04:42.444
-这可能是检验实际设置的第一步，
-That might be the first step to
-check that it is actually set, and
+这可能是检查它是否实际设置的第一步，并且
+That might be the first step to check that it is actually set, and
 
 77
 00:04:42.444 --> 00:04:45.629
-接下来的检查就是检查它的身份
-then the next check is to check
-something about its identity.
+那么下一个检查就是检查关于它的身份的一些东西。
+then the next check is to check something about its identity.
 
 78
 00:04:45.629 --> 00:04:47.840
-你可以用各种方法来检查它。
-And there's various ways
-that you could check it.
+你可以通过不同的方式来检查它。
+And there's various ways that you could check it.
 
 79
 00:04:47.840 --> 00:04:51.000
-如果合适，您可以使用类型的运算符。
-You could use a type of operator,
-if that was appropriate.
+如果合适的话，可以使用某种类型的运算符。
+You could use a type of operator, if that was appropriate.
 
 80
 00:04:51.000 --> 00:04:52.620
-你可以做你所说的
+你可以做你所指的事，
 You could do what you're referring to,
 
 81
 00:04:52.620 --> 00:04:56.420
-这叫做鸭式打字，看看是否有办法，
-which is called duck typing,
-check to see if a method is on it,
+这就是所谓的鸭子类型，检查是否有一个方法在它上面，
+which is called duck typing, check to see if a method is on it,
 
 82
 00:04:56.420 --> 00:05:02.379
-您可以执行类似 array.isarray 的实际实用程序来检查它是否处于数组中。
-you could do an actual utility like
-array.isarray to check if it's in array.
+您可以执行array.isarray这样的实际实用程序来检查它是否在数组中。
+you could do an actual utility like array.isarray to check if it's in array.
 
 83
 00:05:02.379 --> 00:05:04.970
-有很多其他的事情你想做的话
-There's a variety of other things
-that you might wanna do if you
+如果你有很多其他的事情，你可能会想要做
+There's a variety of other things that you might wanna do if you
 
 84
 00:05:04.970 --> 00:05:07.310
-特别了解它是一个阵列。
-cared to specifically
-know it was an array.
+特别想知道这是一个数组。
+cared to specifically know it was an array.
 
 85
 00:05:07.310 --> 00:05:10.220
-但我在这里的设置是我们已经知道这是一个阵列
-But the setup I have here is that we
-would already know it's an array,
+但我这里的设置是我们已经知道它是一个数组，
+But the setup I have here is that we would already know it's an array,
 
 86
 00:05:10.220 --> 00:05:11.629
-我们已经看到第一线了
+因为我们已经看到了第1行。
 cuz we already see line 1.
 
 87
 00:05:11.629 --> 00:05:13.699
-可以设置，也可以是数组，
-It can either be set or
-it can be an array,
+它既可以被设置，也可以是一个数组，
+It can either be set or it can be an array,
 
 88
 00:05:13.699 --> 00:05:15.180
-这两者之间就没什么关系了
+它不可能是介于两者之间的任何东西。
 and it can't be anything else in between.
 
 89
 00:05:15.180 --> 00:05:16.149
-有道理吗
+这说得通吗？
 Does that make sense?
 
 90
 00:05:16.149 --> 00:05:20.060
->> 演讲者 1: 是的，我想我的问题是，如果你愿意
-&gt;&gt; Speaker 1: Yeah, and I guess my
-question is if you would typically advise
+&gt；&gt；演讲者1：是的，我想我的问题是如果你通常会建议
+&gt;&gt; Speaker 1: Yeah, and I guess my question is if you would typically advise
 
 91
 00:05:20.060 --> 00:05:24.459
-就像鸭子打字进第 3 行吗
-against packing it like duck typing
-into line 3 into that check?
+反对把它像鸭子一样打到第三行的支票上吗？
+against packing it like duck typing into line 3 into that check?
 
 92
 00:05:24.459 --> 00:05:26.029
-正在尝试合并两者。
+试图将两者结合起来。
 Trying to combine both.
 
 93
 00:05:26.029 --> 00:05:27.149
->> 凯尔 - 辛普森: 不，这不是我要说的。
-&gt;&gt; Kyle Simpson: No,
-that's not what I'm saying.
+&gt；&gt；Kyle Simpson：不，我不是这个意思。
+&gt;&gt; Kyle Simpson: No, that's not what I'm saying.
 
 94
 00:05:27.149 --> 00:05:32.050
-我想说的是如果出于某种原因我不能限制
-What I'm saying is I would do those if for
-some reason I couldn't restrict
+我的意思是如果出于某种原因我不能限制
+What I'm saying is I would do those if for some reason I couldn't restrict
 
 95
 00:05:32.050 --> 00:05:35.360
-我想知道这不是一个集合或是一个数组
-myself to know that it's
-either an unset or an array.
+我自己知道它不是一个未设置就是一个数组。
+myself to know that it's either an unset or an array.
 
 96
 00:05:35.360 --> 00:05:40.019
-我宁愿选择较细小的面积，而无须进行所需的检查。
-I would prefer a smaller surface
-area with fewer necessary checks.
+我更喜欢较小的表面积和较少的必要检查。
+I would prefer a smaller surface area with fewer necessary checks.
 
 97
 00:05:40.019 --> 00:05:43.829
-我更喜欢设计这个代码，让它不会那么多态。
-I would prefer to design this code so
-that it's not so polymorphic.
+我更喜欢设计这个代码，这样它就不会那么多态了。
+I would prefer to design this code so that it's not so polymorphic.
 
 98
 00:05:43.829 --> 00:05:47.269
-要么完全取消要么是一个数组
-It's either unset entirely or
-it's an array.
+它要么是完全未设置的，要么是一个数组。
+It's either unset entirely or it's an array.
 
 99
 00:05:47.269 --> 00:05:50.329
-但如果出于某种原因我不能用那种方式来设计我的代码
-But if for some reason I couldn't
-design my code in that way,
+但是如果由于某种原因我不能以这种方式设计我的代码，
+But if for some reason I couldn't design my code in that way,
 
 100
 00:05:50.329 --> 00:05:52.903
-那我就把这些额外的支票放进去
-then I would put those extra
-checks into the if statement.
+然后，我会将这些额外的检查放入if语句中。
+then I would put those extra checks into the if statement.
 
 101
 00:05:52.903 --> 00:05:53.990
-有什么帮助吗
+这有帮助吗？
 Does that help?
 
 102
 00:05:53.990 --> 00:05:54.909
->> 扬声器 1: 是的，这很棒。
+&gt；&gt；扬声器1：是的，那很好。
 &gt;&gt; Speaker 1: Yeah, that's great.
 
 103
 00:05:54.909 --> 00:05:55.409
->> 凯尔辛普森: 好的。
+凯尔·辛普森：好的。
 &gt;&gt; Kyle Simpson: Okay.

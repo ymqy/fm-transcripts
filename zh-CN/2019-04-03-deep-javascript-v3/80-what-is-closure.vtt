@@ -2,206 +2,178 @@ WEBVTT
 
 1
 00:00:00.130 --> 00:00:04.639
->> Kyle Simpson: 从观察角度来定义闭包，而不是
-&gt;&gt; Kyle Simpson: To define closure from
-an observational perspective, rather than
+&gt；&gt；Kyle Simpson：从观察的角度定义闭包，而不是
+&gt;&gt; Kyle Simpson: To define closure from an observational perspective, rather than
 
 2
 00:00:04.639 --> 00:00:09.279
-从一个角度来看，这个学术的问题。
-from a whether it exists or not sort of
-a perspective, the academic question.
+从一个是否存在的角度来看，学术问题。
+from a whether it exists or not sort of a perspective, the academic question.
 
 3
 00:00:10.349 --> 00:00:12.519
-这就是定义和我所关注的
-Here's that definition, and
-as far as I'm concerned,
+这是这个定义，就我而言，
+Here's that definition, and as far as I'm concerned,
 
 4
 00:00:12.519 --> 00:00:16.100
-这是这个采访问题的正确答案，
-this is the right answer to that
-interview question from here forward,
+从现在开始这就是面试问题的正确答案，
+this is the right answer to that interview question from here forward,
 
 5
 00:00:16.100 --> 00:00:20.530
-直到有人告诉我另一个答案
-until somebody tells me a different
-answer, a different definition that
+直到有人告诉我一个不同的答案，一个不同的定义
+until somebody tells me a different answer, a different definition that
 
 6
 00:00:20.530 --> 00:00:23.679
-比这还多我没有来过
-is more distilled than this,
-which I haven't come across.
+比这个更精炼，我还没见过。
+is more distilled than this, which I haven't come across.
 
 7
 00:00:23.679 --> 00:00:26.170
-这就是问题的正确答案，什么是封闭的 ?
-This is the right answer to that question,
-what is closure?
+这就是这个问题的正确答案，什么是闭合？
+This is the right answer to that question, what is closure?
 
 8
 00:00:26.170 --> 00:00:31.320
-关闭功能是当功能能够记住和
-Closure is when a function
-is able to remember and
+闭包是指函数能够记住和
+Closure is when a function is able to remember and
 
 9
 00:00:31.320 --> 00:00:34.725
-进入它的词法范围本身之外的变量，
-access its lexical scope,
-the variables outside of itself,
+访问它的词法作用域，它外部的变量，
+access its lexical scope, the variables outside of itself,
 
 10
 00:00:34.725 --> 00:00:38.409
-所谓的自由变量，当它能进入这个词法范围时，
-so-called free variables, when it's
-able to access that lexical scope,
+所谓自由变量，当它能够访问词法作用域时，
+so-called free variables, when it's able to access that lexical scope,
 
 11
 00:00:38.409 --> 00:00:40.959
-即使该函数在另一作用域中执行时也是如此。
-even when that function
-executes in a different scope.
+即使当该函数在不同的作用域中执行时也是如此。
+even when that function executes in a different scope.
 
 12
 00:00:42.329 --> 00:00:43.750
-让我们把第一部分
+让我们来看第一部分。
 Let's take that first part.
 
 13
 00:00:43.750 --> 00:00:46.719
-该关闭可以访问其词法作用域。
-That closure is able to
-access its lexical scope.
+该闭包能够访问其词法范围。
+That closure is able to access its lexical scope.
 
 14
 00:00:46.719 --> 00:00:48.100
-我们已经知道了
+我们已经知道了。
 We already know that.
 
 15
 00:00:48.100 --> 00:00:52.509
-这本身就是词法范围，是函数可以在外部引用变量
-That is lexical scope in itself, is that
-a function can reference variables outside
+这就是词法范围本身，就是函数可以引用外部变量
+That is lexical scope in itself, is that a function can reference variables outside
 
 16
 00:00:52.509 --> 00:00:55.990
-它本身就会在范围内找到它
-of itself and it just goes up
-the scope chain to find it.
+它只是沿着作用域链向上找到它。
+of itself and it just goes up the scope chain to find it.
 
 17
 00:00:55.990 --> 00:00:59.240
 第二部分是关键部分，没有这两部分，
-The second part is the critical part,
-and without these two parts,
+The second part is the critical part, and without these two parts,
 
 18
 00:00:59.240 --> 00:01:00.109
-你就没有了结了
+你没有了结。
 you don't have closure.
 
 19
 00:01:00.109 --> 00:01:01.909
-你必须得两者都有
+你必须两者兼得。
 You have to have both.
 
 20
 00:01:01.909 --> 00:01:04.920
-没有第二部分，它只是词法范围。
-Without the second part,
-it's just lexical scope.
+没有第二部分，它只是一个词汇范围。
+Without the second part, it's just lexical scope.
 
 21
 00:01:06.129 --> 00:01:10.210
-此定义的第二部分，即，即使是函数
-With the second part of this definition,
-which is, even when the function
+这个定义的第二部分，也就是，即使函数
+With the second part of this definition, which is, even when the function
 
 22
 00:01:10.210 --> 00:01:14.295
-在不同的范围内被执行，现在我们开始看到一些有趣的东西。
-is executed in a different scope,
-now we start to see something interesting.
+在不同的作用域中执行，现在我们开始看到一些有趣的东西。
+is executed in a different scope, now we start to see something interesting.
 
 23
 00:01:14.295 --> 00:01:17.746
-当您执行函数并将其作为回调传递时，
-Cuz when you take a function and
-you pass it as a callback, or
+因为当您接受一个函数并将其作为回调传递时，或者
+Cuz when you take a function and you pass it as a callback, or
 
 24
 00:01:17.746 --> 00:01:22.096
-你去做一个功能，把它退回去，它原来的范围
-you take a function and return it back,
-and the scope that it was originally
+您获取一个函数并将其返回，以及它最初的作用域
+you take a function and return it back, and the scope that it was originally
 
 25
 00:01:22.096 --> 00:01:25.843
-以其他方式定义，至少在概念上消失。
-defined in has otherwise,
-at least conceptually, gone away.
+否则，至少在概念上，已经消失了。
+defined in has otherwise, at least conceptually, gone away.
 
 26
 00:01:25.843 --> 00:01:29.859
-我们会认为，通常都是垃圾收集的，已经完成了。
-And we would think, normally,
-it's been garbage collected, it's done.
+我们会想，通常情况下，它已经被垃圾收集了，已经完成了。
+And we would think, normally, it's been garbage collected, it's done.
 
 27
 00:01:29.859 --> 00:01:34.270
-但有一种功能是在这个范围内定义的。
-But there's a function that survived
-that was defined within that scope.
+但在这个范围内定义了一个幸存的函数。
+But there's a function that survived that was defined within that scope.
 
 28
 00:01:34.270 --> 00:01:37.270
-原来这个范围根本就不存在。
-It turns out that the scope
-didn't go away at all.
+事实证明，这个范围根本没有消失。
+It turns out that the scope didn't go away at all.
 
 29
 00:01:37.270 --> 00:01:42.219
-事实证明，这一功能能够保持对该范围的引用，并且
-It turns out that this function is able to
-hold on to a reference to that scope, and
+事实证明，这个函数能够保持对该作用域的引用，并且
+It turns out that this function is able to hold on to a reference to that scope, and
 
 30
 00:01:42.219 --> 00:01:45.229
-只要你通过这一功能，它就会继续得到这个功能。
-wherever you pass the function,
-it continues to have access to that.
+无论您在哪里传递函数，它都可以继续访问该函数。
+wherever you pass the function, it continues to have access to that.
 
 31
 00:01:45.229 --> 00:01:46.890
-这不是偶然的。
+这不是偶然发生的。
 That doesn't happen by accident.
 
 32
 00:01:46.890 --> 00:01:49.569
-这不是魔法那是封闭的
+那不是魔法，那是结束。
 That's not magical, that's closure.
 
 33
 00:01:51.189 --> 00:01:56.099
-保存，链接回到定义的原始作用域，
-The preservation, the linkage back to
-the original scope where it was defined,
+保存，链接回定义它的原始范围，
+The preservation, the linkage back to the original scope where it was defined,
 
 34
 00:01:56.099 --> 00:01:57.670
-无论你在哪里通过这个价值
+无论您将该值传递到何处，
 no matter where you pass that value,
 
 35
 00:01:57.670 --> 00:02:00.640
-无论在何处执行，它都保留该值。
-no matter where it executes,
-it retains that value.
+无论它在哪里执行，它都会保留该值。
+no matter where it executes, it retains that value.
 
 36
 00:02:00.640 --> 00:02:02.340
@@ -210,298 +182,255 @@ It preserves that scope.
 
 37
 00:02:02.340 --> 00:02:03.109
-这叫封闭
+这就是所谓的结束。
 That's called closure.
 
 38
 00:02:04.510 --> 00:02:06.394
-让我们来看看几个例子，
-So let's take a look at
-a couple of examples,
+所以让我们来看几个例子，
+So let's take a look at a couple of examples,
 
 39
 00:02:06.394 --> 00:02:08.949
-你肯定会认出来的
-ones that you'll probably
-recognize right off the bat.
+那些你可能马上就会认出的东西。
+ones that you'll probably recognize right off the bat.
 
 40
 00:02:08.949 --> 00:02:13.605
-当然，你们都在某个时间点，或者在另一个时间，设置了一个设置的超时或
-Surely, all of you have done a timer at
-some point or another, a set timeout or
+当然，你们所有人都在某个时刻做过计时器，设置了超时或
+Surely, all of you have done a timer at some point or another, a set timeout or
 
 41
 00:02:13.605 --> 00:02:17.760
-我敢打赌当你向你的计时器传递一个功能的时候
-a set interval, and I bet when you
-passed in a function to your timer,
+一个设定的时间间隔，我打赌当你把一个函数传递给你的计时器时，
+a set interval, and I bet when you passed in a function to your timer,
 
 42
 00:02:17.760 --> 00:02:20.750
-它引用了自身以外的变量
-it referenced some variable
-outside of itself.
+它引用了自身外部的一些变量。
+it referenced some variable outside of itself.
 
 43
 00:02:20.750 --> 00:02:25.180
-也可能是你从来没有考虑过，那是怎么做的呢 ?
-What's also probably true is you never
-stopped to consider, how does that work?
+同样可能的是，你从来没有停下来考虑，这是如何工作的？
+What's also probably true is you never stopped to consider, how does that work?
 
 44
 00:02:25.180 --> 00:02:29.650
-因为在此函数 waitASec 运行时，
-Because at the time that
-this function waitASec runs,
+因为在这个函数waitASec运行时，
+Because at the time that this function waitASec runs,
 
 45
 00:02:29.650 --> 00:02:32.539
-请求功能已完成，并且
+Ask函数已经完成，并且
 the ask function has already finished, and
 
 46
 00:02:32.539 --> 00:02:37.360
-它的封闭问题应该已经结束了
-the variable question which its
-closed over should have gone away.
+它关闭的变量问题应该已经消失了。
+the variable question which its closed over should have gone away.
 
 47
 00:02:37.360 --> 00:02:40.478
-但它没有消失因为封闭了它
-But it didn't go away
-because closure preserved it,
+但它并没有消失，因为闭合保存了它，
+But it didn't go away because closure preserved it,
 
 48
 00:02:40.478 --> 00:02:46.349
-所谓的 waitASec 函数在变量问题上关闭。
-so-called the waitASec function is
-closed over the variable question.
+所谓的waitASec函数在变量问题上是封闭的。
+so-called the waitASec function is closed over the variable question.
 
 49
 00:02:47.430 --> 00:02:49.555
-那是封闭的好吗
+这是个了结，好吗？
 That's a closure, okay?
 
 50
 00:02:49.555 --> 00:02:52.969
-现在，在学术上，他们认为每个变量都是封闭的，
-Now, academically, they think about
-closure on a per variable basis,
+现在，在学术上，他们在每个变量的基础上考虑闭包，
+Now, academically, they think about closure on a per variable basis,
 
 51
 00:02:52.969 --> 00:02:55.170
-只意味着我要关闭的变量
-meaning only the variables
-that I'm closed over,
+意思是只有我关闭的变量，
+meaning only the variables that I'm closed over,
 
 52
 00:02:55.170 --> 00:02:57.379
-这些是唯一保留的
-those are the only ones
-that are preserved.
+这些是唯一保存下来的。
+those are the only ones that are preserved.
 
 53
 00:02:57.379 --> 00:03:00.930
-从技术上来说，有可能是这样的情况。
-Technically, it's possible
-that that could be the case.
+从技术上讲，有可能是这样的。
+Technically, it's possible that that could be the case.
 
 54
 00:03:00.930 --> 00:03:03.569
-当然，这只会是你可以观察到的。
-Certainly, that would only
-be what you could observe.
+当然，这只是你所能观察到的。
+Certainly, that would only be what you could observe.
 
 55
 00:03:03.569 --> 00:03:07.460
-但我要提醒你，一般来说，
-But I would caution you to
-consider that generally speaking,
+但我想提醒你的是，一般说来，
+But I would caution you to consider that generally speaking,
 
 56
 00:03:07.460 --> 00:03:12.580
-至少我最新的信息是 JavaScript 引擎
-at least the latest information that I
-have, JavaScript engines essentially
+至少我所掌握的最新信息，JavaScript引擎基本上
+at least the latest information that I have, JavaScript engines essentially
 
 57
 00:03:12.580 --> 00:03:17.569
-将关闭实现为与整个作用域的链接，而不是基于每个变量。
-implement closure as a linkage to the
-entire scope, not on a per variable basis.
+将闭包作为到整个作用域的链接来实现，而不是在每个变量的基础上实现。
+implement closure as a linkage to the entire scope, not on a per variable basis.
 
 58
 00:03:18.710 --> 00:03:22.919
-从技术上来说，它们应该能够关闭单个变量或
-Technically, they should be able to
-close over individual variables or
+从技术上讲，它们应该能够关闭单个变量或
+Technically, they should be able to close over individual variables or
 
 59
 00:03:22.919 --> 00:03:25.747
-除去未结束的变量，但是
-remove variables that aren't closed over,
-but
+删除未关闭的变量，但是
+remove variables that aren't closed over, but
 
 60
 00:03:25.747 --> 00:03:29.756
-基本上，据我所知，封闭的范围是在每个范围内。
-essentially, as far as I'm aware,
-closure is on a per scope basis.
+基本上，就我所知，关闭是基于每个作用域的。
+essentially, as far as I'm aware, closure is on a per scope basis.
 
 61
 00:03:29.756 --> 00:03:33.270
-所以如果你有一个可变的可变数据块
-So if you have a variable that's holding
-on to a really big piece of data and
+所以，如果你有一个变量，它持有一个非常大的数据片段，并且
+So if you have a variable that's holding on to a really big piece of data and
 
 62
 00:03:33.270 --> 00:03:36.331
-你就会创造一个封闭的即使你没在引用它
-then you create a closure,
-even if you're not referencing it,
+然后创建一个闭包，即使你没有引用它，
+then you create a closure, even if you're not referencing it,
 
 63
 00:03:36.331 --> 00:03:39.134
-这些数据可能会被人所收集的垃圾
-that data may stick around and
-not get garbage collected.
+这些数据可能会留在附近，而不会被垃圾收集。
+that data may stick around and not get garbage collected.
 
 64
 00:03:39.134 --> 00:03:43.760
-所以最好的假设是封闭即使在学术上是每个变量
-So it's best to assume that closure, even
-though academically it's per variable,
+所以最好假设闭包，即使在学术上它是每个变量，
+So it's best to assume that closure, even though academically it's per variable,
 
 65
 00:03:43.760 --> 00:03:47.969
-最好是假设闭包是基于作用域的操作。
-it's best to assume closure
-is a scope-based operation.
+最好假设闭包是基于作用域的操作。
+it's best to assume closure is a scope-based operation.
 
 66
 00:03:47.969 --> 00:03:51.259
-这不是你要做的事
-And it's not something you have
-to do special with a function,
+这不是你必须对一个函数做特别的事情，
+And it's not something you have to do special with a function,
 
 67
 00:03:51.259 --> 00:03:54.199
-除了你还得在外面
-other than you just have to
-access a variable outside and
+除了你只需要在外部访问一个变量
+other than you just have to access a variable outside and
 
 68
 00:03:54.199 --> 00:03:56.639
-那你就得去别的地方了
-then you have to pass
-the function somewhere.
+然后你必须在某个地方传递函数。
+then you have to pass the function somewhere.
 
 69
 00:03:56.639 --> 00:04:01.389
-你要做的就是观察封闭存在的概念。
-That's all you have to do to observe
-the idea that closure exists.
+这就是您所要做的所有事情，以观察闭合存在的想法。
+That's all you have to do to observe the idea that closure exists.
 
 70
 00:04:01.389 --> 00:04:05.039
-想想如果你有一个没有关闭的功能会是什么样的情况。
-Think about what it would be like if you
-had a function that didn't have closure.
+想象一下如果你有一个没有闭包的函数会是什么样子。
+Think about what it would be like if you had a function that didn't have closure.
 
 71
 00:04:05.039 --> 00:04:09.150
-如果您使用的是具有第一类函数的语言，那么为词汇作用域，但是
-If you're in a language that had first
-class functions, lexical scope, but
+如果您所在的语言具有一流的函数、词法范围，但是
+If you're in a language that had first class functions, lexical scope, but
 
 72
 00:04:09.150 --> 00:04:12.590
-没有关闭你就会在某个地方传递这个功能
-didn't have closure,
-you'd pass this function somewhere, and
+没有闭包，你应该在某个地方传递这个函数，然后
+didn't have closure, you'd pass this function somewhere, and
 
 73
 00:04:12.590 --> 00:04:15.550
-突然，它会忘记它的所有变量。
-all over sudden,
-it would forget about all its variables.
+突然之间，它会忘记所有的变量。
+all over sudden, it would forget about all its variables.
 
 74
 00:04:15.550 --> 00:04:17.420
-没那么有用吗
+不会有多大帮助，不是吗？
 Wouldn't be that helpful, would it?
 
 75
 00:04:17.420 --> 00:04:22.730
-几乎就像在必要时关闭是必要的
-It's almost as if closure falls out as
-a necessary requirement, a necessary
+这几乎就像是关闭作为一种必要的要求，一种必要的
+It's almost as if closure falls out as a necessary requirement, a necessary
 
 76
 00:04:22.730 --> 00:04:26.579
-具有第一类函数的词性限定语言的第三个组件。
-third component of a lexically scoped
-language with first class functions.
+具有第一类函数的词法范围语言的第三个组件。
+third component of a lexically scoped language with first class functions.
 
 77
 00:04:28.069 --> 00:04:29.610
-如果你有那两个
+如果你有这两个，
 If you have those two,
 
 78
 00:04:29.610 --> 00:04:31.680
-你会被封锁的因为这不可能
-you're gonna have closure because
-it wouldn't make sense not to.
+你会有个了结因为不这样做是没有意义的。
+you're gonna have closure because it wouldn't make sense not to.
 
 79
 00:04:33.319 --> 00:04:34.420
-这就是关闭的原因。
+这就是结束。
 That's what closure is.
 
 80
 00:04:34.420 --> 00:04:37.680
-不管你是否做过计时器你肯定都写过
-And whether you do timers or not,
-you've certainly all written or
+不管你做不做定时器，你肯定都写过或者
+And whether you do timers or not, you've certainly all written or
 
 81
 00:04:37.680 --> 00:04:39.639
-至少返回了函数或
-at least accessed code
-that returns functions or
+至少访问了返回函数或
+at least accessed code that returns functions or
 
 82
 00:04:39.639 --> 00:04:42.716
-把它们在回调中传递到同样的事情
-passes them around in callbacks,
-and that's the exact same thing.
+在回调中传递它们，这是完全相同的事情。
+passes them around in callbacks, and that's the exact same thing.
 
 83
 00:04:42.716 --> 00:04:46.300
-如果我在此返回在问题变量上关闭的函数，
-If I returned a function here that is
-closed over the question variable,
+如果我在这里返回一个在问题变量上关闭的函数，
+If I returned a function here that is closed over the question variable,
 
 84
 00:04:48.319 --> 00:04:51.980
-那么即使这个要求的功能已经完成了，第 11 行，
-then even though the ask function
-has finished, by line 11,
+那么即使Ask函数已经完成，通过行11，
+then even though the ask function has finished, by line 11,
 
 85
 00:04:51.980 --> 00:04:54.329
-我们仍能接触到那个变量
+我们仍然可以访问该变量。
 we still have access to that variable.
 
 86
 00:04:54.329 --> 00:04:57.420
 不是变量的快照，而是实际变量本身。
-Not a snapshot of the variable,
-but the actual variable itself.
+Not a snapshot of the variable, but the actual variable itself.
 
 87
 00:04:57.420 --> 00:04:58.370
-这叫封闭
+这就是所谓的结束。
 That's called closure.

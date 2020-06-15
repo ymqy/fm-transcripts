@@ -2,73 +2,63 @@ WEBVTT
 
 1
 00:00:00.030 --> 00:00:02.600
->> Kyle Simpson: 有些人无疑看到了 WAT
-&gt;&gt; Kyle Simpson: Some of you
-have undoubtedly seen the WAT
+&gt；&gt；Kyle Simpson：你们中的一些人无疑已经看过Wat了
+&gt;&gt; Kyle Simpson: Some of you have undoubtedly seen the WAT
 
 2
 00:00:02.600 --> 00:00:04.419
-我多次提到的视频
+我多次提到的视频，
 video I referred to multiple times,
 
 3
 00:00:04.419 --> 00:00:08.560
-WAT 视频的其中一个着名的东西是，怎么可能
-and one of the famous things in the WAT
-video was, how could something like
+Wat视频中最著名的事情之一就是，像这样的东西
+and one of the famous things in the WAT video was, how could something like
 
 4
 00:00:08.560 --> 00:00:12.939
-一个空想的阵列能被强迫等同于否定自己吗
-an empty array somehow be coercively
-equal to the negation of itself?
+空数组不知何故强制等于自身的否定？
+an empty array somehow be coercively equal to the negation of itself?
 
 5
 00:00:14.779 --> 00:00:18.929
-而在它的表面上，这个问题的构造方式，
-And on its surface,
-the way that problem is constructed,
+从表面上看，这个问题的构建方式，
+And on its surface, the way that problem is constructed,
 
 6
 00:00:18.929 --> 00:00:23.679
-它似乎是针对 JavaScript 的一个明确的参数
-it seems like a clear arguments
-against JavaScript, and
+这似乎是反对JavaScript的明确论据，并且
+it seems like a clear arguments against JavaScript, and
 
 7
 00:00:23.679 --> 00:00:26.559
-对双重平等的明确论点
-a clear arguments against
-the double equals.
+反对双重等同的明确论据。
+a clear arguments against the double equals.
 
 8
 00:00:26.559 --> 00:00:31.106
-但这并不像现在看来不是这样
-But this is not as it seems,
-this is not as it appears,
+但这并不是看起来的那样，这不是看起来的那样，
+But this is not as it seems, this is not as it appears,
 
 9
 00:00:31.106 --> 00:00:36.171
-因为这个建筑是一个造假的建筑
-because this construct is
-a false construct to begin with.
+因为这个构造一开始就是一个错误的构造。
+because this construct is a false construct to begin with.
 
 10
 00:00:36.171 --> 00:00:40.023
-在任何情况下你永远都不会
+你永远不会，在任何情况下，
 You would never, under any circumstances,
 
 11
 00:00:40.023 --> 00:00:44.286
-将价值与自身的否定相比较
-compare a value to the negation of itself,
-ever.
+永远不要将一个值与自身的否定进行比较。
+compare a value to the negation of itself, ever.
 
 12
 00:00:44.286 --> 00:00:46.909
-这在节目里是永远不会发生的
-That's just never gonna
-happen in the programs.
+这在节目中永远不会发生。
+That's just never gonna happen in the programs.
 
 13
 00:00:46.909 --> 00:00:47.920
@@ -77,335 +67,290 @@ So we went and looked for
 
 14
 00:00:47.920 --> 00:00:51.219
-这种人为的情境永远不会发生在真正的代码中
-this artificial scenario that
-would never happen in real code.
+这种人为的场景在真正的代码中永远不会发生。
+this artificial scenario that would never happen in real code.
 
 15
 00:00:51.219 --> 00:00:55.649
-然后说这整个机制被打破了因为一个奇怪的角落
-And then said this whole mechanism is
-broken because one weird corner case
+然后说这个机制被打破是因为一个奇怪的角落案件
+And then said this whole mechanism is broken because one weird corner case
 
 16
 00:00:55.649 --> 00:00:57.100
-没有理智的行为
+行为不明智。
 doesn't behave sensibly.
 
 17
 00:00:58.729 --> 00:01:02.170
-在什么情况下你会有一个阵列
-Under what circumstances would
-you ever have an array, and
+在什么情况下你会有一个数组，并且
+Under what circumstances would you ever have an array, and
 
 18
 00:01:02.170 --> 00:01:04.250
-然后尝试将其与数组的求反进行比较 ?
-then try to compare it to
-the negation of the array?
+然后尝试将其与数组的否定进行比较？
+then try to compare it to the negation of the array?
 
 19
 00:01:05.629 --> 00:01:08.319
-是否有任何数组的否定，而不仅仅是它本身 ?
-Negation of any array,
-not just itself, of any array?
+否定任何数组，而不仅仅是它本身，任何数组？
+Negation of any array, not just itself, of any array?
 
 20
 00:01:08.319 --> 00:01:12.390
-这种情况永远不会发生，你绝对不会设计这样的代码。
-That would never sensibly occur,
-you would never design code like that.
+这永远不会明智地发生，你永远不会像那样设计代码。
+That would never sensibly occur, you would never design code like that.
 
 21
 00:01:12.390 --> 00:01:15.680
-不过，让我们来解释它是如何运作的。
+不过，让我们解释一下它是如何工作的。
 Nevertheless, let's explain how it works.
 
 22
 00:01:15.680 --> 00:01:17.900
-它会用我教过你的一模一样的东西
-It's gonna use the exact same
-stuff I already taught you.
+它会用到和我教过你的一模一样的东西。
+It's gonna use the exact same stuff I already taught you.
 
 23
 00:01:19.109 --> 00:01:22.138
-如果我有两个阵列还有一些奇怪的原因
-If I had two arrays, and
-for some strange reason,
+如果我有两个数组，出于某种奇怪的原因，
+If I had two arrays, and for some strange reason,
 
 24
 00:01:22.138 --> 00:01:25.468
-我尝试将一个数组与否定本身进行比较。
-I tried to compare one array
-to the negation of itself.
+我试图将一个数组与其自身的否定进行比较。
+I tried to compare one array to the negation of itself.
 
 25
 00:01:28.563 --> 00:01:32.734
->> Kyle Simpson: 请将您的考虑中的内容与更合适的比较进行比较，
-&gt;&gt; Kyle Simpson: Compare that in your
-mind to the more appropriate comparison,
+&gt；&gt；Kyle Simpson：将你心中的那个与更合适的比较进行比较，
+&gt;&gt; Kyle Simpson: Compare that in your mind to the more appropriate comparison,
 
 26
 00:01:32.734 --> 00:01:37.439
-就是说，我想看看它们不是同一个阵列。
-which is to say, I want to check to
-see if they're not the same array.
+也就是说，我想检查它们是否是相同的数组。
+which is to say, I want to check to see if they're not the same array.
 
 27
 00:01:37.439 --> 00:01:39.379
-这不是平等的
+那是不相等的。
 That's the not equals.
 
 28
 00:01:40.569 --> 00:01:45.530
-这些可能看起来是一样的，但这些是完全不同的方法。
-Those might look like the same thing, but
-these are entirely different approaches.
+这些看起来可能是一样的东西，但这些是完全不同的方法。
+Those might look like the same thing, but these are entirely different approaches.
 
 29
 00:01:45.530 --> 00:01:49.490
-有人说我想知道它是否被强迫等于它的否定
-One is saying I wanna see if it is
-coercively equal to its negation, and
+一种是说我想看看它是否强制性地等于它的否定，并且
+One is saying I wanna see if it is coercively equal to its negation, and
 
 30
 00:01:49.490 --> 00:01:52.590
-另一个是说我想知道这不是强迫的
-the other one is saying I wanna
-see if it is not coercively equal.
+另一个是说我想看看它是不是强制平等的。
+the other one is saying I wanna see if it is not coercively equal.
 
 31
 00:01:54.099 --> 00:01:56.322
-这些都是不同的野兽
+那些是完全不同的野兽。
 Those are entirely different beasts.
 
 32
 00:01:56.322 --> 00:01:58.478
-第 8 行是您要以明智的方式编写代码的第 8 行。
-Line 8 is what you would
-write in code sensibly.
+第8行是您将在代码中明智地编写的内容。
+Line 8 is what you would write in code sensibly.
 
 33
 00:01:58.478 --> 00:02:04.489
-第 4 行， WAT 视频源，本质上是你永远不会写的代码。
-Line 4, the WAT video source, essentially,
-is what you would never write in code.
+第4行，WAT视频源本质上是您永远不会用代码编写的内容。
+Line 4, the WAT video source, essentially, is what you would never write in code.
 
 34
 00:02:04.489 --> 00:02:06.599
-但让我们暂时放纵一下吧
+但让我们放纵一下。
 But let's just indulge it for a moment.
 
 35
 00:02:06.599 --> 00:02:10.550
-为了解释算法我们如何解释第 4 行允许它
-To explain the algorithm, how are we gonna
-explain that line four allows it and
+为了解释算法，我们怎么解释第四行允许它
+To explain the algorithm, how are we gonna explain that line four allows it and
 
 36
 00:02:10.550 --> 00:02:12.550
-第 8 行允许吗
+八号线还允许吗？
 also line eight allows it?
 
 37
 00:02:12.550 --> 00:02:14.650
-这两种情况怎么可能都是真的呢 ?
-How is it possible that
-both of those can be true?
+这两件事怎么可能都是真的呢？
+How is it possible that both of those can be true?
 
 38
 00:02:15.919 --> 00:02:17.949
-这就是游戏的算法
+嗯，这是发挥作用的算法。
 Well, here's the algorithm at play.
 
 39
 00:02:17.949 --> 00:02:21.400
-第一，我们从讲习班开始，一个学生没有，或者
-Number one, we start with
-the workshop one students not, or
+第一，我们从工作坊开始，第一个学生不是，或者
+Number one, we start with the workshop one students not, or
 
 40
 00:02:21.400 --> 00:02:24.789
-等于拒绝了两个学生的修修期
-equal to the negation of
-the workshop two students.
+等于否定了车间的两个学生。
+equal to the negation of the workshop two students.
 
 41
 00:02:24.789 --> 00:02:27.879
-我们要做的是减少员工的价值，
-What we have to do is reduce
-workshop1Students to its value,
+我们要做的是减少Workshop1学生的价值，
+What we have to do is reduce workshop1Students to its value,
 
 42
 00:02:27.879 --> 00:02:31.479
-是一个数组，然后否定 workshop2Students，
-which is an array, and
-then negate workshop2Students,
+它是一个数组，然后取反workshop2Students，
+which is an array, and then negate workshop2Students,
 
 43
 00:02:31.479 --> 00:02:34.150
-workshop2Students 是一个真实的数组。
-workshop2Students is
-an array which is truthy.
+workshop2Students是一个真实的数组。
+workshop2Students is an array which is truthy.
 
 44
 00:02:34.150 --> 00:02:40.909
-所以如果我们否定它变成了第五行，它就变成了错误，对吗 ?
-So if we negate it becomes line five,
-it becomes false, right?
+所以如果我们否定它变成第五行，它就变成假的，对吗？
+So if we negate it becomes line five, it becomes false, right?
 
 45
 00:02:40.909 --> 00:02:44.969
-现在，我们有一个非原始的比较原始的。
-Now, we have a non-primitive
-compared to a primitive.
+现在，我们有一个非原语，与原语相比。
+Now, we have a non-primitive compared to a primitive.
 
 46
 00:02:44.969 --> 00:02:48.370
-所以我们需要把这个非原始的变成一个原始的。
-So we need to turn that
-non-primitive into a primitive.
+所以我们需要将非原语转化为原语。
+So we need to turn that non-primitive into a primitive.
 
 47
 00:02:48.370 --> 00:02:51.090
-我们需要把这个阵列变成一个原始的，它变成了什么 ?
-We need to turn the array into
-a primitive and what does it become?
+我们需要将数组转换为基元，它会变成什么？
+We need to turn the array into a primitive and what does it become?
 
 48
 00:02:52.560 --> 00:02:54.159
-它会变成空字符串。
+它成为空字符串。
 It becomes the empty string.
 
 49
 00:02:54.159 --> 00:02:57.250
-现在，我们的字符串为空，而为 false。
-So now,
-we have an empty string compared to false.
+所以现在，我们有一个空字符串与false相比。
+So now, we have an empty string compared to false.
 
 50
 00:02:57.250 --> 00:03:00.030
-我们有两个原语，但它们不是同一类型。
-We have two primitives but
-they are not of the same type.
+我们有两个原语，但它们的类型不同。
+We have two primitives but they are not of the same type.
 
 51
 00:03:00.030 --> 00:03:02.939
-算法更倾向于两者都变成数字
-The algorithm prefers that
-they both become numbers, so
+算法更喜欢把它们都变成数字，所以
+The algorithm prefers that they both become numbers, so
 
 52
 00:03:02.939 --> 00:03:05.490
-这只会变成一个数字它不应该
-this one becomes a number,
-which it shouldn't.
+这个变成了一个数字，但它不应该。
+this one becomes a number, which it shouldn't.
 
 53
 00:03:05.490 --> 00:03:10.419
-但是它变成了零而不是纳米，这个要变成
-But it does become the number zero instead
-of nano and this one needs to become
+但它确实变成了数字零而不是纳米，而这个需要成为
+But it does become the number zero instead of nano and this one needs to become
 
 54
 00:03:10.419 --> 00:03:16.379
-一个数字，现在 0 等于 0 ，好吗 ?
-a number as well and
-now zero is equal to zero, okay?
+一个数字，现在零等于零，好吗？
+a number as well and now zero is equal to zero, okay?
 
 55
 00:03:16.379 --> 00:03:18.349
-该算法得到了合理应用，但
+算法的应用是明智的，但是
 The algorithm is sensibly applied, but
 
 56
 00:03:18.349 --> 00:03:22.930
-在一个假的角落里你的密码里不会有这种情况
-it's on a bogus corner case that would
-never actually happen in your code.
+它出现在一个虚假的角落案例中，而这种情况在您的代码中根本不会发生。
+it's on a bogus corner case that would never actually happen in your code.
 
 57
 00:03:24.009 --> 00:03:27.590
-因此，这不是反对这个机制的有效论据。
-So it's not an effective
-argument against this mechanism.
+所以这不是反对这个机制的有效论据。
+So it's not an effective argument against this mechanism.
 
 58
 00:03:27.590 --> 00:03:29.610
-它制作了伟大的视频和头条新闻
-It makes for great videos and
-great headlines but
+它制作了很棒的视频和头条，但是
+It makes for great videos and great headlines but
 
 59
 00:03:29.610 --> 00:03:31.550
-这不是理性的争论。
+这不是一个理性的论点。
 it is not a rational argument.
 
 60
 00:03:32.780 --> 00:03:37.469
-第二个更理性，因为如果我们看等价的
-The second one is much more rational,
-because if we look at the equivalent
+第二个更合理，因为如果我们看一下等价物
+The second one is much more rational, because if we look at the equivalent
 
 61
 00:03:37.469 --> 00:03:43.129
-不等于，就像否定强迫性的平等。
-of the not equals, it is basically like
-the negation of the coercive equality.
+对于不平等，它基本上就像是对强制平等的否定。
+of the not equals, it is basically like the negation of the coercive equality.
 
 62
 00:03:43.129 --> 00:03:45.379
-所以我们可以问自己这是否有意义
-So we can ask ourselves,
-does it make sense for
+所以我们可以问自己，这是否有意义
+So we can ask ourselves, does it make sense for
 
 63
 00:03:45.379 --> 00:03:50.210
-与两个学生的作坊相比，一个学生要被胁迫吗 ?
-workshop one students to be coercively
-compared to workshop two students?
+工作坊一的学生比工作坊二的学生要强吗？
+workshop one students to be coercively compared to workshop two students?
 
 64
 00:03:50.210 --> 00:03:52.180
-既然他们都是列阵
+好吧，因为它们都是数组，
 Well, since they're both arrays,
 
 65
 00:03:52.180 --> 00:03:56.120
-那么我们实际上正在进行的是一个身份的问题。
-then what we're effectively doing
-is asking an identity question.
+那么我们实际上所做的就是问一个身份问题。
+then what we're effectively doing is asking an identity question.
 
 66
 00:03:56.120 --> 00:03:59.349
-我们是说他们不是同一个身份吗
-We're saying,
-are they not the same identity?
+我们是说，他们不是同一个身份吗？
+We're saying, are they not the same identity?
 
 67
 00:03:59.349 --> 00:04:02.604
-这对你而言是件很有效的事
-Which is a totally valid thing for
-you to ask in your program.
+这是一个完全有效的事情，你可以在你的程序中要求。
+Which is a totally valid thing for you to ask in your program.
 
 68
 00:04:04.450 --> 00:04:07.825
->> 凯尔 - 辛普森: 如果你用三等
-&gt;&gt; Kyle Simpson: And it would work
-identically if you use the triple equals
+&gt；&gt；Kyle Simpson：如果您使用三重等于，它将同样工作
+&gt;&gt; Kyle Simpson: And it would work identically if you use the triple equals
 
 69
 00:04:07.825 --> 00:04:08.889
-他们的版本
+他们的版本。
 version of them.
 
 70
 00:04:10.680 --> 00:04:12.250
-这是理性的事情
+这是一件理性的事情，而且
 It's a rational thing, and
 
 71
 00:04:12.250 --> 00:04:16.079
-本方法具有结构简单，使用方便，结构简单，使用方便，结构简单，使用方便等问题。
-it has no difference in the rational case
-between double equals and triple equals.
+在有理数的情况下，双等数和三等数之间没有区别。
+it has no difference in the rational case between double equals and triple equals.

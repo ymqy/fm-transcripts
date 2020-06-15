@@ -2,120 +2,103 @@ WEBVTT
 
 1
 00:00:00.050 --> 00:00:02.470
->> 演讲者 1: 好奇 " JSDoc " 或 " JSDoc " 之类的角色
-&gt;&gt; Speaker 1: Curious what the role
-of something like JSDoc or
+&gt；&gt；演讲者1：好奇像JSDoc或
+&gt;&gt; Speaker 1: Curious what the role of something like JSDoc or
 
 2
 00:00:02.470 --> 00:00:04.719
-其他表示法标准。
+其他符号标准是。
 other notation standards are.
 
 3
 00:00:04.719 --> 00:00:09.121
-听起来好像是机器写代码的问题
-It kinda sounds like there's the issue
-of writing code for the machine and
+听起来有点像是为机器编写代码的问题
+It kinda sounds like there's the issue of writing code for the machine and
 
 4
 00:00:09.121 --> 00:00:13.390
-然后写密码给那些要在路上读几个星期的人
-then writing code for the humans who
-have to read it weeks down the road.
+然后为那些必须在几周后阅读的人类编写代码。
+then writing code for the humans who have to read it weeks down the road.
 
 5
 00:00:13.390 --> 00:00:20.734
-我对使用明确的胁迫的说法很有意见
-And I'm very persuaded by the arguments
-about using explicit coercion,
+我对使用显式强制的争论非常有说服力，
+And I'm very persuaded by the arguments about using explicit coercion,
 
 6
 00:00:20.734 --> 00:00:25.629
-但在其他情况下，您遇到或
-but are there other cases
-where you have encountered or
+但你有没有遇到过其他的情况
+but are there other cases where you have encountered or
 
 7
 00:00:25.629 --> 00:00:30.390
-会推荐类似的战术吗
-would recommend ancillary
-tactics like that?
+会推荐这样的辅助策略吗？
+would recommend ancillary tactics like that?
 
 8
 00:00:30.390 --> 00:00:35.500
->> 凯尔 - 辛普森: 嗯，我当然认为，如果你仔细想想编码，
-&gt;&gt; Kyle Simpson: Well, I certainly think
-if you think about coding on the whole,
+&gt；&gt；Kyle Simpson：嗯，我当然认为如果你从整体上考虑编码，
+&gt;&gt; Kyle Simpson: Well, I certainly think if you think about coding on the whole,
 
 9
 00:00:35.500 --> 00:00:36.579
-顺便说下这是个大问题
+顺便说一下，这是个很好的问题。
 it's a great question, by the way.
 
 10
 00:00:36.579 --> 00:00:41.130
-如果你想以完整的方式来表达我的想法
-If you think about coding on the whole
-as a way to communicate my ideas,
+如果你从整体上考虑编码作为交流我思想的一种方式，
+If you think about coding on the whole as a way to communicate my ideas,
 
 11
 00:00:41.130 --> 00:00:43.320
-然后有很多方法来交流想法。
-then there are lots of
-ways to communicate ideas.
+然后有很多方法来交流思想。
+then there are lots of ways to communicate ideas.
 
 12
 00:00:43.320 --> 00:00:47.670
-其中一个方法是在您编写的代码中，其中一个方法在辅助操作中。
-One of the ways is in the code that you
-write, one of the ways is in the ancillary
+其中一种方法是在您编写的代码中，其中一种方法是在辅助代码中
+One of the ways is in the code that you write, one of the ways is in the ancillary
 
 13
 00:00:47.670 --> 00:00:50.840
-您提到的内容，例如，代码注释。
-stuff that you mentioned,
-like for example code comments.
+你提到的东西，比如代码注释。
+stuff that you mentioned, like for example code comments.
 
 14
 00:00:50.840 --> 00:00:53.725
-现在有人告诉你，你不该有代码评论，
-Now some people tell you,
-nah you should never need code comments,
+现在有些人告诉你，不，你永远不应该需要代码注释，
+Now some people tell you, nah you should never need code comments,
 
 15
 00:00:53.725 --> 00:00:55.640
-代码应该自我解释。
+代码应该自己解释。
 code should explain itself.
 
 16
 00:00:55.640 --> 00:01:02.659
-您不应更依赖代码注释而不是代码注释。
-You should not have more reliance
-upon code comments than the code.
+您不应该更多地依赖代码注释而不是代码。
+You should not have more reliance upon code comments than the code.
 
 17
 00:01:02.659 --> 00:01:05.292
-我看到的是这样的代码库，就是这样。
-And I've seen code bases that
-are like that, that are so
+我见过这样的代码库
+And I've seen code bases that are like that, that are so
 
 18
 00:01:05.292 --> 00:01:08.780
-在没有代码注释的情况下无法将其计算出来。
-inscrutable that without the code comment,
-nobody's figuring it out.
+令人费解的是，没有代码注释，没有人会弄明白它。
+inscrutable that without the code comment, nobody's figuring it out.
 
 19
 00:01:09.920 --> 00:01:12.870
-但是，代码注释不是要避免的坏事。
-But code comments are not
-a bad thing to be avoided.
+但是代码注释并不是一件可以避免的坏事。
+But code comments are not a bad thing to be avoided.
 
 20
 00:01:12.870 --> 00:01:15.549
-他们没有暴露计划的弱点
-They're not exposing some
-weakness of the program.
+他们没有暴露出这个计划的一些弱点。
+They're not exposing some weakness of the program.
 
 21
 00:01:15.549 --> 00:01:17.049
@@ -124,99 +107,85 @@ Here's the problem with code comments.
 
 22
 00:01:17.049 --> 00:01:20.655
-人们写他们的代码评论我很抱歉
-People write the what in their
-code comment, I'm sorry,
+人们在他们的代码注释中写下了什么，我很抱歉，
+People write the what in their code comment, I'm sorry,
 
 23
 00:01:20.655 --> 00:01:23.680
-他们会写代码注释的方式
+他们在代码注释中写下How。
 they write the how in their code comment.
 
 24
 00:01:23.680 --> 00:01:25.920
-就像你有一条线说， i++ ，
+就像你有一行写着，I+，和
 Like you have a line that says, i++, and
 
 25
 00:01:25.920 --> 00:01:30.829
-然后你说点增量 i 就是代码注释。
-then you say something like
-increment i is the code comment.
+然后你说增量I是代码注释。
+then you say something like increment i is the code comment.
 
 26
 00:01:32.329 --> 00:01:34.560
-我知道是递增 i 我能看出来
-I know it's incrementing i,
-I can see that.
+我知道它在增加，我看得出来。
+I know it's incrementing i, I can see that.
 
 27
 00:01:34.560 --> 00:01:37.740
-这就是我想让密码告诉我的原因
-Here's what I want the code
-comment to tell me, why.
+下面是我希望代码注释告诉我的内容，为什么。
+Here's what I want the code comment to tell me, why.
 
 28
 00:01:37.740 --> 00:01:42.085
-为什么需要递增，以及为什么只有 1，为什么不需要 2 或 12?
-Why do you need to increment, and
-why only by 1, why not by 2 or 12?
+为什么你需要增加，为什么只增加1，为什么不增加2或12？
+Why do you need to increment, and why only by 1, why not by 2 or 12?
 
 29
 00:01:42.085 --> 00:01:45.109
-告诉我为什么有时告诉我怎么做
-Tell me why, and
-sometimes maybe tell me how.
+告诉我为什么，有时也许告诉我怎么做。
+Tell me why, and sometimes maybe tell me how.
 
 30
 00:01:45.109 --> 00:01:47.240
-但是别告诉我密码是什么
-But don't tell me what,
-that's what the code's for.
+但别告诉我是什么，这就是代码的用途。
+But don't tell me what, that's what the code's for.
 
 31
 00:01:47.240 --> 00:01:49.450
-因此，您可以很好地与代码进行沟通。
-So yes,
-you can communicate well with your code.
+因此，是的，您可以很好地与您的代码进行通信。
+So yes, you can communicate well with your code.
 
 32
 00:01:49.450 --> 00:01:53.572
-如果您在此功能上做了 JS 文档，那么这两个参数也会接收到
-If you did a JS doc on this function and
-said, these two parameters receive either
+如果您在这个函数上做了一个JS文档，并且说，这两个参数接收
+If you did a JS doc on this function and said, these two parameters receive either
 
 33
 00:01:53.572 --> 00:01:57.331
-你对每个人都很清楚
-strings or numbers, then you're very
-clearly signaling to everybody,
+字符串或数字，然后你非常清楚地向每个人发出信号，
+strings or numbers, then you're very clearly signaling to everybody,
 
 34
 00:01:57.331 --> 00:01:59.409
-都知道可能发生了某种胁迫
+请注意，可能会发生一些强制。
 be aware that some coercion may happen.
 
 35
 00:01:59.409 --> 00:02:02.367
-但这只是字符串和数字之间的关系，所以我们知道
-But it's only between strings and
-numbers, and so we know we
+但它只在字符串和数字之间，所以我们知道
+But it's only between strings and numbers, and so we know we
 
 36
 00:02:02.367 --> 00:02:07.230
-缩小了我们所需要关注的角落案件的范围
-have narrowed down the scope of corner
-cases that we need to be concerned about.
+缩小了我们需要关注的角落案件的范围。
+have narrowed down the scope of corner cases that we need to be concerned about.
 
 37
 00:02:07.230 --> 00:02:10.509
-当然，代码注释很有用，我不会完全依赖它们。
-Absolutely, code comments can be useful,
-I wouldn't rely entirely on them.
+当然，代码注释是有用的，我不会完全依赖它们。
+Absolutely, code comments can be useful, I wouldn't rely entirely on them.
 
 38
 00:02:11.580 --> 00:02:14.240
-我认为在我们的代码中有很多事情是显而易见的。
-I think there's lots of things we
-can do in our code to be obvious.
+我认为在我们的代码中有很多事情可以做得很明显。
+I think there's lots of things we can do in our code to be obvious.

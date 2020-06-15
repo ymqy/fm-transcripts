@@ -2,254 +2,220 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:04.209
->> 扬声器 1: 在编译时，我有一个有关函数的问题
-&gt;&gt; Speaker 1: I have a question about
-the function when the compilation is
+&gt；&gt；演讲者1：我对编译时的函数有一个问题
+&gt;&gt; Speaker 1: I have a question about the function when the compilation is
 
 2
 00:00:04.209 --> 00:00:10.779
-在你说的大理石上，其他阶级的功能会得到它的内容吗 ?
-happening, the function other class gets
-its contents in the marble did you say?
+发生了，其他类的函数在大理石中得到了它的内容，你说了吗？
+happening, the function other class gets its contents in the marble did you say?
 
 3
 00:00:12.380 --> 00:00:13.865
->> 凯尔 - 辛普森: 我不确定我是否在关注
-&gt;&gt; Kyle Simpson: I'm
-not sure I'm following.
+&gt；&gt；Kyle Simpson：我不确定我在听什么。
+&gt;&gt; Kyle Simpson: I'm not sure I'm following.
 
 4
 00:00:13.865 --> 00:00:18.109
->> 扬声器 1: 因此当正在编译其他类时 -
-&gt;&gt; Speaker 1: So
-when other class is being compiled-
+&gt；&gt；扬声器1：所以当其他类被编译时-
+&gt;&gt; Speaker 1: So when other class is being compiled-
 
 5
 00:00:18.109 --> 00:00:19.579
->> 凯尔 - 辛普森: 有一张地图，
+&gt；&gt；Kyle Simpson：有一张地图，
 &gt;&gt; Kyle Simpson: There's a map,
 
 6
 00:00:19.579 --> 00:00:24.289
-就像一个计划，比如一个由编译器提出来的一个路线图，
-like a plan, like a roadmap,
-made up by the compiler to say, for
+就像一个计划，就像一个路线图，由编译器编出来说，对于
+like a plan, like a roadmap, made up by the compiler to say, for
 
 7
 00:00:24.289 --> 00:00:28.379
-那个蓝色的水桶你要创建一个叫老师的标识。
-that blue bucket, you need to create
-an identifier called teacher.
+那个蓝色的桶，你需要创建一个叫做教师的标识符。
+that blue bucket, you need to create an identifier called teacher.
 
 8
 00:00:28.379 --> 00:00:29.042
->> 演讲者 1: 好的。
+&gt；&gt；扬声器1：好的。
 &gt;&gt; Speaker 1: Okay.
 
 9
 00:00:29.042 --> 00:00:32.277
->> Kyle Simpson: 是的，这就是编译器输出的基本计划
-&gt;&gt; Kyle Simpson: Yeah, that's what
-compiler outputs is basically a plan for
+&gt；&gt；Kyle Simpson：是的，这就是编译器输出基本上是一个计划
+&gt;&gt; Kyle Simpson: Yeah, that's what compiler outputs is basically a plan for
 
 10
 00:00:32.277 --> 00:00:33.719
-范围。
+那个望远镜。
 that scope.
 
 11
 00:00:33.719 --> 00:00:37.920
->> 演讲者 1: 那么目标部分何时发生?
-&gt;&gt; Speaker 1: So
-when does the targeting part happen?
+&gt；&gt；演讲者1：那么目标部分什么时候发生？
+&gt;&gt; Speaker 1: So when does the targeting part happen?
 
 12
 00:00:37.920 --> 00:00:40.585
->> Kyle Simpson: 那是在运行时，这是我们现在的阶段。
-&gt;&gt; Kyle Simpson: That's at run time,
-which is the stage we're in now.
+&gt；&gt；Kyle Simpson：这是在运行时，也就是我们现在所处的阶段。
+&gt;&gt; Kyle Simpson: That's at run time, which is the stage we're in now.
 
 13
 00:00:40.585 --> 00:00:45.350
-在运行时，当从某个变量中抽取该 otherClass 函数时，
-At run time, when that otherClass
-function is pulled from some variable,
+在运行时，当other Class函数从某个变量中拉出时，
+At run time, when that otherClass function is pulled from some variable,
 
 14
 00:00:45.350 --> 00:00:47.240
-就像在 13 线上
+就像是在第13行，并且
 like it is on line 13, and
 
 15
 00:00:47.240 --> 00:00:51.659
-它已经被处死了现在我们知道有一个完整的计划要做这个蓝色的水桶
-it's executed, well now we know there's
-a whole plan to make this blue bucket.
+它被执行了，现在我们知道有一个完整的计划来制作这个蓝色的桶。
+it's executed, well now we know there's a whole plan to make this blue bucket.
 
 16
 00:00:51.659 --> 00:00:55.689
-所以让我们先把整个蓝色的水桶和所有弹珠一起
-So let's go first make the whole blue
-bucket with all the marbles, and
+所以让我们先把所有的弹珠做成整个蓝色的桶，然后
+So let's go first make the whole blue bucket with all the marbles, and
 
 17
 00:00:55.689 --> 00:00:57.670
-现在我们已经开始运作了
+现在我们在它里面，我们正在运行它。
 now we're in it and we're running it.
 
 18
 00:00:57.670 --> 00:00:59.972
-当我们跨越第四线
+当我们穿过四号线时，
 And when we run across line four,
 
 19
 00:00:59.972 --> 00:01:04.019
-目标位置有个叫老师的大理石
-there's a marble called teacher
-in the target position.
+目标位置有一个叫老师的大理石。
+there's a marble called teacher in the target position.
 
 20
 00:01:05.280 --> 00:01:10.890
-所以我们发现目标位置和目标位置
-So we discover the source
-versus target position
+所以我们发现了源和目标的位置
+So we discover the source versus target position
 
 21
 00:01:10.890 --> 00:01:15.024
-在编译时，但在运行时间之前，我们不使用该信息。
-at compile time, but we don't use
-that information until run time.
+在编译时，但是我们直到运行时才使用该信息。
+at compile time, but we don't use that information until run time.
 
 22
 00:01:15.024 --> 00:01:15.983
-有什么帮助吗
+这有帮助吗？
 Does that help?
 
 23
 00:01:15.983 --> 00:01:17.147
->> 演讲者 1: 对，谢谢。
+&gt；&gt；演讲者1：是的，谢谢。
 &gt;&gt; Speaker 1: Yep, thank you.
 
 24
 00:01:17.147 --> 00:01:19.689
->> 扬声器 3: 所以它本质上创建了一个占位符吗 ?
-&gt;&gt; Speaker 3: So
-it creates a place holder essentially?
+&gt；&gt；Speaker 3：所以它本质上创建了一个占位符？
+&gt;&gt; Speaker 3: So it creates a place holder essentially?
 
 25
 00:01:19.689 --> 00:01:22.420
->> 凯尔 - 辛普森: 是的，基本上就像一个藏宝图，对。
-&gt;&gt; Kyle Simpson: Yeah, basically think
-of it like a treasure map, right.
+&gt；&gt；Kyle Simpson：是的，基本上把它想成一张藏宝图，对吧。
+&gt;&gt; Kyle Simpson: Yeah, basically think of it like a treasure map, right.
 
 26
 00:01:22.420 --> 00:01:26.575
-有一张地图，有一个计划，就像是要为每个范围做一个清单，
-There's a map, there's a plan,
-it's like a to do list for every scope,
+有一张地图，有一个计划，就像每个范围的任务清单，
+There's a map, there's a plan, it's like a to do list for every scope,
 
 27
 00:01:26.575 --> 00:01:30.212
-这就是编译器输出的内容这是可执行的代码
-that's what compiler outputs,
-that's the executable code.
+这就是编译器输出的内容，这就是可执行代码。
+that's what compiler outputs, that's the executable code.
 
 28
 00:01:30.212 --> 00:01:35.960
-当它运行的时候，它实际上是存在的。
-And then when it runs is when it
-all actually comes into existence.
+然后，当它运行的时候，当它真正存在的时候。
+And then when it runs is when it all actually comes into existence.
 
 29
 00:01:35.960 --> 00:01:37.599
-嗯。 >> 扬声器 4: 还有一个问题。
-Yeah.
-&gt;&gt; Speaker 4: One more question.
+是啊。&gt；&gt；扬声器4：还有一个问题。
+Yeah. &gt;&gt; Speaker 4: One more question.
 
 30
 00:01:37.599 --> 00:01:42.299
-当我们进入该功能的范围时，我的意思是如果我们输入
-When we enter the scope of that function,
-I mean if we enter
+当我们输入该函数的范围时，我的意思是如果我们输入
+When we enter the scope of that function, I mean if we enter
 
 31
 00:01:42.299 --> 00:01:47.150
-多次重新设置值和内容的过程。
-multiple times, there's another process
-that resets the values and things.
+多次，还有另一个重置值和东西的过程。
+multiple times, there's another process that resets the values and things.
 
 32
 00:01:47.150 --> 00:01:49.984
-你知道我在说什么吗
-How does that work,
-you know what I'm saying?
+你知道我在说什么吗？
+How does that work, you know what I'm saying?
 
 33
 00:01:49.984 --> 00:01:51.799
->> Kyle Simpson: 每次执行函数时，
-&gt;&gt; Kyle Simpson: Every time
-you execute a function,
+&gt；&gt；Kyle Simpson：每次执行函数时，
+&gt;&gt; Kyle Simpson: Every time you execute a function,
 
 34
 00:01:51.799 --> 00:01:54.329
-从零开始重新创建环境。
+从头开始重新创建环境。
 the environment is recreated from scratch.
 
 35
 00:01:54.329 --> 00:01:57.799
->> 演讲者 4: 好的，这到底是什么呢 ? 在编译器里吗 ?
-&gt;&gt; Speaker 4: Okay, so what does that
-actually, is it like in the compiler?
+&gt；&gt；扬声器4：好的，那么这实际上是什么，它在编译器中是什么样子的？
+&gt;&gt; Speaker 4: Okay, so what does that actually, is it like in the compiler?
 
 36
 00:01:57.799 --> 00:01:58.500
-我不知道我不知道
+我不知道。
 I don't know.
 
 37
 00:01:58.500 --> 00:02:02.069
->> 凯尔 - 辛普森: 记住，编译器只为桶做一个计划，它说，
-&gt;&gt; Kyle Simpson: So remember, the compiler
-only makes a plan for the bucket, it says,
+&gt；&gt；Kyle Simpson：所以请记住，编译器只为bucket制定计划，它说，
+&gt;&gt; Kyle Simpson: So remember, the compiler only makes a plan for the bucket, it says,
 
 38
 00:02:02.069 --> 00:02:04.939
-哎，只要你需要绿色的水桶，这就是绿色水桶应该看的
-hey whenever you need a green bucket, this
-is what the green bucket ought to look
+嘿，无论何时你需要一个绿色的水桶，这就是绿色水桶应该看起来的样子
+hey whenever you need a green bucket, this is what the green bucket ought to look
 
 39
 00:02:04.939 --> 00:02:08.750
-就像它的内容应该是这样但是它还不存在
-like, and this is what it's contents ought
-to be, but it doesn't actually exist yet.
+就像，这是它的内容应该是的，但它实际上还不存在。
+like, and this is what it's contents ought to be, but it doesn't actually exist yet.
 
 40
 00:02:08.750 --> 00:02:14.500
-然后，每当您执行绿色存储区时，该计划就会被实现到内存中。
-And then every time you execute the green
-bucket, that plan is effected into memory.
+然后每次执行绿色桶时，该计划都会影响到内存中。
+And then every time you execute the green bucket, that plan is effected into memory.
 
 41
 00:02:14.500 --> 00:02:18.069
-然后当绿色水桶完成那个计划的时候所有东西都消失了
-And then when the green bucket finishes
-that plan, all that stuff goes away, and
+然后当绿色的水桶完成了这个计划，所有的东西都消失了，而且
+And then when the green bucket finishes that plan, all that stuff goes away, and
 
 42
 00:02:18.069 --> 00:02:23.620
-那么下次你来管理它的时候，它就会再从这个计划中产生它，好的。
-then the next time you run it,
-it creates it from the plan again, okay.
+然后下次运行它时，它会再次从计划中创建它，好吧。
+then the next time you run it, it creates it from the plan again, okay.
 
 43
 00:02:23.620 --> 00:02:28.520
-所以编译器输出实际上不是保留内存，是
-So the compiler output is not actually
-reserved memory, it's the plan for
+所以编译器输出实际上不是保留的内存，它是计划
+So the compiler output is not actually reserved memory, it's the plan for
 
 44
 00:02:28.520 --> 00:02:30.939
-如何保留记忆和制作弹珠
-how to reserve memory and
-make marbles and all that.
+如何保留记忆和制作弹珠等等。
+how to reserve memory and make marbles and all that.

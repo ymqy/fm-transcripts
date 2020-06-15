@@ -2,172 +2,148 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:05.740
->> 凯尔 - 辛普森: 让我们开始练习函数表达式。
-&gt;&gt; Kyle Simpson: So let's jump into
-our exercise on function expressions.
+&gt；&gt；Kyle Simpson：那么让我们跳到我们关于函数表达式的练习中。
+&gt;&gt; Kyle Simpson: So let's jump into our exercise on function expressions.
 
 2
 00:00:07.360 --> 00:00:11.660
-为函数表达式练习向上拉自述文件和 ex.js 。
-Pull up the readme and the ex.js for
-the function expressions exercise.
+调出函数表达式练习的自述文件和ex.js。
+Pull up the readme and the ex.js for the function expressions exercise.
 
 3
 00:00:12.960 --> 00:00:13.589
-在这次演习中
+在本练习中，
 In this exercise,
 
 4
 00:00:13.589 --> 00:00:17.429
-你会写一些函数和函数表达式
-you're gonna be writing some functions and
-also some function expressions.
+你将会写一些函数，也会写一些函数表达式。
+you're gonna be writing some functions and also some function expressions.
 
 5
 00:00:17.429 --> 00:00:21.780
-这些功能将管理一些学生的注册记录
-And these functions are gonna be managing
-some student enrollment records for
+这些功能将管理一些学生注册记录
+And these functions are gonna be managing some student enrollment records for
 
 6
 00:00:21.780 --> 00:00:23.289
-我们的工作室
+我们的车间。
 our workshop.
 
 7
 00:00:23.289 --> 00:00:27.769
-运动的精神是你将利用我们所学到的
-The spirit of the exercise is that you're
-gonna be using what we've learned about
+这个练习的精神是，你将使用我们所学到的
+The spirit of the exercise is that you're gonna be using what we've learned about
 
 8
 00:00:27.769 --> 00:00:32.149
-指定函数并尽可能使用函数。
-named functions and
-using functions wherever possible.
+命名函数并尽可能使用函数。
+named functions and using functions wherever possible.
 
 9
 00:00:32.149 --> 00:00:35.020
-所以你想用地图和过滤器之类的东西
-So you wanna be using things like map and
-filter and
+所以你想要使用像地图和过滤器之类的东西
+So you wanna be using things like map and filter and
 
 10
 00:00:35.020 --> 00:00:37.890
-而不是你的旧学校
+寻找而不是你的老学校的循环。
 find instead of your old school for loops.
 
 11
 00:00:37.890 --> 00:00:40.079
-你想尽可能地使用功能。
+你想在任何可能的地方使用函数。
 You wanna use functions wherever possible.
 
 12
 00:00:40.079 --> 00:00:43.020
-这一运动分为两部分。
-This is broken up into two parts,
-this exercise.
+这个练习分为两部分。
+This is broken up into two parts, this exercise.
 
 13
 00:00:44.439 --> 00:00:48.359
 首先，完成第一部分，然后完成第二部分。
-First, complete part one and
-then complete part two.
+First, complete part one and then complete part two.
 
 14
 00:00:48.359 --> 00:00:51.746
-回来，回来的时候我们都解释解
-We'll come back, when we come back we
-will explain the solution for both so
+我们会回来的，当我们回来的时候，我们会解释这两个问题的解决方案
+We'll come back, when we come back we will explain the solution for both so
 
 15
 00:00:51.746 --> 00:00:54.009
-你就有时间在这两处工作了
+你将有时间在这两个部分上工作。
 you will have time to work on both parts.
 
 16
 00:00:54.009 --> 00:00:59.640
-第一部分，你要做的是写函数声明和命名函数
-In part one, what you're gonna do is write
-a function declarations and named function
+在第一部分中，您要做的是编写一个函数声明和命名函数
+In part one, what you're gonna do is write a function declarations and named function
 
 17
 00:00:59.640 --> 00:01:04.170
-根据此处的指示信息，我将在此时结束这些表达式。
-expressions according to the instructions
-here, and I'll go over those in a moment.
+根据这里的说明表达，我一会儿再看一遍。
+expressions according to the instructions here, and I'll go over those in a moment.
 
 18
 00:01:04.170 --> 00:01:08.289
-第二部分你要做的就是重写
-In part two,
-what you're going to do is rewrite
+在第二部分中，你要做的是重写
+In part two, what you're going to do is rewrite
 
 19
 00:01:08.289 --> 00:01:11.489
-所有您作为箭头函数执行的函数。
-all of those functions that
-you did as arrow functions.
+你做的所有这些功能都是箭头功能。
+all of those functions that you did as arrow functions.
 
 20
 00:01:11.489 --> 00:01:13.370
-第一部分和第二部分用于
-The purpose of part one and
-part two is for
+第一部分和第二部分的目的是
+The purpose of part one and part two is for
 
 21
 00:01:13.370 --> 00:01:18.189
-您可以并排比较代码可读性和
-you to have a side by side comparison of
-the differences in code readability and
+您需要对代码可读性和可读性之间的差异进行并排比较
+you to have a side by side comparison of the differences in code readability and
 
 22
 00:01:18.189 --> 00:01:23.840
-使用命名函数和使用箭头函数之间的功能，好吗 ?
-functionality between using named
-functions and using arrow functions, okay?
+使用命名函数和使用箭头函数之间的功能，好吗？
+functionality between using named functions and using arrow functions, okay?
 
 23
 00:01:23.840 --> 00:01:26.210
-所以在行为上不会有任何区别
-So there won't be any
-difference in behavior,
+所以在行为上不会有任何差异，
+So there won't be any difference in behavior,
 
 24
 00:01:26.210 --> 00:01:29.421
-只是这两部分之间的代码风格的不同
-just simply a difference in code
-style between those two parts.
+只是这两个部分之间代码风格的一个简单区别。
+just simply a difference in code style between those two parts.
 
 25
 00:01:31.439 --> 00:01:34.765
->> 凯尔 - 辛普森: 您需要实施的主要功能是
-&gt;&gt; Kyle Simpson: The main functionality
-that you need to implement is that
+&gt；&gt；Kyle Simpson：您需要实现的主要功能是
+&gt;&gt; Kyle Simpson: The main functionality that you need to implement is that
 
 26
 00:01:34.765 --> 00:01:37.813
-有三个功能叫做 printRecords
-there are three functions,
-called printRecords,
+有三个函数，称为printRecords，
+there are three functions, called printRecords,
 
 27
 00:01:37.813 --> 00:01:42.189
-paidStudentsToEnroll ，并保留，对不起，reminidUnp酬。
-paidStudentsToEnroll, and
-remain, I'm sorry, remindUnpaid.
+paidStudentsTo Enroll，很抱歉，请继续提醒Unpay。
+paidStudentsToEnroll, and remain, I'm sorry, remindUnpaid.
 
 28
 00:01:42.189 --> 00:01:46.620
-这三个函数已在 ex.js 文件中进行了存根。
-Those three functions have been
-stubbed out in the ex.js file.
+这三个函数已经在ex.js文件中删除了。
+Those three functions have been stubbed out in the ex.js file.
 
 29
 00:01:46.620 --> 00:01:50.049
-他们是来找你的你知道他们的论点是什么
-They're there for you, you see what
-they receive as arguments, I mean,
+他们在那里等着你，你看到他们收到的是什么论点，我的意思是，
+They're there for you, you see what they receive as arguments, I mean,
 
 30
 00:01:50.049 --> 00:01:51.090
@@ -176,233 +152,200 @@ as parameters.
 
 31
 00:01:51.090 --> 00:01:54.560
-但您需要根据自述文件的内容实施这些操作。
-But you need to implement those
-according to what the readme says.
+但您需要根据自述文件的内容实现这些内容。
+But you need to implement those according to what the readme says.
 
 32
 00:01:54.560 --> 00:01:58.280
-你会注意到那些功能已经给你打电话了
-And you'll notice that those functions
-are already called for you, so
+您会注意到已经为您调用了这些函数，所以
+And you'll notice that those functions are already called for you, so
 
 33
 00:01:58.280 --> 00:02:00.079
-我给打印记录打了电话
+这里我调用了printRecords。
 here I've called printRecords.
 
 34
 00:02:00.079 --> 00:02:05.189
-我调用 paidStudentsToEnroll ，我调用remindUnp酬和
-I call paidStudentsToEnroll and
-I call remindUnpaid and
+我调用paidStudentsToEnroll，调用remindUnpay和
+I call paidStudentsToEnroll and I call remindUnpaid and
 
 35
 00:02:05.189 --> 00:02:09.150
-此代码注释中期望的输出。
-the output that is expected
-is here in this code comment.
+预期的输出在此代码注释中。
+the output that is expected is here in this code comment.
 
 36
 00:02:09.150 --> 00:02:13.090
-因此，您的输出需要与此输出相匹配，好吗 ?
-So your output needs to match this output,
-okay?
+所以你的输出需要匹配这个输出，好吗？
+So your output needs to match this output, okay?
 
 37
 00:02:14.114 --> 00:02:17.915
-打印记录执行的操作是获取学生标识列表。
-What printRecords does is it
-takes a list of student IDs.
+printRecords的作用是获取学生ID的列表。
+What printRecords does is it takes a list of student IDs.
 
 38
 00:02:17.915 --> 00:02:22.430
-就像你在这里看到的一样
-So it's gonna take an array of
-student IDs as you see here,
+所以就像你在这里看到的一样，需要一系列的学生证，
+So it's gonna take an array of student IDs as you see here,
 
 39
 00:02:22.430 --> 00:02:25.903
-我们正在传递一个名为 " currentEnrollment" 的学生标识的数组。
-we are passing in an array of student
-IDs called currentEnrollment.
+我们传入一个名为currentEnrollment的学生ID数组。
+we are passing in an array of student IDs called currentEnrollment.
 
 40
 00:02:25.903 --> 00:02:28.719
-所以打印记录列出了学生标识和
-So printRecords takes
-a list of student IDs and
+因此printRecords获取学生ID列表，并
+So printRecords takes a list of student IDs and
 
 41
 00:02:28.719 --> 00:02:30.729
-需要检索每个学生的记录。
+需要检索每个学生记录。
 needs to retrieve each student record.
 
 42
 00:02:30.729 --> 00:02:35.213
-这些存储在 studentRecords 数组中。
-Those are stored in
-the studentRecords array.
+这些存储在StudentRecords数组中。
+Those are stored in the studentRecords array.
 
 43
 00:02:35.213 --> 00:02:40.408
-按标识检索每个记录，并且您可以使用数组查找。
-Retrieve each record by ID, and there's
-a hint there than you can use array find.
+通过ID检索每条记录，那里有一个可以使用array find的提示。
+Retrieve each record by ID, and there's a hint there than you can use array find.
 
 44
 00:02:40.408 --> 00:02:44.264
-按学生姓名升序排序。
+按学生姓名排序，升序。
 Sorted by the student name, ascending.
 
 45
 00:02:44.264 --> 00:02:47.459
-您可以使用数组排序，但必须使用定制功能。
-You can use array sort, but you're
-gonna have to use a custom function.
+可以使用数组排序，但必须使用自定义函数。
+You can use array sort, but you're gonna have to use a custom function.
 
 46
 00:02:48.590 --> 00:02:52.729
-然后将每个记录打印到控制台或控制台日志语句，包括
-And then print each record to the console
-or the console log statement including
+然后将每条记录打印到控制台或控制台日志语句，包括
+And then print each record to the console or the console log statement including
 
 47
 00:02:52.729 --> 00:02:55.110
-他们的名字，他们的身份，以及他们是否得到支付。
-their name, their ID, and
-whether or not they're paid.
+他们的名字，他们的身份证，以及他们是否得到了报酬。
+their name, their ID, and whether or not they're paid.
 
 48
 00:02:56.479 --> 00:02:57.829
-这就是这个功能的作用。
+这就是那个函数的作用。
 That's what that function does.
 
 49
 00:02:57.829 --> 00:03:01.689
-2 号，有报酬的注册学生都看透了学生
-Number two, the paid students to enroll
-function looks through all the student
+第二，付费学生注册功能查看所有学生
+Number two, the paid students to enroll function looks through all the student
 
 50
 00:03:01.689 --> 00:03:06.400
-记录并检查是否有任何已支付但尚未注册的情况。
-records and checks to see if any of
-them are paid but not yet enrolled.
+记录和检查以查看其中是否有已支付但尚未注册的用户。
+records and checks to see if any of them are paid but not yet enrolled.
 
 51
 00:03:06.400 --> 00:03:09.060
-意味着它们尚未出现在 currentEnrollment 数组中，
-Meaning they're not yet
-in the currentEnrollment array,
+这意味着它们还不在currentEnrollment数组中，
+Meaning they're not yet in the currentEnrollment array,
 
 52
 00:03:09.060 --> 00:03:10.479
-他们的身份不存在
+他们的身份证不在那里。
 their ID isn't there.
 
 53
 00:03:10.479 --> 00:03:11.650
-收集这些标识和
+收集这些ID并
 Collect those IDs and
 
 54
 00:03:11.650 --> 00:03:15.650
-然后返回具有先前注册的标识加上新标识的新阵列。
-then return a new array with the
-previously enrolled IDs plus the new ones.
+然后返回一个包含先前注册的ID和新ID的新数组。
+then return a new array with the previously enrolled IDs plus the new ones.
 
 55
 00:03:15.650 --> 00:03:19.170
-因此，它不会修改，它会返回一个新的数组。
-So, it doesn't modify,
-it returns a new array.
+因此，它不会修改，它返回一个新的数组。
+So, it doesn't modify, it returns a new array.
 
 56
 00:03:19.170 --> 00:03:23.710
-最后，你将会收到一份学生身份证的清单
-And finally, the remindUnpaid is you're
-gonna take a list of student IDs and
+最后，提醒未支付的是，您将获得一份学生ID列表，
+And finally, the remindUnpaid is you're gonna take a list of student IDs and
 
 57
 00:03:23.710 --> 00:03:29.170
-将该列表过滤为仅记录处于未支付状态的记录。
-filter that list to only ones whose
-records are in the unpaid status.
+将该列表筛选为仅记录处于未付状态的列表。
+filter that list to only ones whose records are in the unpaid status.
 
 58
 00:03:29.170 --> 00:03:33.979
-然后将该列表从项目 1 传递回我们的打印记录
-And then pass that list back to
-our printRecords from item one
+然后将该列表从第一项传递回我们的printRecords
+And then pass that list back to our printRecords from item one
 
 59
 00:03:33.979 --> 00:03:38.406
-只打印出不带薪的学生
-to print out only
-the students that are unpaid.
+只打印出没有报酬的学生。
+to print out only the students that are unpaid.
 
 60
 00:03:38.406 --> 00:03:42.750
-好的，所以这是第二次运动的一部分，第二部分，
-Okay, so this is part one of
-the exercise and again, part two,
+好的，这是练习的第一部分，再一次，第二部分，
+Okay, so this is part one of the exercise and again, part two,
 
 61
 00:03:42.750 --> 00:03:46.629
-你不会改变任何行为，只要用箭头函数重新编写它。
-you don't change any behavior, you just
-simply rewrite it with arrow functions.
+你不需要改变任何行为，你只需用箭头函数重写它。
+you don't change any behavior, you just simply rewrite it with arrow functions.
 
 62
 00:03:46.629 --> 00:03:50.110
-一般来说，第一部分应该带您大约 15 分钟，
-Generally speaking, part one should
-take you about 15 minutes and
+一般来说，第一部分应该花你大约15分钟
+Generally speaking, part one should take you about 15 minutes and
 
 63
 00:03:50.110 --> 00:03:52.449
-第二部分应该带你五分钟
-part two should take
-you about five minutes.
+第二部分大约需要五分钟。
+part two should take you about five minutes.
 
 64
 00:03:52.449 --> 00:03:56.340
-因此，我们会在约 20 分钟内完成这项工作。
-So overall we would take about
-20 minutes to do this exercise.
+所以总的来说，我们大约需要20分钟来做这个练习。
+So overall we would take about 20 minutes to do this exercise.
 
 65
 00:03:56.340 --> 00:04:01.319
-因此，我们现在就休息，让你有机会练习第一部分和第二部分。
-So we'll break now, let you have a chance
-to work on exercise part one and part two.
+所以我们现在休息一下，让你们有机会练习第一部分和第二部分。
+So we'll break now, let you have a chance to work on exercise part one and part two.
 
 66
 00:04:01.319 --> 00:04:04.740
-我建议将您的解决方案放在两个单独的文件中
-I'd recommend putting your
-solutions in two separate files so
+我建议将您的解决方案放在两个单独的文件中，以便
+I'd recommend putting your solutions in two separate files so
 
 67
 00:04:04.740 --> 00:04:06.770
-你可以对比和对比
+你可以比较和对比它们。
 that you can compare and contrast them.
 
 68
 00:04:08.009 --> 00:04:11.849
-我们很快就会回来，通过这个方案来谈谈。
-We'll come back in a little bit and talk
-through the solution to this exercise.
+我们稍后回来讨论这个练习的解决方案。
+We'll come back in a little bit and talk through the solution to this exercise.
 
 69
 00:04:11.849 --> 00:04:16.230
-提醒你如果你被困住了你需要一点点的手
-Reminder that if you get stuck and you
-need a little bit of a hand through you
+提醒你，如果你被困住了，你需要一点帮助
+Reminder that if you get stuck and you need a little bit of a hand through you
 
 70
 00:04:16.230 --> 00:04:24.966
-与进行欺骗一样，解决方案文件在 EXfix-1 和 EXfix-2中。
-just like to cheat, the solutions files
-are there in EXfix-1 and EXfix-2.
+就像作弊一样，解决方案文件位于EXfix-1和EXfix-2中。
+just like to cheat, the solutions files are there in EXfix-1 and EXfix-2.

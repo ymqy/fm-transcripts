@@ -2,124 +2,107 @@ WEBVTT
 
 1
 00:00:00.240 --> 00:00:03.601
->> 凯尔 - 辛普森: 多年来，有人叫嚣着 JavaScript，
-&gt;&gt; Kyle Simpson: For years,
-there was clamoring that JavaScript,
+&gt；&gt；Kyle Simpson：多年来，人们一直在叫嚣JavaScript，
+&gt;&gt; Kyle Simpson: For years, there was clamoring that JavaScript,
 
 2
 00:00:03.601 --> 00:00:07.120
-如果这些模块像设计图案那么重要
-if the modules were so
-important as a design pattern,
+如果模块作为设计模式如此重要，
+if the modules were so important as a design pattern,
 
 3
 00:00:07.120 --> 00:00:11.439
-那么我们就应该为他们提供一流和语法的支持。
-then we ought to have first class and
-syntactic support for them.
+那么我们应该对他们有一流的语法支持。
+then we ought to have first class and syntactic support for them.
 
 4
 00:00:11.439 --> 00:00:16.621
-所以我们最终加入了 ES6 模块。
+因此我们最终添加了ES6模块。
 And so we finally added ES6 modules.
 
 5
 00:00:16.621 --> 00:00:21.596
-ES6 模块， >> 凯尔 - 辛普森:
-ES6 modules,
-&gt;&gt; Kyle Simpson: Are,
+ES6模块，&gt；&gt；Kyle Simpson：are，
+ES6 modules, &gt;&gt; Kyle Simpson: Are,
 
 6
 00:00:23.140 --> 00:00:24.166
->> 凯尔 - 辛普森: 好吧，让我说
+&gt；&gt；Kyle Simpson：嗯，我只想说
 &gt;&gt; Kyle Simpson: Well, let me just say
 
 7
 00:00:24.166 --> 00:00:25.600
-他们是正在进行中的工作
+他们是一个正在进行的工作。
 they're a work in progress.
 
 8
 00:00:27.140 --> 00:00:32.332
-应该是当 ES6 规格落地的时候我们就有模块和
-It should have been that when the ES6
-spec landed, we just had modules and
+应该是，当ES6规范落地时，我们只有模块和
+It should have been that when the ES6 spec landed, we just had modules and
 
 9
 00:00:32.332 --> 00:00:37.128
-那么在几个月或一年的时间里，它就在所有环境中。
-then within a few months or a year,
-it was just in all environments.
+然后在几个月或一年内，它只是在所有环境中。
+then within a few months or a year, it was just in all environments.
 
 10
 00:00:37.128 --> 00:00:42.411
-不幸的是我们有些程序崩溃了
-Unfortunately, we had somewhat
-of a process breakdown,
+不幸的是，我们遇到了一些流程故障，
+Unfortunately, we had somewhat of a process breakdown,
 
 11
 00:00:42.411 --> 00:00:47.473
-就像我能那样大方的说 TC39 没有真正的
-to be as generous as I can,
-in that TC39 didn't really
+尽我所能的慷慨，因为TC39并不是真的
+to be as generous as I can, in that TC39 didn't really
 
 12
 00:00:47.473 --> 00:00:52.779
-与 Node.js 对话有关模块语法的计划。
-talk to Node.js about their plans for
-the module syntax.
+与Node.js讨论他们对模块语法的计划。
+talk to Node.js about their plans for the module syntax.
 
 13
 00:00:52.779 --> 00:00:57.539
-Node.js 没有真正地与 TC39 有关
-And Node.js didn't really talk
-to TC39 about the fact that what
+而Node.js并没有真正与TC39谈论什么
+And Node.js didn't really talk to TC39 about the fact that what
 
 14
 00:00:57.539 --> 00:01:01.618
-它们的规范与 Node.js 不兼容。
-they were about to spec was
-incompatible with Node.js.
+他们即将规范与Node.js不兼容。
+they were about to spec was incompatible with Node.js.
 
 15
 00:01:02.719 --> 00:01:08.069
-所以这个规格落地了，然后一年半之后，终于有人
-And so that spec landed, and then a year
-and a half later, somebody finally
+于是那个规范落地了，一年半后，终于有人
+And so that spec landed, and then a year and a half later, somebody finally
 
 16
 00:01:08.069 --> 00:01:12.609
-意识到这两个人应该开始谈论这个不相容的问题。
-realized that the two of them should
-start talking about that incompatibility.
+意识到他们两个应该开始谈论这种不相容。
+realized that the two of them should start talking about that incompatibility.
 
 17
 00:01:12.609 --> 00:01:17.942
-在过去两年半的时间里我们讨论过
-And for the last two and a half years,
-we've had this cluster f of discussions
+在过去的两年半时间里，我们进行了一系列的讨论
+And for the last two and a half years, we've had this cluster f of discussions
 
 18
 00:01:17.942 --> 00:01:22.947
-我们要在这个生存危机中做些什么
-and, what are we gonna do in this
-existential crisis of we have this thing
+而且，我们在这个存在的危机中我们要做什么
+and, what are we gonna do in this existential crisis of we have this thing
 
 19
 00:01:22.947 --> 00:01:27.953
-它在规范中工作在浏览器中但是单一最大的代码
-that's in the spec and it works in
-browsers, but the single largest code
+这在规范中，它在浏览器中工作，但是单个最大的代码
+that's in the spec and it works in browsers, but the single largest code
 
 20
 00:01:27.953 --> 00:01:32.987
-存储库是否是 NPM 完全不兼容的 ?
-repository ever invented, aka NPM,
-it's completely incompatible?
+仓库曾经发明过，又名NPM，它是完全不兼容的吗？
+repository ever invented, aka NPM, it's completely incompatible?
 
 21
 00:01:32.987 --> 00:01:33.829
-那我们该怎么办
+那我们怎么办？
 So what are we gonna do?
 
 22
@@ -129,104 +112,88 @@ Good news is they have been working on it,
 
 23
 00:01:36.879 --> 00:01:38.479
-一些很聪明的人一直在努力
-some really smart people
-have been working on it.
+一些非常聪明的人一直在研究它。
+some really smart people have been working on it.
 
 24
 00:01:38.479 --> 00:01:41.329
-坏消息是只有坏的妥协
-The bad news is there's
-only bad compromises
+坏消息是只有糟糕的妥协
+The bad news is there's only bad compromises
 
 25
 00:01:41.329 --> 00:01:42.618
-当你把这条路弄下去的时候
+当你走到那么远的时候。
 when you get that far down the road.
 
 26
 00:01:43.629 --> 00:01:48.759
-其中一个，我认为是非常可怕的妥协，
-And one of those, what I consider
-to be really terrible compromises,
+其中之一，我认为是非常可怕的妥协，
+And one of those, what I consider to be really terrible compromises,
 
 27
 00:01:48.759 --> 00:01:52.789
-即在节点中可互换使用 ES6 模块，
-is that to use ES6 modules
-interchangeably in Node,
+是要在Node中互换使用ES6模块，
+is that to use ES6 modules interchangeably in Node,
 
 28
 00:01:52.789 --> 00:01:58.500
-你得用另一个文件扩展名来代替 js
-you're gonna have to use a different
-file extension, mjs instead of js.
+你必须使用不同的文件扩展名，mjs而不是js。
+you're gonna have to use a different file extension, mjs instead of js.
 
 29
 00:01:59.549 --> 00:02:03.421
-所以在节点内部有一个工作小组正在努力
-So there's a working group within
-Node that is working on getting full
+因此，Node内部有一个工作组正在致力于填满
+So there's a working group within Node that is working on getting full
 
 30
 00:02:03.421 --> 00:02:06.441
-需要有各种鱼子酱的模块支撑，
-module support with whatever
-caveats are necessary,
+模块支持以及任何必要的警告，
+module support with whatever caveats are necessary,
 
 31
 00:02:06.441 --> 00:02:10.329
-完整的模块支持节点，并且将在各个阶段执行。
-full module support into Node, and
-they're gonna do it over phases.
+对Node的全面模块支持，他们将分阶段进行。
+full module support into Node, and they're gonna do it over phases.
 
 32
 00:02:10.329 --> 00:02:13.694
-我想他们应该在这个时候
-And they are expected,
-I think, at this moment,
+我认为，在这个时刻，他们是被期待的，
+And they are expected, I think, at this moment,
 
 33
 00:02:13.694 --> 00:02:18.265
-预计在 2020 年第一季度，陆地将会有稳定的陆地
-they're expected sometime in Q1
-of 2020 to land stable in Node
+预计在2020年第一季度的某个时候，它们将在Node稳定着陆
+they're expected sometime in Q1 of 2020 to land stable in Node
 
 34
 00:02:18.265 --> 00:02:22.699
-节点中模块支持的三或四个阶段的第一阶段。
-the first phase of three or
-four phases of module support in Node.
+Node中模块支持的三个或四个阶段的第一阶段。
+the first phase of three or four phases of module support in Node.
 
 35
 00:02:24.180 --> 00:02:26.538
-这就像是在规格出来的 5 年之后
-That's like five years
-after the spec came out.
+这就像是规格出来五年后的事了。
+That's like five years after the spec came out.
 
 36
 00:02:26.538 --> 00:02:31.020
-所以这不太好，我们要等这么久。
-So that's not great that we're
-having to wait this long.
+所以我们要等这么长时间也不是很好。
+So that's not great that we're having to wait this long.
 
 37
 00:02:31.020 --> 00:02:35.086
-其实我是这个功能的粉丝，想写，但是
-I actually am a big fan of this feature
-and would like to be writing it, but
+我实际上是这个功能的狂热粉丝，我很想写它，但是
+I actually am a big fan of this feature and would like to be writing it, but
 
 38
 00:02:35.086 --> 00:02:40.050
-我一直站在一边，由于流量的原因，没有采用这种语法。
-I have stayed on the sidelines and not
-adopted this syntax because of the flux.
+我一直袖手旁观，由于流量的原因，没有采用这种语法。
+I have stayed on the sidelines and not adopted this syntax because of the flux.
 
 39
 00:02:40.050 --> 00:02:43.009
-有一点他们确实说他们可能得把 TC39 改变
-At one point they were literally saying
-they may have to get TC39 to change
+有一次他们真的说他们可能不得不让TC39改变
+At one point they were literally saying they may have to get TC39 to change
 
 40
 00:02:43.009 --> 00:02:44.409
@@ -235,141 +202,123 @@ the syntax.
 
 41
 00:02:44.409 --> 00:02:46.370
-当我听到我说的时候我就在外面
+当我听到我说，我退出了。
 And when I heard that I was like, I'm out.
 
 42
 00:02:46.370 --> 00:02:49.560
-我在等这件事安定下来好吗
-I'm waiting for
-this whole thing to settle down, okay?
+我在等整件事平息下来，好吗？
+I'm waiting for this whole thing to settle down, okay?
 
 43
 00:02:49.560 --> 00:02:52.680
-所以有些人是早期的领养者，他们喜欢模块语法，
-So some people were early adopters,
-and they loved the module syntax, and
+所以有些人是早期采用者，他们喜欢模块语法，并且
+So some people were early adopters, and they loved the module syntax, and
 
 44
 00:02:52.680 --> 00:02:55.849
-他们整天都在写它有错位的人什么的
-they're writing it all day, and
-they're having transpilers and whatever.
+他们整天都在写，而且他们有传送器之类的东西。
+they're writing it all day, and they're having transpilers and whatever.
 
 45
 00:02:55.849 --> 00:02:57.099
-那就好
+那很好。
 And that's fine.
 
 46
 00:02:57.099 --> 00:02:59.530
-如果您使用该语法，那么这很棒。
+如果你使用这种语法，那很好。
 If you use that syntax, that's great.
 
 47
 00:02:59.530 --> 00:03:01.699
-我要给你简要介绍下它是什么
+我会简单地向你展示一下它是什么，但是
 I'm gonna show you briefly what it is, but
 
 48
 00:03:01.699 --> 00:03:04.169
-我正和你分享我的观点
-I'm just sharing with
-you from my perspective,
+我只是从我的角度和你分享，
+I'm just sharing with you from my perspective,
 
 49
 00:03:04.169 --> 00:03:08.352
-我还没用这个语法直到整个节点都结束了对吗
-I don't use this syntax quite yet until
-this whole Node thing settles down, yes?
+在整个Node问题解决之前，我还不会使用这种语法，对吗？
+I don't use this syntax quite yet until this whole Node thing settles down, yes?
 
 50
 00:03:08.352 --> 00:03:11.539
->> 演讲者 2: 是否有一个或两个句子关于
-&gt;&gt; Speaker 2: Is there a one or
-two sentence TLDR about what
+&gt；&gt；演讲者2：有没有关于什么的一两句TLDR
+&gt;&gt; Speaker 2: Is there a one or two sentence TLDR about what
 
 51
 00:03:11.539 --> 00:03:15.431
-不兼容性是在指定的规范之间写入的吗 ?
-the incompatibility is
-between the spec as written?
+不兼容是在编写的规范之间吗？
+the incompatibility is between the spec as written?
 
 52
 00:03:15.431 --> 00:03:17.020
-是和还是 ?
+这和或有关吗？
 Does it have to do with or?
 
 53
 00:03:17.020 --> 00:03:20.649
->> 凯尔 - 辛普森: 是的，这不是完全的问题，但是
-&gt;&gt; Kyle Simpson: Yeah, so
-this is not the complete problem, but
+&gt；&gt；Kyle Simpson：是的，所以这不是完全的问题，但是
+&gt;&gt; Kyle Simpson: Yeah, so this is not the complete problem, but
 
 54
 00:03:20.649 --> 00:03:24.560
-这可能是一个更大的问题。
-this is probably one of
-the bigger problems.
+这可能是更大的问题之一。
+this is probably one of the bigger problems.
 
 55
 00:03:24.560 --> 00:03:28.879
 节点希望保留您执行旧操作的能力
-Node wants to preserve the ability for
-you to do an old
+Node wants to preserve the ability for you to do an old
 
 56
 00:03:28.879 --> 00:03:33.770
-样式需要新样式的 ES6 模块，或者
-style require of a new style ES6 module,
-or
+新样式ES6模块的样式要求，或者
+style require of a new style ES6 module, or
 
 57
 00:03:33.770 --> 00:03:40.599
-执行旧样式公共 JS 模块的 ES6 模块样式导入。
-do an ES6 module style import of
-an old style Common JS module.
+执行旧样式Common JS模块的ES6模块样式导入。
+do an ES6 module style import of an old style Common JS module.
 
 58
 00:03:40.599 --> 00:03:44.450
-做一个或另一个也没那么糟
-And it's not that bad to do one or
-the other, but
+做一个或另一个并不是很糟糕，但是
+And it's not that bad to do one or the other, but
 
 59
 00:03:44.450 --> 00:03:47.835
-你有一个循环就太疯狂了
+当你有一个周期的时候真的很疯狂。
 it's really crazy when you have a cycle.
 
 60
 00:03:47.835 --> 00:03:51.159
-如果需要另一个，然后再导入另一个，并且
-Where one has required the other,
-and then imported the other, and
+其中一个要求另一个，然后导入另一个，并且
+Where one has required the other, and then imported the other, and
 
 61
 00:03:51.159 --> 00:03:54.259
-那些角落里的东西都是完全疯狂的
-things just go completely
-nuts in those corner cases.
+在那些角落的情况下，事情就完全变得疯狂了。
+things just go completely nuts in those corner cases.
 
 62
 00:03:54.259 --> 00:03:56.740
-因为他们拥有如此庞大而充满活力的生态系统
-And because they have such a large and
-vibrant ecosystem,
+因为他们拥有如此庞大而充满活力的生态系统，
+And because they have such a large and vibrant ecosystem,
 
 63
 00:03:56.740 --> 00:03:58.340
-他们都得担心那些角落的案子
-they have to worry about
-all those corner cases.
+他们不得不担心那些角落里的案子。
+they have to worry about all those corner cases.
 
 64
 00:03:58.340 --> 00:04:02.560
-所以有很多问题，他们一直在把它们筛选出来，做出妥协。
-So there's a bunch of problems, they've
-been sifting them out, making compromises.
+所以有一大堆问题，他们一直在筛选，做出妥协。
+So there's a bunch of problems, they've been sifting them out, making compromises.
 
 65
 00:04:03.699 --> 00:04:04.792
@@ -378,71 +327,62 @@ I don't like the outcome,
 
 66
 00:04:04.792 --> 00:04:07.989
-但我很高兴我们至少能在取得进展的过程中取得进展
-but I'm glad that we're at least making
-progress towards getting something.
+但我很高兴我们至少在取得进展方面取得了进展。
+but I'm glad that we're at least making progress towards getting something.
 
 67
 00:04:07.989 --> 00:04:11.329
-这不会太棒但至少是件事好吗
-It's not gonna be amazing, but
-at least it's something, okay?
+这不会很令人惊讶，但至少它是有意义的，好吗？
+It's not gonna be amazing, but at least it's something, okay?
 
 68
 00:04:11.329 --> 00:04:14.759
-当它降落时，我完全打算改用语法。
-And when it lands, I fully intend
-to switch over to the syntax.
+当它着陆时，我完全打算切换到语法。
+And when it lands, I fully intend to switch over to the syntax.
 
 69
 00:04:14.759 --> 00:04:18.444
-但现在，这就是如果我真的需要支持的事情之一，
-But for now, this is one of those things
-that if I really needed to support it,
+但现在，如果我真的需要支持的话，这是其中一件事，
+But for now, this is one of those things that if I really needed to support it,
 
 70
 00:04:18.444 --> 00:04:21.733
-我希望使用工具来编写语法，以便工具可以更改和
-I would prefer a tool to write me
-the syntax so that a tool can change and
+我更喜欢一个工具来为我编写语法，以便工具可以更改和
+I would prefer a tool to write me the syntax so that a tool can change and
 
 71
 00:04:21.733 --> 00:04:23.500
-解决这些问题。
+处理这些问题。
 deal with those problems.
 
 72
 00:04:23.500 --> 00:04:26.100
-这不是我的编写格式。
+这不是我的创作格式。
 This is not an authoring format for me.
 
 73
 00:04:26.100 --> 00:04:30.310
-我继续用经典的风格。
-I continue to use the idiom,
-the classic style.
+我继续使用成语，古典风格。
+I continue to use the idiom, the classic style.
 
 74
 00:04:30.310 --> 00:04:31.850
-这就是模块格式的样子。
-So here's what the module
-format looks like.
+下面是模块格式的样子。
+So here's what the module format looks like.
 
 75
 00:04:31.850 --> 00:04:36.088
-您打开一个文件，然后开始创建变量和函数。
-You open up a file and you just start
-making variables and functions.
+你打开一个文件，你就开始制作变量和函数。
+You open up a file and you just start making variables and functions.
 
 76
 00:04:36.088 --> 00:04:38.762
-还有那个文件因为它会被装成一个模块
-And that file,
-because it's gonna be loaded as a module,
+还有那个文件，因为它将被加载为一个模块，
+And that file, because it's gonna be loaded as a module,
 
 77
 00:04:38.762 --> 00:04:41.029
-都假定一切都是私人的
+假设一切都是私人的。
 is assumed that everything is private.
 
 78
@@ -452,83 +392,72 @@ You don't need a syntactic wrapper.
 
 79
 00:04:44.538 --> 00:04:48.199
-你可以在概念上把它裹在一个大的功能上。
-You can conceptually of think of it
-is being wrapped in a big function.
+您可以在概念上认为它被包装在一个大函数中。
+You can conceptually of think of it is being wrapped in a big function.
 
 80
 00:04:48.199 --> 00:04:50.759
-合并在缺省情况下为私有的作用域。
-Wrapped in a scope that
-is by default private.
+包装在默认情况下为私有的作用域中。
+Wrapped in a scope that is by default private.
 
 81
 00:04:50.759 --> 00:04:54.832
-你让某些东西成为公众的方式就是用这个出口关键词，
-The way you make something public
-is you use the export keyword,
+公开的方式是使用export关键字，
+The way you make something public is you use the export keyword,
 
 82
 00:04:54.832 --> 00:04:56.350
-就像你在第 3 行上看到的一样
+就像你在3号线上看到的。
 like you see on line 3.
 
 83
 00:04:56.350 --> 00:04:57.836
-所以你出口的任何东西都是公开的
+所以你出口的任何东西都是公开的，
 So anything you export is public,
 
 84
 00:04:57.836 --> 00:04:59.899
-您不导出的所有内容都是私有的。
-everything that you
-don't export is private.
+所有你不出口的东西都是私人的。
+everything that you don't export is private.
 
 85
 00:05:01.750 --> 00:05:07.389
-其他要了解模块的情况是，它们是基于文件的。
-The other thing to know about
-modules is that they are file-based.
+关于模块需要了解的另一件事是，它们是基于文件的。
+The other thing to know about modules is that they are file-based.
 
 86
 00:05:07.389 --> 00:05:13.529
-这意味着在同一文件中不可能有多个 ES6 模块。
-Which means it is impossible to have more
-than one ES6 module in the same file.
+这意味着同一文件中不可能有多个ES6模块。
+Which means it is impossible to have more than one ES6 module in the same file.
 
 87
 00:05:14.839 --> 00:05:17.829
-如果您的应用程序由 1000 个模块组成，
-If your application is composed of say,
-1,000 modules,
+如果您的应用程序由1000个模块组成，
+If your application is composed of say, 1,000 modules,
 
 88
 00:05:17.829 --> 00:05:22.360
-你的很多应用程序都是这样写在 ES6 模块中
-the way many of your applications are,
-and you write all of them in ES6 modules,
+您的许多应用程序都是这样的，并且您在ES6模块中编写了所有这些应用程序，
+the way many of your applications are, and you write all of them in ES6 modules,
 
 89
 00:05:22.360 --> 00:05:25.069
-你会把它们都写为单独的文件就好了
-you'll be writing them all as
-separate files, which is fine.
+您将把它们都作为单独的文件编写，这是很好的。
+you'll be writing them all as separate files, which is fine.
 
 90
 00:05:25.069 --> 00:05:27.990
-但你不会有办法把这些 ES6
-But there will not be a way for
-you to take those ES6
+但你不会有办法拿到那些ES6
+But there will not be a way for you to take those ES6
 
 91
 00:05:27.990 --> 00:05:32.709
-当前表单中的模块，并将它们放入同一文件中。
-modules in their current form and
-ever put them into the same file.
+模块的当前形式，并将它们放入相同的文件中。
+modules in their current form and ever put them into the same file.
 
 92
 00:05:32.709 --> 00:05:34.290
-这不是件事
+这不是一件事。
 That's not a thing.
 
 93
@@ -538,99 +467,85 @@ So for example, without a build process,
 
 94
 00:05:36.699 --> 00:05:39.810
-如果你想把它装到一个浏览器里你就得载一千
-if you wanted to ship them to a browser,
-you're gonna have to load a thousand
+如果你想把它们送到浏览器上，你就得加载一千个
+if you wanted to ship them to a browser, you're gonna have to load a thousand
 
 95
 00:05:39.810 --> 00:05:44.749
-具有所有性能影响的单独文件。
-separate files with all
-the performance implications thereof.
+单独的文件及其所有性能影响。
+separate files with all the performance implications thereof.
 
 96
 00:05:45.840 --> 00:05:50.389
-当前正在执行此操作的人员正在使用其作者所在的工具
-People that are currently doing this
-today are using tools where they author
+现在正在做这件事的人们正在使用他们创作的工具
+People that are currently doing this today are using tools where they author
 
 97
 00:05:50.389 --> 00:05:55.329
-在 ES6 模块中，并将其编译回旧的学校样式模块，并
-in ES6 modules and they compile back
-to the old school style module and
+在ES6模块中，他们编译回老式的模块和
+in ES6 modules and they compile back to the old school style module and
 
 98
 00:05:55.329 --> 00:05:57.970
-将它们并置为文件并将其关闭。
-concatenate them into a file and
-ship it off.
+将它们连接到一个文件中，然后将其发送出去。
+concatenate them into a file and ship it off.
 
 99
 00:05:57.970 --> 00:06:00.899
-在我看来我只是在跳过中间人
-And in my opinion,
-I'm just skipping the middleman.
+在我看来，我只是跳过了中间人。
+And in my opinion, I'm just skipping the middleman.
 
 100
 00:06:00.899 --> 00:06:04.213
-既然我们要重新编译旧的语法
-Since we have to compile back
-to that old syntax anyway,
+因为无论如何我们都必须编译回旧语法，
+Since we have to compile back to that old syntax anyway,
 
 101
 00:06:04.213 --> 00:06:06.410
-我一直在写旧的语法
+我只是一直在写旧的语法。
 I just keep writing that old syntax.
 
 102
 00:06:06.410 --> 00:06:11.189
-但有些人发现这一格式的好处。
-But some people are finding benefit
-out of authoring this format.
+但是有些人发现创作这种格式的好处。
+But some people are finding benefit out of authoring this format.
 
 103
 00:06:11.189 --> 00:06:14.168
-因此，您可以创建一个模块，然后导出您想要的内容。
-So you make a module and
-you export what you want.
+所以你制作一个模块，然后输出你想要的东西。
+So you make a module and you export what you want.
 
 104
 00:06:14.168 --> 00:06:18.639
-另外一件事要知道，不仅是基于文件，而且是单身。
-The other thing to know, not only are they
-file-based, but they're also singletons.
+需要知道的另一件事是，它们不仅是基于文件的，而且它们也是单例。
+The other thing to know, not only are they file-based, but they're also singletons.
 
 105
 00:06:18.639 --> 00:06:22.220
-无论您将此模块导入到应用程序中多少次，
-No matter how many times you import
-this module into an application,
+无论您将此模块导入应用程序多少次，
+No matter how many times you import this module into an application,
 
 106
 00:06:22.220 --> 00:06:24.240
-它只会运行一次
+它只运行一次。
 it only ever runs once.
 
 107
 00:06:24.240 --> 00:06:25.800
-而你每次进口的时候
+每隔一次你导入它，
 And every other time that you import it,
 
 108
 00:06:25.800 --> 00:06:28.639
-你就会得到另一个这样的例子
-you just get another reference
-to that same instance.
+您只需获得对同一实例的另一个引用。
+you just get another reference to that same instance.
 
 109
 00:06:28.639 --> 00:06:32.879
-因此，如果要为模块提供一个工厂，人们可以在其中制造多个模块
-So if you want to have a factory for your
-modules where people can make multiple
+因此，如果你想为你的模块建立一个工厂，人们可以在那里制造多个
+So if you want to have a factory for your modules where people can make multiple
 
 110
 00:06:32.879 --> 00:06:37.560
-实例，您必须在 API上公开，这是用于执行该操作的工厂功能。
-instances, you're gonna have to expose on
-your API, a factory function to do that.
+实例，您必须在API上公开一个工厂函数来实现这一点。
+instances, you're gonna have to expose on your API, a factory function to do that.

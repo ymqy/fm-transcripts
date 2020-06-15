@@ -2,373 +2,325 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:03.970
->> Kyle Simpson: 要更好地了解原始值，
-&gt;&gt; Kyle Simpson: To get a better
-understanding of how primitive values,
+&gt；&gt；Kyle Simpson：为了更好地理解原始值，
+&gt;&gt; Kyle Simpson: To get a better understanding of how primitive values,
 
 2
 00:00:03.970 --> 00:00:07.290
-基本类型值，以及某些特殊值工作，
-primitive type values, and
-some of the special values work,
+基元类型值，以及一些特殊的值工作，
+primitive type values, and some of the special values work,
 
 3
 00:00:07.290 --> 00:00:11.410
-我们要跳进这一运动
+我们要跳到这个练习中。
 we're gonna jump into this exercise.
 
 4
 00:00:11.410 --> 00:00:14.109
-在这次演习中，我们将会做一个聚聚。
-In this exercise,
-we're going to make a polyfill.
+在本练习中，我们将制作一个多填充。
+In this exercise, we're going to make a polyfill.
 
 5
 00:00:14.109 --> 00:00:15.650
-你要给我的
+您将为以下对象定义多边形填充
 You're gonna define a polyfill for
 
 6
 00:00:15.650 --> 00:00:19.199
-我们刚刚聊过的是 Object.is 的实用程序
-that Object.is utility
-that we just talked about.
+这个对象就是我们刚才谈到的实用程序。
+that Object.is utility that we just talked about.
 
 7
 00:00:19.199 --> 00:00:20.760
-所以换句话说没有作弊
+所以换句话说，不作弊，
 So in other words, no cheating,
 
 8
 00:00:20.760 --> 00:00:23.449
-你不能去看看现在的执行情况
-you can't go look at the existing
-implementation of it.
+您不能去查看它的现有实现。
+you can't go look at the existing implementation of it.
 
 9
 00:00:23.449 --> 00:00:27.228
-你要写你自己的对象就是这样
-You're gonna write your own Object.is,
-and in so doing,
+您将编写自己的Object.is，这样做时，
+You're gonna write your own Object.is, and in so doing,
 
 10
 00:00:27.228 --> 00:00:31.916
-在处理这些原始值的问题上得到一些实践
-get some practice with the idea of
-dealing with these primitive values and
+获得一些处理这些原始值和
+get some practice with the idea of dealing with these primitive values and
 
 11
 00:00:31.916 --> 00:00:35.750
-他们的类型和转角情况之类的
-their types and the corner cases and
-things like that.
+他们的类型和角落里的箱子之类的东西。
+their types and the corner cases and things like that.
 
 12
 00:00:35.750 --> 00:00:38.369
-所以这里的指示是要定义一个对象。
-So the instructions here talk
-about defining an Object.is,
+所以这里的说明是关于定义Object.is的，
+So the instructions here talk about defining an Object.is,
 
 13
 00:00:38.369 --> 00:00:40.399
-得有两个参数
+需要两个参数。
 it's gotta take two parameters.
 
 14
 00:00:40.399 --> 00:00:44.549
-请记住，将两个值作为两个单独的参数。
-Remember it takes two values
-as two separate parameters.
+记住，它接受两个值作为两个单独的参数。
+Remember it takes two values as two separate parameters.
 
 15
 00:00:44.549 --> 00:00:49.429
-如果他们完全是同一件事，那就应该回到真实的状态。
-And then it's supposed to return true
-only if they're exactly the same thing.
+然后，只有当它们完全相同时，才应该返回true。
+And then it's supposed to return true only if they're exactly the same thing.
 
 16
 00:00:49.429 --> 00:00:53.429
-平常你就用三大的，但是两个大角
-Now normally you would just use a triple
-equals for that, but the two major corner
+通常情况下，你只需要使用三倍的等号，但是两个主要的角点
+Now normally you would just use a triple equals for that, but the two major corner
 
 17
 00:00:53.429 --> 00:00:58.520
-三重等于的个案是 NaN 值和负零值。
-cases on triple equals where it lies are
-the NaN value and the negative zero value.
+在三重等于的情况下，它所在的位置是NaN值和负零值。
+cases on triple equals where it lies are the NaN value and the negative zero value.
 
 18
 00:00:58.520 --> 00:01:00.659
-所以你要考虑的是
-So you're gonna essentially
-need to account for
+所以你基本上需要解释
+So you're gonna essentially need to account for
 
 19
 00:01:00.659 --> 00:01:04.629
-那是第一次了如果你不在这些条件下
-those first, and then if you're
-not in one of those conditions,
+先是那些，然后如果你不在这些条件中，
+those first, and then if you're not in one of those conditions,
 
 20
 00:01:04.629 --> 00:01:07.670
-那么三等同体会告诉你它们的价值是否相同
-then the triple equals would tell
-you if they are the same value.
+然后三重等于会告诉你它们是不是相同的值。
+then the triple equals would tell you if they are the same value.
 
 21
 00:01:07.670 --> 00:01:12.170
-所以这里的指示是关于处理 NaN 和负零点的问题。
-So the instructions here talk about
-handling the NaN and the negative zero.
+所以这里的说明是关于处理NaN和负零的。
+So the instructions here talk about handling the NaN and the negative zero.
 
 22
 00:01:12.170 --> 00:01:16.897
-您可以使用内置实用程序，如 number.isNaN ，但
-And you can use a built-in
-utility like number.isNaN, but
+您可以使用一个内置的实用程序，如number.isNaN，但是
+And you can use a built-in utility like number.isNaN, but
 
 23
 00:01:16.897 --> 00:01:21.453
-还有一种检查 NN 的方法
-there's also a way of checking for
-NaNs that isn't that.
+还有一种检查nans的方法不是这样的。
+there's also a way of checking for NaNs that isn't that.
 
 24
 00:01:21.453 --> 00:01:22.900
-看看你能不能把它弄明白
+看看你能不能弄明白。
 See if you can figure that out.
 
 25
 00:01:22.900 --> 00:01:25.079
-您还可以计算负数。
+你也可以算出负零。
 You can also figure out negative zeros.
 
 26
 00:01:25.079 --> 00:01:30.510
-最后一个小纸条是我们在定义一个聚聚
-So one last little note here is
-that we're defining a polyfill,
+最后一点要注意的是，我们正在定义一种多填充材料，
+So one last little note here is that we're defining a polyfill,
 
 27
 00:01:30.510 --> 00:01:33.009
-还有多填充图案如你所见
-and the polyfill pattern,
-as you can see here,
+和多填充图案，正如你在这里看到的，
+and the polyfill pattern, as you can see here,
 
 28
 00:01:33.009 --> 00:01:36.180
-就是如果它还没有定义的话，你只会定义一些东西。
-is that you only define something
-if it's not already defined.
+就是你只有在没有定义的情况下才能定义它。
+is that you only define something if it's not already defined.
 
 29
 00:01:36.180 --> 00:01:39.810
-所以这才是真正的聚聚会是什么样的呢 ?
-So that's what a real polyfill would look
-like, is it would have that if statement
+这就是真正的多填充的样子，是不是会有if语句
+So that's what a real polyfill would look like, is it would have that if statement
 
 30
 00:01:39.810 --> 00:01:43.829
-围绕您的定制功能定义。
-wrapped around your definition
-of your custom function.
+围绕自定义函数的定义进行包装。
+wrapped around your definition of your custom function.
 
 31
 00:01:43.829 --> 00:01:47.359
-这里的挑战是你几乎肯定在 JavaScript 中工作
-The challenge here is that you're almost
-certainly working in a JavaScript
+这里的挑战是，几乎可以肯定您正在使用JavaScript
+The challenge here is that you're almost certainly working in a JavaScript
 
 32
 00:01:47.359 --> 00:01:52.189
-已存在 Object.is的环境，为 ES6的 cuz ，因此 years back。
-environment that already has Object.is,
-cuz that was ES6, so years back.
+已经有Object.is的环境，因为那是ES6，所以几年前。
+environment that already has Object.is, cuz that was ES6, so years back.
 
 33
 00:01:52.189 --> 00:01:56.710
-所以如果你把它包在一个 if 语句中，你写的任何代码都不会
-So if you wrap it in an if statement,
-none of the code you write is ever gonna
+因此，如果您将其包装在if语句中，那么您编写的任何代码都不会
+So if you wrap it in an if statement, none of the code you write is ever gonna
 
 34
 00:01:56.710 --> 00:02:01.060
-你只会在客观环境中测试你自己
-run and you're just gonna be testing
-yourself against the built in Object.is.
+运行，您将针对内置的Object.is测试自己。
+run and you're just gonna be testing yourself against the built in Object.is.
 
 35
 00:02:01.060 --> 00:02:04.900
-因此，作为一个临时的黑客，我将禁用该声明。
-So as a temporary hack,
-I would disable that if statement.
+因此，作为临时攻击，我将禁用if语句。
+So as a temporary hack, I would disable that if statement.
 
 36
 00:02:04.900 --> 00:02:07.799
-你可以用字面意思说
-You can disable it by literally
-saying something like or
+您可以通过逐字地说或之类的话来禁用它
+You can disable it by literally saying something like or
 
 37
 00:02:07.799 --> 00:02:11.490
-所以你总是在定义一个
+所以你总是在定义一个。
 true so that you're always defining one.
 
 38
 00:02:11.490 --> 00:02:14.520
-显然你不会在正常的聚聚中留下这个
-You wouldn't leave that in,
-obviously, in your normal polyfill.
+显然，你不会把它留在你正常的多面体里。
+You wouldn't leave that in, obviously, in your normal polyfill.
 
 39
 00:02:14.520 --> 00:02:19.050
-但为了这次演习的目的，既然你在做什么
-But for the purposes of this exercise,
-since you're polyfilling something
+但是为了这个练习的目的，因为你在填充一些东西
+But for the purposes of this exercise, since you're polyfilling something
 
 40
 00:02:19.050 --> 00:02:23.860
-已存在，请确保以某种方式禁用该语句，或者
-that already exists, make sure that you
-disable that if statement in some way, or
+已存在，请确保以某种方式禁用if语句，或者
+that already exists, make sure that you disable that if statement in some way, or
 
 41
 00:02:23.860 --> 00:02:26.800
-你就可以发表声明了好吗
-you can just comment out the if statement,
-okay.
+您可以只注释掉if语句，好的。
+you can just comment out the if statement, okay.
 
 42
 00:02:26.800 --> 00:02:28.180
-但是记住这一点
+但请记住这一点。
 But just keep that in mind.
 
 43
 00:02:28.180 --> 00:02:31.871
-你要在 ex.js工作
+你将在ex.js中工作。
 You're gonna be working in ex.js.
 
 44
 00:02:31.871 --> 00:02:36.814
-您会注意到在此文件中，我有许多控制台日志语句，并且
-You'll notice that in this file I have
-a bunch of console log statements, and
+您会注意到，在这个文件中，我有一堆控制台日志语句，并且
+You'll notice that in this file I have a bunch of console log statements, and
 
 45
 00:02:36.814 --> 00:02:40.969
-每个人都在为这个测试做点什么
-each one of them is asserting
-something about this test.
+他们每个人都在断言关于这个测试的一些东西。
+each one of them is asserting something about this test.
 
 46
 00:02:40.969 --> 00:02:44.870
-因此，目标是所有这些控制台日志语句都必须
-And so the objective is that all of
-these console log statements all have to
+因此目标是所有这些控制台日志语句都必须
+And so the objective is that all of these console log statements all have to
 
 47
 00:02:44.870 --> 00:02:46.210
-打印 true。
+打印为真。
 print true.
 
 48
 00:02:46.210 --> 00:02:48.909
-即每个调用都返回 true ，并且
-That is that each one of these
-calls all return true, and
+也就是说，这些调用中的每一个都返回true，并且
+That is that each one of these calls all return true, and
 
 49
 00:02:48.909 --> 00:02:51.280
-每个调用都返回 false。
+这些调用中的每一个都返回false。
 each one of these calls all return false.
 
 50
 00:02:51.280 --> 00:02:54.860
-你知道你有一个经过考验的时候
-So you know you have a passing
-test when you get all trues and
+所以你知道当你拿到所有的真假的时候你有一个合格的测试
+So you know you have a passing test when you get all trues and
 
 51
 00:02:54.860 --> 00:02:56.620
-没有虚无的谎言
+没有错误打印出来。
 no falses printed out.
 
 52
 00:02:56.620 --> 00:02:59.159
-运行此代码的方法，您可以打开此文件并
-The way to run this code,
-you can open up this file and
+运行此代码的方式，您可以打开此文件并
+The way to run this code, you can open up this file and
 
 53
 00:02:59.159 --> 00:03:01.650
-从命令行直接在节点中运行。
-run it directly in node
-from the command line.
+从命令行直接在节点中运行它。
+run it directly in node from the command line.
 
 54
 00:03:01.650 --> 00:03:04.439
-您可以将代码复制到控制台，并且
-You could copy your
-code into a console and
+您可以将代码复制到控制台中，然后
+You could copy your code into a console and
 
 55
 00:03:04.439 --> 00:03:08.449
-在控制台中运行它，例如在 Chrome 开发者工具中。
-run it inside of a console,
-like in your Chrome developer tools.
+在控制台中运行它，就像在Chrome开发工具中一样。
+run it inside of a console, like in your Chrome developer tools.
 
 56
 00:03:08.449 --> 00:03:10.909
-但是，您喜欢运行 JavaScript，
+无论您喜欢如何运行JavaScript，
 However you like to run your JavaScript,
 
 57
 00:03:10.909 --> 00:03:13.689
-不需要其他周围的信息
-doesn't need any other
-surrounding information.
+不需要任何其他周围的信息。
+doesn't need any other surrounding information.
 
 58
 00:03:13.689 --> 00:03:18.075
-但你要在上面定义你的对象
-But you're gonna define your Object.is
-polyfill here at the top, and
+但是你要定义你的对象。是在顶部的PolyFill，并且
+But you're gonna define your Object.is polyfill here at the top, and
 
 59
 00:03:18.075 --> 00:03:20.647
-然后确定它是否通过了所有测试
+然后确保它通过了所有测试。
 then make sure that it pass all the tests.
 
 60
 00:03:20.647 --> 00:03:25.016
-这可能需要五到八分钟的时间，所以我们就休息了，
-This would probably take someone between
-five and eight minutes, so we'll break,
+这可能需要5到8分钟的时间，所以我们休息一下，
+This would probably take someone between five and eight minutes, so we'll break,
 
 61
 00:03:25.016 --> 00:03:29.074
-让你有机会做运动然后我们就回来
-let you have some chances to work on
-the exercise, and then we'll come back and
+让你有一些机会来练习，然后我们会回来
+let you have some chances to work on the exercise, and then we'll come back and
 
 62
 00:03:29.074 --> 00:03:30.444
-谈谈这个解决方案。
+谈谈解决方案。
 talk about the solution.
 
 63
 00:03:30.444 --> 00:03:35.100
-如果您有股票，需要提示，那么会为您提供解决方案，并且
-If you get stock and you need a hint,
-the solution is provided for you and
+如果您获得库存并需要提示，我们将为您提供解决方案，并
+If you get stock and you need a hint, the solution is provided for you and
 
 64
 00:03:35.100 --> 00:03:38.140
-位于同一目录中的 ex.fixed.js 。
+它是ex.fixed.js在同一目录中。
 it's ex.fixed.js in that same directory.
 
 65
 00:03:38.140 --> 00:03:39.699
-好吧玩这个游戏玩得开心
+好了，祝你在这个练习中玩得开心。
 All right, have fun with this exercise.

@@ -2,743 +2,647 @@ WEBVTT
 
 1
 00:00:00.190 --> 00:00:01.909
->> 凯尔 - 辛普森: 好的，欢迎回来。
-&gt;&gt; Kyle Simpson: All right,
-welcome back from that.
+&gt；&gt；Kyle Simpson：好的，欢迎回来。
+&gt;&gt; Kyle Simpson: All right, welcome back from that.
 
 2
 00:00:01.909 --> 00:00:05.129
-我相信你发现
+我相信你找到了
 I trust that you found that
 
 3
 00:00:05.129 --> 00:00:09.470
-解决各个角落的问题都是很有挑战性的
-satisfyingly challenging to deal
-with the various corner cases.
+在处理各种角落案件方面具有令人满意的挑战性。
+satisfyingly challenging to deal with the various corner cases.
 
 4
 00:00:09.470 --> 00:00:13.619
-因此，让我们深入了解并尝试编写 findAll 实用程序。
-So let's dive in and
-try to write a findAll utility.
+因此，让我们深入研究并尝试编写findAll实用程序。
+So let's dive in and try to write a findAll utility.
 
 5
 00:00:14.699 --> 00:00:18.129
-还有公平的警告我肯定得看看我自己的解决方案
-And fair warning, I'm definitely gonna
-have to look at my own solution cuz I'm
+公平的警告，我肯定会考虑我自己的解决方案，因为我
+And fair warning, I'm definitely gonna have to look at my own solution cuz I'm
 
 6
 00:00:18.129 --> 00:00:21.440
-我肯定会错过其中的一个案子
-sure I'm gonna miss one of these cases and
-fumble around with.
+当然，我会错过这些案子中的一个，摸索着。
+sure I'm gonna miss one of these cases and fumble around with.
 
 7
 00:00:21.440 --> 00:00:25.606
-好吧我们要用一个有价值的文件
-All right, so the signature of findAll
-is that we wanna take in a value,
+好的，所以findAll的签名是我们想要接受一个值，
+All right, so the signature of findAll is that we wanna take in a value,
 
 8
 00:00:25.606 --> 00:00:29.300
-我叫它 v，我们想把它列在一个名单上，我给它打个电话。
-I'll call it v, and
-we wanna take in a list, I'll call it arr.
+我把它叫做v，我们想要得到一个列表，我把它叫做arr。
+I'll call it v, and we wanna take in a list, I'll call it arr.
 
 9
 00:00:29.300 --> 00:00:33.107
-实际上我们叫它不是 v，我们称它是匹配的，
-And actually let's call that not v,
-let's call it match,
+实际上，让我们称它为不是v，让我们称它为match，
+And actually let's call that not v, let's call it match,
 
 10
 00:00:33.107 --> 00:00:38.810
-这就是我们要比对的东西， arr 是要从中提取的价值的列表。
-that's the thing we're matching against,
-arr is the list of values to pull from.
+这就是我们要匹配的东西，arr是要从中提取的值的列表。
+that's the thing we're matching against, arr is the list of values to pull from.
 
 11
 00:00:38.810 --> 00:00:40.609
-我们应该返回一个阵列
+我们应该返回一个数组。
 We're supposed to return back an array.
 
 12
 00:00:40.609 --> 00:00:43.880
-因此，我们将以空数组开头并将其返回。
-So we'll start out with an empty array and
-return that.
+因此，我们将从一个空数组开始并返回该数组。
+So we'll start out with an empty array and return that.
 
 13
 00:00:45.289 --> 00:00:48.929
-然后我们需要在 arr的所有值中循环。
-And then we need to loop through
-all of the values in arr.
+然后我们需要遍历arr中的所有值。
+And then we need to loop through all of the values in arr.
 
 14
 00:00:48.929 --> 00:00:51.600
->> 扬声器 2: 我认为您正在返回空数组。
-&gt;&gt; Speaker 2: I think you're
-returning an empty array.
+&gt；&gt；Speaker 2：我认为您返回的是空数组。
+&gt;&gt; Speaker 2: I think you're returning an empty array.
 
 15
 00:00:51.600 --> 00:00:52.539
->> 凯尔 - 辛普森: 对不起，谢谢
+&gt；&gt；Kyle Simpson：对不起，谢谢。
 &gt;&gt; Kyle Simpson: Sorry, thank you.
 
 16
 00:00:54.630 --> 00:01:01.314
-我们希望返回与我们匹配的所有参数中的值。
-We want to return all of
-the values in arr that match our.
+我们希望返回ARR中与我们的匹配的所有值。
+We want to return all of the values in arr that match our.
 
 17
 00:01:03.219 --> 00:01:09.159
-因此，我将为简单起见而做一个循环。
-So I will do a for
-of loop just for simplicity.
+所以为了简单起见，我将做一个for of循环。
+So I will do a for of loop just for simplicity.
 
 18
 00:01:09.159 --> 00:01:12.930
-我们会循环使用 arr中的所有值。
+我们将循环遍历arr中的所有值。
 We'll loop over all the values in arr.
 
 19
 00:01:12.930 --> 00:01:17.560
-如果我们发现任何东西，我们会把这些东西放入这个回路里，然后把它们送回去，好的。
-And if we find any, we'll stuff into this
-return array and then return them, okay.
+如果我们找到任何一个，我们将填充到这个返回数组中，然后返回它们，好的。
+And if we find any, we'll stuff into this return array and then return them, okay.
 
 20
 00:01:17.560 --> 00:01:20.870
-所以公平直率的第一次测试是，
-So fairly straightforwardly
-the first test is,
+所以相当直截了当的第一个测试是，
+So fairly straightforwardly the first test is,
 
 21
 00:01:20.870 --> 00:01:26.000
-如果 v 和 match 是对象，那么是彼此的。
-if v and
-match are object.is of each other.
+如果v和match是对方的对象。
+if v and match are object.is of each other.
 
 22
 00:01:26.000 --> 00:01:29.299
-换句话说，它们完全是一样的，所以这很容易。
-In other words, they are strictly exactly
-the same, so that's a pretty easy one.
+换句话说，它们严格地完全相同，所以这是一个相当容易的问题。
+In other words, they are strictly exactly the same, so that's a pretty easy one.
 
 23
 00:01:29.299 --> 00:01:35.776
-如果 Object.is 和我们使用匹配和 v。
+如果Object.is并且我们使用Match和V。
 If Object.is and we use match and v.
 
 24
 00:01:35.776 --> 00:01:42.604
-我们知道它们的价值肯定相同
-We know that they
-are definitely the same value,
+我们知道它们绝对是相同的价值，
+We know that they are definitely the same value,
 
 25
 00:01:42.604 --> 00:01:48.442
-这样我们就能把它推回来了
+所以我们可以直接推入返回数组。
 so we can just push into the return array.
 
 26
 00:01:48.442 --> 00:01:50.500
-我很抱歉我被退回去了
+对不起，v进入返回数组。
 I'm sorry, v into the return array.
 
 27
 00:01:52.030 --> 00:01:54.689
-我们就停在这里确保我们没错过任何东西
-Let's just stop right here and
-make sure that we haven't missed anything.
+我们就停在这里，确保我们没有遗漏任何东西。
+Let's just stop right here and make sure that we haven't missed anything.
 
 28
 00:01:54.689 --> 00:01:58.210
-让我们在特定测试用例中尝试这个方法。
-Let's try this out in our
-particular test cases.
+让我们在特定的测试用例中尝试这一点。
+Let's try this out in our particular test cases.
 
 29
 00:01:58.210 --> 00:02:01.400
-我们应该看到几个测试用例通过
-And we should see a few
-test cases pass and
+我们应该看到一些测试案例通过
+And we should see a few test cases pass and
 
 30
 00:02:01.400 --> 00:02:04.140
-那么其中的几个显然还是失败了。
-then several of them
-obviously still failing.
+然后他们中的几个显然还是失败了。
+then several of them obviously still failing.
 
 31
 00:02:04.140 --> 00:02:06.780
-那我们试试吧
+所以让我们试试。
 So let's try that.
 
 32
 00:02:06.780 --> 00:02:12.159
-这个小环境我不喜欢底部的功能
-And this little environment I have
-doesn't like that function at the bottom,
+而我拥有的这个小环境不喜欢底部的功能，
+And this little environment I have doesn't like that function at the bottom,
 
 33
 00:02:12.159 --> 00:02:15.379
-所以我要暂时搬来这里
-so I will move this up
-here just temporarily.
+所以我会暂时把它移到这里。
+so I will move this up here just temporarily.
 
 34
 00:02:15.379 --> 00:02:18.531
-好了我们得走了
+好的，我们运行这个。
 Okay, so we run this.
 
 35
 00:02:18.531 --> 00:02:22.893
-你会发现前三个人都是失败的但是接下来的两条
-And you'll notice that the first three are
-failing still, but then the next two pass,
+你会注意到前三个仍然失败，但是接下来的两个通过了，
+And you'll notice that the first three are failing still, but then the next two pass,
 
 36
 00:02:22.893 --> 00:02:25.159
-然后我们就能拿到更多的通行证
+然后我们又通过了几次。
 and then we get several more that pass.
 
 37
 00:02:25.159 --> 00:02:26.030
-所以我们做得不错
+所以我们做得很好。
 So we did pretty good.
 
 38
 00:02:26.030 --> 00:02:29.870
-我们有几个这样的人回来了
-We got several of these returning
-what we would expect already.
+我们已经得到了几个这样的返回值。
+We got several of these returning what we would expect already.
 
 39
 00:02:31.550 --> 00:02:34.789
-那就换吧
+那我们换回去吧。
 Let's switch back then.
 
 40
 00:02:34.789 --> 00:02:39.389
-下一个很直接处理的箱子是空的
-And the next case that is pretty
-straightforward to handle is the null and
+下一个非常容易处理的情况是NULL和
+And the next case that is pretty straightforward to handle is the null and
 
 41
 00:02:39.389 --> 00:02:40.729
-未定义大小写。
+未定义的情况。
 undefined case.
 
 42
 00:02:40.729 --> 00:02:44.909
-该自述文件称，空值和非定义应强制相互匹配。
-The readme said that nulls and undefines
-should coercively match each other.
+自述文件说，空值和未定义应该强制相互匹配。
+The readme said that nulls and undefines should coercively match each other.
 
 43
 00:02:44.909 --> 00:02:51.805
-因此，如果匹配是强制的，那么
-So if match is coercively
-equal to null and
+因此，如果Match强制等于NULL且
+So if match is coercively equal to null and
 
 44
 00:02:51.805 --> 00:02:56.926
-v 的强制值等于空值，
+V强制等于NULL，
 v is coercively equal to null,
 
 45
 00:02:56.926 --> 00:03:03.828
-我们就知道我们可以继续推进
-then we know we can go ahead and
-push that.
+然后我们知道我们可以继续推进这一点。
+then we know we can go ahead and push that.
 
 46
 00:03:03.828 --> 00:03:04.987
-我想我应该在这里做点别的
-I guess I should have
-done an else in here.
+我想我应该在这里再做一次。
+I guess I should have done an else in here.
 
 47
 00:03:04.987 --> 00:03:09.532
-我们知道我们可以把它推进到数组中。
-We know we can go ahead and
-push that into the array.
+我们知道我们可以继续前进，并将其推送到阵列中。
+We know we can go ahead and push that into the array.
 
 48
 00:03:09.532 --> 00:03:14.032
-请记住匹配项，对不起，空值和未定义的值，
-Remember the match, I'm sorry,
-the null and undefined,
+记住匹配，对不起，空的和未定义的，
+Remember the match, I'm sorry, the null and undefined,
 
 49
 00:03:14.032 --> 00:03:17.340
-在这里强制平等的情况下
+在强制平等的情况下。
 in the case of coercive equality here.
 
 50
 00:03:17.340 --> 00:03:19.710
-别忘了那是安全的
+记住那是安全的，那是空的
 Remember that that's safe, that nulls and
 
 51
 00:03:19.710 --> 00:03:22.590
-没有定义的人是绝对平等的，没有别的。
-undefineds are coercively equal to
-each other and to nothing else.
+未定义者彼此强制相等，而不是其他任何东西。
+undefineds are coercively equal to each other and to nothing else.
 
 52
 00:03:22.590 --> 00:03:26.700
-所以我们不用担心任何负面的零值
-So we don't have to worry about any
-weird corner cases of negative zeros or
+所以我们不必担心任何奇怪的负零或
+So we don't have to worry about any weird corner cases of negative zeros or
 
 53
 00:03:26.700 --> 00:03:29.903
-任何类似这种情况的事情都是这样
-anything like that in this
-particular case, all right.
+在这个特殊的情况下，任何类似的事情，好吧。
+anything like that in this particular case, all right.
 
 54
 00:03:29.903 --> 00:03:37.474
-所以如果我们要跑了，我就把那个拉到我的跑环境里，
-So if we were to run, I'll pull just that
-one over into my run environment here,
+所以如果我们要跑步，我会把那个拉到我的跑步环境里，
+So if we were to run, I'll pull just that one over into my run environment here,
 
 55
 00:03:37.474 --> 00:03:42.114
-我们现在就应该再看几次我们的测试
-and we should see a few
-more of our tests now pass.
+我们现在应该看到更多的测试通过了。
+and we should see a few more of our tests now pass.
 
 56
 00:03:45.320 --> 00:03:47.837
->> 凯尔 - 辛普森: 我想现在有一对夫妇
-&gt;&gt; Kyle Simpson: And there is
-a couple down here that I think now
+&gt；&gt；Kyle Simpson：下面有几个我认为现在
+&gt;&gt; Kyle Simpson: And there is a couple down here that I think now
 
 57
 00:03:47.837 --> 00:03:49.879
-现在已经过去了好吗
+现在已经过去了，好吧。
 that are now passing, okay.
 
 58
 00:03:49.879 --> 00:03:51.430
-所以进步
+所以进展。
 So progress.
 
 59
 00:03:51.430 --> 00:03:55.800
-接下来我们知道的是我们要允许严格的与 Booleans 的匹配
-Now the next one we know is that we wanna
-allow strict matching with Booleans,
+现在我们知道的下一个是我们希望允许与布尔值严格匹配，
+Now the next one we know is that we wanna allow strict matching with Booleans,
 
 60
 00:03:55.800 --> 00:04:00.455
-意思是， Boolean 只与自己匹配，根本不允许任何胁迫。
-meaning Booleans only match themselves,
-they don't allow any coercion at all.
+意思是布尔值只匹配自己，他们根本不允许任何强制。
+meaning Booleans only match themselves, they don't allow any coercion at all.
 
 61
 00:04:00.455 --> 00:04:05.475
-所以如果我们想在这件案子里
-So if the type of, and
-in this case we wanna
+所以如果这种类型，在这种情况下，我们想要
+So if the type of, and in this case we wanna
 
 62
 00:04:05.475 --> 00:04:13.879
-特别把我们自己缩小到匹配的情况
-specifically narrow ourselves
-to what's happening with match.
+具体地说，将我们的范围缩小到Match正在发生的事情。
+specifically narrow ourselves to what's happening with match.
 
 63
 00:04:13.879 --> 00:04:16.759
-如果匹配是布尔值，那么表示
+如果匹配是布尔值，则信号
 If match is a Boolean then that signals
 
 64
 00:04:16.759 --> 00:04:20.009
-我们需要严格的配合
-to us that we need to
-strictly match with the v.
+对我们来说，我们需要严格匹配V。
+to us that we need to strictly match with the v.
 
 65
 00:04:20.009 --> 00:04:25.994
-因此，如果匹配类型等于布尔值，那么基本为此处。
-So basically here if type
-of match equals a Boolean,
+所以基本上在这里，如果匹配类型等于布尔值，
+So basically here if type of match equals a Boolean,
 
 66
 00:04:25.994 --> 00:04:29.937
-而 v 的类型等于布尔值，
+并且v的类型等于布尔值，
 and the type of v equals a Boolean,
 
 67
 00:04:29.937 --> 00:04:36.060
-如果不这样的话他们根本就不匹配
-cuz if it doesn't then they
-shouldn't match at all.
+因为如果没有，那么他们根本就不应该匹配。
+cuz if it doesn't then they shouldn't match at all.
 
 68
 00:04:36.060 --> 00:04:41.106
-如果匹配类型为布尔值，并且 v 的类型也为布尔值，那么我们知道
-If the type of match is Boolean and the
-type of v is also Boolean, we know we have
+如果匹配的类型是Boolean，而v的类型也是Boolean，则我们知道我们有
+If the type of match is Boolean and the type of v is also Boolean, we know we have
 
 69
 00:04:41.106 --> 00:04:46.170
-都是 Booleans 但我们肯定需要他们做同样的布尔
-both Booleans, but we definitely need
-them to actually be the same Boolean.
+都是布尔值，但我们确实需要它们实际上是相同的布尔值。
+both Booleans, but we definitely need them to actually be the same Boolean.
 
 70
 00:04:46.170 --> 00:04:49.699
-因此， true 必须为 true，并且 false 必须为 false。
-So true needs to be true,
-and false needs to be false.
+所以TRUE需要是TRUE，FALSE需要是FALSE。
+So true needs to be true, and false needs to be false.
 
 71
 00:04:49.699 --> 00:04:54.149
-所以我们可以，稍后我会解释我们为什么要这样做，但是
-So we could, and I'll explain a little
-bit later why we're doing this, but
+所以我们可以，稍后我会解释为什么要这么做，但是
+So we could, and I'll explain a little bit later why we're doing this, but
 
 72
 00:04:54.149 --> 00:04:56.870
-我要在这里嵌套一个 if 语句
+我要在这里嵌套一条if语句。
 I'm gonna nest an if statement in here.
 
 73
 00:04:56.870 --> 00:05:01.579
-如果我们知道这两个都是 Booleans
-In the case of those of us knowing
-that both of those are Booleans,
+在我们这些知道这两个都是布尔值的人的情况下，
+In the case of those of us knowing that both of those are Booleans,
 
 74
 00:05:01.579 --> 00:05:04.439
-我们还得看看他们是否也是一样的。
-we still need to check to see
-if they are the same one.
+我们仍然需要检查它们是否是同一个。
+we still need to check to see if they are the same one.
 
 75
 00:05:04.439 --> 00:05:10.100
-因此，我们可以说，如果匹配等于 v。
+所以我们可以说如果匹配等于v。
 So we can say if match equals v.
 
 76
 00:05:10.100 --> 00:05:13.759
-现在我们不需要三等了因为我们已经限制了
-Now we don't need a triple equals
-here because we've already restricted
+现在我们不需要三等号，因为我们已经限制了
+Now we don't need a triple equals here because we've already restricted
 
 77
 00:05:13.759 --> 00:05:17.879
-这两者都是 Booleans
-the surface area to know that both
-of these are definitely Booleans.
+表面积要知道，这两个绝对是布尔值。
+the surface area to know that both of these are definitely Booleans.
 
 78
 00:05:17.879 --> 00:05:22.810
-我之前说过，当有一个布尔值时，你想避免双重等号。
-Now I said earlier, you wanna avoid
-the double equals when there's a Boolean.
+我之前说过，当有布尔值时，你要避免双等号。
+Now I said earlier, you wanna avoid the double equals when there's a Boolean.
 
 79
 00:05:22.810 --> 00:05:24.079
-那是一般的，但是
+这通常是正确的，但是
 That's generally true, but
 
 80
 00:05:24.079 --> 00:05:27.800
-如果两者都是 Booleans 的话如果你要对 Booleans 进行测试
-if both of these are Booleans,
-if you're trying to test against Booleans,
+如果这两个都是布尔值，如果你想测试布尔值，
+if both of these are Booleans, if you're trying to test against Booleans,
 
 81
 00:05:27.800 --> 00:05:31.519
-那我们就知道这里的双数等于三等物相同
-then we know that double equals here is
-gonna do the same thing as triple equals.
+然后我们知道这里的双等号和三等号做的是一样的事情。
+then we know that double equals here is gonna do the same thing as triple equals.
 
 82
 00:05:31.519 --> 00:05:35.600
-因此，无论哪种方式，您都希望在该值中使用双等于或三等。
-So either way, you want to use the double
-equals or a triple equals there.
+所以不管是哪种方式，你都想在那里使用双等号或三等号。
+So either way, you want to use the double equals or a triple equals there.
 
 83
 00:05:35.600 --> 00:05:39.790
-因为这些类型是匹配的，它们会做同样的事情，好的。
-Since the types are matched, they're
-gonna do exactly the same thing, okay.
+既然类型匹配了，他们就会做完全一样的事情，好吧。
+Since the types are matched, they're gonna do exactly the same thing, okay.
 
 84
 00:05:39.790 --> 00:05:43.908
-所以如果它们是完全相同的值
+所以如果它们的值完全相同，
 So if they are exactly the same value,
 
 85
 00:05:43.908 --> 00:05:48.170
-然后向前推进去 v好吧
+然后我们继续推向v，好的。
 then we go ahead and push into v, okay.
 
 86
 00:05:48.170 --> 00:05:52.860
-接下来的两个案例中，就会有更多的复杂性出现。
-Now the next two cases where some
-more of the complexity comes in.
+现在，接下来的两种情况会带来更多的复杂性。
+Now the next two cases where some more of the complexity comes in.
 
 87
 00:05:52.860 --> 00:05:56.620
-起初看起来很简单我们得记住负零的子弹
-At first it seems easy and then we have to
-remember negative zero kind of gunks up
+起初看起来很容易，然后我们必须记住负零的枪击
+At first it seems easy and then we have to remember negative zero kind of gunks up
 
 88
 00:05:56.620 --> 00:06:00.100
-所有的工作都是因为它的谎言
-all the works because of
-the way that it lies.
+所有的作品都是因为它的存在方式。
+all the works because of the way that it lies.
 
 89
 00:06:00.100 --> 00:06:06.685
-好的，首先我们说如果，让我指出，我忘了说，我们的
-Okay, so first off we said if, and let me
-just point out, I forgot to point out, our
+好的，首先我们说如果，让我指出，我忘记指出，我们的
+Okay, so first off we said if, and let me just point out, I forgot to point out, our
 
 90
 00:06:06.685 --> 00:06:10.805
-object.is 已在为我们处理此部分，因此已处理该子句。
-object.is is already handling this part
-for us, so that clause is already handled.
+object.已经在为我们处理这一部分，因此该子句已经被处理了。
+object.is is already handling this part for us, so that clause is already handled.
 
 91
 00:06:10.805 --> 00:06:14.170
-所以现在我们只需要字符串强迫数字
-So now all we need is the strings
-coercing to numbers and
+所以现在我们所需要的就是强迫数字的字符串和
+So now all we need is the strings coercing to numbers and
 
 92
 00:06:14.170 --> 00:06:15.829
-将数字强制转换为字符串。
+数字强迫成字符串。
 numbers coercing to strings.
 
 93
 00:06:15.829 --> 00:06:19.660
-但我们需要消除我们不想允许发生的那些角落案例。
-But we need to remove those corner cases
-that we don't want to allow to occur.
+但我们需要删除那些我们不想允许发生的角落情况。
+But we need to remove those corner cases that we don't want to allow to occur.
 
 94
 00:06:19.660 --> 00:06:24.829
-所以如果我们想让绳子
-So if we wanna allow strings,
-so a match could be
+所以如果我们想要允许字符串，那么匹配可能是
+So if we wanna allow strings, so a match could be
 
 95
 00:06:24.829 --> 00:06:31.670
-字符串，只要它不是空字符串或仅是空格字符串。
-a string as long as it isn't an empty
-string or a white space only string.
+字符串，只要它不是空字符串或只有空格的字符串。
+a string as long as it isn't an empty string or a white space only string.
 
 96
 00:06:31.670 --> 00:06:33.310
-所以，让我们把它编码起来。
+所以让我们把它编码起来。
 So let's code that up.
 
 97
 00:06:33.310 --> 00:06:38.536
-如果 (typeof match == "string" )
-We have an else if
-(typeof match == "string"
+我们有一个else if(typeof match=“String”
+We have an else if (typeof match == "string"
 
 98
 00:06:38.536 --> 00:06:45.040
-&& match.trim() !) 不等于空字符串。
-&amp;&amp; match.trim() !) Is not
-equal to the empty string.
+&amp；&amp；match.trim()！)不等于空字符串。
+&amp;&amp; match.trim() !) Is not equal to the empty string.
 
 99
 00:06:45.040 --> 00:06:48.959
-这将仅处理空字符串和任何空格字符串。
-That handles both the empty string and
-any white space only strings.
+它同时处理空字符串和任何仅空白字符串。
+That handles both the empty string and any white space only strings.
 
 100
 00:06:48.959 --> 00:06:55.228
-因此，我们知道与非空格，非空字符串相匹配。
-So we know matches a non white space,
-non empty string.
+因此我们知道匹配非空白，非空字符串。
+So we know matches a non white space, non empty string.
 
 101
 00:06:55.228 --> 00:06:59.303
-我们想在这里进行胁迫
+我们想在这里允许强制，但是
 And we wanna allow a coercion here but
 
 102
 00:06:59.303 --> 00:07:04.959
-如果 v 是一个数字，那么我们就需要该子句。
-only if v is a number,
-so we need that clause.
+只有当v是一个数字时，我们才需要那个子句。
+only if v is a number, so we need that clause.
 
 103
 00:07:04.959 --> 00:07:09.139
-v 是一个数字。
+而v的类型是一个数字。
 And type of v is a number.
 
 104
 00:07:09.139 --> 00:07:15.250
-但这不会完全满足我们的条件
-But this won't fully satisfy
-our condition, because you'll
+但这并不能完全满足我们的条件，因为你会
+But this won't fully satisfy our condition, because you'll
 
 105
 00:07:15.250 --> 00:07:21.730
-记住这件事只有在条款逻辑的情况下才会捕捉到
-remember that this one only catches it
-in terms of the if else if clause logic.
+请记住，这个代码只在if else if子句逻辑方面捕获它。
+remember that this one only catches it in terms of the if else if clause logic.
 
 106
 00:07:21.730 --> 00:07:24.850
-这只会捕捉到一个负的零
-This one only catches it,
-something like a negative zero,
+这个只抓住它，有点像负零，
+This one only catches it, something like a negative zero,
 
 107
 00:07:24.850 --> 00:07:26.329
-如果两者都是负数
+如果它们都是负零。
 if both of them are negative zero.
 
 108
 00:07:26.329 --> 00:07:28.779
-如果其中一个是负零呢 ?
+如果其中只有一个是负零怎么办？
 What if only one of them is negative zero?
 
 109
 00:07:28.779 --> 00:07:33.490
-因此，负零可能在匹配项或 v 位置中结束。
-So a negative zero might end up in
-either the match or in the v position.
+因此负零可能在匹配或v位置结束。
+So a negative zero might end up in either the match or in the v position.
 
 110
 00:07:33.490 --> 00:07:38.779
-我们知道在零负的情况下发生的胁迫
-And what do we know about the coercion
-that happens with a negative zero,
+关于负零的强制作用，我们知道些什么，
+And what do we know about the coercion that happens with a negative zero,
 
 111
 00:07:38.779 --> 00:07:47.090
-当我们从一个数字到一个字符串的时候，我们就失去了负面的影响。
-is that when we're going from a number
-to a string, we lose the negative.
+当我们从一个数字变成一个字符串时，我们失去了负数。
+is that when we're going from a number to a string, we lose the negative.
 
 112
 00:07:47.090 --> 00:07:51.485
-所以我们要错过了如果我们把一个负零的人
-So we're gonna end up missing, if we pass
-in a negative zero to match against and
+所以我们最终会丢失，如果我们传入一个负零来匹配和
+So we're gonna end up missing, if we pass in a negative zero to match against and
 
 113
 00:07:51.485 --> 00:07:54.649
-我们把它逼到一个绳子上我们就得把它丢了
-we coerce it to a string,
-we're gonna end up missing it.
+如果我们把它逼成一根绳子，我们最终会错过它的。
+we coerce it to a string, we're gonna end up missing it.
 
 114
 00:07:54.649 --> 00:08:00.920
-所以我们想从我们的考虑中除去任何负的零，好的。
-So we want to remove from the set of our
-consideration any negative zeros, okay.
+所以我们想从我们考虑的集合中去掉任何负的零，好的。
+So we want to remove from the set of our consideration any negative zeros, okay.
 
 115
 00:08:00.920 --> 00:08:05.178
-所以我得加分了让我再看看我的情况
-So I'm gonna have to add in, let me just
-double check myself here, I'm gonna have
+所以我必须加入，让我再检查一下我自己，我会
+So I'm gonna have to add in, let me just double check myself here, I'm gonna have
 
 116
 00:08:05.178 --> 00:08:08.978
-来确认我们不是在处理一个负零的问题
-to add in a check to make sure we're
-not dealing with a v of negative zero.
+添加一个检查，以确保我们处理的不是负零的v。
+to add in a check to make sure we're not dealing with a v of negative zero.
 
 117
 00:08:20.252 --> 00:08:23.899
->> Kyle Simpson: 好的，然后我们想做的就是允许双等号
-&gt;&gt; Kyle Simpson: Okay, and then what we
-wanna do then is allow the double equals
+&gt；&gt；Kyle Simpson：好的，然后我们要做的是允许双等于
+&gt;&gt; Kyle Simpson: Okay, and then what we wanna do then is allow the double equals
 
 118
 00:08:23.899 --> 00:08:28.069
-强迫我们告诉我们这些是强迫平等的
-coercion operation to tell us
-that these are coercively equal.
+强制操作告诉我们，这些都是强制平等的。
+coercion operation to tell us that these are coercively equal.
 
 119
 00:08:28.069 --> 00:08:31.639
-所以我们消除了所有我们不关心的角落
-So we've eliminated all the corner cases
-that we don't care about with that
+所以我们已经排除了所有我们不关心的角落案件
+So we've eliminated all the corner cases that we don't care about with that
 
 120
 00:08:31.639 --> 00:08:34.889
-我们只是想让你知道
-surrounding if statement, and
-now we just simply wanna allow
+围绕着if语句，现在我们只想允许
+surrounding if statement, and now we just simply wanna allow
 
 121
 00:08:35.929 --> 00:08:39.100
-双等号要么将其放入数组中，要么不放入数组中。
-the double equals to either put it in
-the array or not put it in the array.
+double等于要么将其放入数组，要么不将其放入数组。
+the double equals to either put it in the array or not put it in the array.
 
 122
 00:08:41.000 --> 00:08:41.778
-跟以前一样
+和我们之前做的一样。
 Same as we did before.
 
 123
 00:08:44.027 --> 00:08:47.799
->> Kyle Simpson: 好的，最后的条款是其他的，如果匹配
-&gt;&gt; Kyle Simpson: Okay, and then the final
-clause is the other way around, if match
+&gt；&gt；Kyle Simpson：好的，如果匹配，那么最后一个子句就是相反的方式
+&gt;&gt; Kyle Simpson: Okay, and then the final clause is the other way around, if match
 
 124
 00:08:47.799 --> 00:08:52.409
-是一个数字，有几个数字我们不想让它在里面。
-is a number and there's a several numbers
-that we don't want to allow in there.
+是一个数字，有几个数字是我们不想允许的。
+is a number and there's a several numbers that we don't want to allow in there.
 
 125
 00:08:52.409 --> 00:08:55.230
-所以我们得说它是不是一个数字，但它不是这些数字中的一个。
-So we're gonna have to say if it's a
-number but it's not one of these numbers.
+所以我们必须说它是不是一个数字，但它不是这些数字中的一个。
+So we're gonna have to say if it's a number but it's not one of these numbers.
 
 126
 00:08:56.759 --> 00:09:00.240
-然后，我们希望允许将字符串从字符串强制为数字。
-Then we want to allow that
-coercion from string to number.
+然后我们希望允许从字符串到数字的强制。
+Then we want to allow that coercion from string to number.
 
 127
 00:09:00.240 --> 00:09:06.850
-好，如果打字号是 == "Number" ，那就来刷新吧。
-All right, so if typeof match == "Number",
-and then let's just refresh.
+好的，所以如果typeof match=“number”，那么让我们刷新一下。
+All right, so if typeof match == "Number", and then let's just refresh.
 
 128
 00:09:06.850 --> 00:09:11.399
-我们不想关注那里的价值是什么 ?
-What are the values that we didn't
-want to pay attention to there?
+我们不想在那里关注的价值观是什么？
+What are the values that we didn't want to pay attention to there?
 
 129
 00:09:11.399 --> 00:09:16.009
-它们是 NaN 和两个无穷大。
+它们是NaN和两个无穷大。
 They are NaN and the two infinities.
 
 130
@@ -748,207 +652,187 @@ So I'm gonna write this,
 
 131
 00:09:20.211 --> 00:09:24.605
-其实我还会继续
+实际上我会继续
 actually I'll go ahead and
 
 132
 00:09:24.605 --> 00:09:30.908
-把这个弄断在这里的不同路线上
+把它分成不同的线，
 break this onto different lines here,
 
 133
 00:09:30.908 --> 00:09:36.071
-对你更有可读性
+对你来说更具可读性。
 a little more readable for you.
 
 134
 00:09:36.071 --> 00:09:38.013
-好了我们不想再考虑 NN 的情况了
-All right, so we don't wanna consider
-any case where match is NaN,
+好的，所以我们不想考虑任何匹配是南的情况，
+All right, so we don't wanna consider any case where match is NaN,
 
 135
 00:09:40.470 --> 00:09:46.674
->> Kyle Simpson: 或无穷大或
+&gt；&gt；Kyle Simpson：或者它是无穷大或者
 &gt;&gt; Kyle Simpson: Or it's infinity or
 
 136
 00:09:46.674 --> 00:09:51.419
-是负面的
+是阴性的
 it's negative
 
 137
 00:09:51.419 --> 00:09:57.263
-无穷大，好的。
+无限好吧。
 infinity, okay.
 
 138
 00:09:57.263 --> 00:10:00.000
-因此，这 3 宗个案是肯定的。
+所以这三个案子肯定是出局了。
 So those three cases for sure are out.
 
 139
 00:10:00.000 --> 00:10:04.951
-但我们要结束这条路我们要的是条款
-But we're gonna end up, and by the way,
-we want the clause in there,
+但我们会结束的，顺便说一句，我们想把条款放在里面，
+But we're gonna end up, and by the way, we want the clause in there,
 
 140
 00:10:04.951 --> 00:10:07.720
-v 的类型必须为字符串。
+v的类型必须是字符串。
 type of v has gotta be string.
 
 141
 00:10:07.720 --> 00:10:09.059
-所以我们有个号码匹配
+所以我们找到了匹配的数字，而且
 So we've got a match of number, and
 
 142
 00:10:09.059 --> 00:10:12.659
-我们只允许在 v 的类型为字符串的情况下允许它。
-we wanna allow it only
-if type of v is string.
+我们希望仅当v的类型是字符串时才允许它。
+we wanna allow it only if type of v is string.
 
 143
 00:10:12.659 --> 00:10:16.049
-但我们在这里和以前一样有同样的问题
-But we have the exact same problem
-here as we had in the previous one,
+但我们遇到的问题和上一个问题完全一样，
+But we have the exact same problem here as we had in the previous one,
 
 144
 00:10:16.049 --> 00:10:19.340
-就是负零点可以进来并在这里用枪
-which is that negative zero could
-come in and gunk up the works here.
+也就是说，负零可能会进来，把这里的工作搞得一团糟。
+which is that negative zero could come in and gunk up the works here.
 
 145
 00:10:19.340 --> 00:10:21.816
-所以我们需要一份最后声明
-So we need one final
-statement in here that
+所以我们需要在这里做最后的陈述
+So we need one final statement in here that
 
 146
 00:10:21.816 --> 00:10:27.251
-说> > 凯尔 - 辛普森: 那个
-says,
-&gt;&gt; Kyle Simpson: That
+说，&gt；&gt；Kyle Simpson：那
+says, &gt;&gt; Kyle Simpson: That
 
 147
 00:10:27.251 --> 00:10:29.927
-不匹配负零。
+匹配非负零。
 matches not negative zero.
 
 148
 00:10:29.927 --> 00:10:32.245
-所以我再加上一个
+所以我会把那个加进去。
 So I'll add that one in.
 
 149
 00:10:33.528 --> 00:10:38.452
->> Kyle Simpson: 然后我们不希望，记住字符串匹配，
-&gt;&gt; Kyle Simpson: And then we don't
-want to, remember the string matching,
+&gt；&gt；Kyle Simpson：然后我们不想，记住字符串匹配，
+&gt;&gt; Kyle Simpson: And then we don't want to, remember the string matching,
 
 150
 00:10:38.452 --> 00:10:43.309
-还记得这些规则吗字符串匹配
-remember these rules up here,
-the string matching?
+还记得这里的这些规则吗，字符串匹配？
+remember these rules up here, the string matching?
 
 151
 00:10:43.309 --> 00:10:46.570
-所以我们不需要知道那种类型的 v 是一个字符串，但是
-So we don't just have to know
-that type of v is a string, but
+所以我们不只需要知道v类型是字符串，但是
+So we don't just have to know that type of v is a string, but
 
 152
 00:10:46.570 --> 00:10:51.990
-我们也必须知道它是一个非空的，不含空格的字符串。
-we also have to know it's a non empty,
-non white space only string.
+我们还必须知道它是一个非空的，非纯空白的字符串。
+we also have to know it's a non empty, non white space only string.
 
 153
 00:10:51.990 --> 00:10:53.779
-所以我们也要加入这些条款。
-So we've got to add those
-clauses in as well.
+所以我们也必须加入这些条款。
+So we've got to add those clauses in as well.
 
 154
 00:10:53.779 --> 00:10:57.309
-很明显你在某个时候能做得很好
-And there's a lot of refactoring
-obviously that you can do at some point,
+很明显，在某些情况下，您可以进行很多重构，
+And there's a lot of refactoring obviously that you can do at some point,
 
 155
 00:10:57.309 --> 00:10:58.809
-看到这一切的重复
+看到这里所有的重复。
 seeing all of the duplication here.
 
 156
 00:10:58.809 --> 00:11:02.639
-我只是想向你展示我想要的这些角落案件的逻辑
-I'm just trying to show you the logic of
-what are these corner cases that I want
+我只是想告诉你我想要的这些角落箱子的逻辑
+I'm just trying to show you the logic of what are these corner cases that I want
 
 157
 00:11:02.639 --> 00:11:03.169
-逃避。
+是为了躲避。
 to be avoiding.
 
 158
 00:11:03.169 --> 00:11:09.610
-所以我们想说， v.trim 不等于空字符串。
-So we wanna say,
-v.trim is not equal to empty string.
+所以我们想说，v.trim不等于空字符串。
+So we wanna say, v.trim is not equal to empty string.
 
 159
 00:11:12.419 --> 00:11:16.875
-这让我们进入一个可以信任的场景
-That gets us into a scenario
-where we can trust
+这让我们进入了一个我们可以信任的场景
+That gets us into a scenario where we can trust
 
 160
 00:11:16.875 --> 00:11:22.966
-双等于进行强制比较。
-the double equals to make
-the coercive comparison.
+双等于做强制性比较。
+the double equals to make the coercive comparison.
 
 161
 00:11:22.966 --> 00:11:28.567
->> 凯尔 - 辛普森: 如果我没有遗漏任何其他的遗漏，
-&gt;&gt; Kyle Simpson: And
-if I didn’t make any other omissions,
+&gt；&gt；Kyle Simpson：如果我没有做任何其他的遗漏，
+&gt;&gt; Kyle Simpson: And if I didn’t make any other omissions,
 
 162
 00:11:28.567 --> 00:11:31.996
-让我重复一下
+让我再检查一遍。
 let me just double check.
 
 163
 00:11:33.304 --> 00:11:36.860
->> 凯尔 - 辛普森: 应该这样。
+&gt；&gt；Kyle Simpson：应该是这样。
 &gt;&gt; Kyle Simpson: That should be it.
 
 164
 00:11:36.860 --> 00:11:38.620
-所以如果我没犯过其他错误
+所以如果我没有犯任何其他错误或者
 So if I haven’t made any other mistakes or
 
 165
 00:11:38.620 --> 00:11:41.889
-遗漏了，但愿这一切现在都能通过我们的测试。
-omissions, hopefully this should
-pass all our test cases now.
+遗漏，希望它现在可以通过我们所有的测试用例。
+omissions, hopefully this should pass all our test cases now.
 
 166
 00:11:43.580 --> 00:11:46.220
-就像气象人员一样我们会穿过手指和希望
-Just like the weather man,
-we'll cross our fingers and hope.
+就像天气预报员一样，我们会祈祷希望。
+Just like the weather man, we'll cross our fingers and hope.
 
 167
 00:11:48.490 --> 00:11:53.129
-好吧那我就去找
+好的，我会去找你
 All right, so I'll drop in the find
 
 168
@@ -958,186 +842,160 @@ all utility, and we will run it.
 
 169
 00:11:57.466 --> 00:11:59.169
-我们都得到了真相
+我们都是真的，耶。
 And we get all trues, yay.
 
 170
 00:12:00.860 --> 00:12:06.879
-好吧，就像这里的现实情况一样。
-All right, so just as a little bit
-of a kind of reality check here.
+好的，作为一种现实的检查。
+All right, so just as a little bit of a kind of reality check here.
 
 171
 00:12:08.919 --> 00:12:12.379
-这是我们说的一个很保守的场景
-This was a very contrived
-scenario where we said,
+这是一个非常巧妙的场景，我们说，
+This was a very contrived scenario where we said,
 
 172
 00:12:12.379 --> 00:12:18.000
-我们想实现自己的子集，如果你愿意，强制匹配。
-we wanna implement our own subset,
-if you will, of coercive matching.
+我们想实现我们自己的子集，如果你愿意的话，强制匹配。
+we wanna implement our own subset, if you will, of coercive matching.
 
 173
 00:12:18.000 --> 00:12:20.470
-这不可能是你要执行的
-That's not likely something
-that you're gonna implement.
+这不太可能是你要实施的东西。
+That's not likely something that you're gonna implement.
 
 174
 00:12:20.470 --> 00:12:25.679
-但这次演习的目的是为了说明
-But the purpose of this exercise was
-to illustrate the larger point which is
+但这个练习的目的是要说明更大的一点，那就是
+But the purpose of this exercise was to illustrate the larger point which is
 
 175
 00:12:25.679 --> 00:12:30.470
-当你消除了角件的时候，胁迫是可以安全的，
-coercion can be safe when you
-have eliminated the corner cases,
+当你消除了拐角处的情况时，胁迫是安全的，
+coercion can be safe when you have eliminated the corner cases,
 
 176
 00:12:30.470 --> 00:12:34.009
-而且很明显的是把角的情况消除了。
-and made it obvious that
-the corner cases are eliminated.
+并明确表示角落案件已被消除。
+and made it obvious that the corner cases are eliminated.
 
 177
 00:12:34.009 --> 00:12:37.885
-所以我在这里用的编码方式是有意的
-So the style of coding that I
-was using here was intentional,
+所以我在这里使用的编码风格是有意的，
+So the style of coding that I was using here was intentional,
 
 178
 00:12:37.885 --> 00:12:42.600
-就是说这个外太空的说法是在消除角落的情况。
-which was to say this outer if statement
-is eliminating the corner cases.
+也就是说，这个外部if语句消除了拐角情况。
+which was to say this outer if statement is eliminating the corner cases.
 
 179
 00:12:42.600 --> 00:12:46.803
-然后在里面，你可以清楚地看到一个双等号，我们可以相信它是
-And then inside it you can clearly see
-a double equals that we can trust that is
+然后在它里面你可以清楚地看到一个我们可以信任的双等号，那就是
+And then inside it you can clearly see a double equals that we can trust that is
 
 180
 00:12:46.803 --> 00:12:50.940
-因为那些角箱已经被清除了好吗
-safe because those corner cases
-have been eliminated, okay.
+安全是因为那些角落的案子已经被消除了，好吧。
+safe because those corner cases have been eliminated, okay.
 
 181
 00:12:50.940 --> 00:12:54.620
-所以这就说明了更重要的一点
-So that's kind of an illustration of
-the larger point about trying to be more
+所以这是一种关于尝试更多的更大的观点的例证
+So that's kind of an illustration of the larger point about trying to be more
 
 182
 00:12:54.620 --> 00:12:59.759
-显然你的类型而不是总是尽量聪明
-obvious with your types instead of always
-trying to be as clever as possible and
+显然是你的类型，而不是总是试图尽可能聪明和
+obvious with your types instead of always trying to be as clever as possible and
 
 183
 00:12:59.759 --> 00:13:02.220
-最减少的代码。
+尽可能减少代码。
 have the most reduced code possible.
 
 184
 00:13:02.220 --> 00:13:07.100
-有时候有点重叠有点莫名其妙
-Sometimes a bit of duplication and
-a bit of explicitness and a bit of
+有时一些重复和一些明显的和一点
+Sometimes a bit of duplication and a bit of explicitness and a bit of
 
 185
 00:13:07.100 --> 00:13:11.179
-不可能让代码更清晰地沟通一点，好的。
-obviousness makes the code communicate
-a little bit more clearly, okay.
+显而易见会使代码的交流更加清晰，好吧。
+obviousness makes the code communicate a little bit more clearly, okay.
 
 186
 00:13:12.259 --> 00:13:17.778
-那么关于强迫平等的任何问题都有问题吗 ?
-So any questions about
-the exercise on coercive equality?
+那么，对于强制平等的行使有什么问题吗？
+So any questions about the exercise on coercive equality?
 
 187
 00:13:18.809 --> 00:13:21.299
->> 扬声器 3: 您是否能够使用过滤器执行相同的操作 ?
-&gt;&gt; Speaker 3: Do you have been able to
-do the same thing with using a filter?
+&gt；&gt；扬声器3：你能用过滤器做同样的事情吗？
+&gt;&gt; Speaker 3: Do you have been able to do the same thing with using a filter?
 
 188
 00:13:24.720 --> 00:13:26.655
->> 凯尔 - 辛普森: 那么你在问我们是否能够做到 -
-&gt;&gt; Kyle Simpson: So
-you're asking if we could have done-
+&gt；&gt；Kyle Simpson：所以你是在问我们是否可以-
+&gt;&gt; Kyle Simpson: So you're asking if we could have done-
 
 189
 00:13:26.655 --> 00:13:28.470
->> 扬声器 3: 不推动事物，
+&gt；&gt；扬声器3：不是推东西，
 &gt;&gt; Speaker 3: Instead of pushing things,
 
 190
 00:13:28.470 --> 00:13:32.279
-我们能先从一个阵列开始然后过滤吗
-could we start out with one,
-start out with the array and then filter?
+我们可以从一个开始，从数组开始，然后过滤吗？
+could we start out with one, start out with the array and then filter?
 
 191
 00:13:32.279 --> 00:13:34.159
->> 凯尔 - 辛普森: 是的，所以，我们可以，你的要求是什么，
-&gt;&gt; Kyle Simpson: Yeah, so,
-could we have, what you're asking is,
+&gt；&gt；Kyle Simpson：是的，那么，我们可以有吗，你想问的是，
+&gt;&gt; Kyle Simpson: Yeah, so, could we have, what you're asking is,
 
 192
 00:13:34.159 --> 00:13:38.899
-我们能否执行 findAll 函数的匹配逻辑
-could we have implemented the matching
-logic of the findAll function
+我们是否可以实现findAll函数的匹配逻辑
+could we have implemented the matching logic of the findAll function
 
 193
 00:13:38.899 --> 00:13:40.809
-而不是一个独立的实用程序
+而不是一个独立的实用程序，
 instead of a utility that's standalone,
 
 194
 00:13:40.809 --> 00:13:44.269
-我们把它作为一个叫做谓词函数的函数来实现。
-cuz we have implemented it as
-what's called a predicate function.
+因为我们把它实现为所谓的谓词函数。
+cuz we have implemented it as what's called a predicate function.
 
 195
 00:13:44.269 --> 00:13:47.740
-如果应该将某些内容抛出或包含在其中，那么仅返回 true 或 false
-Meaning it just returns true or
-false if something should be thrown in or
+这意味着它只返回TRUE或FALSE，如果应该抛入或
+Meaning it just returns true or false if something should be thrown in or
 
 196
 00:13:47.740 --> 00:13:49.379
-不绝对不是的
+不，绝对不是，是的。
 not, absolutely, yep.
 
 197
 00:13:49.379 --> 00:13:53.450
-所以基本上所有的东西都是
+所以基本上所有这些东西都是
 So basically all of this stuff would be
 
 198
 00:13:53.450 --> 00:13:57.924
-我们的谓词函数的实质内容，而不是 findAll 实用程序的内容，
-the substance of our predicate function,
-and rather than having a findAll utility,
+我们的谓词函数的实质，而不是具有findAll实用程序，
+the substance of our predicate function, and rather than having a findAll utility,
 
 199
 00:13:57.924 --> 00:14:04.690
-我们只会说 values.filter 然后传递我们的谓词函数。
-we'd just simply say values.filter
-then pass in our predicate function.
+我们只需简单地说values.filter，然后传入我们的谓词函数。
+we'd just simply say values.filter then pass in our predicate function.
 
 200
 00:14:04.690 --> 00:14:07.330
-因此，我亦是完全有效的做法。
-So I would have been a totally
-valid way of doing it as well.
+所以我也是一个完全有效的方法。
+So I would have been a totally valid way of doing it as well.

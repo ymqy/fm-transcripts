@@ -2,90 +2,75 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:02.738
->> 凯尔 - 辛普森: 让我总结一下双方面的工作。
-&gt;&gt; Kyle Simpson: Let me summarize
-how double equals works.
+&gt；&gt；Kyle Simpson：让我总结一下double equals是如何工作的。
+&gt;&gt; Kyle Simpson: Let me summarize how double equals works.
 
 2
 00:00:02.738 --> 00:00:05.969
-这是算法的摘要，您可以读取算法，但它是摘要。
-This is summary of the algorithm, you
-can read the algorithm but it's summary.
+这是算法的摘要，您可以阅读算法，但它是摘要。
+This is summary of the algorithm, you can read the algorithm but it's summary.
 
 3
 00:00:05.969 --> 00:00:09.099
-如果相同类型的类型要使用三重对等项。
-If the types of the same it's
-just gonna use triple equals.
+如果相同的类型，它将只使用三重等于。
+If the types of the same it's just gonna use triple equals.
 
 4
 00:00:09.099 --> 00:00:14.638
-如果两者中的任何一个都是 " 否 " 或 " 未定义 " ，那么它们是相等的。
-If either of them both of them are no or
-undefined, they are equal.
+如果它们中的任何一个都不是或未定义的，则它们是相等的。
+If either of them both of them are no or undefined, they are equal.
 
 5
 00:00:14.638 --> 00:00:17.652
 如果比较中涉及非原语，
-If there are non primitives
-involved in the comparison,
+If there are non primitives involved in the comparison,
 
 6
 00:00:17.652 --> 00:00:20.178
-他们总是先有先人
-they are always gonna
-become primitive first.
+他们总是首先变得原始。
+they are always gonna become primitive first.
 
 7
 00:00:20.178 --> 00:00:22.838
-一旦你有了基本的选择
-And then once you have
-primitives prefer to number.
+一旦你有了基元，你就更喜欢数字了。
+And then once you have primitives prefer to number.
 
 8
 00:00:24.890 --> 00:00:29.143
->> 凯尔 - 辛普森: 我对每个开发者都很乐观
-&gt;&gt; Kyle Simpson: And I'm just optimistic
-enough to believe that every developer
+&gt；&gt；Kyle Simpson：我很乐观，相信每个开发人员
+&gt;&gt; Kyle Simpson: And I'm just optimistic enough to believe that every developer
 
 9
 00:00:29.143 --> 00:00:33.868
-有两个星期的 JavaScript经历
-from the junior developer with two
-weeks of experience in JavaScript,
+来自具有两周JavaScript经验的初级开发人员，
+from the junior developer with two weeks of experience in JavaScript,
 
 10
 00:00:33.868 --> 00:00:37.490
-向经验丰富的开发人员提供了二十几年的时间
-up to the experienced
-developer with 20 plus years,
+拥有20多年经验的开发人员，
+up to the experienced developer with 20 plus years,
 
 11
 00:00:37.490 --> 00:00:41.529
-能理解一个相当直率的系统
-can understand a fairly
-straightforward system like that.
+可以理解这样一个相当简单的系统。
+can understand a fairly straightforward system like that.
 
 12
 00:00:41.529 --> 00:00:45.076
-通过理解，避免出现问题的地方。
-And by understanding it, avoid
-the places where it can be problematic.
+通过了解它，避免出现问题的地方。
+And by understanding it, avoid the places where it can be problematic.
 
 13
 00:00:48.369 --> 00:00:50.128
->> Kyle Simpson: 那么有问题的案例是什么 ?
-&gt;&gt; Kyle Simpson: So
-what are those problematic cases?
+&gt；&gt；Kyle Simpson：那么那些有问题的案例是什么？
+&gt;&gt; Kyle Simpson: So what are those problematic cases?
 
 14
 00:00:50.128 --> 00:00:54.406
-其中很多是我们已经见过的，但是我们要谈的是转角的情况，
-Many of these are ones we've already seen,
-but let's talk about the corner cases,
+其中很多是我们已经看过的，但是让我们来谈谈角落里的案例，
+Many of these are ones we've already seen, but let's talk about the corner cases,
 
 15
 00:00:54.406 --> 00:00:56.950
-我们得谈谈他们这样我们就能避开他们了
-we gotta talk about them so
-that we can avoid them.
+我们得谈谈他们这样我们才能避开他们。
+we gotta talk about them so that we can avoid them.

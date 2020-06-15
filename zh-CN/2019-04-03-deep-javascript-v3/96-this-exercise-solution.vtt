@@ -2,37 +2,33 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:01.506
->> 凯尔 - 辛普森: 好吧，
+&gt；&gt；Kyle Simpson：好的，
 &gt;&gt; Kyle Simpson: All right, well,
 
 2
 00:00:01.506 --> 00:00:07.070
-我们回来讨论这一问题的解决方法
-we're back to talk about the solution
-to this this-heavy exercise.
+我们回来讨论这个繁重运动的解决方案。
+we're back to talk about the solution to this this-heavy exercise.
 
 3
 00:00:07.070 --> 00:00:10.541
-希望你的手指没有穿过这个点
-Hopefully your fingers are not too
-worn out from typing this dot and
+希望你的手指不会因为打点而太累
+Hopefully your fingers are not too worn out from typing this dot and
 
 4
 00:00:10.541 --> 00:00:12.730
-把所有地方都绑好
+.到处绑定。
 .bind all over the place.
 
 5
 00:00:12.730 --> 00:00:17.539
-所以正如我所说的我们想做的就是想重新定位
-So as the read me indicated,
-what we wanna do is we wanna reorient from
+所以正如“读我”所指出的，我们想要做的是重新定位
+So as the read me indicated, what we wanna do is we wanna reorient from
 
 6
 00:00:17.539 --> 00:00:23.190
-定义了使我们的对象成为对象的工作坊函数，并定义我们自己的对象。
-the define workshop function making our
-object, and define our own objects.
+定义车间功能使我们的对象，并定义我们自己的对象。
+the define workshop function making our object, and define our own objects.
 
 7
 00:00:23.190 --> 00:00:24.190
@@ -41,151 +37,133 @@ So in a way,
 
 8
 00:00:24.190 --> 00:00:28.280
-我们只需要在这里复制所有这些功能
-we really just need to copy all of
-these functions that exist down here.
+我们真的只需要复制这里存在的所有这些函数。
+we really just need to copy all of these functions that exist down here.
 
 9
 00:00:28.280 --> 00:00:32.280
-我们需要复制所有这些内容，并将它们放入对象文字中。
-We need to copy all of them, and
-put them into an object literal.
+我们需要复制所有它们，并将它们放入Object文字中。
+We need to copy all of them, and put them into an object literal.
 
 10
 00:00:32.280 --> 00:00:33.469
-所以我就开始做这个
+所以我就开始这么做了。
 So I'll just start doing that.
 
 11
 00:00:33.469 --> 00:00:36.649
-我说 deepJS = 一个对象文字。
+我会说Deep JS=一个对象文字。
 I'll say deepJS = an object literal.
 
 12
 00:00:36.649 --> 00:00:40.679
-然后我就直接把我所有的功能都放在这里
-And then I'll just put all of
-my functions directly in here.
+然后我将把我所有的函数直接放在这里。
+And then I'll just put all of my functions directly in here.
 
 13
 00:00:40.679 --> 00:00:45.929
-除此之外，我将把所有这些
-And in addition to that,
-I'm going to turn all of these
+除此之外，我要把所有这些
+And in addition to that, I'm going to turn all of these
 
 14
 00:00:45.929 --> 00:00:51.829
-在简洁的方法中因为我不想做财产分配
-into the concise method form, because
-I don't wanna do property assignments.
+简明的方法形式，因为我不想做财产分配。
+into the concise method form, because I don't wanna do property assignments.
 
 15
 00:00:51.829 --> 00:00:56.679
-给我点时间我把这些都放上去
-So give me just a moment
-while I wire all these up.
+所以给我一点时间，我把这些都装好。
+So give me just a moment while I wire all these up.
 
 16
 00:00:56.679 --> 00:00:57.890
-这里有很多功能，不是吗 ?
-There's a lot of functions here,
-aren't there?
+这里有很多功能，不是吗？
+There's a lot of functions here, aren't there?
 
 17
 00:01:03.399 --> 00:01:06.814
->> Kyle Simpson: 好的，我们在他们之间需要逗号，所以
-&gt;&gt; Kyle Simpson: All right, so we're gonna
-need commas in between all of them, so
+&gt；&gt；Kyle Simpson：好的，所以我们在它们之间需要逗号，所以
+&gt;&gt; Kyle Simpson: All right, so we're gonna need commas in between all of them, so
 
 18
 00:01:06.814 --> 00:01:07.942
-别忘了
+别忘了这一点。
 don't forget that.
 
 19
 00:01:13.789 --> 00:01:15.945
->> Kyle Simpson: 这是有关类语法的一个很好的部分，
-&gt;&gt; Kyle Simpson: That is one nice
-part about the class syntax,
+&gt；&gt；Kyle Simpson：这是类语法的一个很好的部分，
+&gt;&gt; Kyle Simpson: That is one nice part about the class syntax,
 
 20
 00:01:15.945 --> 00:01:18.338
-不需要到处使用逗号。
-is not having to deal with
-the commas everywhere.
+不必处处处理逗号。
+is not having to deal with the commas everywhere.
 
 21
 00:01:18.338 --> 00:01:21.593
-我会给他们这个决定是个好决定
-I will give them that,
-that was a good decision.
+我会告诉他们的，这是一个很好的决定。
+I will give them that, that was a good decision.
 
 22
 00:01:21.593 --> 00:01:23.810
-好吧我们去履行职责吧
+好的，让我们把函数取出来。
 All right, so let's take out function.
 
 23
 00:01:23.810 --> 00:01:31.051
-我要用一个替代的方式来做
+我只是想用一个替换者来做这件事。
 And I'm just gonna do that with a replace.
 
 24
 00:01:39.590 --> 00:01:40.819
->> 凯尔 - 辛普森:
+&gt；&gt；Kyle Simpson：把那个放回去。
 &gt;&gt; Kyle Simpson: Put that one back.
 
 25
 00:01:42.313 --> 00:01:46.770
->> Kyle Simpson: [COUGH] 好，现在我们需要将属性 currentEnrollment
-&gt;&gt; Kyle Simpson: [COUGH] Okay, now we need
-to put the properties currentEnrollment
+&gt；&gt；Kyle Simpson：[咳嗽]好的，现在我们需要将属性currentEnrollment
+&gt;&gt; Kyle Simpson: [COUGH] Okay, now we need to put the properties currentEnrollment
 
 26
 00:01:46.770 --> 00:01:50.338
-和 studentRecords 我们得把这些都放在上面
-and studentRecords,
-we need to put those on there.
+和学生记录，我们需要把它们放在那里。
+and studentRecords, we need to put those on there.
 
 27
 00:01:50.338 --> 00:01:56.397
-因此，我们将有 currentEnrollment， >> Kyle Simpson: 是空数组。
-So we'll have currentEnrollment,
-&gt;&gt; Kyle Simpson: Is an empty array.
+因此我们将有currentEnrollment，&gt；&gt；Kyle Simpson：是一个空数组。
+So we'll have currentEnrollment, &gt;&gt; Kyle Simpson: Is an empty array.
 
 28
 00:01:56.397 --> 00:02:01.802
-studentRecords 为空数组。
+StudentRecords是一个空数组。
 And studentRecords is an empty array.
 
 29
 00:02:01.802 --> 00:02:06.668
-现在我们要把所有这些点都扔在任何地方
-And now we need to start throwing
-in all our this dots everywhere.
+现在我们需要开始把我们所有的这些点都扔到每一个地方。
+And now we need to start throwing in all our this dots everywhere.
 
 30
 00:02:06.668 --> 00:02:10.842
-所以我们引用了一个我们引用的财产
-So anyplace that we reference a property
-that we were referencing lexically as
+因此，任何地方，我们引用一个属性，我们在词汇上引用为
+So anyplace that we reference a property that we were referencing lexically as
 
 31
 00:02:10.842 --> 00:02:14.384
-一个变量，或者当我们引用一个现在是一种方法的函数时，
-a variable, or when we reference
-a function that's now a method,
+变量，或者当我们引用现在是方法的函数时，
+a variable, or when we reference a function that's now a method,
 
 32
 00:02:14.384 --> 00:02:16.171
-在它前面需要点这个点
+它前面需要一个这个点。
 it needs a this dot in front of it.
 
 33
 00:02:16.171 --> 00:02:20.868
-所以我要把这几个圆点写在这里，反复写。
-So I'm just gonna write a lot of this
-dots over and over and over again.
+所以我会一遍又一遍地写很多这些点。
+So I'm just gonna write a lot of this dots over and over and over again.
 
 34
 00:02:20.868 --> 00:02:24.073
@@ -194,45 +172,43 @@ this.currentEnrollment.
 
 35
 00:02:24.073 --> 00:02:29.152
-this.printRecords ，带有 this.currentEnrollment 。
-And then this.printRecords,
-with this.currentEnrollment.
+然后是this.printRecords和this.currentEnrollment。
+And then this.printRecords, with this.currentEnrollment.
 
 36
 00:02:29.152 --> 00:02:30.985
-和 this.currentEnrollment 。
+和this.currentEnrollment。
 And this.currentEnrollment.
 
 37
 00:02:30.985 --> 00:02:32.723
-还有 this.paidStudents 。
+还有这个.paidStudents.
 And this.paidStudents.
 
 38
 00:02:32.723 --> 00:02:34.020
-还有 this.print
+还有这个打印。
 And this.print.
 
 39
 00:02:34.020 --> 00:02:35.429
-还有这个提示
+还有这个提醒一下。
 And this.remind.
 
 40
 00:02:35.429 --> 00:02:38.126
-和 this.currentEnrollment 。
+和this.currentEnrollment。
 And this.currentEnrollment.
 
 41
 00:02:38.126 --> 00:02:40.430
-还有 this.studentRecords。
+还有这个学生记录。
 And this.studentRecords.
 
 42
 00:02:40.430 --> 00:02:46.198
-matchId 是此处的实际功能，不需要此点。
-matchId is an actual function in here,
-it doesn't need a this dot.
+matchId在这里是一个实际的函数，它不需要this点。
+matchId is an actual function in here, it doesn't need a this dot.
 
 43
 00:02:46.198 --> 00:02:48.655
@@ -241,463 +217,410 @@ this.getsStudentFromId.
 
 44
 00:02:48.655 --> 00:02:52.762
-然后这个点，不，不记录，但是
+然后这个点，不是唱片，但是
 And then this dot, nope, not records, but
 
 45
 00:02:52.762 --> 00:02:58.259
-this.sortByNameAsc 和 this.printRecord。
+this.sortByNameAsc和this.printRecord。
 this.sortByNameAsc and this.printRecord.
 
 46
 00:02:58.259 --> 00:03:04.524
-没有一个需要这个点，没有一个。
-And none of those needed this dot,
-none of those.
+这些都不需要这个点，那些都不需要。
+And none of those needed this dot, none of those.
 
 47
 00:03:04.524 --> 00:03:11.788
-此点，此点和 this.getStudentId。
-And this dot, and this dot,
-and this.getStudentId.
+这个点和this.getStudentId。
+And this dot, and this dot, and this.getStudentId.
 
 48
 00:03:11.788 --> 00:03:14.618
-和 this.currentEnrollment 。
+和this.currentEnrollment。
 And this.currentEnrollment.
 
 49
 00:03:14.618 --> 00:03:16.748
-和 this.currentEnrollment 。
+和this.currentEnrollment。
 And this.currentEnrollment.
 
 50
 00:03:16.748 --> 00:03:20.618
-有人厌倦了在所有东西面前打字和看到这个点吗 ?
-Anybody tired of typing and
-seeing this dot in front of everything?
+有人厌倦了打字和看到所有东西前面的这个点吗？
+Anybody tired of typing and seeing this dot in front of everything?
 
 51
 00:03:20.618 --> 00:03:24.610
-这是一种非常详细的编码方式。
+这是一种非常冗长的编码风格。
 This is a very verbose style of coding.
 
 52
 00:03:24.610 --> 00:03:28.917
-[ COUGH] 我们需要 this.notYetPaid。
+[咳嗽]我们需要这个.还没有.
 [COUGH] We need this.notYetPaid.
 
 53
 00:03:28.917 --> 00:03:32.801
-和 this.printRecords。
+和this.printRecords。
 And this.printRecords.
 
 54
 00:03:32.801 --> 00:03:36.949
-和 this.getStudentFromId 。
+和this.getStudentFromId。
 And this.getStudentFromId.
 
 55
 00:03:36.949 --> 00:03:40.655
-现在我们需要关注有方法引用的任何地方
-Now we need to take care of any places
-where we have method references that need
+现在，我们需要处理具有需要的方法引用的任何地方
+Now we need to take care of any places where we have method references that need
 
 56
 00:03:40.655 --> 00:03:41.509
-要强硬的人
+被硬绑住了。
 to be hardbound.
 
 57
 00:03:41.509 --> 00:03:43.388
-让我们回去吧
+所以让我们回到过去
 So let's go back through and
 
 58
 00:03:43.388 --> 00:03:47.259
 查找作为回调传入的任何方法。
-find any methods that are getting
-passed in as callbacks.
+find any methods that are getting passed in as callbacks.
 
 59
 00:03:47.259 --> 00:03:50.829
-这不是一个财产的方法，这样就可以了。
-That's not a method that's a property,
-so that's fine.
+这不是一个属于属性的方法，所以这很好。
+That's not a method that's a property, so that's fine.
 
 60
 00:03:50.829 --> 00:03:55.281
-那就好那就好
+很好，那个很好。
 That's fine, that's fine, that one's fine.
 
 61
 00:03:55.281 --> 00:03:56.250
-没问题的
+那个还好。
 That one's okay.
 
 62
 00:03:57.289 --> 00:04:00.288
-在这里， this.getStudentFromId ，这是一种方法。
-Here we go, this.getStudentFromId,
-that's a method.
+在这里，this.getStudentFromId，这是一个方法。
+Here we go, this.getStudentFromId, that's a method.
 
 63
 00:04:00.288 --> 00:04:03.840
-所以它会失去它的束缚，所以我们需要一个点来约束它。
-So it's gonna lose its this binding,
-so we need a dot bind this.
+所以它会失去这个绑定，所以我们需要一个点绑定这个。
+So it's gonna lose its this binding, so we need a dot bind this.
 
 64
 00:04:09.431 --> 00:04:14.294
->> 凯尔 - 辛普森: 然后在这里，用 sortByName 排序
-&gt;&gt; Kyle Simpson: And then same thing here,
-sorting with the sortByName and
+&gt；&gt；Kyle Simpson：然后这里也是一样的，用sortByName和
+&gt;&gt; Kyle Simpson: And then same thing here, sorting with the sortByName and
 
 65
 00:04:14.294 --> 00:04:17.350
-然后用 printRecord 打印。
+然后用printRecord打印。
 then printing with printRecord.
 
 66
 00:04:17.350 --> 00:04:19.468
-那些需要束缚的人
+那些需要被捆绑。
 Those need to be bound.
 
 67
 00:04:19.468 --> 00:04:24.389
-再接着一个，需要装订。
-And then another one,
-needToEnroll needs to be bound.
+然后是另一个，NeedToEnroll需要绑定。
+And then another one, needToEnroll needs to be bound.
 
 68
 00:04:24.389 --> 00:04:29.014
-getStudentId 需要绑定，
+getStudentId需要绑定，
 And getStudentId needs to be bound,
 
 69
 00:04:29.014 --> 00:04:33.336
-> > Kyle Simpson: notYetPaid 需要
-and,
-&gt;&gt; Kyle Simpson: notYetPaid needs to be
+并且，&gt；&gt；Kyle Simpson：NotYetPaid需要是
+and, &gt;&gt; Kyle Simpson: notYetPaid needs to be
 
 70
 00:04:33.336 --> 00:04:34.279
-绑定。
+束缚。
 bound.
 
 71
 00:04:34.279 --> 00:04:38.300
-应该是这样的
+应该就是这样。
 And that should be it.
 
 72
 00:04:38.300 --> 00:04:41.656
-好吧我们去处理那个工厂的功能
-Okay, so
-let's get rid of that factory function,
+好的，让我们摆脱工厂的功能，
+Okay, so let's get rid of that factory function,
 
 73
 00:04:41.656 --> 00:04:44.319
-我们现在已经做得很好了
+因为我们现在已经做得很好了。
 cuz we're very much done with that now.
 
 74
 00:04:49.939 --> 00:04:52.999
->> Kyle Simpson: 现在，我们具有此 deepJS 对象，
-&gt;&gt; Kyle Simpson: Now that
-we have this deepJS object,
+&gt；&gt；Kyle Simpson：现在我们有了这个Deep JS对象，
+&gt;&gt; Kyle Simpson: Now that we have this deepJS object,
 
 75
 00:04:52.999 --> 00:04:56.850
-这些电话应该是一样的
+这些呼叫应该基本相同。
 these calls should basically be the same.
 
 76
 00:04:56.850 --> 00:05:01.918
-因此，如果我们要运行这个代码，我们还是应该得到同样的打印输出。
-So if we were to run this code, we should
-still end up getting the same printout.
+因此，如果我们运行这段代码，我们最终仍然会得到相同的打印输出。
+So if we were to run this code, we should still end up getting the same printout.
 
 77
 00:05:01.918 --> 00:05:07.180
-所以这只是一个实施的改变，而不是外部的变化。
-So this was just an implementation change,
-not an outside change.
+因此，这只是一个实现更改，而不是外部更改。
+So this was just an implementation change, not an outside change.
 
 78
 00:05:07.180 --> 00:05:13.334
-所以让我们试着， >> 凯尔 - 辛普森:
-So let's just try,
-&gt;&gt; Kyle Simpson: Running
+所以让我们试试，&gt；&gt；Kyle Simpson：Running
+So let's just try, &gt;&gt; Kyle Simpson: Running
 
 79
 00:05:13.334 --> 00:05:16.100
-在我们的 RunJS 环境中。
+在我们的RunJS环境中。
 over here in our RunJS environment.
 
 80
 00:05:23.870 --> 00:05:27.302
->> Kyle Simpson: Uhh，我犯了一个错误，我在哪里打电话?
-&gt;&gt; Kyle Simpson: Uh-oh,
-I made a mistake, where did I call?
+&gt；&gt；Kyle Simpson：啊-哦，我犯了一个错误，我打到哪里了？
+&gt;&gt; Kyle Simpson: Uh-oh, I made a mistake, where did I call?
 
 81
 00:05:27.302 --> 00:05:32.720
-是啊我忘了别这样叫 defineWorkshop
-Yeah, I forgot,
-can't call defineWorkshop like that, oops.
+是的，我忘了，不能像那样调用define工作坊，哦。
+Yeah, I forgot, can't call defineWorkshop like that, oops.
 
 82
 00:05:32.720 --> 00:05:34.985
-所以让我回去吧
+所以让我回去吧。
 So let me go back.
 
 83
 00:05:41.920 --> 00:05:45.461
->> Kyle Simpson: 请将其取出，并在其中放置分号。
-&gt;&gt; Kyle Simpson: Have to take that out and
-put a semicolon there.
+&gt；&gt；Kyle Simpson：必须把它拿出来，在那里放一个分号。
+&gt;&gt; Kyle Simpson: Have to take that out and put a semicolon there.
 
 84
 00:05:47.608 --> 00:05:49.060
->> 凯尔 - 辛普森: 现在让我们看看这是否有用。
-&gt;&gt; Kyle Simpson: Now
-let's see if that works.
+&gt；&gt；Kyle Simpson：现在让我们看看这是否有效。
+&gt;&gt; Kyle Simpson: Now let's see if that works.
 
 85
 00:05:56.000 --> 00:05:58.019
->> 凯尔 - 辛普森: 还有我们的打印输出。
-&gt;&gt; Kyle Simpson: And there we go,
-there's our printout.
+&gt；&gt；Kyle Simpson：这就是我们的打印输出。
+&gt;&gt; Kyle Simpson: And there we go, there's our printout.
 
 86
 00:06:00.728 --> 00:06:05.886
->> Kyle Simpson: 因此，我们重构这一感知的问题
-&gt;&gt; Kyle Simpson: So questions on
-our refactoring to that this aware
+&gt；&gt；Kyle Simpson：关于我们重构这个意识的问题
+&gt;&gt; Kyle Simpson: So questions on our refactoring to that this aware
 
 87
 00:06:05.886 --> 00:06:10.439
-编码样式，此名称空间模式?
+编码风格，这种命名空间模式？
 style of coding, this namespace pattern?
 
 88
 00:06:11.540 --> 00:06:17.824
->> 扬声器 2: 我猜测对象设计类型，对象创建模式，
-&gt;&gt; Speaker 2: I guess given the kind of
-object design, object create pattern,
+&gt；&gt；演讲者2：我猜给定对象设计，对象创建模式，
+&gt;&gt; Speaker 2: I guess given the kind of object design, object create pattern,
 
 89
 00:06:17.824 --> 00:06:22.738
-你会以务实的态度
-would you pragmatically
-expect to have namespaced
+您会实际地期望有名称空间吗
+would you pragmatically expect to have namespaced
 
 90
 00:06:22.738 --> 00:06:27.899
-在你的实践中使用这种多种方法的对象吗 ?
-objects with this many
-methods in your own practice?
+在你自己的实践中有这么多方法的物体？
+objects with this many methods in your own practice?
 
 91
 00:06:27.899 --> 00:06:30.629
-还是你想把它进一步分解 ?
+或者你会试着进一步分解它吗？
 Or would you try to break it down further?
 
 92
 00:06:30.629 --> 00:06:34.463
->> 凯尔 - 辛普森: 是的，我的意思是，一般来说，如果我要创建一个对象，
-&gt;&gt; Kyle Simpson: Yeah, I mean, generally
-speaking, if I'm gonna create an object,
+&gt；&gt；Kyle Simpson：是的，我的意思是，一般来说，如果我要创建一个对象，
+&gt;&gt; Kyle Simpson: Yeah, I mean, generally speaking, if I'm gonna create an object,
 
 93
 00:06:34.463 --> 00:06:38.689
-就像个像个 namespaced 一样的东西我唯一能做的就是
-like a namespaced kind of a thing,
-the only reason I'm gonna go that approach
+就像一个命名空间的东西，唯一的原因是我会采用这种方法
+like a namespaced kind of a thing, the only reason I'm gonna go that approach
 
 94
 00:06:38.689 --> 00:06:43.045
-而不是模块式的原因是我知道我有两个或三个对象
-instead of going the module approach is
-because I know I have two or three objects
+而不是使用模块方法是因为我知道我有两个或三个对象
+instead of going the module approach is because I know I have two or three objects
 
 95
 00:06:43.045 --> 00:06:47.425
-我想通过一个原型链把它们联系起来让他们彼此合作
-that I want to link through a prototype
-chain and have them work with each other.
+我想通过一个原型链连接起来，让他们彼此合作。
+that I want to link through a prototype chain and have them work with each other.
 
 96
 00:06:47.425 --> 00:06:52.000
-所以我要试着把这些东西分开
-So I'm gonna try to have those objects
-have their properly separated out
+所以我会试着把这些物体适当地分开
+So I'm gonna try to have those objects have their properly separated out
 
 97
 00:06:52.000 --> 00:06:56.350
-而不是把一个巨大的东西和厨房的水池
-behaviors rather than having one
-giant thing with the kitchen sink of
+行为，而不是有一个巨大的东西与厨房水槽
+behaviors rather than having one giant thing with the kitchen sink of
 
 98
 00:06:56.350 --> 00:06:57.840
-所有东西都在其中
+所有东西都在里面。
 everything in it.
 
 99
 00:06:57.840 --> 00:07:02.930
-我要用这三个单独的物体
-I'm gonna try these three separate
-objects that each do their own thing and
+我将尝试这三个独立的对象，每个对象都做自己的事情
+I'm gonna try these three separate objects that each do their own thing and
 
 100
 00:07:02.930 --> 00:07:06.153
-它们几乎是通过调用上下文组成的。
-they virtually compose
-through that call context.
+它们实际上是通过调用上下文组成的。
+they virtually compose through that call context.
 
 101
 00:07:07.870 --> 00:07:12.904
-好吧我希望这方面的编码能有点启迪
-Okay, well, that hopefully was a bit
-enlightening on the this-aware coding,
+好吧，好吧，希望这对这个意识编码有一点启发，
+Okay, well, that hopefully was a bit enlightening on the this-aware coding,
 
 102
 00:07:12.904 --> 00:07:15.802
-还有一些你可以遇到的问题
-and some of the problems
-that you can run into.
+还有一些你可能会遇到的问题。
+and some of the problems that you can run into.
 
 103
 00:07:15.802 --> 00:07:19.521
-它们不仅仅是异步回调和事件处理程序，
-They're not just with asynchronous
-callbacks and event handlers,
+它们不仅具有异步回调和事件处理程序，
+They're not just with asynchronous callbacks and event handlers,
 
 104
 00:07:19.521 --> 00:07:23.048
-即使你把你的那些冷酷无情的东西都变成了
-even those callbacks that you
-pass into things like array.map,
+即使是那些传递给array.map之类的回调，
+even those callbacks that you pass into things like array.map,
 
 105
 00:07:23.048 --> 00:07:25.309
-你得担心这个束缚
+你得担心这个装订。
 you have to worry about the this binding.
 
 106
 00:07:25.309 --> 00:07:26.819
-所以你得小心点
+所以你要小心。
 So you need to be careful.
 
 107
 00:07:26.819 --> 00:07:33.120
-我想说的是我在这里所做的捆绑使用的总量
-I would say on the whole the amount of
-bind usage that I had to do here was
+我想说，总的来说，我在这里必须做的绑定用法的数量是
+I would say on the whole the amount of bind usage that I had to do here was
 
 108
 00:07:33.120 --> 00:07:37.670
-在我之前说过的边界线上，这种编码方式是不有用的。
-on the borderline to where I would have
-said, this style of coding is not useful.
+在我可能会说的边界上，这种风格的编码是没有用处的。
+on the borderline to where I would have said, this style of coding is not useful.
 
 109
 00:07:37.670 --> 00:07:41.350
-把这个点放在所有东西面前是非常详细的。
-It certainly was very verbose to put
-this dot in front of everything.
+把这个点放在所有东西前面肯定是非常冗长的。
+It certainly was very verbose to put this dot in front of everything.
 
 110
 00:07:41.350 --> 00:07:44.340
-而且我很可能支持
-And I probably would have
-favored the module pattern for
+我可能更喜欢模块模式
+And I probably would have favored the module pattern for
 
 111
 00:07:44.340 --> 00:07:46.610
-这种特殊的代码是吗
+这种特殊的密码，对吗？
 this particular kind of code, yes?
 
 112
 00:07:46.610 --> 00:07:48.468
->> 演讲者 3: 对此有约束力的规则是什么 ?
-&gt;&gt; Speaker 3: What's the rule for
-binding this?
+&gt；&gt；扬声器3：绑定这个的规则是什么？
+&gt;&gt; Speaker 3: What's the rule for binding this?
 
 113
 00:07:48.468 --> 00:07:52.569
-有时它是用它有时也不是
-Cuz sometimes it's using it and
-sometimes it isn't.
+因为有时它在使用它，有时它不是。
+Cuz sometimes it's using it and sometimes it isn't.
 
 114
 00:07:52.569 --> 00:07:53.879
->> 凯尔 - 辛普森: 是的，这的确是个好问题。
-&gt;&gt; Kyle Simpson: Yeah,
-that's actually a good question.
+&GT；&GT；Kyle Simpson：是的，这实际上是一个好问题。
+&gt;&gt; Kyle Simpson: Yeah, that's actually a good question.
 
 115
 00:07:53.879 --> 00:07:55.360
-这里有几处地方
+所以有几个地方。
 So there's a couple of places.
 
 116
 00:07:55.360 --> 00:07:57.889
-我很高兴你把这个给我了有几个地方
-I'm glad you brought that up,
-there's a couple of places I should have
+我很高兴你提起这件事，有几个地方我应该
+I'm glad you brought that up, there's a couple of places I should have
 
 117
 00:07:57.889 --> 00:07:59.930
-回去说我们真的需要吗
-gone back and said,
-do we actually need it?
+回去说，我们真的需要它吗？
+gone back and said, do we actually need it?
 
 118
 00:07:59.930 --> 00:08:01.850
-例如， sortByName，
+例如，sortByName，
 So for example, the sortByName,
 
 119
 00:08:01.850 --> 00:08:06.579
-我们不需要它因为它没有在它前面提到这个点
-we don't need it because it doesn't make
-a reference to a this dot in front of it.
+我们不需要它，因为它不会引用前面的这个点。
+we don't need it because it doesn't make a reference to a this dot in front of it.
 
 120
 00:08:06.579 --> 00:08:10.041
-所以这实际上是不必要的，和 printRecord的相同。
-So here, that was actually unnecessary,
-and the same thing with printRecord.
+所以在这里，这实际上是不必要的，printRecord也是如此。
+So here, that was actually unnecessary, and the same thing with printRecord.
 
 121
 00:08:10.041 --> 00:08:13.790
-这是不必要的，因为我们没有这方面的任何参考资料。
-It was unnecessary there because we
-don't have any this references in it.
+这是不必要的，因为我们没有任何这方面的参考。
+It was unnecessary there because we don't have any this references in it.
 
 122
 00:08:14.889 --> 00:08:16.920
-所以说的话，你的问题的答案是，
-So in order words,
-the answer to your question is,
+所以按照顺序，你问题的答案是，
+So in order words, the answer to your question is,
 
 123
 00:08:16.920 --> 00:08:21.189
-仅当方法是此感知功能时才需要绑定此功能。
-you only need to bind this if
-the method is a this-aware function.
+只有当方法是this-aware函数时，才需要绑定它。
+you only need to bind this if the method is a this-aware function.
 
 124
 00:08:21.189 --> 00:08:24.810
-我们在这里有一些功能在命名空间上
-We have a few functions on here
-that are on the namespace but
+我们在这里有一些关于命名空间的函数，但是
+We have a few functions on here that are on the namespace but
 
 125
 00:08:24.810 --> 00:08:27.769
-不知道，所以不需要装订。
-are not this-aware, and so
-they don't need a binding.
+没有意识到这一点，所以他们不需要绑定。
+are not this-aware, and so they don't need a binding.

@@ -2,106 +2,93 @@ WEBVTT
 
 1
 00:00:00.100 --> 00:00:01.639
->> 凯尔 - 辛普森: 让我们看看这个例子。
-&gt;&gt; Kyle Simpson: Let's
-look at this example.
+&gt；&gt；Kyle Simpson：让我们看看这个例子。
+&gt;&gt; Kyle Simpson: Let's look at this example.
 
 2
 00:00:03.399 --> 00:00:06.599
-我指的是变量老师和
+我指的是变量教师和
 I am referring to the variable teacher and
 
 3
 00:00:06.599 --> 00:00:10.400
-那我就叫 " 老师 " 了好吗
-then I am calling
-the otherTeacher function, okay?
+然后我调用other Teacher函数，好吗？
+then I am calling the otherTeacher function, okay?
 
 4
 00:00:10.400 --> 00:00:11.939
-大家都看到了吗
+大家都看到了吗？
 Everybody see that?
 
 5
 00:00:11.939 --> 00:00:16.074
-现在还没有定义 other 老师的功能，所以
-Now, the otherTeacher function
-hasn't been defined yet, so
+现在，other Teacher函数还没有定义，所以
+Now, the otherTeacher function hasn't been defined yet, so
 
 6
 00:00:16.074 --> 00:00:21.539
-" other教师节 " 功能已挂起，可供我们使用。
-that otherTeacher function has hoisted,
-it's available for us to use.
+另一个Teacher函数已经挂起了，我们可以使用了。
+that otherTeacher function has hoisted, it's available for us to use.
 
 7
 00:00:21.539 --> 00:00:23.225
-第 5 行会发生什么 ?
+5号线上会发生什么？
 What's going to happen on line 5?
 
 8
 00:00:23.225 --> 00:00:26.570
->> 扬声器 2: [INAUDIBLE]。
+&gt；&gt；扬声器2：[听不到]。
 &gt;&gt; Speaker 2: [INAUDIBLE].
 
 9
 00:00:26.570 --> 00:00:29.769
->> 凯尔 - 辛普森: 如果你只考虑提升，你就有了
-&gt;&gt; Kyle Simpson: If you're thinking about
-this only in terms of hoisting, you have
+&gt；&gt；Kyle Simpson：如果你只从吊装的角度考虑这个问题，你已经
+&gt;&gt; Kyle Simpson: If you're thinking about this only in terms of hoisting, you have
 
 10
 00:00:29.769 --> 00:00:36.399
-提醒自己，第 6 行的 var 老师已提升到第 4.5 行。
-to remind yourself that the var teacher
-from line 6 got hoisted up to line 4.5.
+提醒自己第6行的var老师被提升到4.5行。
+to remind yourself that the var teacher from line 6 got hoisted up to line 4.5.
 
 11
 00:00:36.399 --> 00:00:40.640
-因此，在第 5 行上打印的内容实际上是未定义的。
-And therefore what's gonna get printed
-on line 5 is actually undefined.
+因此，在第5行打印的内容实际上是未定义的。
+And therefore what's gonna get printed on line 5 is actually undefined.
 
 12
 00:00:42.289 --> 00:00:44.710
-所以这就是为什么即使有几行代码
-So that's why even with
-the couple of lines of code,
+所以这就是为什么即使只有几行代码，
+So that's why even with the couple of lines of code,
 
 13
 00:00:44.710 --> 00:00:48.729
-我们可以骗过你如果你不习惯把这个当作两遍
-we can trick you if you're not used to
-thinking about this as a two pass system.
+我们可以欺骗你，如果你不习惯认为这是一个两通系统。
+we can trick you if you're not used to thinking about this as a two pass system.
 
 14
 00:00:50.070 --> 00:00:52.418
-如果你把它想象成两道通行证系统
-If you think about it
-as a two pass system,
+如果你把它想成两遍系统，
+If you think about it as a two pass system,
 
 15
 00:00:52.418 --> 00:00:55.450
-显然蓝桶里有个 var 老师
-obviously there's a var
-teacher in the blue bucket.
+很明显蓝色的桶里有个var老师。
+obviously there's a var teacher in the blue bucket.
 
 16
 00:00:55.450 --> 00:00:58.173
-有个蓝色大理石在老师之前叫老师
-There's a blue marble called teacher
-before otherTeacher ever has
+有一颗蓝色的大理石叫老师，其他老师从来没有
+There's a blue marble called teacher before otherTeacher ever has
 
 17
 00:00:58.173 --> 00:00:58.944
-有机会逃跑
+逃跑的机会。
 the chance to run.
 
 18
 00:01:00.988 --> 00:01:05.027
->> 凯尔 - 辛普森: 让我们来谈谈 var 提升和
-&gt;&gt; Kyle Simpson: So let's talk about
-the difference between var hoisting and
+&gt；&gt；Kyle Simpson：那么让我们谈谈var提升和
+&gt;&gt; Kyle Simpson: So let's talk about the difference between var hoisting and
 
 19
 00:01:05.027 --> 00:01:07.129
@@ -110,129 +97,113 @@ function hoisting.
 
 20
 00:01:07.129 --> 00:01:09.430
-因为有人会告诉你所有吊装都很糟糕
-Because some will tell you
-that all hoisting is bad, and
+因为有些人会告诉你，所有的吊装都是不好的，而且
+Because some will tell you that all hoisting is bad, and
 
 21
 00:01:09.430 --> 00:01:12.319
-我要告诉你，我认为有些吊重是有用的，有些则没有。
-I will tell you that I think some
-hoisting is useful and some is not.
+我会告诉你，我认为有些吊装是有用的，而有些则不是。
+I will tell you that I think some hoisting is useful and some is not.
 
 22
 00:01:13.430 --> 00:01:17.140
-在第 3 行的范围内，我将在范围内提前分配变量，然后
-On line 3, I am assigning to a variable
-earlier in the scope then when
+在第3行，我在范围的前面赋值给一个变量，然后当
+On line 3, I am assigning to a variable earlier in the scope then when
 
 23
 00:01:17.140 --> 00:01:18.118
-这都是 var 声明的
+已经声明了。
 it's been var declared.
 
 24
 00:01:19.829 --> 00:01:23.162
-我从未见过一个无条件的人
-I have never met a person that
-would say unconditionally,
+我从来没有见过一个人会无条件地说，
+I have never met a person that would say unconditionally,
 
 25
 00:01:23.162 --> 00:01:26.844
-我觉得这是个很棒的编码方式，就这么做。
-I think that's a great coding style,
-just do that all the time.
+我认为这是一个伟大的编码风格，只要一直这样做。
+I think that's a great coding style, just do that all the time.
 
 26
 00:01:26.844 --> 00:01:30.688
-几乎所有人都同意这不是一个好主意
-Almost universally,
-people will agree it's not a great idea.
+几乎所有人都会同意这不是一个好主意。
+Almost universally, people will agree it's not a great idea.
 
 27
 00:01:30.688 --> 00:01:35.533
-我只在我的编码中发现了一个例外
-I've only ever found one exception in
-all of my coding where that is something
+在我所有的编码中，我只发现了一个异常，那就是
+I've only ever found one exception in all of my coding where that is something
 
 28
 00:01:35.533 --> 00:01:36.807
-我想做的
+我想做的事。
 that I wanted to do.
 
 29
 00:01:36.807 --> 00:01:39.920
-而且比我们在这里俯冲得更细致
-And it's more nuanced than
-what we'll dive into here.
+而且它比我们在这里要深入的内容更加微妙。
+And it's more nuanced than what we'll dive into here.
 
 30
 00:01:39.920 --> 00:01:44.354
-几乎是通用的，我不想在先前的范围内分配变量。
-Almost universally, I don't want to assign
-the variables earlier in a scope than
+几乎所有情况下，我都不想在作用域中赋值变量早于
+Almost universally, I don't want to assign the variables earlier in a scope than
 
 31
 00:01:44.354 --> 00:01:45.908
-在我宣布他们的地方
+在那里我宣布了他们。
 where I've declared them.
 
 32
 00:01:45.908 --> 00:01:48.177
-因此，我同意大多数人的意见。
-So I would agree with the predominant
-majority in that case.
+因此，在这种情况下，我会同意大多数人的意见。
+So I would agree with the predominant majority in that case.
 
 33
 00:01:48.177 --> 00:01:51.950
-这很罕见，但我同意这件事的大多数，好吗 ?
-That's pretty rare, but I agree with
-the majority in that case, okay?
+这很少见，但在这种情况下，我同意大多数人的看法，好吗？
+That's pretty rare, but I agree with the majority in that case, okay?
 
 34
 00:01:51.950 --> 00:01:54.409
-那第 8 行呢 ?
+但是8号线呢？
 But what about line 8?
 
 35
 00:01:54.409 --> 00:01:57.891
-这个代码坏了因为我叫get老师
-Is this code so broken because I'm
-calling getTeacher even though
+这个代码是不是因为我要调用getTeacher而被破坏
+Is this code so broken because I'm calling getTeacher even though
 
 36
 00:01:57.891 --> 00:02:00.263
-功能声明在底部吗
+函数声明在底部？
 the function declaration's at the bottom?
 
 37
 00:02:00.263 --> 00:02:03.888
-很多人熟悉，或者可以，或者
-Many more people are familiar with,
-or okay with, or
+更多的人是熟悉的，或者可以接受的，或者
+Many more people are familiar with, or okay with, or
 
 38
 00:02:03.888 --> 00:02:09.461
-该功能提升的感觉舒适，不存在变量的浪费。
-feeling comfortable with the function
-hoisting than with the variable wasting.
+与变量浪费相比，对函数提升感到舒服。
+feeling comfortable with the function hoisting than with the variable wasting.
 
 39
 00:02:09.461 --> 00:02:13.099
-所以我想说这就看情况了
+所以我会说这要看情况。
 So I would say it kinda depends.
 
 40
 00:02:13.099 --> 00:02:17.219
-你可能认为功能提升是不好的，但你可能认为是可以的。
-You might think that function hoisting
-is bad, but you might think is okay.
+您可能认为函数提升不好，但您可能认为还可以。
+You might think that function hoisting is bad, but you might think is okay.
 
 41
 00:02:17.219 --> 00:02:21.576
-我认为这不仅是好的，而且对
-And I happen to think not only is it okay,
-but its extremely useful for
+我碰巧认为它不仅可以，而且非常有用
+And I happen to think not only is it okay, but its extremely useful for
 
 42
 00:02:21.576 --> 00:02:22.864
@@ -241,9 +212,8 @@ code readability.
 
 43
 00:02:22.864 --> 00:02:26.735
-能够将可执行代码放置在顶部非常有用，并且
-It's extremely useful to be able to
-put the executable code at the top and
+能够将可执行代码放在顶部和
+It's extremely useful to be able to put the executable code at the top and
 
 44
 00:02:26.735 --> 00:02:28.330

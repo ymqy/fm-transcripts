@@ -2,193 +2,168 @@ WEBVTT
 
 1
 00:00:00.320 --> 00:00:04.480
->> 凯尔 - 辛普森: 让我们谈谈运动的第二部分。
-&gt;&gt; Kyle Simpson: Let's talk
-about part two of the exercise.
+&gt；&gt；Kyle Simpson：让我们谈谈练习的第二部分。
+&gt;&gt; Kyle Simpson: Let's talk about part two of the exercise.
 
 2
 00:00:04.480 --> 00:00:07.620
-所以如果我们从这个问题开始
-So if we're starting from
-this as our solution,
+所以如果我们从这个开始作为我们的解决方案，
+So if we're starting from this as our solution,
 
 3
 00:00:09.960 --> 00:00:15.109
-我们可以开始转换这些正则函数是声明或
-we can start to convert these regular
-functions that are declarations or
+我们可以开始转换这些常规函数，这些函数是声明或
+we can start to convert these regular functions that are declarations or
 
 4
 00:00:15.109 --> 00:00:18.070
-表达式为箭头函数。
+表达式转换为箭头函数。
 expressions into arrow functions.
 
 5
 00:00:18.070 --> 00:00:20.649
-使用我们了解的各种错误函数语法。
-Using the various things we know
-about error functions syntax.
+使用我们知道的关于错误函数语法的各种东西。
+Using the various things we know about error functions syntax.
 
 6
 00:00:20.649 --> 00:00:26.795
-例如，可以将来自标识的学生创建为
-So for example,
-get students from ID could be created as
+因此，例如，Get Students from ID可以创建为
+So for example, get students from ID could be created as
 
 7
 00:00:26.795 --> 00:00:32.298
-getStudentFromId ，并且将采用该方法。
-getStudentFromId, and
-it's gonna taken that.
+getStudentFromId，它将采取这一点。
+getStudentFromId, and it's gonna taken that.
 
 8
 00:00:32.298 --> 00:00:39.012
-它将返回学生的 studentRecords.find()，
-And it's going to return
-the student studentRecords.find(),
+它将返回Student StudentRecords.find()，
+And it's going to return the student studentRecords.find(),
 
 9
 00:00:39.012 --> 00:00:47.549
-这是另一个函数表达式，我们想用一个箭头函数来做。
-and here's another function expression
-that we wanna do with an arrow function.
+这是另一个函数表达式，我们想用箭头函数来做。
+and here's another function expression that we wanna do with an arrow function.
 
 10
 00:00:47.549 --> 00:00:52.801
-这就是我们的记录
+以便将其中一个记录下来，且
 So that one is record, and
 
 11
 00:00:52.801 --> 00:00:57.582
-那么这个表情。
+然后这个表情。
 then this expression.
 
 12
 00:01:01.179 --> 00:01:02.100
-这就是我们如何找到它的方法。
+这就是我们找到它的方式。
 And that's how we find it.
 
 13
 00:01:02.100 --> 00:01:03.859
-这就是我们的定义
+这就是我们对
 So, that's our definition for
 
 14
 00:01:03.859 --> 00:01:08.049
-与独立功能相比较的箭头函数。
-the arrow function as compared
-to the stand alone function.
+箭头功能与独立功能相比。
+the arrow function as compared to the stand alone function.
 
 15
 00:01:17.120 --> 00:01:20.248
-我们会用打印记录来做同样的技术
-We'll do the same technique
-with print records.
+我们将对打印记录执行相同的技术。
+We'll do the same technique with print records.
 
 16
 00:01:28.067 --> 00:01:31.171
->> 凯尔 - 辛普森:
-&gt;&gt; Kyle Simpson: And
-rather than making a function block,
+&gt；&gt；Kyle Simpson：并且不是制作功能块，
+&gt;&gt; Kyle Simpson: And rather than making a function block,
 
 17
 00:01:31.171 --> 00:01:36.849
-我可以看到这三种功能都是可以猜到的。
-I can actually see that all three
-of these functions are chainable.
+我可以看到这三个函数都是可链接的。
+I can actually see that all three of these functions are chainable.
 
 18
 00:01:36.849 --> 00:01:41.346
-由于排序将保留数组，并且数组将为局部数组，
-Since sort will retain the array and
-since the array will be a local array,
+由于排序将保留该数组并且由于该数组将是本地数组，
+Since sort will retain the array and since the array will be a local array,
 
 19
 00:01:41.346 --> 00:01:44.618
-这个变异在这个特殊的情况下是不重要的
-the mutation won't matter
-in this particular case.
+在这种特殊情况下，突变不会有任何影响。
+the mutation won't matter in this particular case.
 
 20
 00:01:44.618 --> 00:01:49.347
-所以我就可以通过简单的说
-So I can take advantage
-of that by simply saying
+所以我可以通过简单地说
+So I can take advantage of that by simply saying
 
 21
 00:01:49.347 --> 00:01:56.399
-recordeds.map(getStudentFromId) ，然后我可以说 .sort。
-recordids.map(getStudentFromId), and
-then I can say .sort.
+map(GetStudentFromId)，然后我可以说.sort。
+recordids.map(getStudentFromId), and then I can say .sort.
 
 22
 00:01:56.399 --> 00:02:02.909
-在这里，我们还有一个功能，我们应该转换成一个数组函数。
-And here, we have another function that
-we should convert to an array function.
+在这里，我们有另一个函数，我们应该将它转换为数组函数。
+And here, we have another function that we should convert to an array function.
 
 23
 00:02:02.909 --> 00:02:06.599
-但这整个 If， thelse ， if thing as a th三元，所以
-But this whole If, else,
-if thing can be done as a ternary, so
+但是这整个if，else，if这件事可以用三元来做，所以
+But this whole If, else, if thing can be done as a ternary, so
 
 24
 00:02:06.599 --> 00:02:07.780
-我们不需要一个功能团体
+我们不需要函数体。
 we don't need a function body.
 
 25
 00:02:07.780 --> 00:02:15.990
-因此，让我们将它作为记录 d1 和 record2 中的箭头函数进行写入。
-So let's write it as the arrow function
-that takes in record1 and record2.
+所以让我们把它写成接受record1和record2的箭头函数。
+So let's write it as the arrow function that takes in record1 and record2.
 
 26
 00:02:17.370 --> 00:02:24.560
-我们会使用三元，我将全部写在一行上，原因是为什么不这样做。
-And we will use a ternary and I will
-write it all on one line because why not.
+我们将使用三元，我将把它全部写在一行上，因为为什么不呢。
+And we will use a ternary and I will write it all on one line because why not.
 
 27
 00:02:24.560 --> 00:02:27.840
-开玩笑的你应该会笑的
-That was a joke,
-you were supposed to laugh at that.
+那是个玩笑，你应该对此发笑的。
+That was a joke, you were supposed to laugh at that.
 
 28
 00:02:27.840 --> 00:02:36.170
-Record1.name 小于 Record2.name ，然后返回 -1。
-Record1.name is less than Record2.name,
-then we return -1.
+Record1.name小于Record2.name，则返回-1。
+Record1.name is less than Record2.name, then we return -1.
 
 29
 00:02:36.170 --> 00:02:43.849
-否则 (record1.name > record2.name)，
+否则(record1.name&gt；record2.name)，
 Otherwise (record1.name &gt; record2.name),
 
 30
 00:02:43.849 --> 00:02:47.780
-否则我们将返回 1 ，否则返回 0。
+我们返回1，否则返回0。
 we return 1 otherwise 0.
 
 31
 00:02:47.780 --> 00:02:50.870
-这就是我们所谓的 " 错误 " 的功能。
-So that's our error function
-that we called the sort on.
+这就是我们调用排序的错误函数。
+So that's our error function that we called the sort on.
 
 32
 00:02:50.870 --> 00:02:54.323
-然后我们再给他们打个电话
-And then finally we call the .forEach,
-and again,
+最后我们调用.forEach，再一次，
+And then finally we call the .forEach, and again,
 
 33
 00:02:54.323 --> 00:02:59.280
-我们有此功能正在接收记录和调用控制台日志。
-we have this Function which is receiving
-a record and calling console log.
+我们有这个函数，它接收记录并调用控制台日志。
+we have this Function which is receiving a record and calling console log.
 
 34
 00:02:59.280 --> 00:03:01.246
@@ -197,166 +172,147 @@ Since console log is a function call,
 
 35
 00:03:01.246 --> 00:03:05.560
-它适合作为一种表达方式，意味着我们不需要一个箭头函数体。
-it's suitable as an expression which means
-we don't need an arrow function body.
+它适合作为表达式，这意味着我们不需要箭头函数体。
+it's suitable as an expression which means we don't need an arrow function body.
 
 36
 00:03:05.560 --> 00:03:10.582
-所以我们可以简单地说记录然后调用 console.log
-So we can simply say record and
-then call the console.log,
+所以我们可以简单地说记录，然后调用console.log，
+So we can simply say record and then call the console.log,
 
 37
 00:03:10.582 --> 00:03:14.709
-既然我懒了我就把它复制了
-and, since I'm lazy,
-I'm just gonna copy it.
+而且，因为我很懒，我只是复制它。
+and, since I'm lazy, I'm just gonna copy it.
 
 38
 00:03:14.709 --> 00:03:15.558
-我不想再重新输入
+我不想再打一遍。
 I don't wanna retype it.
 
 39
 00:03:20.170 --> 00:03:23.588
->> Kyle Simpson: 还有我们的箭头函数表示打印记录。
-&gt;&gt; Kyle Simpson: And there is our arrow
-function representation of print records.
+&gt；&gt；Kyle Simpson：这是我们的箭头函数表示的打印记录。
+&gt;&gt; Kyle Simpson: And there is our arrow function representation of print records.
 
 40
 00:03:30.649 --> 00:03:39.020
->> 凯尔辛普森: 助学生报名 >> 凯尔 - 辛普森:
-&gt;&gt; Kyle Simpson: Paid students to enroll
-&gt;&gt; Kyle Simpson: It
+&gt；&gt；Kyle Simpson：付费学生注册&gt；&gt；Kyle Simpson：it
+&gt;&gt; Kyle Simpson: Paid students to enroll &gt;&gt; Kyle Simpson: It
 
 41
 00:03:39.020 --> 00:03:42.370
-没有收到任何东西所以它是一个箭式功能
-doesn't receive anything,
-so it's an arrow function.
+不会收到任何东西，所以它是一个箭头函数。
+doesn't receive anything, so it's an arrow function.
 
 42
 00:03:42.370 --> 00:03:47.879
-再次，我可以看到，我最终要做的是返回一个数组。
-And again, I can see that what I'm
-ultimately doing is returning an array.
+同样，我可以看到我最终要做的是返回一个数组。
+And again, I can see that what I'm ultimately doing is returning an array.
 
 43
 00:03:47.879 --> 00:03:52.430
-所以我就可以简单的回到那个数组，然后
-So I can just simply return that array,
-and then have
+所以我只需返回数组，然后
+So I can just simply return that array, and then have
 
 44
 00:03:52.430 --> 00:03:57.550
-包含在数组中通过链接将发生的内容。
-Included in the array what's
-going to happen through chaining.
+包括在数组中，通过链接将会发生什么。
+Included in the array what's going to happen through chaining.
 
 45
 00:03:57.550 --> 00:04:01.319
-所以，我要把这个表达出来。
-So, that and
-I'm going to spread out this expression.
+所以，我要展开这个表达式。
+So, that and I'm going to spread out this expression.
 
 46
 00:04:01.319 --> 00:04:09.169
-此表达式将以 studentRecords.filter 开头，并且
-And this expression will start
-with studentRecords.filter and
+这个表达式将以StudentRecords.filter和
+And this expression will start with studentRecords.filter and
 
 47
 00:04:09.169 --> 00:04:15.560
-这里是另一个可以是箭头函数的在线函数表达式。
-here we are with another online function
-expression that can be arrow function.
+这里我们使用另一个在线函数表达式，它可以是箭头函数。
+here we are with another online function expression that can be arrow function.
 
 48
 00:04:15.560 --> 00:04:18.629
-所以我会写一个箭头函数
+所以我会写一个箭头函数。
 So I'll write an arrow function.
 
 49
 00:04:18.629 --> 00:04:24.430
-从记录中开始我就会把它复制了
-Takes in record and since I'm being lazy,
-I'm gonna copy that.
+因为我很懒，所以我要把它复制下来。
+Takes in record and since I'm being lazy, I'm gonna copy that.
 
 50
 00:04:25.980 --> 00:04:27.730
-那是我们的箭功能
+这就是我们的箭头功能。
 There's our arrow function.
 
 51
 00:04:27.730 --> 00:04:32.819
-过滤后，我们可以简单地调用点映射，直接更改它。
-After filter, we can simply call
-the dot map, change directly off of it.
+过滤后，我们可以简单地调用网点图，直接改变它。
+After filter, we can simply call the dot map, change directly off of it.
 
 52
 00:04:32.819 --> 00:04:35.920
-我们有另一个内联函数叫做 "获取学生 I-D " 。
-We have another inline function called,
-"Get student I-D".
+我们还有另一个内联函数，名为“get Student I-D”。
+We have another inline function called, "Get student I-D".
 
 53
 00:04:35.920 --> 00:04:37.879
-它只返回记录。
+它只是返回记录。
 It simply returns record.
 
 54
 00:04:37.879 --> 00:04:42.000
-这是每个人最喜欢的箭头函数。
-This is everybody's favorite arrow
-function which just does that.
+这是每个人最喜欢的箭头功能，它就是这样做的。
+This is everybody's favorite arrow function which just does that.
 
 55
 00:04:43.220 --> 00:04:46.850
-然后这个阵列就会被传播出去
+然后阵列被展开。
 And that array then gets spread out.
 
 56
 00:04:46.850 --> 00:04:49.399
-是一份得到传播的 I-D 列表
+这是一个被分散开来的i-d列表
 It's a list of I-Ds that gets spread out
 
 57
 00:04:49.399 --> 00:04:52.139
-这个阵列是从付费学生回来的
-into this array that's returned
-from paid students to enroll.
+进入这个数组，这个数组是由付费学生返回注册的。
+into this array that's returned from paid students to enroll.
 
 58
 00:04:53.319 --> 00:04:55.279
-这就是我们的箭功能。
+这就是我们的箭头函数。
 So there is our arrow function.
 
 59
 00:05:00.860 --> 00:05:05.720
->> Kyle Simpson: 现在，最后，提醒未付的是
-&gt;&gt; Kyle Simpson: And now,
-finally, remind unpaid is
+&gt；&gt；Kyle Simpson：现在，最后，提醒未付是
+&gt;&gt; Kyle Simpson: And now, finally, remind unpaid is
 
 60
 00:05:05.720 --> 00:05:11.363
-一个箭头函数，它使用记录标识和
-an arrow function that
-takes record IDs and
+一个箭头函数，它接受记录ID和
+an arrow function that takes record IDs and
 
 61
 00:05:11.363 --> 00:05:15.754
-它是 recordIds.filter ，
+它做了recordIds.filter，并且
 it Does recordIds.filter, and
 
 62
 00:05:15.754 --> 00:05:20.612
-我们有一个学生标识箭头功能
+我们有学生ID箭头功能或
 we have a student ID arrow function or
 
 63
 00:05:20.612 --> 00:05:26.437
-参数称为 studentId 。
+传入的名为StudentId的参数。
 parameter called studentId that comes in.
 
 64
@@ -366,190 +322,165 @@ And we can, again,
 
 65
 00:05:28.036 --> 00:05:34.590
-通过在函数调用中执行属性链，避免需要箭头块。
-avoid needing an arrow block by doing
-a property chain off the function call.
+通过对函数调用执行属性链来避免需要箭头块。
+avoid needing an arrow block by doing a property chain off the function call.
 
 66
 00:05:34.590 --> 00:05:41.252
-所以我们可以简单说， getStudentFromId(studentId)，
-So we can simply say,
-getStudentFromId(studentId),
+所以我们可以简单地说，getStudentFromId(StudentId)，
+So we can simply say, getStudentFromId(studentId),
 
 67
 00:05:41.252 --> 00:05:47.500
-然后从该调用中访问该属性，并将其求反。
-and then access the property off
-of that call, and negate it.
+然后访问该调用的属性，并否定它。
+and then access the property off of that call, and negate it.
 
 68
 00:05:47.500 --> 00:05:57.110
-然后，我们可以调用 printRecords >> Kyle Simpson: 利用该输入。
-And then, we can call printRecords
-&gt;&gt; Kyle Simpson: With that input.
+然后，我们可以使用该输入调用printRecords&gt；&gt；Kyle Simpson：。
+And then, we can call printRecords &gt;&gt; Kyle Simpson: With that input.
 
 69
 00:06:02.519 --> 00:06:08.290
->> Kyle Simpson: 因此有一个箭头函数，而 yay!
-&gt;&gt; Kyle Simpson: So
-there is that arrow function, and yay!
+&gt；&gt；Kyle Simpson：这就是箭头函数，耶！
+&gt;&gt; Kyle Simpson: So there is that arrow function, and yay!
 
 70
 00:06:08.290 --> 00:06:09.992
 没有更多的常规函数，只有箭头函数。
-No more regular functions,
-only arrow functions.
+No more regular functions, only arrow functions.
 
 71
 00:06:13.060 --> 00:06:15.800
->> Kyle Simpson: 有关第二部分练习的问题 ?
-&gt;&gt; Kyle Simpson: Any questions
-about part two of the exercise?
+&gt；&gt；Kyle Simpson：关于练习的第二部分有什么问题吗？
+&gt;&gt; Kyle Simpson: Any questions about part two of the exercise?
 
 72
 00:06:23.319 --> 00:06:23.879
->> 凯尔 - 辛普森: 是吗 ?
+凯尔·辛普森：什么事？
 &gt;&gt; Kyle Simpson: Yes?
 
 73
 00:06:25.519 --> 00:06:30.689
->> 扬声器 1: 具有多个三元作为回调函数的时刻，
-&gt;&gt; Speaker 1: There was a moment with the
-multiple ternary as the callback function,
+&gt；&gt；Speaker 1：有一段时间使用多重三元作为回调函数，
+&gt;&gt; Speaker 1: There was a moment with the multiple ternary as the callback function,
 
 74
 00:06:30.689 --> 00:06:32.180
-链式阵列的方法，就像 - >> 凯尔 - 辛普森: 是的，
-the chained array method, it's like-
-&gt;&gt; Kyle Simpson: Yeah,
+链式数组方法，就像-&gt；&gt；Kyle Simpson：是的，
+the chained array method, it's like- &gt;&gt; Kyle Simpson: Yeah,
 
 75
 00:06:32.180 --> 00:06:33.418
-我把所有 [ CROSSTALK] >> 演讲者 1:
-the one that I put all [CROSSTALK]
-&gt;&gt; Speaker 1: I was like,
+我把所有[CROSSTALK]&gt；&gt；扬声器1：我就像，
+the one that I put all [CROSSTALK] &gt;&gt; Speaker 1: I was like,
 
 76
 00:06:33.418 --> 00:06:37.129
-这肯定只是他在内部创造的一个修辞
-surely that's just a rhetorical
-gesture that he created inside.
+当然，这只是他在内心创造的一种修辞姿态。
+surely that's just a rhetorical gesture that he created inside.
 
 77
 00:06:37.129 --> 00:06:39.529
 然后我意识到，我两周前就写了类似的东西。
-Then I realized, I had written
-something like it two weeks ago.
+Then I realized, I had written something like it two weeks ago.
 
 78
 00:06:39.529 --> 00:06:40.449
-我就像上帝
+我就像，上帝。
 I was like, God.
 
 79
 00:06:40.449 --> 00:06:45.512
->> 凯尔 - 辛普森: 我知道，我对那些喜欢
-&gt;&gt; Kyle Simpson: Yeah, I know,
-my observation of those that like to
+&gt；&gt；Kyle Simpson：是的，我知道，我对那些喜欢
+&gt;&gt; Kyle Simpson: Yeah, I know, my observation of those that like to
 
 80
 00:06:45.512 --> 00:06:51.048
-写箭头函数是有一种倾向
-write arrow functions is that
-there is a predisposition
+写箭头的功能是有一种倾向
+write arrow functions is that there is a predisposition
 
 81
 00:06:51.048 --> 00:06:55.170
-尽可能使用最简洁的语法，
+为了使用最简洁的语法，
 to use the most concise syntax possible,
 
 82
 00:06:55.170 --> 00:06:59.319
-你能用什么花招
+尽你所能使用任何技巧。
 using whatever tricks you possibly can.
 
 83
 00:06:59.319 --> 00:07:03.494
-包括嵌套在一起的内联系列，
-Including Inline ternaries
-that are nested together,
+包括嵌套在一起的内联三元组，
+Including Inline ternaries that are nested together,
 
 84
 00:07:03.494 --> 00:07:07.060
 使用逗号运算符嵌套表达式。
-using the comma operator
-to nest expressions.
+using the comma operator to nest expressions.
 
 85
 00:07:07.060 --> 00:07:10.101
 我见过人们在箭头中定义参数
-I've seen people define
-parameters in the arrow
+I've seen people define parameters in the arrow
 
 86
 00:07:10.101 --> 00:07:12.846
 参数列表是未使用的变量，因此
-parameter list that
-are unused variables so
+parameter list that are unused variables so
 
 87
 00:07:12.846 --> 00:07:18.180
-它们不需要声明变量以在其表达式中使用。
-that they don't have to declare a variable
-to use inside of their expression.
+他们不需要声明一个变量来在他们的表达式中使用。
+that they don't have to declare a variable to use inside of their expression.
 
 88
 00:07:18.180 --> 00:07:22.831
-我的意思是，任何一种语法的诡计，你都可以用一个简明的箭头
-I mean, any sort of syntactic trick you
-can use to get it down to a concise arrow
+我的意思是，任何类型的句法技巧，你都可以用来把它简化成一个简明的箭头
+I mean, any sort of syntactic trick you can use to get it down to a concise arrow
 
 89
 00:07:22.831 --> 00:07:24.848
-表达式似乎是正常的。
+表达似乎是常态。
 expression seems to be the norm.
 
 90
 00:07:32.761 --> 00:07:37.677
->> 凯尔 - 辛普森: 好的，希望你现在感觉有点
-&gt;&gt; Kyle Simpson: Okay, so hopefully
-you now feel a little bit more with
+&gt；&gt；Kyle Simpson：好的，所以希望你现在感觉更好一点
+&gt;&gt; Kyle Simpson: Okay, so hopefully you now feel a little bit more with
 
 91
 00:07:37.677 --> 00:07:41.800
-一些更真实的世俗的代码
+一些稍微真实的世俗代码。
 some slightly more real worldish code.
 
 92
 00:07:41.800 --> 00:07:45.860
-关于我们可以创建的函数之间的差异的一些想法
-Some idea about the differences between
-the functions that we can create as
+关于我们可以创建为的函数之间的差异的一些想法
+Some idea about the differences between the functions that we can create as
 
 93
 00:07:45.860 --> 00:07:49.149
 声明，作为内联函数表达式，以及
-declarations, as inline
-function expressions, and
+declarations, as inline function expressions, and
 
 94
 00:07:49.149 --> 00:07:51.629
-现在即使是箭头函数表达式。
+现在甚至作为箭头函数表达式。
 now even as arrow function expressions.
 
 95
 00:07:51.629 --> 00:07:54.620
-您可以进行某些方面的比较。
-You have some side by side
-comparison that you can make.
+你可以做一些并排的比较。
+You have some side by side comparison that you can make.
 
 96
 00:07:54.620 --> 00:07:59.965
-您自己确定这些样式是否更便于阅读，
-Make your own determinations on whether or
-not these styles are more readable,
+对这些样式是否更具可读性做出自己的决定，
+Make your own determinations on whether or not these styles are more readable,
 
 97
 00:07:59.965 --> 00:08:02.850
-或者更能维护你的目的
+或者更易于维护，为您的目的。
 or more maintainable, for your purpose.

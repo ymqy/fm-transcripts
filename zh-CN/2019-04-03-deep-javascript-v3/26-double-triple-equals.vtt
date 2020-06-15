@@ -2,94 +2,83 @@ WEBVTT
 
 1
 00:00:00.190 --> 00:00:03.640
->> Kyle Simpson: 我一直在为胁迫而做一件事情，
-&gt;&gt; Kyle Simpson: As I've been making this
-case for coercion, one of the things that
+&GT；&GT；Kyle Simpson：因为我一直在提出强制的理由，这是其中一件事
+&gt;&gt; Kyle Simpson: As I've been making this case for coercion, one of the things that
 
 2
 00:00:03.640 --> 00:00:07.700
-可能是在你脑海中飘浮的
-may have been floating in the back of
-your mind is, yeah, but the coercion
+可能一直浮现在你的脑海里，是的，但是胁迫
+may have been floating in the back of your mind is, yeah, but the coercion
 
 3
 00:00:07.700 --> 00:00:12.859
-我没有与加号运算符或 if 语句的问题。
-problem that I have is not with
-the plus operator, or an if statement.
+我遇到的问题不是加号运算符，也不是if语句。
+problem that I have is not with the plus operator, or an if statement.
 
 4
 00:00:12.859 --> 00:00:16.420
-大多数人认为的大胁迫问题
-The big coercion problems
-that most people seem to have
+大多数人似乎都有很大的强制问题
+The big coercion problems that most people seem to have
 
 5
 00:00:16.420 --> 00:00:19.370
-似乎是平等检查的中心
+似乎以相等检查为中心。
 seem to center around equality checking.
 
 6
 00:00:19.370 --> 00:00:23.510
-而我对所有胁迫所传达的信息也同样适用
-And the same message that I have for
-all of coercion is going to apply for
+同样的信息，我对所有的胁迫都会申请
+And the same message that I have for all of coercion is going to apply for
 
 7
 00:00:23.510 --> 00:00:25.320
-强制性的平等。
+强制平等。
 coercive equality as well.
 
 8
 00:00:25.320 --> 00:00:30.160
-但我想具体去想一些关于 == 和 ===的问题，
-But I wanna dig specifically into
-some issues about the == versus ===,
+但我想具体探讨一些关于=对=的问题，
+But I wanna dig specifically into some issues about the == versus ===,
 
 9
 00:00:30.160 --> 00:00:33.390
-因为这才是大多数人关注的地方
-since this is really the place where
-most people focus their attention
+因为这真的是大多数人关注的地方
+since this is really the place where most people focus their attention
 
 10
 00:00:33.390 --> 00:00:35.119
-当他们谈论胁迫的时候
+当他们谈论强制的时候。
 when they talk about coercion.
 
 11
 00:00:35.119 --> 00:00:39.573
-其实大多数人都没有想到过胁迫
-In fact most people haven't thought
-about coercion any other place
+事实上，大多数人都没有想过强迫任何其他地方
+In fact most people haven't thought about coercion any other place
 
 12
 00:00:39.573 --> 00:00:42.409
-== = == = 。
+不同于=与=。
 other than the == verse the ===.
 
 13
 00:00:42.409 --> 00:00:46.390
-所以有更多的解剖
+所以还有一些进一步的解剖。
 So there's some further dissection.
 
 14
 00:00:48.320 --> 00:00:53.164
-那么你们有多少人之前听说过 == 和
-So how many of you have heard before
-that the difference between == and
+那么你们中有多少人听说过=和之间的区别
+So how many of you have heard before that the difference between == and
 
 15
 00:00:53.164 --> 00:00:57.527
-=== 是 == 检查所谓的宽松的等同性的值
-=== is that == checks the value so
-called loose equality and
+=检查所谓的松散相等和
+=== is that == checks the value so called loose equality and
 
 16
 00:00:57.527 --> 00:01:02.780
-=== 检查类型中的值，称为严格等同性?
-=== checks the value in the type so
-called strict equality?
+=检查所谓严格相等类型中的值？
+=== checks the value in the type so called strict equality?
 
 17
 00:01:02.780 --> 00:01:05.060
@@ -98,434 +87,377 @@ This is extremely common.
 
 18
 00:01:05.060 --> 00:01:11.189
-不幸的是，虽然听起来很不错，但这并不是完全正确的。
-And unfortunately even though it sounds
-really good it's not exactly the case.
+不幸的是，尽管听起来真的很好，但事实并非如此。
+And unfortunately even though it sounds really good it's not exactly the case.
 
 19
 00:01:11.189 --> 00:01:12.859
-这不是什么区别
+这不是真正的区别。
 That's not exactly the difference.
 
 20
 00:01:12.859 --> 00:01:17.930
-这不仅仅是一个学术上的细微差别。
+这不仅仅是学术上的细微差别。
 And it's not just an academic nuance here.
 
 21
 00:01:17.930 --> 00:01:22.030
-区别真的改变了我们对公用事业的看法
-The difference really changes
-our perspective on the utility,
+这种差异确实改变了我们对公用事业的看法，
+The difference really changes our perspective on the utility,
 
 22
 00:01:22.030 --> 00:01:26.430
-这两种机制的目的。
-the purpose of these two
-mechanisms in our language.
+这两种机制在我们的语言中的目的。
+the purpose of these two mechanisms in our language.
 
 23
 00:01:26.430 --> 00:01:31.460
-所以我真的觉得如果你想了解你的代码
-So, I really think that if you're
-trying to understand your code,
+所以，我真的认为如果你试图理解你的代码，
+So, I really think that if you're trying to understand your code,
 
 24
 00:01:31.460 --> 00:01:34.099
-重要的是你学会像 JavaScript一样思考
-it's critical that you learn
-to think like JavaScript,
+关键是你要学会像JavaScript一样思考，
+it's critical that you learn to think like JavaScript,
 
 25
 00:01:34.099 --> 00:01:35.900
-这就是这篇论文的主题
-that's sort of been
-the thesis going along.
+这就是论文一直在进行的。
+that's sort of been the thesis going along.
 
 26
 00:01:35.900 --> 00:01:39.299
-双等性和三重平等是一样的
-And the same is true for double equals and
-triple equals, that just saying,
+同样的道理也适用于双等和三等，也就是说，
+And the same is true for double equals and triple equals, that just saying,
 
 27
 00:01:39.299 --> 00:01:42.849
-这好像是在检查类型而另一个则不检查
-well, it's sort of one seems to check
-the type and the other doesn't.
+嗯，这是一种似乎检查类型，而另一个不检查。
+well, it's sort of one seems to check the type and the other doesn't.
 
 28
 00:01:42.849 --> 00:01:46.299
-这可能会让你在某些情况下得到你的支持
-That may get you by in some circumstances,
-but
+这在某些情况下可能会帮你度过难关，但是
+That may get you by in some circumstances, but
 
 29
 00:01:46.299 --> 00:01:50.509
-在其他情况下它会导致你完全不同的结论
-in other circumstances it leads you
-to completely different conclusions.
+在其他情况下，它会导致完全不同的结论。
+in other circumstances it leads you to completely different conclusions.
 
 30
 00:01:50.509 --> 00:01:54.370
-和我们所做的所有事情都是一致的，让我们看看这个规范。
-So consistent with everything else that
-we've done, let's look at the spec.
+与我们所做的所有其他事情都是一致的，让我们看看规范。
+So consistent with everything else that we've done, let's look at the spec.
 
 31
 00:01:54.370 --> 00:01:55.870
-这是以下的规范 :
+这是规格
 This is the spec for
 
 32
 00:01:55.870 --> 00:02:00.590
-所谓抽象等同性比较，就是双等号。
-what is called abstract equality
-comparison, which is the double equals.
+所谓的抽象相等比较，就是双重相等。
+what is called abstract equality comparison, which is the double equals.
 
 33
 00:02:00.590 --> 00:02:05.109
-如果双等号只检查值和三重值，那么检查值和
-And if double equals only checks the value
-and triple equals checks the value and
+如果Double Equals仅检查值，而Triple Equals检查值并
+And if double equals only checks the value and triple equals checks the value and
 
 34
 00:02:05.109 --> 00:02:08.500
-那么在算法的最上面写的是什么
-the type, then why write up here
-at the very top of the algorithm,
+类型，那么为什么写在算法的最顶端，
+the type, then why write up here at the very top of the algorithm,
 
 35
 00:02:08.500 --> 00:02:12.719
-非常快速的是 X 型和 Y 型检查吗
-the very fast thing,
-are the types of x and y checked?
+非常快的事情，检查x和y的类型了吗？
+the very fast thing, are the types of x and y checked?
 
 36
 00:02:12.719 --> 00:02:15.060
-我们马上就能揭穿这个神话
+我们马上就可以揭穿这个神话
 Immediately we can debunk the myth
 
 37
 00:02:15.060 --> 00:02:18.389
-两者的区别在于类型是否相同。
-that the difference between these two
-is whether the types are the same.
+这两者的区别在于类型是否相同。
+that the difference between these two is whether the types are the same.
 
 38
 00:02:18.389 --> 00:02:19.770
-那不是区别
+这不是区别。
 That isn't the difference.
 
 39
 00:02:19.770 --> 00:02:22.620
-他们都检查过类型只是
-They both checked the types,
-it's just that
+他们都检查了类型，只是
+They both checked the types, it's just that
 
 40
 00:02:22.620 --> 00:02:26.415
-跟其他的信息有什么区别
-one does something different with that
-information than the other one, okay?
+一个人对这个信息做了一些不同于另一个人的事情，好吗？
+one does something different with that information than the other one, okay?
 
 41
 00:02:26.415 --> 00:02:30.930
-第一，真理的来源始终如我们所说的。
-So number 1, the source of truth is
-always the spec, as we keep saying.
+所以第一，正如我们一直说的那样，真理的来源总是规格。
+So number 1, the source of truth is always the spec, as we keep saying.
 
 42
 00:02:30.930 --> 00:02:36.310
-如果你选择不完全正确的心理模型
-And if you choose to persist in not
-completely correct mental models
+如果你选择坚持不完全正确的心智模式
+And if you choose to persist in not completely correct mental models
 
 43
 00:02:36.310 --> 00:02:41.800
-在某些情况下，最终的时间跨度越长，
-that seem to work in some scenarios,
-eventually the longer the time span goes,
+在某些情况下似乎是有效的，最终时间跨度越长，
+that seem to work in some scenarios, eventually the longer the time span goes,
 
 44
 00:02:41.800 --> 00:02:44.860
-最终你会出现在一个不同的场景中
-eventually you'll run into a case
-where you're in a different scenario,
+最终你会遇到一个不同的情况，
+eventually you'll run into a case where you're in a different scenario,
 
 45
 00:02:44.860 --> 00:02:48.079
-你的精神模型已经被破坏了现在你迷路了
-your mental model is busted,
-and now you're lost.
+你的心智模型崩溃了，现在你迷失了。
+your mental model is busted, and now you're lost.
 
 46
 00:02:48.079 --> 00:02:50.949
-我觉得最好有一个正确的精神模型
-I think it's better to have
-the correct mental model.
+我认为最好有一个正确的心智模型。
+I think it's better to have the correct mental model.
 
 47
 00:02:50.949 --> 00:02:54.099
-就像我为你说的那个规格的其他地方
-Just like the other places of the spec
-that I have cited for you, this is
+就像我为您引用的规范的其他地方一样，这是
+Just like the other places of the spec that I have cited for you, this is
 
 48
 00:02:54.099 --> 00:03:00.449
-具有 if 语句和语句以及变量和操作的算法。
-an algorithm with if statements and then
-statements and variables and operations.
+一种使用if语句和然后语句以及变量和操作的算法。
+an algorithm with if statements and then statements and variables and operations.
 
 49
 00:03:00.449 --> 00:03:03.550
-所以你作为一个开发者可以理解的东西。
-So it's something that you as
-a developer can understand.
+因此，作为开发人员，您可以理解这一点。
+So it's something that you as a developer can understand.
 
 50
 00:03:03.550 --> 00:03:07.830
-绝大多数 JavaScript 开发者从未阅读过此部分。
-The vast majority of JavaScript developers
-have never once read this section.
+绝大多数JavaScript开发人员从来没有读过这一节。
+The vast majority of JavaScript developers have never once read this section.
 
 51
 00:03:07.830 --> 00:03:11.400
-他们听说过的都是平等的
-All they've ever heard about
-the double equals is what is said
+他们所听到的关于双等号的一切都是这么说的
+All they've ever heard about the double equals is what is said
 
 52
 00:03:11.400 --> 00:03:14.430
-在网上约双等号和两双平等的书
-online about double equals and
-in books about double equals.
+在线关于双等分，在书中有关于双等分的内容。
+online about double equals and in books about double equals.
 
 53
 00:03:14.430 --> 00:03:16.969
-这几乎从来没有提到过什么规格的谈判。
-Which is almost never citing
-what the spec talks about.
+几乎从不引用规范所说的内容。
+Which is almost never citing what the spec talks about.
 
 54
 00:03:16.969 --> 00:03:22.889
-但只提到一些轶事证据，他们认为这是值得的。
-But only citing some anecdotal
-evidence why they think it's worthy.
+但只是引用了一些轶事证据来解释为什么他们认为这是值得的。
+But only citing some anecdotal evidence why they think it's worthy.
 
 55
 00:03:22.889 --> 00:03:27.060
-所以阅读这个规范是有用的。
+所以阅读规范会很有用。
 So reading the spec can be useful.
 
 56
 00:03:27.060 --> 00:03:31.590
-例如，如果我有一个字符串， Frank，我已分配给一个变量，并且
-For example, if I have a string, Frank,
-that I've assigned to one variable, and
+例如，如果我有一个字符串Frank，我已经将它赋给了一个变量，并且
+For example, if I have a string, Frank, that I've assigned to one variable, and
 
 57
 00:03:31.590 --> 00:03:35.680
-然后我创造了另一个拷贝基本上就是第 2 行上的情况
-then I create another copy, essentially,
-that's what's happening on line 2,
+然后我创建了另一个副本，本质上，这就是第2行上发生的事情，
+then I create another copy, essentially, that's what's happening on line 2,
 
 58
 00:03:35.680 --> 00:03:37.650
-所以现在我有两条绳子
+所以现在我有两条线。
 so now I have two strings.
 
 59
 00:03:37.650 --> 00:03:44.199
-如果在第 7 行，我尝试问这两者是否相等，就像我在第 7 行和第 8 行一样。
-And if on line 7 I try to ask if those two
-are equal, like I am on line 7 and line 8.
+如果在第7行，我试着问这两个是不是相等，就像我在第7行和第8行一样。
+And if on line 7 I try to ask if those two are equal, like I am on line 7 and line 8.
 
 60
 00:03:44.199 --> 00:03:46.170
-在这两种情况下，它们是平等的。
+在这两种情况下，它们是相等的。
 In both cases, they are equal.
 
 61
 00:03:47.610 --> 00:03:54.469
-因为事实证明，当类型匹配时，它们会执行 ===。
-Because it turns out that when
-the types match, then they do the ===.
+因为事实证明，当类型匹配时，它们会执行=。
+Because it turns out that when the types match, then they do the ===.
 
 62
 00:03:54.469 --> 00:03:55.469
-双等号和
+双等于和
 The double equals and
 
 63
 00:03:55.469 --> 00:03:59.490
-当类型匹配时，三重等号完全相同。
-the triple equals are exactly
-identical when the types match.
+当类型匹配时，三元组等于完全相同。
+the triple equals are exactly identical when the types match.
 
 64
 00:03:59.490 --> 00:04:01.008
-完全没有差别。
+绝对没有区别。
 There is absolutely no difference.
 
 65
 00:04:01.008 --> 00:04:02.449
-而且这个规格是这样说的
+说明书上是这么说的。
 And the spec says so.
 
 66
 00:04:02.449 --> 00:04:04.939
-当类型匹配时，请执行三重等号。
-When the types match,
-do the triple equals.
+当类型匹配时，执行三重等于。
+When the types match, do the triple equals.
 
 67
 00:04:04.939 --> 00:04:06.900
-这就是我刚为你强调的
+这就是我刚才为你强调的。
 That's what I just highlighted for you.
 
 68
 00:04:06.900 --> 00:04:08.159
-我们可以在代码中看到它。
+我们可以在代码中看到这一点。
 And we can see that in code.
 
 69
 00:04:08.159 --> 00:04:13.039
-在任何位置中，值类型已匹配，并且方式为 I
-In any place where the value types
-already match, and by the way, as I
+在值类型已经匹配的任何地方，顺便说一下，如我
+In any place where the value types already match, and by the way, as I
 
 70
 00:04:13.039 --> 00:04:17.879
-已经说过好几次了，你应该试着把值的类型确定，
-said a bunch of times already, you should
-try to have the value types obvious, and
+已经说了很多次了，你应该试着让值类型变得明显，并且
+said a bunch of times already, you should try to have the value types obvious, and
 
 71
 00:04:17.879 --> 00:04:21.069
-理想情况下，应尽可能让它们匹配。
-ideally, you should have them
-matching as much as possible.
+理想情况下，您应该让它们尽可能匹配。
+ideally, you should have them matching as much as possible.
 
 72
 00:04:22.300 --> 00:04:25.050
-但这并不意味着你永远不能进行胁迫
-That doesn't mean you can
-never have coercion, but
+这并不意味着你永远不能被强迫，但是
+That doesn't mean you can never have coercion, but
 
 73
 00:04:25.050 --> 00:04:28.660
-你不应该有很多地方做比较
-you shouldn't have lots of places
-where you're doing comparisons.
+你不应该在很多地方做比较。
+you shouldn't have lots of places where you're doing comparisons.
 
 74
 00:04:28.660 --> 00:04:31.139
-你肯定不应该做平等比较
-You certainly shouldn't be
-doing equality comparisons and
+你当然不应该做相等的比较和
+You certainly shouldn't be doing equality comparisons and
 
 75
 00:04:31.139 --> 00:04:33.990
-完全不知道这些类型是什么
-have absolutely no idea
-what the types are.
+完全不知道类型是什么。
+have absolutely no idea what the types are.
 
 76
 00:04:33.990 --> 00:04:38.040
-我很有趣的是很多人似乎认为
-It's interesting to me that many people
-seem to suggest that it is impossible for
+对我来说有趣的是，许多人似乎认为这是不可能的
+It's interesting to me that many people seem to suggest that it is impossible for
 
 77
 00:04:38.040 --> 00:04:42.959
-他们将会进行编程并了解到这一比较可能有哪些类型。
-them to program and understand what types
-could be coming in to this comparison.
+他们编程并了解在这种比较中可能会出现什么类型。
+them to program and understand what types could be coming in to this comparison.
 
 78
 00:04:42.959 --> 00:04:47.050
-我不知道你怎么能写出任何算法
-And I don't know how you can write any
-algorithm without having some sense of
+我不知道你怎么能在没有某种意义的情况下写出任何算法
+And I don't know how you can write any algorithm without having some sense of
 
 79
 00:04:47.050 --> 00:04:49.959
-这些都是数字这些都是字符串
-well these are always numbers and
-these are always strings.
+这些总是数字，这些总是字符串。
+well these are always numbers and these are always strings.
 
 80
 00:04:49.959 --> 00:04:51.590
-你怎么能说我不知道呢
+你怎么能说，我不知道？
 How can you say, well I have no idea?
 
 81
 00:04:51.590 --> 00:04:53.129
-它可能是一个数组，它可能为空。
+它可能是一个数组，它可能是空的。
 It could be an array it could be null.
 
 82
 00:04:53.129 --> 00:04:55.199
-我不知道它可能是什么
+我不知道可能是什么。
 I have no idea what it could possibly be.
 
 83
 00:04:56.870 --> 00:05:02.079
 即使你不知道，这并不意味着它必须保持这种状态。
-And even if you don't know, that doesn't
-mean that it has to stay that way.
+And even if you don't know, that doesn't mean that it has to stay that way.
 
 84
 00:05:02.079 --> 00:05:04.139
-您可以选择重新设计代码
+您可以选择重新设计代码，以便
 You can choose to redesign your code so
 
 85
 00:05:04.139 --> 00:05:08.110
-你缩小了那些不同种类的地方
-that you've narrowed the surface area
-of places where those different kinds
+你缩小了那些不同种类的地方的表面积
+that you've narrowed the surface area of places where those different kinds
 
 86
 00:05:08.110 --> 00:05:12.279
-类型可以相互交织，可以相互交织。
-of types can intermatch,
-can interweave with each other.
+类型可以相互匹配，可以相互交织。
+of types can intermatch, can interweave with each other.
 
 87
 00:05:12.279 --> 00:05:16.720
-你缩小了那些以胁迫方式存在的角落
-You've narrowed those corner
-cases that exist with coercion.
+你已经缩小了那些存在强制的角落案件。
+You've narrowed those corner cases that exist with coercion.
 
 88
 00:05:16.720 --> 00:05:21.149
-所以我就不会写一个函数可以是空的，没有定义的字符串，
-So I wouldn't write a function that
-could take null, undefined string,
+所以我不会写一个可以接受NULL，未定义字符串的函数，
+So I wouldn't write a function that could take null, undefined string,
 
 89
 00:05:21.149 --> 00:05:24.365
-数字，对象，数组和其他 14 种类型，以及
-number, object, array,
-and 14 other types, and
+Number、Object、Array和14个其他类型，以及
+number, object, array, and 14 other types, and
 
 90
 00:05:24.365 --> 00:05:28.024
-然后把他们跟一个 ==，那个很可笑，对吧 ?
-then all compare them with a ==,
-that's ludicy, right?
+然后所有人都将它们与a=进行比较，这很可笑，对吧？
+then all compare them with a ==, that's ludicy, right?
 
 91
 00:05:28.024 --> 00:05:32.112
-但我会写一个函数可以带弦和数字
-But I would write a function that
-could take strings and numbers and
+但我会写一个函数，可以接受字符串和数字
+But I would write a function that could take strings and numbers and
 
 92
 00:05:32.112 --> 00:05:33.725
-请将其与 ==进行比较。
+将它们与a=进行比较。
 compare them with a ==.
 
 93
@@ -535,260 +467,225 @@ Because there's a very known and
 
 94
 00:05:35.519 --> 00:05:39.019
-可能发生的转角型个案的小子集。
-small subset of potential
-corner cases to work around.
+要解决的潜在拐角案例的小子集。
+small subset of potential corner cases to work around.
 
 95
 00:05:39.019 --> 00:05:41.180
-如果你注意的话这些都是可以避免的
-And those are avoidable
-if you pay attention.
+如果你注意的话，这些都是可以避免的。
+And those are avoidable if you pay attention.
 
 96
 00:05:42.740 --> 00:05:47.985
-因此，在类型已匹配的情况下， == 和 === 相同。
-So in the case where the types already
-match, == and === are the same.
+因此，在类型已经匹配的情况下，=和=是相同的。
+So in the case where the types already match, == and === are the same.
 
 97
 00:05:47.985 --> 00:05:50.090
-那 === 什么
+那么=在做什么呢？
 So what is === doing?
 
 98
 00:05:50.090 --> 00:05:55.110
-它也在检查这些类型，如果它们不一样，它是错误的。
-Well, it's also checking the types, and
-if they're not the same, it's false.
+嗯，它也在检查类型，如果它们不相同，它就是假的。
+Well, it's also checking the types, and if they're not the same, it's false.
 
 99
 00:05:55.110 --> 00:05:56.870
-不管这些价值是什么
+值是什么并不重要，
 It doesn't matter what the values are,
 
 100
 00:05:56.870 --> 00:05:59.843
-如果类型不同，它不会执行任何其他操作。
-if the types are different,
-it doesn't do anything else.
+如果类型不同，它不做任何其他事情。
+if the types are different, it doesn't do anything else.
 
 101
 00:05:59.843 --> 00:06:02.550
-它 sorta 短路说
+它有点短路，然后说，
 It sorta short-circuits and says,
 
 102
 00:06:02.550 --> 00:06:06.300
-如果类型不同，那么它们不可能相等。
-if the types are different there's no
-possible way that they could be equal.
+如果类型不同，它们不可能是相等的。
+if the types are different there's no possible way that they could be equal.
 
 103
 00:06:07.910 --> 00:06:11.100
-如果你想的是什么是双重平等
-If you think about that with respect
-to what double equals is gonna do,
+如果你考虑一下双等号会做什么，
+If you think about that with respect to what double equals is gonna do,
 
 104
 00:06:11.100 --> 00:06:12.990
-我们马上就能看到了
-which we're gonna look
-at in just a moment.
+我们一会儿就来看一下。
+which we're gonna look at in just a moment.
 
 105
 00:06:12.990 --> 00:06:16.966
-本质上严格的平等和
-Essentially the real difference
-between strict equality and
+从本质上讲，严格平等和严格平等之间的真正区别
+Essentially the real difference between strict equality and
 
 106
 00:06:16.966 --> 00:06:22.096
-宽松的平等是我们是否要允许任何胁迫发生。
-loose equality is whether or not we're
-going to to allow any coercion to occur.
+松散的平等就是我们是否会允许任何强迫的发生。
+loose equality is whether or not we're going to to allow any coercion to occur.
 
 107
 00:06:22.096 --> 00:06:25.718
-那么，如果类型相同，我们严格的 " 平等 " 会做什么 ?
-So what us Strict Equality is gonna
-do if the types are the same?
+那么，如果类型相同，我们严格平等会做什么呢？
+So what us Strict Equality is gonna do if the types are the same?
 
 108
 00:06:25.718 --> 00:06:29.658
-如果他们是 NaN的话就会返回 false
-Well it's going to,
-return false if they're NaNs,
+好的，如果他们是nans，就会返回false，
+Well it's going to, return false if they're NaNs,
 
 109
 00:06:29.658 --> 00:06:33.810
-因为记得那是关于 Nafe 的事
-because remember it's
-supposed to lie about NaNs.
+因为记住它应该是关于Nans的谎言。
+because remember it's supposed to lie about NaNs.
 
 110
 00:06:33.810 --> 00:06:38.090
-如果有负零点就会返回真实情况因为它应该是谎言
-And it's gonna return true if there's a
-negative zero because it's supposed to lie
+如果有负零，它将返回真，因为它应该是谎言
+And it's gonna return true if there's a negative zero because it's supposed to lie
 
 111
 00:06:38.090 --> 00:06:39.959
-关于零的零
+关于负零。
 about negative zeros.
 
 112
 00:06:39.959 --> 00:06:42.560
-但只有在类型已经匹配的情况下才会有谎言。
-But it only does the lies
-if the types already match.
+但只有在类型已经匹配的情况下，它才会说谎。
+But it only does the lies if the types already match.
 
 113
 00:06:42.560 --> 00:06:45.090
-否则，它说假话，什么都没看。
-Otherwise, it says false and
-it didn't check anything at all.
+否则，它会显示FALSE，并且根本没有检查任何内容。
+Otherwise, it says false and it didn't check anything at all.
 
 114
 00:06:46.629 --> 00:06:49.230
-也许更合适的说法是
-So maybe the more appropriate
-statement would be
+所以也许更合适的说法是
+So maybe the more appropriate statement would be
 
 115
 00:06:49.230 --> 00:06:53.180
-他们俩都检查过其中的一处都停了一处就没了
-that they both check the types one of
-them stops early and one of them doesn't.
+他们都检查类型，其中一个提前停止，另一个不检查。
+that they both check the types one of them stops early and one of them doesn't.
 
 116
 00:06:53.180 --> 00:06:57.810
-或者说不一样，区别在于我们是否允许胁迫。
-Or said a different way, the difference
-is whether we allow coercion.
+或者换一种方式说，不同的是我们是否允许强迫。
+Or said a different way, the difference is whether we allow coercion.
 
 117
 00:06:57.810 --> 00:07:01.540
-所以我有两个对象，好吗 ?
+所以在这里，我有两个物体，好吗？
 So here, I have two objects, all right?
 
 118
 00:07:01.540 --> 00:07:05.199
-它们具有相同的结构，表面上是相同的值。
-They have the same structure and
-ostensibly the same value.
+它们具有相同的结构和表面上相同的价值。
+They have the same structure and ostensibly the same value.
 
 119
 00:07:05.199 --> 00:07:06.860
-但它们不是同一个对象。
+但它们不是同一个物体。
 But they are not the same object.
 
 120
 00:07:06.860 --> 00:07:08.670
-它们是两个不同的对象。
+它们是两个不同的物体。
 They are two different objects.
 
 121
 00:07:08.670 --> 00:07:13.779
-很多时候人们迷上了用 JavaScript 构建的平等检查
-A lot of times people get confused with
-JavaScript's built in equality checking
+很多时候人们对JavaScript内置的等式检查感到困惑
+A lot of times people get confused with JavaScript's built in equality checking
 
 122
 00:07:13.779 --> 00:07:16.680
-它在某种程度上不是结构上的
-that it's somehow not
-structural in nature,
+它在某种程度上不是结构性的，
+that it's somehow not structural in nature,
 
 123
 00:07:16.680 --> 00:07:19.300
-它不像一个有深度的断言
-that it doesn't do like
-a deep assertion check that
+它不像深层断言检查那样
+that it doesn't do like a deep assertion check that
 
 124
 00:07:19.300 --> 00:07:23.389
 一个对象的结构与另一个对象的结构完全相同。
-the structure of one object is exactly
-the same as a structure of another object.
+the structure of one object is exactly the same as a structure of another object.
 
 125
 00:07:23.389 --> 00:07:26.910
-可能有这样的语言，但是我不知道
-Maybe there are languages like that,
-but I don't know
+也许有这样的语言，但我不知道
+Maybe there are languages like that, but I don't know
 
 126
 00:07:26.910 --> 00:07:31.560
-它是一种以语言为基础的主流事物。
-of that to be a prevailing thing that's
-built into an operator in a language.
+这是一种流行的东西，在一种语言中被内置到操作符中。
+of that to be a prevailing thing that's built into an operator in a language.
 
 127
 00:07:31.560 --> 00:07:36.449
-大多数运算符似乎执行 JavaScript 执行的操作，即身份比较。
-Most operators seem to do what JavaScript
-does, which is identity comparison.
+大多数操作员似乎都在做JavaScript所做的事情，即身份比较。
+Most operators seem to do what JavaScript does, which is identity comparison.
 
 128
 00:07:36.449 --> 00:07:41.194
-如果 workshop1 和worksh坊 2 完全指向同一对象引用，那么
-If workshop1 and workshop 2 pointed at
-literally the same object reference then
+如果Workshop1和Workshop 2指向字面上相同的对象引用，则
+If workshop1 and workshop 2 pointed at literally the same object reference then
 
 129
 00:07:41.194 --> 00:07:44.300
-他们的身份是一样的你会得到真实的
-their identity would be the same and
-you'd get true.
+他们的身份会是一样的，你就会变成真的。
+their identity would be the same and you'd get true.
 
 130
 00:07:44.300 --> 00:07:49.170
-但在这个特定情况下，它们不相等，好吗 ?
-But in this particular case,
-they're not equal, okay?
+但在这个特殊的情况下，他们不是平等的，好吗？
+But in this particular case, they're not equal, okay?
 
 131
 00:07:49.170 --> 00:07:54.697
-因此， == 和 === 不会返回 true ，因为它们是不同的对象。
-So neither == nor === is gonna return
-a true because they are different objects.
+所以无论=还是=都不会返回真，因为它们是不同的对象。
+So neither == nor === is gonna return a true because they are different objects.
 
 132
 00:07:54.697 --> 00:07:56.740
-所有人都跟着我吗
+大家跟我来？
 Everybody follow me?
 
 133
 00:07:56.740 --> 00:07:58.850
 它们是不同的物体，它们不一样。
-They're different objects,
-they are not the same.
+They're different objects, they are not the same.
 
 134
 00:07:58.850 --> 00:08:00.406
-所以不管你用哪一个
-And so
-it doesn't matter which one you use,
+所以你用哪一个并不重要，
+And so it doesn't matter which one you use,
 
 135
 00:08:00.406 --> 00:08:01.889
-你还是会得到同样的结果
+你还是会得到同样的结果。
 you're still gonna get the same result.
 
 136
 00:08:05.829 --> 00:08:06.720
->> 凯尔 - 辛普森: 换句话说，
+&gt；&gt；Kyle Simpson：换句话说，
 &gt;&gt; Kyle Simpson: So in other words,
 
 137
 00:08:06.720 --> 00:08:09.850
-当类型不同时， == 将允许进行强制。
-the == is going to allow coercion
-when the types were different.
+当类型不同时，=将允许强制。
+the == is going to allow coercion when the types were different.
 
 138
 00:08:09.850 --> 00:08:13.959
-当类型相同时， === 将不允许进行强制。
-And the === is going to disallow
-coercion when the types are the same.
+并且当类型相同时，=将不允许强制。
+And the === is going to disallow coercion when the types are the same.

@@ -2,73 +2,63 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:02.892
->> 凯尔 - 辛普森: 有些人可能想知道
-&gt;&gt; Kyle Simpson: Some of
-you may be wondering,
+&gt；&gt；Kyle Simpson：你们中的一些人可能在想，
+&gt;&gt; Kyle Simpson: Some of you may be wondering,
 
 2
 00:00:02.892 --> 00:00:06.261
-那箭的功能呢
+那么箭头函数呢？
 well what about arrow functions?
 
 3
 00:00:06.261 --> 00:00:10.858
-我们在 ES6 中加入的最喜欢的功能是谁知道
-That favorite feature that we've
-added to ES6 for who knows how long,
+我们在ES6中添加的最受欢迎的功能谁知道有多久了，
+That favorite feature that we've added to ES6 for who knows how long,
 
 4
 00:00:10.858 --> 00:00:15.836
-我的意思是，谁知道人们一直在要求这个箭头的功能，但是
-I mean who knows how long people have
-been asking for this arrow function, but
+我的意思是谁知道人们已经要求这个箭头功能多久了，但是
+I mean who knows how long people have been asking for this arrow function, but
 
 5
 00:00:15.836 --> 00:00:17.618
-终于在 ES6降落了
+它终于在ES6着陆了。
 it finally landed in ES6.
 
 6
 00:00:17.618 --> 00:00:20.347
-我想知道布兰登 - 艾克想做的
-I like to imagine that maybe
-Brendan Ike wanted to do that
+我喜欢想象也许Brendan Ike想要这么做
+I like to imagine that maybe Brendan Ike wanted to do that
 
 7
 00:00:20.347 --> 00:00:23.960
-在原型机里它只花了他 15 年的时间
-in the original prototypes, and
-it just took him 15 years or whatever.
+在最初的原型中，他花了15年左右的时间。
+in the original prototypes, and it just took him 15 years or whatever.
 
 8
 00:00:23.960 --> 00:00:27.539
-但箭功能于六年后到达。
-But arrow functions arrived
-in year six a few years back.
+但是箭头功能在几年前的第六年就出现了。
+But arrow functions arrived in year six a few years back.
 
 9
 00:00:27.539 --> 00:00:32.531
-就像云彩打开天神在我们的基础上，如果你愿意的话
-And it is as if the clouds opened and
-heaven shone down upon us, if you will,
+就好像乌云敞开，天空照耀着我们，如果你愿意，
+And it is as if the clouds opened and heaven shone down upon us, if you will,
 
 10
 00:00:32.531 --> 00:00:37.131
-人们似乎正走向这个新的启蒙运动
-that people just seemed to move to
-this new level of enlightenment and
+人们似乎进入了新的启蒙阶段
+that people just seemed to move to this new level of enlightenment and
 
 11
 00:00:37.131 --> 00:00:41.359
-当他们得到箭的功能时就会喜欢和喜欢的语言
-love and joy for the language
-once they got the arrow function.
+爱和喜悦的语言，一旦他们得到了箭头的功能。
+love and joy for the language once they got the arrow function.
 
 12
 00:00:41.359 --> 00:00:44.944
-你在这里看到第 1 行箭头函数在数学中的用法
-You see here on line 1, the usage
-of an arrow function in the math,
+你可以在这里看到第1行，数学中箭头函数的用法，
+You see here on line 1, the usage of an arrow function in the math,
 
 13
 00:00:44.944 --> 00:00:48.200
@@ -77,38 +67,33 @@ as opposed to a name function expression.
 
 14
 00:00:48.200 --> 00:00:51.689
-所以你在想，凯尔，你对箭功能有什么感觉 ?
-So you're wondering, hey Kyle,
-what's your feeling about arrow functions?
+所以你在想，嘿，凯尔，你对箭头功能有什么感觉？
+So you're wondering, hey Kyle, what's your feeling about arrow functions?
 
 15
 00:00:51.689 --> 00:00:54.750
-我的反应是，箭头函数是匿名的。
-And my response is,
-arrow functions are anonymous.
+我的回答是，箭头函数是匿名的。
+And my response is, arrow functions are anonymous.
 
 16
 00:00:56.729 --> 00:01:00.149
->> Kyle Simpson: 我认为您不应该使用匿名函数表达式，
-&gt;&gt; Kyle Simpson: I don't think you should
-use anonymous function expressions,
+&gt；&gt；Kyle Simpson：我认为不应该使用匿名函数表达式，
+&gt;&gt; Kyle Simpson: I don't think you should use anonymous function expressions,
 
 17
 00:01:00.149 --> 00:01:01.609
-我想你可以做数学
+我觉得你能算出来。
 I think you can do the math.
 
 18
 00:01:01.609 --> 00:01:03.600
-我觉得你不该用箭的功能
-I don't think you ought to
-be using arrow functions.
+我认为你不应该使用箭头函数。
+I don't think you ought to be using arrow functions.
 
 19
 00:01:03.600 --> 00:01:07.048
-当然我不认为你应该用箭的一般功能
-Certainly I don't think you should be
-using arrow functions as a general
+当然，我认为您不应该使用箭头函数作为一般功能
+Certainly I don't think you should be using arrow functions as a general
 
 20
 00:01:07.048 --> 00:01:08.920
@@ -117,241 +102,208 @@ replacement for all other functions.
 
 21
 00:01:08.920 --> 00:01:12.748
-你不应该仅仅因为它们是简洁而简洁的语法而使用它们。
-You shouldn't be using them just because
-they're nice and short, concise syntax.
+你不应该仅仅因为它们漂亮、简短、简洁的语法而使用它们。
+You shouldn't be using them just because they're nice and short, concise syntax.
 
 22
 00:01:12.748 --> 00:01:17.962
-这不是他们创造的原因那只是其中的一个特征
-That isn't why they were created,
-that's only one of the characteristics
+这不是创造它们的原因，这只是它们的特征之一
+That isn't why they were created, that's only one of the characteristics
 
 23
 00:01:17.962 --> 00:01:22.938
-也许我认为这甚至不是主要特征
-that maybe I think could be argued
-not even the primary characteristic.
+也许我认为可以争辩的甚至不是主要特征。
+that maybe I think could be argued not even the primary characteristic.
 
 24
 00:01:22.938 --> 00:01:24.932
-方法的语法越短，
+顺便说一下句法越短，
 The shorter the syntax by the way,
 
 25
 00:01:24.932 --> 00:01:27.759
-语法的角个案越复杂。
-the more complex the corner
-cases of syntax are.
+语法的拐角情况越复杂。
+the more complex the corner cases of syntax are.
 
 26
 00:01:27.759 --> 00:01:30.944
-如果你有过不同的角力
-And if you've ever wrangled
-various different corner cases,
+如果你曾经为各种不同的案件争论不休，
+And if you've ever wrangled various different corner cases,
 
 27
 00:01:30.944 --> 00:01:34.560
-在箭头函数语法上存在 15 个不同的变体。
-there is like 15 different variations
-on the arrow function syntax.
+箭头函数语法类似于15种不同的变体。
+there is like 15 different variations on the arrow function syntax.
 
 28
 00:01:34.560 --> 00:01:37.950
-所以不是没有成本的。
+所以不是没有代价的。
 So doesn't come without a cost.
 
 29
 00:01:37.950 --> 00:01:42.822
-但我想告诉你唯一能找到第 1 行的方法
-But I would tell you that the only way
-looking at line 1 that you can figure out
+但我要告诉你，看第一行的唯一方法就是
+But I would tell you that the only way looking at line 1 that you can figure out
 
 30
 00:01:42.822 --> 00:01:47.179
-该错误函数正在执行的操作是读取它的函数体。
-what that error function is doing,
-is to read it's function body.
+error函数所做的是读取它的函数体。
+what that error function is doing, is to read it's function body.
 
 31
 00:01:47.179 --> 00:01:49.979
-但是当我读函数名时，我不需要读任何代码。
-But when I read the function name
-I don't need to read any code.
+但是当我读取函数名时，我不需要读取任何代码。
+But when I read the function name I don't need to read any code.
 
 32
 00:01:49.979 --> 00:01:55.670
-那里有一个英文名，告诉我该函数的用途。
-There's one English name there that
-tells me the purpose of that function.
+那里有一个英文名字告诉我这个函数的用途。
+There's one English name there that tells me the purpose of that function.
 
 33
 00:01:55.670 --> 00:01:58.375
-很多人跟我争论说
+很多人跟我争论说，
 A lot of people argue with me and say,
 
 34
 00:01:58.375 --> 00:02:02.668
-第 1 行的箭头功能是完全显而易见的。
-the arrow function on line 1
-is completely self obvious.
+第1行上的箭头函数是完全自明的。
+the arrow function on line 1 is completely self obvious.
 
 35
 00:02:02.668 --> 00:02:05.810
-也许它是显而易见的，但还是一个推论。
-Maybe it is self obvious, but
-it is still an inference.
+也许这是不言而喻的，但它仍然是一个推论。
+Maybe it is self obvious, but it is still an inference.
 
 36
 00:02:05.810 --> 00:02:09.641
-你还需要从代码中推断
-You are still having to infer
-the purpose of that from the code,
+你仍然需要从代码中推断出这样做的目的，
+You are still having to infer the purpose of that from the code,
 
 37
 00:02:09.641 --> 00:02:12.329
-而不是看到被列出的目的
+而不是把目的列出来。
 rather than seeing the purpose listed out.
 
 38
 00:02:12.329 --> 00:02:15.669
-如果我给出更好的名字，我在幻灯片上节省了空间。
-And if I gave an even better name,
-I was saving space on the slides.
+如果我给出一个更好的名字，我就是在节省幻灯片上的空间。
+And if I gave an even better name, I was saving space on the slides.
 
 39
 00:02:15.669 --> 00:02:20.419
-但是，如果我给出更好的名称，例如获取人员标识或获取缺省人员标识。
-But if I gave an even better name like
-get person ID or get default person id.
+但如果我给出一个更好的名字，比如get person id或get default person id。
+But if I gave an even better name like get person ID or get default person id.
 
 40
 00:02:20.419 --> 00:02:24.414
-我可以把更多的信息在语义上告诉读者
-I can put lots of more information in
-there that semantically tells the reader
+我可以把更多的信息放在里面，从语义上告诉读者
+I can put lots of more information in there that semantically tells the reader
 
 41
 00:02:24.414 --> 00:02:27.993
-它的目的是什么在代码上是不明显的
-of my code what its purpose is,
-that would not be obvious in the code.
+我的代码的目的是什么，在代码中不会很明显。
+of my code what its purpose is, that would not be obvious in the code.
 
 42
 00:02:31.000 --> 00:02:35.759
->> Kyle Simpson: 因此，我的操作是，不要将箭头功能用于此用途。
-&gt;&gt; Kyle Simpson: So, my take is, don't
-use arrow functions for this purpose.
+&gt；&gt；Kyle Simpson：所以，我的看法是，不要为此使用箭头函数。
+&gt;&gt; Kyle Simpson: So, my take is, don't use arrow functions for this purpose.
 
 43
 00:02:35.759 --> 00:02:39.723
-稍后我们将返回箭头函数，您将看到其中的一个和
-Later in the course we will come back to
-arrow functions and you'll see the one and
+在本课程的稍后部分，我们将回到箭头函数，您将看到一个和
+Later in the course we will come back to arrow functions and you'll see the one and
 
 44
 00:02:39.723 --> 00:02:42.638
-只有一个例外的情况是我对箭式功能有规律
-only one exception that I have
-to the arrow functions rule,
+对于箭头函数规则，我只有一个例外，
+only one exception that I have to the arrow functions rule,
 
 45
 00:02:42.638 --> 00:02:44.579
-这就是他们的词法
+这是他们的词汇这一行为。
 which is their lexical this behavior.
 
 46
 00:02:44.579 --> 00:02:46.683
-但我不赞同或建议
+但我不支持或推荐或
 But I do not endorse or recommend or
 
 47
 00:02:46.683 --> 00:02:50.538
-建议将其用作任何功能的常规替换。
-suggest using them as a general
-replacement for any function.
+建议使用它们作为任何功能的通用替代。
+suggest using them as a general replacement for any function.
 
 48
 00:02:53.188 --> 00:02:55.836
->> Kyle Simpson: 短或长?
+&gt；&gt；Kyle Simpson：短还是长？
 &gt;&gt; Kyle Simpson: Short or long?
 
 49
 00:02:55.836 --> 00:02:59.901
-又一个例子，如果你做了承诺链，我不是承诺的大粉丝。
-Another example, if you've done promise
-chains, I'm not a big fan of promise
+另一个例子，如果你做过承诺链，我不是一个承诺的狂热粉丝
+Another example, if you've done promise chains, I'm not a big fan of promise
 
 50
 00:02:59.901 --> 00:03:02.629
-但是如果你喜欢做承诺链
-chains anyway, but
-if you like to do promise chains,
+无论如何，链条，但如果你喜欢做承诺链条，
+chains anyway, but if you like to do promise chains,
 
 51
 00:03:02.629 --> 00:03:06.349
-这是您经常在这些功能中进行解析的另一种情况。
-this is another case where you often
-will just parse in these functions.
+这是您通常只解析这些函数的另一种情况。
+this is another case where you often will just parse in these functions.
 
 52
 00:03:06.349 --> 00:03:11.336
-这里有一个地方即使我之前被问到
-Here's one of these places where even
-though, that I was asked earlier,
+这是其中一个地方，尽管我之前被问过，
+Here's one of these places where even though, that I was asked earlier,
 
 53
 00:03:11.336 --> 00:03:15.610
-我可能倾向于我的规则，因为这是在第 14 行上的一个衬。
-I might tend for my rule because
-this is a one liner on line 14.
+我可能会倾向于我的规则，因为这是第14行的一条直线。
+I might tend for my rule because this is a one liner on line 14.
 
 54
 00:03:15.610 --> 00:03:18.901
-我可能倾向于作为内联函数表达式执行此操作，
-I might tend to do that as
-an inline function expression,
+我可能倾向于将其作为内联函数表达式，
+I might tend to do that as an inline function expression,
 
 55
 00:03:18.901 --> 00:03:22.819
-因为我真的很不喜欢保证链的可读性
-because I really dislike the readability
-of promise chain so much.
+因为我真的很不喜欢承诺链的可读性。
+because I really dislike the readability of promise chain so much.
 
 56
 00:03:22.819 --> 00:03:27.395
-我觉得他们很难看，很喜欢意大利面，很像 jQuery
-I find them very hard to read and very
-spaghetti-ish, very much like the jQuery
+我发现它们很难阅读，而且很像意大利面条，非常像jQuery
+I find them very hard to read and very spaghetti-ish, very much like the jQuery
 
 57
 00:03:27.395 --> 00:03:31.377
-大家都说我们几年前就不应该这么做了
-code that everybody said we shouldn't
-be doing several years back.
+每个人都说我们几年前不应该做的代码。
+code that everybody said we shouldn't be doing several years back.
 
 58
 00:03:31.377 --> 00:03:33.788
-我觉得铁链的风格是一样的
-I find promise chains to
-be in that same style.
+我发现承诺链也是同样的风格。
+I find promise chains to be in that same style.
 
 59
 00:03:33.788 --> 00:03:38.096
-我以前很喜欢那种风格现在我很不喜欢那种风格
-And I used to be in love with that style,
-and now I very much dislike that style,
+我以前很喜欢那种风格，现在我非常不喜欢那种风格，
+And I used to be in love with that style, and now I very much dislike that style,
 
 60
 00:03:38.096 --> 00:03:40.597
-从可读性的角度来看
+主要从可读性的角度来看。
 from a readability perspective primarily.
 
 61
 00:03:40.597 --> 00:03:44.609
-所以尽管我通常会有一条规则把它作为内联
-So even though I might normally have
-a rule where I would pass it as an inline
+所以即使我通常有一个规则，我会将它作为内联传递
+So even though I might normally have a rule where I would pass it as an inline
 
 62
 00:03:44.609 --> 00:03:45.913
@@ -360,132 +312,113 @@ function expression.
 
 63
 00:03:45.913 --> 00:03:47.343
-在这个案件中
+在这种情况下，
 In this particular case,
 
 64
 00:03:47.343 --> 00:03:51.243
-我可能把那个功能拉出来作为一个功能声明，
-I would probably pull that function
-out as a function declaration, and
+我可能会将该函数作为函数声明提取出来，并且
+I would probably pull that function out as a function declaration, and
 
 65
 00:03:51.243 --> 00:03:55.403
-所以承诺链会有你在第 11 行上看到的东西
-therefore the promise chain would have
-something like you see on line 11,
+因此，承诺链将具有类似于您在第11行中看到的内容，
+therefore the promise chain would have something like you see on line 11,
 
 66
 00:03:55.403 --> 00:03:59.959
-它正在按名称来引用函数，而不是函数表达式。
-which is referencing a function by name,
-instead of a function expression at all.
+它通过名称引用函数，而不是完全引用函数表达式。
+which is referencing a function by name, instead of a function expression at all.
 
 67
 00:03:59.959 --> 00:04:02.750
-但我仍然不会像你在第 10 行上看到的那样使用箭头功能。
-But I still wouldn't use the arrow
-function like you see on line 10.
+但是我仍然不会像你在第10行看到的那样使用箭头函数。
+But I still wouldn't use the arrow function like you see on line 10.
 
 68
 00:04:06.908 --> 00:04:10.318
->> 凯尔 - 辛普森: 现在，有些人说，他们是匿名的，
-&gt;&gt; Kyle Simpson: Now, some people
-have said, well, they're anonymous,
+&gt；&gt；Kyle Simpson：现在，有些人说，嗯，他们是匿名的，
+&gt;&gt; Kyle Simpson: Now, some people have said, well, they're anonymous,
 
 69
 00:04:10.318 --> 00:04:12.907
-但你还是可以把它们分配给变量
-but you can still assign
-them to variables and
+但您仍然可以将它们赋值给变量和
+but you can still assign them to variables and
 
 70
 00:04:12.907 --> 00:04:15.719
-从他们的利益中得到了同样的好处对吧
-get almost the same benefit out of them,
-right?
+从他们身上得到几乎相同的好处，对吧？
+get almost the same benefit out of them, right?
 
 71
 00:04:15.719 --> 00:04:19.589
-我可以执行此 getId 并将其指定为名为 getId 的变量，并且
-I can take this getId and
-assign it a variable called getId, and
+我可以获取这个getId并为它分配一个名为getId的变量，然后
+I can take this getId and assign it a variable called getId, and
 
 72
 00:04:19.589 --> 00:04:21.499
-那我就用 " people.map"
+那我就用People.map
 then I'm using people.map.
 
 73
 00:04:21.499 --> 00:04:26.949
-第 2 行确实有一个叫 getId的名字。
-And it's true that the line 2 definitely
-does have a name in it called getId.
+确实，第2行确实有一个名为getId的名称。
+And it's true that the line 2 definitely does have a name in it called getId.
 
 74
 00:04:26.949 --> 00:04:30.663
-但如果你去做第 1 行的麻烦
-But if you went to the trouble
-to do line 1, guess what,
+但是如果你不厌其烦地做第一行，你猜怎么着，
+But if you went to the trouble to do line 1, guess what,
 
 75
 00:04:30.663 --> 00:04:35.110
-功能声明的字符实际上较少。
-it's actually fewer characters
-to do the function declaration.
+实际上，做函数声明的字符更少。
+it's actually fewer characters to do the function declaration.
 
 76
 00:04:35.110 --> 00:04:38.911
-你为什么要特别用一个康斯特的方式
-Why do you go to all the trouble
-especially by the way if you use a const,
+为什么你要费这么大的劲，特别是如果你用常量的话，
+Why do you go to all the trouble especially by the way if you use a const,
 
 77
 00:04:38.911 --> 00:04:40.728
-还长了两个字
+还有两个字符长。
 it's two more characters long.
 
 78
 00:04:40.728 --> 00:04:44.478
-如果你算算，实际花费的是多或多的字符
-If you do the math, you're actually
-spending as much or more characters
+如果你计算一下，你实际上花了同样多或更多的字符
+If you do the math, you're actually spending as much or more characters
 
 79
 00:04:44.478 --> 00:04:48.730
-以这种方式定义函数，而不是将其作为函数声明来定义。
-to define the function that way, rather
-than doing it as a function declaration.
+以这种方式定义函数，而不是将其作为函数声明。
+to define the function that way, rather than doing it as a function declaration.
 
 80
 00:04:50.139 --> 00:04:54.755
-所以我不明白为什么人们都被困在这里
-So I just don't see any reason why people
-are stuck on this,other than almost
+所以我就是看不出人们为什么被困在这个上面，除了几乎
+So I just don't see any reason why people are stuck on this,other than almost
 
 81
 00:04:54.755 --> 00:04:59.168
-我们可以写更简明的代码
-an emotional attachment to this idea
-that we can write more concise code.
+对这个想法的情感依恋，我们可以写出更简洁的代码。
+an emotional attachment to this idea that we can write more concise code.
 
 82
 00:04:59.168 --> 00:05:04.059
-请猜测，更简洁的代码不会自动等同更多可读代码。
-Guess what, more concise code does not
-automatically equal more readable code.
+猜猜怎么着，更简洁的代码并不自动等同于更具可读性的代码。
+Guess what, more concise code does not automatically equal more readable code.
 
 83
 00:05:04.059 --> 00:05:06.858
-在某些情况下，它确实存在，但在许多其他情况下，它不存在。
-In some cases, it does, but
-in many other cases, it doesn't.
+在某些情况下，它是这样的，但在其他许多情况下，它不是这样的。
+In some cases, it does, but in many other cases, it doesn't.
 
 84
 00:05:10.928 --> 00:05:14.211
->> 凯尔 - 辛普森: 所以我对箭头的评价非常不受欢迎
-&gt;&gt; Kyle Simpson: So there's my really
-super unpopular opinion on arrow
+&gt；&gt；Kyle Simpson：所以我对Arrow的看法非常不受欢迎
+&gt;&gt; Kyle Simpson: So there's my really super unpopular opinion on arrow
 
 85
 00:05:14.211 --> 00:05:16.720

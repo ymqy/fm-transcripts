@@ -2,275 +2,235 @@ WEBVTT
 
 1
 00:00:00.210 --> 00:00:07.110
->> 凯尔 - 辛普森: 让我们来谈谈这类课程的最后练习。
-&gt;&gt; Kyle Simpson: So let's talk about
-this final exercise on classes.
+&gt；&gt；Kyle Simpson：那么让我们谈谈这个关于课堂的最后一次练习。
+&gt;&gt; Kyle Simpson: So let's talk about this final exercise on classes.
 
 2
 00:00:07.110 --> 00:00:11.330
-记住，我们把这个名字空间物体变成了一个类。
-Remember, we were turning this
-name space object into a class.
+记住，我们将这个名称空间对象转换为一个类。
+Remember, we were turning this name space object into a class.
 
 3
 00:00:11.330 --> 00:00:15.521
-这些方法中的大部分机制都是一模一样的
-Most of the mechanisms inside of these
-methods are gonna be exactly the same,
+这些方法中的大多数机制将是完全相同的，
+Most of the mechanisms inside of these methods are gonna be exactly the same,
 
 4
 00:00:15.521 --> 00:00:16.820
-这才是好消息
+这是个好消息。
 which is the good news.
 
 5
 00:00:16.820 --> 00:00:19.420
-你不用修改里面的很多代码但是
-You didn't have to change a lot
-of the code inside of it, but
+您不必更改其中的很多代码，但是
+You didn't have to change a lot of the code inside of it, but
 
 6
 00:00:19.420 --> 00:00:22.359
-我们本质上改变了它的组织结构
-we're essentially changing
-the organization around it.
+我们本质上是在改变围绕它的组织。
+we're essentially changing the organization around it.
 
 7
 00:00:22.359 --> 00:00:26.199
-所以不要有一个物体能容纳这些东西
-So rather than having an object
-that holds these things,
+所以，与其拥有一个容纳这些东西的物体，
+So rather than having an object that holds these things,
 
 8
 00:00:26.199 --> 00:00:31.012
-我们要去上课了我们要去上课了
-we're gonna have a class, and
-we're gonna call that class Workshop.
+我们将会有一堂课，我们会称之为“班级工作坊”。
+we're gonna have a class, and we're gonna call that class Workshop.
 
 9
 00:00:31.012 --> 00:00:33.247
-而不是拥有它的属性
+而不是有属性在上面，
 And instead of having properties on it,
 
 10
 00:00:33.247 --> 00:00:36.549
-我们得有个构造函数来设置这些
-we're gonna have to have
-a constructor that sets those up.
+我们必须有一个构造函数来设置它们。
+we're gonna have to have a constructor that sets those up.
 
 11
 00:00:36.549 --> 00:00:40.555
-所以我们会制作一个构造函数
+所以我们将创建一个构造函数
 So we'll make a constructor that says
 
 12
 00:00:40.555 --> 00:00:49.354
-this.currentEnrollment 等于空数组和
-this.currentEnrollment equals
-the empty array and
+this.currentEnrollment等于空数组，并且
+this.currentEnrollment equals the empty array and
 
 13
 00:00:49.354 --> 00:00:54.039
-this.studentRecords 等于空数组。
-this.studentRecords equals
-the empty array.
+this.StudentRecords等于空数组。
+this.studentRecords equals the empty array.
 
 14
 00:00:54.039 --> 00:00:59.661
-现在所有这些都只是我们的分类定义中的方法
-Now all the rest of these are just methods
-now inside of our class definition so
+现在，所有其余的方法都是我们的类定义中的方法，所以
+Now all the rest of these are just methods now inside of our class definition so
 
 15
 00:00:59.661 --> 00:01:01.750
-我们可以去掉这些逗号
+我们可以去掉那些逗号。
 we can remove those commas.
 
 16
 00:01:13.373 --> 00:01:17.510
->> 凯尔 - 辛普森: 好的，所有这些都应该在没有变化的情况下
-&gt;&gt; Kyle Simpson: All right, so all of
-those should stand without any changes
+&gt；&gt；Kyle Simpson：好的，所有这些都应该保持不变
+&gt;&gt; Kyle Simpson: All right, so all of those should stand without any changes
 
 17
 00:01:17.510 --> 00:01:22.710
-因为他们都在处理我们这个例子的这个背景。
-because they are all properly handling
-this context of our instance.
+因为它们都正确地处理了我们实例的这个上下文。
+because they are all properly handling this context of our instance.
 
 18
 00:01:22.710 --> 00:01:25.911
-但有一点我想说的是
-But there was one little thing
-with the Readme mention,
+但自述文件提到了一件小事，
+But there was one little thing with the Readme mention,
 
 19
 00:01:25.911 --> 00:01:29.518
-就是把那些不知道的功能拿出来，
-which was to pull out the functions
-that are not this aware, and
+那就是拉出不知道的功能，并且
+which was to pull out the functions that are not this aware, and
 
 20
 00:01:29.518 --> 00:01:33.370
-其中有两个， sortByName 和 printRecord。
-there are two of them,
-the sortByName and the printRecord.
+其中有两个，sortByName和printRecord。
+there are two of them, the sortByName and the printRecord.
 
 21
 00:01:33.370 --> 00:01:38.593
-这两个不是， >> 凯尔 - 辛普森: 这个知道，
-These two are not,
-&gt;&gt; Kyle Simpson: This aware,
+这两个不是，&gt；&gt；Kyle Simpson：这个意识，
+These two are not, &gt;&gt; Kyle Simpson: This aware,
 
 22
 00:01:38.593 --> 00:01:42.210
-他们并不是特别与讲习班相关的。
-and they're not really related
-to the Workshop specifically.
+而且它们与工作坊并没有什么特别的关系。
+and they're not really related to the Workshop specifically.
 
 23
 00:01:42.210 --> 00:01:46.640
-所以我们要把他们放在 Helpers 的家长课上
-And so we're gonna put them
-in a Helpers parent class.
+所以我们要把他们放在帮手家长班。
+And so we're gonna put them in a Helpers parent class.
 
 24
 00:01:48.420 --> 00:01:52.009
-该 Helpers 父类不需要构造函数。
-That Helpers parent class
-doesn't need a constructor.
+Helpers父类不需要构造函数。
+That Helpers parent class doesn't need a constructor.
 
 25
 00:01:52.009 --> 00:01:59.000
-但现在我们定义了一个家长阶级，这意味着一个细微的细微差别，
-But now that we're defining a parent
-class, it does mean a little nuance, which
+但是现在我们定义了一个父类，它确实意味着一些细微的差别，这
+But now that we're defining a parent class, it does mean a little nuance, which
 
 26
 00:01:59.000 --> 00:02:03.329
-我们得确保能从我们的孩子构造函数中调用超级函数
-is that we're gonna have to make sure to
-call super from our child constructor.
+我们必须确保从我们的子构造函数调用super。
+is that we're gonna have to make sure to call super from our child constructor.
 
 27
 00:02:03.329 --> 00:02:06.420
-如果未定义子构造函数，那么它会自动执行。
-If you don't define a child constructor,
-it automatically does.
+如果没有定义子构造函数，它会自动定义。
+If you don't define a child constructor, it automatically does.
 
 28
 00:02:06.420 --> 00:02:10.680
-但如果你做一个孩子的构造函数你得叫超级
-But if you make a child constructor,
-you have to call super
+但如果创建子构造函数，则必须调用super
+But if you make a child constructor, you have to call super
 
 29
 00:02:10.680 --> 00:02:14.189
-要调用父构造函数，并且必须首先执行此操作。
-to invoke the parent constructor,
-and you have to do it first.
+调用父构造函数，您必须首先这样做。
+to invoke the parent constructor, and you have to do it first.
 
 30
 00:02:14.189 --> 00:02:19.250
-因此，有一个已为您构建的对象。
-So that there is a this object
-that has been constructed for you.
+这样就有一个为您构建的this对象。
+So that there is a this object that has been constructed for you.
 
 31
 00:02:19.250 --> 00:02:27.240
-好，现在我们需要添加扩展子句，扩展 Helpers。
-Okay, so now we need to add
-the extends clause, extends Helpers.
+好的，现在我们需要添加Extensions子句，Extensions Helpers。
+Okay, so now we need to add the extends clause, extends Helpers.
 
 32
 00:02:27.240 --> 00:02:32.313
-然后我们唯一能改变的
-And then the only other
-change that we should have
+然后我们应该有的唯一的另一个改变
+And then the only other change that we should have
 
 33
 00:02:32.313 --> 00:02:37.263
-我们要把它的深度
-to make is that we need
-to instantiate the deepJS
+要做的是我们需要实例化deep JS
+to make is that we need to instantiate the deepJS
 
 34
 00:02:37.263 --> 00:02:42.240
-通过调用 deepJS 等于新研讨会的对象。
-object by calling deepJS
-equals new Workshop.
+通过调用Deep JS来创建对象等于新工作坊。
+object by calling deepJS equals new Workshop.
 
 35
 00:02:42.240 --> 00:02:47.590
-如果我没有错过一些东西，我希望这个代码应该能起作用。
-And if I didn't miss something,
-hopefully this code should now work.
+如果我没有遗漏什么，希望这段代码现在应该可以工作了。
+And if I didn't miss something, hopefully this code should now work.
 
 36
 00:02:47.590 --> 00:02:53.430
-让我们切换到这个环境，让我们运行这个代码，看看我们得到了什么。
-Let's switch over to this environments and
-let's run this code and see what we got.
+让我们切换到这个环境，让我们运行这段代码，看看我们得到了什么。
+Let's switch over to this environments and let's run this code and see what we got.
 
 37
 00:02:55.150 --> 00:02:56.300
-还有我们的产量
+这是我们的输出。
 And there's our output.
 
 38
 00:02:58.753 --> 00:03:01.956
->> Kyle Simpson: 因此我们有基于类的定义，而不是使用
-&gt;&gt; Kyle Simpson: So there's our
-class-based definition rather than using
+&gt；&gt；Kyle Simpson：所以这是我们基于类的定义，而不是使用
+&gt;&gt; Kyle Simpson: So there's our class-based definition rather than using
 
 39
 00:03:01.956 --> 00:03:02.729
-名称空间。
+命名空间。
 a name space.
 
 40
 00:03:02.729 --> 00:03:06.860
-这是我们的讲习班管理的基于类的定义。
-It's our class-based definition for
-our Workshop management.
+这是我们车间管理的基于类的定义。
+It's our class-based definition for our Workshop management.
 
 41
 00:03:08.689 --> 00:03:13.182
-有关使用类语法来组织此代码的问题 ?
-Questions about using the class
-syntax to organize this code?
+关于使用类语法组织此代码的问题？
+Questions about using the class syntax to organize this code?
 
 42
 00:03:15.753 --> 00:03:22.650
->> 演讲者 2: 当您从 " 研讨会" 创建深度 JS 时，您是否使用了新的内容 ?
-&gt;&gt; Speaker 2: Did you use new when
-you created deepJS from Workshop?
+&gt；&gt；Speaker 2：当您从工作坊创建Deep JS时，是否使用了new？
+&gt;&gt; Speaker 2: Did you use new when you created deepJS from Workshop?
 
 43
 00:03:23.659 --> 00:03:29.367
->> Kyle Simpson: 是的，我们在处理一个构造函数时要使用新的。
-&gt;&gt; Kyle Simpson: Yep, and we have to use
-new when we're dealing with a constructor.
+&gt；&gt；Kyle Simpson：是的，我们在处理构造函数时必须使用new。
+&gt;&gt; Kyle Simpson: Yep, and we have to use new when we're dealing with a constructor.
 
 44
 00:03:29.367 --> 00:03:32.406
-例如，定义 " 研讨会 " 是一个模块工厂时，
-For example,
-when define Workshop was a module factory,
+例如，当定义工作坊是模块工厂时，
+For example, when define Workshop was a module factory,
 
 45
 00:03:32.406 --> 00:03:35.229
-那只是一个正常的功能所以我们才叫它
-that's just a regular function so
-we just called it.
+这只是一个常规函数，所以我们只调用它。
+that's just a regular function so we just called it.
 
 46
 00:03:35.229 --> 00:03:37.531
-但既然这是一个阶级构造函数
+但由于这是一个类构造函数，
 But since this is a class constructor,
 
 47
 00:03:37.531 --> 00:03:41.500
-我们实际上需要用一个新的关键词来引用它，比如你会是一个普通的阶级。
-we actually need to invoke it with a new
-keyword like you would a normal class.
+我们实际上需要用一个新的关键字来调用它，就像普通的类一样。
+we actually need to invoke it with a new keyword like you would a normal class.

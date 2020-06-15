@@ -2,151 +2,128 @@ WEBVTT
 
 1
 00:00:00.120 --> 00:00:03.529
->> 凯尔 - 辛普森: 现在，我们终于开始谈论模块模式了。
-&gt;&gt; Kyle Simpson: Now, we finally get
-to talk about the module pattern.
+&gt；&gt；Kyle Simpson：现在，我们终于可以讨论模块模式了。
+&gt;&gt; Kyle Simpson: Now, we finally get to talk about the module pattern.
 
 2
 00:00:03.529 --> 00:00:07.820
-我们通过对词法范围的深入理解来建立自己。
-We've built ourselves up through
-a solid understanding of lexical scope.
+我们通过对词汇范围的坚实理解建立了自己。
+We've built ourselves up through a solid understanding of lexical scope.
 
 3
 00:00:07.820 --> 00:00:11.560
-词法范围让我们了解关闭工作的方式，以及
-Lexical scope gives us an understanding
-of how closure works, and
+词法范围让我们了解闭包是如何工作的，并且
+Lexical scope gives us an understanding of how closure works, and
 
 4
 00:00:11.560 --> 00:00:15.689
-然后，关闭是了解模块模式的必需组件。
-closure then is a necessary component
-to understand the module pattern.
+因此，闭包是理解模块模式的必要组件。
+closure then is a necessary component to understand the module pattern.
 
 5
 00:00:15.689 --> 00:00:18.480
-在查看模块模式是什么之前，
-Before we look at what
-the module pattern is,
+在我们了解模块模式之前，
+Before we look at what the module pattern is,
 
 6
 00:00:18.480 --> 00:00:20.629
-我们需要看看模块模式是什么
-we need to look at what
-the module pattern is not.
+我们需要看看模块模式不是什么。
+we need to look at what the module pattern is not.
 
 7
 00:00:22.449 --> 00:00:27.164
-这是一个非常常见的模式，一种常见的模式，
-This is an extremely common pattern,
-a common pattern where you have a set of
+这是一种非常常见的模式，一种常见的模式，其中有一组
+This is an extremely common pattern, a common pattern where you have a set of
 
 8
 00:00:27.164 --> 00:00:31.972
-行为相似的函数以及这些函数所运行的数据集。
-behavior-like functions and a set of
-data that those functions operate on.
+类似行为的函数和这些函数对其进行操作的一组数据。
+behavior-like functions and a set of data that those functions operate on.
 
 9
 00:00:31.972 --> 00:00:36.993
-你想把它们一起收集到一些逻辑单元中最简单的方法就是
-And you wanna collect them together into
-some logical unit, the simplest way is to
+你想把它们收集到一个逻辑单元中，最简单的方法就是
+And you wanna collect them together into some logical unit, the simplest way is to
 
 10
 00:00:36.993 --> 00:00:41.889
-只需创建对象并将您的数据和函数直接放在对象上。
-just make an object and put your data and
-your functions directly on the object.
+只需创建一个对象，并将您的数据和函数直接放在该对象上。
+just make an object and put your data and your functions directly on the object.
 
 11
 00:00:43.289 --> 00:00:46.465
-我想说这个名字是非正式的但是
-I would say that this has a name,
-unofficially, but
+我想说这有个名字，非正式的，但是
+I would say that this has a name, unofficially, but
 
 12
 00:00:46.465 --> 00:00:50.161
-它的名称为模式，这是名称空间模式。
-this had a name as a pattern,
-this is the namespace pattern.
+这有一个名字作为模式，这是命名空间模式。
+this had a name as a pattern, this is the namespace pattern.
 
 13
 00:00:50.161 --> 00:00:54.524
-获取一组功能和数据并将其放入对象中，
-Taking a set of functions and data and
-putting them inside of an object,
+取一组函数和数据并将它们放入对象内，
+Taking a set of functions and data and putting them inside of an object,
 
 14
 00:00:54.524 --> 00:00:57.651
 将它们作为属性而不是变量，
-putting them as properties
-instead of variables,
+putting them as properties instead of variables,
 
 15
 00:00:57.651 --> 00:01:00.941
 它有效地将它们收集到一个名称空间中。
-it is effectively collecting
-them into a namespace.
+it is effectively collecting them into a namespace.
 
 16
 00:01:00.941 --> 00:01:04.549
-不是语言的语法功能，但是
-Not really a syntactic
-feature of the language, but
+不是真正的语言句法特性，但是
+Not really a syntactic feature of the language, but
 
 17
 00:01:04.549 --> 00:01:08.250
-我们用物体来命名空间是一个独特的问题
-it's an idiom that we make
-namespaces with objects.
+我们用对象创建名称空间是一种习惯用法。
+it's an idiom that we make namespaces with objects.
 
 18
 00:01:08.250 --> 00:01:11.500
 多年来，这是一个非常普遍的模式。
-And for years,
-this was an extremely common pattern.
+And for years, this was an extremely common pattern.
 
 19
 00:01:11.500 --> 00:01:14.719
-这就是人们一起收集功能的方式。
-This is how people collected
-functionality together.
+这就是人们将功能收集在一起的方式。
+This is how people collected functionality together.
 
 20
 00:01:14.719 --> 00:01:17.439
-这是原始的数据结构，如果您愿意的话。
-This was sort of the primitive
-data structure, if you will.
+这是一种原始的数据结构，如果你愿意的话。
+This was sort of the primitive data structure, if you will.
 
 21
 00:01:18.780 --> 00:01:21.289
-这一特定模式没有任何错误。
-Nothing wrong with this
-particular pattern.
+这种特殊的模式没有什么问题。
+Nothing wrong with this particular pattern.
 
 22
 00:01:21.289 --> 00:01:23.189
-我在很多场合都用过
+我已经用过很多次了。
 I've used it on many occasions.
 
 23
 00:01:23.189 --> 00:01:25.250
-你可能在自己的代码里看到过
+您可能已经在自己的代码中看到了它。
 You've probably seen it in your own code.
 
 24
 00:01:25.250 --> 00:01:30.840
-但我告诉你，绝对是 100% ，而不是一个模块。
-But i would tell you it is definitely,
-100%, positively not a module.
+但我会告诉你，它绝对是，100%，绝对不是一个模块。
+But i would tell you it is definitely, 100%, positively not a module.
 
 25
 00:01:32.599 --> 00:01:37.579
 它不是模块的原因是模块模式
-And the reason it's not a module
-is that the module pattern
+And the reason it's not a module is that the module pattern
 
 26
 00:01:37.579 --> 00:01:41.143
@@ -155,147 +132,128 @@ requires the concept of encapsulation.
 
 27
 00:01:41.143 --> 00:01:44.289
-封装是一个时髦的 CS 词汇。
+封装是一个听起来很奇特的CS单词。
 Encapsulation is a fancy sounding CS word.
 
 28
 00:01:44.289 --> 00:01:48.579
-所有这些都是隐藏数据和行为的想法。
-All it really means is the idea
-of hiding data and behavior.
+它真正的意思是隐藏数据和行为的想法。
+All it really means is the idea of hiding data and behavior.
 
 29
 00:01:48.579 --> 00:01:51.969
-这一切的意义在于不仅是我一起收集的
-All it really means is,
-not only have I collected it together,
+它真正的意思是，我不仅收集了它，
+All it really means is, not only have I collected it together,
 
 30
 00:01:51.969 --> 00:01:56.299
-这就是名称空间所创造的但我需要一些隐藏的概念
-which is what the namespace creates,
-but I need some notion of hiding,
+这就是名称空间创建的，但我需要一些隐藏的概念，
+which is what the namespace creates, but I need some notion of hiding,
 
 31
 00:01:56.299 --> 00:02:00.509
-一些关于信息隐藏的想法，或者一些对可视性的控制。
-some idea for information hiding,
-or some control over visibility.
+信息隐藏的一些想法，或对可见性的一些控制。
+some idea for information hiding, or some control over visibility.
 
 32
 00:02:01.709 --> 00:02:06.849
 一个模块，一个模块的概念，就是有一些东西是公开的，
-A module, the idea of a module,
-is that there are things that are public,
+A module, the idea of a module, is that there are things that are public,
 
 33
 00:02:06.849 --> 00:02:09.979
-那是你的公共空气污染物而且有些东西是私人的
-that's your public API, and
-there are things that are private,
+这是你的公共API，有些东西是私有的，
+that's your public API, and there are things that are private,
 
 34
 00:02:09.979 --> 00:02:12.180
-外面没人能碰的东西
-that's things that nobody
-on the outside can touch.
+这是外面没人能碰的东西。
+that's things that nobody on the outside can touch.
 
 35
 00:02:13.639 --> 00:02:18.569
-有一个可视性的概念，即使唯一的可视性概念要么是公共的，要么是
-There's an idea of visibility, even if the
-only visibility notion is either public or
+有一种可见性的概念，即使唯一的可见性概念要么是公共的，要么是
+There's an idea of visibility, even if the only visibility notion is either public or
 
 36
 00:02:18.569 --> 00:02:25.680
-私人的，还是封装这个概念的一个咒语。
-private, that is still an incantation
-of the idea of encapsulation.
+私有，这仍然是封装思想的咒语。
+private, that is still an incantation of the idea of encapsulation.
 
 37
 00:02:26.909 --> 00:02:29.909
-所以如果你想有个模块你得有封装
-So if you wanna have a module,
-you gotta have encapsulation,
+所以如果你想要一个模块，你必须有封装，
+So if you wanna have a module, you gotta have encapsulation,
 
 38
 00:02:29.909 --> 00:02:30.770
-你得把数据藏起来
+你必须有数据隐藏。
 you gotta have data hiding.
 
 39
 00:02:30.770 --> 00:02:34.110
-在这里我们可以清楚地看到
-And here,
-we can clearly see that the properties and
+在这里，我们可以清楚地看到属性和
+And here, we can clearly see that the properties and
 
 40
 00:02:34.110 --> 00:02:37.569
-它的功能是公开的，所以它不是一个模块。
-functions that exist are public,
-therefore it's not a module.
+现有的函数是公共的，因此它不是一个模块。
+functions that exist are public, therefore it's not a module.
 
 41
 00:02:38.610 --> 00:02:45.030
-所以我们可以在这个概念上，或者在这个技术上，
-So we can take this same idea and layer
-on the idea, or layer on the technique
+所以我们可以采取同样的想法，在想法上分层，或者在技术上分层
+So we can take this same idea and layer on the idea, or layer on the technique
 
 42
 00:02:45.030 --> 00:02:51.590
-把信息隐藏起来我们都突然成为了一个模块
-of encapsulation of information hiding,
-and we all of the sudden make it a module.
+信息隐藏的封装，我们一下子就把它变成了一个模块。
+of encapsulation of information hiding, and we all of the sudden make it a module.
 
 43
 00:02:51.590 --> 00:02:53.280
-让我们来看看这看起来是什么样的。
+让我们看看这看起来是什么样子。
 So let's look at what that looks like.
 
 44
 00:02:53.280 --> 00:02:57.599
-经典模块模式，有时称为显示模块
-The classic module pattern, sometimes
-referred to as the revealing module
+经典的模块模式，有时称为揭示模块
+The classic module pattern, sometimes referred to as the revealing module
 
 45
 00:02:57.599 --> 00:03:03.500
-模式，封装数据，完成封装。
-pattern, it encapsulates data and
-it does so with closure.
+模式时，它封装数据，并使用闭包进行封装。
+pattern, it encapsulates data and it does so with closure.
 
 46
 00:03:03.500 --> 00:03:04.020
-那是关键
+这才是关键。
 That's key.
 
 47
 00:03:05.580 --> 00:03:08.330
-所以你不能有一个模块，如果你没有关闭的话。
-So you can't have a module,
-if you don't have closure.
+所以你不能有一个模块，如果你没有结束。
+So you can't have a module, if you don't have closure.
 
 48
 00:03:09.879 --> 00:03:11.949
-这是不可能的好吗
+这是不可能的好吗？
 It's just not possible, okay?
 
 49
 00:03:11.949 --> 00:03:16.400
-就连我们在概念上讲的 F6 模块，
-Even the F6 modules, which we will talk
-about in a little bit, conceptually,
+即使是F6模块，我们将在概念上稍作讨论，
+Even the F6 modules, which we will talk about in a little bit, conceptually,
 
 50
 00:03:16.400 --> 00:03:18.990
-我们得把它们当作封闭物
+我们需要把他们当做了结。
 we need to think about them as closure.
 
 51
 00:03:19.990 --> 00:03:24.479
-模块模式，第一类编码为经典或
-The module pattern,
-first sort of codified as the classic or
+模块模式，第一种被编码为经典的or
+The module pattern, first sort of codified as the classic or
 
 52
 00:03:24.479 --> 00:03:26.289
@@ -304,13 +262,12 @@ the revealing module pattern.
 
 53
 00:03:26.289 --> 00:03:30.500
-2001 年被 Doug Crawford 编纂成法
-It was codified by
-Doug Crawford-ish in 2001,
+它是由道格·克劳福德-伊什于2001年编纂的，
+It was codified by Doug Crawford-ish in 2001,
 
 54
 00:03:30.500 --> 00:03:33.368
-这就是它看起来的样子
+这就是它看起来的样子。
 and this is kinda what it looks like.
 
 55
@@ -320,438 +277,380 @@ It has two components to it.
 
 56
 00:03:35.759 --> 00:03:39.110
-第一，我们有一个外层的封闭功能。
-Number one,
-we have an outer enclosing function.
+第一，我们有一个外部封闭函数。
+Number one, we have an outer enclosing function.
 
 57
 00:03:39.110 --> 00:03:42.569
-在这种情况下，它是一个 IIFE，每个人都在那里看到 IIFE 吗 ?
-In this case, it's an IIFE,
-everybody see the IIFE there?
+在这种情况下，这是一种生活，每个人都看到那里的生活了吗？
+In this case, it's an IIFE, everybody see the IIFE there?
 
 58
 00:03:42.569 --> 00:03:43.639
-它是个 IIFE
+这是一种生活，而且
 It's an IIFE, and
 
 59
 00:03:43.639 --> 00:03:48.360
-当我们把一个模块作为一个 IIF 的时候，就好像说它是一个单体。
-when we run a module as an IIFE, that's
-kind of like saying it's a singleton.
+当我们把一个模块作为一个生命来运行时，这有点像说它是一个独生子。
+when we run a module as an IIFE, that's kind of like saying it's a singleton.
 
 60
 00:03:49.389 --> 00:03:50.920
-因为我们知道 IIFEs 运行一次
+因为我们知道生命运行一次
 Since we know IIFEs run once and
 
 61
 00:03:50.920 --> 00:03:54.846
-然后他们就这样做了这就像一个单身人士
-then they're done,
-this is sort of like a singleton.
+然后他们完成了，这有点像独生子女。
+then they're done, this is sort of like a singleton.
 
 62
 00:03:54.846 --> 00:04:00.689
-它运行一次，然后就完成了，除了在空中的引用意义上，
-It runs once, and then it's done,
-except done only in the air quote sense,
+它运行一次，然后就完成了，除了只在空气引用的意义上完成，
+It runs once, and then it's done, except done only in the air quote sense,
 
 63
 00:04:00.689 --> 00:04:05.629
-因为封闭会阻止这个范围的消失
-because the closure is gonna
-prevent that scope from going away.
+因为封闭会防止望远镜消失。
+because the closure is gonna prevent that scope from going away.
 
 64
 00:04:05.629 --> 00:04:08.659
-第二个组成部分就是我们有一个内在的功能，
-The second component then,
-is that we have an inner function,
+第二个组成部分是我们有一个内部函数，
+The second component then, is that we have an inner function,
 
 65
 00:04:08.659 --> 00:04:14.000
-在这个案件中询问第七条关于这些变量的情况
-in this case ask on line 7,
-that is closed over those variables,
+在这种情况下，在第7行询问，这是在这些变量上闭合的，
+in this case ask on line 7, that is closed over those variables,
 
 66
 00:04:14.000 --> 00:04:17.899
-在这种情况下，它是通过教师变量关闭的。
-in this case,
-it is closed over the teacher variable.
+在这种情况下，它在教师变量上关闭。
+in this case, it is closed over the teacher variable.
 
 67
 00:04:17.899 --> 00:04:20.160
-因为它已经关闭了老师的变量
-Since it's closed over
-the teacher variable,
+因为它是在教师变量上关闭的，
+Since it's closed over the teacher variable,
 
 68
 00:04:20.160 --> 00:04:26.089
-外部的工作坊对象，现在已经参考了这个功能，
-the workshop object on the outside,
-which has now reference to that function,
+外部的车间对象，现在已经引用了该功能，
+the workshop object on the outside, which has now reference to that function,
 
 69
 00:04:26.089 --> 00:04:29.040
-通过封闭保持内部范围。
-is preserving that inner
-scope through closure.
+通过闭合来保存内部作用域。
+is preserving that inner scope through closure.
 
 70
 00:04:30.160 --> 00:04:36.100
-问老师结束了，我们在外面说 workshop.ask ，
-Ask is closed over teacher, and
-when we say workshop.ask on the outside,
+问老师是封闭的，当我们说工作间的时候。问在外面，
+Ask is closed over teacher, and when we say workshop.ask on the outside,
 
 71
 00:04:36.100 --> 00:04:40.170
-那就是范围没把垃圾收起来，那个范围还在，
-that's scope didn't get garbage collected
-and go away, that scope is still there,
+这个作用域没有被垃圾收集然后离开，那个作用域还在那里，
+that's scope didn't get garbage collected and go away, that scope is still there,
 
 72
 00:04:40.170 --> 00:04:44.949
-那个国家还在那里，这就是我们的效果
-that state is still there,
-and that's how we effect or
+这种状态仍然存在，这就是我们如何影响或
+that state is still there, and that's how we effect or
 
 73
 00:04:44.949 --> 00:04:49.100
-在 JavaScript中创建模块模式，模块模式的 idiom 。
-create the module pattern,
-the idiom of module pattern in JavaScript.
+创建模块模式，这是JavaScript中模块模式的习惯用法。
+create the module pattern, the idiom of module pattern in JavaScript.
 
 74
 00:04:49.100 --> 00:04:53.237
-我们把自己的私事公布于私事让我们暴露在一个物体上
-We keep our private state private,
-and we expose things on an object,
+我们让我们的私人国家保持私人，我们在一个物体上暴露一些东西，
+We keep our private state private, and we expose things on an object,
 
 75
 00:04:53.237 --> 00:04:56.408
-就像我在这里做的公共 API 对象一样
-like what I'm doing here
-with the public API object.
+就像我在这里对公共API对象所做的那样。
+like what I'm doing here with the public API object.
 
 76
 00:04:56.408 --> 00:04:58.295
-我只是在揭露你的要求
+我只暴露Ask函数。
 Is I'm exposing only the ask function.
 
 77
 00:04:58.295 --> 00:05:01.483
-但我能有很多私人的功能
-But I could have hundreds of other
-functions that were private,
+但我可以有成百上千的其他私人功能，
+But I could have hundreds of other functions that were private,
 
 78
 00:05:01.483 --> 00:05:03.740
-无法从外部访问的信息。
-that could not be accessed
-from the outside.
+无法从外部访问。
+that could not be accessed from the outside.
 
 79
 00:05:03.740 --> 00:05:08.577
-但封闭功能能让他们一整天都能进入
-And yet the closure functions
-can access them all day long,
+然而闭包函数可以整天访问它们，
+And yet the closure functions can access them all day long,
 
 80
 00:05:08.577 --> 00:05:11.692
-如果他们想的话就会被封锁
+如果他们想，因为结束了。
 if they want to, because of closure.
 
 81
 00:05:11.692 --> 00:05:15.079
-我可以说 workshop.ask ，但我不能说workshop.老师。
-So I can say workshop.ask, but
-I can't say workshop.teacher.
+所以我可以说Workshop.ask，但我不能说Workshop.教师。
+So I can say workshop.ask, but I can't say workshop.teacher.
 
 82
 00:05:15.079 --> 00:05:16.668
-老师藏起来了
+老师藏起来了。
 Teacher is hidden.
 
 83
 00:05:16.668 --> 00:05:18.643
-滚吧
+卷起来。
 Roll that.
 
 84
 00:05:20.689 --> 00:05:22.370
->> Kyle Simpson: 结束不作为。
+&gt；&gt；Kyle Simpson：这就是闭合无为。
 &gt;&gt; Kyle Simpson: That's closure inaction.
 
 85
 00:05:22.370 --> 00:05:26.629
-它只是上百个可能关闭的应用程序中的一个。
-It's only one of hundreds of
-possible applications of closure.
+这只是成百上千种可能的封闭性应用中的一种。
+It's only one of hundreds of possible applications of closure.
 
 86
 00:05:26.629 --> 00:05:28.740
-但我们无法用这种方式完成模块模式。
-But we couldn't do the module
-pattern in this way.
+但是我们不能这样做模块模式。
+But we couldn't do the module pattern in this way.
 
 87
 00:05:28.740 --> 00:05:32.827
-我们不可能影响到把信息隐藏起来的这个想法
-We couldn't affect this idea of
-information hiding of encapsulation
+我们不能影响这种信息隐藏的封装思想
+We couldn't affect this idea of information hiding of encapsulation
 
 88
 00:05:32.827 --> 00:05:33.942
-在没有关闭的情况下
+没有结束。
 without closure.
 
 89
 00:05:37.612 --> 00:05:40.882
->> Kyle Simpson: 此处识别的关键是使用
-&gt;&gt; Kyle Simpson: What's critical to
-recognize here is that this usage of
+&gt；&gt；Kyle Simpson：这里需要认识到的关键是
+&gt;&gt; Kyle Simpson: What's critical to recognize here is that this usage of
 
 90
 00:05:40.882 --> 00:05:45.408
-关闭实际上正在关闭设计为更改状态的变量
-closure is actually closing over variables
-that are designed to change state
+闭包实际上是对设计为改变状态的变量进行闭合
+closure is actually closing over variables that are designed to change state
 
 91
 00:05:45.408 --> 00:05:46.120
-随着时间的推移
+随着时间的推移。
 over time.
 
 92
 00:05:48.529 --> 00:05:52.899
-这就是一个模块的目的，它是在一段时间内跟踪状态。
-That's the whole purpose of a module,
-is to track state over time.
+这就是模块的全部目的，就是随着时间的推移跟踪状态。
+That's the whole purpose of a module, is to track state over time.
 
 93
 00:05:52.899 --> 00:05:58.959
-事实上，我想说的是，如果你有一个叫模块的东西，
-In fact, I'd go so far as to say, if you
-have a thing that you call a module,
+事实上，我甚至会说，如果你有一个叫做模块的东西，
+In fact, I'd go so far as to say, if you have a thing that you call a module,
 
 94
 00:05:58.959 --> 00:06:01.379
-它没有任何国家，或者说
+它没有任何状态，或者更确切地说，
 and it doesn't have any state, or rather,
 
 95
 00:06:01.379 --> 00:06:05.740
-它没有任何改变的状态它不是一个模块
-it doesn't have any state that
-ever changes, it's not a module.
+它没有任何改变的状态，它不是一个模块。
+it doesn't have any state that ever changes, it's not a module.
 
 96
 00:06:07.660 --> 00:06:12.370
-这只是一个过度设计的名称空间，好吗 ?
-It's just an over-engineered namespace,
-okay?
+这只是一个过度设计的命名空间，好吗？
+It's just an over-engineered namespace, okay?
 
 97
 00:06:12.370 --> 00:06:16.600
-模块的用途是您已关闭了某些状态，并且
-The purpose of a module is that you have
-some state that you're closed over, and
+模块的用途是您有一些关闭的状态，并且
+The purpose of a module is that you have some state that you're closed over, and
 
 98
 00:06:16.600 --> 00:06:21.170
-通过公开最低公共 API 来控制对其的访问。
-you are controlling access to it
-by exposing a minimal public API.
+您正在通过公开最小的公共API来控制对它的访问。
+you are controlling access to it by exposing a minimal public API.
 
 99
 00:06:21.170 --> 00:06:24.259
-还记得最少曝光特权的原则吗
-Remember that principle of
-least exposure privilege?
+还记得最少接触特权的原则吗？
+Remember that principle of least exposure privilege?
 
 100
 00:06:24.259 --> 00:06:26.069
-这就在这里
+这就是在这里的行动。
 That's in action here.
 
 101
 00:06:26.069 --> 00:06:28.052
-我们是说把一切都藏起来
+我们的意思是把所有东西都藏起来，
 We're saying keep everything hidden,
 
 102
 00:06:28.052 --> 00:06:31.271
-除了最低限度暴露在外面的必要
-except minimally expose only
-what's necessary on the outside.
+除了最小限度地暴露在外面所必需的东西之外。
+except minimally expose only what's necessary on the outside.
 
 103
 00:06:34.882 --> 00:06:36.110
->> 凯尔 - 辛普森: 这是这里的想法。
+&gt；&gt；Kyle Simpson：这就是这里的想法。
 &gt;&gt; Kyle Simpson: That's the idea here.
 
 104
 00:06:36.110 --> 00:06:37.909
-尽量少暴露需要的东西。
+最低限度地只暴露必要的东西。
 Minimally expose only what's necessary.
 
 105
 00:06:39.000 --> 00:06:39.920
-这是模块模式。
+这就是模块模式。
 That's the module pattern.
 
 106
 00:06:41.949 --> 00:06:47.990
-现在，上一张幻灯片有一个模块 IIFE， AKA，一个模块单体。
-Now, the previous slide had a module IIFE,
-AKA, a module singleton.
+现在，上一张幻灯片有一个模块生命，AKA，一个模块单例。
+Now, the previous slide had a module IIFE, AKA, a module singleton.
 
 107
 00:06:47.990 --> 00:06:49.529
-但这不是制造模块的唯一方法。
-But that's not the only
-way to make modules.
+但这不是制作模块的唯一方法。
+But that's not the only way to make modules.
 
 108
 00:06:49.529 --> 00:06:53.439
-我们可以只做多次可以调用的常规函数。
-We can make just regular functions
-that can be called multiple times.
+我们可以只制作可以多次调用的常规函数。
+We can make just regular functions that can be called multiple times.
 
 109
 00:06:53.439 --> 00:06:55.060
-每次都有一个函数
+每次调用函数时，
 And every time a function is called,
 
 110
 00:06:55.060 --> 00:06:57.459
-它会产生我们模块的新实例
-it's gonna produce a new
-instance of our module.
+它将产生我们模块的一个新实例。
+it's gonna produce a new instance of our module.
 
 111
 00:06:58.970 --> 00:07:04.779
-我们把这些都称为工厂的功能，好吗 ?
-We lovingly refer to those
-as factory functions, okay?
+我们亲切地把它们称为工厂功能，好吗？
+We lovingly refer to those as factory functions, okay?
 
 112
 00:07:04.779 --> 00:07:08.470
-这是车间模块工厂功能。
-This is a workshop
-module factory function.
+这是车间模块工厂的功能。
+This is a workshop module factory function.
 
 113
 00:07:08.470 --> 00:07:12.709
-我可以打一次就像我在 12 号线上一样但我可以给它打上百次电话
-I can call it once, like I do on line 12,
-but I could call it a hundred other times
+我可以调用一次，就像我在第12行所做的那样，但我可以再调用一百次
+I can call it once, like I do on line 12, but I could call it a hundred other times
 
 114
 00:07:12.709 --> 00:07:16.689
-还有一百个单独的例子，都有各自的国家。
-and have a hundred other separate
-instances that all have their own state.
+并且有一百个其他单独的实例，它们都有自己的状态。
+and have a hundred other separate instances that all have their own state.
 
 115
 00:07:16.689 --> 00:07:20.220
-它们都是分开的而且不会相互混合
-They're all separate and
-they don't mix with each other.
+它们都是分开的，它们不会相互混合。
+They're all separate and they don't mix with each other.
 
 116
 00:07:23.019 --> 00:07:24.990
-这是果壳中的模块模式。
-And that is the module
-pattern in a nutshell.
+简而言之，这就是模块模式。
+And that is the module pattern in a nutshell.
 
 117
 00:07:24.990 --> 00:07:28.189
-我的意思是我有一些行为
+我采取一些行为的想法，和
 The idea that I take some behavior, and
 
 118
 00:07:28.189 --> 00:07:32.939
-该行为对其进行操作，并将其封装到数据结构中。
-data that that behavior operates on, and
-encapsulate it into a data structure.
+行为操作的数据，并将其封装到数据结构中。
+data that that behavior operates on, and encapsulate it into a data structure.
 
 119
 00:07:32.939 --> 00:07:37.649
-隐藏我不需要显示的内容，并仅显示最低必需的 API。
-Hide what I don't need to show, and
-expose only the minimal necessary API.
+隐藏我不需要显示的内容，只公开最低限度的必要API。
+Hide what I don't need to show, and expose only the minimal necessary API.
 
 120
 00:07:37.649 --> 00:07:38.250
-那是个模块
+那是一个模块。
 That's a module.
 
 121
 00:07:38.250 --> 00:07:44.600
-我认为模块模式肯定是最普遍的
-And I would argue that the module
-pattern is certainly the most prevalent,
+我认为模块模式肯定是最普遍的，
+And I would argue that the module pattern is certainly the most prevalent,
 
 122
 00:07:44.600 --> 00:07:48.995
 并且可能是所有代码组织模式中最重要的。
-and potentially the most important
-of all code organization patterns.
+and potentially the most important of all code organization patterns.
 
 123
 00:07:48.995 --> 00:07:54.360
-八成是所有被写的 JavaScript 的 90%
-Probably 80, 90% of all JavaScript
-that's ever been written
+可能有80，90%的JavaScript曾经被写过
+Probably 80, 90% of all JavaScript that's ever been written
 
 124
 00:07:54.360 --> 00:07:59.980
-已使用诸如模块模式之类的机制作为其代码组织模式。
-has used some mechanism like the module
-pattern as it's code organization pattern.
+使用了一些机制，比如模块模式作为它的代码组织模式。
+has used some mechanism like the module pattern as it's code organization pattern.
 
 125
 00:07:59.980 --> 00:08:04.050
-这不是说你没有其他的模式，比如类，但是
-That's not to say you don't have other
-patterns, like classes, for example, but
+这并不是说您没有其他模式，例如类，但是
+That's not to say you don't have other patterns, like classes, for example, but
 
 126
 00:08:04.050 --> 00:08:07.091
-模块模式极其普遍和重要，并且
-the module pattern is extremely
-prevalent and important, and
+模块模式非常普遍和重要，并且
+the module pattern is extremely prevalent and important, and
 
 127
 00:08:07.091 --> 00:08:09.519
-重要的是我们要了解它是如何运作的
-it's important that we
-understand how it works.
+重要的是我们要了解它是如何工作的。
+it's important that we understand how it works.
 
 128
 00:08:09.519 --> 00:08:14.562
-现在，让我们都承认这是一种句法式的黑客行为，这并不是真的，
-Now, let's all admit that this is sort of
-a syntactic hack, this is not really like,
+现在，让我们都承认这是一种语法攻击，这并不是真正的，
+Now, let's all admit that this is sort of a syntactic hack, this is not really like,
 
 129
 00:08:14.562 --> 00:08:18.997
-你就不会给这个模块用这个第一类语言支持了。
-you wouldn't really call this first
-class language support for a module.
+你不会真的把这称为模块的第一类语言支持。
+you wouldn't really call this first class language support for a module.
 
 130
 00:08:18.997 --> 00:08:23.985
-你会把这称为 " 成语" 是我们使用的模式
-You would call this an idiom,
-a pattern that we do using
+你可以称之为一种习语，一种我们确实使用的模式
+You would call this an idiom, a pattern that we do using
 
 131
 00:08:23.985 --> 00:08:28.660
-工具以实现一些最终目的。
-the tools in a way that
-accomplishes some end goal.
+以某种方式实现某些最终目标的工具。
+the tools in a way that accomplishes some end goal.

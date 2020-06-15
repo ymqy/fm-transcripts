@@ -2,258 +2,223 @@ WEBVTT
 
 1
 00:00:00.140 --> 00:00:03.089
->> Kyle Simpson: 我们的第一个核心单元是类型系统和
-&gt;&gt; Kyle Simpson: Our first core
-unit is the types system and
+&gt；&gt；Kyle Simpson：我们的第一个核心单元是类型系统和
+&gt;&gt; Kyle Simpson: Our first core unit is the types system and
 
 2
 00:00:03.089 --> 00:00:08.410
-确切地说，我们如何处理我们要处理的类型，叫做胁迫。
-specifically, how we deal with types which
-we're gonna get to, it's called coercion.
+具体地说，我们如何处理我们将要到达的类型，这叫做强制。
+specifically, how we deal with types which we're gonna get to, it's called coercion.
 
 3
 00:00:08.410 --> 00:00:11.830
-是你被告知要避免的邪恶的事情
-It's that evil thing that you've
-been told to avoid and you're gonna
+这是你被告知要避免的邪恶的事情，你会
+It's that evil thing that you've been told to avoid and you're gonna
 
 4
 00:00:11.830 --> 00:00:14.970
-发现我的感觉我认为是你的重要缺失组件
-find out from me, that I think it's
-a critical missing component in your
+从我这里找出，我认为这是您的
+find out from me, that I think it's a critical missing component in your
 
 5
 00:00:14.970 --> 00:00:18.809
-您不了解的应用程序，并在代码中使用此应用程序。
-applications that you don't understand,
-and also utilize this within the code.
+您不理解的应用程序，并在代码中利用这一点。
+applications that you don't understand, and also utilize this within the code.
 
 6
 00:00:19.899 --> 00:00:22.850
-所以，要明白，我们其实是要从头开始。
-So, to understand it we actually have
-to work our way from the beginning.
+因此，要理解它，我们实际上必须从一开始就以我们的方式工作。
+So, to understand it we actually have to work our way from the beginning.
 
 7
 00:00:22.850 --> 00:00:24.710
-我们得从地面开始工作
-We have to work our way
-from the ground up.
+我们必须从头开始。
+We have to work our way from the ground up.
 
 8
 00:00:24.710 --> 00:00:28.690
-所以我们要跳上来谈谈原始的类型。
-So we're gonna jump in and
-talk about the primitive types.
+所以我们要跳进去讨论原始类型。
+So we're gonna jump in and talk about the primitive types.
 
 9
 00:00:28.690 --> 00:00:30.949
-你们中的许多人可能以前也听到过这种说法。
-Many of you have probably
-heard this assertion before.
+你们中的许多人可能以前听说过这个断言。
+Many of you have probably heard this assertion before.
 
 10
 00:00:30.949 --> 00:00:33.548
-在 JavaScript 中，所有内容都是对象。
+在JavaScript中，一切都是一个对象。
 In JavaScript everything is an object.
 
 11
 00:00:34.851 --> 00:00:37.593
->> Kyle Simpson: 此语句有原因，但
-&gt;&gt; Kyle Simpson: There is a reason for
-this statement, but
+&gt；&gt；Kyle Simpson：这句话是有原因的，但是
+&gt;&gt; Kyle Simpson: There is a reason for this statement, but
 
 12
 00:00:37.593 --> 00:00:41.179
-这个说法是错误的，这是错误的。
-this statement is a misconception,
-this is false.
+这种说法是误解，这是错误的。
+this statement is a misconception, this is false.
 
 13
 00:00:41.179 --> 00:00:42.219
-顺便说下这是个笑话
+顺便说一下，这是个笑话。
 And that's a joke, by the way.
 
 14
 00:00:42.219 --> 00:00:45.369
-[ LAUGH] ，因为 false 不是对象。
+[笑]因为假不是一个对象。
 [LAUGH] because false is not an object.
 
 15
 00:00:45.369 --> 00:00:49.409
-False 是其中一个不是对象的值的示例。
-False is an example of one of those
-values that is not an object.
+False是其中一个不是对象的值的示例。
+False is an example of one of those values that is not an object.
 
 16
 00:00:49.409 --> 00:00:53.299
-人们为什么说一切都是物体的原因
-The reason behind why people
-say everything is an object,
+人们说所有东西都是物体的背后原因，
+The reason behind why people say everything is an object,
 
 17
 00:00:53.299 --> 00:00:58.460
-因为 JavaScript 中的大多数值可以用作对象。
-is because most of the values in
-JavaScript can behave as objects.
+是因为JavaScript中的大多数值都可以表现为对象。
+is because most of the values in JavaScript can behave as objects.
 
 18
 00:00:58.460 --> 00:01:00.390
-但这并不能使它们成为物体。
+但这并不能使他们成为客体。
 But that does not make them objects.
 
 19
 00:01:00.390 --> 00:01:03.659
-我们一会儿再讨论拳击赛
-We'll come back to that when we
-talk about boxing a bit later.
+当我们稍后讨论拳击时，我们会回到这一点。
+We'll come back to that when we talk about boxing a bit later.
 
 20
 00:01:03.659 --> 00:01:07.329
-所以这不是正确的语句，这不是精确的语句，但是
-So this is not a correct statement,
-this is not an accurate statement but
+所以这不是一个正确的陈述，这不是一个准确的陈述，但是
+So this is not a correct statement, this is not an accurate statement but
 
 21
 00:01:07.329 --> 00:01:08.849
-这是最普遍的说法
+这是最普遍的说法之一。
 it's one of the most pervasive statements.
 
 22
 00:01:08.849 --> 00:01:09.590
-我查过了
+我做了搜索
 I did search and
 
 23
 00:01:09.590 --> 00:01:12.920
-找到了成千上万个这样的例子
-found thousands of examples of
-people saying things like this.
+找到了成千上万的人说这样的话的例子。
+found thousands of examples of people saying things like this.
 
 24
 00:01:12.920 --> 00:01:16.170
-说他们是权威的，他们写了书，
-And saying them authoritatively,
-they've wrote books, and
+权威地说，他们写过书，而且
+And saying them authoritatively, they've wrote books, and
 
 25
 00:01:16.170 --> 00:01:18.719
-他们写了博客文章他们把名字写在博客上
-they wrote blog post, and
-they put their name on it.
+他们写博客，并把自己的名字写在上面。
+they wrote blog post, and they put their name on it.
 
 26
 00:01:18.719 --> 00:01:23.977
-他们说这是事实，但这并不是幽灵所说的。
-And they said this is a fact, and
-yet that's not what the specs says.
+他们说这是事实，但规格并不是这么说的。
+And they said this is a fact, and yet that's not what the specs says.
 
 27
 00:01:26.313 --> 00:01:26.953
->> 凯尔 - 辛普森: 有时
+&gt；&gt；Kyle Simpson：有时，
 &gt;&gt; Kyle Simpson: Sometimes,
 
 28
 00:01:26.953 --> 00:01:30.150
-人们都跟我说什么都不重要
-people argue with me that it
-doesn't matter what the specs says.
+人们和我争论说规格说明什么都无关紧要。
+people argue with me that it doesn't matter what the specs says.
 
 29
 00:01:30.150 --> 00:01:32.069
-重要的是，在我的代码中它的行为方式。
-All that matters is,
-how it behaves in my code.
+重要的是它在我的代码中的表现。
+All that matters is, how it behaves in my code.
 
 30
 00:01:33.283 --> 00:01:35.004
->> 凯尔 - 辛普森: 对我来说，这很像告诉科学家，
-&gt;&gt; Kyle Simpson: To me that's
-a lot like telling a scientist,
+&GT；&GT；凯尔·辛普森：对我来说，这很像是告诉一个科学家，
+&gt;&gt; Kyle Simpson: To me that's a lot like telling a scientist,
 
 31
 00:01:35.004 --> 00:01:37.009
-为什么苹果从树上掉了
-it doesn't matter why
-the apple fell from the tree.
+苹果为什么从树上掉下来并不重要。
+it doesn't matter why the apple fell from the tree.
 
 32
 00:01:37.009 --> 00:01:39.849
-我们看到它掉到了，这不重要。
+我们看到它掉下来了，原因并不重要。
 We saw it falling, it doesn't matter why.
 
 33
 00:01:39.849 --> 00:01:44.870
-是的，它确实是这样，它绝对是重要的原因。
-Yes it does, it absolutely does,
-it absolutely matters why.
+是的，原因绝对重要。
+Yes it does, it absolutely does, it absolutely matters why.
 
 34
 00:01:44.870 --> 00:01:49.786
-那么，如果我们看 JavaScript，就在这个规范的右边
-So, if we look at JavaScript,
-in this specification right near the very
+所以，如果我们看一下JavaScript，在这个规范中
+So, if we look at JavaScript, in this specification right near the very
 
 35
 00:01:49.786 --> 00:01:54.462
-最重要的是在这个规格之前
-top actually, there's not much
-before this in the specification,
+实际上，规范中在此之前没有太多内容，
+top actually, there's not much before this in the specification,
 
 36
 00:01:54.462 --> 00:01:58.266
-它会告诉我们有原始的类型
-it tells us straight up that
-there are primitive types.
+它直截了当地告诉我们存在原始类型。
+it tells us straight up that there are primitive types.
 
 37
 00:01:58.266 --> 00:02:02.790
-好的，你会看到它们在此处列出了未定义的，空的，布尔值，字符串，符号，
-Okay, and you'll see them listed here
-undefined, null, boolean, strings, symbol,
+好的，你会看到它们在这里列出了undefined，null，boolean，string，symbol，
+Okay, and you'll see them listed here undefined, null, boolean, strings, symbol,
 
 38
 00:02:02.790 --> 00:02:04.659
-编号和对象。
+数字和对象。
 number, and object.
 
 39
 00:02:04.659 --> 00:02:08.349
-它列出了我们所说的原始类型。
-It list those out as we
-referred to as primitive types.
+它列出了我们所称的原语类型。
+It list those out as we referred to as primitive types.
 
 40
 00:02:09.520 --> 00:02:13.406
-所以让我们深入了解原始类型，了解它们是什么，
-So let's dive in to the primitive types,
-to understand what they are and
+因此，让我们深入了解原始类型，以了解它们是什么
+So let's dive in to the primitive types, to understand what they are and
 
 41
 00:02:13.406 --> 00:02:15.889
-它们是如何区别的，或者它们是如何区分的，
-how they differ or
-how they are distinct from,
+它们如何不同或如何区别于，
+how they differ or how they are distinct from,
 
 42
 00:02:15.889 --> 00:02:18.647
-就是把一切都当作一个物体
-just simply referring to
-everything as an object.
+只是简单地将所有东西都称为一个对象。
+just simply referring to everything as an object.
 
 43
 00:02:20.413 --> 00:02:23.150
->> 凯尔 - 辛普森: 第一，有未定义的类型。
-&gt;&gt; Kyle Simpson: Number one,
-there is an undefined type.
+&gt；&gt；Kyle Simpson：第一，有一个未定义的类型。
+&gt;&gt; Kyle Simpson: Number one, there is an undefined type.
 
 44
 00:02:23.150 --> 00:02:26.620
-正如我们所看到的，未定义的类型在其中只有一个值，并且
-And as we'll see, the undefined type
-has one and only one value in it, and
+正如我们将看到的，未定义的类型中有且只有一个值，并且
+And as we'll see, the undefined type has one and only one value in it, and
 
 45
 00:02:26.620 --> 00:02:28.039
@@ -262,76 +227,68 @@ it is the undefined value.
 
 46
 00:02:28.039 --> 00:02:29.750
-也有字符串类型。
+还有字符串类型。
 There's also string type.
 
 47
 00:02:29.750 --> 00:02:30.949
-这些都是原始的字符串
+这些是原始字符串，
 These are primitive strings,
 
 48
 00:02:30.949 --> 00:02:34.879
-而不是像 Java那样创建的字符串对象。
-not the string object that you
-create in something like Java.
+而不是您在Java之类的东西中创建的String对象。
+not the string object that you create in something like Java.
 
 49
 00:02:34.879 --> 00:02:39.039
-这只是双引号或单引号字符串文字，对吗 ?
-This is just the double quotes or
-the single quotes string literal, right?
+这只是双引号或单引号字符串文字，对吗？
+This is just the double quotes or the single quotes string literal, right?
 
 50
 00:02:39.039 --> 00:02:40.280
-这是一个基本字符串。
+这是一个原始字符串。
 This is a primitive string.
 
 51
 00:02:40.280 --> 00:02:42.110
-有一种叫做弦的类型
+有一种叫做字符串的类型，
 There's a type called string,
 
 52
 00:02:42.110 --> 00:02:46.030
-有一个叫号码的类型，指所有 JavaScript 的号码，
-there's a type called number,
-refers to all of JavaScript's numbers,
+有一种叫做Number的类型，指的是所有JavaScript的数字，
+there's a type called number, refers to all of JavaScript's numbers,
 
 53
 00:02:46.030 --> 00:02:48.229
-虽然那里有个小洞穴我们一会儿就会回来
-although there's a little caveat
-there we'll come back to in a second.
+虽然这里有一个小的警告，我们将在一秒钟后回到这里。
+although there's a little caveat there we'll come back to in a second.
 
 54
 00:02:49.379 --> 00:02:53.030
-有一个叫做布尔值的类型，它指的是特定的两个值，
-There's a type called boolean,
-that refers to the specific two values,
+有一种叫做布尔的类型，它指的是特定的两个值，
+There's a type called boolean, that refers to the specific two values,
 
 55
 00:02:53.030 --> 00:02:54.340
-true 和 false。
+真的和假的。
 true and false.
 
 56
 00:02:54.340 --> 00:02:57.930
-在某些语言中，历史上只有零，
-In some languages, in historical
-days there was only zeroes and
+在一些语言中，在历史上只有零和
+In some languages, in historical days there was only zeroes and
 
 57
 00:02:57.930 --> 00:03:00.569
-这些都是真实和虚假的
-ones to reference the idea of true and
-false.
+一是引用真与假的概念。
+ones to reference the idea of true and false.
 
 58
 00:03:00.569 --> 00:03:03.539
-JavaScript 实际上具有称为 true 和 false的值。
-JavaScript actually has
-values called true and false.
+JavaScript实际上有称为true和false的值。
+JavaScript actually has values called true and false.
 
 59
 00:03:03.539 --> 00:03:05.069
@@ -340,13 +297,12 @@ And they are a special type.
 
 60
 00:03:05.069 --> 00:03:08.400
-它们的行为方式与其他类型不同。
-And they behave differently,
-than this other types.
+他们的行为与其他类型不同。
+And they behave differently, than this other types.
 
 61
 00:03:08.400 --> 00:03:09.710
-然后，就有对象类型。
+然后，还有对象类型。
 And then, there's the object type.
 
 62
@@ -356,389 +312,343 @@ And yes, the object is a type.
 
 63
 00:03:12.729 --> 00:03:14.169
-它有很多子类型。
+它有许多子类型。
 It has many subtypes to it.
 
 64
 00:03:14.169 --> 00:03:16.650
-我想这就是很多人感到困惑的地方
-And I think that's where
-a lot of people get confused,
+我认为这就是很多人感到困惑的地方，
+And I think that's where a lot of people get confused,
 
 65
 00:03:16.650 --> 00:03:18.310
-就是因为它们是亚种
+只是因为他们是亚型吗。
 is that just because they're subtypes.
 
 66
 00:03:18.310 --> 00:03:20.389
-或者就因为有个叫拳击的东西
-Or just because there
-something called boxing,
+或者仅仅因为有一种叫做拳击的东西，
+Or just because there something called boxing,
 
 67
 00:03:20.389 --> 00:03:24.900
-在某些事物中，事物可以作为一个物体，但这并不是一个物体。
-where something can behave as an object,
-that doesn't make it an object.
+在某物可以表现为对象的情况下，这并不能使其成为对象。
+where something can behave as an object, that doesn't make it an object.
 
 68
 00:03:24.900 --> 00:03:26.689
-有些东西是物体
+有些东西是物体。
 There are things that are objects.
 
 69
 00:03:26.689 --> 00:03:31.800
-这是一些原始类型，在 JavaScript 语言中存在。
-So this are some primitive types,
-that exist in the JavaScript language.
+这是JavaScript语言中存在的一些基本类型。
+So this are some primitive types, that exist in the JavaScript language.
 
 70
 00:03:31.800 --> 00:03:39.020
-你说 X 等于 42 ，或者你说 X 等于 42 ，
-When you say X equals the number 42,
-or you say X equals quotes 42,
+当你说X等于数字42，或者你说X等于报价42，
+When you say X equals the number 42, or you say X equals quotes 42,
 
 71
 00:03:39.020 --> 00:03:43.699
-你说作为开发者，有不同的意图
-you are saying as a developer, there
-is a different intent that I have for
+你是说作为一个开发人员，我有一个不同的意图
+you are saying as a developer, there is a different intent that I have for
 
 72
 00:03:43.699 --> 00:03:46.599
-我对这个价值的期望
+我期望的这个值之外的行为。
 the behavior I expect out of this value.
 
 73
 00:03:46.599 --> 00:03:48.409
-这就是我们的意思
+这就是我们所说的类型。
 That's what we mean by a type.
 
 74
 00:03:48.409 --> 00:03:50.050
-固有特征的集合
+固有特性的集合，
 The set of intrinsic characteristics,
 
 75
 00:03:50.050 --> 00:03:52.110
-我们希望能用这个价值来做
-that we expect to be able
-to do with that value.
+我们期望能够用这个价值来做。
+that we expect to be able to do with that value.
 
 76
 00:03:53.500 --> 00:03:56.949
-因此，如果我们期望与数字的不同，那么我们可以进行算术运算，
-So if we expect something different
-from numbers we can an arithmetic,
+所以如果我们期待与数字不同的东西，我们可以做算术，
+So if we expect something different from numbers we can an arithmetic,
 
 77
 00:03:56.949 --> 00:04:00.495
-那么我们能用诸如字符之类的字符串来做什么
-then what we can do with strings
-like accessing characters,
+然后我们可以用字符串做什么，比如访问字符，
+then what we can do with strings like accessing characters,
 
 78
 00:04:00.495 --> 00:04:04.324
-这些是不同的值，我指的是不同的值类型，好吗 ?
-those are different values I mean
-different values types, okay?
+那些是不同的值，我是说不同的值类型，好吗？
+those are different values I mean different values types, okay?
 
 79
 00:04:04.324 --> 00:04:08.645
-最近几年又加上了几年，
-There is also add it recently
-a few years back in years six,
+也有最近几年在六年前增加的，
+There is also add it recently a few years back in years six,
 
 80
 00:04:08.645 --> 00:04:12.754
-较小的类型，但在较小的调用简单的类型上的原语类型，
-a lesser none type but the primitives
-of types on the less call simple,
+较小的None类型但较少的类型的原语称为Simple，
+a lesser none type but the primitives of types on the less call simple,
 
 81
 00:04:12.754 --> 00:04:15.465
-符号不用常用于很多白色的
-symbols don't get use to
-often a lot of white for
+符号不常用于很多白色的
+symbols don't get use to often a lot of white for
 
 82
 00:04:15.465 --> 00:04:20.339
-基本使用的 JavaScript ，用于创建对象上的专用密钥。
-JavaScript that use basically you
-create suto private keys on objects.
+JavaScript基本上使用您在对象上创建Suto私钥。
+JavaScript that use basically you create suto private keys on objects.
 
 83
 00:04:20.339 --> 00:04:22.269
-不是很隐私但有点模糊
+不是很私密，但有点晦涩难懂。
 Not really private, but kinda obscure.
 
 84
 00:04:23.300 --> 00:04:26.910
-所以你没看到那些用过很多的，更可能是用在框架上的
-So you don't see those used a lot, more
-probably used in frameworks than you're
+所以你看不到那些经常使用的东西，更多的可能是在框架中使用，而不是你
+So you don't see those used a lot, more probably used in frameworks than you're
 
 85
 00:04:26.910 --> 00:04:30.870
-将会看到您的一般 JavaScript 代码，但它是基本类型。
-gonna see in your general JavaScript code,
-but it is a primitive type nonetheless.
+将在您的常规JavaScript代码中看到，但它仍然是一个原语类型。
+gonna see in your general JavaScript code, but it is a primitive type nonetheless.
 
 86
 00:04:30.870 --> 00:04:33.399
-然后我们有其他类型的
+然后我们有一些其他类型，或者
 And then we have some other types, or
 
 87
 00:04:33.399 --> 00:04:36.300
-其他可能表现得像我们应该问的类型的东西
-other things that may behave like
-types that we should ask about.
+其他可能表现得与我们应该询问的类型类似的事情。
+other things that may behave like types that we should ask about.
 
 88
 00:04:36.300 --> 00:04:37.581
-例如，发生了什么或
+例如，发生了什么或者
 For example, what happens or
 
 89
 00:04:37.581 --> 00:04:40.257
-我们如何处理那些从未被宣布过的事情
-how are we dealing with things
-that have never been declared?
+我们如何处理从未申报的事情？
+how are we dealing with things that have never been declared?
 
 90
 00:04:41.362 --> 00:04:43.365
->> 凯尔 - 辛普森: 这是一种吗 ?
+&gt；&gt；Kyle Simpson：这是一种类型吗？
 &gt;&gt; Kyle Simpson: Is that a type?
 
 91
 00:04:43.365 --> 00:04:46.250
-Sorta ，但实际上，该规范并不真正将其定义为一种类型。
-Sorta but not really, the spec
-doesn't really define it as a type.
+某种程度上，但不是真的，规范并没有真正将它定义为一种类型。
+Sorta but not really, the spec doesn't really define it as a type.
 
 92
 00:04:46.250 --> 00:04:50.367
-但它有它的行为，我们可以期待和理解，
-But it has a behavior to it,
-that we can expect and understand, and so
+但它有一个行为，我们可以期待和理解，所以
+But it has a behavior to it, that we can expect and understand, and so
 
 93
 00:04:50.367 --> 00:04:54.846
-如果它有一种行为我们至少可以用引号来说明它是一种类型
-if it has a behavior we could sorta at
-least with air quotes say it's a type.
+如果它有一种行为，我们至少可以用空气引号说它是一种类型。
+if it has a behavior we could sorta at least with air quotes say it's a type.
 
 94
 00:04:55.875 --> 00:04:58.509
->> Kyle Simpson: 关于 Null，我没有把它放在列表中
-&gt;&gt; Kyle Simpson: What about null,
-I didn't put that in the list and
+&gt；&gt；Kyle Simpson：NULL怎么样，我没有把它放在列表中
+&gt;&gt; Kyle Simpson: What about null, I didn't put that in the list and
 
 95
 00:04:58.509 --> 00:05:00.699
-JavaScript 调用类型。
+JavaScript称之为类型。
 JavaScript calls that a type.
 
 96
 00:05:00.699 --> 00:05:02.339
-但不在名单里所以为什么会在这里
-But it's not in the list,
-so why is it over here?
+但它不在名单上，为什么在这里？
+But it's not in the list, so why is it over here?
 
 97
 00:05:02.339 --> 00:05:05.439
-这是因为，它有点讽刺。
-Well it's because,
-it's a little bit corcky.
+嗯，这是因为，它有点软。
+Well it's because, it's a little bit corcky.
 
 98
 00:05:05.439 --> 00:05:07.487
->> 凯尔 - 辛普森: 这就是直接的历史问题
-&gt;&gt; Kyle Simpson: And this is just
-straight up, a historical bug and
+&gt；&gt；Kyle Simpson：这只是一个直截了当的，一个历史错误和
+&gt;&gt; Kyle Simpson: And this is just straight up, a historical bug and
 
 99
 00:05:07.487 --> 00:05:08.670
-我们一会儿就知道了
+我们一会儿就会看到。
 we'll see in just a moment.
 
 100
 00:05:09.781 --> 00:05:11.410
->> Kyle Simpson: 功能如何 ?
-&gt;&gt; Kyle Simpson: And
-what about functions though?
+&gt；&gt；Kyle Simpson：那么函数呢？
+&gt;&gt; Kyle Simpson: And what about functions though?
 
 101
 00:05:11.410 --> 00:05:13.009
-JavaScript 甚至不列出函数。
+JavaScript甚至没有列出函数。
 JavaScript didn't even list out function.
 
 102
 00:05:13.009 --> 00:05:16.759
-如果您仔细查看先前的列表，那么它未列出函数，但是
-If you look closely in that previous list,
-it didn't list out function and yet
+如果您仔细查看前面列表，它还没有列出函数
+If you look closely in that previous list, it didn't list out function and yet
 
 103
 00:05:16.759 --> 00:05:21.860
-我们可以直观地了解这些函数的函数
-we know intuitively,
-that values which are functions
+我们直观地知道，作为函数的值
+we know intuitively, that values which are functions
 
 104
 00:05:21.860 --> 00:05:26.389
-具有非常具体的行为，这与以下值的值不同 :
-have a very specific behavior, that is
-different from values that are numbers for
+有一个非常具体的行为，这不同于作为数字的值
+have a very specific behavior, that is different from values that are numbers for
 
 105
 00:05:26.389 --> 00:05:30.819
-比如说，比如说，不是一种类型。
+比如说，它不是一种类型吗。
 say for example, so isn't it a type.
 
 106
 00:05:30.819 --> 00:05:36.019
-JavaScript 指的是主要作为对象类型的子类型的函数。
-JavaScript refers to functions essentially
-as a subtype of the object type.
+JavaScript实质上是指作为对象类型的子类型的函数。
+JavaScript refers to functions essentially as a subtype of the object type.
 
 107
 00:05:36.019 --> 00:05:40.346
-事实上，某些地方把它们称为可调用对象。
-In fact, in certain places refers
-to them as callable objects.
+事实上，在某些地方将它们称为可调用对象。
+In fact, in certain places refers to them as callable objects.
 
 108
 00:05:40.346 --> 00:05:45.329
-因此，它是一种类型，但它是子类型，而不是顶级类型。
-So, it's sorta a type but
-a subtype rather than a top level type.
+所以，它是一种类型，但它是一个子类型，而不是顶级类型。
+So, it's sorta a type but a subtype rather than a top level type.
 
 109
 00:05:45.329 --> 00:05:47.149
-亚射线我们一直在用这个
+数组，我们一直在使用这个，并且
 Arrays, we use this all the time, and
 
 110
 00:05:47.149 --> 00:05:49.779
-他们肯定有具体的行为。
-it seems like they definitely
-have a specific behavior.
+看起来他们肯定有特定的行为。
+it seems like they definitely have a specific behavior.
 
 111
 00:05:49.779 --> 00:05:51.019
-他们是按数字编制索引的
+它们是数字索引的，并且
 They're numerically indexed, and
 
 112
 00:05:51.019 --> 00:05:53.170
 它们具有自动更新的长度属性。
-they have a length property
-that automatically updates.
+they have a length property that automatically updates.
 
 113
 00:05:53.170 --> 00:05:54.889
-他们有各种各样的方法。
+他们有不同的方法。
 And they have various methods to them.
 
 114
 00:05:54.889 --> 00:05:56.290
-那么，他们是一种类型吗 ?
+那么，他们是一种类型吗？
 So, are they a type?
 
 115
 00:05:56.290 --> 00:05:58.840
-再说一次最好的思考方式
+再说一次，思考它们的最好方式，
 Again, the best way to think about them,
 
 116
 00:05:58.840 --> 00:06:02.459
-我所提出的最好的精神模型就是它是对象类型的一个子类型。
-the best mental model I've come up with is
-that it's a subtype of the object type.
+我提出的最好的心智模型是，它是对象类型的一个子类型。
+the best mental model I've come up with is that it's a subtype of the object type.
 
 117
 00:06:02.459 --> 00:06:06.060
-它是这个数字索引的特殊类型的对象。
-It's a special kinda object
-with this numeric indexing.
+它是一种特殊的对象，具有这种数字索引。
+It's a special kinda object with this numeric indexing.
 
 118
 00:06:06.060 --> 00:06:09.759
-有个特别的东西有这个神奇的长度
-A special kinda object that has this
-magical length property gather thing on
+一种特殊的物体，具有这种神奇的长度属性
+A special kinda object that has this magical length property gather thing on
 
 119
 00:06:09.759 --> 00:06:10.879
-它，好吗 ?
+它，好吗？
 it, okay?
 
 120
 00:06:10.879 --> 00:06:15.769
-所以它不是一个顶级类型，但它肯定是一种价值。
-So it's not really a top level type, but
-it's certainly a kinda value that has
+所以它不是真正的顶级类型，但它肯定是一种具有
+So it's not really a top level type, but it's certainly a kinda value that has
 
 121
 00:06:15.769 --> 00:06:19.759
-某种程度上的行为对我们来说是有用的
-a certain kinda behavior, and it's
-useful for us to be able to distinguish.
+一种特定的行为，这对我们能够区分是很有用的。
+a certain kinda behavior, and it's useful for us to be able to distinguish.
 
 122
 00:06:19.759 --> 00:06:23.324
-如果我们需要用一个阵列做一些事情，并且我们有这个价值，我们不知道
-If we need to do something with an array,
-and we have this value we don't know if
+如果我们需要对数组做一些事情，而我们有这个值，我们不知道是否
+If we need to do something with an array, and we have this value we don't know if
 
 123
 00:06:23.324 --> 00:06:26.576
-它是阵列的我们要确定它是一个阵列吗
-it's array,
-we need to determine is it an array?
+它是数组，我们需要确定它是一个数组吗？
+it's array, we need to determine is it an array?
 
 124
 00:06:26.576 --> 00:06:27.749
->> 凯尔 - 辛普森:
+&gt；&gt；Kyle Simpson：说到决心，
 &gt;&gt; Kyle Simpson: Speaking of determining,
 
 125
 00:06:27.749 --> 00:06:30.129
-我们要怎么确定这一切
-how are we gonna determine
-all of this things?
+我们怎么确定这一切？
+how are we gonna determine all of this things?
 
 126
 00:06:30.129 --> 00:06:33.819
-我要投中了一些前瞻性的想法
-And I'm gonna throw in,
-a little of forward thinking stuff.
+我要加入一些超前思考的东西。
+And I'm gonna throw in, a little of forward thinking stuff.
 
 127
 00:06:33.819 --> 00:06:38.300
-因为此刻，这并不是在这个规范中。
-Because at the moment,
-this isn't actually in the spec.
+因为目前，这实际上并不在规范中。
+Because at the moment, this isn't actually in the spec.
 
 128
 00:06:38.300 --> 00:06:40.159
-但这就像是第三阶段
+但就像第三阶段
 But it's like, stage three and
 
 129
 00:06:40.159 --> 00:06:43.819
-至少我希望很快就能降落了
-probably gonna land in the spec,
-at least I hope soon.
+可能会降落在规格，至少我希望很快。
+probably gonna land in the spec, at least I hope soon.
 
 130
 00:06:43.819 --> 00:06:47.689
-最终， JavaScript 得到了巨大的支持， bigint 支持，
-And that's finally the JavaScript
-getting big and support, bigint support,
+这最终是JavaScript变得强大和支持，bigint支持，
+And that's finally the JavaScript getting big and support, bigint support,
 
 131
 00:06:47.689 --> 00:06:49.659
@@ -747,147 +657,127 @@ large integer support.
 
 132
 00:06:49.659 --> 00:06:52.879
-当它进入 JavaScript 的时候，几乎肯定是当它降落的时候
-And when it does come to JavaScript,
-almost certainly when it lands in
+当它真的涉及到JavaScript时，几乎可以肯定当它到达时
+And when it does come to JavaScript, almost certainly when it lands in
 
 133
 00:06:52.879 --> 00:06:55.480
-这种语言将会是另一种原始类型
-the language,
-it's gonna be another primitive type.
+语言，它将是另一种原始类型。
+the language, it's gonna be another primitive type.
 
 134
 00:06:55.480 --> 00:06:59.649
-所以它就在这个清单上因为它不是在这里
-So it's on this list only because,
-it's not actually here but
+所以它在这个列表上只是因为，它实际上不在这里，但是
+So it's on this list only because, it's not actually here but
 
 135
 00:06:59.649 --> 00:07:02.790
-它其实已经在 V8中实施了。
-it's actually already implemented for
-example in V8.
+例如，它实际上已经在V8中实现了。
+it's actually already implemented for example in V8.
 
 136
 00:07:02.790 --> 00:07:05.985
-因此，在所有基于 Chrome 的环境中，包括节点，
-So in all of your Chrome based
-environments including node,
+因此，在所有基于Chrome的环境中，包括节点，
+So in all of your Chrome based environments including node,
 
 137
 00:07:05.985 --> 00:07:07.372
-你有很大的支持
+你有很大的支持。
 you have big and support.
 
 138
 00:07:08.468 --> 00:07:11.696
->> 凯尔 - 辛普森: 很可能在语言中正式地着陆。
-&gt;&gt; Kyle Simpson: And it's likely gonna
-land officially, within the language.
+&gt；&gt；Kyle Simpson：它很可能会正式登陆，在语言中。
+&gt;&gt; Kyle Simpson: And it's likely gonna land officially, within the language.
 
 139
 00:07:12.757 --> 00:07:15.281
->> 凯尔 - 辛普森: 显然有一个警告，直到它在那里，
-&gt;&gt; Kyle Simpson: There is obviously
-a caveat that until it's there,
+&gt；&gt；Kyle Simpson：显然有一个警告，在它出现之前，
+&gt;&gt; Kyle Simpson: There is obviously a caveat that until it's there,
 
 140
 00:07:15.281 --> 00:07:16.779
-它不在那儿
+不在那里。
 it's not there.
 
 141
 00:07:16.779 --> 00:07:20.069
-情况已经很晚了快到第四步了
-And things have been,
-late stage three almost stage four and
+事情已经发生了，晚期第三阶段几乎是第四阶段
+And things have been, late stage three almost stage four and
 
 142
 00:07:20.069 --> 00:07:21.680
-然后被完全删除。
+然后被完全删除了。
 then been completely deleted.
 
 143
 00:07:21.680 --> 00:07:24.139
-所以我不能保证会有齿龈
-So I can't guarantee,
-that there will be bigints but
+所以我不能保证会有大人物但是
+So I can't guarantee, that there will be bigints but
 
 144
 00:07:24.139 --> 00:07:28.050
-这一点我肯定会说至少百分之九十五
-it's pretty certain at this point,
-I'd say at least 95%.
+在这一点上是相当肯定的，我认为至少95%。
+it's pretty certain at this point, I'd say at least 95%.
 
 145
 00:07:28.050 --> 00:07:33.050
-所以，有些东西是我们可以预期的一些特点，
-So, this are some things that are values
-that we can expect certain characteristics
+所以，这是一些我们可以期待某些特征的价值
+So, this are some things that are values that we can expect certain characteristics
 
 146
 00:07:33.050 --> 00:07:37.180
-有个很重要的细节我不想你错过这里
-from, and there's a critical detail
-that I don't want you to miss here,
+我不想让你错过一个重要的细节，
+from, and there's a critical detail that I don't want you to miss here,
 
 147
 00:07:37.180 --> 00:07:42.019
-这大部分都不是物体对吧
-which is that most of this
-are not objects, right?
+这其中大部分不是物体，对吗？
+which is that most of this are not objects, right?
 
 148
 00:07:42.019 --> 00:07:45.526
-这是对象，所有这些不是对象。
+这是对象，所有这些都不是对象。
 This are objects, all of this not objects.
 
 149
 00:07:45.526 --> 00:07:50.040
-所有这些可能具有或至少有多个可能具有类似对象的对象。
-All of this may have or at least
-many of these may have object like
+所有这些都可能具有或至少其中许多可能具有如下对象
+All of this may have or at least many of these may have object like
 
 150
 00:07:50.040 --> 00:07:54.360
-您可以选择的行为，但它们绝对不是对象。
-behaviors that you can opt into, but
-they are definitely not objects.
+你可以选择的行为，但它们绝对不是对象。
+behaviors that you can opt into, but they are definitely not objects.
 
 151
 00:07:55.389 --> 00:08:00.220
-与 C + plus 和 Java等语言不同，在 JavaScript 和
-Unlike languages like C plus plus and
-Java, in JavaScript and
+与C+和Java等语言不同，在JavaScript和
+Unlike languages like C plus plus and Java, in JavaScript and
 
 152
 00:08:00.220 --> 00:08:05.199
-在其他动态类型语言中，它不是具有类型的变量。
-in other dynamically typed languages,
-it is not the variables that have types.
+在其他动态类型语言中，变量不具有类型。
+in other dynamically typed languages, it is not the variables that have types.
 
 153
 00:08:05.199 --> 00:08:08.050
-这是具有类型的值本身。
-It is the values themselves
-that have types.
+值本身具有类型。
+It is the values themselves that have types.
 
 154
 00:08:08.050 --> 00:08:11.399
-这与我刚刚给出的本能定义相符
-And that matches with that instinctual
-definition I just gave types
+这与我刚刚给出的类型的本能定义相匹配
+And that matches with that instinctual definition I just gave types
 
 155
 00:08:11.399 --> 00:08:15.660
-他们认为我们从价值观中所期望的或本能的特征
-that they assumed or instinctual
-characteristics we expect from the values.
+他们假设或我们从价值观中期望的本能特征。
+that they assumed or instinctual characteristics we expect from the values.
 
 156
 00:08:15.660 --> 00:08:16.620
-好吧当然
+当然。
 Well, of course.
 
 157
@@ -897,28 +787,25 @@ Let's refer to them as value types.
 
 158
 00:08:18.430 --> 00:08:22.069
-那是区分它的好方法
-That's a better way of
-distinguishing it than to try to get
+这是区分它的一种更好的方法，而不是试图获得
+That's a better way of distinguishing it than to try to get
 
 159
 00:08:22.069 --> 00:08:25.899
-这些类型的警察都跳下来告诉我们，这不符合资格
-the types policed to jump all over us and
-tell us, no this don't qualify as types.
+类型警察跳到我们身上，告诉我们，不，这不符合类型。
+the types policed to jump all over us and tell us, no this don't qualify as types.
 
 160
 00:08:25.899 --> 00:08:28.250
-我已经有过这种事了
+我也经历过这种事。
 I've had that happen.
 
 161
 00:08:28.250 --> 00:08:31.399
-我已经有很多时间了好吗
+我已经有很多次这样的争论了，好吗？
 I've had that argument many of time, okay?
 
 162
 00:08:31.399 --> 00:08:34.100
-就我而言，如果 JavaScript 称它是一种类型，我认为它是一种类型。
-As far as I'm concern, if JavaScript
-calls it a type, I think it's a type.
+就我所关心的而言，如果JavaScript将其称为类型，我认为它就是类型。
+As far as I'm concern, if JavaScript calls it a type, I think it's a type.

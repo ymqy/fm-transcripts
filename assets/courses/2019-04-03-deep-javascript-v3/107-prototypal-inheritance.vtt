@@ -2,296 +2,262 @@ WEBVTT
 
 1
 00:00:00.060 --> 00:00:01.250
->> 凯尔 - 辛普森:
+&gt；&gt；Kyle Simpson：说到继承，
 &gt;&gt; Kyle Simpson: Speaking of inheritance,
 
 2
 00:00:01.250 --> 00:00:04.990
-如果我们想用原型来做一个真正的孩子课
-if we wanted to do a true sort of
-child class in the prototypal style,
+如果我们想做一个原型风格的真正的子类，
+if we wanted to do a true sort of child class in the prototypal style,
 
 3
 00:00:06.080 --> 00:00:10.320
-我们会定义 8 线和另一个车间的卡车司机
-we'd define line eight and
-another workshop contructor.
+我们将定义第八行和另一个车间施工人员。
+we'd define line eight and another workshop contructor.
 
 4
 00:00:10.320 --> 00:00:13.839
-我们再做一次工作坊的方式
-And the way we make
-another workshop extend or
+以及我们让另一个车间延伸的方式
+And the way we make another workshop extend or
 
 5
 00:00:13.839 --> 00:00:19.033
-从工作坊继承的是这条线抱歉
-inherit from the workshop is this
-line right here, oops, sorry.
+从车间继承的是这条线就在这里，哦，对不起。
+inherit from the workshop is this line right here, oops, sorry.
 
 6
 00:00:19.033 --> 00:00:24.160
-这条线，第 11 行，对象点创建。
-This line right here,
-line 11, object dot create.
+这一行，第11行，对象点创建。
+This line right here, line 11, object dot create.
 
 7
 00:00:24.160 --> 00:00:27.128
-在第 11 行目标点创建
+在第11行，对象点创建，
 On line 11, object dot create,
 
 8
 00:00:27.128 --> 00:00:32.969
-我们是在说我刚开始的原型，不是我想要的，
-we are saying take the prototype that I
-initially got, which is not what I want,
+我们说拿我最初得到的原型，这不是我想要的，
+we are saying take the prototype that I initially got, which is not what I want,
 
 9
 00:00:32.969 --> 00:00:37.493
-以及将其链接到的位置，以确保它链接到研讨会点原型。
-and change where it is linked to make sure
-that it links the workshop dot prototype.
+并更改链接位置，以确保链接工作点原型。
+and change where it is linked to make sure that it links the workshop dot prototype.
 
 10
 00:00:37.493 --> 00:00:39.581
-对象点创建有两个内容。
+对象点创建做两件事。
 Object dot create does two things.
 
 11
 00:00:39.581 --> 00:00:42.259
-它是一个内置在 es5 中的实用程序，它做了两件事情。
-It's a utility built in the es5 and
-it does two things.
+它是ES5中内置的实用程序，它做两件事。
+It's a utility built in the es5 and it does two things.
 
 12
 00:00:43.280 --> 00:00:44.750
-看看这听起来很熟悉吧
+看看这听起来是不是耳熟。
 See if this sounds familiar.
 
 13
 00:00:44.750 --> 00:00:47.920
-对象点创建的第一个方法是创建全新的空
-The first thing that object dot create
-does is create a brand new empty
+object dot create做的第一件事是创建一个全新的空
+The first thing that object dot create does is create a brand new empty
 
 14
 00:00:47.920 --> 00:00:48.829
-薄空气的对象点。
+稀薄空气的物点。
 object dot of thin air.
 
 15
 00:00:50.020 --> 00:00:53.119
-然后，它所做的第二件事就是把它链接到另一个物体上。
-And then, the second thing it does is
-it links that object to another object.
+然后，它所做的第二件事就是将该对象链接到另一个对象。
+And then, the second thing it does is it links that object to another object.
 
 16
 00:00:54.479 --> 00:00:57.070
-这是新算法的前两个步骤
-It's the first two steps
-of the new algorithm
+这是新算法的前两步
+It's the first two steps of the new algorithm
 
 17
 00:00:57.070 --> 00:01:00.609
-称为对象点创建的特定 API 方法。
-as a specific API method
-called object dot create.
+作为一个名为object dot create的特定API方法。
+as a specific API method called object dot create.
 
 18
 00:01:00.609 --> 00:01:05.088
-所以我们说我要另一个车间的样机
-So here, we're saying I want my
-another workshop prototype to
+所以在这里，我们说我希望我的另一个车间原型
+So here, we're saying I want my another workshop prototype to
 
 19
 00:01:05.088 --> 00:01:08.733
-与车间的原型相关的原型。
-be prototype linked to
-the workshop do prototype.
+将原型链接到车间做原型。
+be prototype linked to the workshop do prototype.
 
 20
 00:01:08.733 --> 00:01:12.977
-或者，再一次，它是一个反模式，但是
-Alternatively, again,
-it's a bit of an anti pattern, but
+或者，同样，这是一种反模式，但是
+Alternatively, again, it's a bit of an anti pattern, but
 
 21
 00:01:12.977 --> 00:01:17.807
-或者你可以说另一个车间点的样机
-alternatively, you could have said
-another workshop dot prototype
+或者，您可以说另一个工作点原型
+alternatively, you could have said another workshop dot prototype
 
 22
 00:01:17.807 --> 00:01:21.340
-dot dunderproto 等于车间点原型。
-dot dunderproto equals
-workshop dot prototype.
+网点Dunderproto等于车间网点原型。
+dot dunderproto equals workshop dot prototype.
 
 23
 00:01:21.340 --> 00:01:24.045
-你可以把它改造好
+你可以这样重新布线。
 You could have rewired it that way.
 
 24
 00:01:24.045 --> 00:01:28.393
-但是我们正在创建一个新对象来获取新的链接。
-But we're creating a new
-object to get a new linkage.
+但是我们正在创建一个新的对象来获得新的链接。
+But we're creating a new object to get a new linkage.
 
 25
 00:01:28.393 --> 00:01:33.667
-这就是我所看到的最近几个 js 的对象
-And that is the effect, then,
-that the js recent parts object that I've
+这就是效果，那么，js recent part对象，我已经
+And that is the effect, then, that the js recent parts object that I've
 
 26
 00:01:33.667 --> 00:01:38.769
-在第 16 行创建，该对象链接到原型对象，
-created on line 16, that object is
-linked to the prototype object,
+在第16行上创建，该对象链接到原型对象，
+created on line 16, that object is linked to the prototype object,
 
 27
 00:01:38.769 --> 00:01:42.758
-它链接到研讨会点原型对象。
-which is linked to the workshop
-dot prototype object.
+链接到车间点原型对象。
+which is linked to the workshop dot prototype object.
 
 28
 00:01:42.758 --> 00:01:45.195
-它们通过隐藏的原型链联系起来。
-They're linked through that
-hidden prototype chain.
+它们通过隐藏的原型链联系在一起。
+They're linked through that hidden prototype chain.
 
 29
 00:01:47.030 --> 00:01:50.513
->> Kyle Simpson: 现在，这些对象之间存在链接，
-&gt;&gt; Kyle Simpson: Now, the linkage
-that exists between these objects,
+&gt；&gt；Kyle Simpson：现在，这些对象之间存在的联系，
+&gt;&gt; Kyle Simpson: Now, the linkage that exists between these objects,
 
 30
 00:01:50.513 --> 00:01:52.490
-这并不是一件坏事
+这根本不是一件坏事。
 that's not a bad thing at all.
 
 31
 00:01:52.490 --> 00:01:54.569
-这其实是一个神奇的神奇的东西。
+这实际上是一件神奇的令人敬畏的事情。
 That's actually a magical awesome thing.
 
 32
 00:01:55.590 --> 00:01:58.020
-但我们有一整群的复杂性在上面。
-But we have a whole bunch of
-complexity layered on top.
+但我们有一大堆的复杂性层层叠加在上面。
+But we have a whole bunch of complexity layered on top.
 
 33
 00:01:58.020 --> 00:02:00.879
-我们有这些看起来像构造函数的东西。
-We've got all these things that
-look like constructor functions.
+我们已经得到了所有这些看起来像构造函数的东西。
+We've got all these things that look like constructor functions.
 
 34
 00:02:00.879 --> 00:02:03.189
-我们都有这个详细的点样机
-We've got all this verbose
-dot prototype stuff.
+我们有所有这些冗长的点原型的东西。
+We've got all this verbose dot prototype stuff.
 
 35
 00:02:03.189 --> 00:02:06.310
-我们发现了新的关键词
+我们有令人困惑的新关键字实例。
 We've got confusing new keyword instances.
 
 36
 00:02:06.310 --> 00:02:11.038
-所有这些建筑都是在这三大对象上连接在一起的。
-And all of this artifice is on top of
-these three objects linked together.
+所有这些技巧都在这三个连接在一起的对象之上。
+And all of this artifice is on top of these three objects linked together.
 
 37
 00:02:12.385 --> 00:02:15.304
->> 凯尔 - 辛普森: 其实是把物体联系在一起
-&gt;&gt; Kyle Simpson: And it's the objects
-being linked together that actually
+&gt；&gt；Kyle Simpson：实际上是链接在一起的对象
+&gt;&gt; Kyle Simpson: And it's the objects being linked together that actually
 
 38
 00:02:15.304 --> 00:02:17.050
-创造了所有的力量
+创造了这里所有的力量。
 creates all of the power here.
 
 39
 00:02:17.050 --> 00:02:22.360
-它创造了我的能力，让我说第 18 条 js 最近的部件点说起来。
-It creates the ability for me to say
-line 18 js recent parts dot speak up.
+它创造了我说第18行js最近的部分点说出来的能力。
+It creates the ability for me to say line 18 js recent parts dot speak up.
 
 40
 00:02:22.360 --> 00:02:25.139
-那个对象有说话的方法吗
-Does that object have
-a speak up method on it?
+那个对象上有说出来的方法吗？
+Does that object have a speak up method on it?
 
 41
 00:02:26.800 --> 00:02:32.000
-此处的第 18 行是关于 JSRecentParts的对话方法吗 ?
-The line here, line 18, is there
-a speak up method on JSRecentParts?
+这里的行，第18行，JSRecentParts上有声音方法吗？
+The line here, line 18, is there a speak up method on JSRecentParts?
 
 42
 00:02:32.000 --> 00:02:32.620
->> 扬声器 2: 否。
+&gt；&gt；扬声器2：否。
 &gt;&gt; Speaker 2: No.
 
 43
 00:02:32.620 --> 00:02:34.170
->> 凯尔 - 辛普森: 那么接下来呢 ?
+&gt；&gt；Kyle Simpson：那么接下来它会去哪里？
 &gt;&gt; Kyle Simpson: So where does it go next?
 
 44
 00:02:34.170 --> 00:02:35.000
->> 演讲者 2: 另一个研讨会?
+&gt；&gt；演讲者2：又一个研讨会？
 &gt;&gt; Speaker 2: Another workshop?
 
 45
 00:02:35.000 --> 00:02:36.729
->> Kyle Simpson: 它转至另一个研讨会原型
-&gt;&gt; Kyle Simpson: It goes to
-another workshop prototype
+&gt；&gt；Kyle Simpson：它去了另一个车间原型
+&gt;&gt; Kyle Simpson: It goes to another workshop prototype
 
 46
 00:02:36.729 --> 00:02:38.729
-有话想说
+它确实有一个说话的地方。
 which does have a speak up.
 
 47
 00:02:38.729 --> 00:02:42.400
-因此，当调用该函数时， thisKeyword 将指向什么 ?
-So when that function is invoked,
-what is the thisKeyword gonna point at?
+那么，当调用该函数时，thisKeyword将指向什么？
+So when that function is invoked, what is the thisKeyword gonna point at?
 
 48
 00:02:42.400 --> 00:02:43.310
->> 演讲者 3: JSRecentParts。
+&gt；&gt；扬声器3：JSRecentParts。
 &gt;&gt; Speaker 3: JSRecentParts.
 
 49
 00:02:43.310 --> 00:02:45.449
->> Kyle Simpson: 仍将指向 JSRecentParts。
-&gt;&gt; Kyle Simpson: Still gonna
-point to JSRecentParts.
+&gt；&gt；Kyle Simpson：仍然将指向JSRecentParts。
+&gt;&gt; Kyle Simpson: Still gonna point to JSRecentParts.
 
 50
 00:02:45.449 --> 00:02:47.025
-上面写着这个圆点
+上面说这个点问。
 And it says this dot ask.
 
 51
 00:02:47.025 --> 00:02:50.640
-JSRecentParts 是否有一个请求方法?
+那么JSRecentParts有Ask方法吗？
 So does JSRecentParts have an ask method?
 
 52
 00:02:50.640 --> 00:02:51.819
-那它要去哪
+那它会去哪里？
 So where's it gonna go?
 
 53
@@ -301,106 +267,95 @@ Backup to another workshop prototype.
 
 54
 00:02:55.199 --> 00:02:57.479
-那个有个问法吗
+那个有Ask方法吗？
 Does that one have an ask method on it?
 
 55
 00:02:58.949 --> 00:02:59.840
-那它要去哪
+那它会去哪里？
 So where's it gonna go?
 
 56
 00:03:00.969 --> 00:03:03.259
-这个有个问法吗
+这个有Ask方法吗？
 Does this one have an ask method on it?
 
 57
 00:03:03.259 --> 00:03:06.419
-是，当它调用时，此关键字将指向什么 ?
-Yes, when it invokes,
-what's the this keyword gonna point at?
+是的，当它调用时，this关键字将指向什么？
+Yes, when it invokes, what's the this keyword gonna point at?
 
 58
 00:03:07.759 --> 00:03:10.189
-还会指向 JSRecentParts。
+仍然会指向JSRecentParts。
 Still gonna point at JSRecentParts.
 
 59
 00:03:10.189 --> 00:03:14.729
-不管你有多少次的样机链你要决心找到你的
-No matter how many times up the prototype
-chain you have to resolve to find your
+无论在原型链上多少次，你都必须下决心找到你的
+No matter how many times up the prototype chain you have to resolve to find your
 
 60
 00:03:14.729 --> 00:03:17.719
-方法，不管它们有多大的程度，
+方法，无论它们走多远，
 methods, and no matter how far up they go,
 
 61
 00:03:17.719 --> 00:03:20.860
-此绑定仍由调用站点在 root 用户控制。
-the this binding is still controlled
-at the root by the call site.
+这个绑定仍然在根上由调用站点控制。
+the this binding is still controlled at the root by the call site.
 
 62
 00:03:22.199 --> 00:03:27.479
-我有个很棒的学术术语我叫它超级独角兽魔术
-And I have a fancy academic term for
-that, I call that super unicorn magic.
+我有一个奇特的学术术语，我称之为超级独角兽魔法。
+And I have a fancy academic term for that, I call that super unicorn magic.
 
 63
 00:03:27.479 --> 00:03:33.099
-太神奇了能在这些功能中找到这些功能
-That's amazing and awesome that it
-can find these functions in all these
+令人惊异的是，它可以在所有这些中找到这些功能
+That's amazing and awesome that it can find these functions in all these
 
 64
 00:03:33.099 --> 00:03:38.139
-在原型链中的不同位置，并确保它们的上下文
-different places in the prototype chain,
-and still make sure their this context
+原型链中的不同位置，并且仍然确保它们的这个上下文
+different places in the prototype chain, and still make sure their this context
 
 65
 00:03:38.139 --> 00:03:41.960
-正是我们所期望的，它根植于调用堆栈。
-is exactly what we would expect,
-which is rooted at the call stack.
+正是我们所期望的，它植根于调用堆栈。
+is exactly what we would expect, which is rooted at the call stack.
 
 66
 00:03:43.050 --> 00:03:43.597
-你有问题吗
+你有问题吗？
 You had a question?
 
 67
 00:03:45.526 --> 00:03:48.284
->> 扬声器 4: 仅确认。
+&gt；&gt；扬声器4：只是绝对确认。
 &gt;&gt; Speaker 4: Just to absolutely confirm.
 
 68
 00:03:48.284 --> 00:03:52.206
-如果第 11 行不存在，那么这将中断，因为另一个车间点
-Were line 11 not to exist, this would
-break because another workshop dot
+如果第11行不存在，这将中断，因为另一个车间点
+Were line 11 not to exist, this would break because another workshop dot
 
 69
 00:03:52.206 --> 00:03:55.030
-原型只会指向对象点原型。
-prototype would just point
-to object dot prototype.
+Prototype只会指向对象的点Prototype。
+prototype would just point to object dot prototype.
 
 70
 00:03:55.030 --> 00:03:56.840
->> 凯尔 - 辛普森: 这是正确的，对。
+&gt；&gt；Kyle Simpson：是的，没错。
 &gt;&gt; Kyle Simpson: That is correct, yes.
 
 71
 00:03:56.840 --> 00:03:59.500
-如果您愿意，第 11 行是扩展条款。
-Line 11 is the extends clause,
-if you will.
+第11行是EXTENDES子句(如果您愿意的话)。
+Line 11 is the extends clause, if you will.
 
 72
 00:03:59.500 --> 00:04:02.819
-这就是我们如何把另一个车间与车间联系起来的。
-That's how we make another
-workshop link to workshop.
+这就是我们如何使另一个车间链接到车间。
+That's how we make another workshop link to workshop.

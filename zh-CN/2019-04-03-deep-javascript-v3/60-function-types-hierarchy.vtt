@@ -2,54 +2,48 @@ WEBVTT
 
 1
 00:00:00.140 --> 00:00:03.379
->> 凯尔 - 辛普森: 让我们总结一下我们的想法，
-&gt;&gt; Kyle Simpson: So
-let's summarize our thoughts on,
+&gt；&gt；Kyle Simpson：让我们总结一下我们的想法，
+&gt;&gt; Kyle Simpson: So let's summarize our thoughts on,
 
 2
 00:00:03.379 --> 00:00:05.580
-或者我跟你分享的想法
+或者我和你分享的想法，
 or my thoughts that I've shared with you,
 
 3
 00:00:05.580 --> 00:00:10.699
-我想我应该说的是他们不同类型的功能
-I guess I should say, on functions
-of their various different types.
+我想我应该说，它们的各种不同类型的功能。
+I guess I should say, on functions of their various different types.
 
 4
 00:00:10.699 --> 00:00:14.244
-我认为功能宣言有一些
-It is my opinion that function
-declarations have some
+我认为函数声明有一些
+It is my opinion that function declarations have some
 
 5
 00:00:14.244 --> 00:00:15.749
-对他们有优越感
+比他们优越。
 superiority to them.
 
 6
 00:00:15.749 --> 00:00:18.821
-我们甚至还没谈过那些事我们会回到他们的时候
-We haven't even talked about all of those,
-we'll come back to those when we get to,
+我们甚至还没有谈到所有这些，当我们讲到的时候，我们会回到那些，
+We haven't even talked about all of those, we'll come back to those when we get to,
 
 7
 00:00:18.821 --> 00:00:20.589
-比如说在后面浪费时间
+比如浪费，以后。
 for example, wasting, later.
 
 8
 00:00:20.589 --> 00:00:27.609
-但是，函数声明对指定的函数表达式有一些好处。
-But a function declaration has some
-benefits over a named function expression.
+但是函数声明比命名函数表达式有一些好处。
+But a function declaration has some benefits over a named function expression.
 
 9
 00:00:27.609 --> 00:00:31.550
-但是命名函数表达式对于
-But named function expressions
-have huge benefits over
+但是命名函数表达式比起
+But named function expressions have huge benefits over
 
 10
 00:00:31.550 --> 00:00:33.310
@@ -58,131 +52,110 @@ anonymous function expressions.
 
 11
 00:00:33.310 --> 00:00:37.229
-所以我觉得第二个比前两个要强烈得多，
-So I feel much more strongly about the
-second two of these than the first two,
+所以我对后两种感觉比前两种更强烈，
+So I feel much more strongly about the second two of these than the first two,
 
 12
 00:00:37.229 --> 00:00:41.509
-尽管我也喜欢命名函数声明
-even though I also do tend to prefer
-the named function declarations.
+尽管我也倾向于选择命名函数声明。
+even though I also do tend to prefer the named function declarations.
 
 13
 00:00:41.509 --> 00:00:43.406
-所以这才是我们要知道的
+所以这只是需要注意的事情，
 So it's just something to be aware of,
 
 14
 00:00:43.406 --> 00:00:47.039
-因为这不是真的很容易和快速的规则
-because this isn't really something
-that can be such a hard and fast rule.
+因为这并不是真正能成为一条硬性规则的东西。
+because this isn't really something that can be such a hard and fast rule.
 
 15
 00:00:47.039 --> 00:00:49.837
-你得看看各种不同的情况。
-You do have to look at
-the various different cases.
+你确实需要看一下各种不同的情况。
+You do have to look at the various different cases.
 
 16
 00:00:49.837 --> 00:00:54.546
-我当然明白为什么人们会用箭头
-And I certainly understand why
-people might use an arrow function
+我当然理解为什么人们可能会使用箭头函数
+And I certainly understand why people might use an arrow function
 
 17
 00:00:54.546 --> 00:00:58.850
-当五个字符翻倍时
-when it's five characters
-doubling some variable.
+当它是五个字符加倍一些变量的时候。
+when it's five characters doubling some variable.
 
 18
 00:00:58.850 --> 00:01:03.780
-但即使在那些你被诱惑去拯救一段时间的情况下
-But even in those cases where you're
-tempted just to save a little bit of time,
+但即使在那些你只是想节省一点时间的情况下，
+But even in those cases where you're tempted just to save a little bit of time,
 
 19
 00:01:03.780 --> 00:01:06.989
-我还是会说名字翻倍
-I would still argue that the name,
-double it,
+我仍然会争辩说这个名字，双倍，
+I would still argue that the name, double it,
 
 20
 00:01:06.989 --> 00:01:11.620
-比看 X 乘以 2更直接
-tells me something more directly
-than looking at x times 2.
+告诉我一些比看x乘以2更直接的东西。
+tells me something more directly than looking at x times 2.
 
 21
 00:01:11.620 --> 00:01:16.170
-所以我只想让你考虑更大的目的
-So I just want you to consider that
-bigger purpose, which is we want to
+所以我只想让你考虑更大的目标，也就是我们想要
+So I just want you to consider that bigger purpose, which is we want to
 
 22
 00:01:16.170 --> 00:01:20.629
-我们的密码能尽可能有效地沟通哪怕一眼
-have our code communicate as effectively
-as possible, even at a glance,
+使我们的代码尽可能有效地进行通信，即使是一目了然，
+have our code communicate as effectively as possible, even at a glance,
 
 23
 00:01:20.629 --> 00:01:25.039
-不需要有人读和读一些代码
-without somebody having to read and
-sort of mentally execute some code and
+而不需要有人阅读并在心理上执行一些代码
+without somebody having to read and sort of mentally execute some code and
 
 24
 00:01:25.039 --> 00:01:29.730
-了解它的工作方式，或考虑对其进行任何类型的处理。
-figure out what it does, or
-consider any sort of corner cases on it.
+弄清楚它是做什么的，或者考虑它上面的任何类型的拐角情况。
+figure out what it does, or consider any sort of corner cases on it.
 
 25
 00:01:29.730 --> 00:01:32.520
-我们不希望读者要做这些事情，理想的是。
-We don't want the reader to have
-to do those things, ideally.
+理想情况下，我们不希望读者不得不做这些事情。
+We don't want the reader to have to do those things, ideally.
 
 26
 00:01:32.520 --> 00:01:34.530
-我们希望他们能阅读我们的代码
-We want them to be able
-to read our code and
+我们希望他们能够阅读我们的代码
+We want them to be able to read our code and
 
 27
 00:01:34.530 --> 00:01:36.859
-了解它的目的几乎是一瞥
-understand it's purpose
-almost at a glance.
+几乎一眼就能明白它的目的。
+understand it's purpose almost at a glance.
 
 28
 00:01:36.859 --> 00:01:41.152
-因此，这些都是我喜欢按此顺序执行功能的原因，并且
-So those are the reasons why I prefer
-the functions in this order, and
+所以这些就是为什么我更喜欢这种顺序的函数的原因，并且
+So those are the reasons why I prefer the functions in this order, and
 
 29
 00:01:41.152 --> 00:01:44.777
-我会努力工作下去我基本上只会
-I would work my way down, and
-I would essentially only ever
+我会以我的方式向下工作，而且我基本上只会永远
+I would work my way down, and I would essentially only ever
 
 30
 00:01:44.777 --> 00:01:49.076
-以箭头表达式形式执行匿名函数表达式。
-do the anonymous function expression
-in the arrow expression form.
+在箭头表达式形式中执行匿名函数表达式。
+do the anonymous function expression in the arrow expression form.
 
 31
 00:01:49.076 --> 00:01:52.924
-在那个特殊的情况下我只会这样做因为我在做词法
-And in that one particular case, I would
-only do so because I was getting lexical
+在那个特殊的情况下，我只会这样做，因为我正在变得词汇化
+And in that one particular case, I would only do so because I was getting lexical
 
 32
 00:01:52.924 --> 00:01:55.581
-单击，稍后我们将会讨论这个问题。
-clicks, which we'll talk
-about later in the course.
+点击，我们稍后将在课程中讨论这一点。
+clicks, which we'll talk about later in the course.

@@ -2,700 +2,625 @@ WEBVTT
 
 1
 00:00:00.530 --> 00:00:03.410
->> Kyle Simpson: 在接下来的第 5 行，因为肯定有问题
-&gt;&gt; Kyle Simpson: Moving on then to line
-five because there's certainly a question
+&GT；&GT；Kyle Simpson：接下来是第五行，因为肯定有一个问题
+&gt;&gt; Kyle Simpson: Moving on then to line five because there's certainly a question
 
 2
 00:00:03.410 --> 00:00:05.719
-关于第 5 行的事情
+关于五号线会发生什么。
 as to what's gonna happen with line five.
 
 3
 00:00:05.719 --> 00:00:08.880
-这个主题变量会发生什么 ?
-What's gonna happen with
-this topic variable?
+这个主题变量会发生什么？
+What's gonna happen with this topic variable?
 
 4
 00:00:08.880 --> 00:00:11.740
-同样的问题也会有同样的过程
-Well, it's gonna process exactly the same,
-same questions.
+嗯，它会处理完全一样的，同样的问题。
+Well, it's gonna process exactly the same, same questions.
 
 5
 00:00:11.740 --> 00:00:13.740
-这就是为什么我要教你他们的叙事
-That's why I'm teaching
-you their narrative.
+这就是为什么我要教你他们的故事。
+That's why I'm teaching you their narrative.
 
 6
 00:00:13.740 --> 00:00:14.960
-那么这个开始是怎样的呢 ?
+那怎么开始呢？
 So how does that start?
 
 7
 00:00:14.960 --> 00:00:16.379
-你的范围
+嘿范围。
 Hey scope of.
 
 8
 00:00:16.379 --> 00:00:16.890
->> 扬声器 2: 其他类。
+&gt；&gt；扬声器2：其他类。
 &gt;&gt; Speaker 2: Other class.
 
 9
 00:00:16.890 --> 00:00:17.530
->> Kyle Simpson: 其他类。
+&gt；&gt；Kyle Simpson：其他类。
 &gt;&gt; Kyle Simpson: Other class.
 
 10
 00:00:17.530 --> 00:00:19.899
-我有什么参考?
+我有一个什么样的推荐人？
 I have a what kind of reference?
 
 11
 00:00:19.899 --> 00:00:21.210
->> 演讲者 3: 目标。 >> 凯尔 - 辛普森: 我有一个目标
-&gt;&gt; Speaker 3: Target.
-&gt;&gt; Kyle Simpson: I have a target
+&gt；&gt；扬声器3：目标。&gt；&gt；Kyle Simpson：我有一个目标
+&gt;&gt; Speaker 3: Target. &gt;&gt; Kyle Simpson: I have a target
 
 12
 00:00:21.210 --> 00:00:22.120
-请参考，谢谢。
+参考，谢谢。
 reference, thank you.
 
 13
 00:00:22.120 --> 00:00:25.289
-我有一个标识主题的目标引用。
-I have a target reference for
-the identifier topic.
+我有一个标识符主题的目标引用。
+I have a target reference for the identifier topic.
 
 14
 00:00:25.289 --> 00:00:26.250
-听说过吗
+听说过吗？
 Ever heard of it?
 
 15
 00:00:26.250 --> 00:00:26.980
->> 扬声器 2: 否。
+&gt；&gt；扬声器2：否。
 &gt;&gt; Speaker 2: No.
 
 16
 00:00:26.980 --> 00:00:28.329
->> 凯尔 - 辛普森: 接下来我们要去哪里 ?
+&GT；&GT；凯尔·辛普森：那么我们下一步去哪里？
 &gt;&gt; Kyle Simpson: So where do we go next?
 
 17
 00:00:28.329 --> 00:00:29.100
->> 扬声器 2: 全局作用域。
+&gt；&gt；扬声器2：全局范围。
 &gt;&gt; Speaker 2: Global scope.
 
 18
 00:00:29.100 --> 00:00:30.350
->> 凯尔 - 辛普森: 全球范围。
+&gt；&gt；Kyle Simpson：全局范围。
 &gt;&gt; Kyle Simpson: A global scope.
 
 19
 00:00:30.350 --> 00:00:33.250
-我有一个叫做话题的变量的目标参考。
-I have a target reference for
-the variable called topic.
+我有一个名为topic的变量的目标引用。
+I have a target reference for the variable called topic.
 
 20
 00:00:33.250 --> 00:00:33.859
-听说过吗
+听说过吗？
 Ever heard of it?
 
 21
 00:00:33.859 --> 00:00:34.899
-答案是吗 ?
+答案是？
 And the answer is?
 
 22
 00:00:34.899 --> 00:00:35.646
->> 演讲者 3: 否。
+&gt；&gt；扬声器3：否。
 &gt;&gt; Speaker 3: No.
 
 23
 00:00:35.646 --> 00:00:37.511
->> 凯尔 - 辛普森: 我们希望答案是 " 否" 。
-&gt;&gt; Kyle Simpson: Well we would like for
-the answer to be no.
+&GT；&GT；Kyle Simpson：嗯，我们希望答案是否定的。
+&gt;&gt; Kyle Simpson: Well we would like for the answer to be no.
 
 24
 00:00:37.511 --> 00:00:42.661
-答案是否正确，似乎是很合理的。
-It seems very reasonable for
-the answer to be no.
+答案是否定的似乎是非常合理的。
+It seems very reasonable for the answer to be no.
 
 25
 00:00:42.661 --> 00:00:47.814
-事实上似乎有点疯狂的是除了你之外
-In fact it seems somewhat crazy that it
-would ever be anything other than no but
+事实上，它似乎有点疯狂，它将永远是除了没有以外的任何东西，但是
+In fact it seems somewhat crazy that it would ever be anything other than no but
 
 26
 00:00:47.814 --> 00:00:52.256
-我们在这里看到的是一个历史上的坏的部分
-here we see one of the historical
-bad parts of JavaScript which is in
+在这里，我们看到了JavaScript历史上最糟糕的部分之一，即
+here we see one of the historical bad parts of JavaScript which is in
 
 27
 00:00:52.256 --> 00:00:56.774
-对那些没有被允许的人尽可能的宽容
-the early days to be as forgiving
-as possible for people that didn't
+对于那些没有做到这一点的人来说，在最初的日子里尽可能地宽恕他们
+the early days to be as forgiving as possible for people that didn't
 
 28
 00:00:56.774 --> 00:01:01.722
-了解语言，他们提出了这个全球汽车的概念。
-understand the language, they
-instituted this idea of auto global's.
+理解语言，他们建立了这个概念的汽车全球的。
+understand the language, they instituted this idea of auto global's.
 
 29
 00:01:01.722 --> 00:01:07.459
-因此，如果您尝试分配一个从未正式声明的变量。
-So if you try to assign to a variable
-that's never been formally declared.
+所以如果你试图赋值给一个从未被正式声明过的变量。
+So if you try to assign to a variable that's never been formally declared.
 
 30
 00:01:07.459 --> 00:01:11.569
-一旦到达全球范围，如果你说全球范围，
-Once you arrive at the global scope,
-if you say hey, global scope,
+一旦你到达全局范围，如果你说嘿，全局范围，
+Once you arrive at the global scope, if you say hey, global scope,
 
 31
 00:01:11.569 --> 00:01:15.340
-我在找这个叫做 " 话题 " 的话题
-I'm looking for this marble called topic,
-ever heard of it?
+我在找这个叫Topic的大理石，听说过吗？
+I'm looking for this marble called topic, ever heard of it?
 
 32
 00:01:15.340 --> 00:01:18.719
-而全球范围并不是说不，对不起的错误，
-And the global scope instead
-of saying nope, sorry error,
+和全局范围，而不是说不，对不起错误，
+And the global scope instead of saying nope, sorry error,
 
 33
 00:01:18.719 --> 00:01:21.569
-全球范围会说我为你创造了一个
-the global scope's gonna say
-I just created one for you.
+全局范围会显示我刚刚为你创建了一个。
+the global scope's gonna say I just created one for you.
 
 34
 00:01:21.569 --> 00:01:22.280
-我没帮你
+我是不是很有帮助。
 Aren't I helpful.
 
 35
 00:01:23.659 --> 00:01:27.890
-它会给我们一个红色的大理石，而不是蓝色的大理石。
-And it's gonna hand us a red marble,
-not a blue marble.
+它会给我们一个红色的大理石，而不是一个蓝色的大理石。
+And it's gonna hand us a red marble, not a blue marble.
 
 36
 00:01:27.890 --> 00:01:31.099
-你为什么要用红色的大理石而不是蓝色的大理石
-Why do you suppose it only hands us
-a red marble and not a blue marble?
+为什么你认为它只给我们一个红色的大理石，而不是一个蓝色的大理石？
+Why do you suppose it only hands us a red marble and not a blue marble?
 
 37
 00:01:31.099 --> 00:01:32.069
->> 演讲者 4: 因为它是非全局的。
+&gt；&gt；扬声器4：因为它是非全局的。
 &gt;&gt; Speaker 4: Because it is non globally.
 
 38
 00:01:32.069 --> 00:01:34.120
->> 凯尔 - 辛普森: 我们现在正在讨论全球范围。
-&gt;&gt; Kyle Simpson: Cuz we're
-talking to the global scope now.
+&gt；&gt；Kyle Simpson：因为我们现在正在谈论全球范围。
+&gt;&gt; Kyle Simpson: Cuz we're talking to the global scope now.
 
 39
 00:01:34.120 --> 00:01:37.539
-我们已经把已经正式宣布的范围
-We've already passed up the scope where
-that would have been formally declared and
+我们已经忽略了应该正式声明的范围
+We've already passed up the scope where that would have been formally declared and
 
 40
 00:01:37.539 --> 00:01:38.890
-现在我们在讨论全球范围
+现在我们正在谈论全球范围和
 now we're talking to the global scope and
 
 41
 00:01:38.890 --> 00:01:41.109
-它是全球范围让我们变的
-it's the global scope that
-gives us the variable.
+给我们变量的是全局作用域。
+it's the global scope that gives us the variable.
 
 42
 00:01:41.109 --> 00:01:42.289
-你和我一起吗
+你跟我一起吗？
 Are you with me?
 
 43
 00:01:43.579 --> 00:01:47.479
-所以我们创建了一个全球性的
-So we've created an auto
-global called topic which
+所以我们创建了一个名为Topic的自动全局
+So we've created an auto global called topic which
 
 44
 00:01:47.479 --> 00:01:50.180
-听起来很可怕因为太可怕了
-that sounds terrible
-because it is terrible.
+这听起来很可怕，因为它太可怕了。
+that sounds terrible because it is terrible.
 
 45
 00:01:50.180 --> 00:01:52.759
-但现在有一个全球性的变量叫做话题
-But now there's a global
-variable called topic and
+但是现在有一个叫做topic的全局变量
+But now there's a global variable called topic and
 
 46
 00:01:52.759 --> 00:01:56.240
-当我们把红色大理石放在第 5 行的时候
-when we get that red marble back and
-make the assignment on line five,
+当我们拿回红色大理石并在第五行做作业时，
+when we get that red marble back and make the assignment on line five,
 
 47
 00:01:56.240 --> 00:02:00.219
-现在有一个全球性的变量值重新处理好吗
-there's a global variable now
-with the value React in it, okay?
+现在有一个全局变量，其中有值react，好吗？
+there's a global variable now with the value React in it, okay?
 
 48
 00:02:00.219 --> 00:02:03.319
->> 演讲者 4: 所以话题就像老师说没有差别
-&gt;&gt; Speaker 4: So topic is just like
-teacher saying there's no difference then
+&gt；&gt；演讲者4：那么话题就像老师说没有区别一样
+&gt;&gt; Speaker 4: So topic is just like teacher saying there's no difference then
 
 49
 00:02:03.319 --> 00:02:04.739
-在全球范围内
+在全球层面上也是如此。
 at the global level there too.
 
 50
 00:02:04.739 --> 00:02:06.810
->> 凯尔 - 辛普森: 我不会说没有区别。
-&gt;&gt; Kyle Simpson: I wouldn't
-say there's no difference.
+&gt；&gt；Kyle Simpson：我不会说没有区别。
+&gt;&gt; Kyle Simpson: I wouldn't say there's no difference.
 
 51
 00:02:06.810 --> 00:02:10.439
-当然，在编译时创建声明并
-Certainly creating a declaration
-at compile time and
+当然，在编译时创建一个声明，并且
+Certainly creating a declaration at compile time and
 
 52
 00:02:10.439 --> 00:02:14.229
-在运行时期间动态创建，具有差异。
-creating it dynamically during
-the run time, have differences.
+在运行时动态创建它，有不同之处。
+creating it dynamically during the run time, have differences.
 
 53
 00:02:14.229 --> 00:02:17.270
-有性能差异和其他类型的事情
-There are performance differences and
-other sorts of things but
+存在性能差异和其他种类的事情，但是
+There are performance differences and other sorts of things but
 
 54
 00:02:17.270 --> 00:02:21.750
-在这一点上机械地是两个全局变量
-mechanically they are two global
-variables at this point okay.
+机械地说，它们是两个全局变量，在这一点上，好的。
+mechanically they are two global variables at this point okay.
 
 55
 00:02:21.750 --> 00:02:25.259
->> 演讲者 4: 如果你把它包起来，它就会产生差异
-&gt;&gt; Speaker 4: Or down the road if you wrap
-it around then it will make difference
+&gt；&gt；扬声器4：或者沿着这条路，如果你把它包起来，它就会有所不同
+&gt;&gt; Speaker 4: Or down the road if you wrap it around then it will make difference
 
 56
 00:02:25.259 --> 00:02:28.590
-因为它会再次出现
+因为它会再次出现。
 because it would pop again up.
 
 57
 00:02:28.590 --> 00:02:31.471
->> 凯尔 - 辛普森: 是的，我的意思是，如果这不是全球范围的话。
-&gt;&gt; Kyle Simpson: Yeah, I mean if this
-wasn't the global scope again then.
+&gt；&gt；Kyle Simpson：是的，我的意思是如果这不再是全局范围。
+&gt;&gt; Kyle Simpson: Yeah, I mean if this wasn't the global scope again then.
 
 58
 00:02:31.471 --> 00:02:33.680
->> 扬声器 4: 但如果稍后再次出现。
-&gt;&gt; Speaker 4: But
-if erupted again later on and.
+&gt；&gt；扬声器4：但如果稍后再次喷发。
+&gt;&gt; Speaker 4: But if erupted again later on and.
 
 59
 00:02:33.680 --> 00:02:37.100
->> 凯尔 - 辛普森: 老师不再是红色的大理石了。
-&gt;&gt; Kyle Simpson: Teacher
-wouldn't be a red marble anymore.
+&gt；&gt；Kyle Simpson：老师不再是红色的大理石了。
+&gt;&gt; Kyle Simpson: Teacher wouldn't be a red marble anymore.
 
 60
 00:02:37.100 --> 00:02:38.694
-[ 相声]。
+[串音]
 [CROSSTALK].
 
 61
 00:02:38.694 --> 00:02:42.593
-好吧不管你怎么解决这个问题
-Okay, regardless of how you wrap your
-brains around this just take this
+好的，不管你是怎么想的，拿着这个
+Okay, regardless of how you wrap your brains around this just take this
 
 62
 00:02:42.593 --> 00:02:47.338
-特别的外卖，从来没有在任何情况下故意自动
-particular takeaway, never ever under any
-circumstances did you intentionally auto
+特别的外卖，你从来没有在任何情况下故意让汽车
+particular takeaway, never ever under any circumstances did you intentionally auto
 
 63
 00:02:47.338 --> 00:02:49.409
-创造了这样的世界
+创建像这样的全局。
 create global's like that.
 
 64
 00:02:49.409 --> 00:02:52.129
-始终声明要在其中使用声明的变量
-Always declare the variables that
-you want to use declare them in
+始终声明要使用的变量声明它们
+Always declare the variables that you want to use declare them in
 
 65
 00:02:52.129 --> 00:02:56.129
-无论您需要什么范围，但不要像这样自动创建它们，是。
-whatever scope you need them in, but
-don't auto create them like this, yes.
+无论你需要它们在什么范围内，但不要像这样自动创建它们，是的。
+whatever scope you need them in, but don't auto create them like this, yes.
 
 66
 00:02:56.129 --> 00:02:59.000
->> 扬声器 2: 如果主题相等，那么也会发生这种情况
-&gt;&gt; Speaker 2: That would occur
-also if topic equals react were
+&gt；&gt；Speaker 2：如果topic equals response是
+&gt;&gt; Speaker 2: That would occur also if topic equals react were
 
 67
 00:02:59.000 --> 00:03:00.729
-在老师变量的全球范围内。
-in the global scope under
-variable of teacher.
+在全局范围内，在教师变量下。
+in the global scope under variable of teacher.
 
 68
 00:03:00.729 --> 00:03:01.909
->> 凯尔 - 辛普森: 这是真的。
+&gt；&gt；Kyle Simpson：没错。
 &gt;&gt; Kyle Simpson: That's true.
 
 69
 00:03:01.909 --> 00:03:06.280
-嗯，对那个时候没有申报的变量的任何赋值，
-Yeah, any assignment to a variable
-that is undeclared at that moment,
+是的，对当时未声明的变量的任何赋值，
+Yeah, any assignment to a variable that is undeclared at that moment,
 
 70
 00:03:06.280 --> 00:03:10.080
-任何我们都无法进入的范围
-it is not available to any
-scope that we have access to,
+它不适用于我们有权访问的任何范围，
+it is not available to any scope that we have access to,
 
 71
 00:03:10.080 --> 00:03:12.360
-未声明到任何我们有权访问的范围。
-not declared to any
-scope we have access to.
+没有声明到我们有权访问的任何范围。
+not declared to any scope we have access to.
 
 72
 00:03:12.360 --> 00:03:16.210
 任何未声明的变量都将最终创建此自动全局。
-Any undeclared variable is going to
-end up creating this auto global.
+Any undeclared variable is going to end up creating this auto global.
 
 73
 00:03:16.210 --> 00:03:18.650
-现在发生这种事的原因
+现在，发生这种情况的原因是
 Now, the reason why that happens
 
 74
 00:03:18.650 --> 00:03:21.498
-因为您会注意到此程序未在严格方式下运行。
-is because you'll notice that this
-program is not running in strict mode.
+是因为你会注意到这个程序没有在严格模式下运行。
+is because you'll notice that this program is not running in strict mode.
 
 75
 00:03:22.620 --> 00:03:25.650
-等一会儿我们再看紧模式的时候
-And in just a moment,
-we'll see when we flip on strict mode,
+稍等片刻，我们将看到何时切换到严格模式，
+And in just a moment, we'll see when we flip on strict mode,
 
 76
 00:03:25.650 --> 00:03:27.120
-它会改变这种行为
+它会改变这种行为。
 it will change that behavior.
 
 77
 00:03:27.120 --> 00:03:31.460
-但这在非严格模式下运行，有时也称为懒人模式。
-But this is running in the non-strict
-mode or sometimes called, sloppy mode.
+但这是在非严格模式下运行的，有时也称为草率模式。
+But this is running in the non-strict mode or sometimes called, sloppy mode.
 
 78
 00:03:31.460 --> 00:03:33.939
-您应该使用严格方式，如果您使用的是严格方式，
-You should be using strict mode,
-and if you were using strict mode,
+您应该使用严格模式，如果您使用严格模式，
+You should be using strict mode, and if you were using strict mode,
 
 79
 00:03:33.939 --> 00:03:35.430
-你就看不到这种行为了
+你不会看到这种行为。
 you wouldn't see this behavior.
 
 80
 00:03:35.430 --> 00:03:38.229
-但既然这条密码闻不到就会这样
-But since this code snip it isn't,
-that's what happens,
+但既然这个代码片段就不是了，这就是发生的事情，
+But since this code snip it isn't, that's what happens,
 
 81
 00:03:38.229 --> 00:03:41.289
-当我们最终创建一个全球性的变量题目好吗 ?
-as we end up creating a global
-variable called topic, okay?
+因为我们最终创建了一个名为topic的全局变量，好吗？
+as we end up creating a global variable called topic, okay?
 
 82
 00:03:42.840 --> 00:03:46.420
-因此，执行将在该函数中执行。
+然后在函数中执行。
 So execution is then done in the function.
 
 83
 00:03:46.420 --> 00:03:49.590
-我们执行 console.log 的方式与我们之前的相同。
-We execute console.log the same
-way as we have before.
+我们以与之前相同的方式执行console.log。
+We execute console.log the same way as we have before.
 
 84
 00:03:49.590 --> 00:03:51.310
-执行移至第 11 行。
+执行移动到第11行。
 Execution moves to line 11.
 
 85
 00:03:51.310 --> 00:03:53.129
-第 11 行的执行情况如何 ?
+第11行的执行是如何工作的？
 How does the execution of line 11 work?
 
 86
 00:03:54.139 --> 00:03:58.925
-我们要和一个范围，权利，和以前一样的对话，同样的叙事。
-Hey, we gotta talk to a scope, right, same
-conversation as before, same narrative.
+嘿，我们得对着一个范围说话，对，和以前一样的谈话，同样的叙述。
+Hey, we gotta talk to a scope, right, same conversation as before, same narrative.
 
 87
 00:03:58.925 --> 00:04:02.169
-嘿，全球范围，嘿红桶。
+所以嘿，全球范围，嘿红桶。
 So hey, global scope, hey red bucket.
 
 88
 00:04:02.169 --> 00:04:03.460
-我有什么参考?
+我有一个什么样的推荐人？
 I have a what kind of reference?
 
 89
 00:04:03.460 --> 00:04:04.150
->> 扬声器 3: 源引用。
+&gt；&gt；扬声器3：源引用。
 &gt;&gt; Speaker 3: Source reference.
 
 90
 00:04:04.150 --> 00:04:06.699
->> Kyle Simpson: 对调用的变量的源引用 ?
-&gt;&gt; Kyle Simpson: A source
-reference to a variable called?
+&gt；&gt；Kyle Simpson：对名为？的变量的源引用？
+&gt;&gt; Kyle Simpson: A source reference to a variable called?
 
 91
 00:04:06.699 --> 00:04:07.289
-老师。 老师。
-Teacher.
-Teacher.
+老师。老师。
+Teacher. Teacher.
 
 92
 00:04:07.289 --> 00:04:08.370
-听说过吗 答案是吗 ?
-Ever heard of it?
-And the answer is?
+听说过吗？答案是？
+Ever heard of it? And the answer is?
 
 93
 00:04:08.370 --> 00:04:09.509
->> 扬声器 3: 是。
+&gt；&gt；扬声器3：是的。
 &gt;&gt; Speaker 3: Yes.
 
 94
 00:04:09.509 --> 00:04:11.889
->> 凯尔 - 辛普森: 我们去拿那个大理石，看看它的价值。
-&gt;&gt; Kyle Simpson: So we go get that
-marble and we look for its value.
+&gt；&gt；Kyle Simpson：所以我们去拿大理石，看看它的价值。
+&gt;&gt; Kyle Simpson: So we go get that marble and we look for its value.
 
 95
 00:04:11.889 --> 00:04:13.990
-它有什么价值 ?
+它有什么价值？
 And what value does it have?
 
 96
 00:04:13.990 --> 00:04:14.569
->> 扬声器 3: 苏西。
+&gt；&gt；扬声器3：suzy。
 &gt;&gt; Speaker 3: Suzy.
 
 97
 00:04:14.569 --> 00:04:15.560
->> 凯尔 - 辛普森: 有苏西。
+&gt；&gt；Kyle Simpson：它有Suzy。
 &gt;&gt; Kyle Simpson: It has Suzy.
 
 98
 00:04:15.560 --> 00:04:17.980
-记得吗 因为第四行
-Remember?
-Because of line four,
+记得吗？因为四号线，
+Remember? Because of line four,
 
 99
 00:04:17.980 --> 00:04:19.910
-我们分配给了一个红色的大理石
+我们分配给一个红色的大理石。
 we assigned to a red marble.
 
 100
 00:04:19.910 --> 00:04:22.310
-我们已覆盖该变量中的值。
-We've overwritten
-the value in that variable.
+我们已经覆盖了该变量中的值。
+We've overwritten the value in that variable.
 
 101
 00:04:22.310 --> 00:04:25.529
-这不是一个单独的变量，不是单独的大理石。
-It's not a separate variable,
-not a separate marble.
+它不是一个单独的变量，也不是一个单独的大理石。
+It's not a separate variable, not a separate marble.
 
 102
 00:04:25.529 --> 00:04:27.060
-好了第 12 行第 12 行如何执行
-Okay, line 12 then,
-how does line 12 execute?
+好的，第12行，那么第12行是如何执行的？
+Okay, line 12 then, how does line 12 execute?
 
 103
 00:04:27.060 --> 00:04:28.129
->> 演讲者 3: 全球范围。
+&gt；&gt；扬声器3：嘿，全球范围。
 &gt;&gt; Speaker 3: Hey global scope.
 
 104
 00:04:29.990 --> 00:04:31.769
->> Kyle Simpson: 全球范围，我有吗 ?
-&gt;&gt; Kyle Simpson: Hey global scope,
-I have a?
+&gt；&gt；Kyle Simpson：嘿，全球范围内，我有一个？
+&gt;&gt; Kyle Simpson: Hey global scope, I have a?
 
 105
 00:04:31.769 --> 00:04:34.129
->> 扬声器 3: 源。 >> Kyle Simpson: 源引用 ?
-&gt;&gt; Speaker 3: Source.
-&gt;&gt; Kyle Simpson: Source reference for?
+&gt；&gt；扬声器3：来源。&gt；&gt；Kyle Simpson：来源参考？
+&gt;&gt; Speaker 3: Source. &gt;&gt; Kyle Simpson: Source reference for?
 
 106
 00:04:34.129 --> 00:04:37.069
-主题。 主题，你是专家，非常好。
-Topic.
-Topic, you're experts at this, very good.
+主题。话题，你们是这方面的专家，非常好。
+Topic. Topic, you're experts at this, very good.
 
 107
 00:04:37.069 --> 00:04:38.649
-你听过这个话题吗
+听说过主题吗？
 Ever heard of topic?
 
 108
 00:04:38.649 --> 00:04:39.889
-全球范围会说吗
+全球范围内会说？
 And global scope's gonna say?
 
 109
 00:04:39.889 --> 00:04:40.949
-这是你的红色大理石
+这是你的红色大理石。
 Here's your red marble.
 
 110
 00:04:40.949 --> 00:04:42.220
-这是你的红色大理石
+这是你的红色大理石。
 Here's your red marble.
 
 111
 00:04:42.220 --> 00:04:45.459
-当我们看到红色大理石的价值时它会说吗 ?
-And when we look at the value in
-the red marble it's gonna say?
+当我们看到红色大理石的价值时，它会说？
+And when we look at the value in the red marble it's gonna say?
 
 112
 00:04:45.459 --> 00:04:46.170
->> 扬声器 2: 重新操作。
+&gt；&gt；扬声器2：反应。
 &gt;&gt; Speaker 2: React.
 
 113
 00:04:46.170 --> 00:04:49.230
->> 凯尔 - 辛普森: 反应，反应。
+&gt；&gt；Kyle Simpson：反应，反应。
 &gt;&gt; Kyle Simpson: React, react.
 
 114
 00:04:49.230 --> 00:04:53.159
->> 扬声器 3: 因此，如果第 11 行在第 9 行之前运行，那么老师仍将是顶部。
-&gt;&gt; Speaker 3: So if line 11 ran before
-line 9, teacher would still be top.
+&gt；&gt；演讲者3：所以如果第11行跑在第9行之前，老师仍然是最高的。
+&gt;&gt; Speaker 3: So if line 11 ran before line 9, teacher would still be top.
 
 115
 00:04:54.459 --> 00:04:55.579
->> Kyle Simpson: 再次道歉 ?
+&GT；&GT；凯尔·辛普森：再说一遍，我很抱歉？
 &gt;&gt; Kyle Simpson: Say that again I'm sorry?
 
 116
 00:04:55.579 --> 00:04:59.336
->> 演讲者 3: 因此，如果第 11 行实际上在第 8 行中。
-&gt;&gt; Speaker 3: So
-if line 11 was actually in line 8.
+&gt；&gt；扬声器3：所以如果线路11实际上在线路8中。
+&gt;&gt; Speaker 3: So if line 11 was actually in line 8.
 
 117
 00:04:59.336 --> 00:05:00.300
->> 凯尔 - 辛普森: 我想你说的是第 12 行吗 ?
-&gt;&gt; Kyle Simpson: I think
-you're talking about line 12?
+&gt；&gt；kyle simpson：我想你说的是12号线？
+&gt;&gt; Kyle Simpson: I think you're talking about line 12?
 
 118
 00:05:00.300 --> 00:05:03.889
->演讲者 3: 我说的是第 11 行。
+&gt；&gt；演讲者3：我说的是第11行。
 &gt;&gt; Speaker 3: I'm talking about line 11.
 
 119
 00:05:03.889 --> 00:05:04.850
->> 凯尔 - 辛普森: 好的，
+&gt；&gt；Kyle Simpson：好的，那么
 &gt;&gt; Kyle Simpson: Okay, so
 
 120
 00:05:04.850 --> 00:05:09.930
-如果第 11 行在第 8 行，老师就会说凯尔，对。
-if line 11 was on line 8 then
-teacher would say Kyle, correct.
+如果第11行在第8行，那么老师会说Kyle，正确。
+if line 11 was on line 8 then teacher would say Kyle, correct.
 
 121
 00:05:09.930 --> 00:05:14.439
-如果第 12 行在第 8 行上，会发生什么情况 ?
-What would happen if
-line 12 was on line 8?
+如果线路12在线路8上会发生什么？
+What would happen if line 12 was on line 8?
 
 122
 00:05:14.439 --> 00:05:17.577
-没有标识，对吧 ?
+不会有标识符，对吧？
 There would be no identifier, right?
 
 123
 00:05:17.577 --> 00:05:20.427
-我们将在下一张幻灯片中看到这个案例。
+我们将在下一张幻灯片中看到这种情况。
 We'll see that case in the next slide.
 
 124
 00:05:20.427 --> 00:05:23.398
-但是第 12 行上有一个标识，因为
-But there is an identifier
-on line 12 because
+但是在第12行有一个标识符，因为
+But there is an identifier on line 12 because
 
 125
 00:05:23.398 --> 00:05:28.088
-通过分配到未声明的变量，函数 otherClass 自动创建该函数。
-the function otherClass auto created it
-by assigning to a non-declared variable.
+函数other Class auto通过分配给未声明的变量来创建它。
+the function otherClass auto created it by assigning to a non-declared variable.

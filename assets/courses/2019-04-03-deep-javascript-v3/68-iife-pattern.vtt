@@ -2,79 +2,67 @@ WEBVTT
 
 1
 00:00:00.070 --> 00:00:04.998
->> 凯尔: 那么你会思考，好吧，如果我能输入一个变量，
-&gt;&gt; Kyle: So then you get to thinking,
-well, if i can put a variable,
+&gt；&gt；Kyle：那么你就会想，好吧，如果我可以放一个变量，
+&gt;&gt; Kyle: So then you get to thinking, well, if i can put a variable,
 
 2
 00:00:04.998 --> 00:00:09.731
-如果我能把一个表情放在括号里
-if i can put an expression
-inside of those parentheses and
+如果我可以将表达式放在这些括号中，并且
+if i can put an expression inside of those parentheses and
 
 3
 00:00:09.731 --> 00:00:14.760
-那就立即进行那个表情，为什么我不能
-then immediately run that expression,
-why couldn't i just
+然后立即运行那个表达式，为什么我不能
+then immediately run that expression, why couldn't i just
 
 4
 00:00:14.760 --> 00:00:20.007
-把另一个老师的功能放在一个表情上 ?
-take the another teacher function and
-put it as an expression?
+取另一个老师的函数并把它作为一种表达吗？
+take the another teacher function and put it as an expression?
 
 5
 00:00:20.007 --> 00:00:22.899
-为什么我要将其转换为变量并将其放入变量中 ?
-Why do I have to make it into
-a variable and put the variable in?
+为什么我要把它变成一个变量，然后把变量放进去？
+Why do I have to make it into a variable and put the variable in?
 
 6
 00:00:22.899 --> 00:00:25.769
-我为什么不把那个功能放在那里
-Why don't I just take that function and
-put it right there?
+为什么我不把这个函数放在那里呢？
+Why don't I just take that function and put it right there?
 
 7
 00:00:27.280 --> 00:00:31.500
-因此，我们将用函数表达式替换变量。
-So here we're going to replace
-the variable with the function expression.
+所以这里我们要用函数表达式来替换变量。
+So here we're going to replace the variable with the function expression.
 
 8
 00:00:33.500 --> 00:00:35.820
-在第一套括号里
-Now inside of that first
-set of parentheses,
+现在第一组括号内，
+Now inside of that first set of parentheses,
 
 9
 00:00:35.820 --> 00:00:39.030
-我们还有第二套括号来执行它
-we still have the second set of
-parentheses down here to execute it.
+我们这里仍然有第二组圆括号来执行它。
+we still have the second set of parentheses down here to execute it.
 
 10
 00:00:40.880 --> 00:00:44.130
 我们有一个函数表达式，然后立即调用。
-We have a function expression
-that is then immediately invoked.
+We have a function expression that is then immediately invoked.
 
 11
 00:00:45.159 --> 00:00:48.250
-作为我们在 JavaScript中非常有创意的人
-And being the terribly creative
-bunch that we are in JavaScript,
+作为我们在JavaScript中非常有创造力的一群人，
+And being the terribly creative bunch that we are in JavaScript,
 
 12
 00:00:48.250 --> 00:00:53.112
-在 2010 年我们创造了一个词组立即调用函数表达式
-back in 2010 we coined the phrase
-immediately invoked function expression,
+回到2010年，我们创造了短语立即调用函数表达式，
+back in 2010 we coined the phrase immediately invoked function expression,
 
 13
 00:00:53.112 --> 00:00:55.737
-a.b.a
+也就是生活。
 a.k.a IIFE.
 
 14
@@ -84,95 +72,83 @@ That's where this comes from,
 
 15
 00:00:58.549 --> 00:01:02.960
-使用函数表达式创建作用域，立即调用它。
-using a function expression to create
-a scope, immediately invoking it.
+使用函数表达式创建范围，立即调用它。
+using a function expression to create a scope, immediately invoking it.
 
 16
 00:01:02.960 --> 00:01:06.959
-它是一种短暂的东西，我们只需要它的时候，就这样
-It's a sort of ephemeral thing,
-we only need it for that moment, just so
+这是一种转瞬即逝的东西，我们只在那一刻需要它，就是这样
+It's a sort of ephemeral thing, we only need it for that moment, just so
 
 17
 00:01:06.959 --> 00:01:07.870
-我们可以有一个范围
+我们可以用望远镜。
 we can have a scope.
 
 18
 00:01:08.950 --> 00:01:11.569
-这样它就会运行一次然后它就会消失
-So it runs once and
-then it kinda goes away.
+所以它运行一次，然后它就会消失。
+So it runs once and then it kinda goes away.
 
 19
 00:01:11.569 --> 00:01:15.769
-它不像一个常规的功能，我们可能需要多次调用。
-It's not like a regular function that
-we might need to call multiple times.
+这与我们可能需要多次调用的常规函数不同。
+It's not like a regular function that we might need to call multiple times.
 
 20
 00:01:15.769 --> 00:01:19.530
-这是一次和做过的事情，这就是为什么我们使用 IIF 模式。
-It's a once and done sort of thing, and
-that's why we use the IIFE pattern.
+这是一件一次性的事情，这就是为什么我们使用生活模式。
+It's a once and done sort of thing, and that's why we use the IIFE pattern.
 
 21
 00:01:21.439 --> 00:01:23.359
-为什么这不是函数声明?
+为什么这不是函数声明？
 Why is this not a function declaration?
 
 22
 00:01:28.739 --> 00:01:30.579
->> 扬声器 2: 一些括号。
+&gt；&gt；Speaker 2：某种括号。
 &gt;&gt; Speaker 2: Some sort of parentheses.
 
 23
 00:01:30.579 --> 00:01:35.150
->> 凯尔: 因为单词函数不是语句中的第一个。
-&gt;&gt; Kyle: Because the word function is
-not the first thing in the statement.
+&gt；&gt；Kyle：因为单词function不是语句中的第一件事。
+&gt;&gt; Kyle: Because the word function is not the first thing in the statement.
 
 24
 00:01:35.150 --> 00:01:39.950
-换句话说，这些括号实际上是没有其他目的的。
-In other words, those parentheses
-are there literally for no other purpose
+换句话说，这些括号的存在从字面上来说没有其他目的
+In other words, those parentheses are there literally for no other purpose
 
 25
 00:01:39.950 --> 00:01:44.228
-而不是把它变成表情而不是声明
-than to syntactically turn that into
-an expression instead of a declaration.
+而不是在语法上将其转换为表达式而不是声明。
+than to syntactically turn that into an expression instead of a declaration.
 
 26
 00:01:46.049 --> 00:01:49.879
-有多种其他语法方法可将函数转换为
-There are a variety of other syntactic
-ways to turn a function into
+还有多种其他语法方法可以将函数转换为
+There are a variety of other syntactic ways to turn a function into
 
 27
 00:01:49.879 --> 00:01:51.069
-一个表情。
+一种表达。
 an expression.
 
 28
 00:01:51.069 --> 00:01:55.493
-例如，而不是第一个周围的括号集合，
-For example, instead of the first
-surrounding parentheses set,
+例如，代替第一个圆括号集，
+For example, instead of the first surrounding parentheses set,
 
 29
 00:01:55.493 --> 00:02:00.709
-我们可以让一个一元运算符，比如一个加号，一个或一个减号，或者一个波浪号。
-we could have put a unary operator, like
-a plus or a negate or a minus or a tilde.
+我们可以使用一元运算符，比如加号、负号或波浪号。
+we could have put a unary operator, like a plus or a negate or a minus or a tilde.
 
 30
 00:02:00.709 --> 00:02:04.834
-我们本来可以用最出名但还是很重要的
-We could have even used the lesser
-known but still important delete or
+我们甚至可以使用鲜为人知但仍然很重要的delete or
+We could have even used the lesser known but still important delete or
 
 31
 00:02:04.834 --> 00:02:05.909
@@ -181,38 +157,33 @@ void operators.
 
 32
 00:02:07.409 --> 00:02:10.520
-那些一元运算符中的任何一个都将会产生从
-Anyone of those unary operators would
-have had the effect of turning that from
+这些一元运算符中的任何一个都会产生将其从
+Anyone of those unary operators would have had the effect of turning that from
 
 33
 00:02:10.520 --> 00:02:14.349
-函数声明到函数表达式中，以及
-a function declaration into
-a function expression, and
+将函数声明转换为函数表达式，以及
+a function declaration into a function expression, and
 
 34
 00:02:14.349 --> 00:02:16.920
-它就能执行了
+然后它就能够执行了。
 it would have then been able to execute.
 
 35
 00:02:16.920 --> 00:02:20.960
-我们不需要这样如果我们能在概念上
-We'd like to not have to, it would be
-nice if we could conceptually just
+我们不想这样做，如果我们能在概念上
+We'd like to not have to, it would be nice if we could conceptually just
 
 36
 00:02:20.960 --> 00:02:24.170
-执行函数声明，然后再考虑它，
-make a function declaration that executes,
-but then think about it,
+创建一个执行的函数声明，然后再考虑一下，
+make a function declaration that executes, but then think about it,
 
 37
 00:02:24.170 --> 00:02:28.759
-即使我们能做到这一点，功能声明仍然会产生
-even if we could do that, the function
-declaration would still have the effect of
+即使我们可以这样做，函数声明仍然具有以下效果
+even if we could do that, the function declaration would still have the effect of
 
 38
 00:02:28.759 --> 00:02:30.800
@@ -221,9 +192,8 @@ polluting the enclosing scope.
 
 39
 00:02:30.800 --> 00:02:33.810
-所以我们真正需要的是一个我们能运行的功能
-So what we really need here is
-a function that we can run, and
+因此，我们在这里真正需要的是一个可以运行的函数，并且
+So what we really need here is a function that we can run, and
 
 40
 00:02:33.810 --> 00:02:35.259
@@ -232,175 +202,153 @@ not pollute the enclosing scope.
 
 41
 00:02:36.560 --> 00:02:39.120
-通过将其转化为函数表达式，我们就能做到这一点。
-And by turning it into a function
-expression, we accomplish that.
+通过将其转化为函数表达式，我们实现了这一点。
+And by turning it into a function expression, we accomplish that.
 
 42
 00:02:40.819 --> 00:02:43.460
-所以另一个老师的名字也没出现
-So the name another
-teacher doesn't show up.
+这样另一个老师的名字就不会出现了。
+So the name another teacher doesn't show up.
 
 43
 00:02:43.460 --> 00:02:47.240
-现在你几乎可以肯定你的 IIFEs 是匿名的了
-Now you've almost certainly
-seen your IIFEs as anonymous.
+现在你几乎可以肯定你的生活是匿名的。
+Now you've almost certainly seen your IIFEs as anonymous.
 
 44
 00:02:47.240 --> 00:02:50.650
-你几乎可以看到那些没有名字的 IIFEs
-You've almost certainly seen those IIFEs
-without any name there, like you see here
+你几乎可以肯定看到了那些没有名字的生命，就像你在这里看到的
+You've almost certainly seen those IIFEs without any name there, like you see here
 
 45
 00:02:50.650 --> 00:02:56.170
-在第 4 行，因为我们的爱与匿名函数的表达。
-on line 4, because of our love affair
-with anonymous function expressions.
+在第4行，因为我们喜欢匿名函数表达式。
+on line 4, because of our love affair with anonymous function expressions.
 
 46
 00:02:57.259 --> 00:03:00.830
-我之前的建议是什么
+还记得我之前的推荐吗？
 Recall my recommendation from earlier?
 
 47
 00:03:00.830 --> 00:03:03.986
-永远不要你有匿名的功能
-Never, ever, ever should you have
-anonymous function expressions, and
+永远不要使用匿名函数表达式，并且
+Never, ever, ever should you have anonymous function expressions, and
 
 48
 00:03:03.986 --> 00:03:05.199
-包括您的 IFFIEs。
+包括你的IFFIEs。
 that includes your IFFIEs.
 
 49
 00:03:06.280 --> 00:03:09.729
-如果你做的是 IIF ，有一定的目的。
-If you are making an IIFE,
-there's some purpose for it.
+如果你正在创造一种生活，它是有目的。
+If you are making an IIFE, there's some purpose for it.
 
 50
 00:03:10.759 --> 00:03:14.000
-在我这愚蠢的例子里我们说的是一个老师
-In my silly example here where
-we're talking about a teacher,
+在我这个愚蠢的例子中，我们谈论的是一位老师，
+In my silly example here where we're talking about a teacher,
 
 51
 00:03:14.000 --> 00:03:15.289
-没那么多的目的
+没有太多的目的。
 there's not a lot of purpose.
 
 52
 00:03:16.349 --> 00:03:19.109
-这不是很容易弄明白的。
+这不是很容易弄清楚的。
 It's not very easy to figure out.
 
 53
 00:03:19.109 --> 00:03:21.757
-你还可以叫它另一个老师
+你仍然可以称它为另一位老师或
 You could still call it another teacher or
 
 54
 00:03:21.757 --> 00:03:26.459
-请提供其他名称来描述该特定作用域的用途。
-give it some other name to describe
-the purpose of that particular scope.
+给它一些其他的名称来描述这个特定作用域的目的。
+give it some other name to describe the purpose of that particular scope.
 
 55
 00:03:28.349 --> 00:03:32.490
->> 凯尔: 如果你真的被卡住了，你不能有任何名字
-&gt;&gt; Kyle: And if you really are just stuck
-and you can't come up with any name
+&GT；&GT；Kyle：如果你真的被困住了，你不能想出任何名字
+&gt;&gt; Kyle: And if you really are just stuck and you can't come up with any name
 
 56
 00:03:32.490 --> 00:03:35.581
-来描述某些特定范围的需求。
-to describe the need for
-some particular scope.
+描述对某些特定范围的需求。
+to describe the need for some particular scope.
 
 57
 00:03:37.628 --> 00:03:39.349
->> 凯尔: 那就用 " IIFE" 这个词。
+凯尔：那就用生命这个词。
 &gt;&gt; Kyle: Then just use the word IIFE.
 
 58
 00:03:40.689 --> 00:03:42.539
-IIFE ，大写字母。
+生命，用大写字母。
 IIFE, in capital letters.
 
 59
 00:03:42.539 --> 00:03:45.150
-它就会出现在你的堆里
-And it's gonna show up
-in your stack trace,
+它会出现在你的堆栈跟踪中，
+And it's gonna show up in your stack trace,
 
 60
 00:03:45.150 --> 00:03:46.969
-你就会知道它是从 IIF来的
-you're gonna know it's
-coming from an IIFE.
+你会知道它来自生活。
+you're gonna know it's coming from an IIFE.
 
 61
 00:03:46.969 --> 00:03:49.493
-那还不如去看匿名的功能
-That's still better than seeing
-an anonymous function, and
+这仍然比看到匿名函数好，而且
+That's still better than seeing an anonymous function, and
 
 62
 00:03:49.493 --> 00:03:51.688
-不知道它是从哪里来的，也不知道它是为了什么。
-having no idea where it came from,
-or what it was for.
+不知道它是从哪里来的，也不知道它是用来做什么的。
+having no idea where it came from, or what it was for.
 
 63
 00:03:54.778 --> 00:03:57.973
->> 凯尔: 这些 IIFEs 有什么好的，不管他们是匿名的，
-&gt;&gt; Kyle: What's nice about these IIFEs,
-whether they're anonymous or not,
+&gt；&gt；Kyle：这些IIFE的好处是什么，不管它们是不是匿名的，
+&gt;&gt; Kyle: What's nice about these IIFEs, whether they're anonymous or not,
 
 64
 00:03:57.973 --> 00:04:01.069
-就是它们只是功能，意味着我们可以传递价值。
-is that they are just functions,
-which means we can pass in values.
+它们只是函数，这意味着我们可以传入值。
+is that they are just functions, which means we can pass in values.
 
 65
 00:04:01.069 --> 00:04:04.300
-所以在这里，我可以消除，甚至不需要做任何任务。
-So here, I was able to eliminate,
-didn't even need to make any assignments.
+所以在这里，我能够消除，甚至不需要做任何分配。
+So here, I was able to eliminate, didn't even need to make any assignments.
 
 66
 00:04:04.300 --> 00:04:06.794
-我只能将一个值传递给一个参数。
+我可以只将一个值传递给参数。
 I can just pass in a value to a parameter.
 
 67
 00:04:13.240 --> 00:04:16.754
->> 凯尔: 顺便说一下， IIFE 的另一个用法可能有点不太普通，但是
-&gt;&gt; Kyle: By the way, another usage for
-IIFE, it may be a little less common, but
+&gt；&gt；Kyle：顺便说一下，生命的另一种用法，可能不太常见，但是
+&gt;&gt; Kyle: By the way, another usage for IIFE, it may be a little less common, but
 
 68
 00:04:16.754 --> 00:04:20.153
-IIFE 的另一个用法是将语句转换为
-another usage for IIFE is for
-turning things that are statements into
+Lifee的另一个用法是把陈述的东西变成
+another usage for IIFE is for turning things that are statements into
 
 69
 00:04:20.153 --> 00:04:23.129
-表达式，因为和 IIFE 是表达式。
-expressions, because and
-IIFE is an expression.
+表达，因为生命是一种表达。
+expressions, because and IIFE is an expression.
 
 70
 00:04:23.129 --> 00:04:26.910
-有时候会有方便的地方
-There are sometimes places where
-it would be convenient to have
+有时会有一些方便的地方
+There are sometimes places where it would be convenient to have
 
 71
 00:04:26.910 --> 00:04:30.810
@@ -409,147 +357,125 @@ a statement be in an expression position.
 
 72
 00:04:30.810 --> 00:04:34.810
-其中一个例子，我曾多次参加，
-One of those examples,
-which I have run into on many occasions,
+其中一个例子，我在很多场合都遇到过，
+One of those examples, which I have run into on many occasions,
 
 73
 00:04:34.810 --> 00:04:39.409
-我想把一个任务分配给一个变量
-is I would like to be able to make
-an assignment to a variable and
+我希望能够对变量进行赋值，并且
+is I would like to be able to make an assignment to a variable and
 
 74
 00:04:39.409 --> 00:04:43.920
-然后，分配表达式包含 try， catch。
-then have that assignment
-expression include a try, catch.
+然后让该赋值表达式包含try、catch。
+then have that assignment expression include a try, catch.
 
 75
 00:04:43.920 --> 00:04:48.610
-比如说我经常做老师等于fetch老师和
-For example, I often will do something
-like teacher equals fetchteacher and
+例如，我经常会做一些事情，如教师等于获取教师和
+For example, I often will do something like teacher equals fetchteacher and
 
 76
 00:04:48.610 --> 00:04:50.949
-该函数可能抛出异常。
-that function might be
-able to throw exception.
+该函数可能会抛出异常。
+that function might be able to throw exception.
 
 77
 00:04:50.949 --> 00:04:56.220
-所以如果我能把它裹在一个尝试的渔获上，那就好了。
-So it would be nice if I would wrap that
-in a try catch then have a fall back.
+所以如果我把它包装在一次尝试捕捉中，然后有一个回落，那就太好了。
+So it would be nice if I would wrap that in a try catch then have a fall back.
 
 78
 00:04:56.220 --> 00:04:59.659
-下面是尝试捕捉的是一个声明
-Well, the down side is the try
-catch is a statement so
+嗯，不利的一面是try catch是一种声明，所以
+Well, the down side is the try catch is a statement so
 
 79
 00:04:59.659 --> 00:05:01.653
-它在一个表达位置上不起作用。
+它在表情位置不起作用。
 it doesn't work in an expression position.
 
 80
 00:05:01.653 --> 00:05:05.079
-那是我们语法的一个不幸的细微差别
-That's an unfortunate
-nuance of our grammar.
+这是我们语法上的一个不幸的细微差别。
+That's an unfortunate nuance of our grammar.
 
 81
 00:05:05.079 --> 00:05:09.930
-下一个最好的东西就是我们只做一个变量
-And so the next best hack is
-that we just make a variable and
+所以下一个最好的方法就是我们只做一个变量
+And so the next best hack is that we just make a variable and
 
 82
 00:05:09.930 --> 00:05:12.939
-然后再分配两次就像我们在这里一样
-then assign to it twice,
-like we're doing here.
+然后分配给它两次，就像我们在这里做的那样。
+then assign to it twice, like we're doing here.
 
 83
 00:05:12.939 --> 00:05:15.680
-很多人可能会这样做，我当然也会这样做。
-And a lot of you probably do this,
-and I certainly have as well.
+你们中的很多人可能会这样做，我当然也是这样做的。
+And a lot of you probably do this, and I certainly have as well.
 
 84
 00:05:15.680 --> 00:05:20.199
-但我希望能让它变得更清晰
-But I would like to be able to make it
-clearer especially if there was gonna be
+但我希望能让它更清楚，特别是如果要
+But I would like to be able to make it clearer especially if there was gonna be
 
 85
 00:05:20.199 --> 00:05:22.389
-比三到四个多的代码行
-more lines of code than just the three or
-four.
+比仅仅三四行代码更多的代码行。
+more lines of code than just the three or four.
 
 86
 00:05:22.389 --> 00:05:25.379
-我想让读者明白我的代码
-I'd like to make it clear
-to the reader of my code,
+我想让我代码的读者明白，
+I'd like to make it clear to the reader of my code,
 
 87
 00:05:25.379 --> 00:05:27.670
-老师只会被安排一次
+那个老师只被分配一次。
 that teacher only gets assigned once.
 
 88
 00:05:27.670 --> 00:05:30.480
-这不是很明显的代码
-That's not terribly
-obvious from this code.
+这在这段代码中并不是很明显。
+That's not terribly obvious from this code.
 
 89
 00:05:30.480 --> 00:05:33.952
-你得想办法，好吧，我只得到两个值中的一个。
-You have to sort of figure out, okay,
-I'm only getting one of the two values.
+你必须弄清楚，好吧，我只得到两个值中的一个。
+You have to sort of figure out, okay, I'm only getting one of the two values.
 
 90
 00:05:33.952 --> 00:05:38.120
-我想说的是，老师被分配了一次。
-And I'd like to make it obvious
-that teacher gets assigned once.
+我想清楚的是，老师只被分配一次。
+And I'd like to make it obvious that teacher gets assigned once.
 
 91
 00:05:38.120 --> 00:05:40.019
-所以如果我使用 IIF
+所以，如果我用生命，
 So, if I use an IIFE,
 
 92
 00:05:40.019 --> 00:05:45.230
-我可以更清楚的完成一点，我可以做一个 try catch 语句
-I can accomplish that a little bit more
-clearly, I can make a try catch statement
+我可以更清楚地完成这一点，我可以创建一个try catch语句
+I can accomplish that a little bit more clearly, I can make a try catch statement
 
 93
 00:05:45.230 --> 00:05:50.600
-通过将函数表达式环绕在表达式中。
-into an expression by wrapping
-a function expression around it.
+通过将函数表达式包装在表达式周围而将其转换为表达式。
+into an expression by wrapping a function expression around it.
 
 94
 00:05:50.600 --> 00:05:55.060
-不是很普通但我只是在说 IIFEs 可以用你的任何地方
-Not very common, but I'm just pointing out
-that IIFEs can be used any place that you
+不是很常见，但我只是指出LIFE可以在任何地方使用
+Not very common, but I'm just pointing out that IIFEs can be used any place that you
 
 95
 00:05:55.060 --> 00:05:58.300
-需要一个表达式，并且任何时候都需要一个语句或
-need an expression, and
-any time you need a statement or
+需要一个表达式，任何时候你需要一个语句或
+need an expression, and any time you need a statement or
 
 96
 00:05:58.300 --> 00:06:02.470
-作用域在表达式位置， IIFE 完成该任务。
-a scope in an expression position,
-the IIFE accomplishes that task.
+一个处于表达位置的范围，生命完成了这个任务。
+a scope in an expression position, the IIFE accomplishes that task.

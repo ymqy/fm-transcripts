@@ -2,278 +2,240 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:02.012
->> 凯尔 - 辛普森: 所以他们只能走这么远。
-&gt;&gt; Kyle Simpson: So
-they can only go so far.
+&GT；&GT；凯尔·辛普森：所以他们只能走这么远。
+&gt;&gt; Kyle Simpson: So they can only go so far.
 
 2
 00:00:02.012 --> 00:00:04.173
-他们可以告诉你我们在编译时能告诉你什么
-They can tell you what we can
-tell you at compile time, but
+它们可以告诉您我们在编译时可以告诉您的内容，但是
+They can tell you what we can tell you at compile time, but
 
 3
 00:00:04.173 --> 00:00:07.341
-他们无法真正告诉你真实世界会发生什么
-they can't really tell you anything about
-what's gonna happen in the real world.
+他们真的不能告诉你在现实世界里会发生什么。
+they can't really tell you anything about what's gonna happen in the real world.
 
 4
 00:00:07.341 --> 00:00:10.692
-他们只希望这一切都不会咬你
-They're just gonna hope that
-none of that bites you.
+他们只是希望这些都不会咬到你。
+They're just gonna hope that none of that bites you.
 
 5
 00:00:12.217 --> 00:00:14.717
->> Kyle Simpson: 以下是 TypeScript 和 Flow 的一些示例，以及
-&gt;&gt; Kyle Simpson: So
-some examples of TypeScript and Flow, and
+&gt；&gt；Kyle Simpson：一些打字脚本和流程的示例，以及
+&gt;&gt; Kyle Simpson: So some examples of TypeScript and Flow, and
 
 6
 00:00:14.717 --> 00:00:17.980
-这两个例子其实是一样的。
-these examples are actually
-identical between the two.
+这两个例子实际上是相同的。
+these examples are actually identical between the two.
 
 7
 00:00:17.980 --> 00:00:20.763
-它们在这些情况下使用相同的语法。
+在这些情况下，它们使用相同的语法。
 They use identical syntax in these cases.
 
 8
 00:00:20.763 --> 00:00:22.676
-有几个细微的细微差别。
-There are a few little
-nuanced differences.
+有一些细微的差别。
+There are a few little nuanced differences.
 
 9
 00:00:22.676 --> 00:00:27.379
-但我对这一准备工作的研究却非常吃惊
-But I was actually remarkably surprised
-in my research for this preparation how
+但实际上我在研究这项准备工作时感到非常惊讶
+But I was actually remarkably surprised in my research for this preparation how
 
 10
 00:00:27.379 --> 00:00:31.321
-类似的 " 类型脚本 " 和 " 流 " 是它们的外观。
-similar TypeScript and Flow are in
-terms of of what they look like.
+类似的打字稿和流程是在他们看起来像什么方面。
+similar TypeScript and Flow are in terms of of what they look like.
 
 11
 00:00:31.321 --> 00:00:35.551
-我估计会有很多不同之处，也很少，好吗 ?
-I expected a lot of differences and
-there are very few, okay?
+我预计会有很多不同之处，但是很少，好吗？
+I expected a lot of differences and there are very few, okay?
 
 12
 00:00:35.551 --> 00:00:39.390
-第一，如果你不做任何输入，都是 TypeScript 和
-So number one, if you don't do any
-typing at all, both TypeScript and
+所以第一，如果你根本不打字，打字稿和
+So number one, if you don't do any typing at all, both TypeScript and
 
 13
 00:00:39.390 --> 00:00:41.770
-缺省情况下，流将执行某些注入。
+默认情况下，Flow将执行一些推理。
 Flow by default will do some inferencing.
 
 14
 00:00:41.770 --> 00:00:46.170
-所以他们在做静态的推论，这意味着我的意图是
-So here they're doing a static types
-inference, which means my intent that
+所以在这里他们做了一个静态类型推断，这意味着我的意图
+So here they're doing a static types inference, which means my intent that
 
 15
 00:00:46.170 --> 00:00:51.131
-他们猜的是我想要老师这个变量只能维持弦
-they're guessing, is that I want teacher,
-the variable to only ever hold strings.
+他们在猜测，就是我想让教师，这个变量永远只包含字符串。
+they're guessing, is that I want teacher, the variable to only ever hold strings.
 
 16
 00:00:51.131 --> 00:00:53.539
-当我尝试给它分配一些非字符串的时候
-And when I later try to assign
-it something non-string,
+当我稍后尝试给它分配一些非字符串的值时，
+And when I later try to assign it something non-string,
 
 17
 00:00:53.539 --> 00:00:57.219
-它会给我一个错误说你做了一个不该做的任务
-it throws me an error, and says, you're
-doing an assignment that you shouldn't do.
+它抛出一个错误，并说，你正在做一个你不应该做的作业。
+it throws me an error, and says, you're doing an assignment that you shouldn't do.
 
 18
 00:00:58.240 --> 00:00:59.689
-这是他们最好的猜测
+这是他们最好的猜测。
 That's their best guess.
 
 19
 00:01:02.840 --> 00:01:09.069
-有些人觉得在类型中最大的问题之一就是我们
-Some people feel that one of the biggest
-problems within types is that we
+有些人认为类型中最大的问题之一是我们
+Some people feel that one of the biggest problems within types is that we
 
 20
 00:01:09.069 --> 00:01:14.414
-无意中将值分配给一个不是我们认为的类型的变量。
-accidentally assign a value to a variable
-that is not the type we thought.
+意外地将一个值赋给了一个不是我们所想的类型的变量。
+accidentally assign a value to a variable that is not the type we thought.
 
 21
 00:01:14.414 --> 00:01:18.617
-对他们来说，静态类型是一个很大的交易。
-And so for them,
-static types are a big deal.
+因此对他们来说，静态类型是一件大事。
+And so for them, static types are a big deal.
 
 22
 00:01:18.617 --> 00:01:23.444
-我跟你说在我 20 多年的时间里
-I'm being honest with you when I
-tell you that in my 20 plus years in
+我告诉你，在我20多年的生活中，我对你说的是实话
+I'm being honest with you when I tell you that in my 20 plus years in
 
 23
 00:01:23.444 --> 00:01:28.525
-编码从来没有，一次不小心是我意外的结果
-coding never once, not once has a bug
-been as a result of me accidentally
+编码从来没有一次，一次都没有错误是我偶然的结果
+coding never once, not once has a bug been as a result of me accidentally
 
 24
 00:01:28.525 --> 00:01:33.798
-将数字分配给用于保存字符串的变量，例如。
-assigning a number to a variable that
-used to hold a string, for example.
+例如，将数字赋给用于保存字符串的变量。
+assigning a number to a variable that used to hold a string, for example.
 
 25
 00:01:33.798 --> 00:01:37.735
-我是故意这么做的但从来没有意外发生过
-I do that on purpose a lot, but never
-once has that accidentally happened, and
+我经常故意这样做，但从来没有一次是偶然发生的，而且
+I do that on purpose a lot, but never once has that accidentally happened, and
 
 26
 00:01:37.735 --> 00:01:39.450
-是一只虫子的来源
+是一个窃听器的来源。
 been the source of a bug.
 
 27
 00:01:39.450 --> 00:01:42.870
-所以对我来说，这不是我所遇到的问题之一。
-So for me, that's not one of
-the problems that I have.
+所以对我来说，这不是我的问题之一。
+So for me, that's not one of the problems that I have.
 
 28
 00:01:42.870 --> 00:01:44.379
-如果这是你的问题
+如果是你的问题，
 If it is a problem that you have,
 
 29
 00:01:44.379 --> 00:01:48.810
-错误发生的原因是您重新分配了不正确的内容，这很有用。
-where bugs come because you've reassigned
-something incorrectly, this is helpful.
+当错误由于重新分配错误而出现时，这是很有帮助的。
+where bugs come because you've reassigned something incorrectly, this is helpful.
 
 30
 00:01:50.109 --> 00:01:52.469
-这是很久以来的其中一个特点
-This is one of those features that,
-for a long time,
+这是其中一个特征，在很长一段时间内，
+This is one of those features that, for a long time,
 
 31
 00:01:52.469 --> 00:01:55.340
-我说我不需要这部分的 TypeScript。
-I said I don't need that
-part of TypeScript.
+我说了我不需要打字稿的那部分。
+I said I don't need that part of TypeScript.
 
 32
 00:01:55.340 --> 00:01:58.349
-我不喜欢抱怨我分配变量的事
-I don't like for it to complain to
-me about what I assign variables,
+我不喜欢它向我抱怨我给变量赋值的内容，
+I don't like for it to complain to me about what I assign variables,
 
 33
 00:01:58.349 --> 00:02:01.060
-cuz 我喜欢分配一个数字，然后再分配一个字符串。
-cuz I like to be able to assign
-a number and then later a string.
+因为我喜欢能够分配一个数字，然后再分配一个字符串。
+cuz I like to be able to assign a number and then later a string.
 
 34
 00:02:01.060 --> 00:02:02.599
-对我有帮助
+这对我很有帮助，所以
 That to me is helpful, so
 
 35
 00:02:02.599 --> 00:02:05.530
-我不喜欢这个部分，我觉得它解决了一个我没有的问题。
-I didn't like this part, and I felt like
-it was solving a problem I didn't have.
+我不喜欢这个部分，我觉得它是在解决一个我没有的问题。
+I didn't like this part, and I felt like it was solving a problem I didn't have.
 
 36
 00:02:06.900 --> 00:02:09.560
-但这就是我们所说的静态类型
-But that's what we refer
-to as static types,
+但这就是我们所说的静态类型，
+But that's what we refer to as static types,
 
 37
 00:02:09.560 --> 00:02:14.340
-根据进入变量的值来推断变量的类型。
-inferring that the variable has a type
-based upon the value that goes into it.
+根据进入变量的值推断变量具有类型。
+inferring that the variable has a type based upon the value that goes into it.
 
 38
 00:02:14.340 --> 00:02:17.212
-JavaScript 变量没有类型，但是
+JavaScript变量没有类型，但是
 JavaScript variables don't have types, but
 
 39
 00:02:17.212 --> 00:02:21.125
-如果你愿意的话我们就会有额外的要求
-we're layering on this extra
-requirement if you will, okay?
+如果你愿意，我们会对这个额外的要求进行分层，好吗？
+we're layering on this extra requirement if you will, okay?
 
 40
 00:02:21.125 --> 00:02:23.274
-所以当我们不讨厌那种类型的时候
-So that's when we don't
-annotate the types, but
+所以这就是我们不注释类型的时候，但是
+So that's when we don't annotate the types, but
 
 41
 00:02:23.274 --> 00:02:24.870
-我们当然可以为这些类型烦恼
+当然，我们可以对类型进行注释。
 of course we can annotate the types.
 
 42
 00:02:24.870 --> 00:02:27.665
-我们可以说老师肯定是一个字符串。
+我们可以说老师绝对是一根绳子。
 We can say teacher is definitely a string.
 
 43
 00:02:27.665 --> 00:02:31.889
-我们会得到同样的错误，但在这里我们不能猜测错误。
-We're gonna get basically the same error,
-but here we're not guessing at the error.
+我们将得到基本相同的错误，但这里我们不是在猜测错误。
+We're gonna get basically the same error, but here we're not guessing at the error.
 
 44
 00:02:31.889 --> 00:02:36.460
-我们真的是说我想让这件事只会保留弦子
-We're literally saying I intended for
-this thing to only ever hold strings, and
+我们的字面意思是我想让这玩意儿永远只拿着弦，而且
+We're literally saying I intended for this thing to only ever hold strings, and
 
 45
 00:02:36.460 --> 00:02:39.050
-现在你想给它放点非弦的东西
-now you're trying to put
-something non-string to it.
+现在你试图给它加上一些非字符串的东西。
+now you're trying to put something non-string to it.
 
 46
 00:02:39.050 --> 00:02:42.240
-在这两种情况下， TypeScript 和 Flow 会向我们抛出错误并指出，
-In both cases TypeScript and
-Flow are gonna throw us an error and say,
+在这两种情况下，TypeScript和Flow都会抛出一个错误并说，
+In both cases TypeScript and Flow are gonna throw us an error and say,
 
 47
 00:02:42.240 --> 00:02:45.000
-你会给你分配不该有的东西好吗
-you're assigning something
-you shouldn't have, okay?
+你在分配一些你不该做的事，好吗？
+you're assigning something you shouldn't have, okay?
 
 48
 00:02:45.000 --> 00:02:45.500
-好的
+好极了
 Great

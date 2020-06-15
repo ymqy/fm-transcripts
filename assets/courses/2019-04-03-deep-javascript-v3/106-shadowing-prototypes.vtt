@@ -2,9 +2,8 @@ WEBVTT
 
 1
 00:00:00.250 --> 00:00:03.160
->> 凯尔 - 辛普森: 好的，继续我们的探索
-&gt;&gt; Kyle Simpson: All right, so
-continuing on with our exploration of this
+&gt；&gt；Kyle Simpson：好的，继续我们的探索
+&gt;&gt; Kyle Simpson: All right, so continuing on with our exploration of this
 
 2
 00:00:03.160 --> 00:00:04.919
@@ -13,376 +12,330 @@ prototype pattern.
 
 3
 00:00:04.919 --> 00:00:07.889
-如果我要去的话就像我在第 10 行
+如果我这样做，就像我在第10行所做的那样，
 If I were to, as I'm doing on line 10,
 
 4
 00:00:07.889 --> 00:00:12.199
-请获取该 deepJS 对象并向其添加请求。
-take that deepJS object and
-add an ask to it.
+获取Deep JS对象并向其添加一个Ask。
+take that deepJS object and add an ask to it.
 
 5
 00:00:13.210 --> 00:00:16.649
-在第 10 行中，我将直接向 deepJS 添加一个请求。
-See on line 10,
-I'm adding an ask directly to deepJS.
+请参见第10行，我将直接向Deep JS添加Ask。
+See on line 10, I'm adding an ask directly to deepJS.
 
 6
 00:00:16.649 --> 00:00:21.489
-记住，创建的第 4 行在 workshop.prototype上。
-Remember, the one that's created,
-line 4, is up on workshop.prototype.
+请记住，所创建的第4行代码位于workshop.prototype上。
+Remember, the one that's created, line 4, is up on workshop.prototype.
 
 7
 00:00:21.489 --> 00:00:25.309
-我在 deepJS 对象上制作另一个相同的名称。
-And I'm making another one of
-the same name on the deepJS object.
+我将在Deep JS对象上创建另一个同名的对象。
+And I'm making another one of the same name on the deepJS object.
 
 8
 00:00:25.309 --> 00:00:28.056
-如果你能想象到你脑袋里的那张图
-And if you can visualize to
-that diagram in your head,
+如果你能在脑海中想象出那个图表，
+And if you can visualize to that diagram in your head,
 
 9
 00:00:28.056 --> 00:00:30.890
-那就意味着我们有了阴暗的阴影
-then that means that we
-have shadowing going on.
+那就意味着我们在跟踪。
+then that means that we have shadowing going on.
 
 10
 00:00:30.890 --> 00:00:33.329
-我们有两个不同层次的原型链
-Cuz we have two different
-levels of the prototype chain
+因为我们有两个不同层次的原型链
+Cuz we have two different levels of the prototype chain
 
 11
 00:00:33.329 --> 00:00:35.140
-拥有完全相同的财产
+有着完全相同的属性。
 with the exact same property.
 
 12
 00:00:35.140 --> 00:00:38.609
-我在 11 号线路上说
+当我在第11行说这个。问，
 When I say on line 11 this.ask,
 
 13
 00:00:38.609 --> 00:00:41.659
-该关键字在第 11 行上的意义是什么 ?
-what is the this keyword
-gonna point at on line 11?
+在第11行，this关键字将指向什么？
+what is the this keyword gonna point at on line 11?
 
 14
 00:00:41.659 --> 00:00:46.429
-此时，每当我问你，这个关键词会指向什么 ?
-At this point, whenever I ask you,
-what is the this keyword gonna point at?
+在这一点上，每当我问你，这个关键字将指向什么？
+At this point, whenever I ask you, what is the this keyword gonna point at?
 
 15
 00:00:46.429 --> 00:00:50.479
-您的缺省响应应该是，呼叫站点在哪里 ?
-Your default response should be,
-where's the call-site?
+您的默认响应应该是，调用站点在哪里？
+Your default response should be, where's the call-site?
 
 16
 00:00:50.479 --> 00:00:51.640
-这里的呼叫地点在哪里
+那么这里的呼叫点在哪里？
 So where is the call-site here?
 
 17
 00:00:51.640 --> 00:00:52.917
-那是什么线
+在几号线上？
 What line is it on?
 
 18
 00:00:52.917 --> 00:00:53.600
->> 扬声器 2: 14?
+&gt；&gt；扬声器2：14？
 &gt;&gt; Speaker 2: 14?
 
 19
 00:00:53.600 --> 00:00:56.429
->> Kyle Simpson: 第 14 行，第 14 行的呼叫站点告知
-&gt;&gt; Kyle Simpson: Line 14, and
-what does line 14's call-site tell
+&gt；&gt；Kyle Simpson：第14行，那么第14行的呼叫站点说明了什么
+&gt;&gt; Kyle Simpson: Line 14, and what does line 14's call-site tell
 
 20
 00:00:56.429 --> 00:01:00.619
-关于此关键字将在该方法调用中的内容吗 ?
-us about what the this keyword will
-be inside of that method call?
+告诉我们方法调用中的this关键字是什么？
+us about what the this keyword will be inside of that method call?
 
 21
 00:01:00.619 --> 00:01:02.030
-还记得隐式绑定规则吗 ?
+还记得隐式绑定规则吗？
 Remember the implicit binding rule?
 
 22
 00:01:03.399 --> 00:01:05.359
 这是所有规则中最重要的
-That's the most important
-of all the rules,
+That's the most important of all the rules,
 
 23
 00:01:05.359 --> 00:01:08.439
-它告诉我们这个关键词会指向深度 JS
-it tells us that this keyword
-is gonna point at deepJS.
+它告诉我们这个关键字将指向Deep JS。
+it tells us that this keyword is gonna point at deepJS.
 
 24
 00:01:09.530 --> 00:01:13.390
-因此，在第 11 行中，这是 deepJS。
+所以在第11行，这是Deep JS。
 So on line 11, this is deepJS.
 
 25
 00:01:14.430 --> 00:01:18.578
-因此，我们现在说的是加深联署材料的问题。
+所以我们现在说深度JS。再问一次。
 So we are now saying deepJS.ask, again.
 
 26
 00:01:20.486 --> 00:01:21.659
->> 凯尔 - 辛普森: 那接下来会发生什么呢 ?
+&GT；&GT；凯尔·辛普森：那么会发生什么呢？
 &gt;&gt; Kyle Simpson: So what's gonna happen?
 
 27
 00:01:22.719 --> 00:01:23.829
-无限的递归对吧
+和无限递归，对。
 And infinite recursion, right.
 
 28
 00:01:23.829 --> 00:01:26.010
-我们会不停地说然后我们就跑出来了
-We're gonna keep saying, and
-then we're gonna run out of stuff.
+我们会继续说，然后我们会用完东西。
+We're gonna keep saying, and then we're gonna run out of stuff.
 
 29
 00:01:27.659 --> 00:01:32.670
-所以这里的这个点并不是一个超级的地方。
-So the this dot here doesn't
-work in place of a super.
+所以这里的这个点不能代替超级。
+So the this dot here doesn't work in place of a super.
 
 30
 00:01:32.670 --> 00:01:35.930
-这里不是多态的多态你跟我来
-It's not a relative polymorphic
-reference here, you follow me?
+这不是一个相对多态的引用，你明白我的意思吗？
+It's not a relative polymorphic reference here, you follow me?
 
 31
 00:01:37.219 --> 00:01:42.289
-这不起作用，如果我们有这样的一个，我们如何去一个级别的原型链
-It doesn't work, how do we go one level
-up the prototype chain if we have a this
+它不起作用，如果我们有这个，我们如何在原型链的上一级
+It doesn't work, how do we go one level up the prototype chain if we have a this
 
 32
 00:01:42.289 --> 00:01:47.287
-关键字， reference，如何从 deepJS 到 workshop.prototype?
-keyword, reference, how do we go from
-deepJS up to workshop.prototype?
+关键词，引用，我们如何从Deep JS上升到Workshop.Prototype？
+keyword, reference, how do we go from deepJS up to workshop.prototype?
 
 33
 00:01:49.026 --> 00:01:53.840
->> 凯尔 - 辛普森: 你可以说， .
-&gt;&gt; Kyle Simpson: Well you could say,
-.dondoproto.
+&gt；&gt；Kyle Simpson：你可以说，.dondoproto。
+&gt;&gt; Kyle Simpson: Well you could say, .dondoproto.
 
 34
 00:01:53.840 --> 00:01:58.750
-唐多普托是这个属性的原型链中有一层
-Dondoproto is the property, that goes
-up one level of the prototype chain,
+Dondoproto是一种属性，它上升到原型链的一级，
+Dondoproto is the property, that goes up one level of the prototype chain,
 
 35
 00:01:58.750 --> 00:02:00.430
-到车间里去
+去车间。
 up to workshop.
 
 36
 00:02:00.430 --> 00:02:06.930
-但如果我说了这个我就会说
-But if I said this .dondoproto.ask,
-and then I called it.
+但是如果我说了这个.dondoto.ask，然后我就调用了它。
+But if I said this .dondoproto.ask, and then I called it.
 
 37
 00:02:06.930 --> 00:02:08.853
-这个关键词是什么 ?
+这个关键字是什么？
 What would it's this keyword be?
 
 38
 00:02:12.620 --> 00:02:16.975
->> Kyle Simpson: 如果调用站点为 this.dunderproto.ask ，并且
-&gt;&gt; Kyle Simpson: If the call site
-said this.dunderproto.ask, and
+&gt；&gt；Kyle Simpson：如果调用站点说this.dunderprotocol.ask，然后
+&gt;&gt; Kyle Simpson: If the call site said this.dunderproto.ask, and
 
 39
 00:02:16.975 --> 00:02:22.524
-它在那里调用了一个方法，这个关键词点是什么呢 ?
-it invoked a method there,
-what would that this keyword point at?
+它在那里调用了一个方法，这个关键字指向什么？
+it invoked a method there, what would that this keyword point at?
 
 40
 00:02:22.524 --> 00:02:24.167
->> 演讲者 3: 讲习班。
+&gt；&gt；扬声器3：研讨会。
 &gt;&gt; Speaker 3: Workshop.
 
 41
 00:02:24.167 --> 00:02:27.680
->> Kyle Simpson: Workshop.prototype，这不是我们想要的。
-&gt;&gt; Kyle Simpson: Workshop.prototype,
-which is not what we want.
+&gt；&gt；Kyle Simpson：Workshop.prototype，这不是我们想要的。
+&gt;&gt; Kyle Simpson: Workshop.prototype, which is not what we want.
 
 42
 00:02:27.680 --> 00:02:31.409
-因此，在第 11 行，我们必须做这一令人憎化的行为。
-So instead on line 11,
-we have to do this abomination.
+所以取而代之的是在第11行，我们必须做这个令人厌恶的事情。
+So instead on line 11, we have to do this abomination.
 
 43
 00:02:31.409 --> 00:02:35.810
-此.dunderproto.ask.call此列。
+这个.dunderpro.ask.callthis。
 This .dunderproto.ask.callthis.
 
 44
 00:02:35.810 --> 00:02:38.770
-我们发现了一个层次结构的原型链
-We find the method one level
-up the prototype chain but
+我们发现该方法在原型链上一级，但是
+We find the method one level up the prototype chain but
 
 45
 00:02:38.770 --> 00:02:41.473
-我们必须在这方面援引它
+我们必须在这些上下文中调用它。
 we have to invoke it in our these context.
 
 46
 00:02:43.409 --> 00:02:44.120
-太可怕了吧
+很可怕，对吧？
 It's horrible, right?
 
 47
 00:02:46.139 --> 00:02:49.579
 我将此称为显式伪多态性。
-I refer to this as explicit
-pseudo polymorphism.
+I refer to this as explicit pseudo polymorphism.
 
 48
 00:02:50.689 --> 00:02:54.659
-这太可怕了，这不是真正的相对多态性。
-This is horrible,
-this is not real relative polymorphism.
+这太可怕了，这不是真正的相对多态。
+This is horrible, this is not real relative polymorphism.
 
 49
 00:02:54.659 --> 00:02:57.569
-这不是超级关键词的立场
+这不是超级关键字的替身。
 It's not a stand in for the super keyword.
 
 50
 00:02:57.569 --> 00:03:00.590
-顺便说下如果我们再贴另一个物体
-And by the way, if we stuck
-another object on the end of this,
+顺便说一句，如果我们把另一个物体放在后面，
+And by the way, if we stuck another object on the end of this,
 
 51
 00:03:00.590 --> 00:03:03.990
-比如我们把原型链扩大到一个层次
-like if we extended our
-prototype chain by one level.
+就像我们把原型链扩展了一层。
+like if we extended our prototype chain by one level.
 
 52
 00:03:03.990 --> 00:03:06.819
-现在我们不需要一个 .dunderproto
-Now we don't need one
-.dunderproto in there.
+现在我们不需要一个.dunderproto在那里。
+Now we don't need one .dunderproto in there.
 
 53
 00:03:06.819 --> 00:03:09.240
-我们需要两个 deto protos
+我们需要两个DunderProtos
 We need two dunder protos.
 
 54
 00:03:09.240 --> 00:03:15.780
-该函数必须指出，.dunderproto.dunderproto.ask.call到此。
-That functions got to say this,
-.dunderproto.dunderproto.ask.callthis.
+该函数必须说明这一点，.dunderpro.ask.callthis。
+That functions got to say this, .dunderproto.dunderproto.ask.callthis.
 
 55
 00:03:15.780 --> 00:03:18.389
-如果加上第三个链接，我们需要三个 dettprotos。
-And if we add a third link now
-we need three dunder protos.
+如果我们现在添加第三个链接，我们需要三个Dunder Protos。
+And if we add a third link now we need three dunder protos.
 
 56
 00:03:20.060 --> 00:03:26.139
-换句话说，当您在不使用类系统的情况下尝试影子时。
-So in other words, when you try to
-shadow without using the class system.
+所以换句话说，当你试图在不使用类系统的情况下进行阴影时。
+So in other words, when you try to shadow without using the class system.
 
 57
 00:03:26.139 --> 00:03:29.181
-当你在原型机中尝试过影子时
-When you were in prototypes and
-you tried to shadow,
+当你在原型机里试着影子的时候，
+When you were in prototypes and you tried to shadow,
 
 58
 00:03:29.181 --> 00:03:32.718
-你最终造成了完全的破坏
-you ended up creating essentially
-this complete breakage.
+你最终造成了这种彻底的破坏。
+you ended up creating essentially this complete breakage.
 
 59
 00:03:32.718 --> 00:03:34.960
-没有办法做相对多态的多态性。
-There's no way to do
-the relative polymorphism.
+没有办法做相对多态。
+There's no way to do the relative polymorphism.
 
 60
 00:03:36.810 --> 00:03:38.739
-为什么我们首先要为地球蒙上阴影 ?
-Why on earth would we
-shadow in the first place?
+我们究竟为什么要把影子放在第一位？
+Why on earth would we shadow in the first place?
 
 61
 00:03:40.659 --> 00:03:44.550
-因为影像是你怎么做的，对吧 ?
-Was because shadowing is how
-you do polymorphism, right?
+是因为阴影就是你做多态的方式，对吧？
+Was because shadowing is how you do polymorphism, right?
 
 62
 00:03:44.550 --> 00:03:48.259
-在阶级设计理论中，有一个子类的整个点是这样
-In class design theory, the whole
-point of having a child class is so
+在班级设计理论中，拥有子班的整个意义是这样的
+In class design theory, the whole point of having a child class is so
 
 63
 00:03:48.259 --> 00:03:50.120
-你可以继承父母的东西
-that you can inherit
-something from the parent.
+你可以从父母那里继承一些东西。
+that you can inherit something from the parent.
 
 64
 00:03:50.120 --> 00:03:56.090
-覆盖它，然后调用 super 以访问它的父版本，以进行扩展。
-Override it and then call super to access
-the parent version of it, to extend it.
+覆盖它，然后调用super来访问它的父版本，扩展它。
+Override it and then call super to access the parent version of it, to extend it.
 
 65
 00:03:56.090 --> 00:03:57.543
-这就是我们在这里想做的事情。
+这就是我们想要做的。
 So that's what we're trying to do here.
 
 66
 00:03:57.543 --> 00:04:00.798
-我们正在尝试覆盖和扩展 ASK 方法
-We're trying to override and
-extend the ASK method but
+我们试图重写和扩展ask方法，但是
+We're trying to override and extend the ASK method but
 
 67
 00:04:00.798 --> 00:04:05.393
-它不起作用，因为我们在一个系统的范围之外，
-it doesn't work because we are outside
-of the confines of a system that is very
+它不起作用，因为我们在一个非常
+it doesn't work because we are outside of the confines of a system that is very
 
 68
 00:04:05.393 --> 00:04:09.090
-通过鸭带精心设计的超级关键词
-carefully constructed through duck tape,
-a super keyword.
+通过鸭子磁带精心构建，一个超级关键字。
+carefully constructed through duck tape, a super keyword.

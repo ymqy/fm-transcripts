@@ -2,151 +2,132 @@ WEBVTT
 
 1
 00:00:00.040 --> 00:00:02.940
->> 凯尔 - 辛普森: 当我们将某个值分配给变量时，或者
-&gt;&gt; Kyle Simpson: When we assign
-some value to a variable, or
+&gt；&gt；Kyle Simpson：当我们给变量赋值时，或者
+&gt;&gt; Kyle Simpson: When we assign some value to a variable, or
 
 2
 00:00:02.940 --> 00:00:06.540
-如果第 1 行已分配任何内容，那么该排序为缺省值，
-in the case of line 1 having assigned
-anything, that sort of defaults,
+在第1行已经分配了任何内容的情况下，这种默认值，
+in the case of line 1 having assigned anything, that sort of defaults,
 
 3
 00:00:06.540 --> 00:00:12.449
-然后我们用一个像 typeof 一样的运算符来看待这个值
-then we use an operator like typeof as our
-first way of looking at that value and
+然后我们使用typeof这样的运算符作为查看该值的第一种方法，并且
+then we use an operator like typeof as our first way of looking at that value and
 
 4
 00:00:12.449 --> 00:00:16.809
-确定它的身份，种类，种类。
-determining something about its identity,
-its kind, its type.
+决定它的身份，它的种类，它的类型。
+determining something about its identity, its kind, its type.
 
 5
 00:00:16.809 --> 00:00:19.609
-我们并不是问变量 v 的类型是什么
-And we're not asking what's
-the typeof the variable v,
+我们不是问变量v的类型，
+And we're not asking what's the typeof the variable v,
 
 6
 00:00:19.609 --> 00:00:22.829
-我们问的是什么是当前在 v中的价值的类型。
-we're asking what is the typeof
-the value that is currently in v.
+我们问的是目前V中的值的类型是什么。
+we're asking what is the typeof the value that is currently in v.
 
 7
 00:00:24.059 --> 00:00:25.051
-这就是第 2 行的内容
+这就是第2行所说的。
 That's what line 2 says.
 
 8
 00:00:25.051 --> 00:00:28.167
-当前在 v中的值的类型是什么 ?
-What is the typeof the value
-that's currently in v?
+当前v中的值的类型是什么？
+What is the typeof the value that's currently in v?
 
 9
 00:00:28.167 --> 00:00:31.620
-您会注意到，在第 2 行中，它将返回未定义的字符串。
-And you'll notice that on line 2
-it returns the string undefined.
+您会注意到，在第2行，它返回字符串undefined。
+And you'll notice that on line 2 it returns the string undefined.
 
 10
 00:00:33.409 --> 00:00:37.369
-这很有趣，因为本质上我们可以想象
-Now that's interesting because
-essentially we can think of undefined
+现在这很有趣，因为本质上我们可以想到未定义的
+Now that's interesting because essentially we can think of undefined
 
 11
 00:00:37.369 --> 00:00:39.469
-基本上是缺省值。
+基本上作为默认值。
 as basically a default value.
 
 12
 00:00:39.469 --> 00:00:43.774
-当空间的真空已经消除一切的时候，它是一个存在的价值。
-It's a value that exists when the vacuum
-of space has removed everything else.
+当空间的真空消除了所有其他东西时，它就存在了。
+It's a value that exists when the vacuum of space has removed everything else.
 
 13
 00:00:43.774 --> 00:00:45.109
-当没有其他价值的时候
+当没有其他值时，
 When there is no other value,
 
 14
 00:00:45.109 --> 00:00:47.579
-称为未定义值的值。
-the value that you have is
-called the undefined value.
+您拥有的值称为未定义的值。
+the value that you have is called the undefined value.
 
 15
 00:00:47.579 --> 00:00:50.375
-记住这里有一个未定义的类型
-And remember,
-there's an undefined type with one and
+记住，有一个未定义的类型
+And remember, there's an undefined type with one and
 
 16
 00:00:50.375 --> 00:00:53.375
-其中只有一个值未定义。
+其中只有一个值称为undefined。
 only one value in it called undefined.
 
 17
 00:00:53.375 --> 00:00:56.469
-因此， typeof is telling is is undefined.
-So typeof is telling us v
-currently is undefined.
+所以typeof告诉我们v当前是未定义的。
+So typeof is telling us v currently is undefined.
 
 18
 00:00:56.469 --> 00:00:58.219
-它已初始化并且未定义。
+它被初始化了，并且它是未定义的。
 It got initialized and it's undefined.
 
 19
 00:00:59.399 --> 00:01:03.499
-顺便说下，这并不意味着它还没有价值。
-And that, by the way,
-does not mean it doesn't have a value yet.
+顺便说一句，这并不意味着它还没有价值。
+And that, by the way, does not mean it doesn't have a value yet.
 
 20
 00:01:03.499 --> 00:01:07.790
-很多人认为，未定义的手段还没有价值。
-A lot of people think,
-undefined means doesn't have a value yet.
+很多人认为，未定义的意思还没有价值。
+A lot of people think, undefined means doesn't have a value yet.
 
 21
 00:01:07.790 --> 00:01:12.168
-最适合的思考方式是，当前没有值。
-The most appropriate way to think about
-it is, does not currently have a value.
+最合适的思考方式是，目前没有价值。
+The most appropriate way to think about it is, does not currently have a value.
 
 22
 00:01:12.168 --> 00:01:16.097
-因为这完全是可行的，而且往往会发生，
-Because it's entirely plausible and
-possible, and often happens,
+因为这是完全合理和可能的，而且经常发生，
+Because it's entirely plausible and possible, and often happens,
 
 23
 00:01:16.097 --> 00:01:19.426
-您的变量或属性具有一些值，并且
-that you have a variable or
-a property that has some value and
+您有一个变量或属性，该变量或属性具有一些值，并且
+that you have a variable or a property that has some value and
 
 24
 00:01:19.426 --> 00:01:22.769
-然后再回到没有价值的状态。
-then it goes back to the state
-of not having a value anymore.
+然后它回到没有值的状态。
+then it goes back to the state of not having a value anymore.
 
 25
 00:01:22.769 --> 00:01:26.629
-您将其设置为未定义，未定义它。
+您将其设置为未定义，则取消定义它。
 You set it to undefined, you undefine it.
 
 26
 00:01:26.629 --> 00:01:27.819
-这不会把它移除的
+这并不能消除它。
 That doesn't remove it.
 
 27
@@ -156,26 +137,23 @@ It doesn't delete it.
 
 28
 00:01:28.799 --> 00:01:30.710
-它并不神奇地让它消失。
+它不会神奇地让它消失。
 It doesn't magically make it go away.
 
 29
 00:01:30.710 --> 00:01:33.750
-它只是把它带回那个状态，那里的值是没有定义的。
-It just takes it back to that state where
-the value that it's holding is undefined.
+它只是将它带回它所持有的值未定义的状态。
+It just takes it back to that state where the value that it's holding is undefined.
 
 30
 00:01:35.400 --> 00:01:39.469
-现在，当我分配字符串并表示 typeof v时，我将获得报价字符串。
-Now, when I assign the string and
-say typeof v, I get quote string.
+现在，当我赋值字符串并说typeof v时，我得到了引号字符串。
+Now, when I assign the string and say typeof v, I get quote string.
 
 31
 00:01:39.469 --> 00:01:42.549
-当我分配数字时，将获取报价编号。
-When I assign a number,
-I get quote number.
+当我分配一个号码时，我得到的是报价号码。
+When I assign a number, I get quote number.
 
 32
 00:01:42.549 --> 00:01:43.240
@@ -184,106 +162,93 @@ You'll notice that
 
 33
 00:01:43.240 --> 00:01:46.049
-来自 typeof 运算符的所有这些返回值都是字符串。
-all of these return values from
-the typeof operator are strings.
+typeof操作符的所有这些返回值都是字符串。
+all of these return values from the typeof operator are strings.
 
 34
 00:01:47.219 --> 00:01:51.450
-这很关键我们会知道为什么后来我们被胁迫
-That's critical and we'll see why
-later when we get into coercion, but
+这是至关重要的，我们稍后会看到为什么当我们进入强制，但是
+That's critical and we'll see why later when we get into coercion, but
 
 35
 00:01:51.450 --> 00:01:56.920
-你知道这对你来说是很重要的
-it's critical for you to understand
-this is an operator that guarantees
+关键是你要明白这是一个运算符，可以保证
+it's critical for you to understand this is an operator that guarantees
 
 36
 00:01:56.920 --> 00:01:59.150
-它将始终返回一个字符串。
+它总是返回一个字符串。
 that it will always return a string.
 
 37
 00:01:59.150 --> 00:02:01.935
-它不仅会返回一个字符串
-And not only will it
-always return a string,
+它不仅总是返回字符串，
+And not only will it always return a string,
 
 38
 00:02:01.935 --> 00:02:04.370
-它本质上是一个简短的 eNom 列表。
+它本质上是一个简短的eNom列表。
 it's essentially a short eNom list.
 
 39
 00:02:04.370 --> 00:02:07.789
-只有一小部分的字符串才能返回。
-There's only a very small subset of
-strings that it will ever return.
+只有一个非常小的字符串子集，它将永远返回。
+There's only a very small subset of strings that it will ever return.
 
 40
 00:02:09.659 --> 00:02:11.719
-没有一个是空字符串。
+而且它们都不是空字符串。
 And none of them are the empty string.
 
 41
 00:02:11.719 --> 00:02:15.719
-所有这些值都不是诸如 null 或未定义的字符串。
-None of them are these values that
-aren't strings like null or undefined.
+这些值都不是字符串，如null或undefined。
+None of them are these values that aren't strings like null or undefined.
 
 42
 00:02:15.719 --> 00:02:17.780
-我在博客上都看到了这个错误。
-And I see this mistake
-all the time in blogs.
+我在博客中经常看到这个错误。
+And I see this mistake all the time in blogs.
 
 43
 00:02:17.780 --> 00:02:20.348
-人们会说平等的，平等的，平等的，
-People will say typeof equal,
-equal undefined,
+人们会说平等的类型，平等的，没有定义的，
+People will say typeof equal, equal undefined,
 
 44
 00:02:20.348 --> 00:02:23.532
-没加引号完全没有意义
-without any quotes and
-that makes no sense whatsoever because
+没有任何引号，这没有任何意义，因为
+without any quotes and that makes no sense whatsoever because
 
 45
 00:02:23.532 --> 00:02:27.039
-字面上的打字机不可能把它退回去
-the typeof operator literally
-cannot return that.
+typeof运算符实际上不能返回该值。
+the typeof operator literally cannot return that.
 
 46
 00:02:27.039 --> 00:02:28.650
-猜猜我是怎么知道的
+猜猜我是怎么知道的。
 Guess how I know.
 
 47
 00:02:28.650 --> 00:02:29.746
-我看了这个规格
+我看了说明书。
 I read the spec.
 
 48
 00:02:29.746 --> 00:02:33.490
 它不返回未定义的值，它总是返回字符串。
-It does not return an undefined value,
-it always returns a string.
+It does not return an undefined value, it always returns a string.
 
 49
 00:02:35.020 --> 00:02:39.300
-如果这个字符串是一个可预测的列表，那么我们就减少了
-And if the string is a predictable
-known list, then we've reduced
+如果字符串是一个可预测的已知列表，那么我们已经减少了
+And if the string is a predictable known list, then we've reduced
 
 50
 00:02:39.300 --> 00:02:43.509
-可能从这个地方回来的混乱的整个表面
-the whole surface area of confusion of
-what could possibly come back from this.
+整个表面的混乱区域可能会从这里回来。
+the whole surface area of confusion of what could possibly come back from this.
 
 51
 00:02:43.509 --> 00:02:45.453
@@ -292,286 +257,245 @@ We can predict its outcome much better.
 
 52
 00:02:46.978 --> 00:02:48.396
->> 凯尔 - 辛普森: 这很重要
-&gt;&gt; Kyle Simpson: That'll
-be important later on.
+&gt；&gt；Kyle Simpson：这在以后会很重要。
+&gt;&gt; Kyle Simpson: That'll be important later on.
 
 53
 00:02:48.396 --> 00:02:52.241
-所以 typeof is 返回表示， hey ，
-So typeof is returning
-strings that represent, hey,
+所以typeof返回的字符串表示，嘿，
+So typeof is returning strings that represent, hey,
 
 54
 00:02:52.241 --> 00:02:56.502
-关于你能期望能做什么的线索
-here's some clue as to what you
-can expect to be able to do with
+这里有一些关于你可以期望能够做什么的线索
+here's some clue as to what you can expect to be able to do with
 
 55
 00:02:56.502 --> 00:03:01.473
-此特定类型的特定类型的值。
-values of this particular
-kind of this particular type.
+这种特殊类型的值。
+values of this particular kind of this particular type.
 
 56
 00:03:01.473 --> 00:03:04.919
->> 凯尔 - 辛普森: 从经济角度来说，这就是我们在代码中可以依赖的东西。
-&gt;&gt; Kyle Simpson: Ergonomically, that's
-what we can then rely upon in our code.
+&gt；&gt；Kyle Simpson：从人体工程学的角度来看，这就是我们在代码中可以依赖的东西。
+&gt;&gt; Kyle Simpson: Ergonomically, that's what we can then rely upon in our code.
 
 57
 00:03:04.919 --> 00:03:07.372
-我们有一些东西可以作为一个数字。
-We have something that is
-going to behave as a number.
+我们有一些东西将表现为一个数字。
+We have something that is going to behave as a number.
 
 58
 00:03:07.372 --> 00:03:10.180
-我们有一些东西要做一个字符串。
-We have something that is
-going to behave as a string.
+我们有一些东西将表现为字符串。
+We have something that is going to behave as a string.
 
 59
 00:03:10.180 --> 00:03:13.250
-你注意到我们没有像我们一样的价值观
-You notice we don't have all the values
-like we don't have a typeof within
+你注意到我们并没有所有的值，就像我们没有一个typeof在里面一样
+You notice we don't have all the values like we don't have a typeof within
 
 60
 00:03:13.250 --> 00:03:16.430
-一个数组来给我们这个词
+一个数组给我们单词数组。
 an array to give us the word array.
 
 61
 00:03:16.430 --> 00:03:18.668
-所以它只会把我们的对象还给我们
-So it's just gonna give us
-back object because remember,
+所以它只会把对象还给我们，因为记住，
+So it's just gonna give us back object because remember,
 
 62
 00:03:18.668 --> 00:03:19.909
-数组是对象的子类型。
+阵列是对象的子类型。
 arrays are subtypes of object.
 
 63
 00:03:21.150 --> 00:03:24.670
-所以我们需要进一步区分我们是否需要进入这些亚种
-So we're gonna need further distinguishing
-if we need to get into those subtypes,
+所以我们需要进一步区分是否需要进入这些亚型，
+So we're gonna need further distinguishing if we need to get into those subtypes,
 
 64
 00:03:24.670 --> 00:03:29.439
-但在顶层我们可以根据这一切来区分
-but at the top level we can distinguish
-roughly based on all of these.
+但在最高级别，我们可以根据所有这些大致区分。
+but at the top level we can distinguish roughly based on all of these.
 
 65
 00:03:29.439 --> 00:03:34.400
-现在，我提到这个清单上的空值是特别的。
-Now, I mentioned the null
-being on that list as special.
+现在，我提到了该列表上的NULL是特殊的。
+Now, I mentioned the null being on that list as special.
 
 66
 00:03:34.400 --> 00:03:38.099
-你会注意到当我们说打字机等于空时我很抱歉
-You'll notice that when we say
-typeof v equals null, I'm sorry,
+你会注意到，当我们说typeof v等于null时，我很抱歉，
+You'll notice that when we say typeof v equals null, I'm sorry,
 
 67
 00:03:38.099 --> 00:03:41.680
-当我们说 v 等于 null 和 typeof v时，我们会返回报价对象。
-when we say v equals null and
-typeof v, we get back quote object.
+当我们说v等于null和typeof v时，我们得到了引用对象。
+when we say v equals null and typeof v, we get back quote object.
 
 68
 00:03:43.990 --> 00:03:48.280
-现在，这是一个历史事实。
-Now, this is a historical
-fact of JavaScript.
+现在，这是JavaScript的历史事实。
+Now, this is a historical fact of JavaScript.
 
 69
 00:03:48.280 --> 00:03:52.995
-事实上在目前存在的这个规范中，
-As a matter of fact, in the current
-spec that exists at this moment,
+事实上，在目前存在的规范中，
+As a matter of fact, in the current spec that exists at this moment,
 
 70
 00:03:52.995 --> 00:03:57.631
-它还是有一个来自 ES1 的声明本质上是
-it still has a statement that was
-there from ES1 which essentially
+它仍然有一个来自ES1的语句，本质上
+it still has a statement that was there from ES1 which essentially
 
 71
 00:03:57.631 --> 00:04:02.431
-向开发者表示，如果您想要取消设置常规值，
-indicated to developers that if you
-wanted to unset a regular value,
+向开发人员表明，如果要取消设置常规值，
+indicated to developers that if you wanted to unset a regular value,
 
 72
 00:04:02.431 --> 00:04:05.372
-如数字，您将使用未定义的值。
+就像一个数字一样，你会使用undefined。
 like a number, you would use undefined.
 
 73
 00:04:05.372 --> 00:04:09.379
-但是，如果您想要取消设置对象引用，那么将使用空值。
-But if you wanted to unset an object
-reference, you would use null.
+但如果要取消设置对象引用，则可以使用NULL。
+But if you wanted to unset an object reference, you would use null.
 
 74
 00:04:09.379 --> 00:04:14.039
-我认为这也是为什么 typeof null 返回对象的历史原因的一部分。
-And I think that's part of the historical
-reason for why typeof null returns object.
+我认为这是typeof null返回object的历史原因的一部分。
+And I think that's part of the historical reason for why typeof null returns object.
 
 75
 00:04:15.389 --> 00:04:18.096
-但是这件事的真实真相我在推特上说了这么多年
-But the real truth of the matter,
-I was tweeting about this years back,
+但事情的真相是，我几年前在推特上说过，
+But the real truth of the matter, I was tweeting about this years back,
 
 76
 00:04:18.096 --> 00:04:21.329
-真正的真相是它只是一只虫子
-and the real truth of the matter
-is that it's just a bug.
+而事实的真相是，这只是一个虫子。
+and the real truth of the matter is that it's just a bug.
 
 77
 00:04:21.329 --> 00:04:25.410
-应该已返回空值以告诉我们此值为
-It ought to have returned quote null
-to tell us that this a value of
+它应该返回引用NULL来告诉我们这是一个值
+It ought to have returned quote null to tell us that this a value of
 
 78
 00:04:25.410 --> 00:04:26.839
-类型为 NULL。
+类型为NULL。
 the type null.
 
 79
 00:04:26.839 --> 00:04:30.019
-遗憾的是，它返回引号对象，因此您必须更小心一点。
-Unfortunately, it returns quote object, so
-you have to be a little bit more careful.
+不幸的是，它返回Quote对象，所以您必须更加小心。
+Unfortunately, it returns quote object, so you have to be a little bit more careful.
 
 80
 00:04:30.019 --> 00:04:32.980
-你得确保当你做检查的时候
-You have to make sure,
-when you're doing a typeof check and
+你必须确保，当你做类型检查和
+You have to make sure, when you're doing a typeof check and
 
 81
 00:04:32.980 --> 00:04:36.500
-它会返回对象，确保它不是意外的是空的，
-it returns object, make sure that
-it's not accidentally the null,
+它返回Object，确保它不是意外的NULL，
+it returns object, make sure that it's not accidentally the null,
 
 82
 00:04:36.500 --> 00:04:40.350
-因为这样你就不会得到目标但是值是空的
-because then you're not gonna
-get an object but a null value.
+因为这样你就不会得到一个对象，而是一个空值。
+because then you're not gonna get an object but a null value.
 
 83
 00:04:40.350 --> 00:04:41.540
-然后我们看到了这里的功能。
+然后我们在这里看到函数。
 And then we see function here.
 
 84
 00:04:41.540 --> 00:04:46.680
-记住，功能不是正式类型
+请记住，函数不是正式类型
 Remember, function is not an official type
 
 85
 00:04:46.680 --> 00:04:49.149
-最重要的是在最正式的意义上
-at the top level,
-in the most official sense.
+在最高级别，在最官方的意义上。
+at the top level, in the most official sense.
 
 86
 00:04:49.149 --> 00:04:53.358
-但是，它在此处有自己的返回值，操作员的 typeof 运算符作为函数返回。
-But it has its own return value here,
-the typeof operator returns as function.
+但在这里它有自己的返回值，typeof操作符作为函数返回。
+But it has its own return value here, the typeof operator returns as function.
 
 87
 00:04:53.358 --> 00:04:59.240
-因此，它返回到我们的功能是有用的，但是数组不起作用。
-So it's useful that it returns to us
-function, but arrays, it doesn't.
+所以它返回给我们函数是有用的，但是数组，它不是。
+So it's useful that it returns to us function, but arrays, it doesn't.
 
 88
 00:04:59.240 --> 00:05:01.036
-数组仅返回对象。
+数组只返回对象。
 Arrays just returns object.
 
 89
 00:05:01.036 --> 00:05:04.579
-很多这些都是关于 JavaScript的历史问题。
-A lot of these are just, again,
-historical things about JavaScript.
+其中很多只是，再次，关于JavaScript的历史事件。
+A lot of these are just, again, historical things about JavaScript.
 
 90
 00:05:04.579 --> 00:05:07.290
-我们无法修复它们，因为如果我们修复它们，我们就会破坏一些代码。
-We can't fix them because if we fix them,
-we'd break a bunch of code.
+我们不能修复它们，因为如果我们修复它们，我们就会破坏一堆代码。
+We can't fix them because if we fix them, we'd break a bunch of code.
 
 91
 00:05:08.819 --> 00:05:10.839
-所以不要抱怨和抱怨
-So rather than whine or
-complain about them,
+所以与其抱怨或抱怨，
+So rather than whine or complain about them,
 
 92
 00:05:10.839 --> 00:05:15.160
-我们应该好好学习他们的工作好吗
-we should just learn them and
-work around them, okay?
+我们应该学习它们，然后绕过它们，好吗？
+we should just learn them and work around them, okay?
 
 93
 00:05:15.160 --> 00:05:17.360
-令人遗憾的是你不能只说打字机
-It's regrettable that you
-can't just say typeof, but
+很遗憾你不能只说typeof，但是
+It's regrettable that you can't just say typeof, but
 
 94
 00:05:17.360 --> 00:05:21.740
-在语言方面还有其他的帮助，尤其是在排列方面，
-there are other helpers in language,
-in particular, with respect to array,
+语言中还有其他助手，特别是关于数组，
+there are other helpers in language, in particular, with respect to array,
 
 95
 00:05:21.740 --> 00:05:25.540
-有 Array.isArray ，它会告诉你是否有一个阵列。
-there's Array.isArray, and it'll tell you
-for sure or not whether you have an array.
+有一个Array.isArray，它会肯定地告诉您是否有一个数组。
+there's Array.isArray, and it'll tell you for sure or not whether you have an array.
 
 96
 00:05:27.939 --> 00:05:32.159
 这就是我们如何区分这些原始值和它们的类型。
-So that's how we distinguish these
-primitive values with their types.
+So that's how we distinguish these primitive values with their types.
 
 97
 00:05:32.159 --> 00:05:36.319
-我们可以使用诸如 typeof 之类的实用程序，当我们需要更多细节时，
-We can use utilities like typeof and
-when we need a little bit more specifics,
+我们可以使用像typeof这样的实用程序，当我们需要更多细节时，
+We can use utilities like typeof and when we need a little bit more specifics,
 
 98
 00:05:36.319 --> 00:05:40.149
-我们可以使用诸如 Array.isArray之类的实用程序。
-a little bit more nuance,
-we can use utilities like Array.isArray.
+更多的细微差别，我们可以使用像Array.isArray这样的实用程序。
+a little bit more nuance, we can use utilities like Array.isArray.
 
 99
 00:05:40.149 --> 00:05:43.529
-他们会告诉我们什么是有价值的
-They'll tell us something about the nature
-of the value which tells us what
+他们会告诉我们一些关于价值本质的东西，告诉我们什么
+They'll tell us something about the nature of the value which tells us what
 
 100
 00:05:43.529 --> 00:05:44.100
-我们可以预料到的
+我们可以期待。
 we can expect.

@@ -2,534 +2,470 @@ WEBVTT
 
 1
 00:00:00.030 --> 00:00:03.450
->> 凯尔 - 辛普森: 让我们谈谈下一个抽象的操作。
-&gt;&gt; Kyle Simpson: So let's talk then
-about the next abstract operation.
+&gt；&gt；Kyle Simpson：那么让我们谈谈下一个抽象操作。
+&gt;&gt; Kyle Simpson: So let's talk then about the next abstract operation.
 
 2
 00:00:03.450 --> 00:00:05.772
-这叫 toString
+它叫做toString。
 It's called toString.
 
 3
 00:00:05.772 --> 00:00:10.513
-toString 抽象操作会执行它的声音。
-The toString abstract operation
-does what it sounds like.
+toString抽象操作就像它听起来一样。
+The toString abstract operation does what it sounds like.
 
 4
 00:00:10.513 --> 00:00:13.050
-这在标签上是描述性的
+标签上很有描述性。
 It's very descriptive on the label.
 
 5
 00:00:13.050 --> 00:00:15.199
-它具有任何价值和价值
+它可以接受任何值
 It takes any value and
 
 6
 00:00:15.199 --> 00:00:20.260
-以字符串形式给出该值的表示。
-gives us the representation
-of that value in string form.
+以字符串形式为我们提供该值的表示。
+gives us the representation of that value in string form.
 
 7
 00:00:20.260 --> 00:00:22.980
-几乎所有你能想象的价值都至少有一些
-And almost every value that you
-can imagine has at least some
+几乎每一个你能想象的价值都至少有一些
+And almost every value that you can imagine has at least some
 
 8
 00:00:22.980 --> 00:00:25.989
-字符串形式的表示形式。
+一种字符串形式的表示。
 kind of representation in string form.
 
 9
 00:00:25.989 --> 00:00:31.314
-顺便说下括号里是实际的 spec 节
-By the way in the parentheses I'm
-noting the actual spec sections as they
+顺便说一句，在括号中我注意到了实际的spec部分，因为它们
+By the way in the parentheses I'm noting the actual spec sections as they
 
 10
 00:00:31.314 --> 00:00:36.298
-目前的版本目前在 ES2018的版本中。
-exist currently in the version
-at this moment which is ES2018.
+目前存在于ES2018版本中。
+exist currently in the version at this moment which is ES2018.
 
 11
 00:00:36.298 --> 00:00:41.000
-他们投票给了 ES2019 规范，今年晚些时候会出来。
-They voted on the ES2019 spec and it'll
-come out a little bit later this year.
+他们对ES2019规范进行了投票，它将在今年晚些时候发布。
+They voted on the ES2019 spec and it'll come out a little bit later this year.
 
 12
 00:00:41.000 --> 00:00:45.039
-希望这些节号中的大部分都不会改变
-Hopefully most of these section
-numbers won't change but those are for
+希望这些区号中的大多数不会改变，但那些是
+Hopefully most of these section numbers won't change but those are for
 
 13
 00:00:45.039 --> 00:00:46.420
-ES2018 规范。
+ES2018规格。
 the ES2018 specs.
 
 14
 00:00:46.420 --> 00:00:48.070
-好的， toString opperation。
+好的，toString操作。
 Okay so the toString opperation.
 
 15
 00:00:49.179 --> 00:00:53.399
-让我给你们展示一些细节让我给你们展示一些东西
-Boiling down a bunch of details let me
-just show you some examples of things and
+让我来给你们展示一些事情的例子，
+Boiling down a bunch of details let me just show you some examples of things and
 
 16
 00:00:53.399 --> 00:00:56.079
-以字符串表示形式最终生成的内容。
-what they end up producing
-as a string representation.
+他们最终产生的字符串表示。
+what they end up producing as a string representation.
 
 17
 00:00:56.079 --> 00:00:58.789
-而最重要的部分正是你所期望的。
-And for the most part these
-are exactly what you'd expect.
+在大多数情况下，这些都是您所期望的。
+And for the most part these are exactly what you'd expect.
 
 18
 00:00:58.789 --> 00:01:01.740
-如果您的值为空，并且您结束了该 toString
-If you had a null value and
-you ended up doing that toString
+如果您有一个NULL值，并且您最终执行了toString
+If you had a null value and you ended up doing that toString
 
 19
 00:01:01.740 --> 00:01:04.599
-以某种方式进行抽象操作，您将获得空引号。
-abstract operation in some way,
-you'd get quote null.
+抽象操作在某种程度上，你会得到引用空。
+abstract operation in some way, you'd get quote null.
 
 20
 00:01:04.599 --> 00:01:10.569
-与未定义的，真实的假，浮点数，甚至是零相同。
-Same thing with undefined, true false,
-floating point numbers, even the zero.
+未定义的，真的，假的，浮点数，甚至是零都是一样的。
+Same thing with undefined, true false, floating point numbers, even the zero.
 
 21
 00:01:10.569 --> 00:01:13.789
-当我们看到负零点的时候，情况有点奇怪，记住。
-Things get a little strange when we look
-at the negative zero, remember that.
+当我们看到负零时，事情变得有点奇怪，记住这一点。
+Things get a little strange when we look at the negative zero, remember that.
 
 22
 00:01:13.789 --> 00:01:18.069
-我们已经看到它撒谎了负零点的 toString 操作
-We already saw that it lies, the toString
-operation for negative zero lies and
+我们已经看到了它的谎言，负零谎言的toString操作和
+We already saw that it lies, the toString operation for negative zero lies and
 
 23
 00:01:18.069 --> 00:01:20.210
-生成报价零。
+生成报价，零。
 produces a quote, zero.
 
 24
 00:01:20.210 --> 00:01:22.010
-这就是其中一个角落
+所以这是一个角落的案例
 So that's one of the corner cases and
 
 25
 00:01:22.010 --> 00:01:23.569
-我们会在角落里多聊聊
-we'll talk more about
-corner cases in a bit.
+稍后我们将更多地讨论角落案例。
+we'll talk more about corner cases in a bit.
 
 26
 00:01:25.484 --> 00:01:30.250
-好吧如果我们在一个物体上调用 toString 它将会调用
-All right so if we call toString on
-an object remember it's going to invoke
+好的，如果我们对一个对象调用toString，记住它将调用
+All right so if we call toString on an object remember it's going to invoke
 
 27
 00:01:30.250 --> 00:01:33.870
-带有字符串提示的 toPrimitive 。
+带有字符串提示的toPrimitive。
 the toPrimitive with the string hint.
 
 28
 00:01:33.870 --> 00:01:35.310
-那么这会给我们什么呢 ?
+那我们能得到什么？
 So what's that going to give us?
 
 29
 00:01:35.310 --> 00:01:39.109
-记住要先把 toString 结尾
-Remember that's gonna end up
-calling toString first and
+记住，它最终会先调用toString，然后
+Remember that's gonna end up calling toString first and
 
 30
 00:01:39.109 --> 00:01:41.819
-如果它存在然后就会使用 valueOf
-if it's present and
-then it's going to use valueOf.
+如果它存在，那么它将使用valueOf。
+if it's present and then it's going to use valueOf.
 
 31
 00:01:41.819 --> 00:01:43.549
-这就是它的顺序
+这就是它的顺序。
 That's the order that it does.
 
 32
 00:01:43.549 --> 00:01:46.180
-那在某些特定对象上是什么样的
-So what's that gonna look like
-on some particular object?
+那么在某个特定的物体上会是什么样子呢？
+So what's that gonna look like on some particular object?
 
 33
 00:01:46.180 --> 00:01:51.020
-那么，如果是数组，那么数组具有缺省 toString，
-Well, if it's an array, for example,
-arrays have a default toString,
+嗯，如果它是一个数组，例如，数组有一个默认的toString，
+Well, if it's an array, for example, arrays have a default toString,
 
 34
 00:01:51.020 --> 00:01:55.409
-这将对数组的表示进行序列化。
-which serializes
-the representation of the array.
+它序列化数组的表示。
+which serializes the representation of the array.
 
 35
 00:01:55.409 --> 00:01:57.420
-有点奇怪的序列化
+这是一个有点奇怪的序列化，
 It's a bit of a strange serialization,
 
 36
 00:01:57.420 --> 00:02:00.879
-因为他们要离开支架了
-in my opinion,
-because they're leaving off the brackets.
+在我看来，因为他们把括号去掉了。
+in my opinion, because they're leaving off the brackets.
 
 37
 00:02:00.879 --> 00:02:06.060
-因此，如果您对空数组进行序列化，那么将获得空字符串。
-So if you serialized a empty array,
-you get an empty string.
+因此，如果序列化了一个空数组，就会得到一个空字符串。
+So if you serialized a empty array, you get an empty string.
 
 38
 00:02:06.060 --> 00:02:08.330
-我觉得这是个愚蠢的决定
+我认为那是一个非常愚蠢的决定。
 I think that was a really dumb decision.
 
 39
 00:02:08.330 --> 00:02:10.879
-我不知道他们为什么要离开支架
-I don't know why they
-left off the brackets.
+我不知道他们为什么不用括号。
+I don't know why they left off the brackets.
 
 40
 00:02:10.879 --> 00:02:13.800
-因为事实证明，有很多东西可以序列化为弦。
-Because it turns out, there's a bunch of
-things that can serialize to strings.
+因为事实证明，有很多东西可以序列化为字符串。
+Because it turns out, there's a bunch of things that can serialize to strings.
 
 41
 00:02:13.800 --> 00:02:18.259
-我该怎么知道它是空的阵列吗
-So how am I supposed to know
-whether it was an empty array?
+那么我怎么知道它是否是空数组呢？
+So how am I supposed to know whether it was an empty array?
 
 42
 00:02:18.259 --> 00:02:20.469
-不过，这就是它的运作方式。
+但无论如何，这就是它的工作原理。
 But nevertheless, this is how it works.
 
 43
 00:02:20.469 --> 00:02:24.300
-数组中的内置 toString 将离开方括号。
-The built-in toString on arrays
-leaves off the brackets.
+数组上的内置toString去掉了括号。
+The built-in toString on arrays leaves off the brackets.
 
 44
 00:02:24.300 --> 00:02:26.396
-如果我们的数组中有一些内容
-If we have an array with
-some contents in it,
+如果我们有一个包含一些内容的数组，
+If we have an array with some contents in it,
 
 45
 00:02:26.396 --> 00:02:29.530
-它会显示那些内容，除非它们是空的和未定义的。
-it'll show those contents unless
-they're null and undefined.
+它将显示这些内容，除非它们是空的和未定义的。
+it'll show those contents unless they're null and undefined.
 
 46
 00:02:29.530 --> 00:02:33.650
-这甚至是一个奇怪的， toString 的定义。
-And this is even weirder,
-the toString definition for this.
+更奇怪的是，它的toString定义。
+And this is even weirder, the toString definition for this.
 
 47
 00:02:33.650 --> 00:02:37.025
-我那天其实就是在看那个规格，我就像在地球上
-I actually was just reading the spec the
-other day and I was like why on earth they
+前几天我实际上只是在读规范，我想他们到底为什么
+I actually was just reading the spec the other day and I was like why on earth they
 
 48
 00:02:37.025 --> 00:02:42.490
-当它们在数组中出现时，此值，空值和未定义的值就会被排除。
-do this, nulls and undefines, when they
-show up in arrays just get left out.
+这样做，空值和取消定义，当它们出现在数组中时，就会被忽略。
+do this, nulls and undefines, when they show up in arrays just get left out.
 
 49
 00:02:44.030 --> 00:02:45.180
-我是说他们现在在那儿
+我的意思是他们现在就在那里。
 I mean they're there presently.
 
 50
 00:02:45.180 --> 00:02:46.300
-你可以看到那里有个逗号
+你可以看到那里有一个逗号。
 You can see there's a comma there.
 
 51
 00:02:46.300 --> 00:02:48.829
-他们现在就在那里，但是
-They're there presently
-in terms of position, but
+他们目前在那里的位置，但是
+They're there presently in terms of position, but
 
 52
 00:02:48.829 --> 00:02:53.475
-它们没有表示为空值，并且未定义空值和
-they're not represented as nulls and
-undefines the way null and
+它们不表示为空值和取消定义方式为空值和
+they're not represented as nulls and undefines the way null and
 
 53
 00:02:53.475 --> 00:02:57.883
-在 toStrings do时取消定义。
+取消定义toString何时执行。
 undefine when toStrings do.
 
 54
 00:02:58.969 --> 00:03:01.628
-我认为一个奇怪的矛盾
+在我看来，这是一种奇怪的矛盾。
 In my opinion, a bizarre inconsistency.
 
 55
 00:03:03.379 --> 00:03:07.806
-本质上，排列成膜就好像你可以在 dev 中使用它
-Essentially, array to stringification is
-like maybe you could use it in the dev
+从本质上讲，数组到字符串的转换就像您可以在开发中使用它一样
+Essentially, array to stringification is like maybe you could use it in the dev
 
 56
 00:03:07.806 --> 00:03:12.231
-但我不会在节目里用这种东西
-console but I would never use something
-like this in my program because all these
+控制台，但我永远不会在我的程序中使用这样的东西，因为所有这些
+console but I would never use something like this in my program because all these
 
 57
 00:03:12.231 --> 00:03:14.301
-它的行为怪异的角落
+其行为的怪异角落案例。
 weird corner cases of its behavior.
 
 58
 00:03:17.201 --> 00:03:18.530
->> Kyle Simpson: 关于对象的内容 ?
+&gt；&gt；Kyle Simpson：关于对象呢？
 &gt;&gt; Kyle Simpson: What about on objects?
 
 59
 00:03:18.530 --> 00:03:21.689
-我相信你们都看过类似的支架对象物
-I'm sure you've all seen the bracket
-object object thing which is like,
+我相信你们都看过这个括号物体的东西就像，
+I'm sure you've all seen the bracket object object thing which is like,
 
 60
 00:03:21.689 --> 00:03:22.969
-那到底是什么
+那到底是什么？
 what on earth is that?
 
 61
 00:03:22.969 --> 00:03:28.229
-原型对象上的缺省 toString 为
-The default toString on
-the object of prototype is to
+Prototype对象上的默认toString是to
+The default toString on the object of prototype is to
 
 62
 00:03:28.229 --> 00:03:29.900
-做整个支架的事
+做那个括号的事。
 do that whole bracket thing.
 
 63
 00:03:29.900 --> 00:03:34.750
-这，让我在这里仅仅是一个微小的瞬间，地球为什么会这样做呢 ?
-And this, let me just rant for just
-a micro moment here, why on earth did they
+而这个，让我在这里咆哮一小会儿，他们到底为什么
+And this, let me just rant for just a micro moment here, why on earth did they
 
 64
 00:03:34.750 --> 00:03:38.840
-将方括号放在方括号中，并将方括号放置在对象上吗 ?
-leave off the square brackets for arrays
-and put the square brackets on objects?
+去掉数组的方括号，把方括号放在对象上？
+leave off the square brackets for arrays and put the square brackets on objects?
 
 65
 00:03:39.870 --> 00:03:42.889
-有人向我解释一下地球上的东西
-Somebody explain that to me,
-what on earth.
+谁来给我解释一下，到底是什么。
+Somebody explain that to me, what on earth.
 
 66
 00:03:44.079 --> 00:03:44.659
-债券人
+疯子。
 Bonkers.
 
 67
 00:03:44.659 --> 00:03:48.719
-好吧但要回到现实中
+好的，但回到现实一会儿。
 Okay but back to reality for a moment.
 
 68
 00:03:48.719 --> 00:03:52.370
-它是方括号，它是小写对象和
-It does the square brackets,
-it does a lower case object and
+它做了方括号，做了一个小写的对象
+It does the square brackets, it does a lower case object and
 
 69
 00:03:52.370 --> 00:03:55.877
-然后把这个叫做字符串标签的东西放进去。
-then it puts in this thing
-which is called the string tag.
+然后它把这个东西放进去，这个东西叫做字符串标签。
+then it puts in this thing which is called the string tag.
 
 70
 00:03:55.877 --> 00:03:59.490
-事实证明你可以覆盖整个
-And it turns out you can actually
-override the string tag for
+事实证明，您实际上可以覆盖String标记
+And it turns out you can actually override the string tag for
 
 71
 00:03:59.490 --> 00:04:02.680
-任何使用 ES6 符号的定制对象。
-any of your own custom
-objects using an ES6 symbol.
+使用ES6符号的任何您自己的自定义对象。
+any of your own custom objects using an ES6 symbol.
 
 72
 00:04:02.680 --> 00:04:05.430
-你可以，它叫做 toString 标记，你可以改变它。
-You can, it's called toString tag and
-you can change it.
+你可以，它叫做toString标签，你可以改变它。
+You can, it's called toString tag and you can change it.
 
 73
 00:04:05.430 --> 00:04:10.490
-所以你可以把它从那个串里改
-So you could change it from saying
-Object there in that string to saying
+因此您可以将其从字符串中Object Thhere更改为
+So you could change it from saying Object there in that string to saying
 
 74
 00:04:10.490 --> 00:04:13.169
-我最喜欢的号码或是你想说的
-my favorite number, or
-whatever you want it to say.
+我最喜欢的号码，或者你想说的任何东西。
+my favorite number, or whatever you want it to say.
 
 75
 00:04:13.169 --> 00:04:15.323
-这是一个元编程，但它是可以做到的。
-That's a meta programming thing but
-it is possible to do.
+这是元编程的事情，但这是可能的。
+That's a meta programming thing but it is possible to do.
 
 76
 00:04:15.323 --> 00:04:20.139
-因此，对象是所有缺省对象的缺省字符串标记。
-So that Object there is the default
-string tag for all default objects.
+因此对象对于所有默认对象都有默认字符串标记。
+So that Object there is the default string tag for all default objects.
 
 77
 00:04:20.139 --> 00:04:22.509
-然后 toString 方法采用该字符串标记和
-And then the toString method
-takes that string tag and
+然后toString方法接受该字符串标记并
+And then the toString method takes that string tag and
 
 78
 00:04:22.509 --> 00:04:24.470
-把其他垃圾包裹在附近
+把其他垃圾包起来。
 wraps this other junk around it.
 
 79
 00:04:24.470 --> 00:04:28.310
-如果您使用 toString 方法，那么可以完全控制
-If you over ride the toString method,
-you can completely control
+如果超越toString方法，则可以完全控制
+If you over ride the toString method, you can completely control
 
 80
 00:04:28.310 --> 00:04:31.500
-你想让你的物体看起来像什么
-what you want the stringtification
-of your object to look like.
+你希望你的对象的约束看起来像什么。
+what you want the stringtification of your object to look like.
 
 81
 00:04:31.500 --> 00:04:34.629
-在这种情况下，我要把它变成一个字符串 X。
-In this case, I'm making it turn,
-return just a string X.
+在本例中，我让它旋转，只返回一个字符串X。
+In this case, I'm making it turn, return just a string X.
 
 82
 00:04:36.180 --> 00:04:41.240
-我用了这个方法，我定义了 toString 方法，
-I have used this by the way,
-I have defined a toString method,
+顺便说一下，我使用了这个方法，我定义了一个toString方法，
+I have used this by the way, I have defined a toString method,
 
 83
 00:04:41.240 --> 00:04:44.750
-但我把它定义成了一个吸气剂
+但我把它定义为一种Getter
 but I've defined it as a getter so
 
 84
 00:04:44.750 --> 00:04:49.879
 它可以在字符串标记中动态返回。
-that it can be dynamically
-returned in the string tag.
+that it can be dynamically returned in the string tag.
 
 85
 00:04:49.879 --> 00:04:52.980
-我用这样的方式来界定这一点
-I've defined this in such a way so
-that, on an object,
+我以这样的方式定义了它，这样，在一个对象上，
+I've defined this in such a way so that, on an object,
 
 86
 00:04:52.980 --> 00:04:54.230
-我一直都不这么做
+我也不是一直都这样。
 and I don't do this all the time.
 
 87
 00:04:54.230 --> 00:04:56.781
-但如果我想了解一个物体的背景
-But if I'm trying to understand
-what's in the context of an object,
+但是如果我试图理解一个对象的上下文中是什么，
+But if I'm trying to understand what's in the context of an object,
 
 88
 00:04:56.781 --> 00:04:59.279
-对象对象对我无效。
+对象对我没有帮助。
 object Object is not helpful to me.
 
 89
 00:04:59.279 --> 00:05:04.370
-但您可以覆盖该对象，并将其告知 JSON-stringify 对象和
-But you can override it, and
-tell it to JSON-stringify the object and
+但是您可以覆盖它，并告诉它JSON-stringify对象和
+But you can override it, and tell it to JSON-stringify the object and
 
 90
 00:05:04.370 --> 00:05:06.889
-打印那些结果那就更棒了
-print those results,
-and that is much nicer.
+打印这些结果，这样更好。
+print those results, and that is much nicer.
 
 91
 00:05:06.889 --> 00:05:08.290
-因此，您可以覆盖 toString，
+因此您可以覆盖toString，
 So you can override a toString,
 
 92
 00:05:08.290 --> 00:05:11.100
-或字符串标记，以帮助您在 dev 控制台中使用。
-or the string tag,
-to help you in the dev console.
+或字符串标记，以在开发控制台中帮助您。
+or the string tag, to help you in the dev console.
 
 93
 00:05:11.100 --> 00:05:14.439
-但这不是我通常会做的
-But again, this is not the sort of
-metaprogramming I would typically do
+但同样，这不是我通常会做的那种元编程
+But again, this is not the sort of metaprogramming I would typically do
 
 94
 00:05:14.439 --> 00:05:15.589
-我的节目里有很多
+在我的程序中。
 much in my programs.

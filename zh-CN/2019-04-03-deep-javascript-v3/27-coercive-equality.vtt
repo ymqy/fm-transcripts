@@ -2,176 +2,153 @@ WEBVTT
 
 1
 00:00:00.160 --> 00:00:03.410
->> 凯尔 - 辛普森: 我想说，就像其他的行动一样，
-&gt;&gt; Kyle Simpson: And I would claim
-that just like every other operation,
+&GT；&GT；凯尔·辛普森：我会说，就像其他所有的手术一样，
+&gt;&gt; Kyle Simpson: And I would claim that just like every other operation,
 
 2
 00:00:04.769 --> 00:00:09.460
-了解类型是有帮助的。
-it is helpful if you
-understand what the types are.
+如果您了解这些类型是什么，这是很有帮助的。
+it is helpful if you understand what the types are.
 
 3
 00:00:10.480 --> 00:00:13.679
-和其他的操作一样你得问自己
-Like every other operation,
-you have to ask yourself,
+就像其他的手术一样，你必须问问自己，
+Like every other operation, you have to ask yourself,
 
 4
 00:00:13.679 --> 00:00:16.769
-如果我知道这些类型在这里是否有用
-if I know the types,
-is coercion here helpful or not?
+如果我知道类型，这里的强制有没有帮助？
+if I know the types, is coercion here helpful or not?
 
 5
 00:00:18.179 --> 00:00:20.010
-也许是有用的也许不是
+也许它有帮助，也许它不是。
 Maybe it is helpful, maybe it isn't.
 
 6
 00:00:20.010 --> 00:00:21.184
-这是一个关键的分析。
+这是一个批判性的分析。
 It's a critical analysis.
 
 7
 00:00:21.184 --> 00:00:26.350
-把讨论从双方面改变是不好的，不可预测的
-It shifts the discussion away from
-double equals is bad and unpredictable
+它将讨论从双等分转移到坏的和不可预测的
+It shifts the discussion away from double equals is bad and unpredictable
 
 8
 00:00:26.350 --> 00:00:30.989
-我想让你做个强制性的比较或者我不想让你这样做吗
-to do I wanna allow a coercive
-comparison or do I not wanna allow that?
+我是想允许强制比较还是不想允许？
+to do I wanna allow a coercive comparison or do I not wanna allow that?
 
 9
 00:00:30.989 --> 00:00:33.939
-在这件案子里，我这样做是否更有帮助呢 ?
-In this particular case,
-is it more helpful to me to do so or
+在这种情况下，这样做对我更有帮助还是
+In this particular case, is it more helpful to me to do so or
 
 10
 00:00:33.939 --> 00:00:35.109
-对你的帮助减少了吗
+是不是没那么有用了？
 is it less helpful?
 
 11
 00:00:35.109 --> 00:00:36.768
-是否更安全，还是不安全 ?
+是更安全还是更不安全？
 Is it more safe or is it less safe?
 
 12
 00:00:38.189 --> 00:00:42.100
-换句话说，你必须是批判的，分析思考的思考者，
-In other words, you need to be critical,
-analytical thinkers, and
+换句话说，你需要是批判性的，分析性的思想家，并且
+In other words, you need to be critical, analytical thinkers, and
 
 13
 00:00:42.100 --> 00:00:43.159
-看看你的密码
+看看你的代码。
 look at your code.
 
 14
 00:00:43.159 --> 00:00:46.399
-然后决定你的密码和你不能做的事
-And decide what you can know about
-your code and what you can't.
+并决定关于代码你可以知道什么，不能知道什么。
+And decide what you can know about your code and what you can't.
 
 15
 00:00:46.399 --> 00:00:50.420
-基本上是关于双等号和三等的决定
-And essentially the decision about
-double equals and triple equals
+本质上是关于双等和三等的决定
+And essentially the decision about double equals and triple equals
 
 16
 00:00:50.420 --> 00:00:55.280
-是一个跟踪指示符，表明您是否实际了解程序。
-is a trailing indicator of whether
-you actually understand your program.
+是一个尾随指示器，表明您是否真正理解了您的程序。
+is a trailing indicator of whether you actually understand your program.
 
 17
 00:00:57.200 --> 00:00:58.280
-让我再说一次
+让我再说一遍。
 Let me say that again.
 
 18
 00:00:58.280 --> 00:01:01.030
-你选择三等同等比不只是因为
-Your choice to use triple equals,
-it's not just because
+你选择使用三等号，不仅仅是因为
+Your choice to use triple equals, it's not just because
 
 19
 00:01:01.030 --> 00:01:03.899
-有些人在书中写道你应该总是用三等
-some guy wrote in a book that you
-should always use triple equals.
+有些人在一本书中写道，你应该永远使用三倍等于。
+some guy wrote in a book that you should always use triple equals.
 
 20
 00:01:03.899 --> 00:01:09.150
-您选择使用三重等号的实际选择是指后退的指示符
-Your actual choice to use triple equals
-is a trailing indicator which points back
+您实际选择使用三重等于是一个指向后的尾随指示符
+Your actual choice to use triple equals is a trailing indicator which points back
 
 21
 00:01:09.150 --> 00:01:13.530
-而你也不知道那种比较的类型
-to the fact that you don't know something
-about the types in that comparison and so
+事实上，你不知道关于比较中的类型的一些事情，所以
+to the fact that you don't know something about the types in that comparison and so
 
 22
 00:01:13.530 --> 00:01:14.709
-你必须保护自己
+你必须保护自己。
 you have to protect yourself.
 
 23
 00:01:16.219 --> 00:01:20.590
-我的意见是，如果可能的话，最好是把根
-And my opinion is, if at all possible,
-maybe it would be better to fix the root
+我的观点是，如果可能的话，也许修复根部会更好
+And my opinion is, if at all possible, maybe it would be better to fix the root
 
 24
 00:01:20.590 --> 00:01:24.250
-问题，即我不知道该比较中的类型是什么。
-problem, which is that I don't know
-what the types are in this comparison.
+问题是，我不知道在这个比较中的类型是什么。
+problem, which is that I don't know what the types are in this comparison.
 
 25
 00:01:24.250 --> 00:01:26.551
-太难以预测了太多态了
-It's too unpredictable,
-it's too polymorphic.
+它太不可预测了，它太多态了。
+It's too unpredictable, it's too polymorphic.
 
 26
 00:01:28.379 --> 00:01:30.831
->> Kyle Simpson: 这会导致更好的代码，减少错误，
-&gt;&gt; Kyle Simpson: That's gonna lead
-to better code with fewer bugs,
+&gt；&gt；Kyle Simpson：这将导致更好的代码和更少的bug，
+&gt;&gt; Kyle Simpson: That's gonna lead to better code with fewer bugs,
 
 27
 00:01:30.831 --> 00:01:34.450
-不管您使用的是双等号还是三重等号。
-regardless of whether you use
-a double equals or a triple equals.
+无论您使用的是双等号还是三等号。
+regardless of whether you use a double equals or a triple equals.
 
 28
 00:01:34.450 --> 00:01:37.468
-决定您的类型，从而清楚地显示您的类型。
-Deciding what your types are,
-making it obvious what those are.
+决定你的类型，让那些类型变得显而易见。
+Deciding what your types are, making it obvious what those are.
 
 29
 00:01:40.055 --> 00:01:42.250
->> 凯尔 - 辛普森: 我们知道这些类型吗 ?
-&gt;&gt; Kyle Simpson: So
-do we know those types?
+&gt；&gt；Kyle Simpson：那么我们知道那些类型吗？
+&gt;&gt; Kyle Simpson: So do we know those types?
 
 30
 00:01:42.250 --> 00:01:44.740
-让我们看看双等号要做什么
-Let's take a look at what
-the double equals is going to do
+让我们来看一下双等号将会做什么
+Let's take a look at what the double equals is going to do
 
 31
 00:01:44.740 --> 00:01:46.759
@@ -180,194 +157,168 @@ if the types are different.
 
 32
 00:01:46.759 --> 00:01:51.740
-首先，如果类型为空或未定义在任一方上，
-First off, if the types are null or
-undefined on either side,
+首先，如果任何一方的类型为空或未定义，
+First off, if the types are null or undefined on either side,
 
 33
 00:01:51.740 --> 00:01:55.520
-这两个子句是成对的，如果 x 为空而 y 未定义或
-that's what these two clauses are paired
-to say, if x is null and y is undefined or
+这就是这两个子句配对的意思，如果x为NULL，y为未定义或
+that's what these two clauses are paired to say, if x is null and y is undefined or
 
 34
 00:01:55.520 --> 00:01:58.229
-反之亦然，然后返回 true。
+反之亦然，然后返回true。
 a vice versa, then return true.
 
 35
 00:01:58.229 --> 00:02:03.159
-换句话说，不值和未定义的值是强制相等的
-In other words, the no value and the
-undefined value are coercively equal to
+换句话说，NO值和未定义的值强制等于
+In other words, the no value and the undefined value are coercively equal to
 
 36
 00:02:03.159 --> 00:02:07.329
-以及语言中没有其他值，这就是第 10 条的内容。
-each other and to no other values in the
-language, which is what clause 10 says.
+相互之间，而不是语言中的其他值，这就是第10条所说的。
+each other and to no other values in the language, which is what clause 10 says.
 
 37
 00:02:07.329 --> 00:02:08.860
-上面写着退货是假的
+它说返回错误。
 It says return false.
 
 38
 00:02:08.860 --> 00:02:12.210
-NULL 和 undefined 将与此算法中的任何其他子句不匹配，
-Null and undefined will not match
-any other clauses in this algorithm,
+NULL和UNDEFINED将不匹配此算法中的任何其他子句，
+Null and undefined will not match any other clauses in this algorithm,
 
 39
 00:02:12.210 --> 00:02:14.050
-除第 2 及 3 条外
+第2及3条除外。
 other than clause 2 and 3.
 
 40
 00:02:14.050 --> 00:02:16.329
-所以这对彼此都是胁迫性的
+所以这只是对彼此的强制。
 And so it's only coercive to each other.
 
 41
 00:02:17.360 --> 00:02:21.139
-我觉得这是一个非常有用的关于 JavaScript 的事实
-I find that to be a tremendously
-useful fact about JavaScript because,
+我发现这是关于JavaScript的一个非常有用的事实，因为，
+I find that to be a tremendously useful fact about JavaScript because,
 
 42
 00:02:21.139 --> 00:02:24.420
-说实话我不喜欢有两个空值
-quite honestly,
-I don't like having two empty values.
+老实说，我不喜欢有两个空值。
+quite honestly, I don't like having two empty values.
 
 43
 00:02:24.420 --> 00:02:25.889
-我觉得这很困惑
+我觉得这很令人困惑。
 I find that to be confusing.
 
 44
 00:02:25.889 --> 00:02:29.020
-所以我宁愿选择一个空值。
-So I would much rather
-deal with one empty value.
+所以我更愿意处理一个空值。
+So I would much rather deal with one empty value.
 
 45
 00:02:29.020 --> 00:02:31.860
-并且由于 NULL 的类型比未定义的值短，
-And since null is shorter
-to type than undefined,
+并且由于NULL的类型比未定义的短，
+And since null is shorter to type than undefined,
 
 46
 00:02:31.860 --> 00:02:33.920
-我宁愿到处都是空的
+我宁愿处处都是空的。
 I'd rather deal with null everywhere.
 
 47
 00:02:33.920 --> 00:02:37.639
-并且尽可能地假装没有定义的不存在。
-And pretend as much as possible
-that undefined doesn't exist.
+并尽可能假装未定义的不存在。
+And pretend as much as possible that undefined doesn't exist.
 
 48
 00:02:37.639 --> 00:02:39.590
-或者至少假装它们是可以互换的
-Or at least pretend that
-they're interchangeable.
+或者至少假装它们是可以互换的。
+Or at least pretend that they're interchangeable.
 
 49
 00:02:40.599 --> 00:02:43.420
-JavaScript 会对它们进行一些区分，
-JavaScript does make some
-distinctions between them,
+JavaScript确实在它们之间做了一些区别，
+JavaScript does make some distinctions between them,
 
 50
 00:02:43.420 --> 00:02:45.550
-例如缺省值算法。
+例如默认值算法。
 such as the default value algorithm.
 
 51
 00:02:45.550 --> 00:02:49.550
-但是，在大多数情况下，您可以选择处理空值和
-But, for the most part,
-you have the option of treating null and
+但是，在大多数情况下，您可以选择处理null和
+But, for the most part, you have the option of treating null and
 
 52
 00:02:49.550 --> 00:02:54.520
-未定义为通过强制平等无法区分。
-undefined as indistinguishable
-through coercive equality.
+未被定义为通过强制平等无法区分。
+undefined as indistinguishable through coercive equality.
 
 53
 00:02:54.520 --> 00:02:57.280
-你可以这样做你可以有个工作坊
-So you could do a check like this,
-you could have a workshop one and
+所以你可以做这样的检查，你可以有一个工作坊
+So you could do a check like this, you could have a workshop one and
 
 54
 00:02:57.280 --> 00:03:00.219
-一个研讨会两个，上面有一个专题。
-a workshop two, and
-there's a topic property on there.
+第二个工作坊，那里有一个主题属性。
+a workshop two, and there's a topic property on there.
 
 55
 00:03:00.219 --> 00:03:04.949
-如果设置了主题属性，并且它为空，那么您可以询问该主题属性，或者
-You could be asking of that topic property
-if it's been set and it's null, or
+如果设置了Topic属性并且它为NULL，则可以询问该属性，或者
+You could be asking of that topic property if it's been set and it's null, or
 
 56
 00:03:04.949 --> 00:03:08.379
-如果它从未被设定过，或者被设定了，也没有定义。
-if it's never been set at all, or
-if it's been set and it's too undefined.
+如果它从来没有被设置过，或者如果它已经被设置了，并且它太没有定义。
+if it's never been set at all, or if it's been set and it's too undefined.
 
 57
 00:03:08.379 --> 00:03:10.500
-你可以试着区分两者但
-You could try to distinguish
-between those two, but
+你可以试着区分这两个，但是
+You could try to distinguish between those two, but
 
 58
 00:03:10.500 --> 00:03:14.930
-在几乎所有情况下，我都认为这不是有用的区别。
-I would argue in almost all cases,
-that's not a useful distinction.
+我认为在几乎所有情况下，这都不是一个有用的区别。
+I would argue in almost all cases, that's not a useful distinction.
 
 59
 00:03:16.120 --> 00:03:20.409
-属性是否已创建，并已复位为空，或者
-Whether the property was ever created and
-has been reset back to null, or
+属性是否曾经创建并已重置回NULL，或者
+Whether the property was ever created and has been reset back to null, or
 
 60
 00:03:20.409 --> 00:03:23.930
-它是否已重新设置为未定义，或者它是否从未创建过。
-whether it's been reset back to undefined,
-or whether it was never created at all.
+无论它是否被重置回未定义，或者它是否从未被创建过。
+whether it's been reset back to undefined, or whether it was never created at all.
 
 61
 00:03:23.930 --> 00:03:27.500
-这些基本上都是一样的情况，至少我还会说，
-Those are basically all the same
-condition, or at least I would argue,
+这些基本上都是相同的条件，或者至少我认为，
+Those are basically all the same condition, or at least I would argue,
 
 62
 00:03:27.500 --> 00:03:32.110
-这是一种更好的编码方式来对待那些难以区分的人
-that's a better way to code,
-to treat those as indistinguishable.
+这是一种更好的编码方式，可以将它们视为不可区分的。
+that's a better way to code, to treat those as indistinguishable.
 
 63
 00:03:32.110 --> 00:03:34.889
-所以有一个选择是你写你在第 5 行上做的事情
-So one option is for
-you to write what you do on lines five and
+所以对你来说一种选择是在第五行写下你所做的
+So one option is for you to write what you do on lines five and
 
 64
 00:03:34.889 --> 00:03:38.979
-六，就是用这个三等等于不允许威逼，
-six, which is to use this triple equals
-that does not allow coercion and
+六，也就是使用这个三重相等，它不允许强制和
+six, which is to use this triple equals that does not allow coercion and
 
 65
 00:03:38.979 --> 00:03:41.939
@@ -376,314 +327,265 @@ explicitly checks all of those cases.
 
 66
 00:03:41.939 --> 00:03:45.777
-显式检查 workshop1.topic 为 Null 或者
-Explicitly checks that
-workshop1.topic is null or
+显式检查workshop1.topic是否为null或
+Explicitly checks that workshop1.topic is null or
 
 67
 00:03:45.777 --> 00:03:51.585
-未定义 workshop1.topic ，并且 workshop2 主题的相同。
-workshop1.topic is undefined and
-the same thing is true of workshop2 topic.
+workshop1.topic未定义，workshop2主题也是如此。
+workshop1.topic is undefined and the same thing is true of workshop2 topic.
 
 68
 00:03:53.719 --> 00:03:57.629
->> Kyle Simpson: 您是否在此处显式地获取任何可读性 ?
-&gt;&gt; Kyle Simpson: Are you gaining anything
-readability-wise by being explicit here?
+&gt；&gt；Kyle Simpson：通过这里的显式表达，您是否获得了任何可读性方面的好处？
+&gt;&gt; Kyle Simpson: Are you gaining anything readability-wise by being explicit here?
 
 69
 00:03:59.039 --> 00:04:02.796
-问自己，读者要不要再笑了 ?
-Ask yourself the question if the reader
-has benefited from having to juggle
+问问自己，读者是否从杂耍中获益
+Ask yourself the question if the reader has benefited from having to juggle
 
 70
 00:04:02.796 --> 00:04:05.663
-两个空值之间的区别吗
-in their head the distinction
-between two empty values?
+在他们的头脑中，两个空洞的价值观之间的区别是什么？
+in their head the distinction between two empty values?
 
 71
 00:04:07.757 --> 00:04:11.060
->> Kyle Simpson: 我的断言是不，他们没有受益。
-&gt;&gt; Kyle Simpson: My assertion is that no,
-they are not benefited.
+&gt；&gt；Kyle Simpson：我的断言是没有，他们没有受益。
+&gt;&gt; Kyle Simpson: My assertion is that no, they are not benefited.
 
 72
 00:04:11.060 --> 00:04:15.509
-用我们在第 12 和第 13 条上的双等号
-And using the double equals like we
-do down here on lines 12 and 13,
+然后使用双等号，就像我们在第12行和第13行做的那样，
+And using the double equals like we do down here on lines 12 and 13,
 
 73
 00:04:15.509 --> 00:04:16.740
-现在更清楚了
+更清楚了。
 it's far more clear.
 
 74
 00:04:18.100 --> 00:04:22.259
-它说，不管它是空的还是没有定义的，告诉我它们是否为空。
-It says, whether are null or undefined,
-tell me if they're empty or not.
+它说，无论是空的还是未定义的，告诉我它们是否是空的。
+It says, whether are null or undefined, tell me if they're empty or not.
 
 75
 00:04:22.259 --> 00:04:24.389
-告诉我如果他们是这两个空值中的一个
-Tell me if they're one of
-those two empty values.
+告诉我它们是否是这两个空值中的一个。
+Tell me if they're one of those two empty values.
 
 76
 00:04:24.389 --> 00:04:26.682
-顺便说下，我只选了两个小的小熊的矮型。
-And by the way, I just picked the shorter
-of the two cuz it's less to type.
+顺便说一句，我只是选了两个中较短的，因为它打字较少。
+And by the way, I just picked the shorter of the two cuz it's less to type.
 
 77
 00:04:29.754 --> 00:04:30.755
->> 凯尔 - 辛普森: 好吗 ?
+凯尔·辛普森：好吗？
 &gt;&gt; Kyle Simpson: Okay?
 
 78
 00:04:30.755 --> 00:04:33.338
-这是使用强制等式的示例，并且
-This is an example of using
-coercive equality, and
+这是一个使用强制相等的示例，并且
+This is an example of using coercive equality, and
 
 79
 00:04:33.338 --> 00:04:36.343
-即便是一些严重地批评过胁迫的人
-even some of the staunchest
-harshest critics of coercion,
+即使是一些对胁迫最严厉的批评者，
+even some of the staunchest harshest critics of coercion,
 
 80
 00:04:36.343 --> 00:04:40.490
-您将在其代码中使用双等号空检查来查找它们。
-you will find them using double
-equals null checks in their code.
+您会发现他们在代码中使用双等于空检查。
+you will find them using double equals null checks in their code.
 
 81
 00:04:40.490 --> 00:04:45.310
-因为它的争议性比其他几个双数相等。
-Because it's less controversial than
-some of the other double equals usages.
+因为它比其他一些双等号的用法争议性更小。
+Because it's less controversial than some of the other double equals usages.
 
 82
 00:04:45.310 --> 00:04:48.177
-大多数人似乎都没问题
+大多数人似乎对此没意见。
 Most people seem to be okay with that.
 
 83
 00:04:48.177 --> 00:04:54.341
-即使 JFLint 说不不，大多数其他的人都遵守了这些规定。
-Even though JFLint says no no, most other
-people have those linting rules turned on.
+尽管JFLint说不，但大多数其他人都打开了这些连接规则。
+Even though JFLint says no no, most other people have those linting rules turned on.
 
 84
 00:04:54.341 --> 00:04:58.295
-我使用 ESLint ，它是一个令人惊奇的可配置的链接器。
-I use ESLint,
-it's an amazingly configurable linter.
+我使用ESLint，它是一个令人惊讶的可配置的Linter。
+I use ESLint, it's an amazingly configurable linter.
 
 85
 00:04:58.295 --> 00:05:00.764
-我确定我和你的规则很不一样
-I have a very different rule
-set than you do, I'm sure,
+我有一套和你完全不同的规则，我确定，
+I have a very different rule set than you do, I'm sure,
 
 86
 00:05:00.764 --> 00:05:03.552
-cuz 我有很不同的意见，但是我用 ESLint 工具
-cuz I have very different opinions,
-but I use an ESLint tool and
+因为我有非常不同的观点，但我使用ESLint工具
+cuz I have very different opinions, but I use an ESLint tool and
 
 87
 00:05:03.552 --> 00:05:07.040
-我打开规则，帮助我编写更好的代码，这就是画家的工作。
-I turn on what rules help me write better
-code and that's what linters are for.
+我打开了哪些规则帮助我编写更好的代码，这就是linters的用途。
+I turn on what rules help me write better code and that's what linters are for.
 
 88
 00:05:08.189 --> 00:05:11.321
-Linters 是一个帮助你决定是否
-Linters are an opinion that
-helps you decide whether or
+linters是一种帮助您决定是否或
+Linters are an opinion that helps you decide whether or
 
 89
 00:05:11.321 --> 00:05:15.606
-而不是您的代码以这样的方式格式化，或者构造为这样，
-not your code is formatted in such a way
-where, or structured in such a way,
+您的代码不是以这样的方式格式化的，或者是以这样的方式构造的，
+not your code is formatted in such a way where, or structured in such a way,
 
 90
 00:05:15.606 --> 00:05:19.300
-以避免错误，或者是否可能发生问题。
-to avoid bugs or whether it's
-likely that a problem will occur.
+以避免bug或是否可能发生问题。
+to avoid bugs or whether it's likely that a problem will occur.
 
 91
 00:05:20.629 --> 00:05:23.329
-它不检查您的编程是否正确。
-It's not checking if your
-programming is correct.
+它不是检查你的程序是否正确。
+It's not checking if your programming is correct.
 
 92
 00:05:23.329 --> 00:05:26.670
-它让你知道你是否做了正确的事
-It's giving you an opinion on
-whether you've done the right thing.
+它给你一个关于你是否做了正确的事情的意见。
+It's giving you an opinion on whether you've done the right thing.
 
 93
 00:05:26.670 --> 00:05:30.750
-意见的问题是，每个人都有不同的意见。
-The thing about opinions is that
-everybody's got different opinions.
+关于观点的问题是每个人都有不同的观点。
+The thing about opinions is that everybody's got different opinions.
 
 94
 00:05:30.750 --> 00:05:34.040
-所以最好的工具是最可配置的工具
-So the best tools are the ones
-that are most configurable,
+所以最好的工具是那些最可配置的工具，
+So the best tools are the ones that are most configurable,
 
 95
 00:05:34.040 --> 00:05:39.129
-不仅仅是针对个人的意见，而是针对团队的最有效的方式。
-not just to individual opinions,
-but most effectively for teams.
+不只是个人意见，而是对团队最有效的。
+not just to individual opinions, but most effectively for teams.
 
 96
 00:05:39.129 --> 00:05:41.360
-让团队决定什么是有效的。
-Let a team decide what is effective for
-them.
+让团队决定什么对他们有效。
+Let a team decide what is effective for them.
 
 97
 00:05:42.819 --> 00:05:47.569
-在任何程度上，您使用的工具与您的代码共享有关代码的意见
-To any extent that you use a tool that
-shares an opinion about your code with
+在任何程度上，您使用的工具与共享对您的代码的意见
+To any extent that you use a tool that shares an opinion about your code with
 
 98
 00:05:47.569 --> 00:05:53.379
-您通过对构建过程进行错误处理，在该工具的范围内
-you, by way of erroring out your build
-process, to the extent that that tool is
+您，通过错误地确定您的构建过程，达到该工具的程度
+you, by way of erroring out your build process, to the extent that that tool is
 
 99
 00:05:53.379 --> 00:05:58.389
-无法对其进行配置，以便您能够更有效地完成工作，并且
-unable for you to configure it so that you
-can get your job done more effectively and
+无法对其进行配置，以便您可以更有效地完成工作，
+unable for you to configure it so that you can get your job done more effectively and
 
 100
 00:05:58.389 --> 00:06:02.024
-它迫使你改变代码的适应方式
-it forces you to change the way
-you code to adapt to it,
+它迫使你改变你的编码方式来适应它，
+it forces you to change the way you code to adapt to it,
 
 101
 00:06:02.024 --> 00:06:05.798
-那么这个工具就没有帮助你，阻碍了你的发展机会。
-then that tool is not helping you, it is
-hampering your development opportunities.
+那么这个工具对你没有帮助，它是在阻碍你的发展机会。
+then that tool is not helping you, it is hampering your development opportunities.
 
 102
 00:06:07.160 --> 00:06:09.629
-如果它不够聪明就能理解它在做什么
-If it's not smart enough to
-understand what it's doing.
+如果它不够聪明，不能理解它在做什么。
+If it's not smart enough to understand what it's doing.
 
 103
 00:06:09.629 --> 00:06:14.678
-比如，我用 ESLint 和 ESLint 的一套很棒的规则
-For example, I use ESLint and ESLint's
-got a bunch of really great rules in,
+例如，我使用ESLint，ESLint有一系列非常棒的规则，
+For example, I use ESLint and ESLint's got a bunch of really great rules in,
 
 104
 00:06:14.678 --> 00:06:17.879
-但有些规则很幼稚
-but it's got some rules
-which are pretty naive.
+但它有一些很幼稚的规则。
+but it's got some rules which are pretty naive.
 
 105
 00:06:19.089 --> 00:06:22.629
-其中一个规则是要处理变量声明
-One of those rules has to deal
-with variable declarations,
+其中一个规则必须处理变量声明，
+One of those rules has to deal with variable declarations,
 
 106
 00:06:22.629 --> 00:06:26.199
-是否允许您先前在作用域中使用变量声明。
-whether you're allowed to use a variable
-declaration earlier in the scope.
+是否允许您在作用域的早期使用变量声明。
+whether you're allowed to use a variable declaration earlier in the scope.
 
 107
 00:06:26.199 --> 00:06:29.689
-现在我可以明确地说，我们将在我们的范围内回到这个单位，
-Now I can clearly say, and we're gonna
-come back to this in our unit on scope,
+现在我可以清楚地说，我们将在我们单位的范围内回到这一点，
+Now I can clearly say, and we're gonna come back to this in our unit on scope,
 
 108
 00:06:29.689 --> 00:06:34.779
-但我可以明确地告诉你我不建议说 A 等于 2
-but I can clearly say to you that I
-wouldn't recommend saying A equals two and
+但我可以清楚地告诉你，我不建议说A等于2
+but I can clearly say to you that I wouldn't recommend saying A equals two and
 
 109
 00:06:34.779 --> 00:06:37.340
-那么 Var A的情况就很糟糕了
-then Var A,
-that's a terrible usage of that.
+然后是Var A，这是一个糟糕的用法。
+then Var A, that's a terrible usage of that.
 
 110
 00:06:38.629 --> 00:06:43.670
-但同样的规则也阻止了我说 A 等于 2
-But that same rule that prevents that
-also prevents me from saying A equals two
+但是同样的规则阻止了这一点，也阻止了我说A等于2
+But that same rule that prevents that also prevents me from saying A equals two
 
 111
 00:06:43.670 --> 00:06:49.500
-在函数中，如果 var A 不在代码中的函数之上。
-inside of a function if the var A isn't
-above the function in the code.
+如果var A不在代码中的函数上方，则在函数内部。
+inside of a function if the var A isn't above the function in the code.
 
 112
 00:06:49.500 --> 00:06:53.430
-这完全不是一回事，但这一工具还不够聪明。
-That's not at all the same thing, but
-that tool is not at all smart enough to
+这完全不是一回事，但是这个工具根本不够聪明
+That's not at all the same thing, but that tool is not at all smart enough to
 
 113
 00:06:53.430 --> 00:06:56.350
-在作用域限定行为中区分这两个差异。
-distinguish those two
-differences in scoping behavior.
+区分作用域行为中的这两个差异。
+distinguish those two differences in scoping behavior.
 
 114
 00:06:57.779 --> 00:07:01.230
-这条法则让我不再帮我
-And that rule gets in my
-way instead of helping me.
+这条规则阻碍了我，而不是帮助我。
+And that rule gets in my way instead of helping me.
 
 115
 00:07:01.230 --> 00:07:02.019
-所以我不使用那条规则
+所以我不用那个规则。
 So I don't use that rule.
 
 116
 00:07:03.250 --> 00:07:05.769
-有关 ESLint 的好消息是您可以编写自己的规则。
-Good news about ESLint is you
-can write your own rules.
+关于ESLint的好消息是您可以编写自己的规则。
+Good news about ESLint is you can write your own rules.
 
 117
 00:07:05.769 --> 00:07:10.279
-我刚写了我的第一个 ESLint 规则插件。
-I actually just wrote my
-first ESLint rule plug in.
+实际上，我刚刚编写了我的第一个ESLint规则插件。
+I actually just wrote my first ESLint rule plug in.
 
 118
 00:07:10.279 --> 00:07:13.180
-我们稍后再谈这个问题。
-We'll talk about that one
-a bit later on the course.
+我们稍后会在课程中讨论这个问题。
+We'll talk about that one a bit later on the course.

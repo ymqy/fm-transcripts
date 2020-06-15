@@ -2,314 +2,275 @@ WEBVTT
 
 1
 00:00:00.090 --> 00:00:04.259
->> 凯尔 - 辛普森: 让我们试着澄清有关遗产的一些想法，好吗 ?
-&gt;&gt; Kyle Simpson: Let's try to clarify
-some ideas around inheritance, okay?
+&gt；&gt；Kyle Simpson：让我们试着澄清一些关于继承的想法，好吗？
+&gt;&gt; Kyle Simpson: Let's try to clarify some ideas around inheritance, okay?
 
 2
 00:00:04.259 --> 00:00:08.257
 因为我向你扔了很多东西
-Because there is a lot of things
-that I've thrown at you and
+Because there is a lot of things that I've thrown at you and
 
 3
 00:00:08.257 --> 00:00:13.199
-我只是想尽量把它做个直观的图表
-I just wanna make as clear sort
-of a visual diagram as I can.
+我只想尽可能清晰地画出一个可视化的图表。
+I just wanna make as clear sort of a visual diagram as I can.
 
 4
 00:00:13.199 --> 00:00:19.850
-在古典式的语言 C++， Java，之类的。
-In classical oriented Languages C++,
-Java, stuff like that.
+在经典的面向语言中，C+，Java，诸如此类的东西。
+In classical oriented Languages C++, Java, stuff like that.
 
 5
 00:00:19.850 --> 00:00:24.539
-当您创建类呼叫研讨会并将其实例化时，您在概念上
-When you make a class call workshop and
-you instantiate it, you are conceptually
+当您进行类调用工作坊并实例化它时，您在概念上是
+When you make a class call workshop and you instantiate it, you are conceptually
 
 6
 00:00:24.539 --> 00:00:28.539
-在某些情况下，实际将其复制到这些实例中。
-and in some cases, physically
-copying down into those instances.
+在某些情况下，物理复制到这些实例中。
+and in some cases, physically copying down into those instances.
 
 7
 00:00:28.539 --> 00:00:33.049
-当你把一个儿童课称为另一个工作坊的时候
-And when you make a child class call
-another workshop that extends workshop,
+当你让一个孩子班呼叫另一个扩展车间的车间时，
+And when you make a child class call another workshop that extends workshop,
 
 8
 00:00:33.049 --> 00:00:34.960
-你要把它复制到那个
+你是在复制到那里面。
 you are copying down into that.
 
 9
 00:00:34.960 --> 00:00:38.259
-当您将该子类实例化时。
+当您实例化那个子类时。
 And when you instantiate that child class.
 
 10
 00:00:38.259 --> 00:00:39.429
-你在做更多的拷贝
+你在复印更多。
 You're doing more copies.
 
 11
 00:00:40.429 --> 00:00:43.590
-换句话说这些箭头从左到右从左到右
-So in other words these arrows are going
-from left to right, top to bottom,
+换句话说，这些箭头是从左到右，从上到下，
+So in other words these arrows are going from left to right, top to bottom,
 
 12
 00:00:43.590 --> 00:00:45.909
-因为它们本质上是复制操作
-because they are fundamentally
-copy operations.
+因为它们基本上是复制操作。
+because they are fundamentally copy operations.
 
 13
 00:00:47.600 --> 00:00:55.659
-当您尝试进行原型继承时，您有一个 workshop.prototype 对象。
-When you try to do prototypal inheritance,
-you have a workshop.prototype object.
+当您尝试进行原型继承时，您有一个workshop.prototype对象。
+When you try to do prototypal inheritance, you have a workshop.prototype object.
 
 14
 00:00:55.659 --> 00:00:59.259
-然后再让另一个对象如 deepJS 或
-And then you make another
-object like deepJS or
+然后你制作另一个物体，比如Deep JS或
+And then you make another object like deepJS or
 
 15
 00:00:59.259 --> 00:01:04.260
-reattJS，这些对象链接到 Workshop.prototype。
-reactJS, those objects are linked
-to Workshop.prototype.
+reactJS，这些对象链接到Workshop.prototype。
+reactJS, those objects are linked to Workshop.prototype.
 
 16
 00:01:04.260 --> 00:01:08.289
-然后，当您创建另一个workshop.原型时，它是链接到的。
-And then when you make another
-workshop.prototype it is linked to.
+然后当你制作另一个工作区时，它会被链接到Prototype。
+And then when you make another workshop.prototype it is linked to.
 
 17
 00:01:08.289 --> 00:01:11.710
-然后，当您制作 JSRecentParts 时，它也会链接。
-And then when you make
-JSRecentParts it is linked too.
+然后，当您创建JSRecentParts时，它也会被链接。
+And then when you make JSRecentParts it is linked too.
 
 18
 00:01:11.710 --> 00:01:15.109
-这里，箭头从右到左，从底部到顶部。
-So here, the arrows go from right to left,
-and bottom to top.
+所以在这里，箭头从右到左，从下到上。
+So here, the arrows go from right to left, and bottom to top.
 
 19
 00:01:16.299 --> 00:01:19.079
-因为这是一个链接，不是一个副本。
+因为这是一个链接，而不是一个拷贝。
 Because this is a linkage, not a copy.
 
 20
 00:01:20.460 --> 00:01:20.960
-跟我来
+跟我来。
 Follow me.
 
 21
 00:01:23.980 --> 00:01:28.364
->> 凯尔 - 辛普森: 这通常被称为原型继承。
-&gt;&gt; Kyle Simpson: This is often to
-referred to as prototypal inheritance.
+&gt；&gt；Kyle Simpson：这通常被称为原型继承。
+&gt;&gt; Kyle Simpson: This is often to referred to as prototypal inheritance.
 
 22
 00:01:30.615 --> 00:01:31.710
->> 凯尔 - 辛普森: 我有很深的，
+&gt；&gt；Kyle Simpson：我有很深的，
 &gt;&gt; Kyle Simpson: I have a deep,
 
 23
 00:01:31.710 --> 00:01:38.240
-对调用此原型继承的想法的问题。
-troubling issue with the idea of
-calling this prototypal inheritance.
+把这称为原型继承的想法是一个令人不安的问题。
+troubling issue with the idea of calling this prototypal inheritance.
 
 24
 00:01:38.240 --> 00:01:39.549
-这就是我的问题
+这就是我的问题所在。
 And here is what my issue is.
 
 25
 00:01:40.620 --> 00:01:46.079
-" 原型 " 一词甚至不代表任何必须的人。
-The word prototypal doesn't even really
-mean anything concrete to must people.
+对于必须的人来说，原型这个词甚至没有任何具体的含义。
+The word prototypal doesn't even really mean anything concrete to must people.
 
 26
 00:01:46.079 --> 00:01:47.629
-没人知道这意味着什么
+甚至没有人真正知道那是什么意思。
 Nobody even really knows what that means.
 
 27
 00:01:47.629 --> 00:01:50.490
 他们只是把它和这个奇怪的系统联系起来。
-They just associate it
-with this strange system.
+They just associate it with this strange system.
 
 28
 00:01:50.490 --> 00:01:55.849
-但遗产继承的意义非常大，它承载着大量的行李。
-But the word inheritance has a very strong
-meaning, it carries lots of baggage.
+但是继承这个词有很强的含义，它承载着很多包袱。
+But the word inheritance has a very strong meaning, it carries lots of baggage.
 
 29
 00:01:55.849 --> 00:01:59.759
-大多数人的大脑都被编程来思考遗传
-And most people's brains have been
-programmed to think about inheritance,
+大多数人的大脑都被编程来考虑遗传，
+And most people's brains have been programmed to think about inheritance,
 
 30
 00:01:59.759 --> 00:02:02.359
-就像复制关系一样
+因为有复制关系。
 as having copy relationships.
 
 31
 00:02:02.359 --> 00:02:05.129
-我们做的就是把这个混淆不清的
-So what we did was we took
-this confusing-sounding
+所以我们所做的就是把这个令人困惑的声音
+So what we did was we took this confusing-sounding
 
 32
 00:02:05.129 --> 00:02:09.000
-像原型一样把它贴在另一个词的前面
-fancy word like prototypal,
-stuck it in front of another word.
+花哨的词就像原型一样，把它放在另一个词的前面。
+fancy word like prototypal, stuck it in front of another word.
 
 33
 00:02:09.000 --> 00:02:14.379
-然后我们假装没事，完全改变它的意义。
-And then we pretended as if that's okay,
-to completely reverse the meaning of it.
+然后我们假装这没问题，完全颠倒了它的意义。
+And then we pretended as if that's okay, to completely reverse the meaning of it.
 
 34
 00:02:16.400 --> 00:02:19.969
-就像我站在你面前一边有一个苹果
-It's as if I stood up in front of you and
-I had an apple in one hand, and
+就好像我站在你面前，一只手拿着一个苹果，然后
+It's as if I stood up in front of you and I had an apple in one hand, and
 
 35
 00:02:19.969 --> 00:02:21.310
-另一个是橘子
+另一个是橙子。
 an orange in the other.
 
 36
 00:02:21.310 --> 00:02:23.449
-然后我说，不，不，那不是一个苹果。
-And then I said, no, no,
-no that's not an apple.
+然后我说，不，那不是苹果。
+And then I said, no, no, no that's not an apple.
 
 37
 00:02:23.449 --> 00:02:24.709
-这只是个红橙
+那只是一个红色的橙子。
 That's just a red orange.
 
 38
 00:02:27.756 --> 00:02:29.776
->> 凯尔 - 辛普森: 你会看着我，
+&GT；&GT；凯尔·辛普森：你看着我就像，
 &gt;&gt; Kyle Simpson: You'd look at me like,
 
 39
 00:02:29.776 --> 00:02:33.550
-你称它不改变它是什么
-what you call it doesn't
-change what it is.
+你管它叫什么都不会改变它的本来面目。
+what you call it doesn't change what it is.
 
 40
 00:02:33.550 --> 00:02:35.840
-是个苹果对吧
+是苹果对吧？
 It's an apple, right?
 
 41
 00:02:35.840 --> 00:02:38.939
-你管这叫什么都不改
-What you call this doesn't
-change what it is.
+你所说的这并不能改变它的本质。
+What you call this doesn't change what it is.
 
 42
 00:02:38.939 --> 00:02:40.810
-它只会造成更多的混乱。
+这只会造成更多的混乱。
 It only creates more confusion.
 
 43
 00:02:42.110 --> 00:02:45.659
-20 多年的 JavaScript 开发人员感到困惑
-For 20 plus years JavaScript
-developers have been confused
+20多年来，JavaScript开发人员一直感到困惑
+For 20 plus years JavaScript developers have been confused
 
 44
 00:02:45.659 --> 00:02:49.069
-在 JavaScript 工作中不进行分类。
+为什么JavaScript中的类不起作用。
 by why don't classes in JavaScript work.
 
 45
 00:02:49.069 --> 00:02:52.302
-他们用其他语言做的，没有人有胆量
-The way they do in other languages, and
-nobody seems to have had the courage
+就像他们在其他语言中做的那样，似乎没有人有勇气
+The way they do in other languages, and nobody seems to have had the courage
 
 46
 00:02:52.302 --> 00:02:55.968
-告诉他们，那是因为系统完全是完全不同的。
-to tell them, it's because the systems
-are completely fundamentally different.
+告诉他们，这是因为系统完全不同。
+to tell them, it's because the systems are completely fundamentally different.
 
 47
 00:02:58.423 --> 00:03:03.381
->> 凯尔 - 辛普森: 在某种意义上，我们一直在迎合情感上的情感
-&gt;&gt; Kyle Simpson: We've been, in a sense,
-pandering to the emotional attachment
+&GT；&GT；Kyle Simpson：在某种意义上，我们一直在迎合情感依恋
+&gt;&gt; Kyle Simpson: We've been, in a sense, pandering to the emotional attachment
 
 48
 00:03:03.381 --> 00:03:08.247
-到类设计模式，并在其顶部添加额外的复杂性
-to the class design pattern and
-adding extra complexity on top of
+添加到类设计模式中，并在
+to the class design pattern and adding extra complexity on top of
 
 49
 00:03:08.247 --> 00:03:12.230
-针对语法制糖设计师的 JavaScript 。
-JavaScript to suit
-the syntactic sugar designers.
+适合语法糖设计者的JavaScript。
+JavaScript to suit the syntactic sugar designers.
 
 50
 00:03:12.230 --> 00:03:17.110
-不只是拥抱已经存在的 JavaScript 。
-Instead of just embracing
-what JavaScript already is.
+而不是仅仅拥抱JavaScript已经是什么。
+Instead of just embracing what JavaScript already is.
 
 51
 00:03:17.110 --> 00:03:22.400
-拥抱它的原型系统，拥抱这一动态。
-Embracing its prototype system,
-embracing the dynamic this nature.
+拥抱其原型系统，拥抱动态这一性质。
+Embracing its prototype system, embracing the dynamic this nature.
 
 52
 00:03:22.400 --> 00:03:25.840
-我们一直试图把所有这些东西放在它上
-We keep trying to put all these other
-things on it so that it can be a class
+我们一直在尝试把所有其他的东西放在上面，这样它就可以成为一个类
+We keep trying to put all these other things on it so that it can be a class
 
 53
 00:03:25.840 --> 00:03:30.670
-系统， dang ，肯定是班，实际上不是上课。
-system, dang it, it's definitely classes,
-and in reality it's not classes.
+系统，该死的，它绝对是类，而实际上它不是类。
+system, dang it, it's definitely classes, and in reality it's not classes.
 
 54
 00:03:31.840 --> 00:03:33.930
-我们只是想做个更好的
+只是我们想做得更好
 It's just we're trying to do a better and
 
 55
 00:03:33.930 --> 00:03:36.949
-更能把它打成像上课的样子
-better job of duct taping
-it to look like classes.
+更好的工作，管道胶带它看起来像班级。
+better job of duct taping it to look like classes.

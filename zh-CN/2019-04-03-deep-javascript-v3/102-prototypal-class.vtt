@@ -2,26 +2,23 @@ WEBVTT
 
 1
 00:00:00.180 --> 00:00:02.520
->> Kyle Simpson: 相同类语法。
+&gt；&gt；Kyle Simpson：相同的类语法。
 &gt;&gt; Kyle Simpson: The same class syntax.
 
 2
 00:00:02.520 --> 00:00:08.039
-但这就像在糖下面，这就是密码的样子。
-But this is like the underneath the sugar,
-this is what the code would look like.
+但这就像糖下面的东西，这就是代码的样子。
+But this is like the underneath the sugar, this is what the code would look like.
 
 3
 00:00:08.039 --> 00:00:14.539
-这就是以前做原型班的学校方式，所以叫。
-This is the old school way of doing
-a prototypal class, so called.
+这是老式的原型课，也就是所谓的。
+This is the old school way of doing a prototypal class, so called.
 
 4
 00:00:14.539 --> 00:00:18.550
-你注意到我们有一个工作坊的功能
-You notice that we have a workshop
-function which is going to serve sort of
+你注意到我们有一个车间功能，它将提供某种
+You notice that we have a workshop function which is going to serve sort of
 
 5
 00:00:18.550 --> 00:00:20.730
@@ -30,80 +27,70 @@ the purpose of the constructor.
 
 6
 00:00:20.730 --> 00:00:24.600
-然后我们开始向 Workshop.prototype 添加方法。
-And then we start adding methods
-to the Workshop.prototype, and
+然后我们开始向Workshop.prototype添加方法，然后
+And then we start adding methods to the Workshop.prototype, and
 
 7
 00:00:24.600 --> 00:00:26.440
-我们会打新电话之类的
+我们打新电话什么的。
 we cog new calls and stuff.
 
 8
 00:00:26.440 --> 00:00:30.510
-所以你可以看到一些阶级的基础
-So you see some of
-the underpinnings of classes, but
+所以你看到了一些课程的基础，但是
+So you see some of the underpinnings of classes, but
 
 9
 00:00:30.510 --> 00:00:35.979
-这就是在等级糖中发生的事情
-this is the plumbing underneath what
-is happening in the class sugar.
+这是在糖类中正在发生的事情下面的管道。
+this is the plumbing underneath what is happening in the class sugar.
 
 10
 00:00:37.710 --> 00:00:41.070
-因为如果你想做的话你就不会再写这代码了
-It's not that you would really write this
-code anymore because if you wanted to do
+这并不是说你真的会写这段代码，因为如果你想这样做
+It's not that you would really write this code anymore because if you wanted to do
 
 11
 00:00:41.070 --> 00:00:45.030
-几乎可以肯定的是使用类语法。
-classes at all you almost certainly
-be using the class syntax.
+类，您几乎可以肯定使用的是类语法。
+classes at all you almost certainly be using the class syntax.
 
 12
 00:00:45.030 --> 00:00:48.399
-你不会再写这个原型代码了但我认为
-You wouldn't write this prototypal code
-anymore, but I think it's important for
+您不会再编写这个原型代码了，但我认为这对
+You wouldn't write this prototypal code anymore, but I think it's important for
 
 13
 00:00:48.399 --> 00:00:50.850
-你知道这些水管是怎么工作的
+让你了解这个管道是如何工作的。
 you to understand how this plumbing works.
 
 14
 00:00:50.850 --> 00:00:52.049
-关系在哪里 ?
+关系在哪里？
 Where are the relationships?
 
 15
 00:00:52.049 --> 00:00:53.869
-这些联系都在哪里 ?
+这些联系都在哪里？
 Where are all of those linkages?
 
 16
 00:00:53.869 --> 00:00:57.950
-因为他们不是拷贝，因为拷贝其实是一个不好的心理模型，
-Since they're not copies and since
-copying is actually a bad mental model,
+因为它们不是复制品，而且复印实际上是一种糟糕的心理模型，
+Since they're not copies and since copying is actually a bad mental model,
 
 17
 00:00:57.950 --> 00:01:03.340
-我们需要一个不同的心理模型来帮助我们了解等级如何运作，
-we need a different mental model that
-helps us understand how class works, how
+我们需要一个不同的心智模型来帮助我们理解班级是如何工作的，如何
+we need a different mental model that helps us understand how class works, how
 
 18
 00:01:03.340 --> 00:01:07.310
-它真的有用，所以我们可以理解它休息的时候，为什么会中断呢 ?
-it really works, so that we can understand
-when it breaks, why did it break?
+它真的起作用了，所以我们可以理解当它坏了的时候，它为什么会坏掉？
+it really works, so that we can understand when it breaks, why did it break?
 
 19
 00:01:07.310 --> 00:01:09.530
-为什么它做的事情跟我们预期的不一样 ?
-Why did it do something
-different than what we expected?
+为什么它会做一些与我们预期不同的事情呢？
+Why did it do something different than what we expected?

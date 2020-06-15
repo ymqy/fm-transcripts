@@ -2,582 +2,535 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:02.694
->> 凯尔 - 辛普森: 我们已经完成了第 5 行，
-&gt;&gt; Kyle Simpson: We have
-finished executing line 5, and
+&gt；&gt；Kyle Simpson：我们已经完成了第5行的执行，并且
+&gt;&gt; Kyle Simpson: We have finished executing line 5, and
 
 2
 00:00:02.694 --> 00:00:04.288
-行刑就会移回来
+行刑往回移动。
 execution moves back.
 
 3
 00:00:04.288 --> 00:00:05.790
-现在我们在 14 号线上
+现在我们在14号线。
 Now we're on line 14.
 
 4
 00:00:05.790 --> 00:00:07.070
-第 14 行如何执行?
+第14行是如何执行的？
 How does line 14 execute?
 
 5
 00:00:07.070 --> 00:00:10.073
-但愿你对这一点有一点自信
-Hopefully at this point you're feeling
-a little more confident with this
+希望在这一点上你对此更有信心
+Hopefully at this point you're feeling a little more confident with this
 
 6
 00:00:10.073 --> 00:00:10.759
-对话。
+谈话。
 conversation.
 
 7
 00:00:10.759 --> 00:00:12.403
-那么第 14 行是如何执行的 ?
+那么第14行是如何执行的呢？
 So how does line 14 execute?
 
 8
 00:00:14.569 --> 00:00:16.923
->> Student : Asks the global scope if it- >> Kyle Simpson: All right so so
-&gt;&gt; Student: Asks the global scope if it-
-&gt;&gt; Kyle Simpson: All right so
+&gt；&gt；学生：询问全局范围是否-&gt；&gt；Kyle Simpson：好的
+&gt;&gt; Student: Asks the global scope if it- &gt;&gt; Kyle Simpson: All right so
 
 9
 00:00:16.923 --> 00:00:18.178
-谁在说话
+谁在说话？
 who's talking?
 
 10
 00:00:18.178 --> 00:00:22.039
-它会成为虚拟机 JavaScript 引擎
-It's gonna be the virtual machine,
-the JavaScript engine.
+它将是虚拟机，JavaScript引擎。
+It's gonna be the virtual machine, the JavaScript engine.
 
 11
 00:00:22.039 --> 00:00:26.004
-他在 14 线上发现了什么
+他在14号线上发现了什么？
 And what did he find on line 14?
 
 12
 00:00:26.004 --> 00:00:27.960
-我们在 14 线上有什么
+14号线上有什么？
 What do we have right here on line 14?
 
 13
 00:00:27.960 --> 00:00:29.268
->> Student2: 源。
+&gt；&gt；学生2：来源。
 &gt;&gt; Student2: A source.
 
 14
 00:00:29.268 --> 00:00:30.949
->> 凯尔 - 辛普森: 我们有一个资料来源，谢谢你。
-&gt;&gt; Kyle Simpson: We have
-a source reference, thank you.
+&gt；&gt；Kyle Simpson：我们有一个来源参考，谢谢。
+&gt;&gt; Kyle Simpson: We have a source reference, thank you.
 
 15
 00:00:30.949 --> 00:00:33.929
-我们有一个大理石的来源
-We have a source reference for
-a marble called?
+我们有一个大理石的来源参考叫做？
+We have a source reference for a marble called?
 
 16
 00:00:33.929 --> 00:00:34.853
->> Studt2: 询问。 >> Kyle Simpson: 询问， so
-&gt;&gt; Student2: Ask.
-&gt;&gt; Kyle Simpson: Ask, so
+学生2：问。&gt；&gt；Kyle Simpson：问，所以
+&gt;&gt; Student2: Ask. &gt;&gt; Kyle Simpson: Ask, so
 
 17
 00:00:34.853 --> 00:00:36.780
-我们要查的是谁
+我们要找谁去查？
 who are we gonna look that up with?
 
 18
 00:00:36.780 --> 00:00:38.640
-我们会说的
+我们要说，嘿？
 We're gonna say, hey?
 
 19
 00:00:38.640 --> 00:00:39.429
->> Student: 全局作用域。 >> Student2: Red。
-&gt;&gt; Student: Global scope.
-&gt;&gt; Student2: Red.
+&gt；&gt；学生：全局范围。&gt；&gt；学生2：红色。
+&gt;&gt; Student: Global scope. &gt;&gt; Student2: Red.
 
 20
 00:00:39.429 --> 00:00:41.988
->> 凯尔 - 辛普森: 红的范围，全球范围，谢谢你。
-&gt;&gt; Kyle Simpson: Hey red scope,
-hey global scope, thank you.
+&gt；&gt；Kyle Simpson：嘿，红色范围，嘿全球范围，谢谢。
+&gt;&gt; Kyle Simpson: Hey red scope, hey global scope, thank you.
 
 21
 00:00:41.988 --> 00:00:45.808
-我有个弹珠的标识叫什么
+我有一个大理石的标识符叫？
 I have an identifier of a marble called?
 
 22
 00:00:45.808 --> 00:00:47.250
->> 类: 询问。 >> 凯尔 - 辛普森: 问，谢谢，
-&gt;&gt; Class: Ask.
-&gt;&gt; Kyle Simpson: Ask, thank you,
+&gt；&gt；类：问。&gt；&gt；Kyle Simpson：问，谢谢，
+&gt;&gt; Class: Ask. &gt;&gt; Kyle Simpson: Ask, thank you,
 
 23
 00:00:47.250 --> 00:00:49.618
-你知道有个大理石叫什么吗
+你知道一个叫Ask的大理石吗？
 do you know about a marble called ask?
 
 24
 00:00:49.618 --> 00:00:52.250
-全球范围的应对将会是什么 ?
-And the response from the global
-scope is going to be?
+全局范围的响应将是？
+And the response from the global scope is going to be?
 
 25
 00:00:52.250 --> 00:00:52.908
->> 类: 是。
+&gt；&gt；班级：是的。
 &gt;&gt; Class: Yes.
 
 26
 00:00:52.908 --> 00:00:55.170
->> 凯尔 - 辛普森: 这是你的红色大理石。
+凯尔·辛普森：这是你的红色大理石。
 &gt;&gt; Kyle Simpson: Here's your red marble.
 
 27
 00:00:55.170 --> 00:00:58.258
-现在我们去那个红色的大理石，那个在记忆中的位置，我们说，哎，
-So now we go to that red marble,
-that location in memory, and we say, hey,
+所以现在我们去那个红色的大理石，记忆中的那个位置，然后我们说，嘿，
+So now we go to that red marble, that location in memory, and we say, hey,
 
 28
 00:00:58.258 --> 00:00:59.738
-红色的大理石你有什么
+红色大理石，里面有什么？
 red marble, what do you have in it?
 
 29
 00:00:59.738 --> 00:01:02.118
-那他有什么
+他有什么？
 And what does he have?
 
 30
 00:01:02.118 --> 00:01:03.198
->> Student2: 问题，问题。
+&gt；&gt；学生2：问题，问题。
 &gt;&gt; Student2: Question, question.
 
 31
 00:01:03.198 --> 00:01:04.739
->> 凯尔 - 辛普森: 功能，对吗 ?
+&gt；&gt；Kyle Simpson：函数，对吗？
 &gt;&gt; Kyle Simpson: The function, right?
 
 32
 00:01:04.739 --> 00:01:06.500
-他有这个功能
+他有这个功能。
 He has the function.
 
 33
 00:01:06.500 --> 00:01:10.698
-绿色水桶，在第 8 行上宣布的事情。
-The green bucket,
-the thing that was declared on line 8.
+绿色的水桶，就是在第8行声明的东西。
+The green bucket, the thing that was declared on line 8.
 
 34
 00:01:10.698 --> 00:01:11.890
-所以现在我们有了一个功能。
+现在我们有了一个函数。
 So now we have a function.
 
 35
 00:01:11.890 --> 00:01:16.629
-在第 14 行，小的左右括号执行函数。
-And on line 14 that little open close
-parenthesis executes the function.
+在第14行，这个小的左括号执行函数。
+And on line 14 that little open close parenthesis executes the function.
 
 36
 00:01:16.629 --> 00:01:20.079
-现在执行移至第 9 行。
+现在执行移到第9行。
 Now execution moves to line 9.
 
 37
 00:01:20.079 --> 00:01:22.248
-9 号线没有其他的了
+第9行，没有更多的var。
 Line 9, there's no more var.
 
 38
 00:01:22.248 --> 00:01:26.560
-但是我们现在到了最后，我们如何执行第 9 行 ?
-But we're getting to the end now,
-so how do we execute line 9?
+但是我们现在就要结束了，那么我们如何执行第9行呢？
+But we're getting to the end now, so how do we execute line 9?
 
 39
 00:01:26.560 --> 00:01:28.250
-谈话开始怎么样了
+谈话是怎么开始的？
 How's the conversation start?
 
 40
 00:01:28.250 --> 00:01:29.009
->> Student: Hey， green bucket。
+&gt；&gt；学生：嘿，绿色桶。
 &gt;&gt; Student: Hey, green bucket.
 
 41
 00:01:29.009 --> 00:01:29.849
->> 凯尔 - 辛普森: 嘿，绿色水桶。
+&gt；&gt；Kyle Simpson：嘿，绿色桶。
 &gt;&gt; Kyle Simpson: Hey, green bucket.
 
 42
 00:01:29.849 --> 00:01:31.549
-嘿范围问吧
+嘿，问的范围。
 Hey, scope of ask.
 
 43
 00:01:31.549 --> 00:01:33.936
-我有什么参考?
+我有一个什么样的推荐人？
 I have a what kind of reference?
 
 44
 00:01:33.936 --> 00:01:35.305
->> Student2: 排序。 >> Student : 接收。
-&gt;&gt; Student2: Sorts.
-&gt;&gt; Student: A receiving.
+&gt；&gt；学生2：排序。&gt；&gt；学生：接收。
+&gt;&gt; Student2: Sorts. &gt;&gt; Student: A receiving.
 
 45
 00:01:35.305 --> 00:01:37.088
->> 凯尔 - 辛普森: 这是一个目标参考，对吧 ?
-&gt;&gt; Kyle Simpson: This is
-a target reference, right?
+&gt；&gt；Kyle Simpson：这是一个目标引用，对吗？
+&gt;&gt; Kyle Simpson: This is a target reference, right?
 
 46
 00:01:37.088 --> 00:01:38.109
-接收也可以。
+接待员也很好。
 Receiving is fine too.
 
 47
 00:01:38.109 --> 00:01:41.829
-我有个接收，或者一个叫标识的目标引用 ?
-I have a receiving, or a target
-reference for an identifier called?
+我有一个接收方，或者一个称为？的标识符的目标引用。
+I have a receiving, or a target reference for an identifier called?
 
 48
 00:01:41.829 --> 00:01:42.739
->> Studt2: 问题。
+&gt；&gt；学生2：问题。
 &gt;&gt; Student2: Question.
 
 49
 00:01:42.739 --> 00:01:44.152
->> 类: 问题。 >> Kyle Simpson: Called 问题，
-&gt;&gt; Class: Question.
-&gt;&gt; Kyle Simpson: Called question,
+&gt；&gt；类：问题。&gt；&gt；Kyle Simpson：提出问题，
+&gt;&gt; Class: Question. &gt;&gt; Kyle Simpson: Called question,
 
 50
 00:01:44.152 --> 00:01:45.569
-就在 9 号线上
+就在9号线。
 right there on line 9.
 
 51
 00:01:45.569 --> 00:01:47.314
-我有这个大理石有听过吗
+所以我有这个大理石，听说过吗？
 So I have this marble, ever heard of it?
 
 52
 00:01:47.314 --> 00:01:49.549
-这个范围的答案会是什么呢 ?
-And the answer from that
-scope is going to be?
+那么这个范围的答案是？
+And the answer from that scope is going to be?
 
 53
 00:01:49.549 --> 00:01:50.359
-嗯。 >> 类: 是。
-Yes.
-&gt;&gt; Class: Yes.
+是啊。&gt；&gt；班级：是的。
+Yes. &gt;&gt; Class: Yes.
 
 54
 00:01:50.359 --> 00:01:51.957
->Student2: 这是你的大理石。 >> 凯尔 - 辛普森: 这是你的绿色
-&gt;&gt; Student2: Here's your marble.
-&gt;&gt; Kyle Simpson: Here is your green
+学生2：这是你的大理石。&gt；&gt；Kyle Simpson：这是你的果岭
+&gt;&gt; Student2: Here's your marble. &gt;&gt; Kyle Simpson: Here is your green
 
 55
 00:01:51.957 --> 00:01:52.989
-大理石好吗
+大理石，好吗？
 marble, okay?
 
 56
 00:01:52.989 --> 00:01:56.558
-现在我们有了绿色的大理石，我们正在给它分配。
-So now we have the green marble and
-we are assigning to it.
+所以现在我们有了绿色的大理石，我们正在分配给它。
+So now we have the green marble and we are assigning to it.
 
 57
 00:01:56.558 --> 00:01:58.965
-所以我们不关心现在的情况
+所以我们现在不在乎里面有什么
 So we don't care what's in it right now.
 
 58
 00:01:58.965 --> 00:02:01.947
-我们去从右边拿到价值
-We go and
-get the value from the right-hand side,
+我们去取右边的值，
+We go and get the value from the right-hand side,
 
 59
 00:02:01.947 --> 00:02:05.709
-我们会把记忆和第 9 行的位置
-we assign into that location of memory and
-line 9 is finished.
+我们分配到内存的那个位置，第9行就完成了。
+we assign into that location of memory and line 9 is finished.
 
 60
 00:02:05.709 --> 00:02:07.649
-现在第 10 行
+现在，第10行。
 Now, line 10.
 
 61
 00:02:07.649 --> 00:02:10.099
-我们记得控制台是如何运作的对吗
+我们记得控制台是怎么工作的，对吧？
 We remember how the console works, right?
 
 62
 00:02:10.099 --> 00:02:13.754
-所以控制台在那里找不到它，就在全球范围内，找到它，
-So console doesn't find it there,
-it goes to the global scope, finds it,
+所以Console不会在那里找到它，它会转到全局范围，找到它，
+So console doesn't find it there, it goes to the global scope, finds it,
 
 63
 00:02:13.754 --> 00:02:15.098
-查找名为 log的方法。
+查找名为log的方法。
 finds a method called log.
 
 64
 00:02:15.098 --> 00:02:16.978
-但在它可以执行日志之前
+但是在它可以执行log之前，
 But before it can execute log,
 
 65
 00:02:16.978 --> 00:02:20.598
-一定要搞清楚到底怎么了对吧
-it's gotta figure out what's
-being passed to it, right?
+它必须弄清楚传递给它的是什么，对吗？
+it's gotta figure out what's being passed to it, right?
 
 66
 00:02:20.598 --> 00:02:23.849
-你可以看到第 10 行，我们正在向它传递一些东西。
-You see there on line 10,
-that we're passing something into it.
+你可以在第10行看到，我们正在向它传递一些东西。
+You see there on line 10, that we're passing something into it.
 
 67
 00:02:23.849 --> 00:02:25.389
-我们要穿什么
+我们路过的是什么？
 And what are we passing?
 
 68
 00:02:25.389 --> 00:02:26.513
-这是另一个大理石的参考资料
+这是对另一颗大理石的引用。
 It's a reference to another marble.
 
 69
 00:02:26.513 --> 00:02:28.128
-所以我们得查一查
+所以我们得查一下。
 So we gotta look that up.
 
 70
 00:02:28.128 --> 00:02:30.127
-那么这个研究如何进行呢 ?
+那么这个查找是如何工作的呢？
 So how does that look up work?
 
 71
 00:02:30.127 --> 00:02:31.598
->> 类: [CROSSTALK] 绿色存储区。
+&gt；&gt；类：[串音]绿色桶。
 &gt;&gt; Class: [CROSSTALK] the green bucket.
 
 72
 00:02:31.598 --> 00:02:33.930
->> 凯尔 - 辛普森: 嘿，绿桶，嘿，问的范围，
-&gt;&gt; Kyle Simpson: Hey,
-green bucket, hey, scope of ask,
+&gt；&gt；Kyle Simpson：嘿，绿色桶，嘿，问的范围，
+&gt;&gt; Kyle Simpson: Hey, green bucket, hey, scope of ask,
 
 73
 00:02:33.930 --> 00:02:35.740
-我有什么参考?
+我有一个什么样的推荐人？
 I have a what kind of reference?
 
 74
 00:02:35.740 --> 00:02:36.908
->> 类: 源。
+&gt；&gt；类：源。
 &gt;&gt; Class: Source.
 
 75
 00:02:36.908 --> 00:02:39.520
->> Kyle Simpson: 源参考，感谢您 ?
-&gt;&gt; Kyle Simpson: Source reference,
-thank you, for?
+&gt；&gt；Kyle Simpson：来源参考，谢谢，是什么？
+&gt;&gt; Kyle Simpson: Source reference, thank you, for?
 
 76
 00:02:39.520 --> 00:02:40.340
->> 类: 问题。
+&gt；&gt；类：问题。
 &gt;&gt; Class: Question.
 
 77
 00:02:40.340 --> 00:02:41.229
->> 凯尔 - 辛普森: 问题，听说过吗 ?
-&gt;&gt; Kyle Simpson: Question,
-ever heard of it?
+&gt；&gt；Kyle Simpson：问题，听说过吗？
+&gt;&gt; Kyle Simpson: Question, ever heard of it?
 
 78
 00:02:41.229 --> 00:02:42.569
-答案是吗 ?
+答案是？
 And the answer is?
 
 79
 00:02:42.569 --> 00:02:43.468
->> 类: 是。
+&gt；&gt；班级：是的。
 &gt;&gt; Class: Yes.
 
 80
 00:02:43.468 --> 00:02:45.530
->> 凯尔 - 辛普森: 这是你的绿色大理石。
+凯尔·辛普森：这是你的绿色大理石。
 &gt;&gt; Kyle Simpson: Here's your green marble.
 
 81
 00:02:45.530 --> 00:02:47.548
-现在因为我们不给它分配
-And now,
-because we're not assigning to it,
+现在，因为我们没有分配给它，
+And now, because we're not assigning to it,
 
 82
 00:02:47.548 --> 00:02:49.579
-现在我们要的是它的价值
-now we want the value
-that's currently in it.
+现在我们想要它当前的值。
+now we want the value that's currently in it.
 
 83
 00:02:49.579 --> 00:02:51.438
-所以我们去那个内存区。
+所以我们去记忆的那个区域。
 So we go to that area of memory.
 
 84
 00:02:51.438 --> 00:02:55.538
-我们把它的价值拉出来，这刚好是一个字符串，为什么呢 ?
-We pull the value out, which happens
-to be the string, Why in this case?
+我们取出值，恰好是字符串，为什么在这种情况下？
+We pull the value out, which happens to be the string, Why in this case?
 
 85
 00:02:55.538 --> 00:02:59.956
-这一参数被分配给了
-And that argument is assigned
-to the parameter that
+并将该参数分配给
+And that argument is assigned to the parameter that
 
 86
 00:02:59.956 --> 00:03:03.149
-console.log 正在接收，好吗 ?
+正在接收console.log，好吗？
 console.log is receiving, okay?
 
 87
 00:03:03.149 --> 00:03:06.448
-所以，争论，我们过去的事情，
+所以争论，我们传递的东西，
 So arguments, the things that we pass in,
 
 88
 00:03:06.448 --> 00:03:10.399
-将分配给接收这些参数的参数。
-get assigned to the parameters
-that receive them.
+分配给接收它们的参数。
+get assigned to the parameters that receive them.
 
 89
 00:03:10.399 --> 00:03:15.668
-您可以考虑参数，例如，如果我有函数询问 ( ) 和
-You can think about a parameter,
-like if I had function ask() and
+你可以考虑一个参数，比如我有函数ask()和
+You can think about a parameter, like if I had function ask() and
 
 90
 00:03:15.668 --> 00:03:20.668
-有一个参数，参数是什么参考?
-it took a parameter,
-the parameter is what kind of reference?
+它取了一个参数，这个参数是什么样的参考？
+it took a parameter, the parameter is what kind of reference?
 
 91
 00:03:20.668 --> 00:03:21.800
->> Student: 它就像一个变量名。
+&gt；&gt；学生：它就像一个变量名。
 &gt;&gt; Student: It's like a variable name.
 
 92
 00:03:21.800 --> 00:03:23.568
->> 凯尔 - 辛普森: 它是，但它是什么样的参考呢 ?
-&gt;&gt; Kyle Simpson: It is, but
-what kind of reference is it?
+&gt；&gt；Kyle Simpson：是的，但它是一种什么样的参考？
+&gt;&gt; Kyle Simpson: It is, but what kind of reference is it?
 
 93
 00:03:23.568 --> 00:03:25.968
-是那个位置
+是那个位置。
 It's that position.
 
 94
 00:03:25.968 --> 00:03:26.750
->> 类: 目标。
+&gt；&gt；类：目标。
 &gt;&gt; Class: Target.
 
 95
 00:03:26.750 --> 00:03:27.841
->> 凯尔 - 辛普森: 这是一个目标。
+&gt；&gt；Kyle Simpson：这是一个目标。
 &gt;&gt; Kyle Simpson: It's a target.
 
 96
 00:03:27.841 --> 00:03:30.394
-这是个目标 如果在一个变量中有一个变量
-It's a target.
-And if you have a variable in an argument
+这是一个目标。如果参数中有变量
+It's a target. And if you have a variable in an argument
 
 97
 00:03:30.394 --> 00:03:33.600
-在第 10 行的位置上是什么意思
-position like in line 10,
-what kind of reference is that?
+像第10行那样的位置，那是什么样的参考呢？
+position like in line 10, what kind of reference is that?
 
 98
 00:03:33.600 --> 00:03:34.468
->> 类: 源。
+&gt；&gt；类：源。
 &gt;&gt; Class: Source.
 
 99
 00:03:34.468 --> 00:03:34.968
->> 凯尔 - 辛普森: 这是一个消息来源。
+&gt；&gt；Kyle Simpson：这是一个来源。
 &gt;&gt; Kyle Simpson: It's a source.
 
 100
 00:03:37.069 --> 00:03:41.757
-所以 JavaScript 引擎的处理和执行
-So there's a processing and
-execution of a JavaScript engine,
+所以有一个JavaScript引擎的处理和执行，
+So there's a processing and execution of a JavaScript engine,
 
 101
 00:03:41.757 --> 00:03:46.368
-让你们自己去思考两个阶段的处理
-aligning yourselves to think
-about two stages of processing.
+调整自己考虑处理的两个阶段。
+aligning yourselves to think about two stages of processing.
 
 102
 00:03:46.368 --> 00:03:50.759
-一个阶段，我们把所有范围，所有桶，所有弹珠都计算出来。
-One stage where we figure out all the
-scopes, all the buckets, all the marbles.
+一个阶段，我们找出所有的范围，所有的水桶，所有的弹珠。
+One stage where we figure out all the scopes, all the buckets, all the marbles.
 
 103
 00:03:50.759 --> 00:03:56.299
-第二阶段，我们使用所有信息来执行代码。
-And the second stage, where we use all
-that information to execute the code.
+第二阶段，我们使用所有这些信息来执行代码。
+And the second stage, where we use all that information to execute the code.
 
 104
 00:03:56.299 --> 00:04:00.658
-恭喜，我证明您是编译器工程师。
-Congratulations, I certify
-you as compiler engineers.
+恭喜你，我证明你是编译器工程师。
+Congratulations, I certify you as compiler engineers.
 
 105
 00:04:00.658 --> 00:04:03.740
-您已编译并运行 JavaScript 程序。
-You have compiled and
-run a JavaScript program.
+您已经编译并运行了一个JavaScript程序。
+You have compiled and run a JavaScript program.
 
 106
 00:04:03.740 --> 00:04:05.057
->> 学生: 嗯。
+&gt；&gt；学生：是的。
 &gt;&gt; Student: Yeah.
 
 107
 00:04:05.057 --> 00:04:07.127
->> 类: [APPLAUSE]
+&gt；&gt；类：[掌声]
 &gt;&gt; Class: [APPLAUSE]

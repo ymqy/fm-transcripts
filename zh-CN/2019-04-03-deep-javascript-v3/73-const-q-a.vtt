@@ -2,68 +2,58 @@ WEBVTT
 
 1
 00:00:00.340 --> 00:00:04.700
->> 扬声器 1: 如果您仅使用字符串的字符串，那么这是有用的方法吗 ?
-&gt;&gt; Speaker 1: If you use just const for
-strings, would that be a helpful way to?
+&gt；&gt；Speaker 1：如果您只对字符串使用const，这会是一种有用的方式吗？
+&gt;&gt; Speaker 1: If you use just const for strings, would that be a helpful way to?
 
 2
 00:00:04.700 --> 00:00:08.679
->> 凯尔 - 辛普森: 是的，我只对原始值使用常量关键字。
-&gt;&gt; Kyle Simpson: Yes, I only use the const
-keyword for primitive, immutable values.
+&gt；&gt；Kyle Simpson：是的，我只使用const关键字表示原语，不变的值。
+&gt;&gt; Kyle Simpson: Yes, I only use the const keyword for primitive, immutable values.
 
 3
 00:00:08.679 --> 00:00:11.449
-这就是字符串，数字和机器人的情况。
-So that goes for strings,
-numbers, and booleans.
+这适用于字符串、数字和布尔值。
+So that goes for strings, numbers, and booleans.
 
 4
 00:00:11.449 --> 00:00:16.010
-而且即使在那东西基本上是语义上的时候
-And even then, I only use it when
-that thing is basically a semantic
+即使这样，我也只在那个东西基本上是语义的时候才用它
+And even then, I only use it when that thing is basically a semantic
 
 5
 00:00:16.010 --> 00:00:20.980
-将文字放入一个或几个位置的占位符。
-placeholder for where I would have just
-put the literal in one or a few places.
+占位符，我会把文字放在一个或几个地方。
+placeholder for where I would have just put the literal in one or a few places.
 
 6
 00:00:20.980 --> 00:00:25.839
-所以我不只是为了使用 const而把它用在每一个绳子上。
-So I wouldn't just use it for every
-string just for the sake of using const.
+所以我不会仅仅为了使用const而对每个字符串都使用它。
+So I wouldn't just use it for every string just for the sake of using const.
 
 7
 00:00:25.839 --> 00:00:29.089
-但如果我能把它藏在某个地方
-But if I had a string where I was
-gonna stick it somewhere, say for
+但是如果我有一根绳子，我要把它粘在某个地方，比如
+But if I had a string where I was gonna stick it somewhere, say for
 
 8
 00:00:29.089 --> 00:00:32.520
-例如， API URL ，这是一个完美的示例。
-example an API URL, well,
-that's a perfect example.
+例如API URL，嗯，这是一个完美的例子。
+example an API URL, well, that's a perfect example.
 
 9
 00:00:32.520 --> 00:00:35.710
-您的 API URL 几乎肯定不会在运行时更改
-Your API URL's almost certainly not
-gonna change throughout the runtime
+您的API URL几乎肯定不会在整个运行时更改
+Your API URL's almost certainly not gonna change throughout the runtime
 
 10
 00:00:35.710 --> 00:00:36.369
-的情况。
+程序的。
 of the program.
 
 11
 00:00:37.579 --> 00:00:42.909
-在该作用域顶部指定一次，调用其 customerApiUrl，
-Assign it once at the top of that scope,
-call it customerApiUrl,
+在该作用域的顶部分配一次，将其命名为customerApiUrl，
+Assign it once at the top of that scope, call it customerApiUrl,
 
 12
 00:00:42.909 --> 00:00:45.960
@@ -72,59 +62,50 @@ and then use that const in the program.
 
 13
 00:00:45.960 --> 00:00:48.679
-它给出了字符串文字的语义。
-It gives semantic meaning to
-otherwise that string literal.
+它为字符串文字赋予了语义意义。
+It gives semantic meaning to otherwise that string literal.
 
 14
 00:00:50.670 --> 00:00:55.119
->> 扬声器 1: 然后使用数组和对象，我通常只执行深度冻结或
-&gt;&gt; Speaker 1: And then with arrays and
-objects I usually just put deep freeze or
+&gt；&gt；扬声器1：然后对于数组和对象，我通常只是将深度冻结或
+&gt;&gt; Speaker 1: And then with arrays and objects I usually just put deep freeze or
 
 15
 00:00:55.119 --> 00:00:56.689
-到处都是冻结期
+在它周围定格。
 freeze around it.
 
 16
 00:00:56.689 --> 00:01:01.750
->> 凯尔 - 辛普森: 是的，我喜欢使用对象。
-&gt;&gt; Kyle Simpson: So yes, I do like to
-use object.freeze, which is a shallow
+&gt；&gt；Kyle Simpson：所以是的，我确实喜欢使用object.Freeze，这是一个肤浅的
+&gt;&gt; Kyle Simpson: So yes, I do like to use object.freeze, which is a shallow
 
 17
 00:01:01.750 --> 00:01:07.128
-数组或对象中所有属性的只读锁定。
-read-only lock of all the properties
-in an array or an object.
+数组或对象中所有属性的只读锁。
+read-only lock of all the properties in an array or an object.
 
 18
 00:01:07.128 --> 00:01:11.405
-这会使它变成一种不可改变的价值。
-And that does sort of ostensively
-make it into an immutable value.
+这表面上确实使它变成了一个不变的值。
+And that does sort of ostensively make it into an immutable value.
 
 19
 00:01:11.405 --> 00:01:15.685
-不是真的，因为它没有深度，但它是为了达到这个目的。
-Not really, since it's not deep,
-but it sort of does that purpose.
+不是很深，因为它不深，但它可以达到这个目的。
+Not really, since it's not deep, but it sort of does that purpose.
 
 20
 00:01:15.685 --> 00:01:20.286
-不过我不会说 const x = object.freeze，因为它倾向于
-Still, I won't say const x =
-object.freeze, because it pretends to
+尽管如此，我还是不会说const x=object.Freeze，因为它假装
+Still, I won't say const x = object.freeze, because it pretends to
 
 21
 00:01:20.286 --> 00:01:25.209
-就像 const 跟冰冷有什么关系，也没有。
-the user as if const has something to
-do with the freezing, and it doesn't.
+用户好像const与冻结有关，但它没有。
+the user as if const has something to do with the freezing, and it doesn't.
 
 22
 00:01:26.400 --> 00:01:31.079
-所以我只会用一个原始的不可变的值来使用这个常量。
-So I still would only use the const with
-one of the primitive immutable values.
+所以我仍然只会将const与其中一个基本的不可变值一起使用。
+So I still would only use the const with one of the primitive immutable values.

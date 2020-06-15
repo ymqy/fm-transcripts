@@ -2,235 +2,203 @@ WEBVTT
 
 1
 00:00:00.025 --> 00:00:05.621
->> 凯尔: 我想谈谈，一种不需要打字的方法
-&gt;&gt; Kyle: I'd like to talk about,
-a way of doing typing that doesn't require
+&gt；&gt；Kyle：我想谈谈，一种不需要打字的方式
+&gt;&gt; Kyle: I'd like to talk about, a way of doing typing that doesn't require
 
 2
 00:00:05.621 --> 00:00:11.430
-我们要限制我们的编码风格只是为了完成类型感知的链接。
-us to limit our coding style just
-to accomplish type-aware linting.
+我们限制我们的编码风格只是为了完成类型感知的连接。
+us to limit our coding style just to accomplish type-aware linting.
 
 3
 00:00:13.127 --> 00:00:16.905
->> 凯尔: 缺少运行时行为，这是一个大问题。
-&gt;&gt; Kyle: The lack of runtime
-behavior by the way, is a big deal.
+&gt；&gt；Kyle：顺便说一下，缺少运行时行为是一件大事。
+&gt;&gt; Kyle: The lack of runtime behavior by the way, is a big deal.
 
 4
 00:00:16.905 --> 00:00:19.521
-也许我早该做个更重要的事
-Maybe I should've made a bigger
-deal about this earlier.
+也许我应该早点做个更大的交易。
+Maybe I should've made a bigger deal about this earlier.
 
 5
 00:00:19.521 --> 00:00:22.740
-但要想断言或者
-But the idea that the way
-to get assertions or
+但是获得断言的方法或者
+But the idea that the way to get assertions or
 
 6
 00:00:22.740 --> 00:00:27.964
-就像 Typescript 和
-guarantees about your codes behavior
-in something like Typescript and
+保证您的代码行为类似于键入脚本和
+guarantees about your codes behavior in something like Typescript and
 
 7
 00:00:27.964 --> 00:00:33.012
-流是你一定要改变正常做的
-Flow is that you necessarily have to
-change what you would normally do
+流程就是你必须改变你通常会做的事情
+Flow is that you necessarily have to change what you would normally do
 
 8
 00:00:33.012 --> 00:00:39.039
-关于你的编码这样显而易见的事情对于编译器是显而易见的
-about your coding so that the things that
-are obvious are obvious to the compiler.
+关于你的编码，这样编译器就会明白。
+about your coding so that the things that are obvious are obvious to the compiler.
 
 9
 00:00:40.890 --> 00:00:44.426
-我觉得你的类型是很重要的，但是有区别的
-I do think it's important for your types
-to be obvious, but there is a difference
+我确实认为你的类型很重要，但这是有区别的
+I do think it's important for your types to be obvious, but there is a difference
 
 10
 00:00:44.426 --> 00:00:47.130
-在对代码的读者做出一些显而易见的事情之间
-between making something obvious
-to the reader of the code and
+在让代码的读者看起来很明显和
+between making something obvious to the reader of the code and
 
 11
 00:00:47.130 --> 00:00:49.063
-让电脑变得很明显
+让电脑看到一些显而易见的东西。
 making something obvious to the computer.
 
 12
 00:00:49.063 --> 00:00:52.789
-这些都是不同的，我们会对这两个人进行一种安慰。
-Those are different, and
-we kind of conflate those two.
+那些是不同的，我们把它们混为一谈。
+Those are different, and we kind of conflate those two.
 
 13
 00:00:52.789 --> 00:00:54.865
-本质上是完整的
+所以本质上，完整的，
 So essentially, the complete,
 
 14
 00:00:54.865 --> 00:00:59.320
-TypeScript 无法在运行时使您受益。
-that there's no way that TypeScript
-could benefit you in the run time.
+在运行时，打字脚本不可能使您受益。
+that there's no way that TypeScript could benefit you in the run time.
 
 15
 00:00:59.320 --> 00:01:02.668
-你得到的所有好处都在编译时
-All the benefit that you
-got was at compile time and
+您获得的所有好处都是在编译时和
+All the benefit that you got was at compile time and
 
 16
 00:01:02.668 --> 00:01:08.439
-他们承认的是 JavaScript ，没有任何类型的脚本。
-what they admitted was JavaScript that
-didn't have any type script-ishness to it.
+他们承认的是没有任何类型脚本的JavaScript。
+what they admitted was JavaScript that didn't have any type script-ishness to it.
 
 17
 00:01:08.439 --> 00:01:12.727
-那就是为了得到所有好处你真的要改变
-So that means that to get all of that
-benefit, you really have to change
+所以这意味着要获得所有的好处，你真的必须改变
+So that means that to get all of that benefit, you really have to change
 
 18
 00:01:12.727 --> 00:01:17.469
-你所做的事情我认为你把它变成了不那么像 JavaScript的东西
-what you do, and I think that what you
-change it into is less like JavaScript.
+你所做的，我认为你把它变成的不太像JavaScript。
+what you do, and I think that what you change it into is less like JavaScript.
 
 19
 00:01:17.469 --> 00:01:20.209
-那么这种选择会是什么样的呢 ?
+那么这个替代方案会是什么样子呢？
 So what would this alternative look like?
 
 20
 00:01:21.450 --> 00:01:25.700
-我一直在玩几个星期几个月
-Well, I've been playing around for the
-last several weeks, or month, a month and
+嗯，我已经玩了几个星期，或者一个月，一个月
+Well, I've been playing around for the last several weeks, or month, a month and
 
 21
 00:01:25.700 --> 00:01:29.646
-有一半我一直在为一个知音的林特
-a half, I've been playing around with
-an idea for a type-aware linter that I
+一半，我一直在玩弄一个关于类型感知的Linter的想法，我
+a half, I've been playing around with an idea for a type-aware linter that I
 
 22
 00:01:29.646 --> 00:01:32.890
-相信包含了 JavaScript 的输入系统。
-believe embraces what JavaScript's
-typing system is about.
+Trust包含了JavaScript的打字系统是关于什么的。
+believe embraces what JavaScript's typing system is about.
 
 23
 00:01:32.890 --> 00:01:36.539
 这给了我们更多的工具，给了我们更多的信心，但是
-That gives us more tooling,
-gives us more confidence, but
+That gives us more tooling, gives us more confidence, but
 
 24
 00:01:36.539 --> 00:01:40.340
-也不会试图把 JavaScript 变成不一样的东西
-doesn't try to change JavaScript
-into something it's not.
+不会试图将JavaScript改变成它不是的东西。
+doesn't try to change JavaScript into something it's not.
 
 25
 00:01:41.520 --> 00:01:42.545
-该项目称为 " L "。
+这个项目叫做TypL。
 That project is called TypL.
 
 26
 00:01:46.629 --> 00:01:49.829
->> 凯尔: 目前还没有关于这个问题的文件，所以如果你去忏悔的话，
-&gt;&gt; Kyle: There's no documentation on
-this yet, so if you go to the repo,
+&gt；&gt；Kyle：还没有关于这个的文档，所以如果你去回购，
+&gt;&gt; Kyle: There's no documentation on this yet, so if you go to the repo,
 
 27
 00:01:49.829 --> 00:01:54.000
-你会发现有一堆密码和一堆测试也没有文件
-you'll see that there's a bunch of code
-and a bunch of tests and no documentation.
+您将看到有一堆代码和一堆测试，但没有文档。
+you'll see that there's a bunch of code and a bunch of tests and no documentation.
 
 28
 00:01:54.000 --> 00:01:59.810
-这仍然是 alpha ，我们有一系列的问题，我们正朝着 1.0的方向发展，
-This is still alpha, we have a set of
-issues that we're tracking towards a 1.0,
+这仍然是阿尔法，我们有一系列的问题，我们正在追踪1.0，
+This is still alpha, we have a set of issues that we're tracking towards a 1.0,
 
 29
 00:01:59.810 --> 00:02:02.799
-我希望很快就能实现
+我希望很快就会发生。
 which I hope will happen fairly soon.
 
 30
 00:02:02.799 --> 00:02:06.257
-所以你要提前在行动中偷偷地偷看这个项目
-So you're getting an early sneak
-peek of this project in action, or
+所以你可以提前看到这个项目的运行情况，或者
+So you're getting an early sneak peek of this project in action, or
 
 31
 00:02:06.257 --> 00:02:09.730
-在行动之前你就能偷偷地偷偷地偷偷偷看
-before it's in action,
-you're getting an early sneak peek of it.
+在它开始运行之前，你可以提前看到它。
+before it's in action, you're getting an early sneak peek of it.
 
 32
 00:02:09.730 --> 00:02:12.150
-但在我给你们展示一些代码之前
-But before I even show
-you some code examples,
+但在我展示一些代码示例之前，
+But before I even show you some code examples,
 
 33
 00:02:12.150 --> 00:02:14.129
-我想谈谈我的动机
+我想谈谈我的动机。
 I wanna talk about my motivations.
 
 34
 00:02:14.129 --> 00:02:18.710
-从这个图标列表中，我要如何设计一个类型感知的链接器，我认为更需要
-From that list of cons, how would I design
-a type-aware linter that I think goes more
+从这个缺点列表中，我将如何设计一个我认为更适合类型感知的Linter
+From that list of cons, how would I design a type-aware linter that I think goes more
 
 35
 00:02:18.710 --> 00:02:20.400
-用的是 JavaScript的颗粒吗
+用JavaScript的颗粒？
 with the grain of JavaScript?
 
 36
 00:02:20.400 --> 00:02:25.002
-第一，我认为我们只需要标准的 JavaScripts 语法，
-So number one, I think we need only
-standard JavaScripts syntax, and
+所以第一，我认为我们只需要标准的JavaScripts语法，并且
+So number one, I think we need only standard JavaScripts syntax, and
 
 37
 00:02:25.002 --> 00:02:27.270
-我不是指代码评论
+我的意思不只是代码注释。
 I don't mean just code comments.
 
 38
 00:02:27.270 --> 00:02:32.098
-我是说我们必须能用那种方式
-I mean we need to be able to
-embrace just JavaScript that way,
+我的意思是，我们需要能够以这种方式接受JavaScript，
+I mean we need to be able to embrace just JavaScript that way,
 
 39
 00:02:32.098 --> 00:02:37.030
-我们避免了自己的生态系统锁
-we prevent ourselves from having
-a sort of ecosystem lock in.
+我们防止自己被某种生态系统锁住。
+we prevent ourselves from having a sort of ecosystem lock in.
 
 40
 00:02:37.030 --> 00:02:41.531
-第二，我认为重要的是我们有一个编译器组件
-Number two, I think it's critical that
-we have both a compiler component and
+第二，我认为我们既有编译器组件，又有编译器组件，这一点很关键
+Number two, I think it's critical that we have both a compiler component and
 
 41
 00:02:41.531 --> 00:02:42.882
@@ -239,420 +207,363 @@ a runtime component.
 
 42
 00:02:42.882 --> 00:02:44.867
-按运行时组件 ( I )表示，
+我的意思是运行时组件，
 By runtime component I mean,
 
 43
 00:02:44.867 --> 00:02:50.031
-在您的代码中存在可以存在的运行时断言，
-that there are runtime assertions that
-could exist in the code that you ship,
+您所提供的代码中可能存在一些运行时断言，
+that there are runtime assertions that could exist in the code that you ship,
 
 44
 00:02:50.031 --> 00:02:54.650
-如果有问题的话你就知道了
-and that would assert things and
-let you know if there were problems.
+这将断言一些事情，并让你知道是否有问题。
+and that would assert things and let you know if there were problems.
 
 45
 00:02:54.650 --> 00:02:59.138
-因为我觉得我们的编码风格不太健康
-Because I don't think it's healthy for
-us to contort our coding styles just so
+因为我认为扭曲我们的编码风格对我们来说是不健康的
+Because I don't think it's healthy for us to contort our coding styles just so
 
 46
 00:02:59.138 --> 00:03:01.659
-我们只能从编译器中得到它们
-that we can only get
-them from the compiler.
+我们只能从编译器中获取它们。
+that we can only get them from the compiler.
 
 47
 00:03:01.659 --> 00:03:03.317
-但是这也很关键，
+但这也很关键
 But this is also critical,
 
 48
 00:03:03.317 --> 00:03:06.930
-您应该可以选择使用其中一个或两个选项。
-you should have the option of
-using one of the other or both.
+您应该可以选择使用其中一个或同时使用两个。
+you should have the option of using one of the other or both.
 
 49
 00:03:06.930 --> 00:03:10.401
-您不应该使用的系统必须具有编译器或
-You should not have to use the system
-that has to have a compiler or
+您不应该使用必须具有编译器或
+You should not have to use the system that has to have a compiler or
 
 50
 00:03:10.401 --> 00:03:13.120
-必须有一个运行时，您应该具有该选项。
-has to have a runtime you
-should have that option.
+必须有一个运行时，你应该有这个选项。
+has to have a runtime you should have that option.
 
 51
 00:03:13.120 --> 00:03:16.168
-如果你说听着我只想要编译器而不是运行时
-And if you said, listen,
-I only want the compiler, not the runtime,
+如果你说，听着，我只想要编译器，而不是运行时，
+And if you said, listen, I only want the compiler, not the runtime,
 
 52
 00:03:16.168 --> 00:03:17.370
-那应该是一个选择
+这应该是一个选择。
 that ought to be an option.
 
 53
 00:03:17.370 --> 00:03:20.337
-如果你说我只想要运行时而不是编译器
-If you said, I only want the runtime and
-not the compiler,
+如果你说，我只想要运行时而不是编译器，
+If you said, I only want the runtime and not the compiler,
 
 54
 00:03:20.337 --> 00:03:21.740
-那应该是一个选择
+这应该是一个选择。
 that ought to be an option.
 
 55
 00:03:21.740 --> 00:03:26.349
-今天存在的系统并没有给你带来任何选择。
-The systems that exist today don't
-really give you any choices along that.
+今天存在的系统并没有给你任何选择。
+The systems that exist today don't really give you any choices along that.
 
 56
 00:03:26.349 --> 00:03:27.960
-这对 L型来说是一个强烈的动机。
+这就是TypL的强大动机。
 So that was a strong motivation for TypL.
 
 57
 00:03:27.960 --> 00:03:33.370
-第三个，以 ESLint 的样式，我希望所有内容都可配置。
-Number three, in the style of ESLint I
-want everything configurable.
+第三，在ESLint的风格中，我希望一切都是可配置的。
+Number three, in the style of ESLint I want everything configurable.
 
 58
 00:03:33.370 --> 00:03:37.490
-所以， " L " 的工作方式是它抱怨一切。
-So the way TypL works is that
-it complains about everything.
+所以TypL的工作方式就是抱怨所有的事情。
+So the way TypL works is that it complains about everything.
 
 59
 00:03:37.490 --> 00:03:40.840
-然后你告诉它你不想看到什么抱怨
-And then you tell it what
-complaints you don't wanna see.
+然后你告诉它你不想看到什么抱怨。
+And then you tell it what complaints you don't wanna see.
 
 60
 00:03:42.039 --> 00:03:45.609
-所以它会抱怨打字和流的所有东西
-So it will complain about all the things
-that Typescript and Flow and all them
+所以它会抱怨所有打字和流动的东西，以及所有这些东西
+So it will complain about all the things that Typescript and Flow and all them
 
 61
 00:03:45.609 --> 00:03:49.401
-会抱怨和一堆他们不抱怨的事情
-would complain about and a bunch of stuff
-that they don't complain about and then
+会抱怨和一堆他们没有抱怨的东西然后
+would complain about and a bunch of stuff that they don't complain about and then
 
 62
 00:03:49.401 --> 00:03:53.180
-你就能决定那些错误对你有用的偏好
-you get to decide with those preferences
-which of those errors is useful to you.
+你可以根据这些偏好来决定哪些错误对你有用。
+you get to decide with those preferences which of those errors is useful to you.
 
 63
 00:03:53.180 --> 00:03:57.843
-它让我们细细地说我想让双重平等
-And it gets us fine-grained to saying
-I want to allow double equals to do
+它让我们细粒度地说，我想让双等号做
+And it gets us fine-grained to saying I want to allow double equals to do
 
 64
 00:03:57.843 --> 00:04:01.356
-字符串和数字，但没有其他内容，例如。
-strings and numbers but
-nothing else, for example.
+例如，字符串和数字，但没有其他内容。
+strings and numbers but nothing else, for example.
 
 65
 00:04:01.356 --> 00:04:06.268
-您具有该级别的控件来定制此操作以帮助您
-You have that level of control to
-customize the behavior of this to help
+您有该级别的控制来自定义此对象的行为以提供帮助
+You have that level of control to customize the behavior of this to help
 
 66
 00:04:06.268 --> 00:04:10.693
-而不是强迫你做一些不起作用的事
-you instead of forcing you to
-do something that doesn't work.
+你而不是强迫你做一些不起作用的事情。
+you instead of forcing you to do something that doesn't work.
 
 67
 00:04:10.693 --> 00:04:15.236
-第四个焦点从这个静打字的概念转变为主
-Number four, the focus shifts from
-this idea of static typing as the main
+第四，重点从静态类型为主的思想转移
+Number four, the focus shifts from this idea of static typing as the main
 
 68
 00:04:15.236 --> 00:04:19.197
-设计目标以了解有关延迟或注释值的更多信息。
-design goal to more about inferring or
-annotating the values.
+设计目标是更多关于推断或注释值的内容。
+design goal to more about inferring or annotating the values.
 
 69
 00:04:19.197 --> 00:04:22.725
 换句话说，它包含值类型而不是变量类型。
-In other words, it embraces value
-types instead of variable types.
+In other words, it embraces value types instead of variable types.
 
 70
 00:04:22.725 --> 00:04:26.358
-你会在代码中看到这意味着什么。
-And you'll see in the code in
-just a moment what that means.
+很快你就会在代码中看到这意味着什么。
+And you'll see in the code in just a moment what that means.
 
 71
 00:04:26.358 --> 00:04:30.269
-当然，您可以省略所有静态输入错误
-Optionally of course, you can have all
-those static typing errors being omitted
+当然，您可以选择省略所有这些静态键入错误
+Optionally of course, you can have all those static typing errors being omitted
 
 72
 00:04:30.269 --> 00:04:32.064
-如果这些是你想看的
+如果这些是你想看的。
 if those are ones that you wanna see.
 
 73
 00:04:32.064 --> 00:04:34.553
-我不打算把那个选项打开
-I'm not gonna have that
-option turned on but
+我不会打开那个选项，但是
+I'm not gonna have that option turned on but
 
 74
 00:04:34.553 --> 00:04:39.076
-我要打造一个工具如果你想看的话
-I'm gonna build a tool that has it in
-case that's something that you wanna see.
+我会建立一个工具，它有它的情况下，这是你想看到的东西。
+I'm gonna build a tool that has it in case that's something that you wanna see.
 
 75
 00:04:39.076 --> 00:04:40.860
-跟我来
+跟我来？
 Follow me?
 
 76
 00:04:40.860 --> 00:04:45.637
-最后的设计目标是我想用 JavaScript 的纹理
-And lastly the design goal here is that I
-wanna go with the grain of JavaScript and
+最后，这里的设计目标是，我想使用JavaScript的颗粒和
+And lastly the design goal here is that I wanna go with the grain of JavaScript and
 
 77
 00:04:45.637 --> 00:04:47.470
-而不是对抗它
+不是反对。
 not against it.
 
 78
 00:04:47.470 --> 00:04:49.778
-我不是要用不同的 JavaScript
-I'm not trying to make
-a different JavaScript.
+我不是想做一个不同的JavaScript。
+I'm not trying to make a different JavaScript.
 
 79
 00:04:49.778 --> 00:04:53.220
-我在努力改进我们用 JavaScript做的事情
-I'm trying to improve what
-we have with JavaScript.
+我正在尝试改进我们使用JavaScript的内容。
+I'm trying to improve what we have with JavaScript.
 
 80
 00:04:53.220 --> 00:04:57.951
-所以，从 " 流 " 和 " 流 " 的示例中开始
-So, starting out as the same example
-as you got from the Flow and
+所以，从你从流中得到的相同的例子开始
+So, starting out as the same example as you got from the Flow and
 
 81
 00:04:57.951 --> 00:04:59.659
-Typescript 示例。
+打字稿示例。
 Typescript example.
 
 82
 00:04:59.659 --> 00:05:03.701
-您可以定义变量，并且如果您已配置选项，那么
-You can define a variable and if you
-have the option configured on it's gonna
+你可以定义一个变量，如果你在上面配置了选项，它将
+You can define a variable and if you have the option configured on it's gonna
 
 83
 00:05:03.701 --> 00:05:06.009
-向你抱怨你的静态类型
+抱怨你的静态类型。
 complain at you about your static type.
 
 84
 00:05:06.009 --> 00:05:09.779
-它会说嘿你分配了一个绳子现在你在分配一个物体
-It's gonna say hey, you assigned a string,
-and now you're assigning an object and
+它会说嘿，你分配了一个字符串，现在你分配了一个对象
+It's gonna say hey, you assigned a string, and now you're assigning an object and
 
 85
 00:05:09.779 --> 00:05:10.639
-那是个错误
+那是个错误。
 that's an error.
 
 86
 00:05:10.639 --> 00:05:14.480
-因此，您可以选择像过去那样获得该错误的信息。
-So you have the option of getting that
-error just like you did in the past.
+因此，您可以选择像过去一样获得该错误。
+So you have the option of getting that error just like you did in the past.
 
 87
 00:05:14.480 --> 00:05:18.817
-这就是推论，推断你给老师安排了一个字符串，
-It's doing the inference, it's inferring
-that you assigned a string to teacher, and
+它在做推论，它是在推断你给老师分配了一个字符串，然后
+It's doing the inference, it's inferring that you assigned a string to teacher, and
 
 88
 00:05:18.817 --> 00:05:21.639
-那就推断你分配了一个物体
-then it's inferring that
-you're assigning an object.
+那么就推断出你在分配一个对象。
+then it's inferring that you're assigning an object.
 
 89
 00:05:21.639 --> 00:05:23.932
-所以在基案中非常相似
+所以在基本情况下，非常相似，
 So in the base case, it's very similar,
 
 90
 00:05:23.932 --> 00:05:27.649
-从推理过程中得出的结论
-in terms of it's building
-from inference up into it.
+在这方面，它是从推理中建立起来的。
+in terms of it's building from inference up into it.
 
 91
 00:05:27.649 --> 00:05:30.026
-但这就是事物开始分化的地方
+但这就是事情开始分道扬镳的地方，
 But this is where things start to diverge,
 
 92
 00:05:30.026 --> 00:05:34.382
-因为如果你想有那么多的错误但你只想要
-because if you want to have those sorts
-of errors, but you only wanna have those
+因为如果你想要有这样的错误，但你只想有那些
+because if you want to have those sorts of errors, but you only wanna have those
 
 93
 00:05:34.382 --> 00:05:39.016
-例如，当您说过类型是什么，而不是在其推断时出错。
-errors when you've said what the type is
-and not when it inferred it, for example.
+例如，当您说出类型是什么而不是当它推断它时，就会出现错误。
+errors when you've said what the type is and not when it inferred it, for example.
 
 94
 00:05:39.016 --> 00:05:42.891
-所以说别跟我抱怨那些推论
-So, let's say don't complain to
-me about those inferences but
+所以，让我们说，不要向我抱怨那些推论，但是
+So, let's say don't complain to me about those inferences but
 
 95
 00:05:42.891 --> 00:05:46.332
-在我违反类型的注释时向我投诉
-do complain at me when I violate
-the type annotations that
+当我违反类型注释时，一定要向我抱怨
+do complain at me when I violate the type annotations that
 
 96
 00:05:46.332 --> 00:05:49.459
-我已经做过更明确的事了
-I've done when I've been
-more explicit about it.
+我已经做过了，当我对它更加明确的时候。
+I've done when I've been more explicit about it.
 
 97
 00:05:49.459 --> 00:05:54.067
-所以如果你想给一个像弦凯尔一样的东西
-So here's what it looks like if you wanna
-annotate something like that string Kyle
+因此，如果您想要注释类似于字符串Kyle的内容，它看起来是这样的
+So here's what it looks like if you wanna annotate something like that string Kyle
 
 98
 00:05:54.067 --> 00:05:56.550
-你想明确说那是绳子
+你想明确地说那是一个字符串。
 you wanna explicitly say that's a string.
 
 99
 00:05:56.550 --> 00:06:01.480
-如你所见，如你所见，这件事就在它前面。
-You put, as you can see here,
-this thing in front of it.
+你把这个东西放在它前面，就像你在这里看到的一样。
+You put, as you can see here, this thing in front of it.
 
 100
 00:06:01.480 --> 00:06:08.089
-现在，实际上仍然是标准 JavaScript ，因为这是一个模板标记。
-Now that is actually still standard
-JavaScript because that is a template tag.
+现在，它实际上仍然是标准JavaScript，因为它是一个模板标记。
+Now that is actually still standard JavaScript because that is a template tag.
 
 101
 00:06:08.089 --> 00:06:12.519
-这完全是标准的 JavaScript ，但它是一个模板标签。
-That's entirely standard JavaScript,
-but it's a template tag.
+这完全是标准的JavaScript，但它是一个模板标记。
+That's entirely standard JavaScript, but it's a template tag.
 
 102
 00:06:14.019 --> 00:06:18.569
-而 L . L 将使用该模板标签的名称来表示，好的，
-And TypL is going to use the name
-of that template tag to say, okay,
+TypL将使用该模板标记的名称来表示，好的，
+And TypL is going to use the name of that template tag to say, okay,
 
 103
 00:06:18.569 --> 00:06:23.629
-你告诉我你想要这个价值被解释为一个字符串
-you're telling me that you want this
-value to be interpreted as a string.
+你告诉我你希望这个值被解释为一个字符串。
+you're telling me that you want this value to be interpreted as a string.
 
 104
 00:06:23.629 --> 00:06:28.612
-如果您使用其他类型 ( 例如数字 ) ，那么后面的东西
-If you use a different type like number
-for example, the thing that's in the back
+如果你使用不同的类型，比如数字，后面的东西
+If you use a different type like number for example, the thing that's in the back
 
 105
 00:06:28.612 --> 00:06:33.540
-对引号的解释将以该形式解释，因此它会说 42 个或任何一个。
-tick quote swill be interpreted in that
-form, so it would say 42 or whatever.
+勾号引用swill将以该形式解释，因此它将显示为42或诸如此类。
+tick quote swill be interpreted in that form, so it would say 42 or whatever.
 
 106
 00:06:34.560 --> 00:06:38.470
-我是说我想让老师被解释为拿着凯尔的弦
-Here I'm saying I want teacher to be
-interpreted as holding the string Kyle.
+在这里，我是说，我希望老师被解释为拿着琴弦凯尔。
+Here I'm saying I want teacher to be interpreted as holding the string Kyle.
 
 107
 00:06:38.470 --> 00:06:39.829
-注意点东西
+注意到一些事情，
 And notice something,
 
 108
 00:06:39.829 --> 00:06:43.706
-这种情况马上就会和水流不一样了
-that this is immediately off the bat
-already different from Flow and
+这是立即开始的，已经不同于流
+that this is immediately off the bat already different from Flow and
 
 109
 00:06:43.706 --> 00:06:48.399
-由于此处，我要对对象属性中的值进行注释。
-Typescript, because here, I am gonna
-annotate the value in an object property.
+TypeScript，因为在这里，我将注释Object属性中的值。
+Typescript, because here, I am gonna annotate the value in an object property.
 
 110
 00:06:48.399 --> 00:06:51.824
-我不需要为这种对象创建完整的类型
-I don't need to go create a whole type for
-this kind of object
+我不需要为这种对象创建一个完整的类型
+I don't need to go create a whole type for this kind of object
 
 111
 00:06:51.824 --> 00:06:56.499
-说名字属性是字符串我讨厌自己的价值
-that says that name properties are
-strings, I'm annotating the value itself.
+说明name属性是字符串，我正在注释值本身。
+that says that name properties are strings, I'm annotating the value itself.
 
 112
 00:06:59.180 --> 00:07:03.726
->> 凯尔: 如果要将其包含在属性或变量中，那么可以暗示这些属性或变量。
-&gt;&gt; Kyle: And that can be implied to
-properties or variables if you want it to.
+&gt；&gt；Kyle：如果您愿意，这可以隐含到属性或变量中。
+&gt;&gt; Kyle: And that can be implied to properties or variables if you want it to.
 
 113
 00:07:03.726 --> 00:07:07.567
-但我不需要去创造另一种类型给它那种类型
-But it's not necessary that I go create
-another type to give it that type
+但我没有必要去创建另一个类型来赋予它该类型
+But it's not necessary that I go create another type to give it that type
 
 114
 00:07:07.567 --> 00:07:08.605
@@ -661,50 +572,43 @@ information.
 
 115
 00:07:08.605 --> 00:07:12.560
-所以你想更像你的讨厌的地方
-So you wanna think about it more like your
-annotating all the places that values and
+所以你想把它想得更像是你对所有价值的地方的注解
+So you wanna think about it more like your annotating all the places that values and
 
 116
 00:07:12.560 --> 00:07:16.074
-表达式会发生，而不是注释变量上的类型。
-expressions occur rather than
-annotating the types on your variables.
+表达式出现，而不是注释变量上的类型。
+expressions occur rather than annotating the types on your variables.
 
 117
 00:07:18.449 --> 00:07:21.269
->> 凯尔: 因为我认为我们都有自己的问题。
-&gt;&gt; Kyle: Because that's I think
-were we have all our problems.
+&GT；&GT；Kyle：因为我认为这就是我们所有的问题。
+&gt;&gt; Kyle: Because that's I think were we have all our problems.
 
 118
 00:07:21.269 --> 00:07:25.009
-所有我们的价值观和表达方式都被混淆了。
-Where all of our values and
-expressions get all mixed up.
+我们所有的价值观和表达方式都混在一起了。
+Where all of our values and expressions get all mixed up.
 
 119
 00:07:25.009 --> 00:07:28.518
-我不认为我们的变量重新分配有那么多问题。
-I don't think we have as many problems
-with our variables getting reassigned.
+我不认为我们的变量被重新分配时会有那么多的问题。
+I don't think we have as many problems with our variables getting reassigned.
 
 120
 00:07:28.518 --> 00:07:32.709
-你也可以更明确地说你可以标记
-You can also be more explicit even in
-this particular case you could tag
+您也可以更加明确，即使在这种特殊情况下，您可以标记
+You can also be more explicit even in this particular case you could tag
 
 121
 00:07:32.709 --> 00:07:34.699
-就像一个物体一样
+那东西作为一个物体。
 that thing as an object.
 
 122
 00:07:34.699 --> 00:07:38.831
-您会注意到，我仍有一个模板内的对象文字
-You'll notice that I still have the object
-literal dropped inside of a template
+您会注意到，我仍然将object literal放在模板中
+You'll notice that I still have the object literal dropped inside of a template
 
 123
 00:07:38.831 --> 00:07:39.949
@@ -713,95 +617,83 @@ tagged expression.
 
 124
 00:07:39.949 --> 00:07:42.334
-但现在是说它绝对是一个物体
-But this is now saying
-it's absolutely an object,
+但现在这是说它绝对是一个物体，
+But this is now saying it's absolutely an object,
 
 125
 00:07:42.334 --> 00:07:46.259
-不只是猜测它是物体绝对是物体
-don't just guess that it's an object,
-it's absolutely an object.
+不要只是猜测它是一个对象，它绝对是一个对象。
+don't just guess that it's an object, it's absolutely an object.
 
 126
 00:07:46.259 --> 00:07:51.173
-因此，将其放入错误的领域是来自标记类型违例
-So that would put it into the realm of
-the error is from tagged type violation
+因此，将其放入错误领域的原因是标记类型冲突
+So that would put it into the realm of the error is from tagged type violation
 
 127
 00:07:51.173 --> 00:07:53.990
-与推断的类型违例相反。
+与推断的类型冲突相反。
 as opposed to an inferred type violation.
 
 128
 00:07:57.779 --> 00:08:03.622
->> 凯尔: 在这里我说这个对象的年龄属性，
-&gt;&gt; Kyle: Here I'm saying that
-the age property on this object,
+&gt；&gt；Kyle：这里我是说这个对象的年龄属性，
+&gt;&gt; Kyle: Here I'm saying that the age property on this object,
 
 129
 00:08:03.622 --> 00:08:08.069
-现在是 42号整数
+现在可以容纳整数42。
 is at the moment gonna hold integer 42.
 
 130
 00:08:08.069 --> 00:08:14.358
-所以在打字号上你可以区分数字
-So in TypL,
-you can make distinctions between numbers,
+所以在TypL中，你可以区分数字，
+So in TypL, you can make distinctions between numbers,
 
 131
 00:08:14.358 --> 00:08:18.839
-整数，有限值和大 Ns。
+整数、有限值和大NS。
 integers, finite values, and big Ns.
 
 132
 00:08:18.839 --> 00:08:23.021
-因此，不仅仅是一种数字类型，实际上有四种数字类型。
-So there's not just one number type,
-you have four number types actually.
+所以不只有一种数字类型，实际上你有四种数字类型。
+So there's not just one number type, you have four number types actually.
 
 133
 00:08:23.021 --> 00:08:29.093
-更重要的是在这里我是说任何年龄的人都是来自
-And importantly, down here, I am saying
-wherever student.age comes from,
+重要的是，在这里，我要说的是，无论学生的年龄来自哪里，
+And importantly, down here, I am saying wherever student.age comes from,
 
 134
 00:08:29.093 --> 00:08:33.337
-我基本上是说它必须是一个数字。
-I'm essentially asserting
-that it has to be a number.
+我基本上是在断言它必须是一个数字。
+I'm essentially asserting that it has to be a number.
 
 135
 00:08:33.337 --> 00:08:37.888
-所以如果 student.age 是从某个地方来的不是数字
-So if student.age comes from somewhere and
-it's not a number,
+所以如果Student.age来自某个地方，并且它不是一个数字，
+So if student.age comes from somewhere and it's not a number,
 
 136
 00:08:37.888 --> 00:08:39.919
-这会是个错误
+这将是一个错误。
 this is going to be an error.
 
 137
 00:08:39.919 --> 00:08:45.547
-如果编译器可以计算 student.age ，那么它将是编译器错误。
-It will either be a compiler error, if the
-compiler can figure out that student.age
+如果编译器能找出Student.age，那么它要么是编译器错误，要么是编译器错误
+It will either be a compiler error, if the compiler can figure out that student.age
 
 138
 00:08:45.547 --> 00:08:51.639
-不是数字，如果无法计算，那么它将是运行时错误。
-is not gonna be a number or it will be
-a runtime error if it can't figure it out.
+不会是一个数字，否则它将是一个运行时错误，如果它不能算出它的话。
+is not gonna be a number or it will be a runtime error if it can't figure it out.
 
 139
 00:08:51.639 --> 00:08:56.147
-但无论哪种方式，我基本上都是在我的价值观中坚持主张，
-But either way, I'm essentially doing
-assertions in-line in my values and
+但无论哪种方式，我本质上都是在我的值和
+But either way, I'm essentially doing assertions in-line in my values and
 
 140
 00:08:56.147 --> 00:08:57.059
@@ -810,55 +702,48 @@ expressions.
 
 141
 00:08:57.059 --> 00:09:01.169
-萨英，这个东西必须是一个数字，这个东西必须是一个整数。
-Saying, this thing has to be a number,
-this thing has to be an integer.
+说，这个东西必须是一个数字，这个东西必须是一个整数。
+Saying, this thing has to be a number, this thing has to be an integer.
 
 142
 00:09:03.052 --> 00:09:07.304
->> 凯尔: 您可以使用相同样式来处理您的
-&gt;&gt; Kyle: You can use the same style still
-to deal with the type signatures on your
+&gt；&gt；Kyle：您仍然可以使用相同的样式来处理您的
+&gt;&gt; Kyle: You can use the same style still to deal with the type signatures on your
 
 143
 00:09:07.304 --> 00:09:08.500
-职能。
+函数。
 functions.
 
 144
 00:09:08.500 --> 00:09:12.090
-所以我有一个默认值表达式，
-So here,
-I have a default value expression,
+所以在这里，我有一个默认值表达式，
+So here, I have a default value expression,
 
 145
 00:09:12.090 --> 00:09:18.148
-我正在重载使我能为这个功能做一个类型的签名。
-which I'm overloading to allow me to
-do a type signature for this function.
+我重载它以允许我为这个函数做类型签名。
+which I'm overloading to allow me to do a type signature for this function.
 
 146
 00:09:18.148 --> 00:09:23.129
-我说 studentRec 应该被认为是这个对象。
-I'm saying that studentRec should
-be assumed to be this object.
+我是说StudentRec应该被假设为这个对象。
+I'm saying that studentRec should be assumed to be this object.
 
 147
 00:09:24.388 --> 00:09:26.573
-现在我可以用一个标签对它进行注释
-Now, I could've annotated it
-with a tag to say object, but
+现在，我可以用一个标记来注释它来表示Object，但是
+Now, I could've annotated it with a tag to say object, but
 
 148
 00:09:26.573 --> 00:09:27.815
-我只是在制作一个物体
+我只是在做一个物体。
 here I'm just making an object.
 
 149
 00:09:27.815 --> 00:09:32.735
-所以它会推断 studentRec 必须是一个有名字的对象
-So it's gonna infer that studentRec
-needs to be an object with a name and
+所以它将推断StudentRec需要是一个有名称的对象，并且
+So it's gonna infer that studentRec needs to be an object with a name and
 
 150
 00:09:32.735 --> 00:09:35.450
@@ -867,274 +752,238 @@ name has to be interpreted as a string.
 
 151
 00:09:36.950 --> 00:09:40.316
-所有这些都是完全标准的有效 JavaScript ，并且
-All of this is still totally
-standard valid JavaScript, and
+所有这些仍然是完全标准的有效JavaScript，并且
+All of this is still totally standard valid JavaScript, and
 
 152
 00:09:40.316 --> 00:09:43.286
-如果您将此代码交付到浏览器，那么它将全部运行。
-if you shipped this code to
-a browser it would all run.
+如果您将此代码发送到浏览器，则所有代码都将运行。
+if you shipped this code to a browser it would all run.
 
 153
 00:09:43.286 --> 00:09:46.746
-它可能不会在编译阶段做同样的事情
-It may not do all of the same things
-that it would at the compile stage,
+它可能不会做它在编译阶段会做的所有相同的事情，
+It may not do all of the same things that it would at the compile stage,
 
 154
 00:09:46.746 --> 00:09:48.429
-但它会运行和编译
+但它都会运行和编译。
 but it would all run and compile.
 
 155
 00:09:49.740 --> 00:09:52.049
-因此，编译器可以对该信息进行提取。
-So the compiler can pick
-up on that information and
+这样编译器就可以接收到这些信息并
+So the compiler can pick up on that information and
 
 156
 00:09:52.049 --> 00:09:55.793
-说你想要一个拥有一个拥有一个字符串的名字的对象是很酷的
-say okay that's cool you want an object
-with a name property that holds a string.
+说好的，这很酷，你想要一个拥有一个字符串的name属性的对象。
+say okay that's cool you want an object with a name property that holds a string.
 
 157
 00:09:55.793 --> 00:09:59.657
-这意味着当我返回 studentRec.name 时，我知道我正在返回
-Which means that when I return
-studentrRec.name I know that I'm returning
+这意味着当我返回StudentrRec.name时，我知道我正在返回
+Which means that when I return studentrRec.name I know that I'm returning
 
 158
 00:09:59.657 --> 00:10:00.990
-一个字符串。
+一根绳子。
 a string.
 
 159
 00:10:00.990 --> 00:10:05.038
-因为我知道我在给你分配一个绳子的时候在下面
-And because I know I'm returning a string,
-down here at the bottom when I assign it,
+而且因为我知道我返回的是一个字符串，当我赋值时，它就在底部，
+And because I know I'm returning a string, down here at the bottom when I assign it,
 
 160
 00:10:05.038 --> 00:10:07.957
-现在我可以暗示学生的名字将会是一个字符串
-now I can imply that the for
-student name is gonna be a string.
+现在我可以暗示学生姓名将是一个字符串。
+now I can imply that the for student name is gonna be a string.
 
 161
 00:10:07.957 --> 00:10:11.659
-你能从 Typescript 中得到的所有东西都是一样的但是如果你比较
-So all of the same things that you could
-get out of Typescript, but if you compare
+所以你可以从打印稿中得到的所有相同的东西，但是如果你比较
+So all of the same things that you could get out of Typescript, but if you compare
 
 162
 00:10:11.659 --> 00:10:15.360
-在我不需要完成所有额外的工作来设置一个自定义的
-this example before I didn't need to go to
-all of this extra work to set up a custom
+在此示例之前，我不需要进行所有这些额外的工作来设置自定义
+this example before I didn't need to go to all of this extra work to set up a custom
 
 163
 00:10:15.360 --> 00:10:19.308
-输入您的信息，因为我自己输入了值。
-type to give you that information because
-I put the typing on the values themselves.
+键入以提供该信息，因为我将键入放在值本身上。
+type to give you that information because I put the typing on the values themselves.
 
 164
 00:10:22.750 --> 00:10:26.495
->> 键盘: 我们可以对传递到的内容进行相同类型的断言
-&gt;&gt; Kyle: We can make all the same kinds
-of assertions about what gets passed into
+&gt；&gt；Kyle：我们可以对传入的内容做出所有相同类型的断言
+&gt;&gt; Kyle: We can make all the same kinds of assertions about what gets passed into
 
 165
 00:10:26.495 --> 00:10:28.844
-函数，从它们返回的内容，
+函数，它们返回什么，
 functions, what gets returned from them,
 
 166
 00:10:28.844 --> 00:10:31.774
-是否可以推断出这些值，或者是否对它们进行了标记。
-whether they are inferred or
-whether they are tagged.
+无论它们是推断的还是标记的。
+whether they are inferred or whether they are tagged.
 
 167
 00:10:33.230 --> 00:10:36.971
-顺便说下，这些类型的签名是持久的，也可以是在线的。
-And by the way, those type signatures
-are persistent and can also be in line.
+顺便说一下，这些类型签名是持久的，也可以是一致的。
+And by the way, those type signatures are persistent and can also be in line.
 
 168
 00:10:36.971 --> 00:10:40.990
-因此，我在这里对回调类型特征符进行注释。
-So here,
-I am annotating a callback type signature.
+所以在这里，我在注释一个回调类型签名。
+So here, I am annotating a callback type signature.
 
 169
 00:10:40.990 --> 00:10:44.648
-记录功能是回调，但是
+on record函数是一个回调函数，但是
 The on record function is a callback, but
 
 170
 00:10:44.648 --> 00:10:50.407
-我是说它必须符合这一具体职能签字。
-I am saying that it must fit this
-particular function signature.
+我是说它必须符合这个特定的函数签名。
+I am saying that it must fit this particular function signature.
 
 171
 00:10:50.407 --> 00:10:53.135
-所以它的功能意味着它必须接收
-So that function means
-that it has to receive
+因此该函数意味着它必须接收
+So that function means that it has to receive
 
 172
 00:10:53.135 --> 00:10:56.455
-一个对象，该对象的名称属性为字符串，并且
-an object that has a name
-property that's a string and
+一个具有Name属性的对象，该属性是一个字符串，并且
+an object that has a name property that's a string and
 
 173
 00:10:56.455 --> 00:11:00.610
-该函数必须基本上返回未定义类型的 void 。
-the function has to return the void
-basically the undefined type.
+该函数必须返回void，基本上是未定义的类型。
+the function has to return the void basically the undefined type.
 
 174
 00:11:02.659 --> 00:11:06.437
-这是一个直接插入的签名。
+所以这是一个内联签名。
 So that's an inline signature.
 
 175
 00:11:06.437 --> 00:11:11.804
-但是注意这里发生的事情是我可以给另一个
-But notice what happens down here is
-that I can assign a function to another
+但请注意，这里发生的情况是，我可以将一个函数分配给另一个函数
+But notice what happens down here is that I can assign a function to another
 
 176
 00:11:11.804 --> 00:11:17.432
-变量和打印名称的类型签名是持久的，所以当我将其传入
-variable and the type signature of print
-name is persistent so when I pass it in
+变量，并且打印名称的类型签名是持久的，因此当我传入它时
+variable and the type signature of print name is persistent so when I pass it in
 
 177
 00:11:17.432 --> 00:11:23.350
-作为回调，它将与第 3 行中需要的类型特征符相匹配。
-as a callback it gets matched to the type
-signature that is required from line 3.
+作为回调，它与第3行所需的类型签名匹配。
+as a callback it gets matched to the type signature that is required from line 3.
 
 178
 00:11:23.350 --> 00:11:26.317
-所以所有你希望看到的都是一个 Typescript 或一个流
-So all those same things that you would
-expect out of a Typescript or a Flow,
+所以所有那些你期望从打字稿或流程中得到的东西，
+So all those same things that you would expect out of a Typescript or a Flow,
 
 179
 00:11:26.317 --> 00:11:28.154
-我们在这里做同样的事
-we're doing those same
-sorts of things here,
+我们在做同样的事情，
+we're doing those same sorts of things here,
 
 180
 00:11:28.154 --> 00:11:31.044
-只是我们在做他们的价值而不是容器
-it's just we're doing them on the values
-instead of on the containers.
+只是我们在数值上而不是容器上做。
+it's just we're doing them on the values instead of on the containers.
 
 181
 00:11:35.120 --> 00:11:38.090
->> 凯尔: 我一直把注意力集中在
-&gt;&gt; Kyle: A lot of improvements on
-the inferencing that I've been focusing
+&gt；&gt；Kyle：在我一直关注的推理方面有很多改进
+&gt;&gt; Kyle: A lot of improvements on the inferencing that I've been focusing
 
 182
 00:11:38.090 --> 00:11:38.743
-最近
+最近。
 on recently.
 
 183
 00:11:38.743 --> 00:11:42.950
-这是一个特别有趣的例子，因为这个
-This is a particularly
-interesting example because this
+这是一个特别有趣的例子，因为这
+This is a particularly interesting example because this
 
 184
 00:11:42.950 --> 00:11:47.309
-是 TypeScript 和流不处理的案例。
-is a case that TypeScript and
-Flow don't handle.
+是打字稿和流程不能处理的情况。
+is a case that TypeScript and Flow don't handle.
 
 185
 00:11:47.309 --> 00:11:49.025
-也许他们最终会
+也许他们最终会的但是
 Maybe they will eventually but
 
 186
 00:11:49.025 --> 00:11:52.330
-他们目前在这个案件中没有做任何事情。
-they currently do not do
-anything in this particular case.
+在这种特殊情况下，他们目前没有做任何事情。
+they currently do not do anything in this particular case.
 
 187
 00:11:52.330 --> 00:11:55.020
-看来是个很简单的例子
+所以看起来是一个非常简单的例子，但是
 So looks like a pretty simple example but
 
 188
 00:11:55.020 --> 00:11:58.750
-这比你能意识到的复杂得多
-there's more complexity here
-than you might realize.
+这里的复杂性比你可能意识到的要多。
+there's more complexity here than you might realize.
 
 189
 00:11:58.750 --> 00:12:03.099
-第一个，我们之前有个函数调用的代码
-So number one, we have a function call
-earlier in the code we're relying
+所以第一，我们在前面的代码中有一个函数调用，我们所依赖的
+So number one, we have a function call earlier in the code we're relying
 
 190
 00:12:03.099 --> 00:12:04.750
-在功能提升的基础上
+在函数提升时。
 upon a function hoisting.
 
 191
 00:12:04.750 --> 00:12:08.750
-我们之前在代码中有一个函数调用，而不是我们看到该函数的位置。
-We have a function call earlier in the
-code than where we've seen that function.
+我们在代码中有一个比我们看到的那个函数更早的函数调用。
+We have a function call earlier in the code than where we've seen that function.
 
 192
 00:12:08.750 --> 00:12:11.240
-所以我们不能验证这是否正确
-So we can't really validate whether
-this is correct according to
+因此，我们不能真正验证这是否正确，根据
+So we can't really validate whether this is correct according to
 
 193
 00:12:11.240 --> 00:12:12.110
-签名或不签名。
+签名与否。
 the signature or not.
 
 194
 00:12:12.110 --> 00:12:16.356
-所以我们至少得有第二道通行证了
-So we're at least gonna have to
-have some sort of second pass, and
+所以我们至少要有一些第二次通行证，而且
+So we're at least gonna have to have some sort of second pass, and
 
 195
 00:12:16.356 --> 00:12:19.070
-L 具有此多通道正在进行中。
+TypL具有这种多遍推理。
 TypL has this multi-pass inferencing.
 
 196
 00:12:20.809 --> 00:12:24.937
-除了具有多重通行证外，当我们到达该功能的时候
-In addition to having multi-pass
-inferencing, when we get to the function
+除了具有多遍推理外，当我们到达函数时
+In addition to having multi-pass inferencing, when we get to the function
 
 197
 00:12:24.937 --> 00:12:28.299
-我们认为该参数在它上没有任何定义的名称。
-we see that the parameter does
-not have any defined name on it.
+我们看到该参数没有任何定义的名称。
+we see that the parameter does not have any defined name on it.
 
 198
 00:12:28.299 --> 00:12:31.644
@@ -1143,99 +992,83 @@ So what we're going to do is infer that
 
 199
 00:12:31.644 --> 00:12:35.950
-因为我们是在一个 int中传递的。
-this of type int because
-we are passing in an int.
+这是int类型，因为我们传入的是int。
+this of type int because we are passing in an int.
 
 200
 00:12:35.950 --> 00:12:39.059
-所以我们要从呼叫信号中推断函数特征符。
-So we're gonna infer the function
-signature from the call sign.
+所以我们要从呼号推断函数签名。
+So we're gonna infer the function signature from the call sign.
 
 201
 00:12:39.059 --> 00:12:43.803
-我们已经看到了这个电话站点，当我们到达这里时，
-So we have already seen this call site,
-and when we get here,
+所以我们已经看到了这个呼叫地点，当我们到达这里时，
+So we have already seen this call site, and when we get here,
 
 202
 00:12:43.803 --> 00:12:49.106
-我们会说哈，我记得你刚才 3 号通过了，
-we are gonna say ah-ha,
-I remember that you passed in a 3 earlier,
+我们会说啊哈，我记得你之前考了3分，
+we are gonna say ah-ha, I remember that you passed in a 3 earlier,
 
 203
 00:12:49.106 --> 00:12:53.519
-现在我们要推断那是一个整数
-so now we're gonna infer
-that num is an integer.
+所以现在我们要推断num是一个整数。
+so now we're gonna infer that num is an integer.
 
 204
 00:12:53.519 --> 00:12:56.817
-由于我们知道 num 是一个整数，所以我们现在知道该值的返回值是什么
-And because we know num is an integer,
-we now know what the return value of this
+因为我们知道num是一个整数，所以我们现在知道这个函数的返回值是什么
+And because we know num is an integer, we now know what the return value of this
 
 205
 00:12:56.817 --> 00:12:59.929
-函数是，因为该变量有返回语句。
-function is, because there's a return
-statement with that variable.
+函数是，因为有一个带有该变量的RETURN语句。
+function is, because there's a return statement with that variable.
 
 206
 00:12:59.929 --> 00:13:04.870
-所以当我们第二次通过的时候，我们现在知道要回归了
-So when we do our second pass through,
-we now know that gimme is going to return
+所以当我们做第二遍时，我们现在知道Gimme会回来
+So when we do our second pass through, we now know that gimme is going to return
 
 207
 00:13:04.870 --> 00:13:08.669
-整数，因为它传入并返回了整数。
-an integer, because it passed in and
-returned an integer.
+一个整数，因为它传入并返回一个整数。
+an integer, because it passed in and returned an integer.
 
 208
 00:13:08.669 --> 00:13:11.447
-那么现在我们可以将整数类型应用于 3，并且
-So now we can apply the type integer to 3,
-and
+所以现在我们可以将整数类型应用于3，并且
+So now we can apply the type integer to 3, and
 
 209
 00:13:11.447 --> 00:13:15.409
-现在我们可以抱怨你在增加一个字符串和一个整数
-now we can complain that you're
-adding a string and an integer.
+现在我们可以抱怨您添加了一个字符串和一个整数。
+now we can complain that you're adding a string and an integer.
 
 210
 00:13:15.409 --> 00:13:19.963
-所以有这种多程的推断正在发生
-So there's this multi-pass
-inferencing that's happening,
+所以这就是正在发生的多遍推理，
+So there's this multi-pass inferencing that's happening,
 
 211
 00:13:19.963 --> 00:13:23.600
-这花了几个星期的时间来完成它
-and this took several weeks
-of work to make it work.
+这花了几个星期的工作才使它起作用。
+and this took several weeks of work to make it work.
 
 212
 00:13:25.330 --> 00:13:28.356
-但如果您尝试像 TypeScript 或 Flow之类的代码示例，
-But if you try that same code example
-in something like TypeScript or Flow,
+但是如果你在类似于打字稿或流程的东西中尝试相同的代码示例，
+But if you try that same code example in something like TypeScript or Flow,
 
 213
 00:13:28.356 --> 00:13:30.289
-他们只会推断并不会报告错误
-they just infer any and
-don't report an error.
+他们只是推断出任何错误，而不报告错误。
+they just infer any and don't report an error.
 
 214
 00:13:30.289 --> 00:13:35.148
-这就是一个例子，我想，因为它聚焦于数值，所以 L .
-So this is an example, I think, where TypL
-shines because it focuses on the value
+所以这是一个例子，我认为，TypL之所以闪耀，是因为它专注于价值
+So this is an example, I think, where TypL shines because it focuses on the value
 
 215
 00:13:35.148 --> 00:13:37.375
@@ -1244,228 +1077,195 @@ types rather than on the variables.
 
 216
 00:13:41.191 --> 00:13:43.519
->> 凯尔: [COUGH] 编译器与运行时。
+&gt；&gt；Kyle：[咳嗽]编译器与运行时。
 &gt;&gt; Kyle: [COUGH] Compiler versus runtime.
 
 217
 00:13:43.519 --> 00:13:47.495
-正如我所说的，编译器将尝试找出它能做的一切，如果你是
-As I said, the compiler will try to figure
-out everything that it can, if you're
+正如我所说的，编译器将尝试找出它所能做的一切，如果您
+As I said, the compiler will try to figure out everything that it can, if you're
 
 218
 00:13:47.495 --> 00:13:51.538
-使用编译器当然它会尝试找出它能做的一切
-using the compiler, of course, it'll try
-to figure out everything that it can.
+当然，使用编译器，它会尝试找出它所能做的一切。
+using the compiler, of course, it'll try to figure out everything that it can.
 
 219
 00:13:51.538 --> 00:13:56.181
-但如果它能找到一些东西，它就会从代码中除去这些东西。
-But if it can figure something out,
-it removes that stuff from the code, so
+但是如果它能找出一些东西，它就会从代码中删除那些东西，所以
+But if it can figure something out, it removes that stuff from the code, so
 
 220
 00:13:56.181 --> 00:13:58.799
-它不会给运行时带来负担
+它不会降低运行时的负担。
 it's not gonna burden down the runtime.
 
 221
 00:13:58.799 --> 00:14:02.480
-但是，任何它无法解决的位置都将保留运行时断言。
-But any place that it can't figure it out,
-it leaves the runtime assertions in place.
+但是，它不能解决的任何地方，它都会保留运行时断言。
+But any place that it can't figure it out, it leaves the runtime assertions in place.
 
 222
 00:14:02.480 --> 00:14:06.678
-所以在这个代码示例中，我们有一系列类型的参数，
-So in this code example we've got a set
-of parameters here that are typed,
+所以在这个代码示例中，我们在这里输入了一组参数，
+So in this code example we've got a set of parameters here that are typed,
 
 223
 00:14:06.678 --> 00:14:11.081
-我们说的是一个字符串，主题是一个缺省为空的字符串，
-we're saying name is a string, topic
-is a string that is defaulted to empty,
+我们说name是一个字符串，topic是一个默认为空的字符串，
+we're saying name is a string, topic is a string that is defaulted to empty,
 
 224
 00:14:11.081 --> 00:14:13.639
-count 是缺省为 0的整数。
-count is an integer
-that is defaulted to 0.
+count是一个整数，默认为0。
+count is an integer that is defaulted to 0.
 
 225
 00:14:13.639 --> 00:14:16.759
-那就是编译器要接的东西，说我知道
-So those are things that the compiler
-would pick up on, and say okay I know
+所以这些都是编译器会注意到的事情，然后说好的，我知道
+So those are things that the compiler would pick up on, and say okay I know
 
 226
 00:14:16.759 --> 00:14:20.256
-函数特征符，并且我需要验证该函数特征符。
-about the function signature, and I need
-to validate that function signature.
+关于函数签名，我需要验证那个函数签名。
+about the function signature, and I need to validate that function signature.
 
 227
 00:14:20.256 --> 00:14:25.985
-但由于有了这种情况，船的产量减少了
-But what would ship to production is
-a reduced set of this because there
+但是将运往生产的是一组减少的这一组，因为
+But what would ship to production is a reduced set of this because there
 
 228
 00:14:25.985 --> 00:14:32.309
-是一些我们已经知道可以在编译时验证的地方。
-are some places where we already know
-that we can validate it at compile time.
+是我们已经知道可以在编译时验证它的一些地方。
+are some places where we already know that we can validate it at compile time.
 
 229
 00:14:32.309 --> 00:14:34.466
-例如，第 9 行和第 10 行
+例如，第9行和第10行，
 For example, lines 9 and 10,
 
 230
 00:14:34.466 --> 00:14:39.472
-我们已经知道在运行时这些都是不可能改变的
-we already know that those are strings
-nothing at runtime could change that.
+我们已经知道这些是字符串，在运行时没有什么可以改变这一点。
+we already know that those are strings nothing at runtime could change that.
 
 231
 00:14:39.472 --> 00:14:42.360
-所以我们可以在编译时验证这些东西
-So we can validate that
-stuff at compile time and
+所以我们可以在编译时验证这些内容
+So we can validate that stuff at compile time and
 
 232
 00:14:42.360 --> 00:14:47.559
-然后除去这些数据，以使它们不会对代码和运行时造成负担。
-then remove those so they don't
-burden down the code and the runtime.
+然后删除它们，这样它们就不会给代码和运行时带来负担。
+then remove those so they don't burden down the code and the runtime.
 
 233
 00:14:47.559 --> 00:14:52.629
-那么，此编译器将执行的操作将使此代码重新工作，使其看起来像这样。
-So, what this compiler would do is
-rework this code to look like this.
+因此，这个编译器所做的就是重新编写这个代码，使其看起来像这样。
+So, what this compiler would do is rework this code to look like this.
 
 234
 00:14:52.629 --> 00:14:57.852
-所以现在你看 2， 3 和 4 ，我们的参数还缺我们的参数
-So now you see on lines 2, 3, and 4 we
-still have our parameters with our default
+现在您可以看到，在第2、3和4行中，我们仍然使用默认的参数
+So now you see on lines 2, 3, and 4 we still have our parameters with our default
 
 235
 00:14:57.852 --> 00:15:02.570
-它们中的值，但现在我们在代码中有这些类型的断言。
-values in them, but now we have those
-type assertions in line in the code.
+值，但是现在我们在代码中有了这些类型断言。
+values in them, but now we have those type assertions in line in the code.
 
 236
 00:15:02.570 --> 00:15:06.136
-所以我们要在运行时保证每次调用此函数时，
-So we are gonna guarantee at runtime that
-every time this function gets called,
+因此我们将在运行时保证每次调用此函数时，
+So we are gonna guarantee at runtime that every time this function gets called,
 
 237
 00:15:06.136 --> 00:15:09.610
-对于前两个，始终传入一个字符串，第二个为整数。
-you always pass in a string for the first
-two and an integer for the second one.
+您总是为前两个传入一个字符串，为第二个传入一个整数。
+you always pass in a string for the first two and an integer for the second one.
 
 238
 00:15:09.610 --> 00:15:14.365
-工作方式是这些标记函数是实际的标记函数，
-The way that works is that those tag
-functions are actual tag functions that
+其工作方式是，这些标记函数是实际的标记函数，
+The way that works is that those tag functions are actual tag functions that
 
 239
 00:15:14.365 --> 00:15:17.590
-编译器包含运行时。
+编译器包含在运行时中。
 the compiler includes with the runtime.
 
 240
 00:15:17.590 --> 00:15:20.034
-它们在运行时验证，你通过了什么。
-And they validate at runtime,
-what you've passed in.
+并且它们在运行时验证您传入的内容。
+And they validate at runtime, what you've passed in.
 
 241
 00:15:22.789 --> 00:15:24.892
->> 凯尔: 我们把老师和
+&gt；&gt；kyle：我们已经移除了老师和
 &gt;&gt; Kyle: And we've removed the teacher and
 
 242
 00:15:24.892 --> 00:15:27.875
-第 10 和第 11 行的研讨会断言。
-the workshop assertions on lines 10 and
-11.
+研讨会第10行和第11行的断言。
+the workshop assertions on lines 10 and 11.
 
 243
 00:15:27.875 --> 00:15:32.371
-我们在第 13 行的断言中，因为我们有一个表达式，
-We left in the assertion on line 13
-because here we have an expression and
+我们在第13行的断言中留下了，因为在这里我们有一个表达式和
+We left in the assertion on line 13 because here we have an expression and
 
 244
 00:15:32.371 --> 00:15:36.519
-我们得确认实际上进来的实际上是个数字
-we need to verify that what is in
-fact coming in is actually a number.
+我们需要验证实际上进来的是一个数字。
+we need to verify that what is in fact coming in is actually a number.
 
 245
 00:15:38.389 --> 00:15:41.287
-这其实是一个整数，可以是一个 nan ，也可以是无穷大，
-That is actually an integer cuz it could
-be a nan or it could be infinity and
+这实际上是一个整数，因为它可以是NaN，也可以是无穷大
+That is actually an integer cuz it could be a nan or it could be infinity and
 
 246
 00:15:41.287 --> 00:15:42.480
-这些不是整数。
+那些不是整数。
 those are not integers.
 
 247
 00:15:42.480 --> 00:15:49.000
->> 凯尔: 这只是简单的简要介绍。
-&gt;&gt; Kyle: So
-that's just a quick brief glimpse of that.
+&gt；&gt；Kyle：所以这只是一个快速的简短的一瞥。
+&gt;&gt; Kyle: So that's just a quick brief glimpse of that.
 
 248
 00:15:49.000 --> 00:15:52.000
-我所展示的一切或者我展示给你的一切
-Everything that I showed, or most
-everything that I showed you already works
+我展示的每一样东西，或者我展示给你的几乎所有东西都已经起作用了
+Everything that I showed, or most everything that I showed you already works
 
 249
 00:15:52.000 --> 00:15:54.321
-有代码，但没有记录或发布。
-with the code, but
-none of this is documented or released.
+代码，但这些都没有记录或发布。
+with the code, but none of this is documented or released.
 
 250
 00:15:54.321 --> 00:15:57.570
-如果你想和它玩你可以去看看那个修理科
-If you wanna play around with it,
-you can check out that repo.
+如果你想玩它，你可以看看那个回购。
+If you wanna play around with it, you can check out that repo.
 
 251
 00:15:57.570 --> 00:16:01.294
-我希望在接下来的几个星期内我们会有一个 1.0 版的发行版
-I'm hoping that sometime within the next
-few weeks that we will have a 1.0 release
+我希望在接下来的几周内我们会有一个1.0版本
+I'm hoping that sometime within the next few weeks that we will have a 1.0 release
 
 252
 00:16:01.294 --> 00:16:03.768
-然后还有很多我们想做的工作
-of that, and then there's
-a lot more that we want to do.
+然后我们还想做更多的事情。
+of that, and then there's a lot more that we want to do.
 
 253
 00:16:03.768 --> 00:16:08.220
-但我认为这就是 JavaScript 的打字系统
-But that's what I think embraces
-JavaScript's typing system and
+但我认为这就是JavaScript的打字系统和
+But that's what I think embraces JavaScript's typing system and
 
 254
 00:16:08.220 --> 00:16:12.605
-让它变得更好而不是试图重新连接到另一个 DNA
-makes it better rather than trying
-to rewire to a different DNA.Ç
+使它更好，而不是试图重新连接到不同的DNA。
+makes it better rather than trying to rewire to a different DNA.Ç

@@ -2,39 +2,33 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:03.084
->> 凯尔 - 辛普森: 所以要理解我希望在这件事上
-&gt;&gt; Kyle Simpson: So to understand that
-thing that I would like there to be in
+&gt；&gt；Kyle Simpson：为了理解我想要的东西
+&gt;&gt; Kyle Simpson: So to understand that thing that I would like there to be in
 
 2
 00:00:03.084 --> 00:00:06.878
-中间是我们所面对的所有难题
-the middle, the all or nothing sort
-of conundrum that we're facing,
+中间，我们面临的全有或全无的难题，
+the middle, the all or nothing sort of conundrum that we're facing,
 
 3
 00:00:06.878 --> 00:00:10.960
-我想更具体地挖掘这些利弊
-I wanna dig into those pros and
-cons a little bit more specifically.
+我想更具体地探究一下这些利弊。
+I wanna dig into those pros and cons a little bit more specifically.
 
 4
 00:00:10.960 --> 00:00:15.560
-这只是我对利弊的考虑，这不是一个客观的清单。
-These are just my takes on the pros and
-cons, this is not some objective list.
+这些只是我对利弊的看法，这不是什么客观的清单。
+These are just my takes on the pros and cons, this is not some objective list.
 
 5
 00:00:15.560 --> 00:00:20.652
-第一，我认为一个关于 TypeScript 和 Flow 之类的系统的重要优点之一，
-Number one, I think one of the big pros
-about systems like TypeScript and Flow,
+第一，我认为打字和流程这样的系统最大的优点之一，
+Number one, I think one of the big pros about systems like TypeScript and Flow,
 
 6
 00:00:20.652 --> 00:00:25.292
-我之前说过，他们把你的代码中的类型变得更加明显。
-I said this earlier, they make the types
-much more obvious in your code.
+我之前说过，它们使类型在您的代码中更加明显。
+I said this earlier, they make the types much more obvious in your code.
 
 7
 00:00:25.292 --> 00:00:27.789
@@ -43,39 +37,33 @@ And that's a big improvement.
 
 8
 00:00:27.789 --> 00:00:32.357
-对写代码有很大的改进本质上是完全不确定的
-A big improvement over writing code
-that's essentially completely uncertain,
+与编写本质上完全不确定的代码相比，这是一个很大的改进，
+A big improvement over writing code that's essentially completely uncertain,
 
 9
 00:00:32.357 --> 00:00:36.369
-这特别行动会发生什么
-unascertainable what's gonna happen
-with this particular operation.
+无法确定这次行动会发生什么。
+unascertainable what's gonna happen with this particular operation.
 
 10
 00:00:37.420 --> 00:00:39.049
-使这些类型变得显而易见是一件好事。
-Making those types
-obvious is a good thing.
+让这些类型变得明显是一件好事。
+Making those types obvious is a good thing.
 
 11
 00:00:40.549 --> 00:00:46.710
-这也是 TypeScript 的设计和
-It's also a very strong positive
-that the design of TypeScript and
+这也是一个很强的积极作用，打字稿的设计和
+It's also a very strong positive that the design of TypeScript and
 
 12
 00:00:46.710 --> 00:00:51.799
-流，放一个双关语，流，
-Flow, to put a pun here,
-goes with the flow,
+流动，把双关语放在这里，随波逐流，
+Flow, to put a pun here, goes with the flow,
 
 13
 00:00:51.799 --> 00:00:55.920
-如果你愿意的话，静态打字的方式就会有很多其他的语言。
-if you will, of the way static typing
-works in a lot of other languages.
+如果你愿意，看看静态类型在许多其他语言中的工作方式。
+if you will, of the way static typing works in a lot of other languages.
 
 14
 00:00:55.920 --> 00:00:57.738
@@ -84,39 +72,33 @@ The syntaxes are very similar.
 
 15
 00:00:57.738 --> 00:00:59.709
-因此有强烈的熟悉感。
-And so
-there's a strong sense of familiarity.
+所以有一种强烈的熟悉感。
+And so there's a strong sense of familiarity.
 
 16
 00:00:59.709 --> 00:01:03.277
-当你出现这种情况的时候你不是完全不同的
-When you show up to something like that,
-you're not in this entirely different
+当你出现在这样的事情上，你并不是完全不同的
+When you show up to something like that, you're not in this entirely different
 
 17
 00:01:03.277 --> 00:01:05.790
-你以前做过的人都比你还多
-world than you've ever
-done with types before.
+世界比你以前做过的类型更多。
+world than you've ever done with types before.
 
 18
 00:01:05.790 --> 00:01:09.739
-感觉很像你从一个更
-It feels very much like the types
-that you have from a more
+它感觉非常像你从更多的
+It feels very much like the types that you have from a more
 
 19
 00:01:10.989 --> 00:01:14.750
-典型类型的语言，如 Java 或 C++ 。
-typically typed language,
-like a Java or C++.
+典型的类型化语言，如Java或C+。
+typically typed language, like a Java or C++.
 
 20
 00:01:14.750 --> 00:01:18.430
-因此熟悉的人很专业，我确信那是他们设计的一部分。
-So the familiarity is a strong pro, and
-I'm sure that was part of their design.
+所以熟悉是一个很强的专业，我相信这是他们设计的一部分。
+So the familiarity is a strong pro, and I'm sure that was part of their design.
 
 21
 00:01:19.980 --> 00:01:21.034
@@ -125,165 +107,140 @@ They are extremely popular.
 
 22
 00:01:21.034 --> 00:01:25.799
-这是不可否认的，尤其是 TypeScript 的受欢迎程度。
-It's undeniable the popularity,
-especially of TypeScript.
+不可否认，尤其是打字稿的受欢迎程度。
+It's undeniable the popularity, especially of TypeScript.
 
 23
 00:01:25.799 --> 00:01:29.519
-好像我们每天都在宣布一些新的主要开放源
-It seems like everyday we get an
-announcement of some new major open source
+似乎每天我们都会收到一些新的主要开放源码的公告
+It seems like everyday we get an announcement of some new major open source
 
 24
 00:01:29.519 --> 00:01:32.710
-完全转换为 TypeScript的项目。
-project that's completely
-converting over to TypeScript.
+完全转换成打字稿的项目。
+project that's completely converting over to TypeScript.
 
 25
 00:01:32.710 --> 00:01:37.527
-就像在社区里建立起的低能曲线
-And just like the hype curves that build
-up in the community behind something
+就像在某件事背后在社区中建立起来的炒作曲线一样
+And just like the hype curves that build up in the community behind something
 
 26
 00:01:37.527 --> 00:01:42.641
-就像一个 " 雷法 " 或 " 维 " ，他们以强大的方式建立起来，有很大的支持，
-like a React or a Vue, they've built up
-in such a strong way, with a big backing,
+就像REACT或VUE一样，他们以如此强大的方式建立起来，有很大的支持，
+like a React or a Vue, they've built up in such a strong way, with a big backing,
 
 27
 00:01:42.641 --> 00:01:46.650
-来自 Microsoft的 TypeScript ，流来自 Facebook。
-TypeScript being from Microsoft,
-Flow being from Facebook.
+打字稿来自微软，流量来自Facebook。
+TypeScript being from Microsoft, Flow being from Facebook.
 
 28
 00:01:46.650 --> 00:01:49.388
-他们和社区建立了这么大的关系
-They've built up in such a big
-way with the community and
+他们与社区建立了如此庞大的关系
+They've built up in such a big way with the community and
 
 29
 00:01:49.388 --> 00:01:52.651
-背后的企业支持，投资学习和
-the corporate support behind it,
-that the investment to learn and
+它背后的企业支持，学习和学习的投资
+the corporate support behind it, that the investment to learn and
 
 30
 00:01:52.651 --> 00:01:56.810
-进入其中一个将会是一个长期回报的投资
-get into one of those is gonna be an
-investment that pays off for a long time.
+进入其中一个将会是一项长期回报的投资。
+get into one of those is gonna be an investment that pays off for a long time.
 
 31
 00:01:56.810 --> 00:02:00.530
-这不是什么 fad 下周就要走了
-It's not some fad that's
-gonna go away next week.
+下周不是什么时尚会消失。
+It's not some fad that's gonna go away next week.
 
 32
 00:02:00.530 --> 00:02:03.030
-因此，民望是一件很有力的诉讼。
+因此，受欢迎程度是一个强大的诉求。
 So the popularity is a strong suit.
 
 33
 00:02:03.030 --> 00:02:05.774
-这背后有一个很大的社区一个文件
-There's a big community behind it,
-a ton of documentation,
+它背后有一个很大的社区，有大量的文档，
+There's a big community behind it, a ton of documentation,
 
 34
 00:02:05.774 --> 00:02:09.170
-这些项目背后的势头是很重要的，这确实是有道理的。
-a ton of momentum behind these projects,
-and it certainly does make sense.
+这些项目背后蕴藏着巨大的动力，这当然是有意义的。
+a ton of momentum behind these projects, and it certainly does make sense.
 
 35
 00:02:09.170 --> 00:02:13.503
-事实上，我绝对会说，我喜欢不喜欢打人，
-In fact, I would absolutely say,
-whether I liked TypeScript or not,
+其实我绝对会说，不管我喜欢不喜欢打字稿，
+In fact, I would absolutely say, whether I liked TypeScript or not,
 
 36
 00:02:13.503 --> 00:02:16.882
-如果你在一个系统里工作对我来说太傻了
-it would be silly to me for
-you to be working in a system,
+你在一个系统里工作对我来说是愚蠢的，
+it would be silly to me for you to be working in a system,
 
 37
 00:02:16.882 --> 00:02:21.800
-说你在微软 .NET 商店工作你每天都在后台写 C#
-say you worked in a Microsoft .NET shop
-and you wrote C# all day on the backend,
+假设您在Microsoft.NET商店工作，并且整天在后端编写C#，
+say you worked in a Microsoft .NET shop and you wrote C# all day on the backend,
 
 38
 00:02:21.800 --> 00:02:25.199
-然后你就需要做些 JavaScript
+然后你需要做一些JavaScript。
 and then you needed to do some JavaScript.
 
 39
 00:02:25.199 --> 00:02:28.453
-我无法想象你不会使用 TypeScript的情况。
-I can't imagine a scenario where
-you wouldn't use TypeScript.
+我无法想象你不会使用打字稿的情况。
+I can't imagine a scenario where you wouldn't use TypeScript.
 
 40
 00:02:28.453 --> 00:02:32.177
-从精神的角度来说我已经在世界上
-Cuz the mental context switching of,
-I've been in types world and
+因为心理环境的转换，我一直在类型的世界和
+Cuz the mental context switching of, I've been in types world and
 
 41
 00:02:32.177 --> 00:02:35.979
-我现在在非类型的世界里对我来说太疯狂了
-now I'm in non-types world,
-would be nuts to me.
+现在我在非类型的世界里，会让我发疯的。
+now I'm in non-types world, would be nuts to me.
 
 42
 00:02:35.979 --> 00:02:38.966
-因此，在这方面，有很多场景是有道理的。
-So there's lots of scenarios
-where it makes completes sense.
+因此，有很多情况下，它是完全有意义的。
+So there's lots of scenarios where it makes completes sense.
 
 43
 00:02:38.966 --> 00:02:41.979
-这就是为什么它生长的原因。
-And the popularity of that,
-that's the reason why it's growing.
+它的受欢迎程度，这就是它不断增长的原因。
+And the popularity of that, that's the reason why it's growing.
 
 44
 00:02:42.979 --> 00:02:47.639
-而且它们很复杂，使它们真正擅长做什么。
-And they're very sophisticated, and that
-makes them really good at what they do.
+他们非常老练，这使他们非常擅长自己的工作。
+And they're very sophisticated, and that makes them really good at what they do.
 
 45
 00:02:47.639 --> 00:02:51.711
-其实我很惊讶像 TypeScript 之类的东西
-I'm actually kind of amazed at how
-much something like TypeScript or
+我真的有点惊讶于有多少像打字稿或者
+I'm actually kind of amazed at how much something like TypeScript or
 
 46
 00:02:51.711 --> 00:02:55.991
-流可以推断我甚至故意模糊的代码
-Flow can infer from code that I even
-intentionally try to obfuscate, and
+流可以从我甚至故意试图混淆的代码中推断出来，并且
+Flow can infer from code that I even intentionally try to obfuscate, and
 
 47
 00:02:55.991 --> 00:02:58.879
-他们还能找到这些东西
-they're still able to
-figure those things out.
+他们仍然能够搞清楚这些事情。
+they're still able to figure those things out.
 
 48
 00:02:58.879 --> 00:03:02.009
-这些工具太棒了
+这些工具在这方面很棒。
 These tools are fantastic at that.
 
 49
 00:03:02.009 --> 00:03:07.770
-这些都是很有好处的，但我也有一些负面的负面因素。
-So these are all strong pros, but I also
-have some strong negatives against them.
+所以这些都是很强的优点，但我也有一些强烈的负面影响。
+So these are all strong pros, but I also have some strong negatives against them.

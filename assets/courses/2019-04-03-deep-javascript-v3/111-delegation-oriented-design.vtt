@@ -2,67 +2,58 @@ WEBVTT
 
 1
 00:00:00.330 --> 00:00:03.730
->> Kyle Simpson: 现在我不仅保证了更清洁的代码样式，而且
-&gt;&gt; Kyle Simpson: Now I promised
-not only a cleaner code style, but
+&gt；&gt；Kyle Simpson：现在我承诺的不仅是更干净的代码风格，而且
+&gt;&gt; Kyle Simpson: Now I promised not only a cleaner code style, but
 
 2
 00:00:03.730 --> 00:00:05.419
-更强大的设计模式
+更强大的设计模式。
 a more powerful design pattern.
 
 3
 00:00:06.780 --> 00:00:11.359
-委派是设计模式，设计模式应该影响，
-Delegation is a design pattern,
-and design patterns should affect,
+委托是一种设计模式，设计模式应该影响，
+Delegation is a design pattern, and design patterns should affect,
 
 4
 00:00:11.359 --> 00:00:14.820
-他们应该改变你对设计代码的看法
-they should change the way that
-you think about designing a code.
+他们应该改变你设计代码的方式。
+they should change the way that you think about designing a code.
 
 5
 00:00:16.280 --> 00:00:21.399
-所以在我们最后的讨论中我想谈谈
-And so, in this last part of our
-discussion, I want to talk about
+所以，在我们讨论的最后一部分，我想谈谈
+And so, in this last part of our discussion, I want to talk about
 
 6
 00:00:21.399 --> 00:00:26.179
-应如何以不同的方式解决代表团的问题，
-how delegation should be approached
-to solve problems differently,
+如何通过授权以不同的方式解决问题，
+how delegation should be approached to solve problems differently,
 
 7
 00:00:26.179 --> 00:00:30.920
-不仅仅是用不同的方式编写代码，而是从根本上解决了问题。
-not just to write code differently, but to
-solve problems fundamentally differently.
+不仅要以不同的方式编写代码，而且要从根本上以不同的方式解决问题。
+not just to write code differently, but to solve problems fundamentally differently.
 
 8
 00:00:32.270 --> 00:00:34.119
-想象一下你有这样的情景。
+想象一下你有这样一个场景。
 Imagine you have a scenario like this.
 
 9
 00:00:34.119 --> 00:00:38.520
-假设您具有需要在应用程序中构造的登录页面
-Imagine you have a login page that you
-need to construct in your application and
+假设您有一个需要在应用程序中构造的登录页面，并且
+Imagine you have a login page that you need to construct in your application and
 
 10
 00:00:38.520 --> 00:00:42.369
-你会有两个不同的控制器
-you're going to have two
-different controllers.
+你将会有两个不同的控制器。
+you're going to have two different controllers.
 
 11
 00:00:42.369 --> 00:00:46.234
-您将有一个代表认证部分的 AuthController ，
-You're gonna have an AuthController
-that represents the authentication part,
+您将有一个代表身份验证部分的AuthController，
+You're gonna have an AuthController that represents the authentication part,
 
 12
 00:00:46.234 --> 00:00:48.027
@@ -71,317 +62,273 @@ like communicating with the server.
 
 13
 00:00:48.027 --> 00:00:52.521
-你会有一个代表所有人的 LoginFormController
-And you're gonna have a
-LoginFormController, which represents all
+您将有一个LoginFormController，它表示所有
+And you're gonna have a LoginFormController, which represents all
 
 14
 00:00:52.521 --> 00:00:58.325
-UI 内容，文本框，按钮和错误消息，以及所有这些信息。
-the UI stuff, the text boxes, and buttons,
-and error messages, and all of that, okay.
+UI内容，文本框，按钮，错误消息，以及所有这些，好的。
+the UI stuff, the text boxes, and buttons, and error messages, and all of that, okay.
 
 15
 00:00:58.325 --> 00:01:03.134
-设计这个的旧的学校方式是你需要两套行为
-The old school way of designing this is
-that you need both sets of behaviors in
+传统的设计方法是，您需要两组行为
+The old school way of designing this is that you need both sets of behaviors in
 
 16
 00:01:03.134 --> 00:01:06.668
-某种形式的形态和形式你需要它们都组成
-some way, shape or form,
-you need them both composed,
+以某种方式，形状或形式，你需要把它们都组合起来，
+some way, shape or form, you need them both composed,
 
 17
 00:01:06.668 --> 00:01:09.180
-或者你需要他们俩的权限
+或者你需要同时接触他们两个。
 or you need access to both of them.
 
 18
 00:01:09.180 --> 00:01:10.359
-原来的学校方式
+所以老派的方式，
 So the old school way,
 
 19
 00:01:10.359 --> 00:01:15.250
-这就是我们典型的 Java类继承系统
-which is what we would typically think of
-in a class inheritance system like Java,
+这就是我们在Java这样的类继承系统中通常会想到的，
+which is what we would typically think of in a class inheritance system like Java,
 
 20
 00:01:15.250 --> 00:01:19.099
-是您将其中一个作为父类，另一个为子类。
-is you make one of them the parent class,
-the other one the child class.
+使其中一个成为父类，另一个成为子类。
+is you make one of them the parent class, the other one the child class.
 
 21
 00:01:19.099 --> 00:01:22.021
-然后您将实例化以获取此 pageInstance。
-And then you instantiate
-to get this pageInstance.
+然后实例化以获得这个pageInstance。
+And then you instantiate to get this pageInstance.
 
 22
 00:01:22.021 --> 00:01:26.628
-它有来自 AuthController 的所有方法以及来自
-And it has all the methods from
-AuthController and all the methods from
+它包含AuthController中的所有方法和AuthController中的所有方法
+And it has all the methods from AuthController and all the methods from
 
 23
 00:01:26.628 --> 00:01:30.152
-此实例中存在 LoginFormController 。
-the LoginFormController
-present in this instance.
+此实例中存在的LoginFormController。
+the LoginFormController present in this instance.
 
 24
 00:01:30.152 --> 00:01:32.944
-然后你就可以为所欲为了
-And then you can do whatever
-you need to do for the page.
+然后你可以为页面做任何你需要做的事情。
+And then you can do whatever you need to do for the page.
 
 25
 00:01:32.944 --> 00:01:35.895
-这就是如何解决这个问题的
-That's sort of how the inheritance
-way of solving this
+这就是解决这个问题的遗传方式
+That's sort of how the inheritance way of solving this
 
 26
 00:01:35.895 --> 00:01:37.829
-问题就会被解决
+问题就会接近它。
 problem would have approached it.
 
 27
 00:01:39.420 --> 00:01:44.079
-这就是我们所谓的构图遗传。
-That's what we called
-composition thru inheritance.
+这就是我们所谓的通过继承组成。
+That's what we called composition thru inheritance.
 
 28
 00:01:44.079 --> 00:01:49.570
-20 世纪 80 年代和 1990年的愿景是如何构建软件。
-This was the 1980's and 1990's vision for
-how software should be built.
+这是20世纪80年代和90年代关于软件应该如何构建的愿景。
+This was the 1980's and 1990's vision for how software should be built.
 
 29
 00:01:49.570 --> 00:01:54.147
-在 90 年代中期到 90 年代中期你开始听说
-Somewhere in the mid to late 90s,
-you started to hear that this whole
+在90年代中后期的某个地方，你开始听到整个
+Somewhere in the mid to late 90s, you started to hear that this whole
 
 30
 00:01:54.147 --> 00:01:58.813
-15 层深的继承链就像一个反模式
-15-level deep inheritance chain
-thing was like an anti-pattern.
+15级深层继承链的事情就像一个反模式。
+15-level deep inheritance chain thing was like an anti-pattern.
 
 31
 00:01:58.813 --> 00:02:03.712
-人们开始说，不，不，不，我们不想做
-And people started saying, no, no,
-no, we don't wanna do composition thru
+人们开始说，不，我们不想通过
+And people started saying, no, no, no, we don't wanna do composition thru
 
 32
 00:02:03.712 --> 00:02:08.914
-继承，我们要做的是组成，而不是继承的组成。
-inheritance, we wanna do composition
-instead over composition over inheritance.
+继承，我们想做构图，而不是构图而不是继承。
+inheritance, we wanna do composition instead over composition over inheritance.
 
 33
 00:02:08.914 --> 00:02:12.521
-除去所有垂直定向的嵌套链和
-Get rid of all those
-vertically-oriented nested chains and
+摆脱所有垂直方向的嵌套链和
+Get rid of all those vertically-oriented nested chains and
 
 34
 00:02:12.521 --> 00:02:16.209
-让我们把这些东西一起组合起来
-let's just have these things
-compose themselves together.
+让我们让这些东西自己组合在一起。
+let's just have these things compose themselves together.
 
 35
 00:02:16.209 --> 00:02:19.556
-所以组成他们的一种方式就是要有这两门课，
-So one way of composing them
-is to have these two classes,
+所以组成它们的一种方法是使用这两个类，
+So one way of composing them is to have these two classes,
 
 36
 00:02:19.556 --> 00:02:23.881
-把其中一个实例化，然后当您实例化另一个时，
-to instantiate one of them, and
-then when you instantiate the other one,
+实例化其中一个，然后当您实例化另一个时，
+to instantiate one of them, and then when you instantiate the other one,
 
 37
 00:02:23.881 --> 00:02:26.006
-让它成为第一个的财产
+使其成为第一个的属性。
 make it a property of the first one.
 
 38
 00:02:26.006 --> 00:02:29.801
-所以现在我可以访问 pageInstance 和 pageInstance 上的所有方法
-So now I have access to all
-the methods on pageInstance and
+所以现在我可以访问pageInstance和
+So now I have access to all the methods on pageInstance and
 
 39
 00:02:29.801 --> 00:02:35.031
-所有 offInstance 的方法都是在一个地方进行的，它们是一起组成的。
-all the methods on offInstance all in
-one place, they are composed together.
+offInstance上的所有方法都在一个地方，它们是组合在一起的。
+all the methods on offInstance all in one place, they are composed together.
 
 40
 00:02:35.031 --> 00:02:37.909
-这是一种合成方法。
+这是做这种作文的一种方法。
 That's one way of doing that composition.
 
 41
 00:02:39.370 --> 00:02:43.064
-然后有人说，好吧，这很丑，因为如果我需要创作更多的
-And then somebody said, well, that's ugly
-because then if I need to compose more I
+然后有人说，好吧，这很难看，因为如果我需要创作更多，我
+And then somebody said, well, that's ugly because then if I need to compose more I
 
 42
 00:02:43.064 --> 00:02:46.210
-都有这些属性让我们做个混混
+得到了所有这些属性，让我们做Mixin。
 got all these properties, let's do mixins.
 
 43
 00:02:46.210 --> 00:02:49.543
-然后我们发明了混合组合的概念。
-So then we invented the idea of
-mixin composition, which said,
+于是我们发明了混音构图的概念，这就是说，
+So then we invented the idea of mixin composition, which said,
 
 44
 00:02:49.543 --> 00:02:54.072
-我将实例化一个 ControllerClass 并实例化 AuthControllerClass。
-I'm gonna instantiate a ControllerClass
-and instantiate an AuthControllerClass.
+我将实例化一个ControllerClass和一个AuthControllerClass。
+I'm gonna instantiate a ControllerClass and instantiate an AuthControllerClass.
 
 45
 00:02:54.072 --> 00:02:57.319
-然后我就把所有东西都复制到另一个
-And then I'm just gonna copy
-everything over into the other one.
+然后我会把所有东西都复制到另一个
+And then I'm just gonna copy everything over into the other one.
 
 46
 00:02:57.319 --> 00:02:59.538
 所以现在所有这些方法都被复制了。
-So now all those methods
-have been copied over.
+So now all those methods have been copied over.
 
 47
 00:03:00.800 --> 00:03:04.449
-所有这些都是我们解决这个问题的方法
-All of these are different ways
-that we've solved the problem,
+所有这些都是我们解决问题的不同方式，
+All of these are different ways that we've solved the problem,
 
 48
 00:03:04.449 --> 00:03:07.860
-我想把这两个逻辑分开
-which is I want to logically
-separate these two things.
+我想在逻辑上把这两件事分开。
+which is I want to logically separate these two things.
 
 49
 00:03:07.860 --> 00:03:11.770
-但他们需要让我共存，才能让页面工作。
-But then they need to coexist for
-me to actually get the page to work.
+但它们需要共存，我才能真正让页面正常工作。
+But then they need to coexist for me to actually get the page to work.
 
 50
 00:03:13.180 --> 00:03:16.219
-我的意思是，他们需要以某种方式组成。
-By coexist I mean,
-they need to be composed in some way.
+所谓共存，我的意思是，它们需要以某种方式组成。
+By coexist I mean, they need to be composed in some way.
 
 51
 00:03:16.219 --> 00:03:18.984
-我们一直试图发明不同的方法来创作这些东西。
-And we've been trying to invent
-different ways to compose this things.
+我们一直在尝试发明不同的方法来组成这些东西。
+And we've been trying to invent different ways to compose this things.
 
 52
 00:03:21.069 --> 00:03:24.659
-那么，代表团的答案是什么呢 ?
+那么，代表团对此的回答是什么？
 So, what is delegation's answer to this?
 
 53
 00:03:24.659 --> 00:03:27.539
-代表团如何以不同的方式做 ?
+委派如何做不同的事情？
 How does delegation do things differently?
 
 54
 00:03:27.539 --> 00:03:31.180
-第一，你对代表团做的事，不好意思。
-Number one, the thing that you
-do with delegation, excuse me.
+第一，你所做的关于授权的事情，对不起。
+Number one, the thing that you do with delegation, excuse me.
 
 55
 00:03:31.180 --> 00:03:35.569
-你对代表团所做的事情就是停止思考父母和
-The thing that you do with delegation
-is you stop thinking about parent and
+你所做的委派就是你不再考虑父辈和
+The thing that you do with delegation is you stop thinking about parent and
 
 56
 00:03:35.569 --> 00:03:38.539
-然后开始考虑同级之间的关系。
-child and
-you start thinking about peer-to-peer.
+孩子，你开始考虑点对点。
+child and you start thinking about peer-to-peer.
 
 57
 00:03:38.539 --> 00:03:44.620
-因此，我可以有一个链接到 AuthController的 LoginFormController 。
-So I could have a LoginFormController
-that is linked to an AuthController.
+所以我可以有一个链接到AuthController的LoginFormController。
+So I could have a LoginFormController that is linked to an AuthController.
 
 58
 00:03:44.620 --> 00:03:46.879
-我们得摆脱这个父母孩子的想法
-We have to get rid of this
-idea of a parent-child and
+我们必须摆脱这种亲子关系的想法
+We have to get rid of this idea of a parent-child and
 
 59
 00:03:46.879 --> 00:03:48.413
-请考虑同级之间的情况。
+想想点对点。
 think about the peer-to-peer.
 
 60
 00:03:48.413 --> 00:03:53.509
-我们会说 LoginController 链接到 AuthController好吗
-We're gonna just say LoginController
-is linked to AuthController, all right?
+我们只是说LoginController链接到AuthController，好吗？
+We're gonna just say LoginController is linked to AuthController, all right?
 
 61
 00:03:55.820 --> 00:03:58.490
->> 凯尔 - 辛普森: 这是一个在 JavaScript中使用的代码示例。
-&gt;&gt; Kyle Simpson: So here's an example
-in code of doing that in JavaScript.
+&gt；&gt；Kyle Simpson：下面是一个用JavaScript编写的代码示例。
+&gt;&gt; Kyle Simpson: So here's an example in code of doing that in JavaScript.
 
 62
 00:03:58.490 --> 00:04:02.859
-我要制作一个有认证和认证方法的 AuthController
-I'm gonna make an AuthController that
-has methods on it like authenticate and
+我将制作一个AuthController，它上面有一些方法，比如authenticate和
+I'm gonna make an AuthController that has methods on it like authenticate and
 
 63
 00:04:02.859 --> 00:04:04.229
-handleResponse。
+HandleResponse。
 handleResponse.
 
 64
 00:04:04.229 --> 00:04:08.521
-然后我要去做一个 LoginFormController
-And then I'm gonna make a
-LoginFormController, and it has methods on
+然后我将创建一个LoginFormController，它在
+And then I'm gonna make a LoginFormController, and it has methods on
 
 65
 00:04:08.521 --> 00:04:12.754
-它类似于表单的 onSubmit 处理程序和 displayError 消息。
-it like an onSubmit handler for
-the form and a displayError message.
+它类似于表单的onSubmit处理程序和displayError消息。
+it like an onSubmit handler for the form and a displayError message.
 
 66
 00:04:12.754 --> 00:04:16.415
-并且 LoginFormController 链接到，通过原型链，
-And LoginFormController is linked to,
-through the prototype chain,
+并且LoginFormController通过原型链接到，
+And LoginFormController is linked to, through the prototype chain,
 
 67
 00:04:16.415 --> 00:04:17.576
@@ -390,144 +337,123 @@ the AuthController.
 
 68
 00:04:17.576 --> 00:04:20.259
-但这些是两个不同的具体物体。
-But these are two separate
-concrete objects.
+但这是两个独立的具体物体。
+But these are two separate concrete objects.
 
 69
 00:04:20.259 --> 00:04:21.480
-不像他们是一个阶级
+他们不像是一个班级
 It's not like they're a class for
 
 70
 00:04:21.480 --> 00:04:24.519
-这些东西实际上是两个独立的物体。
-these things,
-they are actual two separate objects.
+这些东西，它们实际上是两个独立的物体。
+these things, they are actual two separate objects.
 
 71
 00:04:24.519 --> 00:04:27.329
-如果你需要的话，你可以单独与他们互动。
-And you could interact with them
-separately if you needed to.
+如果需要，您可以单独与它们交互。
+And you could interact with them separately if you needed to.
 
 72
 00:04:28.439 --> 00:04:32.680
-但是部分时间，他们需要彼此合作。
-But part of the time,
-they need to cooperate with each other.
+但部分时间，他们需要彼此合作。
+But part of the time, they need to cooperate with each other.
 
 73
 00:04:32.680 --> 00:04:36.661
-例如，每当我要 onSubmit 时，就像你在这里看到的一样，
-So for example, whenever I got
-to onSubmit, as you see here,
+例如，无论何时我到onSubmit，正如你在这里看到的，
+So for example, whenever I got to onSubmit, as you see here,
 
 74
 00:04:36.661 --> 00:04:41.576
-每当我转至 onSubmit 时，我需要在第 18 行上调用 this.authenticate 。
-whenever I go to onSubmit, I need to
-call this.authenticate on line 18.
+无论何时转到onSubmit，我都需要在第18行调用this.authenticate。
+whenever I go to onSubmit, I need to call this.authenticate on line 18.
 
 75
 00:04:41.576 --> 00:04:44.909
-但 LoginFormController 没有认证方法。
-But the LoginFormController doesn't
-have an authenticate method.
+但是LoginFormController没有身份验证方法。
+But the LoginFormController doesn't have an authenticate method.
 
 76
 00:04:46.579 --> 00:04:51.949
-因此，将方法委派给 AuthControl 对象。
-And so that method is delegated
-to the AuthControl object.
+因此该方法被委派给AuthControl对象。
+And so that method is delegated to the AuthControl object.
 
 77
 00:04:51.949 --> 00:04:54.120
-因此，我们运行认证方法，但是
-So we then run the authenticate method,
-but
+所以我们然后运行authenticate方法，但是
+So we then run the authenticate method, but
 
 78
 00:04:54.120 --> 00:04:56.238
-我们要指出的关键是什么
+我们要指的这把钥匙是什么？
 what is the this key we're gonna point at?
 
 79
 00:04:56.238 --> 00:04:59.629
-还会指向 LoginFormController 的位置，对吧 ?
-It's still gonna be pointing
-at LoginFormController, right?
+它仍然会指向LoginFormController，对吗？
+It's still gonna be pointing at LoginFormController, right?
 
 80
 00:05:01.120 --> 00:05:04.209
-所以我们真正做到的是
+所以我们实际上所做的是
 So what we have actually done is through
 
 81
 00:05:04.209 --> 00:05:07.600
-这个关键词在原型系统中的独角兽魔法
-the unicorn magic of the this key
-word in the prototype system,
+原型系统中这个关键字的独角兽魔力，
+the unicorn magic of the this key word in the prototype system,
 
 82
 00:05:07.600 --> 00:05:13.170
-在函数调用过程中，我们实际上组成了这两个对象。
-we have virtually composed these two
-objects during the function call.
+在函数调用期间，我们实际上已经组合了这两个对象。
+we have virtually composed these two objects during the function call.
 
 83
 00:05:13.170 --> 00:05:17.100
-它们现在在此关键字上的共享上下文中
-They are now in a shared context
-over the this keyword where
+它们现在位于this关键字的共享上下文中，其中
+They are now in a shared context over the this keyword where
 
 84
 00:05:17.100 --> 00:05:21.019
-这两个人可以彼此交谈，彼此分享。
-both of them can talk to each other and
-share with each other.
+他们两个都可以互相交谈和分享。
+both of them can talk to each other and share with each other.
 
 85
 00:05:21.019 --> 00:05:23.480
-我们在此调用认证方法。
-Here we are calling
-the authenticate method.
+这里我们调用authenticate方法。
+Here we are calling the authenticate method.
 
 86
 00:05:23.480 --> 00:05:28.290
-但是当在第 4 行上认证为 this.userName 时，
-But when authenticate says
-this.userName on line 4,
+但是当authenticate在第4行上显示this.userName时，
+But when authenticate says this.userName on line 4,
 
 87
 00:05:28.290 --> 00:05:32.519
-它实际上是指在 LoginFormController上返回的用户名属性。
-it's actually referring to the username
-property back on LoginFormController.
+它实际上引用了LoginFormController上的username属性。
+it's actually referring to the username property back on LoginFormController.
 
 88
 00:05:33.519 --> 00:05:37.019
-因此，它能够访问这些属性并在需要时使用它们。
-So it's able to access those properties
-and use them as it needs them.
+因此它能够访问这些属性并在需要时使用它们。
+So it's able to access those properties and use them as it needs them.
 
 89
 00:05:38.019 --> 00:05:44.610
-然后，每当 handleResponse 从服务器返回并出现错误时，
-And then whenever the handleResponse comes
-back from the server and there's an error,
+然后每当handleResponse从服务器返回并且出现错误时，
+And then whenever the handleResponse comes back from the server and there's an error,
 
 90
 00:05:44.610 --> 00:05:50.038
-在第 9 行我知道现在有很多箭头但在我们说的第 9 行
-on line 9, I know there is a lot of
-arrows now, but on line 9 when we say,
+在第9行，我知道现在有很多箭头，但在第9行，当我们说，
+on line 9, I know there is a lot of arrows now, but on line 9 when we say,
 
 91
 00:05:50.038 --> 00:05:55.314
-this.displayError，我们没有 displayError，但是 who do?
-this.displayError, we don't have
-a displayError, but who does?
+this.displayError，我们没有displayError，但谁有呢？
+this.displayError, we don't have a displayError, but who does?
 
 92
 00:05:55.314 --> 00:05:56.639
@@ -536,21 +462,18 @@ The LoginFormController.
 
 93
 00:05:58.389 --> 00:06:02.519
-你看这两个单独的具体物体是如何
-So you see how these two separate
-concrete objects have virtually
+因此，您可以看到这两个独立的具体对象实际上是如何
+So you see how these two separate concrete objects have virtually
 
 94
 00:06:02.519 --> 00:06:05.757
-在共享的上下文中相互组合吗 ?
-composed each other over
-the shared this context?
+在这个共享的背景下彼此组成？
+composed each other over the shared this context?
 
 95
 00:06:07.685 --> 00:06:10.213
->> 凯尔 - 辛普森: 这是一个非常不同的想法
-&gt;&gt; Kyle Simpson: That's a very
-different way of thinking about how we
+&gt；&gt；Kyle Simpson：这是一种非常不同的思考方式
+&gt;&gt; Kyle Simpson: That's a very different way of thinking about how we
 
 96
 00:06:10.213 --> 00:06:11.300
@@ -564,289 +487,255 @@ We solve software,
 
 98
 00:06:12.209 --> 00:06:15.850
-我们有两个单独的具体事情可以做他们自己的工作
-we have two separate concrete
-things that can do their own work.
+我们有两个独立的具体的东西可以做他们自己的工作。
+we have two separate concrete things that can do their own work.
 
 99
 00:06:15.850 --> 00:06:17.576
-但是合作的时候，合作的方式是没有实例的
-But when they need to cooperate, the way
-they cooperate is not having instance
+但是当他们需要合作的时候，他们合作的方式是没有实例的
+But when they need to cooperate, the way they cooperate is not having instance
 
 100
 00:06:17.576 --> 00:06:18.557
-call instance a call instance.b 方法。
+调用实例a调用instance.b方法。
 a call instance a call instance.b method.
 
 101
 00:06:18.557 --> 00:06:25.714
-他们合作的方式是通过原型链联系起来的
-The way they cooperate is linked
-through the prototype chain,
+他们合作的方式是通过原型链联系起来的，
+The way they cooperate is linked through the prototype chain,
 
 102
 00:06:25.714 --> 00:06:29.370
-他们只会分享一个电话背景
+它们只是共享一个呼叫上下文。
 they just share a call context.
 
 103
 00:06:31.089 --> 00:06:33.769
-他们可以根据需要调用对方的方法。
-And they can call each
-other's methods as necessary.
+并且它们可以在必要时调用彼此的方法。
+And they can call each other's methods as necessary.
 
 104
 00:06:38.130 --> 00:06:41.394
->> Kyle Simpson: 该方法的诸多好处之一是如果
-&gt;&gt; Kyle Simpson: One of the many
-benefits of that approach is that if
+&gt；&gt；Kyle Simpson：该方法的许多好处之一是如果
+&gt;&gt; Kyle Simpson: One of the many benefits of that approach is that if
 
 105
 00:06:41.394 --> 00:06:46.288
-您有单独的对象仅通过原型链进行链接，
-you have separate objects that are only
-linked through a prototype chain,
+您有单独的对象，这些对象仅通过原型链链接，
+you have separate objects that are only linked through a prototype chain,
 
 106
 00:06:46.288 --> 00:06:51.261
-因为这些物体是分开的而不是通过连接在一起
-because those objects are separate
-instead of being wired together through
+因为这些对象是分开的，而不是通过
+because those objects are separate instead of being wired together through
 
 107
 00:06:51.261 --> 00:06:55.634
-类层次结构或任何事物，它们变得更加稳定。
-class hierarchies or anything,
-they become much more testable.
+类层次结构或任何东西，它们变得更易于测试。
+class hierarchies or anything, they become much more testable.
 
 108
 00:06:55.634 --> 00:06:57.031
-稳定可靠。
+可独立测试。
 Independently testable.
 
 109
 00:06:57.031 --> 00:07:00.432
-所以说我有这两个物体
+假设我有这两个对象
 So lets say I have these two objects and
 
 110
 00:07:00.432 --> 00:07:06.319
-我想做的是做一个我可以测试的模拟
-what I want to do is I want to make
-a mock that I can test against.
+我想做的是我想做一个可以测试的模仿。
+what I want to do is I want to make a mock that I can test against.
 
 111
 00:07:06.319 --> 00:07:08.389
-所以，让我们来模拟作者。
+所以让我们模拟一下AuthController。
 So let's mock out the AuthController.
 
 112
 00:07:09.870 --> 00:07:14.593
-我正在通过嘲弄 AuthController 来测试 LoginFormController 。
-I'm testing the LoginFormController
-by mocking the AuthController.
+我正在通过模拟AuthController来测试LoginFormController。
+I'm testing the LoginFormController by mocking the AuthController.
 
 113
 00:07:14.593 --> 00:07:18.269
-我只需要将 LoginFormController 原型链接到
-All I have to do is have the
-LoginFormController prototype linked to
+我所要做的就是将LoginFormController原型链接到
+All I have to do is have the LoginFormController prototype linked to
 
 114
 00:07:18.269 --> 00:07:19.250
-我的模拟对象
+我的模拟对象。
 my mock object.
 
 115
 00:07:19.250 --> 00:07:21.759
 我不需要更改代码的任何内容。
-I didn't have to change
-anything about the code.
+I didn't have to change anything about the code.
 
 116
 00:07:21.759 --> 00:07:23.610
-我只是改变了它的雏形
+我只是改变了它的原型连接的地方。
 I just change where its prototype linked.
 
 117
 00:07:24.649 --> 00:07:27.447
-你可以用 proto 做这个记得吗
+你可以用原型做到，记得吗？
 You can do that with a proto, remember?
 
 118
 00:07:27.447 --> 00:07:32.298
-因此，我现在正在通过嘲弄 AuthController 来测试 LoginFormController ，但
-So now I'm testing the LoginFormController
-by mocking out the AuthController, but
+所以现在我通过模拟AuthController来测试LoginFormController，但是
+So now I'm testing the LoginFormController by mocking out the AuthController, but
 
 119
 00:07:32.298 --> 00:07:34.264
-如果我想测试另一个呢
+如果我想测试另一个呢？
 what if I wanna test the other one?
 
 120
 00:07:34.264 --> 00:07:37.980
-如果我想测试 AuthController 呢 ?
+如果我想测试AuthController怎么办？
 What if I wanna test the AuthController?
 
 121
 00:07:37.980 --> 00:07:42.466
-我做了一个 MockLoginFormController 的代表
-Well, I make a MockLoginFormController
-that delegates to
+我制作了一个MockLoginFormController，它委托给
+Well, I make a MockLoginFormController that delegates to
 
 122
 00:07:42.466 --> 00:07:47.415
-授权控制器现在我正在测试授权控制器
-the AuthController, and
-now I'm testing the AuthController.
+AuthController，现在我正在测试AuthController。
+the AuthController, and now I'm testing the AuthController.
 
 123
 00:07:47.415 --> 00:07:50.019
-我可以完全独立设置这些测试。
-I can set up these tests
-entirely independent.
+我可以完全独立地设置这些测试。
+I can set up these tests entirely independent.
 
 124
 00:07:50.019 --> 00:07:54.543
-我不需要测试依赖性注入或任何其他无稽之谈。
-I don't need test dependency injection or
-any of that other nonsense.
+我不需要测试依赖注入或任何其他胡说八道。
+I don't need test dependency injection or any of that other nonsense.
 
 125
 00:07:54.543 --> 00:07:57.038
-这些测试完全独立于代码
-These tests are just entirely
-separate of the code,
+这些测试完全独立于代码，
+These tests are just entirely separate of the code,
 
 126
 00:07:57.038 --> 00:08:00.610
-他们只会改变原型机链的关联
-they just change where the prototype
-chain linkage happens.
+它们只是改变原型链发生的位置。
+they just change where the prototype chain linkage happens.
 
 127
 00:08:00.610 --> 00:08:02.237
-我们可以模拟出不同的物体
-And we're able to mock out
-the different objects.
+我们可以模拟出不同的物体。
+And we're able to mock out the different objects.
 
 128
 00:08:02.237 --> 00:08:05.204
-如果你有三，四，四，
-And that gets even more powerful
-if you have three or four or
+如果你有三个或四个或者
+And that gets even more powerful if you have three or four or
 
 129
 00:08:05.204 --> 00:08:07.810
-在原型链中的五个对象。
-five objects that are in
-the prototype chain.
+原型链中的五个对象。
+five objects that are in the prototype chain.
 
 130
 00:08:07.810 --> 00:08:10.766
-您可以模拟不同的部件来隔离和测试。
-You can mock out different
-parts to isolate and test.
+您可以模拟出不同的部件以进行隔离和测试。
+You can mock out different parts to isolate and test.
 
 131
 00:08:15.134 --> 00:08:16.774
->> Kyle Simpson: 那就是我的案子
+&gt；&gt；Kyle Simpson：这就是我的案例
 &gt;&gt; Kyle Simpson: So that's my case for
 
 132
 00:08:16.774 --> 00:08:21.810
-为什么我觉得我们已经错过了班上的课
-why I think we've been missing
-the mark by doing classes.
+为什么我认为我们上课错过了目标。
+why I think we've been missing the mark by doing classes.
 
 133
 00:08:21.810 --> 00:08:25.550
-我明白为什么有时甚至连一个选项都没有
-I understand why there is
-sometimes not even an option,
+我理解为什么有时候甚至没有选择，
+I understand why there is sometimes not even an option,
 
 134
 00:08:25.550 --> 00:08:27.480
-这个框架为你做出了选择
+框架为您做出选择。
 the framework makes the choice for you.
 
 135
 00:08:27.480 --> 00:08:28.928
-就算你有选择权
+或者即使你有选择
 Or even if you do have an option,
 
 136
 00:08:28.928 --> 00:08:32.649
-我知道有时候会有情感上的依恋
-I understand sometimes that there's
-an emotional attachment to doing classes.
+我有时能理解，上课有一种情感依恋。
+I understand sometimes that there's an emotional attachment to doing classes.
 
 137
 00:08:32.649 --> 00:08:34.779
-我有那么多东西
+我得到了所有这些东西。
 I get all of that stuff.
 
 138
 00:08:34.779 --> 00:08:38.759
-但我真的认为如果你认真地理解和理解
-But I really think that if you
-are taking seriously, understanding and
+但我真的认为如果你认真对待，理解和
+But I really think that if you are taking seriously, understanding and
 
 139
 00:08:38.759 --> 00:08:41.690
-学习 JavaScript 这个努力的一部分是
-learning JavaScript,
-part of that endeavor is,
+学习JavaScript，努力的一部分是，
+learning JavaScript, part of that endeavor is,
 
 140
 00:08:41.690 --> 00:08:44.740
-如何以最有效的方式使用 JavaScript ?
-how do I use JavaScript in its
-most effectively designed way?
+如何以最有效的设计方式使用JavaScript？
+how do I use JavaScript in its most effectively designed way?
 
 141
 00:08:45.740 --> 00:08:49.710
-我也不觉得他们在课堂上都有这么多糖分
-And I don't think even with all the sugar
-they've layered on top of classes
+而且我不认为即使有那么多的糖，他们也不会在班级上层层叠起来
+And I don't think even with all the sugar they've layered on top of classes
 
 142
 00:08:49.710 --> 00:08:53.590
-能满足 JavaScript DNA 的标记
-that it meets the mark of
-the DNA of JavaScript.
+它符合JavaScript的DNA标记。
+that it meets the mark of the DNA of JavaScript.
 
 143
 00:08:53.590 --> 00:08:56.590
-这就是 JavaScript 的本质。
+这就是JavaScript固有的功能。
 That's what JavaScript does inherently.
 
 144
 00:08:56.590 --> 00:08:57.710
-JavaScript 执行的操作和
+JavaScript的作用和
 What JavaScript does and
 
 145
 00:08:57.710 --> 00:09:02.950
-它本身就是一个代表团，它是一个原型代表团。
-does well inherently is delegation,
-it does prototype delegation.
+天生就是委派，它做的是原型委派。
+does well inherently is delegation, it does prototype delegation.
 
 146
 00:09:02.950 --> 00:09:06.610
-我想知道的是，我希望看到更多的人拥抱这一点。
-And what I'd like to see is, I'd like
-to see more people embracing that.
+我想看到的是，我希望看到更多的人接受这一点。
+And what I'd like to see is, I'd like to see more people embracing that.
 
 147
 00:09:06.610 --> 00:09:10.659
-然后去寻找更多的复杂
-And going after that rather than
-trying to find more complex
+去追求它，而不是试图找到更复杂的东西
+And going after that rather than trying to find more complex
 
 148
 00:09:10.659 --> 00:09:12.769
-在类语法上层的方式。
+在类语法上分层的方法。
 ways to layer on class syntax.

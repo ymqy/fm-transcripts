@@ -2,468 +2,403 @@ WEBVTT
 
 1
 00:00:00.110 --> 00:00:05.660
->> Kyle Simpson: 我们要回来谈谈函数表达式练习。
-&gt;&gt; Kyle Simpson: We're back to talk
-about the function expressions exercise.
+&gt；&gt；Kyle Simpson：我们回来讨论函数表达式练习。
+&gt;&gt; Kyle Simpson: We're back to talk about the function expressions exercise.
 
 2
 00:00:05.660 --> 00:00:09.288
-希望你发现这个很有挑战性
-Hopefully you've found this one
-is efficiently challenging,
+希望你已经发现这是一个有效的挑战，
+Hopefully you've found this one is efficiently challenging,
 
 3
 00:00:09.288 --> 00:00:13.185
-把你的大脑扭转在思考功能及其名字的问题上
-twist your brain around thinking
-about functions and their names and
+绞尽脑汁思考函数及其名称和
+twist your brain around thinking about functions and their names and
 
 4
 00:00:13.185 --> 00:00:15.887
-函数所属的位置以及如何定义它们。
-where functions belong and
-how to define them.
+函数属于哪里以及如何定义它们。
+where functions belong and how to define them.
 
 5
 00:00:15.887 --> 00:00:18.995
-尤其是在箭头功能上的差异和
-And especially with the arrow functions,
-the differences and
+特别是箭头功能，区别和
+And especially with the arrow functions, the differences and
 
 6
 00:00:18.995 --> 00:00:22.859
-这些样式之间的可读性有很大的差别。
-there can be very stark differences
-in readability between those styles.
+这些样式之间的可读性可能存在非常明显的差异。
+there can be very stark differences in readability between those styles.
 
 7
 00:00:22.859 --> 00:00:27.019
-我们要开始执行打印记录功能
-We're gonna start by implementing
-the printRecords function.
+我们将从实现printRecords函数开始。
+We're gonna start by implementing the printRecords function.
 
 8
 00:00:27.019 --> 00:00:31.855
-在此再次说明，如果您愿意，将要求我们在
-Again the spec here, if you will,
-is asking us to take in a list of
+再一次，如果你愿意，这里的规范要求我们接受一个列表
+Again the spec here, if you will, is asking us to take in a list of
 
 9
 00:00:31.855 --> 00:00:36.259
-学生标识，按学生标识获取学生记录。
-student Ids,
-get the student record by it's student Id.
+学生号，通过学生号获取学生记录。
+student Ids, get the student record by it's student Id.
 
 10
 00:00:36.259 --> 00:00:39.362
-我已经注意到了你可以发现
-And I've already noticed,
-you could notice that there's going to be
+我已经注意到了，你可以注意到
+And I've already noticed, you could notice that there's going to be
 
 11
 00:00:39.362 --> 00:00:43.058
-至少还有一个我们要做的地方就在这里
-at least one other place where we need to
-to do that, and that's gonna be down here.
+至少还有一个我们需要这么做的地方，就在下面。
+at least one other place where we need to to do that, and that's gonna be down here.
 
 12
 00:00:43.058 --> 00:00:46.534
-所以我已经知道我需要这个实用程序
-So I already know that's
-a utility I'm gonna need,
+所以我已经知道这是我需要的工具，
+So I already know that's a utility I'm gonna need,
 
 13
 00:00:46.534 --> 00:00:49.140
-通过其标识来访问学生记录。
+通过其ID访问学生记录。
 accessing a student record by its ID.
 
 14
 00:00:49.140 --> 00:00:53.261
-所以我要先写那个功能
-So I'm gonna start by
-writing that function first,
+所以我首先要写这个函数，
+So I'm gonna start by writing that function first,
 
 15
 00:00:53.261 --> 00:00:59.548
-我会说函数 getStudentById ，这将采用 studentId。
-I'll say function getStudentById, and
-that's gonna take in the studentId.
+我说函数getStudentById，它将接受StudentId。
+I'll say function getStudentById, and that's gonna take in the studentId.
 
 16
 00:01:01.020 --> 00:01:03.640
->> Kyle Simpson: 它需要从该阵列中返回我的记录。
-&gt;&gt; Kyle Simpson: And it needs to
-return me the record from that array.
+&gt；&gt；Kyle Simpson：它需要从该数组返回记录。
+&gt;&gt; Kyle Simpson: And it needs to return me the record from that array.
 
 17
 00:01:03.640 --> 00:01:09.140
-因此，它通过阵列进行搜索，找到匹配标识的匹配项。
-So it's got a search through the array and
-find the one that matches by the ID.
+因此它在数组中进行搜索，并找到通过ID匹配的数组。
+So it's got a search through the array and find the one that matches by the ID.
 
 18
 00:01:09.140 --> 00:01:12.239
-我们不需要实施自己的搜索算法
-We don't need to implement
-our own search algorithm
+我们不需要实现我们自己的搜索算法
+We don't need to implement our own search algorithm
 
 19
 00:01:12.239 --> 00:01:17.019
-因为 JavaScript 数组与它们上的六重查找方法一样。
-because JavaScript arrays as vs
-six heavy find method on them.
+因为JavaScript数组作为VS六个沉重的find方法在它们上面。
+because JavaScript arrays as vs six heavy find method on them.
 
 20
 00:01:17.019 --> 00:01:20.864
-所以我们只是简单地使用我们正在寻找的阵列
-So we're just gonna simply use, and
-the array that we're looking over is
+所以我们只需要简单地使用，我们要查看的数组是
+So we're just gonna simply use, and the array that we're looking over is
 
 21
 00:01:20.864 --> 00:01:24.840
-称为 studentRecords ，所以我们会说 studentRecords.find()。
-called studentRecords, so
-we're gonna say studentRecords.find().
+名为StudentRecords，所以我们将使用StudentRecords.find()。
+called studentRecords, so we're gonna say studentRecords.find().
 
 22
 00:01:24.840 --> 00:01:28.365
-而 find() 函数需要回调，
+find()函数接受一个回调，
 And the find() function takes a callback,
 
 23
 00:01:28.365 --> 00:01:32.368
-对数组中的每个项调用该回调。
-that callback is invoked for
-each item in an array.
+将为数组中的每个项调用该回调。
+that callback is invoked for each item in an array.
 
 24
 00:01:32.368 --> 00:01:37.103
-只要第一次回归真实或真实的价值
-And whenever the first of those
-returns true or a truthy value,
+无论何时第一个返回真或真的值，
+And whenever the first of those returns true or a truthy value,
 
 25
 00:01:37.103 --> 00:01:42.659
-那么将返回数组中的值，不是 true ，而是返回数组。
-then that value from the array is
-returned, not the true, but the array.
+然后返回数组中的值，而不是真值，而是数组。
+then that value from the array is returned, not the true, but the array.
 
 26
 00:01:42.659 --> 00:01:45.549
-差不多就像过滤器，我们基本就需要回归真实
-It's almost like filter,
-we basically just need to return true
+这几乎就像筛选器，我们基本上只需要返回true
+It's almost like filter, we basically just need to return true
 
 27
 00:01:45.549 --> 00:01:48.229
-只要我们找到了我们想要的东西
-whenever we have found
-the thing that we want.
+每当我们找到我们想要的东西。
+whenever we have found the thing that we want.
 
 28
 00:01:48.229 --> 00:01:53.022
-因此，如果我们已匹配 studentId ，那么
+因此，如果我们已经匹配了StudentId，对于
 So, if we have matched the studentId, for
 
 29
 00:01:53.022 --> 00:01:58.003
-示例， >> Kyle Simpson: 我仅使用
-example,
-&gt;&gt; Kyle Simpson: I'll just use
+示例，&gt；&gt；Kyle Simpson：我只使用
+example, &gt;&gt; Kyle Simpson: I'll just use
 
 30
 00:01:58.003 --> 00:01:58.650
-记录在此处。
+在这里录音。
 record here.
 
 31
 00:02:00.599 --> 00:02:08.191
-我们知道匹配标识的方式是 (record.id == studentId ) 。
-The way we know that we have matched
-an ID is if the (record.id == studentId).
+我们知道我们已经匹配了一个ID的方式是如果(record.id=StudentId)。
+The way we know that we have matched an ID is if the (record.id == studentId).
 
 32
 00:02:09.510 --> 00:02:12.973
->> Kyle Simpson: 将在数组中找到记录并将其返回，
-&gt;&gt; Kyle Simpson: And that will find
-the record in the array and return it,
+&gt；&gt；Kyle Simpson：这将在数组中找到记录并返回它，
+&gt;&gt; Kyle Simpson: And that will find the record in the array and return it,
 
 33
 00:02:12.973 --> 00:02:16.469
-我得先从我的打印记录中注销
-I'm gonna need that very
-first off in my printRecords.
+我需要我的打印记录中的第一个。
+I'm gonna need that very first off in my printRecords.
 
 34
 00:02:16.469 --> 00:02:20.913
-我想做的第一件事就是把我的名单
-So, the very first thing that
-I wanna do is turn my list of
+所以，我想做的第一件事就是把我的清单
+So, the very first thing that I wanna do is turn my list of
 
 35
 00:02:20.913 --> 00:02:25.278
-将 Ids 记录到 studentRecords 的列表中，全部正确。
-record Ids into a list of studentRecords,
-all right.
+将ID记录到StudentRecords列表中，好的。
+record Ids into a list of studentRecords, all right.
 
 36
 00:02:25.278 --> 00:02:28.602
-因为这可能不是记录标识的完整列表，所以
-Because this may not be
-the whole list of recordIds, so
+因为这可能不是recordId的整个列表，所以
+Because this may not be the whole list of recordIds, so
 
 37
 00:02:28.602 --> 00:02:33.789
-我基本上是从我想打印的记录中找到一个子集。
-I'm basically getting a subset, by ID
-of the records that I wanna print out.
+我基本上得到了一个子集，通过我想打印出来的记录的ID。
+I'm basically getting a subset, by ID of the records that I wanna print out.
 
 38
 00:02:33.789 --> 00:02:36.216
-所以我可以做地图功能
+所以我可以做一个地图功能，
 So I can do a map function for that,
 
 39
 00:02:36.216 --> 00:02:41.008
-我可以带 recordIds， >> Kyle Simpson:
-I can take the recordIds,
-&gt;&gt; Kyle Simpson: Which is
+我可以接受recordIds，&gt；&gt；Kyle Simpson：这是
+I can take the recordIds, &gt;&gt; Kyle Simpson: Which is
 
 40
 00:02:41.008 --> 00:02:44.993
-一组数字 studentIds ，我可以将它映射到
-an array of numbers studentIds,
-and I can map it and
+一组数字StudentIds，我可以映射它并
+an array of numbers studentIds, and I can map it and
 
 41
 00:02:44.993 --> 00:02:50.629
-把它变成一组我可以打印出来的学生记录
-turn it into an array of student
-records that I can then print out.
+把它变成一组学生记录，然后我可以打印出来。
+turn it into an array of student records that I can then print out.
 
 42
 00:02:50.629 --> 00:02:54.846
-所以我得先整理好
+所以，但首先我得把它们分类，所以
 So, but first I'll have to sort them, so
 
 43
 00:02:54.846 --> 00:02:59.430
-我要打电话给 getRecord 好吗
+我将调用getRecord的那个函数，好的。
 that function I'll call getRecord, okay.
 
 44
 00:02:59.430 --> 00:03:02.893
-所以我要去找一个 studentId 我得去找它
-So I'm taking in a studentId,
-and I need to go find it and
+所以我要接收一个学生ID，我需要去找它
+So I'm taking in a studentId, and I need to go find it and
 
 45
 00:03:02.893 --> 00:03:07.639
-那我就立刻意识到这个宏的功能，对吧 ?
-then I immediately realize already
-have this macro function, right?
+然后我马上意识到已经有这个宏观功能了，对吧？
+then I immediately realize already have this macro function, right?
 
 46
 00:03:07.639 --> 00:03:10.841
-这就是我刚写的
+这就是我刚刚写的，
 That's the one that I just wrote,
 
 47
 00:03:10.841 --> 00:03:15.710
-所以基本 getStudentById 是我的宏功能。
-so basically getStudentById
-is my macro function.
+所以基本上getStudentById是我的宏函数。
+so basically getStudentById is my macro function.
 
 48
 00:03:15.710 --> 00:03:16.370
-你和我一起吗
+你跟我一起吗？
 Are you with me?
 
 49
 00:03:17.569 --> 00:03:20.701
-相反，作为内联函数表达式，我将其作为
-Instead of passing that in as an inline
-function expression I have it as
+我将其作为内联函数表达式传递，而不是将其作为
+Instead of passing that in as an inline function expression I have it as
 
 50
 00:03:20.701 --> 00:03:24.471
-一个独立功能，因为我知道我需要
-a standalone function, because I have the
-foreknowledge of knowing I'm gonna need
+一个独立的函数，因为我有先见之明，知道我将需要
+a standalone function, because I have the foreknowledge of knowing I'm gonna need
 
 51
 00:03:24.471 --> 00:03:26.294
-在这里第二次的时候
+这是第二次在这里，请稍等片刻。
 that a second time here in just a moment.
 
 52
 00:03:26.294 --> 00:03:33.139
-好吧那我们就回电话记录吧
-[LAUGH] Okay, so
-what we get back we could call records.
+[笑]好的，那么我们得到的东西我们可以打电话给唱片公司。
+[LAUGH] Okay, so what we get back we could call records.
 
 53
 00:03:33.139 --> 00:03:36.889
-这些是我们想打印的学生记录
-These are the student records
-that we wanna print, but
+这些是我们想要打印的学生记录，但是
+These are the student records that we wanna print, but
 
 54
 00:03:36.889 --> 00:03:41.709
-我们不能把它们印在清单上因为我们需要按名字来排序
-we can't print them just yet
-because we need to sort this list by name.
+我们还不能打印它们，因为我们需要按名称对此列表进行排序。
+we can't print them just yet because we need to sort this list by name.
 
 55
 00:03:41.709 --> 00:03:44.808
-所以我们得说特委
+所以我们需要说录音。排序，
 So we need to say records.sort,
 
 56
 00:03:44.808 --> 00:03:50.088
-sort 函数为， >> Kyle Simpson: Frustraty 是 mutator
-the sort function is,
-&gt;&gt; Kyle Simpson: Frustratingly a mutator
+排序函数是，&gt；&gt；Kyle Simpson：令人沮丧的Mutator
+the sort function is, &gt;&gt; Kyle Simpson: Frustratingly a mutator
 
 57
 00:03:50.088 --> 00:03:54.930
-而不是返回新阵列，它会由于性能原因而发生突变。
-rather than returning a new array, it
-mutates in place for performance reasons.
+由于性能原因，它不是返回新数组，而是就地进行变异。
+rather than returning a new array, it mutates in place for performance reasons.
 
 58
 00:03:54.930 --> 00:03:57.770
-所以我们不需要说记录等于记录那样
-So we don't actually need to say
-records equals records, that sort,
+所以我们实际上不需要说记录等于记录，
+So we don't actually need to say records equals records, that sort,
 
 59
 00:03:57.770 --> 00:04:00.199
-我们就可以叫特委了它就把它变了
-we can just call records.sort and
-it mutates it.
+我们只需调用records.sort，它就会变异它。
+we can just call records.sort and it mutates it.
 
 60
 00:04:00.199 --> 00:04:05.057
-如果你在乎的话你可以得到回报但我觉得回报率很重要
-You could get a return value if you cared,
-but I tend to think the return value makes
+如果你关心的话，你可以得到一个返回值，但我倾向于认为返回值
+You could get a return value if you cared, but I tend to think the return value makes
 
 61
 00:04:05.057 --> 00:04:08.228
-看起来好像不是在发生变异的时候
-it look like it's not mutating
-in place when it is so,
+它看起来不像是在原地变异，
+it look like it's not mutating in place when it is so,
 
 62
 00:04:08.228 --> 00:04:11.069
-我通常称它为一个旁观者，好的。
-I usually just call it as a mutator,
-all right.
+我通常把它叫做变种人，好吧。
+I usually just call it as a mutator, all right.
 
 63
 00:04:11.069 --> 00:04:16.644
-所以，如果你用它在数值上对它进行 alpha 数字排序的话，
-So, sort if you call it with nothing it
-does an alpha numeric sort on the values,
+因此，sort如果您没有调用它，它会对值进行字母数字排序，
+So, sort if you call it with nothing it does an alpha numeric sort on the values,
 
 64
 00:04:16.644 --> 00:04:20.393
-问题是我们的价值观是物体
-and the problem with that is
-our values are objects and
+问题是我们的价值观是客体
+and the problem with that is our values are objects and
 
 65
 00:04:20.393 --> 00:04:25.490
-当我们谈到这类单位时，它们会被两个物体所组成。
-they are gonna string of by two objects
-as we talked about the types unit.
+它们将由两个对象组成，正如我们所讨论的类型单元。
+they are gonna string of by two objects as we talked about the types unit.
 
 66
 00:04:25.490 --> 00:04:30.000
-因此，我们需要提供一个可以进行比较的函数调用。
-So, we're gonna need to provide a function
-call back that can do the comparison.
+因此，我们需要提供一个可以进行比较的函数回调。
+So, we're gonna need to provide a function call back that can do the comparison.
 
 67
 00:04:30.000 --> 00:04:33.143
-所以我要回电话
+所以我将调用这个函数回调，
 So I will call this function call back,
 
 68
 00:04:33.143 --> 00:04:37.350
-sortbyNameAscending，根据它的内容。
-sortbyNameAscending, according
-to what it said.
+sortbyNameAscending，根据它所说的。
+sortbyNameAscending, according to what it said.
 
 69
 00:04:37.350 --> 00:04:40.709
-而这个函数回拨的方式是它接收到两个记录。
-And the way this function call back
-works is it receives two records.
+这个函数回调的工作方式是它接收两个记录。
+And the way this function call back works is it receives two records.
 
 70
 00:04:40.709 --> 00:04:44.485
-所以我们将接收记录 d1和 record2
-So we will receive record1,
-and record2, and
+因此我们将接收record1和record2，以及
+So we will receive record1, and record2, and
 
 71
 00:04:44.485 --> 00:04:49.470
-我们应该做的是如果 record1 小于 record2。
-what we're supposed to do is if
-record1 is less than record2.
+我们应该做的是，如果record1小于record2。
+what we're supposed to do is if record1 is less than record2.
 
 72
 00:04:49.470 --> 00:04:53.076
-意思是录音机应该更早出现在名单上
-Meaning record1 should show
-up earlier in the list,
+意味着record1应该在列表中更早地出现，
+Meaning record1 should show up earlier in the list,
 
 73
 00:04:53.076 --> 00:04:57.360
-那就应该回报不到 0 比 -1的东西
-then were supposed to return
-something less than 0 like -1.
+然后应该返回小于0的值，如-1。
+then were supposed to return something less than 0 like -1.
 
 74
 00:04:57.360 --> 00:05:01.120
-如果它大于记录 2 我们就应该返回 1
-If it's greater than record2
-we're supposed to return 1,
+如果它大于record2我们应该返回1，
+If it's greater than record2 we're supposed to return 1,
 
 75
 00:05:01.120 --> 00:05:03.939
-如果它等于我们要返回 0
-and if it's equal to we're
-supposed to return 0.
+如果它等于，我们应该返回0。
+and if it's equal to we're supposed to return 0.
 
 76
 00:05:03.939 --> 00:05:10.124
-因此，我们可以说 ( record1.name )
+因此，我们可以说if(record1.name
 So, we can say if (record1.name
 
 77
 00:05:10.124 --> 00:05:14.254
-< record2.name)。
+&lt；record2.name)。
 &lt; record2.name).
 
 78
 00:05:14.254 --> 00:05:17.619
-现在我们有机会知道在这个数据结构中
-Now we have the advantage of knowing
-that in this data structure the names
+现在我们的优势是知道这个数据结构中的名称
+Now we have the advantage of knowing that in this data structure the names
 
 79
 00:05:17.619 --> 00:05:18.619
-都是字符串
+总是字符串。
 are always strings.
 
 80
 00:05:18.619 --> 00:05:22.569
-所以最后一件事不能用 alpha 数字做
-So this last thing is not gonna course
-it's just gonna do in alpha numeric
+所以最后一件事不会发生，它只会在字母数字中做
+So this last thing is not gonna course it's just gonna do in alpha numeric
 
 81
 00:05:22.569 --> 00:05:23.358
@@ -472,423 +407,370 @@ comparison.
 
 82
 00:05:23.358 --> 00:05:25.413
-如果字符串小于此字符串，
+如果字符串小于这个字符串，
 If the string is less than this one,
 
 83
 00:05:25.413 --> 00:05:28.839
-从数字上说它会提前在名单上
-alpha numerically then it's
-gonna sort early in the list.
+字母数字，那么它将在列表的早期排序。
+alpha numerically then it's gonna sort early in the list.
 
 84
 00:05:28.839 --> 00:05:35.151
-因此，如果 record1.name 小于 record2.name ，那么我们可以返回 -1。
-So if record1.name is less than
-record2.name, then we can return -1.
+因此，如果record1.name小于record2.name，那么我们可以返回-1。
+So if record1.name is less than record2.name, then we can return -1.
 
 85
 00:05:35.151 --> 00:05:41.668
-如果 record1.name > record2.name，
+如果record1.name&>record2.name，
 If record1.name &gt; record2.name,
 
 86
 00:05:41.668 --> 00:05:44.925
-我们将返回 1号
+我们返回1，并且
 we an return 1, and
 
 87
 00:05:44.925 --> 00:05:50.108
-否则，我们将返回 0。
+否则，我们将返回0。
 otherwise, we'll return 0.
 
 88
 00:05:51.802 --> 00:05:53.613
->> 凯尔 - 辛普森: 是吗 ?
+凯尔·辛普森：什么事？
 &gt;&gt; Kyle Simpson: Yes?
 
 89
 00:05:53.613 --> 00:05:55.819
->> 扬声器 2: 仅作为实践问题。
+&gt；&gt；演讲者2：就像一个练习问题。
 &gt;&gt; Speaker 2: Just as a practice question.
 
 90
 00:05:55.819 --> 00:05:59.319
-即使假定您知道 sortByNameAsc
-Even if assuming you
-knew that sortByNameAsc
+即使假设您知道sortByNameAsc
+Even if assuming you knew that sortByNameAsc
 
 91
 00:05:59.319 --> 00:06:02.449
-按姓名升序排列，您将不在任何其他位置使用。
-by name ascending you would
-not be using anywhere else.
+通过名字升序，你将不会在其他任何地方使用。
+by name ascending you would not be using anywhere else.
 
 92
 00:06:02.449 --> 00:06:04.990
-你会考虑提取吗
+你有没有考虑过把它提取出来？
 Would you ever consider extracting that?
 
 93
 00:06:04.990 --> 00:06:05.629
->> 凯尔 - 辛普森: 是的。
+&gt；&gt；Kyle Simpson：是的，我会。
 &gt;&gt; Kyle Simpson: Yes I would.
 
 94
 00:06:05.629 --> 00:06:08.889
->> 扬声器 2: 然后按顺序进行排序，按行排序。
-&gt;&gt; Speaker 2: And then just have
-records.sort, sort by, okay.
+&gt；&gt；扬声器2：然后只有录音。排序，排序依据，好的。
+&gt;&gt; Speaker 2: And then just have records.sort, sort by, okay.
 
 95
 00:06:08.889 --> 00:06:11.620
->> Kyle Simpson: 尤其如此，因为按名称排序
-&gt;&gt; Kyle Simpson: And it's especially
-true because this sort by name
+&gt；&gt；Kyle Simpson：这一点尤其正确，因为这种按名称排序的方法
+&gt;&gt; Kyle Simpson: And it's especially true because this sort by name
 
 96
 00:06:11.620 --> 00:06:15.459
-升函数不依赖于词法范围的任何内容，
-ascending function doesn't rely
-upon anything in the lexical scope,
+升序函数不依赖于词法范围内的任何内容，
+ascending function doesn't rely upon anything in the lexical scope,
 
 97
 00:06:15.459 --> 00:06:17.459
-它不需要被植入
+它不需要嵌入。
 it doesn't need to be embedded.
 
 98
 00:06:17.459 --> 00:06:21.470
-那么，我们其实是会在另一次的演习中提出这个问题的。
-Well, we will actually come to
-that question in another exercise.
+好的，我们将在另一个练习中讨论这个问题。
+Well, we will actually come to that question in another exercise.
 
 99
 00:06:21.470 --> 00:06:25.740
-所以我们整理了记录清单，现在我们只需要打印记录。
-So we have sorted the list of records,
-now we simply need to print the records.
+所以我们已经对记录列表进行了排序，现在我们只需要打印记录。
+So we have sorted the list of records, now we simply need to print the records.
 
 100
 00:06:25.740 --> 00:06:29.139
-又因为锻炼的精神是使用功能，
-And again because the spirit of
-the exercise is to use functions,
+再一次因为练习的精神是使用函数，
+And again because the spirit of the exercise is to use functions,
 
 101
 00:06:29.139 --> 00:06:31.040
-我们要用我们的朋友 forEach
+让我们用我们的朋友，为每个人。
 let's use our friend, forEach.
 
 102
 00:06:31.040 --> 00:06:33.238
-我们可以说 records.forEach。
+我们可以说records.forEach。
 We can say records.forEach.
 
 103
 00:06:41.899 --> 00:06:47.894
->> 凯尔 - 辛普森: 我们将在这里做简单的 console.log 声明
-&gt;&gt; Kyle Simpson: And we're just gonna
-do a simple console.log statement here,
+&gt；&gt；Kyle Simpson：我们在这里只做一个简单的console.log语句，
+&gt;&gt; Kyle Simpson: And we're just gonna do a simple console.log statement here,
 
 104
 00:06:47.894 --> 00:06:50.348
-我会说记录的名字
+我会说record.name。
 I'll say record.name.
 
 105
 00:06:50.348 --> 00:06:56.024
-然后在括号里我会说记录 id 和
-And then in parenthesis
-I'll say record.id and
+然后在括号中我将说record.id和
+And then in parenthesis I'll say record.id and
 
 106
 00:06:56.024 --> 00:07:04.615
-那么我们就会在这里发表一个言论如果他们得到报酬我们会说报酬的
-then we'll have an expression here
-that if they are paid we'll say paid.
+然后我们将在这里有一个表达式，如果他们被支付，我们将说支付。
+then we'll have an expression here that if they are paid we'll say paid.
 
 107
 00:07:04.615 --> 00:07:11.242
-record.id Iseorry record.id 为 true 或
-So record.id I'm sorry
-record.paid which is true or
+所以record.id我很抱歉record.pay哪一个是真的或者
+So record.id I'm sorry record.paid which is true or
 
 108
 00:07:11.242 --> 00:07:16.149
-假的我们会说工资还是没付
+假，我们会说付还是不付。
 false, and we'll say paid or not paid.
 
 109
 00:07:19.480 --> 00:07:22.980
->> 凯尔 - 辛普森: 好的，有我们的打印记录功能。
-&gt;&gt; Kyle Simpson: Okay, so
-there is our print record function.
+&gt；&gt；Kyle Simpson：好的，这就是我们的打印记录功能。
+&gt;&gt; Kyle Simpson: Okay, so there is our print record function.
 
 110
 00:07:22.980 --> 00:07:25.891
-现在给学生报名，期待看我
-Now paid students to enroll,
-the expect the read me
+现在付费的学生注册，期待阅读我
+Now paid students to enroll, the expect the read me
 
 111
 00:07:25.891 --> 00:07:29.899
-要求看整个学生的记录。
-requirement say that it should look
-throughout the student records.
+要求说，它应该查看所有的学生记录。
+requirement say that it should look throughout the student records.
 
 112
 00:07:29.899 --> 00:07:33.433
-正在检查哪些已支付但尚未支付
-Checking to see which ones are paid but
-not yet
+检查哪些已支付，但尚未支付
+Checking to see which ones are paid but not yet
 
 113
 00:07:33.433 --> 00:07:37.060
-注册，表示他们支付的是真实的，但
-enrolled, meaning they
-have a paid of true but
+注册，这意味着他们有真实的报酬，但是
+enrolled, meaning they have a paid of true but
 
 114
 00:07:37.060 --> 00:07:41.632
-其标识尚未存在于当前注册数组中。
-their ID is not already in
-that current enrollment array.
+他们ID不在当前注册数组中。
+their ID is not already in that current enrollment array.
 
 115
 00:07:41.632 --> 00:07:46.209
-所以，让我们来看看我们要得到的是一份清单
-So, let's see that what
-we're going to get is a list
+所以，让我们看看我们将要得到的是一个列表
+So, let's see that what we're going to get is a list
 
 116
 00:07:46.209 --> 00:07:51.096
-然后我们将返回的是
-of idstoEnroll, and
-then what we're going to return is
+of idstoEnroll，然后我们将返回的是
+of idstoEnroll, and then what we're going to return is
 
 117
 00:07:51.096 --> 00:07:55.569
-包含当前注册的新阵列。
-a new array that includes
-the current enrollment.
+包含当前注册的新数组。
+a new array that includes the current enrollment.
 
 118
 00:07:55.569 --> 00:07:58.466
-所以我们会把这个注册的
-So we will spread out
-the currentEnrollment, and
+因此，我们将展开currentEnrollment，并且
+So we will spread out the currentEnrollment, and
 
 119
 00:07:58.466 --> 00:08:01.850
-那么我们将会包括我们在 idsToEnroll中所拥有的任何东西
-then we will include whatever
-we've got in idsToEnroll.
+然后，我们将在idsToEnroll中包含我们拥有的任何内容。
+then we will include whatever we've got in idsToEnroll.
 
 120
 00:08:05.279 --> 00:08:07.720
->> Kyle Simpson: 那么我们如何获取 idsToEnroll?
-&gt;&gt; Kyle Simpson: So
-how do we get the idsToEnroll?
+&gt；&gt；Kyle Simpson：那么我们如何获得idsToEnroll？
+&gt;&gt; Kyle Simpson: So how do we get the idsToEnroll?
 
 121
 00:08:07.720 --> 00:08:11.601
-我们可以用 studentRecords开始
-Well, we can start with
-the studentRecords.
+好吧，我们可以从学生记录开始。
+Well, we can start with the studentRecords.
 
 122
 00:08:17.550 --> 00:08:20.161
->> Kyle Simpson: 我们可以过滤 studentRecords，
-&gt;&gt; Kyle Simpson: And
-we can filter studentRecords,
+&gt；&gt；Kyle Simpson：我们可以过滤StudentRecords，
+&gt;&gt; Kyle Simpson: And we can filter studentRecords,
 
 123
 00:08:22.228 --> 00:08:23.434
->> 凯尔 - 辛普森: 那只是
+&gt；&gt；Kyle Simpson：那只是去
 &gt;&gt; Kyle Simpson: That was only going
 
 124
 00:08:23.434 --> 00:08:26.069
-把我们的人都记下来
+把我们弄到学生唱片公司，还有
 to get us down to the studentRecords, and
 
 125
 00:08:26.069 --> 00:08:29.699
-那我们就得把名单映射到身份证清单里了
-then we're gonna need to map
-that list into a list of IDs.
+然后我们需要将该列表映射到ID列表中。
+then we're gonna need to map that list into a list of IDs.
 
 126
 00:08:29.699 --> 00:08:36.267
-但我们可以通过过滤 studentRecords开始
-But we can start by filtering
-the studentRecords,
+但我们可以从过滤学生记录开始
+But we can start by filtering the studentRecords,
 
 127
 00:08:36.267 --> 00:08:41.009
-所以我们会说需要登记
+所以我们会说，需要注册。
 and so we will say, needsToEnroll.
 
 128
 00:08:44.929 --> 00:08:50.371
->> Kyle Simpson: 我们想把它放在那个名单上
-&gt;&gt; Kyle Simpson: And we wanna keep
-it in that list if record.paid,
+&gt；&gt；Kyle Simpson：如果record.pay，我们希望将其保留在列表中，
+&gt;&gt; Kyle Simpson: And we wanna keep it in that list if record.paid,
 
 129
 00:08:50.371 --> 00:08:53.221
-他们已经付出了代价
+意思是他们已经付钱了
 meaning they have paid and
 
 130
 00:08:53.221 --> 00:08:58.159
-他们还没有目前的报名情况。
-they are not already
-in current enrollment.
+它们不在当前注册中。
+they are not already in current enrollment.
 
 131
 00:08:58.159 --> 00:09:03.029
-还有一个内置的 JavaScript 数组方法
-And there is a built in
-JavaScript array method called
+并且有一个内置的JavaScript数组方法，称为
+And there is a built in JavaScript array method called
 
 132
 00:09:03.029 --> 00:09:07.769
-在 2016 年的 ES 中也添加了这个时间。
+还包括在ES 2016中添加的这一次。
 includes also added this time in ES 2016.
 
 133
 00:09:07.769 --> 00:09:12.090
-数组包含在数组中搜索值并使我们为 true 或
-Array includes searches for
-a value in the array and gives us true or
+数组包括对数组中的值进行搜索，并为我们提供true或
+Array includes searches for a value in the array and gives us true or
 
 134
 00:09:12.090 --> 00:09:12.889
-如果它在那里就会是假的
+如果它在那里的话是假的。
 false if it's there.
 
 135
 00:09:12.889 --> 00:09:16.539
-所以我们不需要我去做那个我们以前所做的小把戏的索引。
-So we don't need me to do that down
-little index of trick that we used to do.
+所以我们不需要我来做我们曾经做过的小技巧索引。
+So we don't need me to do that down little index of trick that we used to do.
 
 136
 00:09:16.539 --> 00:09:23.782
-因此，我可以简单地说，如果当前的注册不包含当前注册，请将其包含在记录中。
-So I can simply say if current enrollments
-if not current enrollments includ.record,
+所以我可以简单地说如果当前登记如果不包括当前登记包括.record，
+So I can simply say if current enrollments if not current enrollments includ.record,
 
 137
 00:09:23.782 --> 00:09:27.980
-这让我有了记录但我不需要记录
-that gives me a record,
-but I don't need a record.
+这给了我一个记录，但我不需要一个记录。
+that gives me a record, but I don't need a record.
 
 138
 00:09:27.980 --> 00:09:33.181
-我真正需要的是身份证所以现在我要
-What I actually need is the ID,
-so now I need to do
+我实际需要的是ID，所以现在我需要做的是
+What I actually need is the ID, so now I need to do
 
 139
 00:09:33.181 --> 00:09:38.394
-从记录中获取 StudentId 的映射。
-a map which gets the StudentId
-from the record.
+从记录中获取StudentId的地图。
+a map which gets the StudentId from the record.
 
 140
 00:09:42.809 --> 00:09:45.220
->> Kyle Simpson: 现在填充 idsToEnroll。
-&gt;&gt; Kyle Simpson: And
-now that populates idsToEnroll.
+&gt；&gt；Kyle Simpson：现在它填充了idsToEnroll。
+&gt;&gt; Kyle Simpson: And now that populates idsToEnroll.
 
 141
 00:09:46.269 --> 00:09:48.909
-所以我们没有修改过 currentenrollment，
-So we have not modified
-the currentenrollment,
+所以我们没有修改当前的注册，
+So we have not modified the currentenrollment,
 
 142
 00:09:48.909 --> 00:09:53.029
-我们只是在重新排列新阵列让你做点什么
-we're simply returning the new array for
-you to do something with it.
+我们只是返回新的数组，让您使用它做一些事情。
+we're simply returning the new array for you to do something with it.
 
 143
 00:09:53.029 --> 00:09:55.928
-最后我们有了再无报酬的
+我们终于有了未付清的提醒，
 Finally we have the remindUnpaid,
 
 144
 00:09:55.928 --> 00:10:01.541
-这个要求又说我们应该把一个 studentIds 列在一个名单上。
-again the requirements say that we
-should take a list of studentIds.
+再一次，要求说我们应该拿出一份学生ID的清单。
+again the requirements say that we should take a list of studentIds.
 
 145
 00:10:01.541 --> 00:10:06.841
-仅将该列表过滤为那些记录处于未支付状态的人员，
-Filter that list to only those
-whose records are in unpaid status,
+将该列表过滤为仅记录处于未付状态的那些，
+Filter that list to only those whose records are in unpaid status,
 
 146
 00:10:06.841 --> 00:10:10.950
-然后将过滤后的列表传给 printRecords。
-and then pass that filtered
-list to printRecords.
+然后将过滤后的列表传递给printRecords。
+and then pass that filtered list to printRecords.
 
 147
 00:10:10.950 --> 00:10:14.474
-所以我们要做另一个过滤器
+所以我们要做另一个过滤器，
 So we're gonna do another filter,
 
 148
 00:10:14.474 --> 00:10:19.525
-这次我们要做记录过滤器
-this time we're gonna do recordIds.filter,
-and
+这一次我们将执行recordIds.filter，并且
+this time we're gonna do recordIds.filter, and
 
 149
 00:10:19.525 --> 00:10:24.938
-我们要做的就是那些不派的人
-what we're gonna get back
-from that is the unpaidIds.
+我们要从那里得到的就是那些未被杀的人。
+what we're gonna get back from that is the unpaidIds.
 
 150
 00:10:40.415 --> 00:10:43.110
->> Kyle Simpson: 现在我们有学生标识，但我们需要记录。
-&gt;&gt; Kyle Simpson: Now we have
-the student id but we need the record.
+&gt；&gt；Kyle Simpson：现在我们有了学生证，但我们需要记录。
+&gt;&gt; Kyle Simpson: Now we have the student id but we need the record.
 
 151
 00:10:43.110 --> 00:10:46.881
-所以我们要记录下的记录
-So we need to get the record
-by saying record = and
+所以我们需要通过说record=and来获取记录
+So we need to get the record by saying record = and
 
 152
 00:10:46.881 --> 00:10:52.402
-然后使用我先前写的小助手 getStudentById。
-then we use that little helper that
-I wrote earlier, getStudentById.
+然后我们使用我之前编写的小助手getStudentById。
+then we use that little helper that I wrote earlier, getStudentById.
 
 153
 00:11:00.264 --> 00:11:06.960
->> Kyle Simpson: 然后我们需要说，如果记录不记录，那么支付。
-&gt;&gt; Kyle Simpson: And then we need to say,
-if record.paid if not record.paid.
+&gt；&gt；Kyle Simpson：然后我们需要说，if record.pay if not record.pay。
+&gt;&gt; Kyle Simpson: And then we need to say, if record.paid if not record.paid.
 
 154
 00:11:10.690 --> 00:11:16.523
->> Kyle Simpson: 因此，将向我提供尚未支付的记录的标识列表。
-&gt;&gt; Kyle Simpson: So that will give me the
-list of ids who's record is in the unpaid
+&gt；&gt；Kyle Simpson：这将给我一个ID列表，谁的记录在未支付的
+&gt;&gt; Kyle Simpson: So that will give me the list of ids who's record is in the unpaid
 
 155
 00:11:16.523 --> 00:11:22.590
-状态，那么我应该简单地将该列表传递到 printRecords中。
-status, then I should simply pass
-that list into printRecords.
+状态，那么我应该简单地将该列表传递到printRecords中。
+status, then I should simply pass that list into printRecords.

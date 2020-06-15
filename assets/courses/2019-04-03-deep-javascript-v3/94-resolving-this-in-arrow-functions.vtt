@@ -2,66 +2,58 @@ WEBVTT
 
 1
 00:00:00.330 --> 00:00:03.580
->> Kyle Simpson: 这里是一个长期令人沮丧的地方
-&gt;&gt; Kyle Simpson: Here's a place
-where it is perpetually frustrating
+&gt；&gt；Kyle Simpson：这是一个永远令人沮丧的地方
+&gt;&gt; Kyle Simpson: Here's a place where it is perpetually frustrating
 
 2
 00:00:05.940 --> 00:00:08.150
-我们有超载的经营者
+我们已经超载了运算符。
 that we have overloaded operators.
 
 3
 00:00:09.279 --> 00:00:13.060
-我们倾向于认为花括号必须是范围。
-We tend to think that curly
-braces must be scopes.
+我们倾向于认为花括号一定是作用域。
+We tend to think that curly braces must be scopes.
 
 4
 00:00:13.060 --> 00:00:16.550
-它们是块体，它们是函数体，它们必须是作用域。
-They're blocks, they're function bodies,
-they must be scopes.
+它们是块，它们是函数体，它们必须是作用域。
+They're blocks, they're function bodies, they must be scopes.
 
 5
 00:00:16.550 --> 00:00:19.175
-当我在第 3 行定义一个箭头函数时，会发生什么 ?
-What's gonna happen when I define
-an arrow function on line three?
+当我在第三行定义一个箭头函数时会发生什么？
+What's gonna happen when I define an arrow function on line three?
 
 6
 00:00:22.652 --> 00:00:26.579
->> Kyle Simpson: 该箭头的父词汇作用域是什么
-&gt;&gt; Kyle Simpson: What is the parent
-lexical scope from which that arrow
+&gt；&gt；Kyle Simpson：该箭头所来自的父词法范围是什么
+&gt;&gt; Kyle Simpson: What is the parent lexical scope from which that arrow
 
 7
 00:00:26.579 --> 00:00:30.513
-功能要上一级去解决吗 ?
-function will go up one
-level to resolve the?
+函数将上一级来解决？
+function will go up one level to resolve the?
 
 8
 00:00:30.513 --> 00:00:32.051
->> 演讲者 2: 全球?
+&gt；&gt；扬声器2：全球？
 &gt;&gt; Speaker 2: Global?
 
 9
 00:00:32.051 --> 00:00:33.140
->> 凯尔 - 辛普森: 这是全球性的。
+&gt；&gt；Kyle Simpson：它是全球性的。
 &gt;&gt; Kyle Simpson: It is the global.
 
 10
 00:00:33.140 --> 00:00:36.210
-这不是研讨会的对象，因为猜测是什么 ?
-It is not the workshop object because,
-guess what?
+它不是车间对象，因为，你猜怎么着？
+It is not the workshop object because, guess what?
 
 11
 00:00:36.210 --> 00:00:39.659
-只要把花括号括在那个物体周围，就不可能成为一个范围。
-Just cuz there's curly braces around
-that object doesn't make it a scope.
+仅仅因为该对象周围有花括号并不能使其成为范围。
+Just cuz there's curly braces around that object doesn't make it a scope.
 
 12
 00:00:41.530 --> 00:00:42.850
@@ -70,77 +62,68 @@ Objects are not scopes.
 
 13
 00:00:44.719 --> 00:00:48.170
-这是一个很常见的错误，人们有，而且有上百个
-So this is a very common mistake that
-people have, and there's hundreds of
+所以这是人们经常犯的错误，有几百个
+So this is a very common mistake that people have, and there's hundreds of
 
 14
 00:00:48.170 --> 00:00:53.469
-关于 Stack Overflow 的问题，在这个程度上，人们在说，
-questions on Stack Overflow to this
-extent, where people are saying,
+关于Stack溢出的问题已经到了这种程度，人们都在说，
+questions on Stack Overflow to this extent, where people are saying,
 
 15
 00:00:53.469 --> 00:00:56.969
-为什么箭头功能不把我的工作室作为我的内容呢 ?
-why is the arrow function not
-getting my workshop as my content?
+为什么箭头功能不能将我的工作坊作为我的内容？
+why is the arrow function not getting my workshop as my content?
 
 16
 00:00:58.829 --> 00:01:02.060
-因为工作坊对象不是一个范围
-Well, because workshop
-object's not a scope.
+因为车间对象不是作用域。
+Well, because workshop object's not a scope.
 
 17
 00:01:03.210 --> 00:01:07.340
-你得想想一个箭的作用
-You have to think about an arrow
-function as not having of this and
+你必须认为箭头函数没有这个和
+You have to think about an arrow function as not having of this and
 
 18
 00:01:07.340 --> 00:01:09.031
-在词法上解决。
+从词汇上解决。
 resolving it lexically.
 
 19
 00:01:09.031 --> 00:01:10.420
-那么，父母的范围是什么 ?
+那么父作用域是什么？
 So what is the parent scope?
 
 20
 00:01:10.420 --> 00:01:12.439
-此程序中只有两个作用域。
+这个程序只有两个作用域。
 There's only two scopes in this program.
 
 21
 00:01:12.439 --> 00:01:16.670
-请求函数的作用域，即箭头和全局作用域。
-The scope of the ask function,
-which is an arrow, and the global scope.
+Ask函数的作用域(箭头)和全局作用域。
+The scope of the ask function, which is an arrow, and the global scope.
 
 22
 00:01:18.560 --> 00:01:20.213
-中间没有介入的范围
+在两者之间没有干预范围。
 There's no intervening scope in between.
 
 23
 00:01:22.662 --> 00:01:25.528
->> 凯尔 - 辛普森: 不幸的是，我们已经超载了
-&gt;&gt; Kyle Simpson: It is unfortunate that
-we've overloaded the curly brace that
+&gt；&gt；Kyle Simpson：不幸的是，我们已经超载了
+&gt;&gt; Kyle Simpson: It is unfortunate that we've overloaded the curly brace that
 
 24
 00:01:25.528 --> 00:01:28.182
-让我们觉得它是一个范围但它不是
-confuses us into thinking it's a scope,
-but it isn't.
+迷惑我们认为它是一个范围，但它不是。
+confuses us into thinking it's a scope, but it isn't.
 
 25
 00:01:33.835 --> 00:01:38.683
->> 凯尔 - 辛普森: 如果你把所有的细微差别都用在箭头上
-&gt;&gt; Kyle Simpson: So if you take
-all of this nuance around arrow
+&gt；&gt；Kyle Simpson：所以如果你把所有这些细微差别都带到箭头上
+&gt;&gt; Kyle Simpson: So if you take all of this nuance around arrow
 
 26
 00:01:38.683 --> 00:01:42.520
@@ -149,229 +132,198 @@ functions and these keywords.
 
 27
 00:01:42.520 --> 00:01:46.569
-如果你考虑到我以前的评论
-If you take it into account
-with my former comments on,
+如果你考虑到我之前的评论，
+If you take it into account with my former comments on,
 
 28
 00:01:46.569 --> 00:01:51.450
-我认为箭头函数的缺点是箭头函数是匿名的
-I think arrow functions, the downside is
-that arrow functions are anonymous and
+我认为箭头函数，缺点是箭头函数是匿名的
+I think arrow functions, the downside is that arrow functions are anonymous and
 
 29
 00:01:51.450 --> 00:01:55.979
-所以他们有时更难有问题他们也不清楚自己的情况
-so they're a bit harder to bug at times,
-they don't explain themselves well.
+所以它们有时更难被窃听，它们不能很好地解释自己。
+so they're a bit harder to bug at times, they don't explain themselves well.
 
 30
 00:01:55.979 --> 00:01:57.739
-如果你把整个环境
+如果你考虑整个上下文，
 If you take the entire context,
 
 31
 00:01:59.409 --> 00:02:03.269
-我的感觉是你唯一能使用的时候
-my perception is that the only time
-you should ever use an arrow function
+我的看法是，只有在你应该使用箭头功能的时候
+my perception is that the only time you should ever use an arrow function
 
 32
 00:02:03.269 --> 00:02:06.450
-就是当你从词法中获益的时候
-is when you're gonna benefit
-from lexical this behavior.
+就是什么时候你才能从这种行为中受益。
+is when you're gonna benefit from lexical this behavior.
 
 33
 00:02:06.450 --> 00:02:10.752
-因为这个词法的替代方法是一个黑客
-Because the alternative to
-lexical this behavior is a hack
+因为除了lexical之外，这种行为是一种黑客行为
+Because the alternative to lexical this behavior is a hack
 
 34
 00:02:10.752 --> 00:02:13.396
-就像这个人一样
+就像var self等于这种情况。
 like the var self equals this case.
 
 35
 00:02:13.396 --> 00:02:16.997
-当然，你们中的一些人看到的代码是你自己做的，
-Surely, some of you have seen code
-where you did var self equals this and
+当然，你们中的一些人已经看到了代码，其中var self等于这个
+Surely, some of you have seen code where you did var self equals this and
 
 36
 00:02:16.997 --> 00:02:18.740
-然后你引用这个细胞
+然后引用单元格。
 then you reference the cell.
 
 37
 00:02:18.740 --> 00:02:23.370
-或者，它被称为 var ，或者 var 强调了这个，或者什么。
-Or maybe it was called var that or
-var underscore this, or whatever.
+或者它被称为var that或者var强调这个，或者其他什么。
+Or maybe it was called var that or var underscore this, or whatever.
 
 38
 00:02:23.370 --> 00:02:27.966
-让我说， var self 等于这是最糟糕的名字
-Let me just say, var self equals
-this is the worst possible name
+我只想说，var self等于这是最糟糕的名字
+Let me just say, var self equals this is the worst possible name
 
 39
 00:02:27.966 --> 00:02:30.759
-任何一个人都能来的
+任何人都能想出。
 anybody ever could have come up with.
 
 40
 00:02:31.930 --> 00:02:37.199
-因为这个关键词从来没有，在任何情况下，
-Because this keyword never, ever,
-ever, under any circumstances,
+因为这个关键字永远，在任何情况下，
+Because this keyword never, ever, ever, under any circumstances,
 
 41
 00:02:37.199 --> 00:02:42.590
-它指向功能本身，它指向一个上下文。
-points at the function itself,
-it points at a context.
+指向函数本身，则指向上下文。
+points at the function itself, it points at a context.
 
 42
 00:02:42.590 --> 00:02:47.663
-所以如果你一定要做到这一点
-So if you absolutely must do
-the var self equal this hack,
+所以如果你绝对必须让var self等于这个黑客，
+So if you absolutely must do the var self equal this hack,
 
 43
 00:02:47.663 --> 00:02:50.849
-请执行代表此操作的 var 上下文。
+请做var context等于这个。
 please do var context equals this.
 
 44
 00:02:51.920 --> 00:02:57.550
-库兹这个关键词是什么，是一个背景，好吗 ?
-Cuz that's what this keyword is,
-is a context, okay?
+因为这就是这个关键字，是一个上下文，好吗？
+Cuz that's what this keyword is, is a context, okay?
 
 45
 00:02:57.550 --> 00:03:02.099
-但是这个箭头函数的词法
-But this arrow function
-lexical this behavior
+但此箭头函数对此行为进行词法分析
+But this arrow function lexical this behavior
 
 46
 00:03:02.099 --> 00:03:05.430
-比一个 " var " 的人更能做到这一点
-is a much better way of doing
-it than a var self equals this.
+是一种比var self等于这更好的方式。
+is a much better way of doing it than a var self equals this.
 
 47
 00:03:05.430 --> 00:03:08.908
-我甚至会认为比做功能更有效。
-And I would argue even better
-than doing the function.bind.
+我会说比做这个功能更好。绑定。
+And I would argue even better than doing the function.bind.
 
 48
 00:03:10.129 --> 00:03:13.900
-它是一个比较好的方法，因为它实际上匹配了
-It is a much better way because it
-actually matches the mental model of
+这是一种更好的方式，因为它实际上符合
+It is a much better way because it actually matches the mental model of
 
 49
 00:03:13.900 --> 00:03:14.750
-我们想要的
+我们想要的。
 what we want.
 
 50
 00:03:14.750 --> 00:03:17.569
-我们希望此关键字在此处进行词法。
-We want the this keyword
-to behave lexically here.
+我们希望this关键字在这里表现得像词汇一样。
+We want the this keyword to behave lexically here.
 
 51
 00:03:17.569 --> 00:03:22.170
-我们不希望箭头功能对它有一些神奇的行为。
-We don't want for the arrow function to
-have some magical this behavior to it.
+我们不想让箭头函数对它有一些神奇的这种行为。
+We don't want for the arrow function to have some magical this behavior to it.
 
 52
 00:03:22.170 --> 00:03:26.128
-我们希望它仅采用某个父作用域的此关键字。
-We want it to just adopt the this
-keyword of some parent scope.
+我们希望它只采用某个父作用域的this关键字。
+We want it to just adopt the this keyword of some parent scope.
 
 53
 00:03:27.599 --> 00:03:31.789
-这就是它的目的所以它是正确的工具
-And that's what it does, so it is
-the right tool designed to fix the right
+这就是它所做的，所以它是正确的工具设计来修复正确的
+And that's what it does, so it is the right tool designed to fix the right
 
 54
 00:03:31.789 --> 00:03:34.800
-如果你想正确的话就会有问题
-problem, if you're inclined
-to think correctly about it.
+问题，如果你倾向于正确思考它的话。
+problem, if you're inclined to think correctly about it.
 
 55
 00:03:36.240 --> 00:03:40.670
-所以我说，一般来说，不要使用箭功能，如果你是这样的话，就像
-So whereas I've said, generally, don't use
-arrow functions, if you're in a case, like
+所以，尽管我已经说过，一般情况下，不要使用箭头函数，如果你在一个案例中，比如
+So whereas I've said, generally, don't use arrow functions, if you're in a case, like
 
 56
 00:03:40.670 --> 00:03:45.500
-几个幻灯片之前是 setTimeout，你在那里合法需要这个词法，
-a couple slides ago with the setTimeout,
-where you legitimately need lexical this,
+几张幻灯片前的setTimeout，在那里你有理由需要词法this，
+a couple slides ago with the setTimeout, where you legitimately need lexical this,
 
 57
 00:03:45.500 --> 00:03:49.460
-请使用箭头功能， cuz 是作业的正确工具。
-please use the arrow function,
-cuz that's the right tool for the job.
+请使用箭头功能，因为这是适合这项工作的工具。
+please use the arrow function, cuz that's the right tool for the job.
 
 58
 00:03:51.870 --> 00:03:57.219
-其实我去写的是 ESLint 规则，
-As a matter of fact, I went so
-far as to write an ESLint rule,
+事实上，我甚至写了一个ESLint规则，
+As a matter of fact, I went so far as to write an ESLint rule,
 
 59
 00:03:57.219 --> 00:04:02.259
-这需要你的箭功能来做这个推荐人
-that requires your arrow
-functions to make this references,
+这需要您的箭头函数来进行引用，
+that requires your arrow functions to make this references,
 
 60
 00:04:02.259 --> 00:04:06.370
-它不允许任何未使用词法的箭头函数。
-it disallows any arrow function
-that is not using lexical this.
+它不允许任何没有使用词法this的箭头函数。
+it disallows any arrow function that is not using lexical this.
 
 61
 00:04:06.370 --> 00:04:08.009
-这很有争议
+这是极具争议性的
 That's extremely controversial,
 
 62
 00:04:08.009 --> 00:04:12.219
-我知道，很少有人会使用 ESLint 规则。
-I know, unlikely that very many people
-are ever gonna use that ESLint rule.
+我知道，不太可能有很多人会使用ESLint规则。
+I know, unlikely that very many people are ever gonna use that ESLint rule.
 
 63
 00:04:12.219 --> 00:04:15.620
-但如果你和我一样认为箭功能有这个目的
-But if you, like me, think that arrow
-functions have that purpose and
+但如果你像我一样认为箭头函数有这个目的
+But if you, like me, think that arrow functions have that purpose and
 
 64
 00:04:15.620 --> 00:04:16.968
-这就是他们应该用的
+这就是他们应该用来做的
 that's what they ought to be used for,
 
 65
 00:04:16.968 --> 00:04:20.529
 这是一个插件，它将为您提供控制该行为的规则。
-that's a plug-in that will give you
-a rule to control that behavior.
+that's a plug-in that will give you a rule to control that behavior.
 
 66
 00:04:23.250 --> 00:04:24.579
@@ -380,116 +332,103 @@ Questions.
 
 67
 00:04:24.579 --> 00:04:25.439
-嗯。
+是啊。
 Yes.
 
 68
 00:04:25.439 --> 00:04:26.490
->> 扬声器 3: 仅确认。
+&gt；&gt；扬声器3：只是确认一下。
 &gt;&gt; Speaker 3: Just to confirm.
 
 69
 00:04:26.490 --> 00:04:33.019
-当我们回到这张幻灯片的时候，当我们正在分析这个问题时，
-Going back one slide, so when we’re,
-when we would be parsing this,
+回到一张幻灯片，所以当我们，当我们解析这个，
+Going back one slide, so when we’re, when we would be parsing this,
 
 70
 00:04:34.779 --> 00:04:38.180
-讲习班将会进入红桶，使全球范围变得越来越大。
-workshop is going into the red bucket,
-it’s getting the global scope.
+车间正在进入红色的桶，它正在获得全球范围。
+workshop is going into the red bucket, it’s getting the global scope.
 
 71
 00:04:39.800 --> 00:04:45.180
-不过，教师的财产的范围是 -
-The teacher property,
-though, would be scoped to-
+然而，教师财产的范围将是-
+The teacher property, though, would be scoped to-
 
 72
 00:04:45.180 --> 00:04:46.404
->> 凯尔 - 辛普森: 属性未限定范围，
+&gt；&gt；Kyle Simpson：属性不是作用域，
 &gt;&gt; Kyle Simpson: Properties aren't scoped,
 
 73
 00:04:46.404 --> 00:04:48.223
-属性不是词法标识。
+属性不是词汇标识符。
 properties aren't lexical identifiers.
 
 74
 00:04:48.223 --> 00:04:48.909
->> 演讲者 3: 好的，知道了。
+&gt；&gt；扬声器3：好的，明白了。
 &gt;&gt; Speaker 3: Okay, got you.
 
 75
 00:04:48.909 --> 00:04:50.790
->> Kyle Simpson: 它是对象值上的成员。
-&gt;&gt; Kyle Simpson: It's
-a member on an object value.
+&gt；&gt；Kyle Simpson：它是对象值的成员。
+&gt;&gt; Kyle Simpson: It's a member on an object value.
 
 76
 00:04:50.790 --> 00:04:52.377
->> 演讲者 3: 好的。 >> 凯尔 - 辛普森: 没有参加
-&gt;&gt; Speaker 3: Okay.
-&gt;&gt; Kyle Simpson: It's not participating
+&gt；&gt；扬声器3：好的。&gt；&gt；Kyle Simpson：它没有参与
+&gt;&gt; Speaker 3: Okay. &gt;&gt; Kyle Simpson: It's not participating
 
 77
 00:04:52.377 --> 00:04:53.519
-在词法范围内
+在词汇范围内。
 in lexical scope at all.
 
 78
 00:04:55.040 --> 00:05:00.009
-我唯一的例外是不使用箭头功能因为他们是匿名的
-My one and only exception to the don't use
-arrow functions because they're anonymous,
+我唯一的例外就是不要使用箭头函数，因为它们是匿名的，
+My one and only exception to the don't use arrow functions because they're anonymous,
 
 79
 00:05:00.009 --> 00:05:03.779
-当您可以从词法中获益时使用箭头函数。
-is use arrow functions when you
-can benefit from the lexical this.
+当您可以从词法this中受益时，请使用箭头函数。
+is use arrow functions when you can benefit from the lexical this.
 
 80
 00:05:03.779 --> 00:05:04.944
-不过我会说
+不过，我会说，
 I will however say,
 
 81
 00:05:04.944 --> 00:05:09.670
-如果你要用一支箭式的功能来做你的词法
-that if you gonna use an arrow function to
-get your lexical this, you need to combat
+如果你要使用箭头函数来获得你的词法this，你需要对抗
+that if you gonna use an arrow function to get your lexical this, you need to combat
 
 82
 00:05:09.670 --> 00:05:13.728
-我们讨论的那三个方面是匿名的
-those three downsides that we talked
-about with anonymous function.
+这三个缺点，我们在匿名函数中讨论过。
+those three downsides that we talked about with anonymous function.
 
 83
 00:05:13.728 --> 00:05:17.505
-你需要对抗这种不记名的功能
-You need to combat the downside that,
-anonymous functions don't
+你需要克服匿名函数不具备的缺点
+You need to combat the downside that, anonymous functions don't
 
 84
 00:05:17.505 --> 00:05:21.785
-具有自我引用，以防您需要进行递归或取消绑定。
-have a self reference, in case you
-need to do recursion or unbinding.
+有一个自我引用，以防你需要做递归或解除绑定。
+have a self reference, in case you need to do recursion or unbinding.
 
 85
 00:05:21.785 --> 00:05:24.394
-你必须对抗他们没有名字的事实
-You need to combat the fact
-that they don't have a name.
+你需要与他们没有名字的事实作斗争。
+You need to combat the fact that they don't have a name.
 
 86
 00:05:24.394 --> 00:05:26.975
-在某种程度上用它来推断出
-Use it in some way so that it's
-gonna get a name inference, like,
+以某种方式使用它，这样它就会得到一个名称推断，就像，
+Use it in some way so that it's gonna get a name inference, like,
 
 87
 00:05:26.975 --> 00:05:29.805
@@ -498,76 +437,65 @@ assign it to a variable or a property.
 
 88
 00:05:29.805 --> 00:05:32.194
-因为它会以匿名形式出现
-Because it's gonna show up
-as anonymous otherwise.
+因为否则它会以匿名的形式出现。
+Because it's gonna show up as anonymous otherwise.
 
 89
 00:05:32.194 --> 00:05:36.100
-你需要有一些方法让读者明白清楚。
-And you need to have some way of making
-it clear and obvious to the reader.
+而且你需要有一些方法让读者明白和明白这一点。
+And you need to have some way of making it clear and obvious to the reader.
 
 90
 00:05:36.100 --> 00:05:38.090
-此功能的用途是什么 ?
+这个函数的目的是什么？
 What is the purpose of this function?
 
 91
 00:05:38.090 --> 00:05:40.846
-别让他们读函数体来解决这个问题
-Don't make them read the function
-body to figure that out.
+不要让他们读取函数体来理解这一点。
+Don't make them read the function body to figure that out.
 
 92
 00:05:45.841 --> 00:05:49.009
->> 凯尔 - 辛普森: 现在我们已经谈过这个关键词了。
-&gt;&gt; Kyle Simpson: So
-now we've talked about the this keyword.
+&gt；&gt；Kyle Simpson：现在我们已经讨论了this关键字。
+&gt;&gt; Kyle Simpson: So now we've talked about the this keyword.
 
 93
 00:05:49.009 --> 00:05:52.930
-我们已经看到了它的不同角度，我很高兴的是
-We've seen all of its different angles,
-and what I'm thrilled about actually is
+我们已经看到了它所有不同的角度，让我激动的是
+We've seen all of its different angles, and what I'm thrilled about actually is
 
 94
 00:05:52.930 --> 00:05:57.238
-对于此关键字，箭头函数不是另一个规则。
-that the arrow function is not
-a different rule for the this keyword.
+箭头函数不是this关键字的不同规则。
+that the arrow function is not a different rule for the this keyword.
 
 95
 00:05:58.360 --> 00:06:02.300
-我害怕当他们添加箭的功能时我们要修改
-I was afraid when they were adding arrow
-functions that we were gonna have to amend
+当他们添加箭头函数时，我很害怕，我们必须对其进行修改
+I was afraid when they were adding arrow functions that we were gonna have to amend
 
 96
 00:06:02.300 --> 00:06:07.660
-这些规则还有第五条规则要保持在我们头上但这不是规则
-these rules, and have a fifth rule to keep
-floating in our head, but it's not a rule
+这些规则，并且有第五条规则在我们的脑海中漂浮，但它不是一条规则
+these rules, and have a fifth rule to keep floating in our head, but it's not a rule
 
 97
 00:06:07.660 --> 00:06:11.725
-因为此关键字甚至不适用箭头函数。
-at all because the this keyword doesn't
-even apply instead of arrow functions.
+因为this关键字甚至不适用于箭头函数。
+at all because the this keyword doesn't even apply instead of arrow functions.
 
 98
 00:06:13.565 --> 00:06:17.675
-您唯一需要执行的操作是查找此关键字
-The only thing you ever need to do to
-understand the this keyword is look for
+要理解this关键字，唯一需要做的事情就是查找
+The only thing you ever need to do to understand the this keyword is look for
 
 99
 00:06:17.675 --> 00:06:21.235
-定义此关键字的函数的调用站点，以及
-the call site of a function that
-defines the this keyword, and
+定义this关键字的函数的调用位置，以及
+the call site of a function that defines the this keyword, and
 
 100
 00:06:21.235 --> 00:06:22.475
-问这四条规则
+问那四条规则。
 ask those four rules.

@@ -2,9 +2,8 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:03.049
->> 凯尔 - 辛普森: 好的，让我们谈谈这次提升的运动。
-&gt;&gt; Kyle Simpson: All right, let's
-talk about this exercise on hoisting.
+&GT；&GT；Kyle Simpson：好的，让我们谈谈这个关于吊装的练习。
+&gt;&gt; Kyle Simpson: All right, let's talk about this exercise on hoisting.
 
 2
 00:00:04.889 --> 00:00:09.349
@@ -13,9 +12,8 @@ We have a inline function expression here.
 
 3
 00:00:09.349 --> 00:00:14.259
-我在演讲中说我通常使用一个班轮功能
-And I said in the lecture that I
-typically do use one-liner functions
+我在讲座中说过，我通常使用单线性函数
+And I said in the lecture that I typically do use one-liner functions
 
 4
 00:00:14.259 --> 00:00:16.140
@@ -24,55 +22,48 @@ as inline function expressions.
 
 5
 00:00:16.140 --> 00:00:19.050
-但为了这次演习的目的
-But just for
-the purposes of this exercise,
+但为了这个练习的目的，
+But just for the purposes of this exercise,
 
 6
 00:00:19.050 --> 00:00:24.160
-当我们把它作为函数式表达时，让我们看看它的样子。
-let's see what it looks like when we move
-it out as an in-function expression.
+让我们看看当我们将它作为函数内表达式移出时会是什么样子。
+let's see what it looks like when we move it out as an in-function expression.
 
 7
 00:00:24.160 --> 00:00:27.885
-然后你就可以自己打个电话
-And you can then make calls
-on your own as to whether or
+然后你可以自己打电话
+And you can then make calls on your own as to whether or
 
 8
 00:00:27.885 --> 00:00:31.797
-而不是提高或阻碍可读性好吗
-not that improves or
-hampers the readability, okay?
+这不是提高或妨碍可读性，好吗？
+not that improves or hampers the readability, okay?
 
 9
 00:00:31.797 --> 00:00:33.174
-所以我可以把它拉出来
+所以我可以把它拔出来
 So I can pull that out,
 
 10
 00:00:33.174 --> 00:00:38.048
-我必须将其保留在此作用域内，因为它确实引用了 studentId。
-I have to leave it inside of this scope
-because it does reference the studentId.
+我必须将其留在此范围内，因为它确实引用了StudentId。
+I have to leave it inside of this scope because it does reference the studentId.
 
 11
 00:00:38.048 --> 00:00:41.633
-我不能像个独立助手一样把它拉出来
-I can't pull it out as
-some standalone helper,
+我不能把它作为一个独立的帮手拉出来，
+I can't pull it out as some standalone helper,
 
 12
 00:00:41.633 --> 00:00:44.779
-它在使用 studentId时关闭。
+它在使用StudentId时被关闭。
 it is closed over in using the studentId.
 
 13
 00:00:44.779 --> 00:00:48.694
-但是有一件事我喜欢这种把东西拉出来的风格
-But one thing that I do like about this
-style of pulling things out as function
+但有一件事我很喜欢这种把东西作为函数拉出来的风格
+But one thing that I do like about this style of pulling things out as function
 
 14
 00:00:48.694 --> 00:00:49.829
@@ -81,112 +72,97 @@ declarations.
 
 15
 00:00:49.829 --> 00:00:54.973
-这些功能被用来做这些功能的地方
-Is that the places where these functions
-are used end up reading a lot more
+使用这些函数的地方最终会读取更多的内容
+Is that the places where these functions are used end up reading a lot more
 
 16
 00:00:54.973 --> 00:01:00.810
-完全不需要中断函数执行，定义代码。
-cleanly without being interrupted with
-function execution, definition code.
+干净利落，没有被函数执行，定义代码中断。
+cleanly without being interrupted with function execution, definition code.
 
 17
 00:01:00.810 --> 00:01:03.750
-这就很干净了
+所以这个读起来非常干净，
 So this reads very cleanly as find,
 
 18
 00:01:03.750 --> 00:01:07.769
-通过匹配标识，按标识查找学生记录。
-by matching the ID,
-find a student record by ID.
+通过匹配ID，按ID查找学生记录。
+by matching the ID, find a student record by ID.
 
 19
 00:01:09.210 --> 00:01:11.170
-所以那种把东西拉出来的代码
-So that style of code
-of pulling things out,
+所以把东西拉出来代码风格，
+So that style of code of pulling things out,
 
 20
 00:01:11.170 --> 00:01:15.989
-即使是一个胆，从可读性的角度来说，也有一些优势。
-even one-liners, does have some advantages
-from a readability perspective.
+从可读性的角度来看，即使是一行程序也有一些优点。
+even one-liners, does have some advantages from a readability perspective.
 
 21
 00:01:17.849 --> 00:01:20.539
-好吧我们在这里做个类似的事情
+好的，让我们在下面做一件类似的事情。
 Okay, let's do a similar thing down here.
 
 22
 00:01:20.539 --> 00:01:26.439
-我们已经使用了一个指定的函数，那么这一功能又如何呢 ?
-We already have a named function being
-used, so what about this function?
+我们已经使用了一个命名函数，那么这个函数呢？
+We already have a named function being used, so what about this function?
 
 23
 00:01:26.439 --> 00:01:29.530
-我们知道那个功能没有在内部使用任何东西
-Well, we know that that function's
-not using anything internally, so
+我们知道这个函数没有在内部使用任何东西，所以
+Well, we know that that function's not using anything internally, so
 
 24
 00:01:29.530 --> 00:01:33.479
-我们可以将它作为它自己的独立功能
-we could pull it out as its
-own standalone function.
+我们可以把它拉出来作为它自己的独立功能。
+we could pull it out as its own standalone function.
 
 25
 00:01:33.479 --> 00:01:40.201
-因此，我会这样做，而我们亦会以名义上的名称来作参考。
-So I will do that, and
-we will simply reference it by name.
+所以我会这样做，我们将简单地按名称引用它。
+So I will do that, and we will simply reference it by name.
 
 26
 00:01:40.201 --> 00:01:43.093
-再一次又有了可读性的好处
+这同样具有可读性的好处，
 Which again, has that readability benefit,
 
 27
 00:01:43.093 --> 00:01:45.992
-现在最清楚的事情是什么
-now it's much clearer
-what the sort is doing.
+现在这类人在做什么就更清楚了。
+now it's much clearer what the sort is doing.
 
 28
 00:01:45.992 --> 00:01:50.998
-与 printRecord 相同， printRecord 本质上是独立的
-Same thing with printRecord,
-printRecord is essentially a standalone
+与printRecord相同，printRecord本质上是一个独立的
+Same thing with printRecord, printRecord is essentially a standalone
 
 29
 00:01:50.998 --> 00:01:55.689
-可替换为引用它本身的名称的函数。
-function which can be replaced by
-a name that references it itself.
+函数，可以由引用它本身的名称替换。
+function which can be replaced by a name that references it itself.
 
 30
 00:01:58.021 --> 00:02:00.237
->> 凯尔 - 辛普森: 现在，显然意见不一，但
-&gt;&gt; Kyle Simpson: Now,
-obviously opinions vary, but
+&gt；&gt；Kyle Simpson：现在，显然意见不一，但是
+&gt;&gt; Kyle Simpson: Now, obviously opinions vary, but
 
 31
 00:02:00.237 --> 00:02:04.033
-我的意见是制作更多可读的代码来完成这个操作。
-my opinion is that produces a lot
-more readable code to do that.
+我的观点是，这样做会产生更多可读性更强的代码。
+my opinion is that produces a lot more readable code to do that.
 
 32
 00:02:04.033 --> 00:02:09.080
-再向下 paidStudentsToEnroll ，我们具有内联过滤器功能。
-Down to paidStudentsToEnroll, again,
-we have an inline filter function.
+向下到paidStudentsToEnroll，同样，我们有一个内联筛选函数。
+Down to paidStudentsToEnroll, again, we have an inline filter function.
 
 33
 00:02:09.080 --> 00:02:13.451
-这是直接插入过滤器功能
+这是内联筛选器函数不是
 This is inline filter function is not
 
 34
@@ -196,213 +172,185 @@ using any of the internal variables.
 
 35
 00:02:17.971 --> 00:02:22.764
-等等什么叫什么叫 " 针刺 " 一样的东西
-So wait, what was that called,
-needToEnroll, same thing,
+等等，那个叫什么来着，Need to Enroll，同样的东西，
+So wait, what was that called, needToEnroll, same thing,
 
 36
 00:02:22.764 --> 00:02:24.524
-它可以被移出
+可以搬出去。
 it could be moved out.
 
 37
 00:02:24.524 --> 00:02:29.990
-正如我在练习中所说的我们更喜欢的原因
-And as I said in the intro to the
-exercise, the reason why we can prefer,
+正如我在练习的导言中所说的，我们可以选择的原因是，
+And as I said in the intro to the exercise, the reason why we can prefer,
 
 38
 00:02:29.990 --> 00:02:33.468
-从功能提升的角度来看。
+从功能提升的角度。
 from the perspective of function hoisting.
 
 39
 00:02:33.468 --> 00:02:38.987
-我们更喜欢把它移到外域的原因是它更容易，
-The reason why we can prefer moving it
-to the outer scope is that it is easier,
+我们之所以更喜欢把它移到外部范围是因为它更容易，
+The reason why we can prefer moving it to the outer scope is that it is easier,
 
 40
 00:02:38.987 --> 00:02:43.590
-一般在拍板时分析范围。
-generally, to analyze scopes
-when they are flatter.
+通常，当作用域比较平坦时分析作用域。
+generally, to analyze scopes when they are flatter.
 
 41
 00:02:43.590 --> 00:02:45.659
-嵌套式范围越深，
+作用域嵌套得越深，
 The more deeply nested scopes get,
 
 42
 00:02:45.659 --> 00:02:50.879
-在我们预料不到的地方会发生更混乱的封锁
-the more confusing the closures can happen
-in places that we're not expecting.
+在我们意想不到的地方会发生更多令人困惑的闭包。
+the more confusing the closures can happen in places that we're not expecting.
 
 43
 00:02:50.879 --> 00:02:55.509
-所以我们试图把他们转移到一个可以尝试的范围之外
-So we're trying to move them out to
-as outer of a scope as we can to try
+所以我们试着把它们移到范围之外去尝试
+So we're trying to move them out to as outer of a scope as we can to try
 
 44
 00:02:55.509 --> 00:02:58.668
-要有一个更简单的范围模型来思考
-to have a simpler scope
-model to think about.
+有一个更简单的范围模型来考虑。
+to have a simpler scope model to think about.
 
 45
 00:02:58.668 --> 00:03:02.909
-好吧 getStudentId 是一个类似的东西
+好的，getStudentId也是类似的东西，
 Okay, getStudentId is a similar thing,
 
 46
 00:03:02.909 --> 00:03:07.756
 它不是指内部的任何东西，所以
-it is not referring to
-anything internally, so
+it is not referring to anything internally, so
 
 47
 00:03:07.756 --> 00:03:12.810
-就是， >> 凯尔 - 辛普森: 我们可以走出去。
-that is,
-&gt;&gt; Kyle Simpson: One that we can move out.
+也就是说，&gt；&gt；Kyle Simpson：我们可以搬出去。
+that is, &gt;&gt; Kyle Simpson: One that we can move out.
 
 48
 00:03:21.210 --> 00:03:24.936
->> 凯尔 - 辛普森: 最后，
-&gt;&gt; Kyle Simpson: And then,
-finally, the remindUnpaid,
+&gt；&gt；Kyle Simpson：最后，提醒未支付，
+&gt;&gt; Kyle Simpson: And then, finally, the remindUnpaid,
 
 49
 00:03:24.936 --> 00:03:28.389
-我们有这个过滤功能
+我们有这个过滤功能。
 we have this filtering function.
 
 50
 00:03:28.389 --> 00:03:33.430
-这又不是什么内部的事
-Which is, again,
-not using anything internal,
+也就是不使用内部的任何东西，
+Which is, again, not using anything internal,
 
 51
 00:03:33.430 --> 00:03:39.199
-这样我们就能把它拉出来用它的名字
-so we can pull it out to this
-outer scope and use it by name.
+所以我们可以把它拉到这个外部作用域，并按名称使用它。
+so we can pull it out to this outer scope and use it by name.
 
 52
 00:03:43.520 --> 00:03:45.878
->> 凯尔 - 辛普森: 最后，我们可以看到所有这些功能都在顶部。
-&gt;&gt; Kyle Simpson: Lastly, we can see
-that all these functions are at the top.
+&gt；&gt；Kyle Simpson：最后，我们可以看到所有这些函数都在顶部。
+&gt;&gt; Kyle Simpson: Lastly, we can see that all these functions are at the top.
 
 53
 00:03:45.878 --> 00:03:49.599
-但由于功能提升，它们不一定要在顶部。
-But they don't necessarily need to be at
-the top because of function hoisting.
+但由于功能提升，它们并不一定要处于顶端。
+But they don't necessarily need to be at the top because of function hoisting.
 
 54
 00:03:49.599 --> 00:03:54.313
-我们要做的就是复制所有这些
-So what we're going to
-do is copy all of those,
+所以我们要做的就是复制所有这些，
+So what we're going to do is copy all of those,
 
 55
 00:03:56.639 --> 00:03:59.000
->> 凯尔 - 辛普森: 然后过来
+&gt；&gt；Kyle Simpson：然后下来
 &gt;&gt; Kyle Simpson: And come down here and
 
 56
 00:03:59.000 --> 00:04:01.628
-把它们放在底部
+把它们放在底部。
 put them at the bottom.
 
 57
 00:04:01.628 --> 00:04:06.110
-然后就为了普通的可读性，我喜欢画 ASCII 线。
-And then just for general readability,
-I like to draw ASCII lines.
+然后为了一般的可读性，我喜欢画ASCII线。
+And then just for general readability, I like to draw ASCII lines.
 
 58
 00:04:07.229 --> 00:04:10.872
-这条线下面的所有东西都是执行细节
-And everything below the line
-is implementation detail,
+线下面的一切都是实现细节，
+And everything below the line is implementation detail,
 
 59
 00:04:10.872 --> 00:04:14.008
-所有上面都是我的可执行代码
-everything above the line
-is my executable code.
+行上面的所有内容都是我的可执行代码。
+everything above the line is my executable code.
 
 60
 00:04:14.008 --> 00:04:17.810
-所以当我打开文件时，我看到最上面的所有东西都在运行。
-So when I open the file, I see everything
-right there at the top that's gonna run.
+因此，当我打开文件时，我看到所有要运行的内容都在顶部。
+So when I open the file, I see everything right there at the top that's gonna run.
 
 61
 00:04:19.350 --> 00:04:24.579
-正如我在演讲中提到的，我认为这基本上是理解
-As I mentioned in the lecture,
-I see this as essentially understanding
+正如我在讲座中提到的，我认为这本质上是理解
+As I mentioned in the lecture, I see this as essentially understanding
 
 62
 00:04:24.579 --> 00:04:29.949
-更详细的关于我的工具的事情
+关于我的工具的一些更详细的信息。
 something more detailed about my tool.
 
 63
 00:04:29.949 --> 00:04:34.610
-用我的工具，我认为会产生积极的变化，在这种情况下，
-And using my tool in a way that I think
-effects a positive change, in this case,
+并且以我认为会产生积极变化的方式使用我的工具，在这种情况下，
+And using my tool in a way that I think effects a positive change, in this case,
 
 64
 00:04:34.610 --> 00:04:35.939
-用于可读性。
+为了可读性。
 for readability.
 
 65
 00:04:35.939 --> 00:04:42.279
-因此，可以使用提升和使代码更容易混淆的方式。
-So there are certainly ways that you can
-use hoisting and make code more confusing.
+因此，当然有一些方法可以使用提升并使代码更加混乱。
+So there are certainly ways that you can use hoisting and make code more confusing.
 
 66
 00:04:42.279 --> 00:04:45.098
-但这并不意味着所有吊装过程都很糟糕。
-But that doesn't mean that all
-usages of hoisting are bad.
+但这并不意味着吊装的所有用法都是坏的。
+But that doesn't mean that all usages of hoisting are bad.
 
 67
 00:04:45.098 --> 00:04:49.264
-我觉得有办法用吊装和使用功能声明
-I think there are ways to use hoisting and
-use function declarations and
+我认为有很多方法可以使用提升和使用函数声明和
+I think there are ways to use hoisting and use function declarations and
 
 68
 00:04:49.264 --> 00:04:52.779
-使用已拉出的嵌套函数或函数。
-use nested functions or
-functions that are pulled out.
+使用嵌套函数或拉出的函数。
+use nested functions or functions that are pulled out.
 
 69
 00:04:52.779 --> 00:04:56.420
-我认为有一些方法可以使您的代码更便于阅读。
-I think there are ways to do that in which
-you can make your code more readable.
+我认为有一些方法可以让您的代码更具可读性。
+I think there are ways to do that in which you can make your code more readable.
 
 70
 00:04:56.420 --> 00:04:59.659
-希望你能从这次演习中得到这个消息
-Well, hopefully that's the takeaway
-you get from this exercise.
+嗯，希望这就是你从这个练习中得到的收获。
+Well, hopefully that's the takeaway you get from this exercise.
 
 71
 00:04:59.659 --> 00:05:02.759
-这是一个值得你去分析你的代码的风险。
-Is that that's a worthwhile venture for
-you to analyze about your code.
+对您来说，这是一个值得分析代码的冒险。
+Is that that's a worthwhile venture for you to analyze about your code.

@@ -2,527 +2,478 @@ WEBVTT
 
 1
 00:00:00.050 --> 00:00:02.944
->> Kyle Simpson: 现在开始讨论范围实际上可以
-&gt;&gt; Kyle Simpson: Now it start to talk
-about the idea that scopes can actually be
+&gt；&gt；Kyle Simpson：现在它开始谈论作用域实际上可以是
+&gt;&gt; Kyle Simpson: Now it start to talk about the idea that scopes can actually be
 
 2
 00:00:02.944 --> 00:00:04.379
-嵌套在彼此之间。
+嵌套在彼此的内部。
 nested inside of each other.
 
 3
 00:00:04.379 --> 00:00:07.230
-这样我们就能进一步的比喻了
-So we're gonna even further
-stretch that bucket metaphor.
+所以我们还要进一步延伸这个桶的比喻。
+So we're gonna even further stretch that bucket metaphor.
 
 4
 00:00:07.230 --> 00:00:10.513
-现在我们说的是水桶旁边桶旁边的桶
-Now we're talking about the bucket within
-the side of a bucket within the side of
+现在我们讨论的是桶的侧面，桶的侧面
+Now we're talking about the bucket within the side of a bucket within the side of
 
 5
 00:00:10.513 --> 00:00:11.997
-这桶太奇怪了
+水桶，真的很奇怪。
 the bucket, it gets really weird.
 
 6
 00:00:11.997 --> 00:00:14.272
-但我们要把木桶都放下好吗
-But we're gonna have buckets
-all the way down, okay?
+但我们会一直有水桶的，好吗？
+But we're gonna have buckets all the way down, okay?
 
 7
 00:00:14.272 --> 00:00:15.073
-[ 笑声 ]
+[笑]
 [LAUGH].
 
 8
 00:00:15.073 --> 00:00:19.571
-让我们像以前一样快速处理这个问题
-So let's process this quickly exactly
-the same way as we have before,
+所以让我们用和以前完全相同的方式来快速处理这件事，
+So let's process this quickly exactly the same way as we have before,
 
 9
 00:00:19.571 --> 00:00:22.289
-完全一样的规则好吗
+完全一样的规则，好吗？
 same rules entirely, okay?
 
 10
 00:00:22.289 --> 00:00:26.589
-我们首先看第一条，那是哪种大理石?
-We start by looking at line one,
-that's a what kind of marble?
+我们从一号线开始，这是一种什么样的大理石？
+We start by looking at line one, that's a what kind of marble?
 
 11
 00:00:27.789 --> 00:00:30.710
-第一行是正式声明吗
-Line one is a formal
-declaration that makes a?
+第一行是正式声明，使？
+Line one is a formal declaration that makes a?
 
 12
 00:00:30.710 --> 00:00:31.750
->> 类: 红色大理石。
+&gt；&gt；类：红色大理石。
 &gt;&gt; Class: Red marble.
 
 13
 00:00:31.750 --> 00:00:32.820
->> 凯尔 - 辛普森: 制作一个红色的大理石，对吧 ?
-&gt;&gt; Kyle Simpson: Makes a red marble,
-right?
+&gt；&gt；Kyle Simpson：制作红色大理石，对吗？
+&gt;&gt; Kyle Simpson: Makes a red marble, right?
 
 14
 00:00:32.820 --> 00:00:34.759
-我们要制造一个红色的大理石
+我们要创造一个红色的大理石。
 We're gonna create a red marble.
 
 15
 00:00:34.759 --> 00:00:38.149
-第三行是一个正式的声明，它创造了一个什么颜色的大理石?
-Line three is a formal declaration
-that creates a what color marble?
+第三行是一个正式的声明，创建了一个什么颜色的大理石？
+Line three is a formal declaration that creates a what color marble?
 
 16
 00:00:38.149 --> 00:00:39.359
->> 类:Red。
+&gt；&gt；类：红色。
 &gt;&gt; Class: Red.
 
 17
 00:00:39.359 --> 00:00:42.039
->> Kyle Simpson: 第四行是一个声明，用于创建一个
-&gt;&gt; Kyle Simpson: Line four is
-a declaration that creates a what
+&gt；&gt；Kyle Simpson：第四行是一个创建What的声明
+&gt;&gt; Kyle Simpson: Line four is a declaration that creates a what
 
 18
 00:00:42.039 --> 00:00:42.710
-颜色大理石吗
+彩色大理石？
 color marble?
 
 19
 00:00:42.710 --> 00:00:43.228
->> 类:Blue。
+&gt；&gt；类：蓝色。
 &gt;&gt; Class: Blue.
 
 20
 00:00:43.228 --> 00:00:44.281
->> 凯尔 - 辛普森: 蓝色的大理石，对吧 ?
+&gt；&gt；Kyle Simpson：蓝色大理石，对吗？
 &gt;&gt; Kyle Simpson: A blue marble, right?
 
 21
 00:00:44.281 --> 00:00:46.039
-现在我们在蓝色范围内
+现在我们在蓝色范围内。
 Now we're inside of the blue scope.
 
 22
 00:00:46.039 --> 00:00:49.039
-第 6 行是创建什么颜色模块的声明 ?
-Line six is a declaration that
-creates what color module?
+第六行是创建什么颜色模块的声明？
+Line six is a declaration that creates what color module?
 
 23
 00:00:49.039 --> 00:00:50.524
->> 类:Blue。 >> Kyle Simpson: 蓝色模块，
-&gt;&gt; Class: Blue.
-&gt;&gt; Kyle Simpson: The blue module,
+&gt；&gt；类：蓝色。&gt；&gt；Kyle Simpson：蓝色模块，
+&gt;&gt; Class: Blue. &gt;&gt; Kyle Simpson: The blue module,
 
 24
 00:00:50.524 --> 00:00:53.850
-cubz 在别的课的范围内，对吧 ?
-cuz ask is in the scope of
-the other class, right?
+因为Ask在另一个类的范围内，对吗？
+cuz ask is in the scope of the other class, right?
 
 25
 00:00:53.850 --> 00:00:57.810
-函数声明使其标识在其外层作用域中，
-Function declarations make their
-identifier in their enclosing scope,
+函数声明使其标识符位于其封闭范围内，
+Function declarations make their identifier in their enclosing scope,
 
 26
 00:00:57.810 --> 00:00:59.100
-这很关键记住这一点
+这很关键，记住这一点。
 that's critical, keep that in mind.
 
 27
 00:00:59.100 --> 00:01:03.549
-好吧那我们就在里面问颜色范围是什么
-All right, so then we're inside of ask and
-it's made of what color scope?
+好的，那么我们在Ask内部，它是由什么颜色范围组成的？
+All right, so then we're inside of ask and it's made of what color scope?
 
 28
 00:01:03.549 --> 00:01:05.459
->> Student: Yellow. >> 类: [LAUGH]
-&gt;&gt; Student: Yellow.
-&gt;&gt; Class: [LAUGH]
+&gt；&gt；学生：黄色。&gt；&gt；类：[笑声]
+&gt;&gt; Student: Yellow. &gt;&gt; Class: [LAUGH]
 
 29
 00:01:05.459 --> 00:01:08.530
->> Kyle Simpson: 当然，请将其更改为我们。
+&gt；&gt；Kyle Simpson：当然，在我们身上改变一下。
 &gt;&gt; Kyle Simpson: Sure, change it up on us.
 
 30
 00:01:08.530 --> 00:01:10.710
-我们一直在使用绿色，但让我们切换到黄色。
-We've been using green, but
-let's switch to yellow.
+我们一直在用绿色，但我们还是换成黄色吧。
+We've been using green, but let's switch to yellow.
 
 31
 00:01:10.710 --> 00:01:11.593
-别乱了
+没有混淆。
 No confusion.
 
 32
 00:01:11.593 --> 00:01:13.805
-好的好的
+[笑]好的
 [LAUGH] Okay,
 
 33
 00:01:13.805 --> 00:01:17.750
-如果我没说绿色的话我会说点错误的
-I'm gonna stick with green cuz I'm gonna
-say something wrong if I don't say green.
+我要坚持绿色，因为如果我不说绿色的话，我就会说错的话。
+I'm gonna stick with green cuz I'm gonna say something wrong if I don't say green.
 
 34
 00:01:17.750 --> 00:01:18.859
-我们创造了一个绿色的范围。
+我们已经创建了一个绿色范围。
 We've created a green scope.
 
 35
 00:01:18.859 --> 00:01:21.920
-没有要创作的弹珠，但有对弹珠的引用。
-There's no marbles to create, but
-there are references to marbles.
+没有要创建的弹珠，但有对大理石的引用。
+There's no marbles to create, but there are references to marbles.
 
 36
 00:01:21.920 --> 00:01:23.701
-所以当我们引用老师的时候
-So on line seven when
-we reference teacher,
+所以在第七行，当我们推荐老师时，
+So on line seven when we reference teacher,
 
 37
 00:01:23.701 --> 00:01:25.200
-那是什么样的大理石
+那会是什么样的大理石呢？
 what kind of marble is that gonna be?
 
 38
 00:01:25.200 --> 00:01:28.424
-第 7 行的老师是什么颜色的
-What color marble is
-the teacher on line 7?
+7号线的老师是什么颜色的大理石？
+What color marble is the teacher on line 7?
 
 39
 00:01:28.424 --> 00:01:29.462
->> 类: 蓝色大理石。
+&gt；&gt；类：蓝色大理石。
 &gt;&gt; Class: Blue marble.
 
 40
 00:01:29.462 --> 00:01:30.340
->> 凯尔 - 辛普森: 蓝色大理石。
+&gt；&gt；Kyle Simpson：蓝色大理石。
 &gt;&gt; Kyle Simpson: Blue marble.
 
 41
 00:01:30.340 --> 00:01:35.019
-第 7 行的问题是什么颜色的大理石
-And what color marble is
-the question from line 7?
+第七行的问题是什么颜色的大理石？
+And what color marble is the question from line 7?
 
 42
 00:01:36.378 --> 00:01:38.986
->> 凯尔 - 辛普森: 那是绿色的
+&gt；&gt；Kyle Simpson：那是一个绿色的。
 &gt;&gt; Kyle Simpson: That's a green one.
 
 43
 00:01:38.986 --> 00:01:43.530
->> 类: 这是蓝色，因为问题随附于函数询问。
-&gt;&gt; Class: It's blue because
-question comes with function ask.
+&gt；&gt；类：它是蓝色的，因为问题来自于函数ask。
+&gt;&gt; Class: It's blue because question comes with function ask.
 
 44
 00:01:43.530 --> 00:01:46.250
->> 凯尔 - 辛普森: 那么问题是
-&gt;&gt; Kyle Simpson: So
-question is a variable inside of
+&gt；&gt；Kyle Simpson：问题是
+&gt;&gt; Kyle Simpson: So question is a variable inside of
 
 45
 00:01:46.250 --> 00:01:48.420
-功能要求的范围，对吧 ?
+函数的范围问，对吗？
 the scope of the function ask, right?
 
 46
 00:01:48.420 --> 00:01:49.960
-那是什么颜色的大理石
+那会是什么颜色的大理石呢？
 So what color marble would that have been?
 
 47
 00:01:49.960 --> 00:01:50.670
->> 类: 绿色。
+&gt；&gt；类：绿色。
 &gt;&gt; Class: Green.
 
 48
 00:01:50.670 --> 00:01:51.640
->> Kyle Simpson: 是绿色的。
+&gt；&gt；Kyle Simpson：应该是绿色的。
 &gt;&gt; Kyle Simpson: Would've been green.
 
 49
 00:01:51.640 --> 00:01:53.680
-虽然那里没有一个 var
+即使它没有var，
 Even though it doesn't have a var there,
 
 50
 00:01:53.680 --> 00:01:58.890
-参数在该作用域中正式创建标识。
-a parameter is formally creating
-an identifier in that scope.
+参数在该作用域中正式创建标识符。
+a parameter is formally creating an identifier in that scope.
 
 51
 00:01:58.890 --> 00:02:03.679
-所以我们有一个老师是蓝色的大理石，问题是绿色的大理石。
-So we'd have a teacher being a blue
-marble and question being a green marble.
+所以我们有一个老师是一个蓝色的大理石，问题是一个绿色的大理石。
+So we'd have a teacher being a blue marble and question being a green marble.
 
 52
 00:02:06.207 --> 00:02:08.335
->> 凯尔 - 辛普森: 现在我们有了一个范围，就在范围之内，
-&gt;&gt; Kyle Simpson: So now we have a scope
-and that's within the scope, and
+&gt；&gt；Kyle Simpson：现在我们有了一个范围，这就在范围内，并且
+&gt;&gt; Kyle Simpson: So now we have a scope and that's within the scope, and
 
 53
 00:02:08.335 --> 00:02:09.544
-在一个范围内
+那是在一个范围内。
 that's within a scope.
 
 54
 00:02:09.544 --> 00:02:14.025
-而且这个范围的解决方式，当我们问一个问题的时候基本上是
-And that scope resolution by the way, when
-we ask for a question is basically doing
+顺便说一下，这个范围解决方案，当我们问一个问题的时候，基本上就是在做
+And that scope resolution by the way, when we ask for a question is basically doing
 
 55
 00:02:14.025 --> 00:02:19.155
-那个处理的地方，哎，老师，你在这个问题的范围里是存在的吗 ?
-that processing where it says, hey,
-teacher, do you exist in the ask scope?
+在处理过程中，它说，嘿，老师，您是否存在于Ask范围内？
+that processing where it says, hey, teacher, do you exist in the ask scope?
 
 56
 00:02:19.155 --> 00:02:22.895
-然后当我们不去外面的时候
-And then, when it doesn't then
-we go out to the outer scope and
+然后，当它没有，然后我们到外面的范围和
+And then, when it doesn't then we go out to the outer scope and
 
 57
 00:02:22.895 --> 00:02:23.985
-我们是在那里找到的
+我们碰巧在那里找到了它。
 we happened to find it there.
 
 58
 00:02:23.985 --> 00:02:26.245
-但如果我们没有我们就会继续下去
-But if we didn't,
-we would have go on and keep going, so
+但如果我们不这样做，我们就会继续下去，所以
+But if we didn't, we would have go on and keep going, so
 
 59
 00:02:26.245 --> 00:02:32.090
-如果你真的想疯的话你可以去 50 层
-you could go 50 levels deep if you
-really wanna go crazy with it, okay?
+如果你真的想疯狂的话，你可以深入50层，好吗？
+you could go 50 levels deep if you really wanna go crazy with it, okay?
 
 60
 00:02:32.090 --> 00:02:36.759
-那么问题的价值是什么 ?
+那么问题的价值是什么呢？
 So what is the value of question?
 
 61
 00:02:38.250 --> 00:02:39.050
->> 类: 为什么?
+&gt；&gt；类：为什么？
 &gt;&gt; Class: Why?
 
 62
 00:02:39.050 --> 00:02:41.819
->> Kyle Simpson: 这是字符串，为什么?，因为在第 10 行上，
-&gt;&gt; Kyle Simpson: It is the string,
-Why?, because on line 10,
+&gt；&gt；Kyle Simpson：它是字符串，为什么？，因为在第10行，
+&gt;&gt; Kyle Simpson: It is the string, Why?, because on line 10,
 
 63
 00:02:41.819 --> 00:02:43.699
-当我们执行第 10 行的时候
+当我们执行第10行时。
 when we execute line 10.
 
 64
 00:02:43.699 --> 00:02:46.150
-我们有一个可能要查的价值
-We have a value there which we
-might have had to look up, but
+我们在那里有一个我们可能不得不查找的值，但是
+We have a value there which we might have had to look up, but
 
 65
 00:02:46.150 --> 00:02:47.800
-在这件案子里是个字面上的问题
+在这种情况下，它是一个字面意思。
 in this case it's a literal.
 
 66
 00:02:47.800 --> 00:02:49.849
-那条线又怎么了
+那么弦线会发生什么变化呢？
 And what happens to the string line?
 
 67
 00:02:51.050 --> 00:02:53.326
->> 类: 它被传递- >> 凯尔 - 辛普森: 它被分配给
-&gt;&gt; Class: It gets passed-
-&gt;&gt; Kyle Simpson: It gets assigned to
+&gt；&gt；类：它被传递-&gt；&gt；Kyle Simpson：它被分配给
+&gt;&gt; Class: It gets passed- &gt;&gt; Kyle Simpson: It gets assigned to
 
 68
 00:02:53.326 --> 00:02:55.307
-变量问题，因此
+变量问题，所以
 the variable question, so
 
 69
 00:02:55.307 --> 00:03:00.135
-在请求开始执行前执行第 10 行的执行。
-that execution happens at line
-10 before ask starts executing.
+该执行发生在Ask开始执行之前的第10行。
+that execution happens at line 10 before ask starts executing.
 
 70
 00:03:00.135 --> 00:03:04.835
-所以当我们询问我们发现的大理石时，它是绿色的大理石
-So when we then ask for the marble that
-we find, which is a green marble and
+所以当我们要求得到我们找到的大理石时，这是一个绿色的大理石
+So when we then ask for the marble that we find, which is a green marble and
 
 71
 00:03:04.835 --> 00:03:07.468
-我们要求的是问题的价值是吗
+我们问题的价值，是吗？
 we ask for the value of question, it is?
 
 72
 00:03:07.468 --> 00:03:08.236
->> 类: 为什么?
+&gt；&gt；类：为什么？
 &gt;&gt; Class: Why?
 
 73
 00:03:08.236 --> 00:03:09.472
->> 凯尔 - 辛普森: 这是引述，为什么?这是字符串，为什么?
-&gt;&gt; Kyle Simpson: It's the quote,
-Why?, it's the string, Why?.
+&gt；&gt；Kyle Simpson：这是引言，为什么？，这是字符串，为什么？
+&gt;&gt; Kyle Simpson: It's the quote, Why?, it's the string, Why?.
 
 74
 00:03:10.759 --> 00:03:15.800
->> Kyle Simpson: 第 14 行会发生什么 ?
-&gt;&gt; Kyle Simpson: What's
-gonna happen with line 14?
+&gt；&gt；Kyle Simpson：第14行会发生什么？
+&gt;&gt; Kyle Simpson: What's gonna happen with line 14?
 
 75
 00:03:15.800 --> 00:03:17.637
-第 14 行如何执行?
+第14行是如何执行的？
 How does line 14 execute?
 
 76
 00:03:17.637 --> 00:03:21.782
->> 类: 将查找红色按钮。
+&gt；&gt；类：它将显示为红色按钮。
 &gt;&gt; Class: It's gonna look red button.
 
 77
 00:03:21.782 --> 00:03:22.574
->> Student : 它未定义?
+&gt；&gt；学生：未定义？
 &gt;&gt; Student: It's undefined?
 
 78
 00:03:22.574 --> 00:03:24.427
->> 凯尔 - 辛普森: 我们需要像以前一样做同样的叙事，
-&gt;&gt; Kyle Simpson: We need to do
-the same narrative as before,
+&gt；&gt；Kyle Simpson：我们需要做和以前一样的叙事，
+&gt;&gt; Kyle Simpson: We need to do the same narrative as before,
 
 79
 00:03:24.427 --> 00:03:26.129
-别跳得出结论
+不要草率下结论。
 don't jump to conclusions.
 
 80
 00:03:26.129 --> 00:03:27.310
-叙述的工作是怎样的呢 ?
+叙事是如何工作的？
 How does the narrative work?
 
 81
 00:03:28.389 --> 00:03:29.305
->> 类: 全局作用域。
+&gt；&gt；类：全局范围。
 &gt;&gt; Class: Global scope.
 
 82
 00:03:29.305 --> 00:03:33.090
->> 凯尔 - 辛普森: 全球范围，我有一个，什么样的参考?
-&gt;&gt; Kyle Simpson: Hey global scope,
-I have a, what kind of reference?
+&gt；&gt；Kyle Simpson：嘿，全球范围内，我有一个，什么样的参考？
+&gt;&gt; Kyle Simpson: Hey global scope, I have a, what kind of reference?
 
 83
 00:03:33.090 --> 00:03:35.030
->> 类: 源。 >> 凯尔 - 辛普森:
-&gt;&gt; Class: A source.
-&gt;&gt; Kyle Simpson: A source reference for
+&gt；&gt；类：一个源。&gt；&gt；Kyle Simpson：源参考
+&gt;&gt; Class: A source. &gt;&gt; Kyle Simpson: A source reference for
 
 84
 00:03:35.030 --> 00:03:38.430
-一个 Identifier 代码询问，有没有听过，答案是什么 ?
-an Identifier code ask,
-ever heard of it and the answer is?
+识别码问，听说过吗？答案是？
+an Identifier code ask, ever heard of it and the answer is?
 
 85
 00:03:38.430 --> 00:03:40.270
->> 类: 否。 >> 凯尔 - 辛普森: 那是什么错误呢 ?
-&gt;&gt; Class: No.
-&gt;&gt; Kyle Simpson: So what's the error?
+&gt；&gt；类别：第&gt；&gt；Kyle Simpson：那么错误是什么呢？
+&gt;&gt; Class: No. &gt;&gt; Kyle Simpson: So what's the error?
 
 86
 00:03:40.270 --> 00:03:41.079
->> 类: 引用请求。
+&gt；&gt；类：参考询问。
 &gt;&gt; Class: The reference ask.
 
 87
 00:03:41.079 --> 00:03:42.901
->> Kyle Simpson: 参考请求，好吗 ?
+&gt；&gt；Kyle Simpson：参考询问，好吗？
 &gt;&gt; Kyle Simpson: The reference ask, okay?
 
 88
 00:03:42.901 --> 00:03:45.185
-即使是在节目中存在
+即使Ask存在于程序中，
 Even though ask exist within the program,
 
 89
 00:03:45.185 --> 00:03:48.807
-它在我们目前所拥有的任何范围内都不存在
-it doesn't exist in any scope that
-we have access to at this moment.
+它不存在于我们目前有权访问的任何范围内。
+it doesn't exist in any scope that we have access to at this moment.
 
 90
 00:03:48.807 --> 00:03:53.067
-因此，它是一个未声明的变量，与自动全局变量不同。
-So it is therefore an undeclared
-variable unlike the autoglobals,
+因此它是一个未声明的变量，不像autoglobals，
+So it is therefore an undeclared variable unlike the autoglobals,
 
 91
 00:03:53.067 --> 00:03:55.319
-因为我们不是严格的
+因为我们没有严格的模式。
 because we're not in strict mode.
 
 92
 00:03:55.319 --> 00:03:59.360
-不像自动全球化，它会为您创建一个大理石。
-Unlike autoglobals which go ahead and
-create a marble for you.
+与自动球体不同，自动球体会为您创建一个大理石。
+Unlike autoglobals which go ahead and create a marble for you.
 
 93
 00:03:59.360 --> 00:04:04.800
-如果您有一个源引用了未声明的变量，
-If you have a source referenced
-to a variable that is undeclared,
+如果源引用了未声明的变量，
+If you have a source referenced to a variable that is undeclared,
 
 94
 00:04:04.800 --> 00:04:08.840
-它总是会抛出 ReferenceError，好吗 ?
+它总是抛出ReferenceError，好吗？
 it always throws a ReferenceError, okay?
 
 95
 00:04:08.840 --> 00:04:11.810
-这就是为什么要了解目标引用和目标引用之间的差异的原因
-That's why it's critical to understand the
-difference between a target reference and
+这就是为什么理解目标引用和
+That's why it's critical to understand the difference between a target reference and
 
 96
 00:04:11.810 --> 00:04:13.069
@@ -531,88 +482,80 @@ a source reference.
 
 97
 00:04:13.069 --> 00:04:15.000
-至少如果你处于非严格模式
+至少如果你处于非严格模式。
 At least if you're in non-strict mode.
 
 98
 00:04:15.000 --> 00:04:18.281
-一旦进入严格模式，它们的行为都是一样的。
-Once you go to strict mode,
-they both behave exactly the same, so
+一旦进入严格模式，它们的行为完全相同，所以
+Once you go to strict mode, they both behave exactly the same, so
 
 99
 00:04:18.281 --> 00:04:20.976
-它的目标与参考相比更重要
-it stops mattering as much
-target versus reference.
+它停止了目标与参考的关系。
+it stops mattering as much target versus reference.
 
 100
 00:04:24.148 --> 00:04:25.992
-> > 凯尔 - 辛普森: 所以我们会在这里看到一个参考，
-&gt;&gt; Kyle Simpson: So
-we're gonna see a reference here,
+&gt；&gt；Kyle Simpson：所以我们将在这里看到一个引用，
+&gt;&gt; Kyle Simpson: So we're gonna see a reference here,
 
 101
 00:04:25.992 --> 00:04:27.728
-在第 14 行出现 ReferenceError 。
+ReferenceError在这里的第14行。
 ReferenceError here on line 14.
 
 102
 00:04:28.970 --> 00:04:29.569
-怎么了
+怎么了？
 Yes?
 
 103
 00:04:29.569 --> 00:04:32.189
->> Student : 当我们通过字符串的时候
-&gt;&gt; Student: When we're
-passing the string why to ask
+&gt；&gt；学生：当我们传递字符串时，为什么要问
+&gt;&gt; Student: When we're passing the string why to ask
 
 104
 00:04:32.189 --> 00:04:33.620
-第 10 行 - >> 凯尔 - 辛普森: 是的。
-on line ten-
-&gt;&gt; Kyle Simpson: Yeah.
+在第十行-&gt；&gt；Kyle Simpson：是的。
+on line ten- &gt;&gt; Kyle Simpson: Yeah.
 
 105
 00:04:33.620 --> 00:04:35.350
-> > Student : 在幕后有吗 ?
+&gt；&gt；学生：幕后有没有，
 &gt;&gt; Student: Is there behind the scenes,
 
 106
 00:04:35.350 --> 00:04:39.033
-是 JavaScript 说的远远等于为什么在某个时候?
-is JavaScript saying far question
-equals why at some point?
+JavaScript是不是在某种程度上说远问题等于为什么？
+is JavaScript saying far question equals why at some point?
 
 107
 00:04:39.033 --> 00:04:41.002
->> Kyle Simpson: 排序，对对，排序。
+&gt；&gt；Kyle Simpson：有点，是的，有点。
 &gt;&gt; Kyle Simpson: Sort of, yeah, sort of.
 
 108
 00:04:41.002 --> 00:04:41.947
->> 学生: 好的。
+&gt；&gt；学生：好的。
 &gt;&gt; Student: Okay.
 
 109
 00:04:41.947 --> 00:04:44.478
->> Kyle Simpson: 我认为在概念上，它可以思考自变量
-&gt;&gt; Kyle Simpson: I think conceptually
-it works to think about arguments
+&gt；&gt；Kyle Simpson：我认为从概念上讲，思考论点是可行的
+&gt;&gt; Kyle Simpson: I think conceptually it works to think about arguments
 
 110
 00:04:44.478 --> 00:04:45.970
-正在分配给参数。
+被分配给参数。
 being assigned to parameters.
 
 111
 00:04:45.970 --> 00:04:50.779
-严格来说这不是技术上的问题但它足够接近
-It's not technically that, but
-it's close enough that it works for
+技术上不是这样的，但它已经足够接近了，它适用于
+It's not technically that, but it's close enough that it works for
 
 112
 00:04:50.779 --> 00:04:52.920
-这一特别的叙述练习
+这个特殊的叙事练习。
 this particular narrative exercise.

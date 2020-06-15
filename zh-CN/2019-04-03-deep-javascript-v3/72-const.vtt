@@ -2,44 +2,38 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:02.174
->> 凯尔 - 辛普森:
-&gt;&gt; Kyle Simpson: Since
-it was asked earlier,
+&gt；&gt；Kyle Simpson：因为之前有人问过，
+&gt;&gt; Kyle Simpson: Since it was asked earlier,
 
 2
 00:00:02.174 --> 00:00:05.357
-让我们来讨论康斯特的问题
+让我们进入对const的讨论。
 let's segue into a discussion of const.
 
 3
 00:00:05.357 --> 00:00:10.336
-最重要的是比让更多的人更清楚。
-Const is by most accounts
-even better than let.
+按大多数人的说法，const甚至比let更好。
+Const is by most accounts even better than let.
 
 4
 00:00:10.336 --> 00:00:15.265
-您不应该使用 let ，并且只能尽可能使用常量。
-You should not even use let and you
-should only use const wherever possible.
+您甚至不应该使用let，并且应该在可能的情况下只使用const。
+You should not even use let and you should only use const wherever possible.
 
 5
 00:00:15.265 --> 00:00:20.033
-所以我对 const 的问题本质上是 const 关键字
-So the problem that I have with const
-is essentially the const keyword
+因此，const的问题实质上是const关键字
+So the problem that I have with const is essentially the const keyword
 
 6
 00:00:20.033 --> 00:00:24.402
-在语言中不携带自己的体重。
-does not carry its own
-weight within the language.
+在语言中没有自己的分量。
+does not carry its own weight within the language.
 
 7
 00:00:24.402 --> 00:00:29.571
->> 凯尔 - 辛普森: 这句话有时用在规格上
-&gt;&gt; Kyle Simpson: That's a phrase that
-is sometimes used in specifications or
+&gt；&gt；Kyle Simpson：这是一个有时用于规范或
+&gt;&gt; Kyle Simpson: That's a phrase that is sometimes used in specifications or
 
 8
 00:00:29.571 --> 00:00:30.695
@@ -48,221 +42,188 @@ standards.
 
 9
 00:00:30.695 --> 00:00:34.432
-有人说也许会有好处但是
-When somebody says, yeah,
-there might be a benefit, but
+当有人说，是的，可能会有好处，但是
+When somebody says, yeah, there might be a benefit, but
 
 10
 00:00:34.432 --> 00:00:37.347
 成本更高，所以不值得。
-the cost is greater and
-so it's not worth it.
+the cost is greater and so it's not worth it.
 
 11
 00:00:37.347 --> 00:00:42.097
-我想说的是也许会有一点好处
-And what I'm saying is, that there
-might be a slight benefit to const,
+我想说的是，Const可能会有一点好处，
+And what I'm saying is, that there might be a slight benefit to const,
 
 12
 00:00:42.097 --> 00:00:46.054
-这并不像你所相信的那么重要
-it is not as significant as you
-have been led to believe, and
+它并不像你被引导去相信的那样重要，而且
+it is not as significant as you have been led to believe, and
 
 13
 00:00:46.054 --> 00:00:49.720
-我认为更重要的是要付出代价
-there is a cost to const which
-is in my opinion greater.
+在我看来，const的成本更高。
+there is a cost to const which is in my opinion greater.
 
 14
 00:00:49.720 --> 00:00:51.154
-它没有自己的重量
+它没有自己的重量。
 It doesn't carry its own weight.
 
 15
 00:00:51.154 --> 00:00:55.966
-那不代表我没用，意思是我用的时候很麻雀，
-That doesn't mean I never use it, it means
-I am very sparing in when I use it and
+这并不意味着我从来不用它，它意味着我在使用它的时候非常节省
+That doesn't mean I never use it, it means I am very sparing in when I use it and
 
 16
 00:00:55.966 --> 00:00:58.273
-我只在非常具体的案例中使用它。
+我只在非常特殊的情况下使用它。
 I only use it in very specific cases.
 
 17
 00:00:58.273 --> 00:01:02.143
-与我的所有声明相比，这是我的一般替代。
-As opposed to it's my general
-replacement for all declarations.
+与之相反，它是我对所有声明的一般替代。
+As opposed to it's my general replacement for all declarations.
 
 18
 00:01:02.143 --> 00:01:09.364
-因此， const 的大成本甚至不是 JavaScript 独有的。
-So, the big cost that comes with const
-is not even unique to JavaScript.
+因此，const带来的巨大成本甚至不是JavaScript独有的。
+So, the big cost that comes with const is not even unique to JavaScript.
 
 19
 00:01:09.364 --> 00:01:12.281
-如果您立即进入 Stack Overflow 并搜索
-If you go on Stack Overflow right now and
-search for
+如果您现在继续Stack Overflow并搜索
+If you go on Stack Overflow right now and search for
 
 20
 00:01:12.281 --> 00:01:16.239
-const 关键字的问题，你会发现成千上万的
-problems with the const keyword,
-you'll find tens of thousands of
+const关键字的问题，您会发现数以万计的
+problems with the const keyword, you'll find tens of thousands of
 
 21
 00:01:16.239 --> 00:01:19.442
-各种不同语言的帖子
-posts across a whole variety
-of different languages.
+跨越各种不同语言的帖子。
+posts across a whole variety of different languages.
 
 22
 00:01:19.442 --> 00:01:23.539
-因为结果是每次将 const 关键字添加到任何一个
-Because it turns out, every time the const
-keyword has ever been added to any
+因为事实证明，每次将const关键字添加到任何
+Because it turns out, every time the const keyword has ever been added to any
 
 23
 00:01:23.539 --> 00:01:26.424
-编程语言程序员感到困惑
-programming language,
-programmers got confused.
+编程语言，程序员被弄糊涂了。
+programming language, programmers got confused.
 
 24
 00:01:26.424 --> 00:01:28.539
-我认为他们感到困惑的原因之一
-And I think one of the reasons
-they get confused,
+我认为他们感到困惑的原因之一是，
+And I think one of the reasons they get confused,
 
 25
 00:01:28.539 --> 00:01:31.542
-是因为当我们想到康斯特的时候我们想到了常数
-is because when we think of const,
-and we think of the word constant.
+是因为当我们想到const，我们想到单词const。
+is because when we think of const, and we think of the word constant.
 
 26
 00:01:31.542 --> 00:01:35.840
-我们在想的是，一个不改变的东西。
-What we're thinking to ourselves is,
-a thing that doesn't change.
+我们在想的是，一件不会改变的事情。
+What we're thinking to ourselves is, a thing that doesn't change.
 
 27
 00:01:37.087 --> 00:01:39.540
->> 凯尔 - 辛普森: 但这不是程序员的意思，或者
-&gt;&gt; Kyle Simpson: But that's not what
-a programmer means by const, or
+&gt；&gt；Kyle Simpson：但这不是程序员所说的const，或者
+&gt;&gt; Kyle Simpson: But that's not what a programmer means by const, or
 
 28
 00:01:39.540 --> 00:01:43.073
-至少这不是编程语言设计师的意思
-at least that's not what a programming
-language designer means by const.
+至少这不是编程语言设计者对const的意思。
+at least that's not what a programming language designer means by const.
 
 29
 00:01:43.073 --> 00:01:48.831
-编程语言设计器表示无法重新分配的变量，
-A programming language designer means
-a variable that can't be reassigned,
+编程语言设计器意味着不能重新分配的变量，
+A programming language designer means a variable that can't be reassigned,
 
 30
 00:01:48.831 --> 00:01:52.246
-那是两个完全不同的事情。
-and those are two entirely
-different things.
+这是两件完全不同的事情。
+and those are two entirely different things.
 
 31
 00:01:52.246 --> 00:01:58.344
-在这里，第 4 行，宣布一个常量，一个无法重新分配的 myTeacher 。
-Here, on line 4, am declaring a const,
-a myTeacher that can't be reassigned.
+在这里，在第4行，我声明了一个const，一个不能重新分配的myTeacher。
+Here, on line 4, am declaring a const, a myTeacher that can't be reassigned.
 
 32
 00:01:58.344 --> 00:02:00.727
-因此我在第 5 行上出现错误，但
+所以我在第5行得到一个错误，但是
 So I get an error on line 5, but
 
 33
 00:02:00.727 --> 00:02:05.606
-当我声明一个类似于数组的可变值时会发生什么情况。
-look what happens when I declare
-a mutable value like an array.
+看看当我像数组一样声明一个可变的值时会发生什么。
+look what happens when I declare a mutable value like an array.
 
 34
 00:02:05.606 --> 00:02:10.931
-我不是要在第 8 行重新分配老师所以我没有错
-I'm not trying to reassign teachers
-on line 8, so I get no error,
+我没有试图重新分配8号线上的老师，所以我没有错误，
+I'm not trying to reassign teachers on line 8, so I get no error,
 
 35
 00:02:10.931 --> 00:02:16.463
-但事实上我仍在突变完全允许的价值
-but I am actually still mutating
-the value which is totally allowed.
+但实际上我仍然在变异完全被允许的值。
+but I am actually still mutating the value which is totally allowed.
 
 36
 00:02:16.463 --> 00:02:19.856
-这产生了各种各样的挫折感作为一个事实
-This creates all kinds of frustration,
-as a matter of fact,
+这就造成了各种各样的挫折感，事实上，
+This creates all kinds of frustration, as a matter of fact,
 
 37
 00:02:19.856 --> 00:02:22.663
-有些语言在这方面有很大的挣扎
-some languages have struggled so
-much with this.
+有些语言在这方面做了很大的努力。
+some languages have struggled so much with this.
 
 38
 00:02:22.663 --> 00:02:26.079
-例如，例如 Java，它们已除去到常量关键字，并且
-Like for example Java,
-they removed to the const keyword and
+就像Java一样，它们移到const关键字并
+Like for example Java, they removed to the const keyword and
 
 39
 00:02:26.079 --> 00:02:28.235
-放入另一个称为 final 的关键字。
+输入另一个称为final的关键字。
 put in another keyword called final.
 
 40
 00:02:28.235 --> 00:02:31.665
-这样他们就能把自己和别人的行李分开
-Just so they could sort of separate
-themselves from the baggage of people
+这样他们就可以把自己从人们的包袱中分离出来
+Just so they could sort of separate themselves from the baggage of people
 
 41
 00:02:31.665 --> 00:02:34.487
-认为这件事是不重要的
-thinking that this thing meant
-something that it didn't.
+认为这件事意味着一些它没有的东西。
+thinking that this thing meant something that it didn't.
 
 42
 00:02:34.487 --> 00:02:38.920
-我不确定最终是否更好，但这就是他们所做的，好吗 ?
-I'm not sure that final is better,
-but that's what they did, okay?
+我不确定决赛是不是更好，但他们就是这么做的，好吗？
+I'm not sure that final is better, but that's what they did, okay?
 
 43
 00:02:38.920 --> 00:02:41.978
-所以有个随身携带的行李
-So, there is a baggage
-that comes with const.
+因此，Const随之而来的是一个行李。
+So, there is a baggage that comes with const.
 
 44
 00:02:41.978 --> 00:02:46.134
-您的代码中有新的读者，除非他们已经熟悉
-And a new reader to your code unless
-they are already well familiar with
+和一个新的代码阅读器，除非他们已经非常熟悉
+And a new reader to your code unless they are already well familiar with
 
 45
 00:02:46.134 --> 00:02:50.853
-const 的概念以及可变值与可变值之间的差异的概念
-the concept of const, and the idea of
-the difference between mutable values and
+常量的概念，以及可变的值和
+the concept of const, and the idea of the difference between mutable values and
 
 46
 00:02:50.853 --> 00:02:52.274
@@ -271,278 +232,235 @@ mutable assignments.
 
 47
 00:02:52.274 --> 00:02:57.161
-更有可能的是，当他们看到你说的时候，读者可能会被绊倒
-It is more likely than not that a reader
-could get tripped up when they see you say
+当读者看到你说的话时，很有可能会被绊倒
+It is more likely than not that a reader could get tripped up when they see you say
 
 48
 00:02:57.161 --> 00:03:01.234
-我们的老师是平等的然后他们就会看到像阵列一样的东西
-const teachers equals and
-then they see something like an array,
+常数教师等于，然后他们看到类似数组的东西，
+const teachers equals and then they see something like an array,
 
 49
 00:03:01.234 --> 00:03:04.418
-他们很可能要把他们的
-they are most likely takeaway
-that they would get or
+它们最有可能是他们将得到的外卖或
+they are most likely takeaway that they would get or
 
 50
 00:03:04.418 --> 00:03:09.412
-他们最有可能得到的印象是这个阵列不会改变
-the most likely impression that they
-would get is that the array won't change.
+他们最有可能得到的印象是数组不会改变。
+the most likely impression that they would get is that the array won't change.
 
 51
 00:03:09.412 --> 00:03:13.031
-它不会改变它本身不是你在说的
-That it won't mutate itself,
-that's not what you were saying.
+它不会自己变异，这不是你想说的。
+That it won't mutate itself, that's not what you were saying.
 
 52
 00:03:13.031 --> 00:03:17.772
-你是说不我只是不去重新分配变量
-You were saying, no,
-I'm just not gonna reassign the variable,
+你说，不，我只是不会重新分配变量，
+You were saying, no, I'm just not gonna reassign the variable,
 
 53
 00:03:17.772 --> 00:03:22.698
-所以当你把阵列静音时，突然之间就会混淆。
-so that when you mutate the array,
-all of a sudden they get confused.
+所以当你突变数组时，它们突然变得混乱。
+so that when you mutate the array, all of a sudden they get confused.
 
 54
 00:03:22.698 --> 00:03:27.052
-所以这个常量关键字有这个问题，它有这个包袱。
-So the const keyword has this
-problem to it, it has this baggage.
+所以const关键字有这个问题，它有这个包袱。
+So the const keyword has this problem to it, it has this baggage.
 
 55
 00:03:27.052 --> 00:03:31.800
-现在你应该在很小的街区内使用这个常量关键字，对吧 ?
-Now, you're supposed to use the const
-keyword within a very small block, right?
+现在，您应该在一个非常小的块中使用const关键字，对吗？
+Now, you're supposed to use the const keyword within a very small block, right?
 
 56
 00:03:31.800 --> 00:03:34.099
-你应该把你的街区
-You're supposed to keep
-your block small and
+你应该保持你的街区小
+You're supposed to keep your block small and
 
 57
 00:03:34.099 --> 00:03:37.377
-你应该用小积木里的最重要的词
-you're supposed to use the const
-key word within small blocks.
+应该在小块内使用const关键字。
+you're supposed to use the const key word within small blocks.
 
 58
 00:03:37.377 --> 00:03:43.662
-从语义的角度来说， const 关键字是什么意思，
-What the const keyword is actually saying,
-from a semantic perspective is,
+从语义的角度来看，const关键字实际上所说的是，
+What the const keyword is actually saying, from a semantic perspective is,
 
 59
 00:03:43.662 --> 00:03:49.381
-我保证它不会被重新分配的
-for the rest of this block,
-I promise it's not gonna get reassigned.
+对于这个街区的其余部分，我保证它不会被重新分配。
+for the rest of this block, I promise it's not gonna get reassigned.
 
 60
 00:03:49.381 --> 00:03:53.211
-我不认为重新分配实际上是个大问题。
-I don't think that reassignment
-is actually a big problem.
+我不认为调职真的是个大问题。
+I don't think that reassignment is actually a big problem.
 
 61
 00:03:53.211 --> 00:03:57.129
-这不是我的程序中常见的错误来源。
-That isn't the source of bugs
-typically in my program.
+这不是我的程序中典型的bug来源。
+That isn't the source of bugs typically in my program.
 
 62
 00:03:57.129 --> 00:04:01.955
-但即使是虫子的来源如果我用一小块
-But even if it were a source of bugs, if I
-use the const inside of a small block of
+但即使它是bug的来源，如果我使用一小块
+But even if it were a source of bugs, if I use the const inside of a small block of
 
 63
 00:04:01.955 --> 00:04:06.854
-三到五行代码，我最能告诉用户的是，猜测是什么，
-three to five lines of code, what I am
-at best telling the user is, guess what,
+三到五行代码，我最多告诉用户的是，你猜怎么着，
+three to five lines of code, what I am at best telling the user is, guess what,
 
 64
 00:04:06.854 --> 00:04:10.449
-在接下来的四列代码中我是不会重新分配的
-on the next four lines of code
-I'm not gonna reassign it.
+在接下来的四行代码中，我不会重新分配它。
+on the next four lines of code I'm not gonna reassign it.
 
 65
 00:04:10.449 --> 00:04:14.949
-Cuz 在整个程序中只有 4 行代码可以重新分配
-Cuz there is only four more lines of code
-in the entire program that could reassign
+因为在整个程序中只有四行代码可以重新分配
+Cuz there is only four more lines of code in the entire program that could reassign
 
 66
 00:04:14.949 --> 00:04:19.608
-它，因为词法限定作用如何， >> Kyle Simpson: const 关键字
-it, because of how lexical scoping works,
-&gt;&gt; Kyle Simpson: The const keyword
+由于词法作用域的工作方式，&gt；&gt；Kyle Simpson：const关键字
+it, because of how lexical scoping works, &gt;&gt; Kyle Simpson: The const keyword
 
 67
 00:04:19.608 --> 00:04:22.841
-假装它为我们做了一件很棒的事
-pretends as if it's doing this
-major awesome thing for us, and
+假装它在为我们做一件很棒的事情，而且
+pretends as if it's doing this major awesome thing for us, and
 
 68
 00:04:22.841 --> 00:04:25.040
-其实根本不是这么做的
+它实际上并没有做那么多。
 it's not actually doing that much at all.
 
 69
 00:04:26.930 --> 00:04:28.473
->> 凯尔 - 辛普森: 没有解决很多问题。
-&gt;&gt; Kyle Simpson: Not
-solving that many problems.
+&gt；&gt；Kyle Simpson：没有解决那么多问题。
+&gt;&gt; Kyle Simpson: Not solving that many problems.
 
 70
 00:04:28.473 --> 00:04:33.058
-所以它有这个问题，不是真正解决这个问题，
-So it has this problems, and
-it's not really solving the problem that
+所以它有这样的问题，它并没有真正解决这个问题
+So it has this problems, and it's not really solving the problem that
 
 71
 00:04:33.058 --> 00:04:37.971
-它有点像你孩子卧室里的夜间照明
-it pretends, it's kinda like a night
-lighting in your child's bedroom.
+它假装，有点像你孩子卧室里的夜灯。
+it pretends, it's kinda like a night lighting in your child's bedroom.
 
 72
 00:04:37.971 --> 00:04:44.716
-这绝对让你的孩子觉得衣橱里没有怪物
-It definitely makes your child feel better
-that there's no monsters in the closet,
+壁橱里没有怪物肯定会让你的孩子感觉更好，
+It definitely makes your child feel better that there's no monsters in the closet,
 
 73
 00:04:44.716 --> 00:04:48.810
-但我们都知道衣橱里没有怪物
-but we all know there's no
-monsters in the closet.
+但我们都知道壁橱里没有怪物。
+but we all know there's no monsters in the closet.
 
 74
 00:04:48.810 --> 00:04:52.329
-这让你感觉很好但我不确定它是否真的
-So it makes you feel good, but I'm not
-sure that it really is carrying its
+所以它让你感觉很好，但我不确定它是否真的带着
+So it makes you feel good, but I'm not sure that it really is carrying its
 
 75
 00:04:52.329 --> 00:04:55.057
-自己的体重减轻了可能带来的困惑
-own weight with the potential
-of confusion that comes.
+自己的体重和潜在的困惑来了。
+own weight with the potential of confusion that comes.
 
 76
 00:04:55.057 --> 00:05:00.014
-因此，所有考虑的因素，我个人的决定是我
-So, all of that taken into consideration,
-my personal take on const is that I
+所以，所有这些都考虑在内，我个人对const的看法是，我
+So, all of that taken into consideration, my personal take on const is that I
 
 77
 00:05:00.014 --> 00:05:04.365
-仅当我指定一个已为原语的值时使用它
-only use it when I am assigning a value
-that is already a primitive and
+仅当我分配一个已经是原语的值时才使用它，并且
+only use it when I am assigning a value that is already a primitive and
 
 78
 00:05:04.365 --> 00:05:05.916
-因此无法改变。
+因此是不变的。
 therefore immutable.
 
 79
 00:05:05.916 --> 00:05:12.000
-因此，我只会用字符串， Booleans 或数字之类的内容来安慰。
-So I will only use const with things
-like strings, Booleans, or numbers.
+因此，我只会将const与字符串、布尔值或数字一起使用。
+So I will only use const with things like strings, Booleans, or numbers.
 
 80
 00:05:12.000 --> 00:05:15.915
-我用它作为那些文字的语义占位符。
-And I use it as a semantic place
-holder for those literals.
+我使用它作为这些文字的语义占位符。
+And I use it as a semantic place holder for those literals.
 
 81
 00:05:15.915 --> 00:05:19.678
-如果有 13 号这就意味着什么特别的
-So if have the number 13, and
-that means something special and
+所以如果有数字13，这意味着一些特别的东西
+So if have the number 13, and that means something special and
 
 82
 00:05:19.678 --> 00:05:23.860
-在我的节目里魔法我会给它一个特殊的魔法
-magical in my program, I'll give it
-the name special magical in a const
+Magical在我的程序中，我会给它命名为Special Magical in a Const
+magical in my program, I'll give it the name special magical in a const
 
 83
 00:05:23.860 --> 00:05:26.317
-而不是只使用 13
+声明而不是只使用13。
 declaration instead of just using 13.
 
 84
 00:05:26.317 --> 00:05:29.295
-这就是所谓的常量。
-That's what constants
-are supposed to be for.
+这就是常量的作用。
+That's what constants are supposed to be for.
 
 85
 00:05:29.295 --> 00:05:34.127
-它们应该赋予语义作为占位符。
-They're supposed to give
-semantic meaning as placeholders.
+它们应该作为占位符给出语义含义。
+They're supposed to give semantic meaning as placeholders.
 
 86
 00:05:34.127 --> 00:05:39.300
-我不认为我们需要一个常量来阻止我们意外地重新分配东西。
-I don't think we need a const to prevent
-us from accidentally reassigning things.
+我不认为我们需要一个常量来防止我们意外地重新分配东西。
+I don't think we need a const to prevent us from accidentally reassigning things.
 
 87
 00:05:39.300 --> 00:05:43.884
-我不认为这是一个大问题，至少在一般意义上。
-I just don't think it's that big of
-a problem, at least in the general sense.
+我只是不认为这是一个很大的问题，至少在一般意义上是这样。
+I just don't think it's that big of a problem, at least in the general sense.
 
 88
 00:05:43.884 --> 00:05:48.793
-这就是我对康斯特的意见
-That's my take on const,
-where many of the developers
+这是我对const的看法，在那里许多开发人员
+That's my take on const, where many of the developers
 
 89
 00:05:48.793 --> 00:05:53.290
-会告诉你你应该用康斯特的
-out there will tell you
-that you should use const.
+外面会告诉你应该使用const。
+out there will tell you that you should use const.
 
 90
 00:05:53.290 --> 00:05:57.096
-然后你就应该让你和你永远别用 var了
-And then you should use let and
-you should never use var.
+然后你应该使用let，永远不要使用var。
+And then you should use let and you should never use var.
 
 91
 00:05:57.096 --> 00:06:02.041
-我的建议已撤销，您应该缺省使用 var。
-My advice is reversed,
-you should default to using var.
+我的建议是相反的，你应该默认使用var。
+My advice is reversed, you should default to using var.
 
 92
 00:06:02.041 --> 00:06:03.949
-在有用的地方使用
+在有帮助的地方使用let，
 Use let where it is helpful,
 
 93
 00:06:03.949 --> 00:06:08.012
-仅将常量与 immutable 原始值一起使用。
-use const sparingly only with
-immutable primitive values.
+仅对不可变的原始值谨慎地使用const。
+use const sparingly only with immutable primitive values.

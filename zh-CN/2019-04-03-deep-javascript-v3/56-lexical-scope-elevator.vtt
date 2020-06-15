@@ -2,123 +2,110 @@ WEBVTT
 
 1
 00:00:00.289 --> 00:00:04.339
->> 凯尔: 我多年来一直用一个比喻为我工作
-&gt;&gt; Kyle: One metaphor that I have used for
-years that works well for me and
+&gt；&gt；Kyle：我多年来一直使用的一个隐喻，它对我很有效
+&gt;&gt; Kyle: One metaphor that I have used for years that works well for me and
 
 2
 00:00:04.339 --> 00:00:06.256
-也许能为你做得好
+也许会对你有好处。
 maybe will work well for you.
 
 3
 00:00:06.256 --> 00:00:11.221
-嵌套在彼此之间的作用域的概念与建筑物相似
-This idea of scopes being nested within
-each other is similar to a building
+作用域相互嵌套的概念类似于建筑物
+This idea of scopes being nested within each other is similar to a building
 
 4
 00:00:11.221 --> 00:00:13.794
-电梯里有个大电梯好吗
+里面有个又大又高的电梯，好吗？
 with a big tall elevator in it, okay?
 
 5
 00:00:13.794 --> 00:00:16.544
-想象一下如果你去了一栋楼而你在找东西
-Imagine if you went into a building and
-you were looking for something but
+想象一下，如果你走进一栋大楼，你正在寻找什么，但是
+Imagine if you went into a building and you were looking for something but
 
 6
 00:00:16.544 --> 00:00:17.728
-你不知道那是什么地方
+你不知道它在哪里。
 you didn't know where it was.
 
 7
 00:00:17.728 --> 00:00:19.410
-你就知道是在大楼里的某个地方
-You just knew it was
-somewhere in the building or
+你只是知道它在大楼里的某个地方或者
+You just knew it was somewhere in the building or
 
 8
 00:00:19.410 --> 00:00:20.763
-大概是在这栋楼的某个地方
+可能在大楼的某个地方。
 probably somewhere in the building.
 
 9
 00:00:20.763 --> 00:00:22.614
-你先从第一层开始
+你应该从一楼开始。
 You'd start on the first floor.
 
 10
 00:00:22.614 --> 00:00:24.260
-你只是做个线性搜索
+你只需要做一个基本的线性搜索。
 You just do basically a linear search.
 
 11
 00:00:24.260 --> 00:00:25.975
-从第一层开始，在那里寻找。
-Start on the first floor,
-look for it there.
+从一楼开始，在那里找。
+Start on the first floor, look for it there.
 
 12
 00:00:25.975 --> 00:00:28.766
-如果你找不到它把电梯到下一层
-And if you don't find it,
-take the elevator to the next floor,
+如果你找不到，就乘电梯到下一层，
+And if you don't find it, take the elevator to the next floor,
 
 13
 00:00:28.766 --> 00:00:29.615
-在那儿找
+在那里找找。
 look for it there.
 
 14
 00:00:29.615 --> 00:00:31.800
-如果你找不到它再一次重复一次
-If you don't find it,
-do that again and again and again.
+如果你找不到，那就一遍又一遍地做。
+If you don't find it, do that again and again and again.
 
 15
 00:00:31.800 --> 00:00:35.697
-最终你会到达建筑物的顶层
-And eventually you're gonna arrive
-at the top floor of the building.
+最终你会到达大楼的顶层。
+And eventually you're gonna arrive at the top floor of the building.
 
 16
 00:00:35.697 --> 00:00:39.932
-要么你要么找到要么不去但是没有别的地方可以去了
-And you either find it or you don't,
-but there's nowhere else to go.
+你要么找到它，要么找不到，但没有别的地方可去。
+And you either find it or you don't, but there's nowhere else to go.
 
 17
 00:00:39.932 --> 00:00:44.719
-所以从概念上来说，第一层是我们目前的范围，
-So conceptually the first floor is our
-current scope where the reference is,
+所以从概念上讲，一楼是我们目前的范围，
+So conceptually the first floor is our current scope where the reference is,
 
 18
 00:00:44.719 --> 00:00:47.087
-顶楼是全球范围
+顶层是全球范围。
 and the top floor is the global scope.
 
 19
 00:00:49.612 --> 00:00:53.795
->> 凯尔: 我们稍后会回到这个比喻。
-&gt;&gt; Kyle: We'll come back to this
-metaphor a later time in the course.
+&gt；&gt；Kyle：我们稍后会在课程中回到这个比喻。
+&gt;&gt; Kyle: We'll come back to this metaphor a later time in the course.
 
 20
 00:00:53.795 --> 00:00:56.832
-所以如果你想的话就把它放在你的脑袋里
-So just kinda keep that in your
-head if that works for you,
+所以如果这对你有用的话就把它留在你的脑子里，
+So just kinda keep that in your head if that works for you,
 
 21
 00:00:56.832 --> 00:00:59.000
-一次一个楼层的想法
+一次爬一层楼的想法。
 this idea of going one floor up at a time.
 
 22
 00:00:59.000 --> 00:01:02.173
-我们不直接跳到全球范围，我们只需要一次发言。
-We don't immediately jump to the global
-scope, we just go one floor at a time.
+我们不会立即跳到全球范围，我们只是一次走一层楼。
+We don't immediately jump to the global scope, we just go one floor at a time.

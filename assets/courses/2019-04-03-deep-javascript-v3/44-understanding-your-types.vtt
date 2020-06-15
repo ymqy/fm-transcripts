@@ -2,438 +2,380 @@ WEBVTT
 
 1
 00:00:00.090 --> 00:00:03.797
->> 凯尔 - 辛普森: 所以我们在胁迫的形式上结束了我们的整个讨论
-&gt;&gt; Kyle Simpson: So wrapping up our
-whole discussion on types in coercion,
+&gt；&gt；Kyle Simpson：那么结束我们关于强制类型的整个讨论，
+&gt;&gt; Kyle Simpson: So wrapping up our whole discussion on types in coercion,
 
 2
 00:00:03.797 --> 00:00:05.772
-我们正在包围这个单位
+我们正在结束这个单元。
 we're wrapping up this unit.
 
 3
 00:00:05.772 --> 00:00:08.699
-让我作最后的评论。
+让我做一些最后的观察。
 Let me make some final observations.
 
 4
 00:00:08.699 --> 00:00:13.599
-第一，事实是， JavaScript 有一个动态类型的系统，
-Number one, it is true, it is a fact that
-JavaScript has a dynamic type system,
+第一，这是真的，JavaScript有一个动态类型系统是一个事实，
+Number one, it is true, it is a fact that JavaScript has a dynamic type system,
 
 5
 00:00:13.599 --> 00:00:15.419
-它是一种类型的系统，它就是动态的。
+它是一个类型的系统，它只是动态的。
 it is a type system, it just is dynamic.
 
 6
 00:00:15.419 --> 00:00:18.719
-当人们说 JavaScript 没有类型的时候我真的很刚毛
-I've really bristle when people
-say JavaScript has no types,
+当人们说JavaScript没有类型时，我真的很生气，
+I've really bristle when people say JavaScript has no types,
 
 7
 00:00:18.719 --> 00:00:24.140
-它确实是，它是一种类型的系统，它不是 Java的类型的系统。
-it definitely does, it's a type system,
-it's just not Java's type system.
+它确实是，它是一个类型系统，只是不是Java的类型系统。
+it definitely does, it's a type system, it's just not Java's type system.
 
 8
 00:00:24.140 --> 00:00:26.800
-它使用各种形式的胁迫
-It uses various forms of coercion but
-they're for
+它使用各种形式的强制，但它们是
+It uses various forms of coercion but they're for
 
 9
 00:00:26.800 --> 00:00:31.100
-值类型转换而不是变量输入。
-value type conversions
-rather than variable typing.
+值类型转换而不是变量类型。
+value type conversions rather than variable typing.
 
 10
 00:00:31.100 --> 00:00:36.490
-我们也有可以被强迫的平等比较。
-And we also have equality
-comparisons that can be coerced.
+我们也有可以强迫的平等比较。
+And we also have equality comparisons that can be coerced.
 
 11
 00:00:38.670 --> 00:00:43.689
-对 JavaScript 类型系统的普遍响应本质上是避免的
-The prevailing response to JavaScript's
-type system is essentially avoid as
+对JavaScript类型系统的普遍响应本质上是避免的
+The prevailing response to JavaScript's type system is essentially avoid as
 
 12
 00:00:43.689 --> 00:00:49.344
-尽可能多的系统使用三重保护自己
-much of the system as possible and
-only use the triple to protect yourself so
+尽可能多的系统，并且只使用三元组来保护自己
+much of the system as possible and only use the triple to protect yourself so
 
 13
 00:00:49.344 --> 00:00:51.409
-你不用担心他们的事
+你不必担心他们。
 that you don't have to worry about them.
 
 14
 00:00:51.409 --> 00:00:56.450
-我已经说过好几次了，我不认为这是一个有效的策略。
-As I've said several times now, I don't
-think that that is an effective strategy.
+正如我已经多次说过的，我不认为这是一个有效的策略。
+As I've said several times now, I don't think that that is an effective strategy.
 
 15
 00:00:56.450 --> 00:01:01.475
-避免任何问题的部分问题，特别是整个单元的问题
-Part of the problem with avoidance of
-anything but especially an entire unit
+避免任何东西，特别是整个单位的部分问题
+Part of the problem with avoidance of anything but especially an entire unit
 
 16
 00:01:01.475 --> 00:01:06.983
-就像这种语言一般会有系统地使虫子长期存在
-of of the language like that, is that it
-tends to systematically perpetuate bugs.
+像这样的语言，就是它倾向于系统地使bug永久化。
+of of the language like that, is that it tends to systematically perpetuate bugs.
 
 17
 00:01:06.983 --> 00:01:10.871
-也就是说，不会出现一个错误，或者一个错误不会发生，
-That is to say it's not that one bug
-will happen or one bug won't happen but
+也就是说，并不是一个错误会发生或一个错误不会发生，而是
+That is to say it's not that one bug will happen or one bug won't happen but
 
 18
 00:01:10.871 --> 00:01:14.385
-这种心态说，我都不需要了解这个
-the mindset that says,
-I don't even need to understand this whole
+这种心态说，我甚至不需要了解整个
+the mindset that says, I don't even need to understand this whole
 
 19
 00:01:14.385 --> 00:01:18.400
-语言的一部分使虫子永久化这是一种系统的方法
-part of the language, perpetuates bugs,
-that's a systematic approach,
+语言的一部分，使bug永久化，这是一种系统化的方法，
+part of the language, perpetuates bugs, that's a systematic approach,
 
 20
 00:01:18.400 --> 00:01:22.478
-我也不会建议有系统地避免任何特殊的事情
-and I would never recommend a systematic
-avoidance of any particular thing,
+我永远不会建议有系统地避免任何特定的事情，
+and I would never recommend a systematic avoidance of any particular thing,
 
 21
 00:01:22.478 --> 00:01:24.900
-那就是避免对它的理解
-that is avoidance of
-even understanding it.
+这就是避免甚至理解它。
+that is avoidance of even understanding it.
 
 22
 00:01:29.114 --> 00:01:32.236
->> Kyle Simpson: 我只是相信你不能
-&gt;&gt; Kyle Simpson: What this boils down to
-is that I just believe that you can not
+&gt；&gt；Kyle Simpson：归根结底，我只是相信你不能
+&gt;&gt; Kyle Simpson: What this boils down to is that I just believe that you can not
 
 23
 00:01:32.236 --> 00:01:36.750
-写质量 JavaScript 程序而不了解您的类型。
-write quality JavaScript programs
-without understanding your types.
+在不了解您的类型的情况下编写高质量的JavaScript程序。
+write quality JavaScript programs without understanding your types.
 
 24
 00:01:36.750 --> 00:01:40.909
-您可以编写用于转换和运行但不符合该栏的 JavaScript 程序
-You can write JavaScript programs that
-shift and run but they don't meet that bar
+您可以编写转换和运行的JavaScript程序，但它们不符合这个标准
+You can write JavaScript programs that shift and run but they don't meet that bar
 
 25
 00:01:40.909 --> 00:01:44.310
-我认为我们应该在品质上努力除非你明白
-of what I think we should be striving for
-in quality unless you understand those
+我认为我们应该在质量上努力，除非你理解这些
+of what I think we should be striving for in quality unless you understand those
 
 26
 00:01:44.310 --> 00:01:48.039
-除非您的代码的阅读器能够理解这些类型。
-types and unless the readers of your
-code can understand those types.
+类型，除非代码的读者可以理解这些类型。
+types and unless the readers of your code can understand those types.
 
 27
 00:01:48.039 --> 00:01:49.200
-所以我们得做点什么
+所以我们得做点什么。
 So we have to do something.
 
 28
 00:01:49.200 --> 00:01:52.049
-我们必须改变我们的编码方式
-We've got to change the way
-we structure our code.
+我们必须改变我们构建代码的方式。
+We've got to change the way we structure our code.
 
 29
 00:01:52.049 --> 00:01:55.140
-我们要用这些机制来
-We've got to use these mechanisms
-that are available to us to
+我们必须使用这些可用的机制来
+We've got to use these mechanisms that are available to us to
 
 30
 00:01:55.140 --> 00:01:57.270
-开始向那些打字的人发出信号
+开始发信号给那些打字的东西。
 start signaling those typing things.
 
 31
 00:01:57.270 --> 00:02:00.840
-当然你可以去
+当然，你可以去
 And of course, you could go
 
 32
 00:02:00.840 --> 00:02:05.609
-使用整个静态系统 ( 如 typescript 或流) 的所有方法。
-all the way to using a whole static type
-system, like a typescript or a flow.
+一直到使用一个完整的静态类型系统，比如打字稿或流。
+all the way to using a whole static type system, like a typescript or a flow.
 
 33
 00:02:05.609 --> 00:02:09.823
-如果这是你的答案我不会揍你的对吧
-And if that's your answer,
-I'm not gonna beat you up, right?
+如果这就是你的答案，我不会打你的，对吧？
+And if that's your answer, I'm not gonna beat you up, right?
 
 34
 00:02:09.823 --> 00:02:12.240
-就像这样，这对很多球队来说都是有道理的。
-Like that's okay, and
-that makes sense for a lot of teams.
+好像这没什么，这对很多团队来说都是有意义的。
+Like that's okay, and that makes sense for a lot of teams.
 
 35
 00:02:12.240 --> 00:02:15.039
-但我的确认为
-But I do think that
-there's a way to embrace
+但我确实认为有一种方法可以拥抱
+But I do think that there's a way to embrace
 
 36
 00:02:15.039 --> 00:02:18.889
-因为我觉得这也几乎是个回避问题
-that because I really think that's almost
-an avoidance of the issue as well.
+那是因为我真的认为这也是对这个问题的一种回避。
+that because I really think that's almost an avoidance of the issue as well.
 
 37
 00:02:18.889 --> 00:02:20.800
-这是一种不同的回避方式。
+这是一种不同的回避。
 It's a different kind of avoidance.
 
 38
 00:02:20.800 --> 00:02:23.509
-你基本上是说 JavaScript 系统是无可救药的
-You're basically saying
-JavaScript system is hopeless,
+你基本上是在说JavaScript系统是没有希望的，
+You're basically saying JavaScript system is hopeless,
 
 39
 00:02:23.509 --> 00:02:25.270
-所以我们要建立一个全新的系统
+所以让我们建立一个全新的系统。
 so let's build a whole new system.
 
 40
 00:02:26.770 --> 00:02:29.780
-那是另一种逃避，我不确定它是否健康。
-That's a different kind of avoidance,
-and I'm not sure that it's healthy.
+这是一种不同的回避，我不确定它是否健康。
+That's a different kind of avoidance, and I'm not sure that it's healthy.
 
 41
 00:02:29.780 --> 00:02:34.780
-所以， [COUGH]，我觉得 JavaScript 的类型不低，我觉得
-So, [COUGH], I don't think JavaScript's
-types are inferior, I think
+所以，[咳嗽]，我不认为JavaScript的类型是低等的，我认为
+So, [COUGH], I don't think JavaScript's types are inferior, I think
 
 42
 00:02:34.780 --> 00:02:40.409
-他们可以被学习和利用我不认为这会更难
-they can be learned and leveraged, and I
-don't think it's that much more difficult.
+他们可以学习和杠杆，我不认为这是很难的。
+they can be learned and leveraged, and I don't think it's that much more difficult.
 
 43
 00:02:40.409 --> 00:02:43.689
-其实我觉得学习这个系统是比较困难的
-In fact, I think it's less difficult for
-you to learn this system
+事实上，我认为学习这个系统对你来说并不难
+In fact, I think it's less difficult for you to learn this system
 
 44
 00:02:43.689 --> 00:02:48.539
-学习的方式要比学习静态系统的所有复杂性都要正确。
-taught properly than to go learn all
-the complexities of a static type system.
+正确的教导比去学习静态类型系统的所有复杂性更好。
+taught properly than to go learn all the complexities of a static type system.
 
 45
 00:02:48.539 --> 00:02:50.349
-我的意思是想都是老练的
-I mean like thinking about
-all the sophistication and
+我的意思是想着所有的复杂和
+I mean like thinking about all the sophistication and
 
 46
 00:02:50.349 --> 00:02:54.079
-我认为这是一项非常艰巨的任务。
-typescript, I would consider
-that to be a very daunting task.
+打字，我会认为这是一项非常艰巨的任务。
+typescript, I would consider that to be a very daunting task.
 
 47
 00:02:54.079 --> 00:02:57.490
-我想我想在这里讨论的是简单多的
-And I think what I'm trying to
-discuss here is a much simpler and
+我想我在这里要讨论的是一个更简单的
+And I think what I'm trying to discuss here is a much simpler and
 
 48
 00:02:57.490 --> 00:02:59.060
-更小的东西要学
+要学的小事。
 smaller thing to learn.
 
 49
 00:03:00.479 --> 00:03:06.090
-所以我的观点是，最好的方法就是拥抱 JavaScript 的类型
-So my claim is that really the better
-approach is to embrace JavaScript's types
+所以我的主张是，真正更好的方法是接受JavaScript的类型
+So my claim is that really the better approach is to embrace JavaScript's types
 
 50
 00:03:06.090 --> 00:03:09.169
-并采用与该颗粒配合的编码方式，
-and adopt the coding style
-which goes with that grain,
+并采用与该纹理相适应的编码风格，
+and adopt the coding style which goes with that grain,
 
 51
 00:03:10.210 --> 00:03:11.610
-让那些事情变得很明显
+这让这些事情变得显而易见。
 that makes those things obvious.
 
 52
 00:03:12.759 --> 00:03:14.879
 因此，您将获得更好的代码。
-You are going to have
-better code as a result.
+You are going to have better code as a result.
 
 53
 00:03:14.879 --> 00:03:16.400
-通过思考这些事情
+通过思考这些事情，
 By thinking about those things,
 
 54
 00:03:16.400 --> 00:03:21.270
-你将会更好地构造你的代码，这几乎是不太理想的。
-you are going to structure your code
-better, that's almost undebatable.
+你将更好地组织你的代码，这几乎是无可争议的。
+you are going to structure your code better, that's almost undebatable.
 
 55
 00:03:21.270 --> 00:03:23.909
-但如果你仔细想想你的代码你会想到你的类型
-But if you think about your code better
-and you think about your types and
+但是如果你更好地考虑你的代码，你考虑你的类型和
+But if you think about your code better and you think about your types and
 
 56
 00:03:23.909 --> 00:03:27.740
-你把事情设计好让你明白他们在做什么
-you design things so that you understand
-what they're doing, you'll end up
+你设计东西，这样你就能理解他们在做什么，你最终会
+you design things so that you understand what they're doing, you'll end up
 
 57
 00:03:27.740 --> 00:03:30.949
-设计更好的代码，并且代码更强大，它会减少错误。
-designing better code, and that code will
-be more robust, it'll have fewer bugs.
+设计更好的代码，代码就会更健壮，错误就会更少。
+designing better code, and that code will be more robust, it'll have fewer bugs.
 
 58
 00:03:30.949 --> 00:03:33.990
-如果你不跟我的人平等
-And that's if you do nothing
-with the double equals,
+那就是如果你对双等号不做任何事情，
+And that's if you do nothing with the double equals,
 
 59
 00:03:33.990 --> 00:03:35.819
-想想你的类型吧
+想想你喜欢的类型，好吗？
 just think about your types, right?
 
 60
 00:03:35.819 --> 00:03:38.120
-你甚至不需要用双重平等的方式来获得这一利益。
-You don't even have to use the double
-equals to get that benefit.
+你甚至不需要使用双等号来获得这种好处。
+You don't even have to use the double equals to get that benefit.
 
 61
 00:03:39.199 --> 00:03:42.081
-所以如果你没有听到关于我的任何消息至少在这个单位
-So if you hear nothing else about me,
-at least from me on this unit,
+所以如果你没有听到任何关于我的消息，至少我在这个单位里，
+So if you hear nothing else about me, at least from me on this unit,
 
 62
 00:03:42.081 --> 00:03:43.729
-至少听听这个
+至少听一下。
 at least hear that.
 
 63
 00:03:43.729 --> 00:03:46.110
-你应该在你的代码里努力争取
-You should be striving for
-that in your code.
+你应该在你的代码中努力做到这一点。
+You should be striving for that in your code.
 
 64
 00:03:46.110 --> 00:03:50.509
 我认为您可以选择使用其他方法，并且
-I think you can optionally choose
-to use other approaches, and
+I think you can optionally choose to use other approaches, and
 
 65
 00:03:50.509 --> 00:03:52.960
-也许我是其中之一
+也许Typl是几个可以
 maybe Typl is one of several that could
 
 66
 00:03:52.960 --> 00:03:57.699
-开始存在于生态系统中除了这些极端之外还有其他选择
-begin to exist in the ecosystem that give
-other options besides these extremes.
+开始存在于生态系统中，除了这些极端之外，还提供了其他选择。
+begin to exist in the ecosystem that give other options besides these extremes.
 
 67
 00:03:57.699 --> 00:04:02.719
-所以希望能打开一些
+所以希望这能打开一些
 So hopefully that is gonna open some
 
 68
 00:04:02.719 --> 00:04:06.310
-分析的不同途径其实我只要求你回去
-different avenues of analysis, really
-that's all I ask, is that you go back and
+不同的分析途径，真的，这就是我所要求的，就是你回去
+different avenues of analysis, really that's all I ask, is that you go back and
 
 69
 00:04:06.310 --> 00:04:10.629
-想想那些事情，测试我所做的断言，以及
-think about those things, test out
-the assertions that I'm making, and
+考虑一下这些事情，测试一下我所做的断言，然后
+think about those things, test out the assertions that I'm making, and
 
 70
 00:04:10.629 --> 00:04:13.050
-看看他们是否对你和你的密码有意义
-see if they make sense for
-you and for your code.
+看看它们对您和您的代码是否有意义。
+see if they make sense for you and for your code.
 
 71
 00:04:13.050 --> 00:04:18.490
-但我很有信心你的代码质量会受到影响
-But I'm quite confident that your
-code quality will suffer if you
+但是我很有信心你的代码质量会受到影响
+But I'm quite confident that your code quality will suffer if you
 
 72
 00:04:18.490 --> 00:04:21.660
-我不需要知道类型对吧
-persist in the I don't need to know types,
-right?
+坚持我不需要知道类型，对吗？
+persist in the I don't need to know types, right?
 
 73
 00:04:21.660 --> 00:04:23.019
-我最需要的是三重平等
+三倍等于是我所需要的。
 Triple equals is all I ever need.
 
 74
 00:04:24.079 --> 00:04:26.120
-我觉得这不是更好的代码
+我只是不认为这是更好的代码。
 I just don't think that's better code.
 
 75
 00:04:26.120 --> 00:04:28.459
-所以希望我给你点吃的
-So, hopefully I've given you some food for
-thought.
+所以，希望我给了你一些思考的食物。
+So, hopefully I've given you some food for thought.
 
 76
 00:04:28.459 --> 00:04:32.909
-这就是我们课程的类型和胁迫的单位。
-That is it for the types and
-coercion unit of our course.
+这就是我们课程的类型和强制单位。
+That is it for the types and coercion unit of our course.

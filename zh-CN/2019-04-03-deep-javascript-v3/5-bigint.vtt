@@ -2,81 +2,70 @@ WEBVTT
 
 1
 00:00:00.240 --> 00:00:02.330
->> Kyle Simpson: 记住 BigInts，它们是基本类型。
-&gt;&gt; Kyle Simpson: Remember BigInts,
-they're a primitive type.
+&gt；&gt；Kyle Simpson：记住BigInt，它们是一个原始类型。
+&gt;&gt; Kyle Simpson: Remember BigInts, they're a primitive type.
 
 2
 00:00:02.330 --> 00:00:07.389
-因此，当您使用文字 ( 例如，第 2 行 ) 指定 BigInt 时，
-So when you assign a BigInt using
-a literal, for example like line 2,
+因此，当您使用文字赋值BigInt时，例如第2行，
+So when you assign a BigInt using a literal, for example like line 2,
 
 3
 00:00:07.389 --> 00:00:12.470
-42 号不光 42号但在这个空间里有 42 个
-42n is not just the number 42, but it's
-42 within this space where it can grow
+42N不仅仅是数字42，而是在这个空间中可以增长的42
+42n is not just the number 42, but it's 42 within this space where it can grow
 
 4
 00:00:12.470 --> 00:00:16.670
-本质上是无穷大的，直到系统上的内存空间。
-essentially infinitely large, up to
-the memory space on the system, of course.
+本质上是无限大的，当然，直到系统上的内存空间。
+essentially infinitely large, up to the memory space on the system, of course.
 
 5
 00:00:16.670 --> 00:00:19.850
 它本质上可以有一个无限大的整数。
-It can essentially have an integer
-that grows infinitely large.
+It can essentially have an integer that grows infinitely large.
 
 6
 00:00:19.850 --> 00:00:21.329
-那是另外一个分区
+那是一个单独的分区
 That's a separate partition,
 
 7
 00:00:21.329 --> 00:00:25.449
-它不是一个 IEEE 号码，就像所有 JavaScript中的其他数字。
-it's not an IEEE number like all
-the other numbers in JavaScript.
+它不是像JavaScript中所有其他数字一样的IEEE数字。
+it's not an IEEE number like all the other numbers in JavaScript.
 
 8
 00:00:25.449 --> 00:00:28.429
-你必须非常谨慎因为 BigInts 和常规号码
-And you have to be very careful,
-because BigInts and regular numbers,
+而且你必须非常小心，因为BigInt和常规数字，
+And you have to be very careful, because BigInts and regular numbers,
 
 9
 00:00:28.429 --> 00:00:32.020
-他们的混合和配合也不太好
+它们并不是真的混合和匹配得很好。
 they don't really mix and match that well.
 
 10
 00:00:32.020 --> 00:00:34.609
-他们完全是分开的如果你愿意的话
-They're totally separated things,
-if you will.
+它们是完全分开的东西，如果你愿意的话。
+They're totally separated things, if you will.
 
 11
 00:00:34.609 --> 00:00:37.890
-如果我们有个东西看起来很有用的话
-And so it's gonna be really useful for
-us if we have a thing that looks
+所以如果我们有一样东西看起来
+And so it's gonna be really useful for us if we have a thing that looks
 
 12
 00:00:37.890 --> 00:00:41.850
-就像一个数字要确定一个数字，还是一个 BigInt?
-like a number to determine is
-that a number, or is it a BigInt?
+像一个数字来确定它是一个数字，还是一个BigInt？
+like a number to determine is that a number, or is it a BigInt?
 
 13
 00:00:41.850 --> 00:00:44.024
-这就是为什么打字机至少现在
-Which is why typeof,
-at least at the moment,
+这就是为什么TypeOf，至少现在，
+Which is why typeof, at least at the moment,
 
 14
 00:00:44.024 --> 00:00:46.149
-将返回我们的字符串 BigInt。
+将返回字符串BigInt。
 is slated to return us the string, BigInt.

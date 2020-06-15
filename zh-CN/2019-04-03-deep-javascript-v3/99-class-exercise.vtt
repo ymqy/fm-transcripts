@@ -2,44 +2,38 @@ WEBVTT
 
 1
 00:00:00.050 --> 00:00:03.819
->> 凯尔 - 辛普森: 在我们最后的行动中，我们会看到
-&gt;&gt; Kyle Simpson: In our final exercise
-of this unit, we're gonna look at and
+&gt；&gt；Kyle Simpson：在本单元的最后一次练习中，我们将查看和
+&gt;&gt; Kyle Simpson: In our final exercise of this unit, we're gonna look at and
 
 2
 00:00:03.819 --> 00:00:05.700
-使用类关键字的实践。
+使用class关键字进行练习。
 practice with the class keyword.
 
 3
 00:00:06.809 --> 00:00:15.000
-您将将名称空间对象重构为使用类系统。
-You're going to be refactoring a namespace
-object into using a class system.
+您将把名称空间对象重构为使用类系统。
+You're going to be refactoring a namespace object into using a class system.
 
 4
 00:00:15.000 --> 00:00:18.403
-所以如果您有一个具有此感知编码的名称空间模式，并且
-So if you had a namespace pattern
-with the this aware coding and
+因此，如果您有一个带有this aware编码的命名空间模式，并且
+So if you had a namespace pattern with the this aware coding and
 
 5
 00:00:18.403 --> 00:00:22.332
 您希望改为使用类语法来尝试组织该代码，
-you wanted to instead use the class
-syntax to try to organize that code,
+you wanted to instead use the class syntax to try to organize that code,
 
 6
 00:00:22.332 --> 00:00:26.609
-然后我们就会把它重构成这样的语法
-then we're gonna be refactoring
-it into that class syntax.
+然后我们将把它重构成类语法。
+then we're gonna be refactoring it into that class syntax.
 
 7
 00:00:26.609 --> 00:00:31.260
-特别是这里，我们要利用这个级别的优势。
-In particular, here, we're gonna
-take advantage of the class extends.
+特别是在这里，我们将利用类扩展。
+In particular, here, we're gonna take advantage of the class extends.
 
 8
 00:00:31.260 --> 00:00:33.829
@@ -48,239 +42,205 @@ So there are a couple of functions
 
 9
 00:00:33.829 --> 00:00:37.780
-在此名称空间的定义中不存在此感知。
-within the definition of this
-namespace that are not this aware.
+在此命名空间的定义中不知道这一点。
+within the definition of this namespace that are not this aware.
 
 10
 00:00:37.780 --> 00:00:41.689
-他们没有理由特别说明
-And there's no reason for
-them to be specifically on
+他们没有理由特别关注
+And there's no reason for them to be specifically on
 
 11
 00:00:41.689 --> 00:00:46.219
-我们称之为研讨会的特定对象
-this particular object that
-we're calling workshop.
+这个我们称之为工作坊的特殊物体。
+this particular object that we're calling workshop.
 
 12
 00:00:46.219 --> 00:00:47.850
-他们基本上是帮手。
+他们本质上是帮手。
 They are essentially helpers.
 
 13
 00:00:47.850 --> 00:00:50.490
-所以我们要做的是有一个叫帮手的家长班。
-So what we're gonna do is have
-a parent class called helpers.
+所以我们要做的是有一个名为helpers的父类。
+So what we're gonna do is have a parent class called helpers.
 
 14
 00:00:50.490 --> 00:00:54.088
-然后我们就会有一个孩子类来扩展帮手
-And then, we're gonna have a child
-class that extends helpers, and
+然后，我们将有一个扩展帮助器的子类，并且
+And then, we're gonna have a child class that extends helpers, and
 
 15
 00:00:54.088 --> 00:00:57.500
-那个孩子的课是被称为工作坊的
-that child class is the one that's
-gonna be called workshop, and
+那个儿童班就是那个将被称为工作坊的班级
+that child class is the one that's gonna be called workshop, and
 
 16
 00:00:57.500 --> 00:00:59.192
-它会继承这些帮手
+它将继承这些帮助者。
 it will inherit those helpers.
 
 17
 00:00:59.192 --> 00:01:00.585
-那么换句话说，
+所以换句话说，
 So in other words,
 
 18
 00:01:00.585 --> 00:01:06.010
-它将通过继承来构成对这些帮手的访问权。
-it will compose through inheritance
-to have access to those helpers.
+它将通过继承组成以访问这些帮助者。
+it will compose through inheritance to have access to those helpers.
 
 19
 00:01:06.010 --> 00:01:09.810
-那些不需要装订的人，因为他们不知道这一点。
-And those won't need to be this bound,
-because they aren't this aware.
+而那些人不需要被如此束缚，因为他们并没有意识到这一点。
+And those won't need to be this bound, because they aren't this aware.
 
 20
 00:01:09.810 --> 00:01:14.460
-如果您查看 EX JS，您将注意到您有一个 namespaced 对象。
-If you look at the EX JS, you'll notice
-that you have a namespaced object.
+如果您查看ex JS，您会注意到您有一个名称空间对象。
+If you look at the EX JS, you'll notice that you have a namespaced object.
 
 21
 00:01:14.460 --> 00:01:18.269
-所有方法都在前面引用了所有这些点引用。
-All the methods with all the this
-dot references in front of them.
+所有方法前面都有这个点引用。
+All the methods with all the this dot references in front of them.
 
 22
 00:01:18.269 --> 00:01:22.305
-还有一些地方你有一些不知道的功能，所以
-And you do have some places where you have
-functions that are not this aware, so
+而且你确实有一些地方你的函数并没有意识到这一点，所以
+And you do have some places where you have functions that are not this aware, so
 
 23
 00:01:22.305 --> 00:01:23.415
-他们没有束缚
+他们没有被捆绑。
 they're not bound.
 
 24
 00:01:23.415 --> 00:01:25.915
-但你还有其他的地方
-But you have other places
-where they are bound, and
+但是你还有其他的地方可以约束他们，而且
+But you have other places where they are bound, and
 
 25
 00:01:25.915 --> 00:01:30.620
-您需要确保这些人员在您连接类系统时仍在工作。
-you need to make sure that those are still
-working once you wire up a class system.
+你需要确保一旦你连接了一个类系统，这些仍然可以工作。
+you need to make sure that those are still working once you wire up a class system.
 
 26
 00:01:30.620 --> 00:01:34.329
-所以这里的想法不是把所有这些东西都定义在一个物体上
-So the idea here is instead of defining
-all these things on an object,
+所以这里的想法是不是在一个对象上定义所有这些东西，
+So the idea here is instead of defining all these things on an object,
 
 27
 00:01:34.329 --> 00:01:37.979
-你会把这些都定义为一类的方法
-you're gonna be defining all of
-these as methods in a class, and
+您将在一个类中将所有这些定义为方法，并且
+you're gonna be defining all of these as methods in a class, and
 
 28
 00:01:37.979 --> 00:01:41.299
-然后将该类实例化并使用它。
-then instantiating that class and
-using it.
+然后实例化该类并使用它。
+then instantiating that class and using it.
 
 29
 00:01:41.299 --> 00:01:47.783
-这就是运动在课堂上的实质。
-So that's the substance
-of the exercise on class.
+这就是课堂练习的内容。
+So that's the substance of the exercise on class.
 
 30
 00:01:47.783 --> 00:01:50.960
-我们会在几分钟后再谈这个方案
-We'll be back in a few minutes
-to talk through that solution.
+我们将在几分钟后回来讨论该解决方案。
+We'll be back in a few minutes to talk through that solution.
 
 31
 00:01:50.960 --> 00:01:52.572
-一如既往如果你被困住了
+一如既往，如果你卡住了
 As always, if you get stuck and
 
 32
 00:01:52.572 --> 00:01:56.299
-您需要提示，您可以在前点固定文件中检出该解决方案。
-you need a hint, you can check out
-the solution in the ex dot fixed file.
+你需要一个提示，你可以检查出解决方案在EX点固定文件。
+you need a hint, you can check out the solution in the ex dot fixed file.
 
 33
 00:01:57.719 --> 00:02:01.212
->> 扬声器 2: 所以它听起来像是要分解到这个感知物体上，
-&gt;&gt; Speaker 2: So it sounds like for
-breaking down into this aware objects,
+&gt；&gt；扬声器2：所以听起来像是要分解成这些感知对象，
+&gt;&gt; Speaker 2: So it sounds like for breaking down into this aware objects,
 
 34
 00:02:01.212 --> 00:02:04.224
-原因在于其大小和可读性，以及
-the rationale is less about size and
-readability and
+基本原理不是关于大小和可读性，而是
+the rationale is less about size and readability and
 
 35
 00:02:04.224 --> 00:02:08.552
-关于你想要每个人的分离的问题
-more about the separation of concerns
-where you would want each, kind of-
+更多关于分离关注点的地方，你会想要每一个，有点-
+more about the separation of concerns where you would want each, kind of-
 
 36
 00:02:08.552 --> 00:02:09.213
->> 凯尔 - 辛普森: 是的。
+&gt；&gt；Kyle Simpson：是的。
 &gt;&gt; Kyle Simpson: Yes.
 
 37
 00:02:09.213 --> 00:02:11.900
->> 演讲者 2: 好的，酷。 你回到引导逻辑
-&gt;&gt; Speaker 2: Okay, cool.
-You going back to the guiding logic
+&gt；&gt；扬声器2：好的，酷。你回到指导逻辑
+&gt;&gt; Speaker 2: Okay, cool. You going back to the guiding logic
 
 38
 00:02:11.900 --> 00:02:15.919
-其中一个对象开始和结束此组合。
-of the structuring, where an object
-begins and ends for this composition.
+结构的，对象开始和结束的位置。
+of the structuring, where an object begins and ends for this composition.
 
 39
 00:02:15.919 --> 00:02:16.688
->> 凯尔 - 辛普森: 是的。 >> 演讲者 2: 该代表团。
-&gt;&gt; Kyle Simpson: Yeah.
-&gt;&gt; Speaker 2: This delegation.
+&gt；&gt；Kyle Simpson：是的。&gt；&gt；发言人2：这个代表团。
+&gt;&gt; Kyle Simpson: Yeah. &gt;&gt; Speaker 2: This delegation.
 
 40
 00:02:17.719 --> 00:02:21.689
->> 凯尔 - 辛普森: 我认为这完全是你选择还是选择
-&gt;&gt; Kyle Simpson: I think that's true
-entirely separate of whether you choose or
+&gt；&gt；Kyle Simpson：我认为这是真实的，完全独立于你是选择还是
+&gt;&gt; Kyle Simpson: I think that's true entirely separate of whether you choose or
 
 41
 00:02:21.689 --> 00:02:23.889
-选择类或选择模块或
-you choose classes or
-you choose modules or
+您可以选择类，或者选择模块，或者
+you choose classes or you choose modules or
 
 42
 00:02:23.889 --> 00:02:26.289
-选择其他组织模式。
-you choose some other
-organization pattern.
+你可以选择其他的组织模式。
+you choose some other organization pattern.
 
 43
 00:02:26.289 --> 00:02:30.150
-我觉得你应该问问
-I think you should be asking
-what logically fits together and
+我认为你应该问什么在逻辑上可以结合在一起
+I think you should be asking what logically fits together and
 
 44
 00:02:30.150 --> 00:02:32.352
-都是最小的碎片
+试着拥有最小的碎片。
 try to have the smallest pieces.
 
 45
 00:02:32.352 --> 00:02:39.515
-我的意思是，我不一定总是喜欢单一的责任原则，
-I mean, I don't necessarily always go to
-like the single responsibility principle,
+我的意思是，我不一定总是喜欢单一责任原则，
+I mean, I don't necessarily always go to like the single responsibility principle,
 
 46
 00:02:39.515 --> 00:02:44.139
-但那是一个合理的地方对吧
-but that is a reasonable
-place to head towards, right?
+但这是一个合理的方向，对吗？
+but that is a reasonable place to head towards, right?
 
 47
 00:02:44.139 --> 00:02:51.979
-把它当作一个指导原则是合理的。
-It's reasonable to think about
-that as like a guiding principle.
+把这看作是一个指导原则是合理的。
+It's reasonable to think about that as like a guiding principle.
 
 48
 00:02:51.979 --> 00:02:54.759
-如果这件事在做些不同的事情也许应该
-That if this thing is doing a bunch
-of different stuff, maybe that should
+如果这个东西在做一堆不同的事情，也许那应该
+That if this thing is doing a bunch of different stuff, maybe that should
 
 49
 00:02:54.759 --> 00:02:57.289
-只是做了几件不同的事情
-just be several different things
-doing those different pieces.
+只是做几件不同的事情，做那些不同的作品。
+just be several different things doing those different pieces.

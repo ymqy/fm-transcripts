@@ -2,45 +2,38 @@ WEBVTT
 
 1
 00:00:00.310 --> 00:00:03.459
->> Kyle Simpson: 我认为在 TypeScript 中被低估的一件事是
-&gt;&gt; Kyle Simpson: One thing that I think
-is undervalued within TypeScript this is
+&gt；&gt；Kyle Simpson：有一件事我认为在打字稿中被低估了，这是
+&gt;&gt; Kyle Simpson: One thing that I think is undervalued within TypeScript this is
 
 2
 00:00:03.459 --> 00:00:06.879
-其实我的很多虫子都是从那里来的
-actually where many more
-of my bugs have come from.
+实际上我更多的虫子是从哪里来的。
+actually where many more of my bugs have come from.
 
 3
 00:00:06.879 --> 00:00:10.970
-除了能让静态打字的信息
-It's that in addition to being able
-to a static typing information about
+除了能够静态输入信息之外
+It's that in addition to being able to a static typing information about
 
 4
 00:00:10.970 --> 00:00:15.910
-变量赋值，也可以告诉我们某些操作将无效。
-variable assignments, it can also tell us
-that certain operations would be invalid.
+变量赋值，它还可以告诉我们某些操作将是无效的。
+variable assignments, it can also tell us that certain operations would be invalid.
 
 5
 00:00:15.910 --> 00:00:20.300
-在此特定情况下，它表示您不能从数字中减去字符串。
-In this particular case, it's saying you
-can't subtract a string from a number.
+在这个特殊的例子中，它说你不能从一个数字中减去一个字符串。
+In this particular case, it's saying you can't subtract a string from a number.
 
 6
 00:00:21.679 --> 00:00:25.719
-因为这种偏好是说不允许这种胁迫，
-Because that particular preference is
-saying don't allow that coercion, and
+因为那个特殊的偏好是说不允许强迫，并且
+Because that particular preference is saying don't allow that coercion, and
 
 7
 00:00:25.719 --> 00:00:28.789
-在这件案子里对我来说是个有用的帮助
-in this particular case,
-that would be a really useful help for me.
+在这个特殊的情况下，这对我来说是一个非常有用的帮助。
+in this particular case, that would be a really useful help for me.
 
 8
 00:00:28.789 --> 00:00:31.030
@@ -49,87 +42,75 @@ I would really like for
 
 9
 00:00:31.030 --> 00:00:34.700
-告诉我不要试图从数字中减去字符串
-a linter to tell me, don't try to
-subtract a string from a number.
+一个Linter告诉我，不要试图从一个数字中减去一个字符串。
+a linter to tell me, don't try to subtract a string from a number.
 
 10
 00:00:34.700 --> 00:00:37.250
-我最喜欢的是一个让我有这种感觉的
-What I'd really like is a linter
-that let me have that, but
+我真正想要的是一件让我拥有它的短裤，但是
+What I'd really like is a linter that let me have that, but
 
 11
 00:00:37.250 --> 00:00:41.469
-不允许我对所有静态类型的赋值都有任何抱怨。
-not let me have all the complaints
-about all my static type assignments.
+不让我对我所有的静态类型作业有所有的抱怨。
+not let me have all the complaints about all my static type assignments.
 
 12
 00:00:41.469 --> 00:00:44.859
-那是我的选择
+那是我的偏好。
 That would be my preference.
 
 13
 00:00:44.859 --> 00:00:48.039
-但我认为这一问题被低估了。
-But this is, I think,
-an undervalued part of what they do.
+但我认为，这是他们所做的事情中被低估的一部分。
+But this is, I think, an undervalued part of what they do.
 
 14
 00:00:48.039 --> 00:00:50.979
-他们实际上允许我们检查那些
-Is that they are actually allowing
-us to check the operations that
+他们实际上允许我们检查操作
+Is that they are actually allowing us to check the operations that
 
 15
 00:00:50.979 --> 00:00:53.384
-我们在做我们大部分的商业逻辑
-we're doing where most of
-our business logic is, and
+我们正在做我们大部分业务逻辑所在的地方，并且
+we're doing where most of our business logic is, and
 
 16
 00:00:53.384 --> 00:00:55.478
 确保这些操作有效。
-making sure that those
-operations are valid.
+making sure that those operations are valid.
 
 17
 00:00:57.030 --> 00:01:01.829
-如果 TypeScript 有一些机制，您可以允许
-It would be nice if TypeScript would have
-some mechanism by which you could allow
+如果TypeScript有一些机制，您可以允许这样做，那就太好了
+It would be nice if TypeScript would have some mechanism by which you could allow
 
 18
 00:01:01.829 --> 00:01:03.179
-就会有更多的压力发生
+更多的胁迫会发生。
 some more coercion to occur.
 
 19
 00:01:03.179 --> 00:01:06.584
-因为有很多地方，我已经说过了，
-Because there are plenty of places,
-as I've already made the case,
+因为有很多地方，正如我已经提出的那样，
+Because there are plenty of places, as I've already made the case,
 
 20
 00:01:06.584 --> 00:01:10.474
-我想在那里做高压和其他地方我想避免的地方
-where I'd like to be able to do coercion
-and other Places I'd like to avoid it.
+在那里，我希望能够进行强制和其他地方，我希望避免它。
+where I'd like to be able to do coercion and other Places I'd like to avoid it.
 
 21
 00:01:10.474 --> 00:01:14.085
-在我的研究中，我认为 Typescript 是什么都没有。
-It appears to me in my research that
-Typescript is kind of all or nothing.
+在我看来，在我的研究中，打字稿是一种要么全部要么什么都没有。
+It appears to me in my research that Typescript is kind of all or nothing.
 
 22
 00:01:14.085 --> 00:01:17.765
-你选择进入它或者你不选择它
+你要么选择加入，要么不选择。
 You opt into it or you don't opt into it.
 
 23
 00:01:17.765 --> 00:01:20.396
-我更希望能有更多的裸体和配置
-I'd prefer there to be more nuance and
-configuration.
+我更喜欢有更多的细微差别和配置。
+I'd prefer there to be more nuance and configuration.

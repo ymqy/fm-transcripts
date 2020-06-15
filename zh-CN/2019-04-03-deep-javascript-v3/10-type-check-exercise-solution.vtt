@@ -2,827 +2,730 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:03.515
->> 凯尔 - 辛普森: 希望你能对这项运动有相当的感觉
-&gt;&gt; Kyle Simpson: So hopefully you
-feel pretty good about that exercise,
+&gt；&gt；Kyle Simpson：希望你对这个练习感觉很好，
+&gt;&gt; Kyle Simpson: So hopefully you feel pretty good about that exercise,
 
 2
 00:00:03.515 --> 00:00:05.174
-希望是有道理的
+希望这是有意义的。
 hopefully it made sense.
 
 3
 00:00:05.174 --> 00:00:09.897
-让我们深入了解一下我们的定义是多填充。
-Let's dive in and try our hand at
-defining this object is polyfill.
+让我们潜入并尝试我们的手来定义这个对象是polyfill。
+Let's dive in and try our hand at defining this object is polyfill.
 
 4
 00:00:09.897 --> 00:00:11.449
-第一个，记住，
+所以第一，记住
 So number one, remember,
 
 5
 00:00:11.449 --> 00:00:15.973
-我们需要一个 if 语句，以检查是否未定义 Object.is 。
-we want an if statement that checks to
-see that Object.is has not been defined.
+我们需要一个if语句来检查Object.is是否尚未定义。
+we want an if statement that checks to see that Object.is has not been defined.
 
 6
 00:00:15.973 --> 00:00:20.471
-现在我要用这个简短的速记
-Now, I'm gonna go ahead and
-use this little shorthand here,
+现在，我将继续使用这个小速记，
+Now, I'm gonna go ahead and use this little shorthand here,
 
 7
 00:00:20.471 --> 00:00:25.678
-这一布尔胁迫我就会说反对的是反对
-this Boolean coercion, I'm gonna
-say that the negate of Object.is.
+这个布尔强制，我要说Object.is的否定。
+this Boolean coercion, I'm gonna say that the negate of Object.is.
 
 8
 00:00:25.678 --> 00:00:28.213
-因此，如果已经定义了 Object.is ，
+因此，如果定义了Object.is，
 So if Object.is has been defined,
 
 9
 00:00:28.213 --> 00:00:32.106
-它被定义的唯一方法就是发挥作用
-the only way that it ever gets
-defined is as a function.
+定义它的唯一方式是作为函数。
+the only way that it ever gets defined is as a function.
 
 10
 00:00:32.106 --> 00:00:35.933
-所以它绝对是在你的名单上，如果我否定它，
-So it's definitely on the truthy list,
-and if I negate it, and
+所以它肯定在真实的清单上，如果我否定它，并且
+So it's definitely on the truthy list, and if I negate it, and
 
 11
 00:00:35.933 --> 00:00:39.055
-如果不在那里肯定是没有定义的
-if it's not there,
-it's definitely undefined.
+如果它不在那里，它肯定是未定义的。
+if it's not there, it's definitely undefined.
 
 12
 00:00:39.055 --> 00:00:43.670
-所以对我来说，这就是我在布尔胁迫下可以接受的地方之一
-So to me, this is one of those places
-where I'm okay with the Boolean coercion
+所以对我来说，这是我可以接受布尔强制的地方之一
+So to me, this is one of those places where I'm okay with the Boolean coercion
 
 13
 00:00:43.670 --> 00:00:48.578
-因为我们只检查未定义的和完全存在的情况
-because, hey, we're only checking either
-undefined versus totally present.
+因为，嘿，我们只检查未定义的还是完全存在的。
+because, hey, we're only checking either undefined versus totally present.
 
 14
 00:00:48.578 --> 00:00:50.469
-这里真的没有地方
+在这两者之间真的没有任何地方。
 There's really nowhere in between.
 
 15
 00:00:50.469 --> 00:00:54.970
-所以我们是说如果不是 Object.is，我会投这个
-So we're saying if not Object.is, and
-I'm gonna throw in this or true for
+所以我们说如果不是Object.is，我会把这个或true扔进去
+So we're saying if not Object.is, and I'm gonna throw in this or true for
 
 16
 00:00:54.970 --> 00:00:59.484
-就在刚才我们确定我们正在运行我们的功能
-just now, just so we make sure that
-we're actually running our function.
+刚才，只是为了确保我们确实在运行我们的函数。
+just now, just so we make sure that we're actually running our function.
 
 17
 00:00:59.484 --> 00:01:02.798
-我第一次做这个练习时犯了这个错误
-The first time I made this exercise,
-I made that mistake, and
+我第一次做这个练习的时候，我犯了这个错误，而且
+The first time I made this exercise, I made that mistake, and
 
 18
 00:01:02.798 --> 00:01:06.115
-我不知道为什么事情不工作了
-I couldn't figure out why things
-weren't working, [LAUGH] or
+我搞不懂为什么事情不能正常工作，[笑]或者
+I couldn't figure out why things weren't working, [LAUGH] or
 
 19
 00:01:06.115 --> 00:01:09.272
-为什么在我破解密码的时候都还在工作呢
-why things were still working
-even when I had broken code.
+为什么即使我破解了代码，事情还是可以工作的。
+why things were still working even when I had broken code.
 
 20
 00:01:09.272 --> 00:01:12.628
-所以，犯这些错误很容易。
+所以很容易犯这些错误。
 So it's easy to make those mistakes.
 
 21
 00:01:12.628 --> 00:01:17.551
-好了我们要定义一个对象是函数
-All right, so we're gonna define one,
-Object.is = function, and
+好的，所以我们将定义一个，Object.is=function，和
+All right, so we're gonna define one, Object.is = function, and
 
 22
 00:01:17.551 --> 00:01:21.317
-我叫它 Object.is，如果我能输入的话。
-I'll just name it Object.is,
-if I could ever type.
+如果我能输入的话，我就把它命名为Object.is。
+I'll just name it Object.is, if I could ever type.
 
 23
 00:01:21.317 --> 00:01:26.899
-它需要两个参数，所以我将它叫做 x 和 y。
-And it's gonna take two parameters,
-so I'll call it x and y.
+它需要两个参数，所以我称之为x和y。
+And it's gonna take two parameters, so I'll call it x and y.
 
 24
 00:01:26.899 --> 00:01:30.740
-如果你觉得更好的话，你可以称之为 v1 和 v2 。
-You could call it v1 and
-v2 if you feel better about that.
+如果你感觉更好，你可以称之为v1和v2。
+You could call it v1 and v2 if you feel better about that.
 
 25
 00:01:30.740 --> 00:01:35.498
-同样地， Object.is 的工作本质上是三重平等，
-Again, the job of Object.is is
-essentially the triple equals,
+同样，Object.的工作本质上是三重等于，
+Again, the job of Object.is is essentially the triple equals,
 
 26
 00:01:35.498 --> 00:01:40.009
-但在负 0 和 NaN 的情况下也不需要撒谎。
-but also it needs to not lie in
-the cases of negative 0 and NaN.
+但它也不需要在负0和NaN的情况下存在。
+but also it needs to not lie in the cases of negative 0 and NaN.
 
 27
 00:01:40.009 --> 00:01:42.799
-所以这里有一点细微差别
+所以这里有一点细微的差别，
 So there's a little bit of nuance here,
 
 28
 00:01:42.799 --> 00:01:47.329
-我已经知道了所以我就跳过去
-which I happened to already know about,
-so I'll just jump to it.
+我碰巧已经知道了，所以我就直接说了。
+which I happened to already know about, so I'll just jump to it.
 
 29
 00:01:47.329 --> 00:01:52.796
-我们想拿到一个指标如果你愿意的话
-We wanna go ahead and get an indicator,
-a true false if you will,
+我们想要得到一个指示器，如果你愿意的话，一个真的假的，
+We wanna go ahead and get an indicator, a true false if you will,
 
 30
 00:01:52.796 --> 00:01:57.777
-x 为负 0 ， y 是否为负 0。
-of whether x is a negative 0 and
-whether y is a negative 0.
+x是否为负0，y是否为负0。
+of whether x is a negative 0 and whether y is a negative 0.
 
 31
 00:01:57.777 --> 00:02:02.064
-所以我要叫它 xNegZero;
-So I'm gonna call it
-xNegZero; y negative zero,
+所以我把它叫做xNegZero；y负零，
+So I'm gonna call it xNegZero; y negative zero,
 
 32
 00:02:02.064 --> 00:02:07.793
-这些都是我给你分配的变量
-those are just gonna be variables
-that I assign to here in a moment.
+这些只是我在这里赋值的变量。
+those are just gonna be variables that I assign to here in a moment.
 
 33
 00:02:07.793 --> 00:02:11.843
-我要给他们分配的结果是
-And what I'm gonna assign them is
-the result of testing a value for
+我要给它们赋值的是测试值的结果
+And what I'm gonna assign them is the result of testing a value for
 
 34
 00:02:11.843 --> 00:02:13.401
-它的负面 zeroness
+它的负零点。
 its negative zeroness.
 
 35
 00:02:13.401 --> 00:02:16.098
-所以我要给你一个小帮手
+所以我要定义一个小帮手
 So I'm gonna define a little helper for
 
 36
 00:02:16.098 --> 00:02:19.626
-我自己想知道是否有负面影响
-myself to figure out if
-something is a negative 0.
+我自己弄清楚某件事是否为负0。
+myself to figure out if something is a negative 0.
 
 37
 00:02:19.626 --> 00:02:24.141
-我不知道你们中是否有任何一个人
-I wonder if any of you were able to
-come up with a way of doing that without
+我想知道你们中有没有人能想出一种方法来做到这一点，而不需要
+I wonder if any of you were able to come up with a way of doing that without
 
 38
 00:02:24.141 --> 00:02:25.836
-建在 object.is?
+内置对象是？
 the built in object.is?
 
 39
 00:02:25.836 --> 00:02:28.068
-有人吗
+有人吗？
 Anyone?
 
 40
 00:02:28.068 --> 00:02:30.711
-> > 学生: 几周前我偶然无意中发现了它。
-&gt;&gt; Student: I stumbled across it
-a couple weeks ago accidentally.
+&gt；&gt；学生：几周前我偶然发现了它。
+&gt;&gt; Student: I stumbled across it a couple weeks ago accidentally.
 
 41
 00:02:30.711 --> 00:02:32.527
-> > Kyle Simpson: 好的，所以你-- > > Student : 所以我作弊了。
-&gt;&gt; Kyle Simpson: Okay, so you-
-&gt;&gt; Student: So I cheated.
+&gt；&gt；Kyle Simpson：好的，那么你-&gt；&gt；学生：所以我作弊了。
+&gt;&gt; Kyle Simpson: Okay, so you- &gt;&gt; Student: So I cheated.
 
 42
 00:02:32.527 --> 00:02:35.451
->> 凯尔 - 辛普森: 你已经看到了，好，酷。
-&gt;&gt; Kyle Simpson: You happened to
-have already seen it, okay, cool.
+&gt；&gt；Kyle Simpson：你碰巧已经看过了，好吧，酷。
+&gt;&gt; Kyle Simpson: You happened to have already seen it, okay, cool.
 
 43
 00:02:35.451 --> 00:02:37.724
-那我们该怎么做呢
+那我们该怎么做？
 Well how would we do that?
 
 44
 00:02:37.724 --> 00:02:41.194
-这个有点棘手，所以如果你不明白，就别难过了。
-This one's a little tricky, so
-if you didn't get it, don't feel bad.
+这是一个有点棘手，所以如果你没有得到它，不要感觉不好。
+This one's a little tricky, so if you didn't get it, don't feel bad.
 
 45
 00:02:41.194 --> 00:02:45.616
-但如果你想想一个负 0的值
-But if you think about
-a value that is negative 0,
+但是如果你考虑一个负0的值，
+But if you think about a value that is negative 0,
 
 46
 00:02:45.616 --> 00:02:50.472
-我们对 0 的操作有什么了解 ?
-what do we know about operations
-that we can do with 0?
+关于我们可以用0做的操作，我们知道什么？
+what do we know about operations that we can do with 0?
 
 47
 00:02:50.472 --> 00:02:55.189
-所以如果你说，负 0 ，你给它加 0 吧 ?
-So if you say, take a negative 0,
-and you add a 0 to it?
+所以如果你说，取一个负的0，然后加上一个0？
+So if you say, take a negative 0, and you add a 0 to it?
 
 48
 00:02:55.189 --> 00:02:58.853
-如果你知道你只会得到一个普通的 0
-Well, if you do that you know
-you're just gonna get a regular 0.
+嗯，如果你这样做了，你知道你只会得到一个普通的0。
+Well, if you do that you know you're just gonna get a regular 0.
 
 49
 00:02:58.853 --> 00:03:03.626
-如果你把 0 和 0 都减去 0 就没别的事了
-If you take a negative 0 and you subtract
-a 0 from it nothing else is gonna happen,
+如果你取一个负的0，然后减去一个0，就不会有其他的事情发生了，
+If you take a negative 0 and you subtract a 0 from it nothing else is gonna happen,
 
 50
 00:03:03.626 --> 00:03:05.713
-还会是 0 比 0
+它仍然是负0。
 it's still gonna be a negative 0.
 
 51
 00:03:05.713 --> 00:03:08.098
-所以加减是不会有帮助的
-So adding and
-subtracting aren't gonna help.
+所以加法和减法不会有帮助。
+So adding and subtracting aren't gonna help.
 
 52
 00:03:08.098 --> 00:03:10.201
-但分组的情况如何呢 ?
+但组织呢？
 But what about division?
 
 53
 00:03:10.201 --> 00:03:16.163
-我们知道，例如， 1 除以 0 给我们无穷大。
-We know that for example,
-1 divided by 0 gives us infinity.
+我们知道，例如，1除以0就是无穷大。
+We know that for example, 1 divided by 0 gives us infinity.
 
 54
 00:03:16.163 --> 00:03:19.764
-你认为一个负 0 会给我们什么 ?
-What do you think one 1 by
-negative 0 would give us?
+你认为1乘以0会给我们带来什么？
+What do you think one 1 by negative 0 would give us?
 
 55
 00:03:19.764 --> 00:03:20.707
->> Student2: 负无穷大。
+&gt；&gt；Student2：负无穷大。
 &gt;&gt; Student2: Negative infinity.
 
 56
 00:03:20.707 --> 00:03:21.651
->> 凯尔 - 辛普森: 负无穷大。
+&gt；&gt；Kyle Simpson：负无穷大。
 &gt;&gt; Kyle Simpson: Negative infinity.
 
 57
 00:03:21.651 --> 00:03:25.304
-所以有一个测试方法如果我们有一个阴性的 0
-So there's a way of testing
-if we have a negative 0,
+所以有一种方法可以测试我们是否有负0，
+So there's a way of testing if we have a negative 0,
 
 58
 00:03:25.304 --> 00:03:30.128
-我们唯一能得到负无穷大的方法就是如果我们有一个负的 0
-the only way we could get negative
-infinity is if we had a negative 0.
+唯一可以得到负无穷大的方法是，如果我们有一个负的0。
+the only way we could get negative infinity is if we had a negative 0.
 
 59
 00:03:30.128 --> 00:03:32.079
-也许不是唯一的办法但这就是我们要做的
-Maybe not the only way but
-that's the way we're gonna do it.
+也许不是唯一的方法，但这就是我们要做的。
+Maybe not the only way but that's the way we're gonna do it.
 
 60
 00:03:32.079 --> 00:03:37.245
-所以我想说如果 NegZero 值不高我会说首先
-So I'm gonna say if NegZero take in
-a value, and I'm gonna say, first of all,
+所以我会说如果NegZero接受一个值，我会说，首先，
+So I'm gonna say if NegZero take in a value, and I'm gonna say, first of all,
 
 61
 00:03:37.245 --> 00:03:41.783
-我们得确保它是两个 0 中的一个因为如果它是无穷大的
-we need to make sure it's one of
-the two 0 because if it was infinity,
+我们需要确保它是两个0中的一个，因为如果它是无穷大，
+we need to make sure it's one of the two 0 because if it was infinity,
 
 62
 00:03:41.783 --> 00:03:44.557
-这会给我们一个错误的正面
+这会给我们一个假阳性。
 that would give us a false positive here.
 
 63
 00:03:44.557 --> 00:03:47.753
-所以我们会说如果是两个 0s 中的一个
+所以我们会说，如果v是两个0中的一个，
 So we'll say, if v is one of the two 0s,
 
 64
 00:03:47.753 --> 00:03:52.760
-我们可以用双等号还是三等
-which we can either use the double
-equals or the triple equals.
+我们可以使用双等号或三等号。
+which we can either use the double equals or the triple equals.
 
 65
 00:03:52.760 --> 00:03:56.417
-在这种情况下，两者之间不会有任何区别。
-In this case, they would not have
-any distinction between the two.
+在这种情况下，他们将不会在两者之间有任何区别。
+In this case, they would not have any distinction between the two.
 
 66
 00:03:56.417 --> 00:04:01.159
-所以如果是两个 0中的一个
+所以如果是两个0中的一个
 So if it's one of the two 0,
 
 67
 00:04:01.159 --> 00:04:06.300
-然后我们就会说
+然后我们会说
 and, and then we're gonna say
 
 68
 00:04:06.300 --> 00:04:11.256
-( 1/v) == -Infinity。
+(1/v)=-无穷大。
 (1/v) == -Infinity.
 
 69
 00:04:11.256 --> 00:04:14.080
-这就是我们如何知道的 -- >> Student3:
-That's how we could know-
-&gt;&gt; Student3: Was that a constant in
+这就是我们如何知道-&gt；&gt；学生3：这是不是一个常数
+That's how we could know- &gt;&gt; Student3: Was that a constant in
 
 70
 00:04:14.080 --> 00:04:15.128
-JavaScript?
+JavaScript？
 JavaScript?
 
 71
 00:04:15.128 --> 00:04:17.254
->> Kyle Simpson: Infinity 是内置的。
+&gt；&gt；Kyle Simpson：infinity是内置的。
 &gt;&gt; Kyle Simpson: Infinity is a built-in.
 
 72
 00:04:17.254 --> 00:04:17.947
->> Student3: 真的吗 ? >> 凯尔 - 辛普森:
-&gt;&gt; Student3: Really?
-&gt;&gt; Kyle Simpson: Yep,
+&gt；&gt；学生3：真的吗？&gt；&gt；Kyle Simpson：是的，
+&gt;&gt; Student3: Really? &gt;&gt; Kyle Simpson: Yep,
 
 73
 00:04:17.947 --> 00:04:19.588
-它是一个内置的标识。
+这是一个内置的标识符。
 it's a built-in identifier.
 
 74
 00:04:19.588 --> 00:04:20.415
->> Student3: 好的。
+学生3：好的。
 &gt;&gt; Student3: Okay.
 
 75
 00:04:20.415 --> 00:04:24.690
->> Kyle Simpson: 因此，除以 v 会给我们负无穷大，如果和
-&gt;&gt; Kyle Simpson: So 1 divided by v
-would give us negative infinity, if and
+&gt；&gt；Kyle Simpson：1除以v会得到负无穷大，如果和
+&gt;&gt; Kyle Simpson: So 1 divided by v would give us negative infinity, if and
 
 76
 00:04:24.690 --> 00:04:26.656
-仅当 v 为负 0时。
+仅当v为负0时。
 only if v was negative 0.
 
 77
 00:04:26.656 --> 00:04:30.742
-再一次，此检查的原因是 1 除以负无穷大，
-Again, the reason for this check
-is 1 divided by negative infinity,
+同样，这个检查的原因是1除以负无穷大，
+Again, the reason for this check is 1 divided by negative infinity,
 
 78
 00:04:30.742 --> 00:04:32.901
-也会带来无限的无限
+也会给出负无穷大。
 would also give negative infinity.
 
 79
 00:04:32.901 --> 00:04:36.978
-所以，我们不想在这里有任何假阳性。
-[LAUGH] So, we don't wanna
-have any false positives here.
+[笑]所以，我们不想在这里有任何误报。
+[LAUGH] So, we don't wanna have any false positives here.
 
 80
 00:04:36.978 --> 00:04:41.288
-好了这就是我们要检查 X 和 Y 的情况
-Okay, so that's how we're going to
-check if x and y are negative 0s,
+好的，这就是我们如何检查x和y是否为负0，
+Okay, so that's how we're going to check if x and y are negative 0s,
 
 81
 00:04:41.288 --> 00:04:43.783
-我们会叫那个小公用事业的
+我们要称之为小公用事业。
 we're gonna call that little utility.
 
 82
 00:04:43.783 --> 00:04:48.886
-所以我们会说，如果 isItNegZero(x)
+所以我们会说，如果isItNegZero(X)，并且
 So we'll say, if isItNegZero(x), and
 
 83
 00:04:48.886 --> 00:04:53.576
-那我们就会说 isItNegZero(y)
+然后我们说如果isItNegZero(Y)。
 then we'll say if isItNegZero(y).
 
 84
 00:04:53.576 --> 00:04:58.983
-现在我们想做的第一件事就是
-Now, the first thing we
-wanna do is if either x or
+现在，我们要做的第一件事是如果x或
+Now, the first thing we wanna do is if either x or
 
 85
 00:04:58.983 --> 00:05:05.896
-y 是负 0 我们会检查它们是否都是
-y is a negative 0 then we're
-gonna check if both of them are.
+Y是负0，然后我们要检查它们是否都是。
+y is a negative 0 then we're gonna check if both of them are.
 
 86
 00:05:05.896 --> 00:05:08.766
-但我们得先检查我们是否在处理
-But we need to first check if
-we're dealing with the case that
+但我们需要先检查一下我们是否在处理这个案子
+But we need to first check if we're dealing with the case that
 
 87
 00:05:08.766 --> 00:05:10.579
-其中之一为负 0。
+它们中的任何一个都是负0。
 either one of them is the negative 0.
 
 88
 00:05:10.579 --> 00:05:12.560
-因为如果其中一个是负 0
-Because if either one
-of them is negative 0,
+因为如果它们中的任何一个都是负0，
+Because if either one of them is negative 0,
 
 89
 00:05:12.560 --> 00:05:15.961
-我们知道三等同体会说谎所以我们不能让它发生
-we know that the triple equals is gonna
-lie, so we can't allow that to occur.
+我们知道三重相等将会说谎，所以我们不能允许这种情况发生。
+we know that the triple equals is gonna lie, so we can't allow that to occur.
 
 90
 00:05:15.961 --> 00:05:20.367
-所以我们要说如果 (xNegZero 或 yNegZero )
-So we're gonna say,
-if (xNegZero or yNegZero),
+所以我们会说，如果(xNegZero或yNegZero)，
+So we're gonna say, if (xNegZero or yNegZero),
 
 91
 00:05:20.367 --> 00:05:27.093
-那将会是我们的条件之一我们会处理这事的
-that's gonna be one of our conditions,
-and we'll handle what to do with that.
+这将是我们的条件之一，我们会处理如何处理它。
+that's gonna be one of our conditions, and we'll handle what to do with that.
 
 92
 00:05:27.093 --> 00:05:32.536
-现在，如果不是这样的话，
-Now, if that's not the case,
-the next thing that
+现在，如果不是这样的话，下一件事就是
+Now, if that's not the case, the next thing that
 
 93
 00:05:32.536 --> 00:05:37.860
-我们得检查 X 和 y 都是 NN
-we need to check is if both the x and
-the y are NaNs.
+我们需要检查x和y是否都是nans。
+we need to check is if both the x and the y are NaNs.
 
 94
 00:05:37.860 --> 00:05:39.283
-和我一起吗
+大家都跟我一起吗？
 Everybody with me?
 
 95
 00:05:39.283 --> 00:05:42.562
-如果两者都是 NN ，那么我们就想回归真实，
-If both of them are NaNs,
-then we wanna return true,
+如果他们两个都是nans，那么我们想返回真的，
+If both of them are NaNs, then we wanna return true,
 
 96
 00:05:42.562 --> 00:05:47.629
-因为我们知道三等号等于是假的
-because we know that's the case where
-triple equals would return a false false,
+因为我们知道这就是三重等于会返回false的情况，
+because we know that's the case where triple equals would return a false false,
 
 97
 00:05:47.629 --> 00:05:50.177
-如果你愿意的话就会撒谎说假话
+如果你愿意，它会撒谎说假。
 if you will, it would lie and say false.
 
 98
 00:05:50.177 --> 00:05:53.531
-因此，我们需要另一个实用程序来检查 NN。
-So we need another utility for
-checking for NaNs.
+因此，我们需要另一个实用程序来检查NAS。
+So we need another utility for checking for NaNs.
 
 99
 00:05:53.531 --> 00:05:56.127
-您只能使用 number.isNaN ，但是
+您可以只使用number.isNaN，但是
 You could just use number.isNaN, but
 
 100
 00:05:56.127 --> 00:06:00.226
-README 建议请您尝试使用它。
-the README suggested maybe try
-your hand to coming up with it.
+自述文件建议，也许可以尝试一下你的手来想出它。
+the README suggested maybe try your hand to coming up with it.
 
 101
 00:06:00.226 --> 00:06:03.947
-有没有人来测试过
-Did anyone come up with a way
-of testing for testing for
+有没有人想出一种测试的方法
+Did anyone come up with a way of testing for testing for
 
 102
 00:06:03.947 --> 00:06:06.687
-没有内置实用程序的 NaN ?
+NaN没有内置的实用程序？
 NaN without the built-in utilities?
 
 103
 00:06:06.687 --> 00:06:09.512
-几个星期前你也看到过那个 [ 洛杉矶 ] 吗
-Did you also see that one
-[LAUGH] a couple of weeks ago?
+几周前你也看过那个[笑]吗？
+Did you also see that one [LAUGH] a couple of weeks ago?
 
 104
 00:06:09.512 --> 00:06:13.125
-好吧你怎么想的
+好吧，你想到了什么？
 Okay, what did you come up with?
 
 105
 00:06:13.125 --> 00:06:14.437
-> > 学生: 有点 jenky。
+&gt；&gt；学生：有点像Jenky。
 &gt;&gt; Student: It's kinda jenky.
 
 106
 00:06:14.437 --> 00:06:17.855
->> 凯尔 - 辛普森: 这是什么 ? >> Student : 但是它是一个检查
-&gt;&gt; Kyle Simpson: What is it?
-&gt;&gt; Student: But it's an if that checks if
+&gt；&gt；Kyle Simpson：它是什么？&gt；&gt；学生：但它是一个检查是否
+&gt;&gt; Kyle Simpson: What is it? &gt;&gt; Student: But it's an if that checks if
 
 107
 00:06:17.855 --> 00:06:24.699
-param1 不等于 param1 或 param2 不等于 param2。
-param1 is not equal to param1 or
-param2 is not equal to param2.
+param1不等于param1或param2不等于param2。
+param1 is not equal to param1 or param2 is not equal to param2.
 
 108
 00:06:24.699 --> 00:06:25.213
->> 凯尔辛普森: 好的。
+凯尔·辛普森：好的。
 &gt;&gt; Kyle Simpson: Okay.
 
 109
 00:06:25.213 --> 00:06:28.937
->> Student: 然后在里面返回类型的 param1 是数字和
-&gt;&gt; Student: And then inside there
-returns type of param1 is number and
+&gt；&gt；Student：然后在里面返回param1的类型是number和
+&gt;&gt; Student: And then inside there returns type of param1 is number and
 
 110
 00:06:28.937 --> 00:06:33.802
-param2 的类型是数字，那么它们是唯一不等于的数字
-type of param2 is number, then they're
-the only numbers that are not equal
+param2的类型是number，那么它们是唯一不相等的数字
+type of param2 is number, then they're the only numbers that are not equal
 
 111
 00:06:33.802 --> 00:06:35.117
-对他们自己 -- > 凯尔 - 辛普森: 好的。
-to themselves-
-&gt;&gt; Kyle Simpson: Okay.
+对自己-&GT；&GT；Kyle Simpson：好的。
+to themselves- &gt;&gt; Kyle Simpson: Okay.
 
 112
 00:06:35.117 --> 00:06:36.069
->> Student: [CROSSTALK] NN。
+&gt；&gt；学生：[相声]nans。
 &gt;&gt; Student: [CROSSTALK] NaNs.
 
 113
 00:06:36.069 --> 00:06:36.588
->> 凯尔 - 辛普森: 你在正确的轨道上。
-&gt;&gt; Kyle Simpson: You're
-on the right track.
+&gt；&gt；Kyle Simpson：你在正确的轨道上。
+&gt;&gt; Kyle Simpson: You're on the right track.
 
 114
 00:06:36.588 --> 00:06:39.223
-我想我们甚至能做得更简单你就在正确的轨道上
-I think we can even do this simpler,
-you're on the right track.
+我认为我们甚至可以做得更简单，你在正确的轨道上。
+I think we can even do this simpler, you're on the right track.
 
 115
 00:06:39.223 --> 00:06:42.882
-这里的具体窍门是 NaN 是唯一值
-The specific trick here is
-that NaN is the only value in
+这里的具体技巧是NaN是
+The specific trick here is that NaN is the only value in
 
 116
 00:06:42.882 --> 00:06:46.637
-在 JavaScript 中存在与自身不相等的情况。
-existence in JavaScript
-that's not equal to itself.
+JavaScript中不等于自身的存在。
+existence in JavaScript that's not equal to itself.
 
 117
 00:06:46.637 --> 00:06:49.805
-所以如果我传入 NaN ，它将不等于自身
-So if I pass in a NaN,
-it will be not equal to itself and
+所以如果我传入一个NaN，它将不等于它本身
+So if I pass in a NaN, it will be not equal to itself and
 
 118
 00:06:49.805 --> 00:06:51.906
-否则一切都将失败
+其他一切都会失败。
 everything else that would fail.
 
 119
 00:06:51.906 --> 00:06:55.716
-所以我们可以简单地说， v 不等于自己。
-So we can simply say,
-v not equal to itself.
+所以我们可以简单地说，v不等于它本身。
+So we can simply say, v not equal to itself.
 
 120
 00:06:57.966 --> 00:07:01.343
->> 凯尔 - 辛普森: 而 NaN 是唯一能从那里回归的人。
-&gt;&gt; Kyle Simpson: And NaN is the only
-one that would return true from there.
+&gt；&gt；Kyle Simpson：而NaN是唯一一个从那里返回真的。
+&gt;&gt; Kyle Simpson: And NaN is the only one that would return true from there.
 
 121
 00:07:01.343 --> 00:07:06.562
-所以我要去测试
+所以我要测试一下
 So I'm going to test,
 
 122
 00:07:06.562 --> 00:07:12.057
-if (isItNaN(x) &&
+如果(isItNaN(X)&amp；&amp；
 if (isItNaN(x) &amp;&amp;
 
 123
 00:07:12.057 --> 00:07:16.459
-isItNaN (y))。
+isItNaN(Y)。
 isItNaN(y)).
 
 124
 00:07:16.459 --> 00:07:20.326
-如果是这样我们肯定知道回报是真的他们都是纳尼丝
-And if that's the case, we definitely
-know return true, cuz they're both NaNs,
+如果是这样，我们肯定知道返回真，因为它们都是Nans，
+And if that's the case, we definitely know return true, cuz they're both NaNs,
 
 125
 00:07:20.326 --> 00:07:22.661
-这就是我们想说实话的地方
-and this is the case where
-we wanna tell the truth.
+这就是我们想要说出真相的情况。
+and this is the case where we wanna tell the truth.
 
 126
 00:07:22.661 --> 00:07:26.665
-如果两个人都不这样的话我们真正需要做的就是
-And if neither one of those too is the
-case then really all we need to do is to
+如果这两种情况都不是这样，那么我们真正需要做的就是
+And if neither one of those too is the case then really all we need to do is to
 
 127
 00:07:26.665 --> 00:07:28.250
-再等三等比
+进一步的三重相等。
 further the triple equals.
 
 128
 00:07:28.250 --> 00:07:31.356
-所以我们只返回 x === y;
+因此我们只返回x=y；。
 So we simply return x === y;.
 
 129
 00:07:35.630 --> 00:07:38.413
->> 凯尔 - 辛普森: 让我们来处理这个问题。
-&gt;&gt; Kyle Simpson: So
-let's handle this particular case up here.
+&gt；&gt；Kyle Simpson：让我们在这里处理这个特殊的情况。
+&gt;&gt; Kyle Simpson: So let's handle this particular case up here.
 
 130
 00:07:38.413 --> 00:07:41.442
-如果有一个或两个我们还不确定
-If one or
-both of them we're not sure yet, but
+如果他们中的一个或两个我们还不确定，但是
+If one or both of them we're not sure yet, but
 
 131
 00:07:41.442 --> 00:07:44.406
-我们知道其中至少有一个是负 0
-we know at least one of
-them is a negative 0.
+我们知道其中至少有一个是负0。
+we know at least one of them is a negative 0.
 
 132
 00:07:44.406 --> 00:07:47.841
-那我们怎么知道是否要回归真假 ?
-Then how do we know if we
-should return true or not?
+那么我们怎么知道我们是否应该返回true呢？
+Then how do we know if we should return true or not?
 
 133
 00:07:47.841 --> 00:07:50.507
-只有两个都是负 0的
+好吧，只有在它们都是负0的情况下。
 Well, only if both of them are negative 0.
 
 134
 00:07:50.507 --> 00:07:58.103
-所以我们可以简单地说，返回 xNegZero & yNegZero;。
-So we can simply say here
-return xNegZero &amp;&amp; yNegZero;.
+因此，我们可以在这里简单地说return xNegZero&amp；&amp；yNegZero；。
+So we can simply say here return xNegZero &amp;&amp; yNegZero;.
 
 135
 00:08:05.711 --> 00:08:08.341
->> 凯尔 - 辛普森: 所以我之前就知道的最优化的
-&gt;&gt; Kyle Simpson: So the little
-pre-optimization that I already knew about
+&gt；&gt；Kyle Simpson：我已经知道的一点预优化
+&gt;&gt; Kyle Simpson: So the little pre-optimization that I already knew about
 
 136
 00:08:08.341 --> 00:08:10.968
-我得检查两次所以我就去了
-was that I was gonna need to check
-it twice so I went ahead and
+就是我需要检查两次所以我继续
+was that I was gonna need to check it twice so I went ahead and
 
 137
 00:08:10.968 --> 00:08:14.528
-将其转换为变量，而不是对函数调用进行两次检查。
-cashed it into a variable instead of
-checking it twice with the function call.
+将其缓存到变量中，而不是通过函数调用检查两次。
+cashed it into a variable instead of checking it twice with the function call.
 
 138
 00:08:18.550 --> 00:08:23.367
->> Kyle Simpson: 根据您在此处看到的情况，对解决方案文件进行双重检查，
-&gt;&gt; Kyle Simpson: Double checking against
-the solution file, as you see over here,
+&gt；&gt；Kyle Simpson：对解决方案文件进行双重检查，正如您在这里看到的，
+&gt;&gt; Kyle Simpson: Double checking against the solution file, as you see over here,
 
 139
 00:08:23.367 --> 00:08:26.125
-而我写的几乎是一样的
+我写的几乎是一样的。
 and I've written it almost the same.
 
 140
 00:08:26.125 --> 00:08:29.331
-我就用我刚写的代码
-I'm gonna just take this
-code that I just wrote
+我只想把我刚写的这段代码
+I'm gonna just take this code that I just wrote
 
 141
 00:08:29.331 --> 00:08:32.847
-这里， >> 凯尔 - 辛普森:
-here,
-&gt;&gt; Kyle Simpson: And
+这里，&gt；&gt；Kyle Simpson：和
+here, &gt;&gt; Kyle Simpson: And
 
 142
 00:08:32.847 --> 00:08:35.820
-我有个小环境
+我有一个小环境。
 I have a little environment.
 
 143
 00:08:35.820 --> 00:08:41.283
-这个程序叫 Run JS ，就像一个控制台来执行一些东西，
-This program's called Run JS, which is
-like a console that executes stuff,
+这个程序叫做Run JS，它就像一个执行东西的控制台，
+This program's called Run JS, which is like a console that executes stuff,
 
 144
 00:08:41.283 --> 00:08:44.238
-这不完美但很不错
+不是十全十美，但相当不错。
 it's not perfect but it's pretty good.
 
 145
 00:08:44.238 --> 00:08:48.063
-所以我要把这个代码放到这儿来
-So I'm gonna drop this code into here and
-run it.
+所以我要把这段代码放到这里并运行它。
+So I'm gonna drop this code into here and run it.
 
 146
 00:08:48.063 --> 00:08:51.480
-我们应该看到所有真实的真相
+我们应该看到所有的真相，我们做到了。
 And we should see all trues and we do.

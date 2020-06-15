@@ -2,26 +2,23 @@ WEBVTT
 
 1
 00:00:00.360 --> 00:00:04.160
->> Kyle Simpson: 那么我们能用这些范围的知识做什么 ?
-&gt;&gt; Kyle Simpson: So what can we
-do with this knowledge of scopes?
+&gt；&gt；Kyle Simpson：那么我们可以用这些作用域的知识做什么呢？
+&gt;&gt; Kyle Simpson: So what can we do with this knowledge of scopes?
 
 2
 00:00:04.160 --> 00:00:08.910
-而且，具体来说，我们一直在关注按功能组织的范围。
-And, specifically, we've been focusing on
-scopes that are organized by functions.
+具体地说，我们一直专注于按功能组织的作用域。
+And, specifically, we've been focusing on scopes that are organized by functions.
 
 3
 00:00:08.910 --> 00:00:09.910
-我们能做些什么呢
+我们能用它做什么？
 What can we do with that?
 
 4
 00:00:09.910 --> 00:00:15.009
-它能帮助我们解决什么样的能力和问题 ?
-What sorts of abilities or
-problems does it help us solve?
+它能帮助我们解决什么样的能力或问题？
+What sorts of abilities or problems does it help us solve?
 
 5
 00:00:15.009 --> 00:00:16.370
@@ -30,621 +27,535 @@ It's not just theoretical.
 
 6
 00:00:16.370 --> 00:00:20.960
-我们这样做是因为我们试图建立一种模式来帮助我们
-We are doing this because we're trying
-to build towards a pattern that helps us
+我们这样做是因为我们试图建立一种模式，帮助我们
+We are doing this because we're trying to build towards a pattern that helps us
 
 7
 00:00:20.960 --> 00:00:22.329
-更好地组织我们的代码
+更好地组织我们的代码。
 organize our code better.
 
 8
 00:00:22.329 --> 00:00:26.320
-为了实现这个模式，让我们开始发挥我们的功能。
-So to build towards that pattern, let's
-start doing things with our functions.
+因此，为了朝着这个模式构建，让我们开始用我们的函数来做一些事情。
+So to build towards that pattern, let's start doing things with our functions.
 
 9
 00:00:26.320 --> 00:00:30.679
-我们来谈谈这个例子，很明显很简单，很傻。
-Let's talk about this example,
-obviously very simple and silly.
+让我们来谈谈这个例子，显然非常简单和愚蠢。
+Let's talk about this example, obviously very simple and silly.
 
 10
 00:00:30.679 --> 00:00:35.009
-但我们有一个变量，然后在程序中使用变量。
-But we have a variable, and then later in
-the program we are using the variable.
+但是我们有一个变量，然后在程序的后面我们使用这个变量。
+But we have a variable, and then later in the program we are using the variable.
 
 11
 00:00:35.009 --> 00:00:37.359
-我们希望它仍然具有相同的价值。
-And we're hoping that it
-still has the same value.
+我们希望它仍然有同样的价值。
+And we're hoping that it still has the same value.
 
 12
 00:00:38.979 --> 00:00:41.090
-现在一切都很好
+现在一切看起来都很好。
 Right now, everything looks good.
 
 13
 00:00:41.090 --> 00:00:44.814
-但六个月后，一个小开发商，不知道自己在做什么，
-But six months from now, a junior
-developer, not knowing what they're doing,
+但六个月后，一个初级开发人员，不知道他们在做什么，
+But six months from now, a junior developer, not knowing what they're doing,
 
 14
 00:00:44.814 --> 00:00:48.758
-不是因为他们笨，只是因为他们没看到，不知道，
-not because they're dumb but just simply
-because they didn't see it, not knowing,
+不是因为他们笨，而只是因为他们没有看到，不知道，
+not because they're dumb but just simply because they didn't see it, not knowing,
 
 15
 00:00:48.758 --> 00:00:50.921
-在中间插入此代码。
-comes along and
-inserts this code in between.
+并在两者之间插入此代码。
+comes along and inserts this code in between.
 
 16
 00:00:53.371 --> 00:00:56.329
->> 凯尔 - 辛普森: 你可以立即发现这个问题，有个名字碰撞。
-&gt;&gt; Kyle Simpson: You can immediately spot
-the problem, there's a name collision.
+&gt；&gt；Kyle Simpson：您可以立即发现问题，存在名称冲突。
+&gt;&gt; Kyle Simpson: You can immediately spot the problem, there's a name collision.
 
 17
 00:00:56.329 --> 00:00:58.789
-他们选择把变量命名为
+他们选择命名他们的变量
 They chose to name their variable
 
 18
 00:00:58.789 --> 00:01:02.770
-与该作用域中已存在的变量相同。
-the same as the variable that
-already existed in that scope.
+与该作用域中已经存在的变量相同。
+the same as the variable that already existed in that scope.
 
 19
 00:01:02.770 --> 00:01:05.346
-当他们在第 6 行上写的时候
+当他们在第6行重写时，
 And when they overwrote it on line 6,
 
 20
 00:01:05.346 --> 00:01:08.972
-最后以一种非显而易见的方式结束了第 10 行
-it ended up breaking line
-10 in a non-obvious way.
+它以一种不明显的方式破坏了第10行。
+it ended up breaking line 10 in a non-obvious way.
 
 21
 00:01:11.430 --> 00:01:13.490
->> 凯尔 - 辛普森: 现在，你可能会想自己，好吧，
-&gt;&gt; Kyle Simpson: Now,
-you might be thinking to yourself, well,
+&gt；&gt；Kyle Simpson：现在，你可能在想，好吧，
+&gt;&gt; Kyle Simpson: Now, you might be thinking to yourself, well,
 
 22
 00:01:13.490 --> 00:01:15.500
-所以我才应该用一个公寓
+这就是为什么我应该用常量。
 that's why I should have used a const.
 
 23
 00:01:15.500 --> 00:01:17.700
-除了这还没解决这个问题
-Except that wouldn't
-really have fixed this.
+但那并不能真正解决这个问题。
+Except that wouldn't really have fixed this.
 
 24
 00:01:19.390 --> 00:01:21.519
-这会给一个小开发商带来一个错误
-It would've thrown an error
-to a junior developer,
+它会向初级开发人员抛出一个错误，
+It would've thrown an error to a junior developer,
 
 25
 00:01:21.519 --> 00:01:24.789
-也许他们会把你的公寓改成一个 var
-who then probably would have just
-changed your const to a var anyway.
+这样的话，他可能会把你的const改成var。
+who then probably would have just changed your const to a var anyway.
 
 26
 00:01:24.789 --> 00:01:26.689
-这并不能解决这个问题。
+这并不能真正解决这个问题。
 That doesn't really fix this problem.
 
 27
 00:01:26.689 --> 00:01:29.257
-真正的问题是真正的根本问题
-The real problem,
-the real root problem, is not that
+真正的问题，真正的根本问题，不是那个
+The real problem, the real root problem, is not that
 
 28
 00:01:29.257 --> 00:01:33.153
-变量可以重新分配，但我们有命名冲突问题。
-the variable could be reassigned, but
-that we have a naming collision problem.
+变量可以被重新分配，但是我们有一个命名冲突的问题。
+the variable could be reassigned, but that we have a naming collision problem.
 
 29
 00:01:35.489 --> 00:01:40.174
->> Kyle Simpson: 我们有两个不同的实体想使用相同的问题
-&gt;&gt; Kyle Simpson: We have a problem where
-two different entities wanna use the same
+&gt；&gt；Kyle Simpson：我们遇到了一个问题，两个不同的实体想要使用相同的
+&gt;&gt; Kyle Simpson: We have a problem where two different entities wanna use the same
 
 30
 00:01:40.174 --> 00:01:42.620
-为某个目的而使用的语义名称。
+用于某种目的语义名称。
 semantic name for some purpose.
 
 31
 00:01:42.620 --> 00:01:44.483
->> 扬声器 1: 在同一作用域中。
+&gt；&gt；扬声器1：在同一范围内。
 &gt;&gt; Speaker 1: In the same scope.
 
 32
 00:01:44.483 --> 00:01:45.759
->> Kyle Simpson: 在同一作用域中。
+&gt；&gt；Kyle Simpson：在相同的范围内。
 &gt;&gt; Kyle Simpson: In the same scope.
 
 33
 00:01:45.759 --> 00:01:50.620
-那么我们如何解决这个问题，因为我们不能有两个不同的
-So how do we resolve this problem
-where we can't have two different
+那么，我们如何解决这个问题，我们不能有两个不同的
+So how do we resolve this problem where we can't have two different
 
 34
 00:01:50.620 --> 00:01:54.439
-在同一范围内同名但没有冲突的名称，
-usages of the same name in the same
-scope without them conflicting,
+同一作用域中相同名称的用法没有冲突，
+usages of the same name in the same scope without them conflicting,
 
 35
 00:01:54.439 --> 00:01:56.780
-没有他们的碰撞但我们怎么解决呢
-without them colliding,
-but how do we fix that?
+不会发生碰撞，但我们怎么解决这个问题呢？
+without them colliding, but how do we fix that?
 
 36
 00:01:56.780 --> 00:02:00.239
-当然我们可以把它们放在不同的水桶里
-Well, naturally,
-we could put them in different buckets.
+当然，我们可以把它们放在不同的桶里。
+Well, naturally, we could put them in different buckets.
 
 37
 00:02:01.359 --> 00:02:05.469
-而迄今为止我们看到的最好的方法就是把它环绕在它周围。
-And the best way that we've seen thus
-far Is to wrap a function around it.
+到目前为止，我们看到的最好的方法是围绕它包装一个函数。
+And the best way that we've seen thus far Is to wrap a function around it.
 
 38
 00:02:06.590 --> 00:02:10.409
-所以如果我在这里做一个 " 老师 " 的功能
-So if I make anotherTeacher
-function here and
+所以如果我在这里创建另一个Teacher函数
+So if I make anotherTeacher function here and
 
 39
 00:02:10.409 --> 00:02:14.580
-我宣布第 4 行这个变量，现在是不同的颜色的大理石，对吧 ?
-I declare line 4 that variable, now
-it's a different colored marble, right?
+我将第4行声明为变量，现在它是一个不同颜色的大理石，对吗？
+I declare line 4 that variable, now it's a different colored marble, right?
 
 40
 00:02:14.580 --> 00:02:16.219
-是蓝色的大理石不是红色的大理石
+这是蓝色大理石，不是红色大理石。
 It's a blue marble, not a red marble.
 
 41
 00:02:17.250 --> 00:02:22.939
-因此变量不会与第 10 行中的变量发生冲突，
-So that variable doesn't end up
-conflicting with the one in line 10,
+这样该变量就不会与第10行中的变量发生冲突，
+So that variable doesn't end up conflicting with the one in line 10,
 
 42
 00:02:22.939 --> 00:02:24.340
-一切仍然有效
+一切都还有效。
 everything still works.
 
 43
 00:02:24.340 --> 00:02:28.439
-问题是，现在我有一个在该范围内具有名称的函数。
-The problem is that now I have a function
-that has a name in that scope.
+问题是，现在我有了一个在该作用域中具有名称的函数。
+The problem is that now I have a function that has a name in that scope.
 
 44
 00:02:29.610 --> 00:02:32.099
-它的名字是 " 老师"
+它的名称是另一个Teacher。
 It has the name anotherTeacher.
 
 45
 00:02:32.099 --> 00:02:35.520
-所以我根本没解决命名冲突的问题，是吗 ?
-So I didn't really fix the naming
-collision problem at all, did I?
+所以我根本没有解决命名冲突问题，是吗？
+So I didn't really fix the naming collision problem at all, did I?
 
 46
 00:02:35.520 --> 00:02:37.198
-我只是把它转换成不同的变量名
-I just shifted it to
-a different variable name.
+我只是把它换成了一个不同的变量名。
+I just shifted it to a different variable name.
 
 47
 00:02:39.408 --> 00:02:42.370
->> Kyle Simpson: 我们现在确实有了一个新的范围，我们可以包含
-&gt;&gt; Kyle Simpson: It is true that we now
-have a new scope, and we can contain
+&gt；&gt；Kyle Simpson：没错，我们现在有了一个新的作用域，我们可以包含
+&gt;&gt; Kyle Simpson: It is true that we now have a new scope, and we can contain
 
 48
 00:02:42.370 --> 00:02:46.530
-该范围的任何赋值，但仍存在命名冲突问题。
-any assignments of that scope, but
-we still have a naming collision problem.
+该作用域的任何赋值，但我们仍然存在命名冲突问题。
+any assignments of that scope, but we still have a naming collision problem.
 
 49
 00:02:48.436 --> 00:02:51.572
->> 凯尔 - 辛普森: 软件开发中有一个原则，叫做
-&gt;&gt; Kyle Simpson: There's a principle
-within software development, it's called
+&gt；&gt；Kyle Simpson：软件开发中有一个原则，叫做
+&gt;&gt; Kyle Simpson: There's a principle within software development, it's called
 
 50
 00:02:51.572 --> 00:02:54.876
-最起码的原则或最少特权的原则，
-the principle of least exposure or
-the principle of least privilege,
+最小暴露原则或最小特权原则，
+the principle of least exposure or the principle of least privilege,
 
 51
 00:02:54.876 --> 00:02:58.389
-根据哪一个维基百科的页面或者你的 CS 教科书
-depending on which Wikipedia page or
-which CS textbook you had.
+取决于你拥有的维基百科页面或CS教科书。
+depending on which Wikipedia page or which CS textbook you had.
 
 52
 00:02:58.389 --> 00:03:01.789
-不管它叫什么，最不暴露的原则
-Either way, whatever it's called,
-the principle of least exposure or
+无论是哪种方式，不管它叫什么，最小暴露的原则
+Either way, whatever it's called, the principle of least exposure or
 
 53
 00:03:01.789 --> 00:03:03.710
-我很荣幸
+特权说的。
 privilege says this.
 
 54
 00:03:03.710 --> 00:03:07.198
-缺省情况下，您应该保持所有隐私，并且
-You should default to keeping
-everything private, and
+您应该默认将所有内容都保持私密，并且
+You should default to keeping everything private, and
 
 55
 00:03:07.198 --> 00:03:09.653
-只露出最低限度的必要
+只暴露最低限度的必要。
 only exposing the minimal necessary.
 
 56
 00:03:12.460 --> 00:03:15.360
->> 凯尔 - 辛普森: 这是软件工程的核心原则之一，
-&gt;&gt; Kyle Simpson: That's one of the core
-principles of software engineering,
+&gt；&gt；Kyle Simpson：这是软件工程的核心原则之一，
+&gt;&gt; Kyle Simpson: That's one of the core principles of software engineering,
 
 57
 00:03:15.360 --> 00:03:17.879
-因为它基本上设置了防御态势
-because it essentially sets
-up a defensive posture.
+因为它本质上建立了一种防御姿态。
+because it essentially sets up a defensive posture.
 
 58
 00:03:19.159 --> 00:03:23.860
-这是一种防御方法说我不想让我的东西
-It's a defensive approach that says,
-I don't wanna make my stuff available
+这是一种防御性的方法，它说，我不想让我的东西可用
+It's a defensive approach that says, I don't wanna make my stuff available
 
 59
 00:03:23.860 --> 00:03:25.960
-因为我不想要这些问题
-because I don't want
-these sorts of problems.
+因为我不想遇到这种问题。
+because I don't want these sorts of problems.
 
 60
 00:03:25.960 --> 00:03:30.469
-其实我们这个解决的主要问题有三个，
-As a matter of fact, there are three
-main problems that we solve by this
+事实上，我们通过这个解决了三个主要问题
+As a matter of fact, there are three main problems that we solve by this
 
 61
 00:03:30.469 --> 00:03:35.139
-最不曝光或最不普遍的原则的防御方法。
-defensive approach of the least
-exposure or least prevalent principle.
+最小暴露或最不流行原则的防御方法。
+defensive approach of the least exposure or least prevalent principle.
 
 62
 00:03:36.449 --> 00:03:39.590
-第一，我们有命名碰撞问题。
-Number one,
-we have naming collision problems.
+第一，我们有命名冲突的问题。
+Number one, we have naming collision problems.
 
 63
 00:03:39.590 --> 00:03:43.789
-如果在某个范围内隐藏某些内容，或者隐藏某个名称空间上的某些内容，或者
-And if you hide something within a scope,
-or hide something on a namespace or do
+如果您在一个范围内隐藏了一些东西，或者在名称空间中隐藏了一些东西或做了什么
+And if you hide something within a scope, or hide something on a namespace or do
 
 64
 00:03:43.789 --> 00:03:49.079
-一些其他的隐藏，然后你就减少了名称冲突的表面面积。
-some other sort of hiding, then you reduce
-the surface area for name collisions.
+其他类型的隐藏，然后减少名称冲突的表面积。
+some other sort of hiding, then you reduce the surface area for name collisions.
 
 65
 00:03:49.079 --> 00:03:51.280
-第一，我们有名字碰撞。
+所以第一，我们有名字冲突。
 So number one, we have name collisions.
 
 66
 00:03:51.280 --> 00:03:54.789
-第二如果你藏了什么就意味着
-Number two, if you hide something,
-it means that
+第二，如果你隐藏了什么，这意味着
+Number two, if you hide something, it means that
 
 67
 00:03:54.789 --> 00:03:59.469
-别人不可能无意中滥用了那个东西
-somebody else can't accidentally of
-intentionally misuse that thing.
+其他人不可能无意中故意滥用那个东西。
+somebody else can't accidentally of intentionally misuse that thing.
 
 68
 00:04:01.400 --> 00:04:05.780
-如果你公开曝光，每个人都可以使用它。
-If you expose it publicly,
-everybody can use it.
+如果你公开揭露它，每个人都可以使用它。
+If you expose it publicly, everybody can use it.
 
 69
 00:04:05.780 --> 00:04:09.250
-他们肯定会用它即使你告诉他们不要
-And they definitely will use it,
-even if you tell them not to.
+而且他们肯定会使用它，即使你告诉他们不要这样做。
+And they definitely will use it, even if you tell them not to.
 
 70
 00:04:09.250 --> 00:04:12.400
-如果它暴露了，你可以保证，在某个时候，有人会使用它。
-If it's exposed, you can guarantee that,
-at some point, somebody's gonna use it.
+如果它被暴露了，你可以保证，在某些时候，有人会使用它。
+If it's exposed, you can guarantee that, at some point, somebody's gonna use it.
 
 71
 00:04:12.400 --> 00:04:16.220
-所以如果你把它藏起来，你就不让他们存取。
-So if you hide it,
-then you prevent them from accessing it.
+所以如果你隐藏它，那么你就阻止他们访问它。
+So if you hide it, then you prevent them from accessing it.
 
 72
 00:04:17.680 --> 00:04:20.600
-但第三个可能是最核心的
-But the third one, and
-probably the most core and
+但第三个，也可能是最核心的
+But the third one, and probably the most core and
 
 73
 00:04:20.600 --> 00:04:23.752
-这个原则的重要原因，往往是被忽视的。
-important reason for this principle,
-it's often overlooked.
+这一原则的重要原因，它经常被忽视。
+important reason for this principle, it's often overlooked.
 
 74
 00:04:25.129 --> 00:04:28.970
-如果你隐藏某些东西就像那些执行细节一样
-If you hide something, like one of
-those implementation details, or
+如果你隐藏了一些东西，比如那些实现细节中的一个，或者
+If you hide something, like one of those implementation details, or
 
 75
 00:04:28.970 --> 00:04:33.730
-就像变量名一样，保护自己以进行未来重构。
-like a variable name, you protect
-yourself for future refactoring.
+就像变量名一样，您可以为将来的重构保护自己。
+like a variable name, you protect yourself for future refactoring.
 
 76
 00:04:35.449 --> 00:04:39.731
-你要是曝光了，几乎是保证，就得有 CS 的法律
-If you expose something, it's a guarantee
-almost, there's gotta be some CS law for
+如果你揭露了一些东西，这几乎是一种保证，必须有一些CS法律
+If you expose something, it's a guarantee almost, there's gotta be some CS law for
 
 77
 00:04:39.731 --> 00:04:42.634
-这是保证有人会使用它的
-this, it's a guarantee that
-somebody's gonna use it.
+这个，它保证有人会使用它。
+this, it's a guarantee that somebody's gonna use it.
 
 78
 00:04:42.634 --> 00:04:44.959
-一旦他们开始使用它
+一旦他们开始使用它，
 And as soon as they start using it,
 
 79
 00:04:44.959 --> 00:04:48.300
-现在你限制了你自由重构它的能力
-now you are restricted in your
-ability to freely refactor it.
+现在，您自由重构它的能力受到限制。
+now you are restricted in your ability to freely refactor it.
 
 80
 00:04:48.300 --> 00:04:51.199
-因为如果你重构，你就会破坏他们的代码。
-Because if you refactor,
-you break their code.
+因为如果你重构，你就破解了他们的代码。
+Because if you refactor, you break their code.
 
 81
 00:04:51.199 --> 00:04:54.540
-如果他们在组织中有足够的职称
-And if they have an important enough
-job title in the organization,
+如果他们在组织中有足够重要的职位，
+And if they have an important enough job title in the organization,
 
 82
 00:04:54.540 --> 00:04:56.423
-他们会把它压扁的对吧
+他们会把它压扁的对吧？
 they're gonna squash that, right?
 
 83
 00:04:59.011 --> 00:05:01.891
->> 凯尔 - 辛普森: 差不多就好像我见过几次
-&gt;&gt; Kyle Simpson: It's almost like I've
-seen that happen a few dozen times
+&gt；&gt；Kyle Simpson：这种情况我几乎见过几十次
+&gt;&gt; Kyle Simpson: It's almost like I've seen that happen a few dozen times
 
 84
 00:05:01.891 --> 00:05:04.160
-在我的节目生涯中，好吗 ?
+[笑]在我的编程生涯中，好吗？
 [LAUGH] in my programming career, okay?
 
 85
 00:05:04.160 --> 00:05:08.814
-所以藏东西最重要的原因之一就是防止
-So one of the most important reasons for
-hiding things is to prevent there being
+所以隐藏东西最重要的原因之一就是防止
+So one of the most important reasons for hiding things is to prevent there being
 
 86
 00:05:08.814 --> 00:05:12.848
-重叠的地方给你空间说你知道吗
-that sort of overlap, and
-give you the space to say, you know what?
+那种重叠，给你空间说，你知道吗？
+that sort of overlap, and give you the space to say, you know what?
 
 87
 00:05:12.848 --> 00:05:15.209
-我不想这样称呼它，我也不想让它成为一个数组。
-I don't want to call it that at all, and
-I don't want it to be an array at all.
+我根本不想这么叫它，我也不想让它成为一个数组。
+I don't want to call it that at all, and I don't want it to be an array at all.
 
 88
 00:05:15.209 --> 00:05:18.079
-我想把它重构为另一种方式
+我想把它改造成一种不同的方式。
 I wanna refactor it to be a different way.
 
 89
 00:05:18.079 --> 00:05:21.170
-这个原则是我们在我们的代码中所看到的。
-This principle is playing out in
-what we're seeing in our code.
+这一原则在我们的代码中体现出来。
+This principle is playing out in what we're seeing in our code.
 
 90
 00:05:21.170 --> 00:05:23.079
-在这个特殊的情况下，它是名称碰撞，但是
-In this particular case,
-it's the name collision, but
+在这个特殊的例子中，是名称冲突，但是
+In this particular case, it's the name collision, but
 
 91
 00:05:23.079 --> 00:05:26.089
-也可能是另外两个原因之一。
-it could have been either of
-the other two reasons as well.
+这也可能是其他两个原因中的任何一个。
+it could have been either of the other two reasons as well.
 
 92
 00:05:26.089 --> 00:05:28.540
-我们看到它在玩耍我们需要解决它
-We see it playing out and
-we need to solve it, and
+我们看到它的发展，我们需要解决它，并且
+We see it playing out and we need to solve it, and
 
 93
 00:05:28.540 --> 00:05:31.660
-我们需要解决这个问题的方式是我们对范围的理解。
-the way we need to solve it is it
-with our understanding of scope.
+我们需要用我们对范围的理解来解决它。
+the way we need to solve it is it with our understanding of scope.
 
 94
 00:05:31.660 --> 00:05:36.310
-但是，现在，这个功能的用途不是真的完成了这个任务，所以
-But, right now, this usage of a function
-is not really accomplishing that task, so
+但是，现在，函数的这种用法并没有真正完成任务，所以
+But, right now, this usage of a function is not really accomplishing that task, so
 
 95
 00:05:36.310 --> 00:05:39.420
-我们需要一个更好的方法来利用我们的知识范围
-we need a better way of using
-our knowledge of scope.
+我们需要一种更好的方式来利用我们对范围的知识。
+we need a better way of using our knowledge of scope.
 
 96
 00:05:40.540 --> 00:05:43.639
-我们需要创建一个作用域，比如一个功能，但是
-We need to create a scope,
-like with a function, but
+我们需要创建一个作用域，就像使用函数一样，但是
+We need to create a scope, like with a function, but
 
 97
 00:05:43.639 --> 00:05:47.439
-我们不需要用某种名字来污染封闭的范围
-we need to somehow not pollute
-the enclosing scope with some name, so
+我们需要以某种方式不用某些名称污染封闭范围，所以
+we need to somehow not pollute the enclosing scope with some name, so
 
 98
 00:05:47.439 --> 00:05:49.370
-我们没有这种命名冲突的问题
-that we don't have this
-naming collision issue.
+我们没有这个命名冲突的问题。
+that we don't have this naming collision issue.
 
 99
 00:05:50.970 --> 00:05:52.305
-要想办法做到这一点
+为了弄清楚如何做到这一点，
 To figure out how to do that,
 
 100
 00:05:52.305 --> 00:05:54.932
-我要带你穿过一个小的小推导
-I'm gonna take you through
-a small little derivation.
+我将带你经历一个小小的派生过程。
+I'm gonna take you through a small little derivation.
 
 101
 00:05:54.932 --> 00:05:59.620
-我想让你回到我们之前关于第 8 行的讨论
-I want you to go back to our earlier
-discussion about how the line 8 would
+我想让你回到我们之前关于第8行的讨论
+I want you to go back to our earlier discussion about how the line 8 would
 
 102
 00:05:59.620 --> 00:06:03.620
-执行，我希望您在这两个步骤中考虑这一问题。
-execute, and I want you to think
-about it in those two steps.
+执行，我希望你在这两个步骤中考虑一下。
+execute, and I want you to think about it in those two steps.
 
 103
 00:06:03.620 --> 00:06:07.259
-记住第一步是弄清楚大理石里有什么
-Remember, the first step was to
-figure out what's in the marble, and
+记住，第一步是弄清楚大理石里有什么，然后
+Remember, the first step was to figure out what's in the marble, and
 
 104
 00:06:07.259 --> 00:06:09.920
-然后第二步是括号来执行它。
-then the second step was
-the parentheses to execute it.
+然后第二步是执行它的括号。
+then the second step was the parentheses to execute it.
 
 105
 00:06:11.560 --> 00:06:15.899
-所以我想让你考虑两个步骤我要让它变得非常明显
-So I want you to think about those as two
-steps, and I'm gonna make it super obvious
+所以我想让你们把这两个步骤想成两个步骤，我会让它变得非常明显
+So I want you to think about those as two steps, and I'm gonna make it super obvious
 
 106
 00:06:15.899 --> 00:06:18.369
-在第一步前后用括号括起。
-by wrapping a parentheses
-around the first step.
+通过将第一步用圆括号括起来。
+by wrapping a parentheses around the first step.
 
 107
 00:06:20.050 --> 00:06:21.439
-顺便说下那个密码还有效
+顺便说一下，那个代码仍然有效。
 By the way, that code still works.
 
 108
 00:06:21.439 --> 00:06:23.759
-看起来很奇怪但它仍然有效
-It looks weird, but
-it still totally works.
+它看起来很奇怪，但它仍然完全有效。
+It looks weird, but it still totally works.
 
 109
 00:06:23.759 --> 00:06:26.689
-您可以将圆括号括在某个功能上，但它仍将执行。
-You can put parentheses around
-a function and it's still gonna execute.
+你可以把一个函数放在圆括号里，它仍然可以执行。
+You can put parentheses around a function and it's still gonna execute.
 
 110
 00:06:26.689 --> 00:06:30.312
-它要执行的原因是它会做同样的事
-And the reason it's gonna execute is
-cuz it's gonna do the same thing as in
+它会执行的原因是因为它会做同样的事情
+And the reason it's gonna execute is cuz it's gonna do the same thing as in
 
 111
 00:06:30.312 --> 00:06:34.228
-之前的幻灯片本质上是要获取该变量中的值
-the previous slide, essentially, which
-is to go get the value in that variable
+上一张幻灯片本质上是获取该变量中的值
+the previous slide, essentially, which is to go get the value in that variable
 
 112
 00:06:34.228 --> 00:06:37.574
-首先，第二组括号将执行它。
-first, and then the second set of
-parentheses is gonna execute it.
+首先，然后第二组括号将执行它。
+first, and then the second set of parentheses is gonna execute it.

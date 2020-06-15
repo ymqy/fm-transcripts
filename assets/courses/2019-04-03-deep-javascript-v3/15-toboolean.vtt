@@ -2,15 +2,13 @@ WEBVTT
 
 1
 00:00:00.390 --> 00:00:02.879
->> Kyle Simpson: 最后，让我们看看 ToBoolean 抽象操作。
-&gt;&gt; Kyle Simpson: And finally, let's look
-at the ToBoolean abstract operation.
+&gt；&gt；Kyle Simpson：最后，让我们看看ToBoolean抽象操作。
+&gt;&gt; Kyle Simpson: And finally, let's look at the ToBoolean abstract operation.
 
 2
 00:00:02.879 --> 00:00:05.710
-顺便说下，这四个是我们所看到的，两个原始，两个字符串，
-And by the way, these four are what we're
-looking at, two primitive, two string,
+顺便说一下，这四个就是我们现在看到的，两个原始的，两个字符串，
+And by the way, these four are what we're looking at, two primitive, two string,
 
 3
 00:00:05.710 --> 00:00:07.160
@@ -19,150 +17,133 @@ two number, and two Boolean.
 
 4
 00:00:07.160 --> 00:00:10.580
-还存在其他引用和使用的抽象操作。
-There are other abstract operations
-that they refer to and use.
+还有它们引用和使用的其他抽象操作。
+There are other abstract operations that they refer to and use.
 
 5
 00:00:10.580 --> 00:00:12.445
-所以如果你好奇的话就读这些规范
-So read those in the spec
-if you're curious, but
+所以如果你好奇的话，请阅读规范中的内容，但是
+So read those in the spec if you're curious, but
 
 6
 00:00:12.445 --> 00:00:14.319
-这些是你要做的主要的
-these are the major ones
-you're gonna run into.
+这些是你将要遇到的主要问题。
+these are the major ones you're gonna run into.
 
 7
 00:00:14.319 --> 00:00:19.574
-因此，在该规范中， " ToBoolean" 第 7.1.2 节。
+因此ToBoolean，规范中的第7.1.2节。
 So ToBoolean, section 7.1.2 in the spec.
 
 8
 00:00:19.574 --> 00:00:22.629
-任何时候都有任何不是布尔值的值，并且
-Anytime you have any value
-that is not a Boolean, and
+任何时候您有任何不是布尔值的值，并且
+Anytime you have any value that is not a Boolean, and
 
 9
 00:00:22.629 --> 00:00:26.929
-它是在一个需要一个布尔型的地方使用的。
-it's used in a place that needs a Boolean,
-this operation occurs.
+它用于需要布尔值的地方，发生此操作。
+it's used in a place that needs a Boolean, this operation occurs.
 
 10
 00:00:26.929 --> 00:00:29.379
-和其他的完全一样好吗
+和其他的一模一样，好吗？
 Exactly the same as the other ones, okay?
 
 11
 00:00:29.379 --> 00:00:33.630
-此操作较少算法和更多查找。
-This operation is less algorithmic and
-more lookup.
+此操作的算法较少，查找较多。
+This operation is less algorithmic and more lookup.
 
 12
 00:00:34.810 --> 00:00:38.740
-除了说这个值之外还有别的事情要做
-There's not really anything to do,
-other than to say, is the value,
+其实没什么可做的，除了说，就是价值，
+There's not really anything to do, other than to say, is the value,
 
 13
 00:00:38.740 --> 00:00:43.119
-我们所谓的谬误，或者不是，这才是唯一的问题。
-what we call falsy, or not,
-that's really the only question here.
+我们所谓的错误，或者不是，这是这里唯一的问题。
+what we call falsy, or not, that's really the only question here.
 
 14
 00:00:43.119 --> 00:00:45.420
-所以基本上有一个查找表。
+所以本质上有一个查询表。
 So there's essentially a look up table.
 
 15
 00:00:45.420 --> 00:00:49.700
-这个字号的字面上说，这里就是其中一个的价值
-Literally in the spec, that says, here is
-the value of one of these things if so
+说明书中的字面意思是，如果是这样的话，这里是其中一个东西的价值
+Literally in the spec, that says, here is the value of one of these things if so
 
 16
 00:00:49.700 --> 00:00:55.250
-返回 false，表示 false 值是从 ToBoolean 返回的值。
-return false, meaning the false value
-is what came back from ToBoolean.
+返回false，意味着false值是从ToBoolean返回的值。
+return false, meaning the false value is what came back from ToBoolean.
 
 17
 00:00:55.250 --> 00:00:57.810
-否则就回到现实吧
+否则只返回true。
 And otherwise just return true.
 
 18
 00:00:57.810 --> 00:01:03.679
-因此，它定义了一个我们称为 " 谬误值" 的非常具体的和简短的有限列表。
-So it defines a very specific and short
-limited list of what we call falsy values.
+因此，它定义了一个非常具体且有限的列表，我们称之为伪值。
+So it defines a very specific and short limited list of what we call falsy values.
 
 19
 00:01:03.679 --> 00:01:08.140
-这是当强制使用布尔值时将返回 false 的值，
-That is values that will return
-false when coerced to a Boolean,
+即强制为布尔值时将返回false的值，
+That is values that will return false when coerced to a Boolean,
 
 20
 00:01:09.920 --> 00:01:12.719
-以及任何可以将其胁迫为布尔值的方法。
-and any of the various ways that
-you can coerce to a Boolean.
+以及可以强制使用布尔值的各种方法中的任何一种。
+and any of the various ways that you can coerce to a Boolean.
 
 21
 00:01:12.719 --> 00:01:13.920
-这些都是谬误的价值观。
+这些是虚假的价值观。
 These are the falsy values.
 
 22
 00:01:13.920 --> 00:01:18.010
-空字符串，为 0， null， NaN， false和
-The empty string, either of the 0,
-the null, the NaN, the false, and
+空字符串，0、NULL、NaN、FALSE和
+The empty string, either of the 0, the null, the NaN, the false, and
 
 23
 00:01:18.010 --> 00:01:19.099
-未定义。
+未定义的。
 the undefined.
 
 24
 00:01:19.099 --> 00:01:21.756
-这些都是我们的谬论。
+这些都是我们虚假的价值观。
 Those are our falsy values.
 
 25
 00:01:25.438 --> 00:01:30.659
->> 凯尔 - 辛普森: 如果不在名单上，它永远是真实的，好吗 ?
-&gt;&gt; Kyle Simpson: If it's not on that list,
-it is always truthy, okay?
+&gt；&gt；Kyle Simpson：如果它不在那个列表上，它总是真实的，好吗？
+&gt;&gt; Kyle Simpson: If it's not on that list, it is always truthy, okay?
 
 26
 00:01:30.659 --> 00:01:32.400
-如果不在名单上就好了
+如果它不在名单上，它是真实的。
 If it's not on the list, it is truthy.
 
 27
 00:01:32.400 --> 00:01:36.036
-这个列表上的一些例子是无限长的。
-So some examples of things on that list,
-that list is infinitely long.
+所以那个清单上的一些例子，那个清单是无限长的。
+So some examples of things on that list, that list is infinitely long.
 
 28
 00:01:36.036 --> 00:01:38.680
-但有些例子是一串字符串
+但有些例子是字符串，
 But some examples would be a string,
 
 29
 00:01:38.680 --> 00:01:42.442
-数字，对象，数组， true，函数。
-a number, an object,
-an array, true, function.
+数字，对象，数组，真，函数。
+a number, an object, an array, true, function.
 
 30
 00:01:42.442 --> 00:01:43.539
@@ -171,108 +152,95 @@ Those are all truthy values.
 
 31
 00:01:44.960 --> 00:01:46.609
-让我们看看你是否在关注
+让我们看看你是否注意到了。
 Let's see if you're paying attention.
 
 32
 00:01:46.609 --> 00:01:52.939
-如果尝试两个布尔值为空数组，那么会发生什么情况 ?
-What would happen if you try
-to two Boolean an empty array?
+如果你尝试两个布尔值一个空数组会发生什么？
+What would happen if you try to two Boolean an empty array?
 
 33
 00:01:52.939 --> 00:01:55.259
-这会是真的吗还是假的
+它是真实的还是虚假的？
 Would it be truthy or would it be falsy?
 
 34
 00:01:55.259 --> 00:01:58.969
-非常关注我对 ToBoolean的描述
-So pay very close attention to
-how I describe to ToBoolean,
+所以请密切注意我对ToBoolean的描述，
+So pay very close attention to how I describe to ToBoolean,
 
 35
 00:01:58.969 --> 00:02:02.599
-它不调用这两种基本算法。
-it does not invoke the two
-primitive algorithm.
+它不调用两个原始算法。
+it does not invoke the two primitive algorithm.
 
 36
 00:02:02.599 --> 00:02:07.989
-或者这两个数字，或者这个字符串，或者任何东西，它只会查一查。
-Or the two number, or the to string,
-or anything, it just does a look up.
+或者两个数字，或者TO字符串，或者其他任何东西，它只是进行查找。
+Or the two number, or the to string, or anything, it just does a look up.
 
 37
 00:02:09.210 --> 00:02:12.728
-那么名单上的空行是空话吗 ?
-So is the empty array
-on the falsy the list?
+那么，false上的空数组是列表吗？
+So is the empty array on the falsy the list?
 
 38
 00:02:12.728 --> 00:02:13.473
->> class: 否。
+&gt；&gt；类：否。
 &gt;&gt; class: No.
 
 39
 00:02:13.473 --> 00:02:14.212
->> Kyle Simpson: 那么它必须返回什么 ?
+&gt；&gt；Kyle Simpson：那么它必须返回什么？
 &gt;&gt; Kyle Simpson: So what must it return?
 
 40
 00:02:14.212 --> 00:02:14.993
->> class: Truthy。
+&gt；&gt；类：真实。
 &gt;&gt; class: Truthy.
 
 41
 00:02:14.993 --> 00:02:16.872
->> Kyle Simpson: True，好吗 ?
+&gt；&gt；Kyle Simpson：真的，好吗？
 &gt;&gt; Kyle Simpson: True, okay?
 
 42
 00:02:16.872 --> 00:02:20.532
-那是你对 Booleans 做决定的关键
-That's a key thing to keep in your
-mind when you're doing to Booleans,
+当你对布尔值做的时候，这是你要记住的一件关键事情，
+That's a key thing to keep in your mind when you're doing to Booleans,
 
 43
 00:02:20.532 --> 00:02:24.689
-当事情发生的时候就没有其他的胁迫的事情发生了
-when that's what's happening,
-there's no other coercion stuff happening.
+当这就是正在发生的事情，就没有其他强迫的事情发生了。
+when that's what's happening, there's no other coercion stuff happening.
 
 44
 00:02:24.689 --> 00:02:27.829
-这只是个直说的问题，是有还是没有。
-It's just a straight look up,
-is it there or is it not.
+只是直视一下，到底有没有。
+It's just a straight look up, is it there or is it not.
 
 45
 00:02:27.829 --> 00:02:30.879
-不能将值覆盖为字符串或任何内容。
-You can't override it with a value
-over to string or anything.
+您不能用字符串或任何值覆盖它。
+You can't override it with a value over to string or anything.
 
 46
 00:02:30.879 --> 00:02:33.310
-只是在名单上还是不在名单上
-It's just is it on the list or
-is it not, okay?
+只是它在名单上还是不在，好吗？
+It's just is it on the list or is it not, okay?
 
 47
 00:02:34.939 --> 00:02:37.170
-这就是我们如何得到我们的谬误和真实价值的。
-So that's how we get our falsy and
-truthy values.
+所以这就是我们如何得到虚假和真实的价值观。
+So that's how we get our falsy and truthy values.
 
 48
 00:02:37.170 --> 00:02:39.560
-本质上记住名单上的谬误
-Essentially, memorize the falsy the list,
-and
+本质上，记住列表中的错误，并且
+Essentially, memorize the falsy the list, and
 
 49
 00:02:39.560 --> 00:02:43.389
-那么总是问下那个名单上的价值如果是那么虚假的话，否则它必须是真实的。
-then always ask is the value on that list
-if so falsy, otherwise, it must be truthy.
+然后总是问列表上的值是不是假的，否则，它必须是真的。
+then always ask is the value on that list if so falsy, otherwise, it must be truthy.

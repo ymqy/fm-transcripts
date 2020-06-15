@@ -2,9 +2,8 @@ WEBVTT
 
 1
 00:00:00.080 --> 00:00:02.830
->> 凯尔 - 辛普森: 当我们谈论功能时，我们可以变得更成熟
-&gt;&gt; Kyle Simpson: We can get much more
-sophisticated when we talk about function
+&gt；&gt；Kyle Simpson：当我们谈论功能时，我们可以变得更加复杂
+&gt;&gt; Kyle Simpson: We can get much more sophisticated when we talk about function
 
 2
 00:00:02.830 --> 00:00:04.719
@@ -13,151 +12,130 @@ parameters and return values.
 
 3
 00:00:04.719 --> 00:00:08.397
-您可以定义类似的定制类型。
+您可以像这样定义自定义类型。
 You can define custom types like this.
 
 4
 00:00:08.397 --> 00:00:13.355
-我正在定义一个类型的对象，该对象具有名为 " 名称 " 的属性
-Here I'm defining that an object of a type
-that has a property called name that is
+在这里，我定义了一个类型的对象，该对象具有一个名为name的属性，该属性是
+Here I'm defining that an object of a type that has a property called name that is
 
 5
 00:00:13.355 --> 00:00:15.859
-类型为字符串的类型。
+类型的字符串，则这是一种类型。
 of type string, that is a type.
 
 6
 00:00:15.859 --> 00:00:19.719
-然后，我可以将该类型的值作为参数传递。
-And then I can pass values
-of that type as parameters.
+然后我可以将该类型的值作为参数传递。
+And then I can pass values of that type as parameters.
 
 7
 00:00:19.719 --> 00:00:23.190
-我可以将值作为参数接收回来。
-And I can receive values
-back as parameters.
+并且我可以将值作为参数接收回来。
+And I can receive values back as parameters.
 
 8
 00:00:23.190 --> 00:00:27.390
-所以我就在这个类型的学生的 studentRec 中。
-So here I am passing in
-studentRec of the type student.
+所以在这里我传入了这类学生的StudentRec。
+So here I am passing in studentRec of the type student.
 
 9
 00:00:27.390 --> 00:00:29.100
-如果你愿意我正在定义自己的类型
+如果你愿意，我在定义我自己的类型。
 I'm defining my own type if you will.
 
 10
 00:00:30.670 --> 00:00:34.409
-因此，您可以定义这些定制类型更强大。
-So it's much more powerful in that
-you can define these custom types.
+因此，它的功能更强大，因为您可以定义这些自定义类型。
+So it's much more powerful in that you can define these custom types.
 
 11
 00:00:34.409 --> 00:00:38.295
-而这个程序，就是明确的，这个程序没有任何错误。
-And this program, just to be clear,
-this program doesn't have any errors.
+而这个程序，只需要说明一下，这个程序没有任何错误。
+And this program, just to be clear, this program doesn't have any errors.
 
 12
 00:00:38.295 --> 00:00:43.014
-因为它知道当我在第 4 行第 4 行返回 studentRec.name时，
-Because what it knows is that when I
-do line 4 a return of studentRec.name,
+因为它知道的是，当我在第4行执行StudentRec.name的返回时，
+Because what it knows is that when I do line 4 a return of studentRec.name,
 
 13
 00:00:43.014 --> 00:00:47.750
-它知道 studentRec 是带有字符串的名称属性的对象。
-it knows that studentRec was an object
-with a name property that was string.
+它知道StudentRec是一个名称属性为String的对象。
+it knows that studentRec was an object with a name property that was string.
 
 14
 00:00:47.750 --> 00:00:49.609
-所以它知道它正在返回一个字符串
+所以它知道它返回的是一个字符串
 So it knows it's returning a string and
 
 15
 00:00:49.609 --> 00:00:52.776
-当第 9 行我尝试给它分配一个字符串它知道一切都很好
-when line 9 I try to assign it
-a string it knows everything is fine.
+当第9行我尝试给它分配一个字符串时，它知道一切都很好。
+when line 9 I try to assign it a string it knows everything is fine.
 
 16
 00:00:52.776 --> 00:00:57.017
 但你会注意到大部分的保证
-But you'll notice that
-most of the guarantee
+But you'll notice that most of the guarantee
 
 17
 00:00:57.017 --> 00:01:01.377
-这是正确分配的东西。
-here is are things being
-assigned correctly.
+以下是正确分配的内容。
+here is are things being assigned correctly.
 
 18
 00:01:01.377 --> 00:01:03.259
-是否为他们分配了正确的类型 ?
+是否为它们分配了正确的类型？
 Are they being assigned the right types?
 
 19
 00:01:04.760 --> 00:01:08.969
-函数的参数与变量类似。
-A parameter to a function
-is a lot like a variable.
+函数的参数很像变量。
+A parameter to a function is a lot like a variable.
 
 20
 00:01:08.969 --> 00:01:12.704
-如果你是说我只能通过数字
-If you're saying I wanna only be
-able to pass in numbers, then you're
+如果你是说我只想通过数字，那么你就是
+If you're saying I wanna only be able to pass in numbers, then you're
 
 21
 00:01:12.704 --> 00:01:16.838
-就像我想要这个变量只保存数字一样
-basically saying the same thing as I
-want this variable to only hold numbers.
+基本上就像我希望这个变量只包含数字一样。
+basically saying the same thing as I want this variable to only hold numbers.
 
 22
 00:01:18.959 --> 00:01:23.376
->> Kyle Simpson: 我要使用的内容如 typescript 我可能要定义
-&gt;&gt; Kyle Simpson: Where I to uses something
-like typescript I probably would define
+&gt；&gt；Kyle Simpson：我在哪里使用像打字稿这样的东西，我可能会定义
+&gt;&gt; Kyle Simpson: Where I to uses something like typescript I probably would define
 
 23
 00:01:23.376 --> 00:01:27.430
-我的很多参数都是工会的类型
-many more of my parameters
-as say union types.
+我的更多参数，如联合类型。
+many more of my parameters as say union types.
 
 24
 00:01:27.430 --> 00:01:31.879
-或者我说，你知道，我要允许字符串，数字和空值。
-Or I would say, you know what, I'm gonna
-allow strings, numbers, and nulls.
+或者我会说，你知道吗，我会允许字符串，数字和空值。
+Or I would say, you know what, I'm gonna allow strings, numbers, and nulls.
 
 25
 00:01:31.879 --> 00:01:36.000
-因为难得的是我要它这么严格的
-Because it's rare that I want it to be so
-restrictive
+因为我很少希望它如此限制性
+Because it's rare that I want it to be so restrictive
 
 26
 00:01:36.000 --> 00:01:40.000
-例如，它只能接收到这种结构化对象。
-that it can only ever receive exactly this
-kind of structured object for example.
+例如，它只能准确地接收这种结构化对象。
+that it can only ever receive exactly this kind of structured object for example.
 
 27
 00:01:41.979 --> 00:01:46.719
-不过还是能做点有用的
-But nevertheless,
-it's able to do some very useful
+但无论如何，它能够做一些非常有用的事情
+But nevertheless, it's able to do some very useful
 
 28
 00:01:46.719 --> 00:01:50.729
-保证您所遇到的问题是否为类型的错误分配。
-guarantees if the problems that you
-have are misassignments of types.
+保证您所遇到的问题是类型的错误分配。
+guarantees if the problems that you have are misassignments of types.

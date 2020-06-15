@@ -2,1279 +2,1100 @@ WEBVTT
 
 1
 00:00:00.220 --> 00:00:05.076
->> 凯尔 - 辛普森: 作为我们的基金会，那些抽象的
-&gt;&gt; Kyle Simpson: With those as our
-foundation, those abstract operations as
+&gt；&gt；Kyle Simpson：以这些为基础，这些抽象操作作为
+&gt;&gt; Kyle Simpson: With those as our foundation, those abstract operations as
 
 2
 00:00:05.076 --> 00:00:11.569
-我们的基础现在是我们切换齿轮，真正的威逼话题的时候了。
-our foundation it is now time for us to
-switch gears and really topic of coercion.
+我们的基础现在是我们换档和真正的强制话题的时候了。
+our foundation it is now time for us to switch gears and really topic of coercion.
 
 3
 00:00:11.569 --> 00:00:14.971
-就像我在外面说的一样这需要
-And by the way as I said at the out set,
-this is going to require for
+顺便说一句，正如我在片场所说的，这将需要
+And by the way as I said at the out set, this is going to require for
 
 4
 00:00:14.971 --> 00:00:19.003
-你能从我的计划中得到任何东西
-you to get anything out of what I'm about
-to say over this next bit it's gonna
+如果你能从我接下来要说的话中得到任何东西，它将会
+you to get anything out of what I'm about to say over this next bit it's gonna
 
 5
 00:00:19.003 --> 00:00:20.768
-要求你敞开心心
+要求你有一个开放的心态。
 require you to have an open mind.
 
 6
 00:00:20.768 --> 00:00:24.295
-因为你被安排好相信这是一个邪恶的模糊
-Because you have been so programmed
-to believe that this is an evil buggy
+因为你天生就相信这是一辆邪恶的马车
+Because you have been so programmed to believe that this is an evil buggy
 
 7
 00:00:24.295 --> 00:00:26.882
-你应该避免的 JavaScript 的可怕部分
-horrible part of JavaScript
-that you should avoid,
+JavaScript中应该避免的可怕部分，
+horrible part of JavaScript that you should avoid,
 
 8
 00:00:26.882 --> 00:00:30.820
-很难看到这个讨论的价值和价值
-that it's hard to see any value or
-merit out of this discussion.
+很难从这个讨论中看到任何价值或价值。
+that it's hard to see any value or merit out of this discussion.
 
 9
 00:00:30.820 --> 00:00:34.109
-但我把它放在了这个课程的顶端
-But I make it such a point of put
-it in the very top of this course
+但我把它放在这门课程的顶端
+But I make it such a point of put it in the very top of this course
 
 10
 00:00:34.109 --> 00:00:37.109
-因为我觉得它是最受重视的
-because I think it's one of
-the most under valued and
+因为我认为这是最被低估的
+because I think it's one of the most under valued and
 
 11
 00:00:37.109 --> 00:00:41.100
-在所有 JavaScript中都是这样
-under looked that things
-in all of JavaScript.
+下面看一下所有JavaScript中的东西。
+under looked that things in all of JavaScript.
 
 12
 00:00:41.100 --> 00:00:45.060
-首先我知道你们大多数人都遵循这一行为
-So to start off with I know most
-of you follow that behavior and
+所以首先，我知道你们大多数人都遵循这种行为
+So to start off with I know most of you follow that behavior and
 
 13
 00:00:45.060 --> 00:00:47.960
-这条建议说不我只是躲避强迫人
-that advice that says,
-no I just avoid coercions.
+那条建议说，不，我只是避免强迫。
+that advice that says, no I just avoid coercions.
 
 14
 00:00:47.960 --> 00:00:54.109
-我用的是三等，我不处理类型，不是那么多。
-I just use the triple equals,
-I don't deal with types, not so much.
+我只是使用三重等于，我不处理类型，也不是很多。
+I just use the triple equals, I don't deal with types, not so much.
 
 15
 00:00:54.109 --> 00:00:57.689
-我们来看一些已经在进行胁迫的例子
-Let's look at some examples where
-you're already doing coercion
+让我们看看一些示例，在这些示例中，您已经在进行强制
+Let's look at some examples where you're already doing coercion
 
 16
 00:00:57.689 --> 00:00:58.649
-不管你意识到与否
+不管你有没有意识到。
 whether you realize it or not.
 
 17
 00:00:59.990 --> 00:01:06.283
-您几年前是否使用了 ES6 ( 模板字面值字符串) ?
-Any of you use the ES6 as of a few years
-ago, the template-literal strings?
+有没有人在几年前使用ES6，模板文字字符串？
+Any of you use the ES6 as of a few years ago, the template-literal strings?
 
 18
 00:01:06.283 --> 00:01:08.319
-嗯。 我一定要把这些都用在这里
-Yeah.
-I certainly use these all over the place.
+是啊。我肯定到处都在用这些。
+Yeah. I certainly use these all over the place.
 
 19
 00:01:08.319 --> 00:01:09.569
-这是一种缓慢燃烧的过程。
+这是一个缓慢的烧伤。
 This is one of those slow burns.
 
 20
 00:01:09.569 --> 00:01:12.129
-当我第一次出来的时候，我不太关心这个功能，
-Cuz when it first came out, I didn't
-really care about this feature, and
+因为当它第一次出现的时候，我并不是真的关心这个功能，而且
+Cuz when it first came out, I didn't really care about this feature, and
 
 21
 00:01:12.129 --> 00:01:14.000
-现在我喜欢这个功能
+现在我喜欢这个功能。
 now I love this feature.
 
 22
 00:01:14.000 --> 00:01:16.189
-可能是我最喜欢的三种特色
-Might be on my top three
-favorite features.
+可能是我最喜欢的三个功能。
+Might be on my top three favorite features.
 
 23
 00:01:16.189 --> 00:01:19.049
-我一直使用它，尤其是在 colsole.log 语句中。
-I use it all the time,
-especially in my colsole.log statements.
+我一直在使用它，特别是在我的colsole.log语句中。
+I use it all the time, especially in my colsole.log statements.
 
 24
 00:01:19.049 --> 00:01:21.719
-我到处都是用它我喜欢模板线
-I just use it everywhere and
-I love template strings.
+我只是到处使用它，我喜欢模板字符串。
+I just use it everywhere and I love template strings.
 
 25
 00:01:21.719 --> 00:01:25.219
-如果你把值放到这些表情里
-And if you drop in values
-into those expressions,
+如果您将值放入这些表达式中，
+And if you drop in values into those expressions,
 
 26
 00:01:25.219 --> 00:01:31.769
-可能和你们所有人都一样
-that aren't already strings,
-probably, like all of you.
+可能，就像你们所有人一样，那些已经不是弦的东西。
+that aren't already strings, probably, like all of you.
 
 27
 00:01:31.769 --> 00:01:32.754
-猜猜发生了什么
+猜猜那里发生了什么？
 Guess, what's happening there?
 
 28
 00:01:32.754 --> 00:01:37.774
-那个号码是暗指邪恶的
-That number is getting coers to a string,
-implicitly, evil,
+这个数字让Coers变成了一个字符串，隐含的，邪恶的，
+That number is getting coers to a string, implicitly, evil,
 
 29
 00:01:37.774 --> 00:01:42.939
-你已经在做强逼的事了
-you're already doing coercion,
-all of you, period.
+你们已经在强迫了，你们所有人，就是这样。
+you're already doing coercion, all of you, period.
 
 30
 00:01:42.939 --> 00:01:45.150
-不管道格 - 克劳福说过什么你都在胁迫我
-No matter what Doug Crawford said,
-you're doing coercion,
+不管道格·克劳福德说什么你都在强迫
+No matter what Doug Crawford said, you're doing coercion,
 
 31
 00:01:45.150 --> 00:01:47.799
-你依赖的是你的计划中的胁迫
-you're relying upon
-coercion in your programs.
+你在你的程序中依赖强制。
+you're relying upon coercion in your programs.
 
 32
 00:01:47.799 --> 00:01:51.129
-这并不是一件坏事，这是一件非常好的事情。
-And that's not a bad thing,
-that's a perfectly great thing.
+这不是一件坏事，这是一件非常棒的事情。
+And that's not a bad thing, that's a perfectly great thing.
 
 33
 00:01:51.129 --> 00:01:55.670
-但在封面下你应该有一个心理模型
-But under the covers, you should have
-the mental model that what's happening
+但在掩护之下，你应该有一个心智模型，知道发生了什么
+But under the covers, you should have the mental model that what's happening
 
 34
 00:01:55.670 --> 00:01:59.408
-我要带一个字符串， msg1 ，并将它添加到数字中。
-here is I'm taking a string,
-msg1, and adding it to a number.
+这是我取一个字符串，msg1，并把它加到一个数字上。
+here is I'm taking a string, msg1, and adding it to a number.
 
 35
 00:02:01.388 --> 00:02:04.549
->> 凯尔 - 辛普森: 现在，为什么最终会产生一种胁迫呢 ?
-&gt;&gt; Kyle Simpson: Now,
-why is that end up producing a coercion?
+&GT；&GT；Kyle Simpson：现在，为什么最终会产生一种胁迫？
+&gt;&gt; Kyle Simpson: Now, why is that end up producing a coercion?
 
 36
 00:02:05.819 --> 00:02:08.770
-其实是在调用另一个小魔法
-Well, it's actually invoking
-another a little magical
+嗯，它实际上调用了另一个小魔术
+Well, it's actually invoking another a little magical
 
 37
 00:02:08.770 --> 00:02:12.740
-程序员喜欢做的事情就是我们的操作员过载了
-thing that programmers love to do which
-is we've got operator overloading.
+程序员喜欢做的事情就是我们有运算符重载。
+thing that programmers love to do which is we've got operator overloading.
 
 38
 00:02:13.979 --> 00:02:17.959
-通常认为加号运算符正在进行数字操作。
-The plus operator is normally thought
-of is doing numerical operation.
+加运算符通常被认为是在做数值运算。
+The plus operator is normally thought of is doing numerical operation.
 
 39
 00:02:19.129 --> 00:02:19.900
-我的意思是 ...
+想什么？
 Thought?
 
 40
 00:02:19.900 --> 00:02:25.650
-这个规范说如果你用一个字符串加上一个加运算符
-The spec says that if you use the plus
-operator with something that's a string,
+规范说，如果您将加号运算符与字符串一起使用，
+The spec says that if you use the plus operator with something that's a string,
 
 41
 00:02:25.650 --> 00:02:27.960
-这里有很多你可能做过的例子
-and here's an example that lot
-of you have probably done.
+这里有一个你们很多人可能都做过的例子。
+and here's an example that lot of you have probably done.
 
 42
 00:02:27.960 --> 00:02:30.240
-将空字符串添加到要将其转换为数字的字符串。
-Add an empty string to a thing
-to turn it into a number.
+向事物添加空字符串以将其转换为数字。
+Add an empty string to a thing to turn it into a number.
 
 43
 00:02:30.240 --> 00:02:33.340
-你有没有停下来想过这有多好
-Did you ever stop to
-wonder how that worked?
+你有没有停下来想过这是怎么回事？
+Did you ever stop to wonder how that worked?
 
 44
 00:02:33.340 --> 00:02:35.960
-因为幽灵说那个加操作工
-Well, it's because the specs
-says that the plus operator.
+这是因为说明书上说加号运算符。
+Well, it's because the specs says that the plus operator.
 
 45
 00:02:37.129 --> 00:02:41.750
-如果其中一个是字符串，请注意，如果其中一个是字符串，那么通知
-If either one of them is a string, notice
-that or there, if either one of them is
+如果它们中的任何一个是字符串，请注意或那里，如果它们中的任何一个是
+If either one of them is a string, notice that or there, if either one of them is
 
 46
 00:02:41.750 --> 00:02:45.408
-字符串，加号运算符更喜欢字符串并置。
-a string, the plus operator
-prefers string concatenation.
+字符串时，加号运算符更喜欢字符串连接。
+a string, the plus operator prefers string concatenation.
 
 47
 00:02:48.139 --> 00:02:50.368
->> Kyle Simpson: 这意味着，如果其中一个是字符串，
-&gt;&gt; Kyle Simpson: Which means,
-if only one of them is a string,
+&gt；&gt；Kyle Simpson：这意味着，如果其中只有一个是字符串，
+&gt;&gt; Kyle Simpson: Which means, if only one of them is a string,
 
 48
 00:02:50.368 --> 00:02:52.620
-你猜另一个会怎么样
-guess what's gonna
-happen to the other one?
+猜猜另一个会发生什么？
+guess what's gonna happen to the other one?
 
 49
 00:02:53.800 --> 00:02:57.219
-一个两弦的手术在 7.a
+两个字符串的操作就在那里，在7.A。
 A two-string operation right there on 7.a.
 
 50
 00:02:57.219 --> 00:03:00.400
-它会对它发出两串抽象的运算
-It's gonna call a two string
-abstract operation on it, and
+它将对其调用两个字符串的抽象操作，并且
+It's gonna call a two string abstract operation on it, and
 
 51
 00:03:00.400 --> 00:03:03.860
-把它变成一个绳子上面有所有怪胎
-turn it in to a string with all of
-the weirdnesses in caveats there of.
+把它变成一个字符串，里面有所有的怪异之处。
+turn it in to a string with all of the weirdnesses in caveats there of.
 
 52
 00:03:05.069 --> 00:03:09.930
-当它是一个很有格式的数字，就像号码 16 ，没有这么大的交易。
-When it's a well formed number,
-like the number 16, not such a big deal.
+当它是一个格式良好的数字时，比如数字16，没什么大不了的。
+When it's a well formed number, like the number 16, not such a big deal.
 
 53
 00:03:09.930 --> 00:03:12.430
-但有很多关于数字的转角处
-But there's lots of corner
-cases on numbers, and
+但是在数字上有很多拐角处的情况，而且
+But there's lots of corner cases on numbers, and
 
 54
 00:03:12.430 --> 00:03:16.389
-很多街角的案例都是关于其他价值的，你只是很高兴地调用这些东西
-lots of corner cases on other values, and
-you're just invoking these things happily,
+很多关于其他值的转角情况，你只是愉快地调用这些东西，
+lots of corner cases on other values, and you're just invoking these things happily,
 
 55
 00:03:16.389 --> 00:03:19.308
-一点都不担心你在用高压手段
-and not worrying at all,
-about the fact that you're using coercion.
+一点也不担心你在使用强制手段。
+and not worrying at all, about the fact that you're using coercion.
 
 56
 00:03:20.759 --> 00:03:23.719
-不我不是来告诉你不要用胁迫我是来告诉你的
-No, I'm not here to tell you to stop
-using coercion, I'm here to tell you
+不，我不是来告诉你停止使用胁迫的，我是来告诉你
+No, I'm not here to tell you to stop using coercion, I'm here to tell you
 
 57
 00:03:23.719 --> 00:03:25.990
-你用的是威逼，所以你就不明白了吗 ?
-you're using coercion, so wouldn't
-it make sense for you to learn it?
+你在使用强制，所以学习它对你来说不是有意义的吗？
+you're using coercion, so wouldn't it make sense for you to learn it?
 
 58
 00:03:27.000 --> 00:03:29.449
-这就是我们潜入的原因好吗
+这就是为什么我们潜入这个领域，好吗？
 That's why we dive into this, okay?
 
 59
 00:03:29.449 --> 00:03:33.590
-所以你可以说听我说我不喜欢那些含蓄的强迫
-So, you may say, well, listen, I don't
-like to do those implicit coercions,
+所以，你可能会说，好吧，听着，我不喜欢做那些隐含的强迫，
+So, you may say, well, listen, I don't like to do those implicit coercions,
 
 60
 00:03:33.590 --> 00:03:35.569
-我想做个非常明确的事
+我想把这件事说得非常明确。
 I wanna be super explicit about it.
 
 61
 00:03:35.569 --> 00:03:39.509
-好吧有一些疯狂的方式你可以明确的说
-Okay, so, here's some crazy ways
-that you can be explicit about it,
+好的，所以，这里有一些疯狂的方法你可以直截了当地说出来，
+Okay, so, here's some crazy ways that you can be explicit about it,
 
 62
 00:03:39.509 --> 00:03:41.170
-我那天才学会的
+我前几天才学到这个。
 I just learned this one the other day.
 
 63
 00:03:41.170 --> 00:03:45.163
-我甚至都没考虑过你能把值扔进数组里
-I never even considered that you
-could throw a value into an array,
+我从来没有想过你可以把一个值放入一个数组中，
+I never even considered that you could throw a value into an array,
 
 64
 00:03:45.163 --> 00:03:48.884
-将一个值正好放入一个数组，然后调用点连接。
-just the one value into an array,
-and then call dot join on it.
+只将一个值放入数组中，然后对其调用点连接。
+just the one value into an array, and then call dot join on it.
 
 65
 00:03:48.884 --> 00:03:53.098
-即使它没有字符串并置，它也会在
-And that actually ends up string it even
-though it does no string concatenation at
+这实际上是字符串it，即使它没有字符串连接
+And that actually ends up string it even though it does no string concatenation at
 
 66
 00:03:53.098 --> 00:03:55.810
-全部，该连接的规范首先将其转换为字符串。
-all, the spec for
-that join first turns it into a string.
+总之，该联接的规范首先将其转换为字符串。
+all, the spec for that join first turns it into a string.
 
 67
 00:03:57.240 --> 00:04:00.956
-别这么做太糟糕了但如果你想做超级清晰的
-Don't do this that's a terrible idea, but
-you could if you wanna be super explicit
+不要这样做这是个糟糕的主意，但如果你想超级直白的话你可以的
+Don't do this that's a terrible idea, but you could if you wanna be super explicit
 
 68
 00:04:00.956 --> 00:04:04.424
-你可以说我只是在这里做字符串连接
-about, you could say listen,
-I'm only doing string concatenations here.
+关于，你可以说，听着，我只是在这里做字符串连接。
+about, you could say listen, I'm only doing string concatenations here.
 
 69
 00:04:04.424 --> 00:04:07.409
-所以我要把我的号码变成一个字符串
-So I'm gonna be explicit about
-turning my number into a string.
+所以我要明确地把我的号码变成一个字符串。
+So I'm gonna be explicit about turning my number into a string.
 
 70
 00:04:07.409 --> 00:04:10.908
-还有一些其他的可能更完善的
-Here's some other ones that
-are maybe a little more well formed.
+这里有一些其他的可能格式更好一些。
+Here's some other ones that are maybe a little more well formed.
 
 71
 00:04:10.908 --> 00:04:13.734
-例如，您可以调用 toString 方法。
-You might, for example,
-call the toString method.
+例如，您可以调用toString方法。
+You might, for example, call the toString method.
 
 72
 00:04:13.734 --> 00:04:18.088
-好吧至少标签上的 toString 方法上面写着它在做什么
-Okay, cool, the toString method at least
-on the label says what it's doing.
+好的，酷，至少标签上的toString方法说明了它在做什么。
+Okay, cool, the toString method at least on the label says what it's doing.
 
 73
 00:04:18.088 --> 00:04:21.019
-它会把一个数字变成一个字符串，这样就不会太坏了。
-It's gonna turn a number into a string so
-that's not too bad.
+它会把一个数字变成一个字符串，这样就不会太糟糕了。
+It's gonna turn a number into a string so that's not too bad.
 
 74
 00:04:22.029 --> 00:04:25.870
-这里有点怪异你是怎么说的
-There's a little weirdness here which
-is how are you calling a method on
+这里有一个小奇怪的地方，就是你是如何调用一个方法的
+There's a little weirdness here which is how are you calling a method on
 
 75
 00:04:25.870 --> 00:04:26.740
-原始值吗 ?
+原始值？
 a primitive value?
 
 76
 00:04:28.149 --> 00:04:29.680
-原语值没有方法。
+原始值没有方法。
 Primitive values don't have methods.
 
 77
 00:04:30.930 --> 00:04:33.769
-所以你其实已经在这里做隐含的胁迫
-So you're actually already still
-doing implicit coercion here and
+所以你实际上已经在这里做隐式强制
+So you're actually already still doing implicit coercion here and
 
 78
 00:04:33.769 --> 00:04:35.409
-我们会回来的
+我们稍后再谈这一点。
 we'll come back to that.
 
 79
 00:04:35.409 --> 00:04:38.100
-如果你不想做任何暗示的话
-If you don't wanna do any
-implicit coercion at all,
+如果你根本不想做任何隐含的强迫，
+If you don't wanna do any implicit coercion at all,
 
 80
 00:04:38.100 --> 00:04:40.000
-基本上是你唯一的选择
+基本上你唯一的选择。
 basically your only option.
 
 81
 00:04:40.000 --> 00:04:43.579
-要使用该基本对象而不使用新的关键字字符串，
-Is to use that fundamental object
-without a new keyword string,
+是在没有新关键字符串情况下使用基本对象，
+Is to use that fundamental object without a new keyword string,
 
 82
 00:04:43.579 --> 00:04:48.279
-这就是我把这个号码明确地强制给一个字符串的首选方法，
-and this is my preferred way of explicitly
-coercing that number to a string,
+这是我喜欢的将数字明确强制为字符串的方法，
+and this is my preferred way of explicitly coercing that number to a string,
 
 83
 00:04:48.279 --> 00:04:50.579
-资本 S 弦函数会为你做的
-the capital S string function
-is gonna do that for you.
+大写的S字符串函数将为您实现这一点。
+the capital S string function is gonna do that for you.
 
 84
 00:04:52.680 --> 00:04:55.620
-所以，如果你是其中一个说话的人，听着，所有的那些含蓄的东西，
-So, if you're one of those that says hey,
-listen, all those implicit things,
+所以，如果你是那些说嘿，听着，所有这些隐含的事情的人之一，
+So, if you're one of those that says hey, listen, all those implicit things,
 
 85
 00:04:55.620 --> 00:04:58.090
-这些都是神奇的我们不想做
-those are magical and
-we don't wanna do them, and
+这些都很神奇，我们不想做，而且
+those are magical and we don't wanna do them, and
 
 86
 00:04:58.090 --> 00:05:02.050
-你想清楚它的存在有一个明显的例子
-you wanna be explicit about it, there's
-an example of being explicit about it.
+你想要明确，有一个明确的例子。
+you wanna be explicit about it, there's an example of being explicit about it.
 
 87
 00:05:03.720 --> 00:05:05.360
-我不太确定那是个好主意
+我不确定这是个好主意
 I'm not so sure that that's a great idea
 
 88
 00:05:06.949 --> 00:05:11.610
-但这至少是一种明确的方式
-in all cases, but
-that's at least a way of being explicit.
+在所有情况下，但这至少是一种明确的方式。
+in all cases, but that's at least a way of being explicit.
 
 89
 00:05:13.790 --> 00:05:17.170
-好了好了好了好了好了好了好了好了
-All right, all right, all right, so
-string to, number to string all right, but
+好的，所以字符串到，数字到字符串好的，但是
+All right, all right, all right, so string to, number to string all right, but
 
 90
 00:05:17.170 --> 00:05:18.610
-还有别的办法吗
+反过来呢？
 what about the other way around?
 
 91
 00:05:18.610 --> 00:05:21.689
-你也已经这样做了
+[笑]你已经在这么做了。
 [LAUGH] You're already doing that too.
 
 92
 00:05:21.689 --> 00:05:24.079
-因为你们都在处理 Web 应用程序，或者
-Because all of you are dealing
-with web applications, or
+因为你们所有人都在处理Web应用程序，或者
+Because all of you are dealing with web applications, or
 
 93
 00:05:24.079 --> 00:05:26.817
-至少大多数人都在处理网络应用
-at least most of you are dealing
-with web applications which means
+至少你们大多数人都在处理Web应用程序，这意味着
+at least most of you are dealing with web applications which means
 
 94
 00:05:26.817 --> 00:05:29.588
-您正在处理用户输入的内容，如表单元素。
-you're dealing with user input
-from things like form elements.
+您正在处理来自表单元素之类的用户输入。
+you're dealing with user input from things like form elements.
 
 95
 00:05:29.588 --> 00:05:32.579
-这意味着你把东西当绳子
-Which means you're grabbing
-things as strings, and
+这意味着你把东西当做字符串来抓，而且
+Which means you're grabbing things as strings, and
 
 96
 00:05:32.579 --> 00:05:35.379
-那你就跟他们一起做数字
-then you're just doing
-numeric stuff with them.
+然后你只是和他们一起做数值的事情。
+then you're just doing numeric stuff with them.
 
 97
 00:05:36.720 --> 00:05:41.879
-当你把那个字符串值扔在加号操作上就像我在这儿
-When you throw that string value at
-the plus operation, like I'm doing here,
+当你在加号运算中抛出字符串值时，就像我在这里做的那样，
+When you throw that string value at the plus operation, like I'm doing here,
 
 98
 00:05:41.879 --> 00:05:43.490
-你猜会发生什么
+猜猜会发生什么？
 guess what happens?
 
 99
 00:05:43.490 --> 00:05:45.209
-我们有一个字符串连接
+哦，我们得到了一个字符串连接。
 Oops, we get a string concatenation.
 
 100
 00:05:45.209 --> 00:05:49.071
-而不是在 17岁的情况下，我们得到了字符串 161。
-Instead of getting 17,
-we get the string 161.
+我们得到的不是17，而是字符串161。
+Instead of getting 17, we get the string 161.
 
 101
 00:05:49.071 --> 00:05:53.629
-好吧好吧我先把它逼成一个数字
-But okay, okay, I'll go ahead and
-force it to be a number.
+但是好的，我会继续强迫它成为一个数字。
+But okay, okay, I'll go ahead and force it to be a number.
 
 102
 00:05:53.629 --> 00:05:58.240
-好的，有两种方法可以迫使它成为第一种，这加上了这里的运营商。
-Okay, there's two ways of forcing it to
-be a number one, this plus operator here.
+好的，有两种方法迫使它成为1号，这里的加号运算符。
+Okay, there's two ways of forcing it to be a number one, this plus operator here.
 
 103
 00:05:58.240 --> 00:06:01.600
-一元加运算符 ( 如果您将在该规范中查找 ) 。
-The unary plus operator,
-if you'll look in the spec for it.
+一元加号运算符，如果您在规范中查找它的话。
+The unary plus operator, if you'll look in the spec for it.
 
 104
 00:06:01.600 --> 00:06:05.620
-猜猜我们预料到什么抽象行动
-Guess what it invokes which abstract
-operation when we expect that turns out
+猜猜它调用了什么抽象操作，当我们预期结果是这样的时候
+Guess what it invokes which abstract operation when we expect that turns out
 
 105
 00:06:05.620 --> 00:06:08.100
-两个数字的抽象化操作
-that the two number abstract operation,
-okay?
+两个数字的抽象运算，好吗？
+that the two number abstract operation, okay?
 
 106
 00:06:08.100 --> 00:06:09.798
-只是确定你都是这样好吗
+只是确保你一直都在，好吗？
 Just making sure you're all the way, okay?
 
 107
 00:06:09.798 --> 00:06:13.490
-它调用这两个数字操作，即它所做的所有操作。
-It invokes the two number operation,
-that's all it does.
+它调用两个数字运算，就是这样。
+It invokes the two number operation, that's all it does.
 
 108
 00:06:13.490 --> 00:06:17.120
-所以我们说的是把那东西作为一个字符串或者它是什么
-So here we're saying take that thing
-that's a string or whatever it is, and
+所以我们在这里说，拿着这个东西，那是一根绳子或者其他什么东西，然后
+So here we're saying take that thing that's a string or whatever it is, and
 
 109
 00:06:17.120 --> 00:06:19.379
-在我们通过之前把它变成一个数字
-turn it into a number
-before we pass it in.
+在我们把它传进去之前把它变成一个数字。
+turn it into a number before we pass it in.
 
 110
 00:06:20.389 --> 00:06:24.490
-如果是字符串格式的格式正确的数字表示，那么
-If it's a well-formed numeric
-representation in string form, for
+如果它是字符串形式的格式良好的数值表示形式，则对于
+If it's a well-formed numeric representation in string form, for
 
 111
 00:06:24.490 --> 00:06:28.540
-举个例子，你会在这里得到良好的结果，就像 17岁。
-example, you're gonna end up
-with good results here, like 17.
+例如，你会在这里得到很好的结果，比如17。
+example, you're gonna end up with good results here, like 17.
 
 112
 00:06:28.540 --> 00:06:32.310
-如果是空的你猜你要怎么做
-If it's empty,
-guess what you're gonna end up with?
+如果它是空的，猜猜你最后会得到什么？
+If it's empty, guess what you're gonna end up with?
 
 113
 00:06:34.798 --> 00:06:36.370
->> Kyle Simpson: 空字符串会变成什么 ?
-&gt;&gt; Kyle Simpson: What's
-the empty string gonna become?
+&gt；&gt；Kyle Simpson：空字符串会变成什么？
+&gt;&gt; Kyle Simpson: What's the empty string gonna become?
 
 114
 00:06:37.750 --> 00:06:41.269
-零，它可能不是你想要的，但它会发生。
-Zero, it may not be what you want but
-it's gonna happen.
+零，这可能不是你想要的，但它会发生的。
+Zero, it may not be what you want but it's gonna happen.
 
 115
 00:06:41.269 --> 00:06:45.290
-这里还有一个例子，这种胁迫发生在整个地方。
-So here's another example this kind of
-coercion happens all over the place.
+所以这里有另一个例子，这种强迫到处都在发生。
+So here's another example this kind of coercion happens all over the place.
 
 116
 00:06:45.290 --> 00:06:49.600
-我最大的挫折感是人们不去处理它然后就
-And my biggest frustration is that people
-don't deal with it and then just sort of
+我最大的挫败感是人们不处理它，然后只是有点
+And my biggest frustration is that people don't deal with it and then just sort of
 
 117
 00:06:49.600 --> 00:06:53.269
-打个名号就是我不用担心的类型和胁迫。
-slap a name badge on this is all I don't
-have to worry about types and coercion.
+这就是我不需要担心类型和胁迫的全部。
+slap a name badge on this is all I don't have to worry about types and coercion.
 
 118
 00:06:53.269 --> 00:06:57.420
-我很擅长这就是虫子来自的地方
-I'm good it's this,
-this is where bugs come from.
+我很好，就是这个，这就是虫子的来源。
+I'm good it's this, this is where bugs come from.
 
 119
 00:06:57.420 --> 00:06:59.000
-使用您不了解其工作方式的工具。
-Using tools that you don't
-understand how they work.
+使用你不知道它们是如何工作的工具。
+Using tools that you don't understand how they work.
 
 120
 00:07:01.610 --> 00:07:06.519
-好吧让我更具体说明一下即使在加士
-Okay, so let me be more specific about it,
-even in the plus operator,
+好的，让我更具体地说，即使是在加号运算符中，
+Okay, so let me be more specific about it, even in the plus operator,
 
 121
 00:07:06.519 --> 00:07:07.899
-也许看起来有点怪异
+因为它可能看起来有点奇怪。
 cuz it might look a little weird.
 
 122
 00:07:07.899 --> 00:07:11.259
-您可以使用基本号码功能，好的。
-You can use the fundamental
-number function, okay.
+你可以使用基本数函数，好的。
+You can use the fundamental number function, okay.
 
 123
 00:07:11.259 --> 00:07:12.230
-这是我的首选方法。
+这是我喜欢的方式。
 This is my preferred way.
 
 124
 00:07:12.230 --> 00:07:14.649
-如果我要把事情变成数字我就用数字功能
-If I'm gonna turn something into a number,
-I use the number function.
+如果我要将某物转换为数字，我使用Number函数。
+If I'm gonna turn something into a number, I use the number function.
 
 125
 00:07:16.139 --> 00:07:20.740
-我们没有两个数字，所以这基本上是最语义的讲法
-We don't have a two number, so this is
-basically the most semantic way of telling
+我们没有两个数字，所以这基本上是最具语义的方式
+We don't have a two number, so this is basically the most semantic way of telling
 
 126
 00:07:20.740 --> 00:07:24.678
-代码的读者会做出一些事情
-the reader of code that you're gonna
-make a number out of something.
+代码的阅读器，你要用一些东西做一个数字。
+the reader of code that you're gonna make a number out of something.
 
 127
 00:07:28.339 --> 00:07:30.632
->> 凯尔 - 辛普森: 如果您使用减号运算符，
-&gt;&gt; Kyle Simpson: If you use
-a minus operator for example,
+&gt；&gt；Kyle Simpson：例如，如果使用负运算符，
+&gt;&gt; Kyle Simpson: If you use a minus operator for example,
 
 128
 00:07:30.632 --> 00:07:34.079
-如果你和我有任何的嘲弄我就会把你踢出来
-if any of you get too sarcastic
-with me I'm gonna kick you up.
+如果你们谁对我太挖苦，我就踢你们。
+if any of you get too sarcastic with me I'm gonna kick you up.
 
 129
 00:07:34.079 --> 00:07:39.079
-如果使用负运算符，那么仅为数字定义一个运算符。
-If you use the minus operator that
-one is only defined for numbers.
+如果您使用减运算符，则只为数字定义了减号。
+If you use the minus operator that one is only defined for numbers.
 
 130
 00:07:40.590 --> 00:07:41.819
-这不是超载的
+它没有超载
 That it's not overloaded for
 
 131
 00:07:41.819 --> 00:07:45.540
-字符串，从另一个字符串中减去一个字符串是没有意义的。
-string, it wouldn't make any sense
-to subtract one string from another.
+字符串，从一个字符串中减去另一个字符串没有任何意义。
+string, it wouldn't make any sense to subtract one string from another.
 
 132
 00:07:45.540 --> 00:07:49.259
-那上面的负运算符会做什么
-So that minus operator up there,
-is gonna do what?
+所以上面的负运算符，会做什么？
+So that minus operator up there, is gonna do what?
 
 133
 00:07:51.528 --> 00:07:52.769
->> 凯尔 - 辛普森: 来吧 ?
+凯尔·辛普森：来吧？
 &gt;&gt; Kyle Simpson: Come on?
 
 134
 00:07:52.769 --> 00:07:53.840
-两个号码好吗
+两个数字，好吗？
 Two number, okay?
 
 135
 00:07:53.840 --> 00:07:55.970
-它会调用这两个数字抽象操作。
-It's gonna invoke that two
-number abstract operation.
+它将调用两个数字抽象操作。
+It's gonna invoke that two number abstract operation.
 
 136
 00:07:57.170 --> 00:08:00.158
-这些都是在您的程序中以各种不同的方式发生的事情。
-These are all things that are happening in
-your programs in various different ways.
+这些都是在你的程序中以各种不同的方式发生的事情。
+These are all things that are happening in your programs in various different ways.
 
 137
 00:08:01.889 --> 00:08:05.519
-我觉得把这些事情都说出来是个好主意
-And I think it would be a good idea for
-us to call these things out and
+我认为我们把这些事情说出来会是个好主意
+And I think it would be a good idea for us to call these things out and
 
 138
 00:08:05.519 --> 00:08:08.829
-对它的认知有更多的了解
-be a lot more aware of incognito
-of it intentionally about.
+要更多地意识到有意隐姓埋名。
+be a lot more aware of incognito of it intentionally about.
 
 139
 00:08:11.310 --> 00:08:14.278
->> 凯尔 - 辛普森: 好的，好的，字符串和数字都是工作的，但是你
-&gt;&gt; Kyle Simpson: Okay, okay, okay, strings
-and numbers are always work things but you
+&gt；&gt；Kyle Simpson：好的，字符串和数字总是工作的东西，但你
+&gt;&gt; Kyle Simpson: Okay, okay, okay, strings and numbers are always work things but you
 
 140
 00:08:14.278 --> 00:08:17.810
-知道我从来没做过什么因为我从没用过自己的布尔权来捣乱
-know what I never do, because I never mess
-around with coercion my Boolean, right?
+知道我从来没有做过什么，因为我从来没有在强迫我的布尔值上乱搞，对吧？
+know what I never do, because I never mess around with coercion my Boolean, right?
 
 141
 00:08:20.319 --> 00:08:26.649
-如果在类中使用非 Booleans 的语句，那么我从不写。
-Cuz I never write if statements that
-use non-Booleans in the if class.
+因为我从来不写在if类中使用非布尔值的if语句。
+Cuz I never write if statements that use non-Booleans in the if class.
 
 142
 00:08:27.750 --> 00:08:31.759
-您是否使用任何类似检查来查看字符串是否为非空
-Any of you use like checking to
-see if a string is non-empty
+你们中的任何人都使用LIKE检查来查看字符串是否是非空的
+Any of you use like checking to see if a string is non-empty
 
 143
 00:08:31.759 --> 00:08:34.080
-看看这到底是真的吗
+看它是不是真的？
 to see whether it's truthy or not?
 
 144
 00:08:34.080 --> 00:08:38.590
-非常普遍的做法，猜测所谓的胁迫。
-Extremely common practice,
-guess what that's called coercion.
+非常普遍的做法，猜猜这叫什么强制。
+Extremely common practice, guess what that's called coercion.
 
 145
 00:08:38.590 --> 00:08:40.620
-好吧猜猜是什么
+好的，你猜怎么着？
 Okay, and guess what?
 
 146
 00:08:40.620 --> 00:08:45.179
-所有的奇怪的角落都是 Booleans 胁迫的案例
-All of the weird corner cases of
-coercion Booleans are in a fact,
+所有怪异的强制布尔式角落案例都是事实，
+All of the weird corner cases of coercion Booleans are in a fact,
 
 147
 00:08:45.179 --> 00:08:48.433
-即使你简单的说明他们是在一个事实中
-even with your little simple if
-statements they're in a fact.
+即使用你的简单的if语句，它们也是事实。
+even with your little simple if statements they're in a fact.
 
 148
 00:08:48.433 --> 00:08:51.240
-事实上我要说有更多的例子是有布尔值的
-Matter of fact, I would say there
-are more corner cases with boolean,
+事实上，我会说布尔值有更多的角落情况，
+Matter of fact, I would say there are more corner cases with boolean,
 
 149
 00:08:51.240 --> 00:08:53.379
-可能比其他任何类型的总理
+也许比其他任何类型的总理都要好
 maybe than any other premier of type or
 
 150
 00:08:53.379 --> 00:08:58.840
-我们会在这个空虚的字符串里找到各种弱点
-kinds of wearnesses that we're gonna get
-into here as we go So that empty string,
+在我们走的时候，我们将进入这里的各种疲劳，所以空线，
+kinds of wearnesses that we're gonna get into here as we go So that empty string,
 
 151
 00:08:58.840 --> 00:09:04.789
-如果学生把这个价值当作是虚无虚名的
-if students input that value as an empty
-that's gonna be falsy, alright?
+如果学生输入的值是空的，那就是假的，对吗？
+if students input that value as an empty that's gonna be falsy, alright?
 
 152
 00:09:06.080 --> 00:09:11.620
-但如果那串只是一堆白色的空间呢 ?
-But what if that string has just
-a bunch of white space in it?
+但是如果字符串中只有一串空白呢？
+But what if that string has just a bunch of white space in it?
 
 153
 00:09:11.620 --> 00:09:13.120
-现在它会是真实的对吧
+现在它会是真实的，对吗？
 Now it's gonna be truthy, right?
 
 154
 00:09:13.120 --> 00:09:17.590
-这不是你在乎的有效的字符串
-It's not a valid string
-that you care about because
+这不是您关心的有效字符串，因为
+It's not a valid string that you care about because
 
 155
 00:09:17.590 --> 00:09:20.570
-它有一堆白色的地方但是突然它会变得更真实
-it's got a bunch of white space in it but
-all of a sudden it's going to be truthy.
+它有一堆空白，但突然之间，它将是真实的。
+it's got a bunch of white space in it but all of a sudden it's going to be truthy.
 
 156
 00:09:23.519 --> 00:09:25.700
-甚至连我们的布尔都有
+即使用我们的布尔值。
 Corner cases even with our Boolean.
 
 157
 00:09:25.700 --> 00:09:29.990
-另一个喜欢的人喜欢用数字的数字胁迫
-Another favorite one, people love to
-use the numeric coercion of a number
+另一个最喜欢的是，人们喜欢使用数字的强制
+Another favorite one, people love to use the numeric coercion of a number
 
 158
 00:09:29.990 --> 00:09:34.350
-要么是零钱要么不给零钱，对吧 ?
-to either a zero or a non zero for
-truthy or falsy, right?
+或者零或者非零代表真或假，对吗？
+to either a zero or a non zero for truthy or falsy, right?
 
 159
 00:09:34.350 --> 00:09:37.309
-所以如果我的长度是零就变成了假的
-So if my length is zero
-then it becomes false and
+所以如果我的长度是零，那么它就变成了假的
+So if my length is zero then it becomes false and
 
 160
 00:09:37.309 --> 00:09:40.860
-如果我的长度是非零值，那么它将变为 true。
-if my length is anything non
-zero then it becomes true.
+如果我的长度是任何非零，那么它就成真了。
+if my length is anything non zero then it becomes true.
 
 161
 00:09:40.860 --> 00:09:43.789
-因为它不是零，所以要依赖它。
-Because it's not one of the zeros,
-will have to rely up on that.
+因为它不是零中的一个，将不得不依赖于这一点。
+Because it's not one of the zeros, will have to rely up on that.
 
 162
 00:09:45.269 --> 00:09:47.110
-除非是 NaN
+除了当它是南的时候会发生什么。
 Except what happens when it's NaN.
 
 163
 00:09:49.827 --> 00:09:53.990
->> 凯尔 - 辛普森: 好吧，所有这些要挟都有各种各样的例子。
-&gt;&gt; Kyle Simpson: Okay, there's all kinds
-of corner cases in all of these coercions.
+&gt；&gt；Kyle Simpson：好的，在所有这些胁迫中都有各种各样的角落案例。
+&gt;&gt; Kyle Simpson: Okay, there's all kinds of corner cases in all of these coercions.
 
 164
 00:09:53.990 --> 00:09:56.809
-所以如果你习惯使用其中一些
-So if you're in the habit
-of using some of these and
+所以如果你有使用这些东西的习惯
+So if you're in the habit of using some of these and
 
 165
 00:09:56.809 --> 00:10:01.840
-不是用别人的，我是说我不喜欢这样说，但是有点虚伪
-not using others, I mean I hate to call
-this out but it sort of hypocritical
+不使用别人，我的意思是我讨厌这样说，但它有点虚伪
+not using others, I mean I hate to call this out but it sort of hypocritical
 
 166
 00:10:01.840 --> 00:10:06.080
-说，我用这种形式或者魔术，但是我不喜欢这种形式的魔术。
-to say, I used this form or magic but
-I don't like that form of magic.
+也就是说，我使用了这种形式或魔法，但我不喜欢那种形式的魔法。
+to say, I used this form or magic but I don't like that form of magic.
 
 167
 00:10:06.080 --> 00:10:09.159
-我不知道我们是否应该用魔法
-I don't know if we should
-use the magic at all,
+我不知道我们是否应该使用魔法，
+I don't know if we should use the magic at all,
 
 168
 00:10:09.159 --> 00:10:12.009
-我觉得我们应该学它，用它，然后它就不神奇了。
-I think we should learn it, use it,
-and then it's not magical at all.
+我认为我们应该学习它，使用它，然后它就一点也不神奇了。
+I think we should learn it, use it, and then it's not magical at all.
 
 169
 00:10:12.009 --> 00:10:14.450
-一旦你知道了你是故意的
-Once you learn it,
-you're doing something intentional,
+一旦你学会了，你就是故意的，
+Once you learn it, you're doing something intentional,
 
 170
 00:10:14.450 --> 00:10:17.009
-你把你的意图传达给其他人
-and you're communicating
-your intent to other people.
+你在向其他人传达你的意图。
+and you're communicating your intent to other people.
 
 171
 00:10:18.570 --> 00:10:21.639
-这并不意味着暗示总是坏事。
-That does not mean that
-implicitness is always bad.
+这并不意味着含蓄总是不好的。
+That does not mean that implicitness is always bad.
 
 172
 00:10:21.639 --> 00:10:24.500
-事实上，牵连是很有用的。
-As a matter of fact,
-implicitness can be very useful.
+事实上，含蓄是非常有用的。
+As a matter of fact, implicitness can be very useful.
 
 173
 00:10:25.610 --> 00:10:28.330
-这只是说，我们必须非常小心和有意。
-It just simply means we have to
-be very careful and intentional.
+它只是意味着我们必须非常小心和有意。
+It just simply means we have to be very careful and intentional.
 
 174
 00:10:32.059 --> 00:10:35.950
-所以你可以说我喜欢把我所有的都变成露头的
-So you might say well I like to turn
-all of mine into explicit booleans.
+所以你可能会说，好吧，我喜欢把我的全部变成显式布尔值。
+So you might say well I like to turn all of mine into explicit booleans.
 
 175
 00:10:35.950 --> 00:10:37.340
-所以你可以用这个
+所以你可能会用到这一点。
 So you might use that.
 
 176
 00:10:37.340 --> 00:10:39.480
-在第一条线上翻两手
+在一号线上双重否定。
 Double negate up there on line one.
 
 177
 00:10:39.480 --> 00:10:41.850
-Tha告诉它，变成一个布尔值。
+这告诉它，成为一个布尔值。
 Tha's telling it, become a boolean.
 
 178
 00:10:41.850 --> 00:10:42.960
-我在这张幻灯片上没有
+我在这张幻灯片上没有，但是
 I don't have it on this slide, but
 
 179
 00:10:42.960 --> 00:10:46.009
-您也可以使用基本资本 B 布尔值。
-you could also use the fundamental
-capital B Boolean.
+您还可以使用基本大写B布尔值。
+you could also use the fundamental capital B Boolean.
 
 180
 00:10:46.009 --> 00:10:47.730
-这就是我想做的
+这就是我喜欢做的。
 That's what I prefer to do.
 
 181
 00:10:47.730 --> 00:10:50.330
-就像偏离了号码一样，我更喜欢使用大写 B 布尔。
-Just like straying a number,
-I prefer to use capital B Boolean.
+就像错开一个数字一样，我更喜欢使用大写的B布尔值。
+Just like straying a number, I prefer to use capital B Boolean.
 
 182
 00:10:51.990 --> 00:10:56.409
-但随着数字的增加而不是依靠数字的胁迫
-But with numbers, it's better instead
-of relying upon that numeric coercion,
+但是对于数字，它比依赖于数字强制更好，
+But with numbers, it's better instead of relying upon that numeric coercion,
 
 183
 00:10:56.409 --> 00:10:59.159
-用大于零的东西如果你是这个意思的话
-use something like greater than zero,
-if that's what you mean.
+使用大于零的值，如果你是这个意思的话。
+use something like greater than zero, if that's what you mean.
 
 184
 00:10:59.159 --> 00:11:03.169
-它不仅能保护你不受某些角落的影响
-Not only does it protect you from some
-of those corner cases, not all but some.
+它不仅可以保护你免受那些角落里的一些情况的影响，不是所有的，而是一些。
+Not only does it protect you from some of those corner cases, not all but some.
 
 185
 00:11:03.169 --> 00:11:06.279
-它保护您免受某些角落案例的影响，但它也更有语义。
-It protects you from some of those corner
-cases but it is also more semantic.
+它可以保护您不受某些角落情况的影响，但它也具有更多的语义。
+It protects you from some of those corner cases but it is also more semantic.
 
 186
 00:11:06.279 --> 00:11:09.820
-因为你在这里说，保持循环，长度大于零，
-Because you are saying here, keep looping
-while the length is greater than zero,
+因为您在这里说的是，在长度大于零的情况下继续循环，
+Because you are saying here, keep looping while the length is greater than zero,
 
 187
 00:11:09.820 --> 00:11:13.360
-而不是保持循环而长度才是真实的
-instead of keep looping
-while the length is truthy.
+而不是保持循环，而长度是真实的。
+instead of keep looping while the length is truthy.
 
 188
 00:11:13.360 --> 00:11:15.970
-这到底是什么意思
+那到底是什么意思？
 What does that even mean?
 
 189
 00:11:15.970 --> 00:11:18.585
-所以别用聪明的人来救几个字
-So don't be clever just to
-save a couple of characters,
+所以不要仅仅为了拯救几个角色而聪明，
+So don't be clever just to save a couple of characters,
 
 190
 00:11:18.585 --> 00:11:22.495
-在更能沟通的地方就更明确了。
-be more explicit about it in the places
-where explicitness is more communicative.
+在显性更具交际性的地方，要更明确地说明这一点。
+be more explicit about it in the places where explicitness is more communicative.
 
 191
 00:11:26.894 --> 00:11:28.700
->> 凯尔 - 辛普森: 我们已经讨论过其中的一些问题。
-&gt;&gt; Kyle Simpson: We already
-covered some of this.
+&gt；&gt；Kyle Simpson：我们已经讨论了其中一些。
+&gt;&gt; Kyle Simpson: We already covered some of this.
 
 192
 00:11:28.700 --> 00:11:29.909
-我在幻灯片里跳了下去。
+我在幻灯片上跳到了前面。
 I jumped ahead in my slides.
 
 193
 00:11:29.909 --> 00:11:32.330
-但是，空字符串的布尔值为 false。
-But the Boolean of
-an empty string is false.
+但空字符串的布尔值为false。
+But the Boolean of an empty string is false.
 
 194
 00:11:32.330 --> 00:11:36.620
-非空字符串的布尔值为 true，这肯定是 gotcha。
-The Boolean of a non-empty string is true,
-and that's certainly gonna be a gotcha.
+非空字符串的布尔值是真的，这肯定会是一个难题。
+The Boolean of a non-empty string is true, and that's certainly gonna be a gotcha.
 
 195
 00:11:40.200 --> 00:11:45.134
->> Kyle Simpson: 好的，布尔测试未定义且为空，
-&gt;&gt; Kyle Simpson: Okay,
-the Boolean tests for undefined and null,
+&gt；&gt；Kyle Simpson：好的，未定义和空的布尔测试，
+&gt;&gt; Kyle Simpson: Okay, the Boolean tests for undefined and null,
 
 196
 00:11:45.134 --> 00:11:50.090
-我们知道这两个人都在名单上
-we know that both of
-those are on the list.
+我们知道这两个都在名单上。
+we know that both of those are on the list.
 
 197
 00:11:50.090 --> 00:11:55.210
-我喜欢将空值和未定义的值视为不可区分的值。
-I like to treat null and
-undefined as indistinguishable values.
+我喜欢将null和undefined视为不可区分的值。
+I like to treat null and undefined as indistinguishable values.
 
 198
 00:11:55.210 --> 00:11:56.429
-只要有可能
+只要有可能。
 Wherever possible.
 
 199
 00:11:56.429 --> 00:11:58.879
-人们并不总是可以将它们区分为不可区分的。
-It's not always possible to
-treat them as indistinguishable.
+并不总是可能将它们视为不可区分的。
+It's not always possible to treat them as indistinguishable.
 
 200
 00:11:58.879 --> 00:12:01.720
-但在可能的情况下我喜欢这样做
+但在可能的情况下，我喜欢这样做，并且
 But where possible, I like to do so, and
 
 201
 00:12:01.720 --> 00:12:03.350
-凝聚力其实是很有帮助的。
-cohesion actually is very helpful for
-that.
+凝聚力实际上对此非常有帮助。
+cohesion actually is very helpful for that.
 
 202
 00:12:03.350 --> 00:12:08.379
-但既然我们知道他们俩都是伪善人
-But with respect to Boolean since we know
-that they're both forcy, if the test that
+但是关于布尔，因为我们知道它们都很强大，如果测试表明
+But with respect to Boolean since we know that they're both forcy, if the test that
 
 203
 00:12:08.379 --> 00:12:14.649
-我们要求的是这件事我们经常做
-we're asking for is has this thing
-been set or not, which we do often.
+我们问的是这个东西有没有设置好，我们经常这样做。
+we're asking for is has this thing been set or not, which we do often.
 
 204
 00:12:14.649 --> 00:12:18.019
-这东西是被设定在物体上还是它还在开始。
-Is this thing been set on object or
-is it still onset.
+这东西是被设置在物体上还是它仍然开始。
+Is this thing been set on object or is it still onset.
 
 205
 00:12:18.019 --> 00:12:21.759
-好吧对我来说这绝对是合理的
-All right, for me,
-that's a perfectly reasonable
+好吧，对我来说，这是完全合理的
+All right, for me, that's a perfectly reasonable
 
 206
 00:12:21.759 --> 00:12:26.480
-把布尔胁迫放在我的身体里
-in placing Boolean coercion
-that I'm okay with.
+在放置布尔强制，我可以接受。
+in placing Boolean coercion that I'm okay with.
 
 207
 00:12:26.480 --> 00:12:30.179
-我不喜欢强迫强迫人
+我不喜欢强迫和
 I don't like to impose the coerce and
 
 208
 00:12:30.179 --> 00:12:32.990
-空应变为 false ，而不为 true 。
-empty strain the false and
-not empty strain the true.
+空的应变虚假的，而不是空的应变真实的。
+empty strain the false and not empty strain the true.
 
 209
 00:12:32.990 --> 00:12:36.230
-我不喜欢把强迫数字强加给真实或虚假的
-I don't like to impose the coerce
-numbers to true or false but
+我不喜欢强迫数字为真或假，但是
+I don't like to impose the coerce numbers to true or false but
 
 210
 00:12:36.230 --> 00:12:40.820
-我很高兴要么是说要么是要么没有定义
-I am perfectly happy with either
-saying it's no or undefined,
+我很高兴要么说没有，要么说没有定义，
+I am perfectly happy with either saying it's no or undefined,
 
 211
 00:12:40.820 --> 00:12:44.929
-意思是它没有说，那是错的，或者它被设定在一个物体上。
-meaning it's unsaid, and that's falsely or
-it's been set to something like an object.
+这意味着它是未说的，这是错误的，或者它被设置为类似对象的东西。
+meaning it's unsaid, and that's falsely or it's been set to something like an object.
 
 212
 00:12:44.929 --> 00:12:48.309
-然后就很棘手了我要把所有地方都用在这里
-And then it's tricky and
-I use that all the all over the place.
+然后它是棘手的，我使用所有的地方。
+And then it's tricky and I use that all the all over the place.
 
 213
 00:12:48.309 --> 00:12:50.940
-所以在我看来我觉得还行，
-So in my particular opinion,
-I think it's okay,
+所以在我看来，我觉得还可以，
+So in my particular opinion, I think it's okay,
 
 214
 00:12:50.940 --> 00:12:55.460
-在我们具体讨论的时候用隐含的方式
-to use the implicit to Boolean coercion
-when we're specifically talking about
+当我们具体讨论时，使用隐式到布尔强制
+to use the implicit to Boolean coercion when we're specifically talking about
 
 215
 00:12:55.460 --> 00:13:00.399
-未定义该决策的对象或空。
-either an object or
-null undefined that decision making.
+未定义决策的对象或NULL。
+either an object or null undefined that decision making.
 
 216
 00:13:00.399 --> 00:13:03.955
-但是数字和字符串，因为他们有那么多的角落案件，
-But the numbers and the strings,
-since they have so many corner cases,
+但是数字和字符串，因为他们有这么多角落的情况，
+But the numbers and the strings, since they have so many corner cases,
 
 217
 00:13:03.955 --> 00:13:07.349
-我不认为这种含蓄的胁迫会携带自己的重量。
-I don't think that that implicit
-coercion carries its own weight.
+我不认为隐含的强制有其自身的份量。
+I don't think that that implicit coercion carries its own weight.
 
 218
 00:13:11.360 --> 00:13:14.711
->> 凯尔 - 辛普森: 我不太想在这里指令性如何
-&gt;&gt; Kyle Simpson: I'm less trying to be
-prescriptive here about exactly how you
+&gt；&gt；Kyle Simpson：我不太想在这里详细说明你是如何
+&gt;&gt; Kyle Simpson: I'm less trying to be prescriptive here about exactly how you
 
 219
 00:13:14.711 --> 00:13:18.970
-应该这样做，更想让你像 JavaScript一样思考。
-should do it, and more trying to
-get you to think like JavaScript.
+应该这样做，更多的尝试让你像JavaScript一样思考。
+should do it, and more trying to get you to think like JavaScript.
 
 220
 00:13:18.970 --> 00:13:22.470
-让你自己决定我在哪里画这些台词
-And make your own determinations for
-where do I draw these lines.
+然后你自己决定我在哪里画这些线。
+And make your own determinations for where do I draw these lines.

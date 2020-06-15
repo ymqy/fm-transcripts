@@ -2,823 +2,708 @@ WEBVTT
 
 1
 00:00:00.164 --> 00:00:03.100
->> 凯尔 - 辛普森: 现在我的论点是即使你能做到这两者
-&gt;&gt; Kyle Simpson: Now my argument is that
-even though you could do both of these
+&gt；&gt；Kyle Simpson：现在我的论点是，即使你可以同时做这两件事
+&gt;&gt; Kyle Simpson: Now my argument is that even though you could do both of these
 
 2
 00:00:03.100 --> 00:00:09.130
-因此，您应该只在 for 循环上使用 let 来执行该变量。
-with let, you should only do
-the variable on the for loop with let.
+使用let时，您应该只使用let来执行for循环上的变量。
+with let, you should only do the variable on the for loop with let.
 
 3
 00:00:09.130 --> 00:00:13.605
-如果您有一个属于整个函数作用域的变量，
-If you have a variable that belongs
-to the entire scope of the function,
+如果有属于函数整个作用域的变量，
+If you have a variable that belongs to the entire scope of the function,
 
 4
 00:00:13.605 --> 00:00:17.561
-向您的读者发出信号的正确语法方法是
-the correct syntactic way to signal
-that to your reader is not to
+向你的读者发出信号的正确句法方式是不要
+the correct syntactic way to signal that to your reader is not to
 
 5
 00:00:17.561 --> 00:00:20.843
-在功能作用域的顶级使用 let ，但是
-use a let at the top level
-of your function scope, but
+在函数范围的顶层使用let，但是
+use a let at the top level of your function scope, but
 
 6
 00:00:20.843 --> 00:00:24.824
-用一个 var cuz 来做这件事 24 年的事
-to use a var cuz that the thing
-it's always done for 24 years.
+使用var是因为24年来一直在做的事情。
+to use a var cuz that the thing it's always done for 24 years.
 
 7
 00:00:27.111 --> 00:00:30.579
->> Kyle Simpson: 如果您要将 var 替换为 let，
-&gt;&gt; Kyle Simpson: If you were to
-replace the var online with a let,
+&gt；&gt；Kyle Simpson：如果要用let替换var online，
+&gt;&gt; Kyle Simpson: If you were to replace the var online with a let,
 
 8
 00:00:30.579 --> 00:00:36.979
-即使在这个特殊的例子中，它仍会运作正常。
-even though in this particular example
-it would still functionally work.
+即使在这个特定的例子中，它仍然在功能上工作。
+even though in this particular example it would still functionally work.
 
 9
 00:00:36.979 --> 00:00:41.816
-我的论点是它会去除一些重要的语义
-My argument is that it would remove
-a small amount of important semantic
+我的论点是，它将删除少量重要的语义
+My argument is that it would remove a small amount of important semantic
 
 10
 00:00:41.816 --> 00:00:46.652
-读者的信息，因为读者不知道，
-information from the reader,
-because the reader would then not know,
+来自读者的信息，因为读者不会知道，
+information from the reader, because the reader would then not know,
 
 11
 00:00:46.652 --> 00:00:48.438
-你的意图是什么
+那你的意图是什么？
 well what is your intent?
 
 12
 00:00:48.438 --> 00:00:51.497
-你打算让我到处使用还是你的意图
-Is your intent for me to use it
-everywhere or is your intent for
+你的意图是让我在任何地方都使用它，还是你的意图是
+Is your intent for me to use it everywhere or is your intent for
 
 13
 00:00:51.497 --> 00:00:54.829
-我只能在此发挥作用吗
-me to only use here at
-the very top of the function?
+我只能在这里使用最顶端的功能吗？
+me to only use here at the very top of the function?
 
 14
 00:00:54.829 --> 00:00:59.354
-我也不知道因为我们要用一个
-I don't really know,
-because lets are supposed to signal a very
+我真的不知道，因为我们应该发出一个非常
+I don't really know, because lets are supposed to signal a very
 
 15
 00:00:59.354 --> 00:01:04.234
-变量的本地化使用，理想情况下仅在几行代码中使用。
-localized usage of a variable, ideally
-within only a couple of lines of code.
+变量的本地化使用，理想情况下只需几行代码。
+localized usage of a variable, ideally within only a couple of lines of code.
 
 16
 00:01:04.234 --> 00:01:07.545
-如果你想在整个函数中使用变量
-And if you're intent is to use
-the variable across the whole function,
+如果你想在整个函数中使用变量，
+And if you're intent is to use the variable across the whole function,
 
 17
 00:01:07.545 --> 00:01:11.375
-允许关键字起作用，但它不是正确的工具。
-the let keyword might work,
-but it's not the right tool.
+let关键字可能有效，但它不是正确的工具。
+the let keyword might work, but it's not the right tool.
 
 18
 00:01:11.375 --> 00:01:13.174
-这不是工具的正确用法。
+这不是工具的正确使用。
 It's not the right usage of the tool.
 
 19
 00:01:13.174 --> 00:01:17.045
-你以前听过那个 adage 如果你要把它放进去或者你会放
-You've heard that adage before, if you are
-gonna put a screw in or you're gonna put
+你以前听过这句谚语，如果你要插个螺丝，或者你要把
+You've heard that adage before, if you are gonna put a screw in or you're gonna put
 
 20
 00:01:17.045 --> 00:01:20.489
-你应该选择正确的工具和锤子
-a nail in, you should choose the right
-tool, hammer versus, all right.
+钉进去，你应该选择正确的工具，锤子对，好的。
+a nail in, you should choose the right tool, hammer versus, all right.
 
 21
 00:01:20.489 --> 00:01:25.070
-但我要把类比的范围扩大到只有你选择正确的工具
-But I'm gonna extend that analogy, cuz not
-only should you choose the right tool,
+但我要扩展这个类比，因为你不仅应该选择正确的工具，
+But I'm gonna extend that analogy, cuz not only should you choose the right tool,
 
 22
 00:01:25.070 --> 00:01:28.537
-如果我有钉子我就有个锤子
-if I had a nail and I had a hammer,
-I've done some home repair and
+如果我有一颗钉子和一把锤子，我已经做了一些家居修理和
+if I had a nail and I had a hammer, I've done some home repair and
 
 23
 00:01:28.537 --> 00:01:33.133
-我可以合理地把锤子放在墙上，把钉子钉在墙上，好的。
-I could probably reasonably put a hammer
-into a wall, put a nail into a wall, okay.
+我可以合理地把锤子放在墙上，把钉子钉在墙上，好吧。
+I could probably reasonably put a hammer into a wall, put a nail into a wall, okay.
 
 24
 00:01:33.133 --> 00:01:38.106
-但如果我有同样的工具和同样的钉子
-But what would happen if I had the same
-tool and the same nail and to put
+但是如果我有同样的工具，同样的钉子
+But what would happen if I had the same tool and the same nail and to put
 
 25
 00:01:38.106 --> 00:01:43.355
-墙上的钉子，我把锤子放进嘴里，我就做了， [SOUND]。
-the nail in the wall, I put the hammer
-in my mouth and I just did, [SOUND].
+墙上的钉子，我把锤子放进嘴里，我就这么做了，(声音)。
+the nail in the wall, I put the hammer in my mouth and I just did, [SOUND].
 
 26
 00:01:43.355 --> 00:01:48.930
-我有正确的工具，但我用的是错误的工具。
-I have the right tool for the right job
-but I'm using the tool the wrong way.
+我有合适的工具来做正确的工作，但我使用工具的方式是错误的。
+I have the right tool for the right job but I'm using the tool the wrong way.
 
 27
 00:01:48.930 --> 00:01:50.460
-拥有正确的工具是不够的
+光有正确的工具是不够的，
 It's not enough to have the right tool,
 
 28
 00:01:50.460 --> 00:01:52.359
-你得用正确的工具
-you need to use the right
-tool the right way.
+你需要以正确的方式使用正确的工具。
+you need to use the right tool the right way.
 
 29
 00:01:54.270 --> 00:01:56.938
-所以尽管我们也许是个能工作的工具
-So even though let might
-be a tool that would work,
+所以即使let可能是一个有用的工具，
+So even though let might be a tool that would work,
 
 30
 00:01:56.938 --> 00:01:59.111
-它不是用正确的方式使用的
+它的使用方式不正确。
 it's not being used in the correct way.
 
 31
 00:02:01.462 --> 00:02:04.929
->> Kyle Simpson: 此处的 var 关键字是更合适的工具来表示我有
-&gt;&gt; Kyle Simpson: The var keyword here is
-a more appropriate tool to say I have
+&gt；&gt；Kyle Simpson：这里的var关键字更适合说我有
+&gt;&gt; Kyle Simpson: The var keyword here is a more appropriate tool to say I have
 
 32
 00:02:04.929 --> 00:02:07.500
-应该使用的变量。
+应跨使用的变量。
 a variable that should be used across.
 
 33
 00:02:07.500 --> 00:02:10.330
-这是一个思想实验，想象一个人要设计
-Here's a thought experiment,
-imagine somebody were to design
+这是一个思维实验，想象一下有人要设计
+Here's a thought experiment, imagine somebody were to design
 
 34
 00:02:10.330 --> 00:02:15.219
-仅允许您使用的编程语言
-a programming language
-that only allowed you to
+一种编程语言，只允许您
+a programming language that only allowed you to
 
 35
 00:02:15.219 --> 00:02:20.319
-在函数的第一行上访问函数的任何参数。
-access any parameters to a function on
-the very first line of the function.
+在函数的第一行访问函数的任何参数。
+access any parameters to a function on the very first line of the function.
 
 36
 00:02:20.319 --> 00:02:23.759
-在第一条线之外，你无法访问这些参数。
-And beyond the first line you
-couldn't access the parameters.
+在第一行之外，您无法访问参数。
+And beyond the first line you couldn't access the parameters.
 
 37
 00:02:23.759 --> 00:02:26.349
-你有多少人会觉得这会是一种有趣的语言
-How many of you would find
-that to be a fun language
+你们中有多少人会觉得这是一门有趣的语言
+How many of you would find that to be a fun language
 
 38
 00:02:26.349 --> 00:02:30.240
-你有多少人能用语言来让人讨厌的限制
-versus how many of you would find that to
-be an annoying restriction in a language?
+而你们中有多少人会发现这在一门语言中是一种恼人的限制？
+versus how many of you would find that to be an annoying restriction in a language?
 
 39
 00:02:31.789 --> 00:02:36.439
-我觉得原因，这就是我要做的事，是自然的
-I think the reason, and this is what
-I'm getting at, is it is natural
+我认为原因，这就是我想说的，就是它是自然的
+I think the reason, and this is what I'm getting at, is it is natural
 
 40
 00:02:36.439 --> 00:02:40.829
-在代码的设计中有些东西不是块的
-within the design of code that
-some things are not block scoped.
+在代码设计中，有些东西不是块范围的。
+within the design of code that some things are not block scoped.
 
 41
 00:02:42.000 --> 00:02:46.652
-有些东西是，如果你有自然阻塞的东西，
-Some things are, and if you have
-something that is naturally block scoped,
+有些东西是，如果你有自然块范围的东西，
+Some things are, and if you have something that is naturally block scoped,
 
 42
 00:02:46.652 --> 00:02:48.560
-请允许使用。
+请使用LET。
 please use let.
 
 43
 00:02:48.560 --> 00:02:52.020
-我什么都没说让我们去阻止范围
-I'm not saying anything about let,
-use let to block scope,
+我不是说任何关于let的事，用let来阻止范围，
+I'm not saying anything about let, use let to block scope,
 
 44
 00:02:52.020 --> 00:02:54.009
-这正是它所需要的
+这就是它的用途。
 that's exactly what it's for.
 
 45
 00:02:54.009 --> 00:02:58.449
-但请不要去找那些不是自然允许的东西
-But please don't go looking to make things
-into lets that aren't naturally lets.
+但是，请不要去寻找把东西变成不是天生的let。
+But please don't go looking to make things into lets that aren't naturally lets.
 
 46
 00:03:00.069 --> 00:03:00.650
-怎么了 >> 演讲者 1:
-Yes?
-&gt;&gt; Speaker 1: So
+是？&gt；&gt；扬声器1：所以
+Yes? &gt;&gt; Speaker 1: So
 
 47
 00:03:00.650 --> 00:03:05.319
-如果您使用 ESLint，我认为缺省设置是如果您使用 var，
-if you use ESLint, I think the default
-setting is that if you use var,
+如果您使用ESLint，我认为默认设置是如果您使用var，
+if you use ESLint, I think the default setting is that if you use var,
 
 48
 00:03:05.319 --> 00:03:10.039
-那你就会得到意想不到的消息，或者其他的方式，对吧。
-then you get the unexpected let,
-or the other way around, right.
+然后你会得到意想不到的邀请，或者反过来，对吧。
+then you get the unexpected let, or the other way around, right.
 
 49
 00:03:10.039 --> 00:03:10.539
->> 凯尔 - 辛普森: 这是真的。
+&gt；&gt；Kyle Simpson：没错。
 &gt;&gt; Kyle Simpson: That's true.
 
 50
 00:03:12.060 --> 00:03:13.300
-我不同意他们的意见
+我只是不同意他们的观点
 And I just disagree with them, and
 
 51
 00:03:13.300 --> 00:03:16.014
-我的规定是在我自己的 ESLint 中关闭的，好的。
-I have that rule turned off
-in my own ESLint, okay.
+我已经在我自己的ESLint中关闭了这个规则，好吧。
+I have that rule turned off in my own ESLint, okay.
 
 52
 00:03:17.620 --> 00:03:23.579
-不允许您对其进行定制并改为强制实施的任何工具
-Any tool that doesn't allow you to
-customize it and instead enforces
+任何不允许您自定义它的工具，而是强制执行
+Any tool that doesn't allow you to customize it and instead enforces
 
 53
 00:03:23.579 --> 00:03:28.659
-它自己对你的看法，是一个不帮你的工具，就在你的路上。
-its own opinion on you, is a tool that's
-not helping you, it's getting in your way.
+它自己对你的看法，是一个没有帮助你的工具，它在妨碍你。
+its own opinion on you, is a tool that's not helping you, it's getting in your way.
 
 54
 00:03:28.659 --> 00:03:32.060
-我认为这并不是真正的帮助你的方法。
-And I would argue it's not really
-getting in your way in a helpful way.
+我认为这并不是真的以一种有益的方式妨碍了你。
+And I would argue it's not really getting in your way in a helpful way.
 
 55
 00:03:32.060 --> 00:03:35.199
-它在你的路上妨碍了你的交流
-It's getting on your way and
-preventing you from communicating.
+它在你的路上阻碍你的交流。
+It's getting on your way and preventing you from communicating.
 
 56
 00:03:35.199 --> 00:03:36.090
-怎么了
+怎么了？
 Yes?
 
 57
 00:03:36.090 --> 00:03:40.176
->> 扬声器 2: 要查看第 2 行 ( 如果存在 var 或 let ) ，那么将
-&gt;&gt; Speaker 2: To review for line two,
-if we have var or let, will the variable
+&gt；&gt；Speaker 2：检查第二行，如果我们有var或let，将变量
+&gt;&gt; Speaker 2: To review for line two, if we have var or let, will the variable
 
 58
 00:03:40.176 --> 00:03:43.689
-在 - >> Kyle Simpson中以相同方式运行 : 在此特定代码中
-function in the same way in the-
-&gt;&gt; Kyle Simpson: In this particular code
+在-&gt；&gt；Kyle Simpson中以相同的方式执行函数：在此特定代码中
+function in the same way in the- &gt;&gt; Kyle Simpson: In this particular code
 
 59
 00:03:43.689 --> 00:03:45.960
-片段它们的行为相同。
+片段他们的行为是一样的。
 snippet they will behave the same.
 
 60
 00:03:45.960 --> 00:03:52.199
-所以我现在在这张幻灯片上做的就是一个风格的观点。
-So all I'm making the case right now on
-this exact slide is a stylistic argument.
+所以我现在这张幻灯片上所做的就是一个文体上的论证。
+So all I'm making the case right now on this exact slide is a stylistic argument.
 
 61
 00:03:52.199 --> 00:03:55.400
-我要做个更重要的事来解释为什么你有时想要
-I'm about to make a bigger case for
-why you sometimes want var,
+我要做一个更大的案子来解释为什么你有时想要var，
+I'm about to make a bigger case for why you sometimes want var,
 
 62
 00:03:55.400 --> 00:03:58.300
-但现在我只为 var 做个造型论
-but right now I'm only making
-a stylistic argument for var.
+但现在我只是在为var做一个文体上的论证。
+but right now I'm only making a stylistic argument for var.
 
 63
 00:03:59.520 --> 00:04:04.503
-var 的语义参数，好的。
+var的语义论证，好的。
 A semantic argument for var, okay.
 
 64
 00:04:04.503 --> 00:04:08.927
-[ COUGH] 所以如果你有一个变量要出现在
-[COUGH] So if you have a variable
-that is going to show up in
+[咳嗽]所以如果你有一个变量会出现在
+[COUGH] So if you have a variable that is going to show up in
 
 65
 00:04:08.927 --> 00:04:13.259
-一个被认为是一个街区的地方
-a place that would otherwise
-be considered a block and
+一个地方，否则会被认为是一个街区和
+a place that would otherwise be considered a block and
 
 66
 00:04:13.259 --> 00:04:18.089
-你用一个，猜猜那个变量会怎么样 ?
-you use a let,
-guess what happens to that variable?
+你使用一个let，猜猜那个变量发生了什么？
+you use a let, guess what happens to that variable?
 
 67
 00:04:18.089 --> 00:04:21.029
-无论您是否希望，它都将连接到该块。
-Whether you want it to or not,
-it attaches to that block.
+不管你想不想，它都附着在那个块上。
+Whether you want it to or not, it attaches to that block.
 
 68
 00:04:22.470 --> 00:04:27.050
-我经常遇到的一个例子是，如果我尝试使用一个
-One of the examples that I often run
-across is if I'm trying to use a let and
+我经常遇到的一个例子是，如果我试图使用一个let和
+One of the examples that I often run across is if I'm trying to use a let and
 
 69
 00:04:27.050 --> 00:04:30.040
-我把它用在 try - catch 块里面
+我在try-catch块中使用它，
 I use it inside of a try-catch block,
 
 70
 00:04:30.040 --> 00:04:34.139
-我不认为它是一个街区，我不认为它是一个范围。
-I don't think of try-catch as a block,
-I don't think of it as a scope.
+我不认为try-catch是一个块，我不认为它是一个范围。
+I don't think of try-catch as a block, I don't think of it as a scope.
 
 71
 00:04:34.139 --> 00:04:37.120
-我认为它是一种捕捉例外情况的句法
-I think of it as a syntactic
-way to catch exceptions,
+我认为它是一种捕获异常的句法方法，
+I think of it as a syntactic way to catch exceptions,
 
 72
 00:04:37.120 --> 00:04:40.759
-不是特别设计好的，但我们是如何捕捉到例外的。
-not even a particularly well designed one,
-but it is how we catch exceptions.
+甚至不是一个特别好的设计，但它是我们捕获异常的方式。
+not even a particularly well designed one, but it is how we catch exceptions.
 
 73
 00:04:41.970 --> 00:04:45.470
-我当然不认为它是一个隐藏空间的地方。
-I certainly don't think of it
-as a place for me to hide scope.
+我当然不认为它是我隐藏范围的地方。
+I certainly don't think of it as a place for me to hide scope.
 
 74
 00:04:45.470 --> 00:04:47.350
-然而，让关键词和
+但是，let关键字和
 And yet, the let keyword and
 
 75
 00:04:47.350 --> 00:04:49.850
-常量关键字块作用域本身。
-the const keyword block scope
-themselves inside of it.
+const关键字块在其中自己作用域。
+the const keyword block scope themselves inside of it.
 
 76
 00:04:49.850 --> 00:04:55.379
-那么，如果我们从 var 中找到和替换我们的全球发现和替换，会发生什么呢 ?
-So guess what would happen if we did our
-global find and replace from var to let?
+所以猜猜如果我们从var到let进行全局查找和替换会发生什么？
+So guess what would happen if we did our global find and replace from var to let?
 
 77
 00:04:55.379 --> 00:04:58.409
-这个代码将会中断，因为在第 9 行上没有标识。
-This code would break because there
-wouldn't be an id on line nine.
+这个代码会被破坏，因为在第九行没有id。
+This code would break because there wouldn't be an id on line nine.
 
 78
 00:05:00.709 --> 00:05:04.279
-Var hoists ，我们会把它弄回来的，但是
-Var hoists,
-we'll get it back to hoisting, but
+无功提升机，我们会让它重新升起，但是
+Var hoists, we'll get it back to hoisting, but
 
 79
 00:05:04.279 --> 00:05:07.100
-var 将自身附加到函数作用域。
+var将自身附加到函数范围。
 var attaches itself to the function scope.
 
 80
 00:05:07.100 --> 00:05:12.012
-在这种情况下，我想说，这也许不是一直存在的问题，但
-And I would argue in cases like this,
-which arguably are not all the time, but
+我会在这样的情况下争辩，这可以说并不是所有的时间，但是
+And I would argue in cases like this, which arguably are not all the time, but
 
 81
 00:05:12.012 --> 00:05:15.490
-在某些情况下， var 关键字更可取
-in some cases,
-the var keyword is preferable to the let
+在某些情况下，var关键字比let更可取
+in some cases, the var keyword is preferable to the let
 
 82
 00:05:15.490 --> 00:05:20.266
-因为它能够在此情况下转义非预期的块。
-keyword because it is able, in this case,
-to escape an unintended block.
+关键字，因为在这种情况下，它能够转义意外的块。
+keyword because it is able, in this case, to escape an unintended block.
 
 83
 00:05:23.278 --> 00:05:26.542
->> Kyle Simpson: 此处的替代方法是在外部声明 var
-&gt;&gt; Kyle Simpson: The alternative here
-would have been to declare a var outside
+&gt；&gt；Kyle Simpson：这里的替代方案是在外部声明var
+&gt;&gt; Kyle Simpson: The alternative here would have been to declare a var outside
 
 84
 00:05:26.542 --> 00:05:31.800
-就像我们之前做过的几张幻灯片一样，在两个地方给它分配。
-of the try, just like we did a few slides
-ago, and then assign to it in two places.
+的尝试，就像我们之前做的几张幻灯片，然后在两个地方分配给它。
+of the try, just like we did a few slides ago, and then assign to it in two places.
 
 85
 00:05:31.800 --> 00:05:34.920
-我想说的是你越添加代码的越多
-And I would argue that the more
-that you add lines of code to that,
+我会争辩说，你给它添加的代码行越多，
+And I would argue that the more that you add lines of code to that,
 
 86
 00:05:34.920 --> 00:05:38.629
-另外，您将声明与任务分配分开，对于
-the further you separate the declaration
-from the assignment, the harder it is for
+你越是把声明和任务分开，它就越难
+the further you separate the declaration from the assignment, the harder it is for
 
 87
 00:05:38.629 --> 00:05:39.449
-人们要理解
+需要理解的人。
 people to understand.
 
 88
 00:05:41.199 --> 00:05:45.100
-这就是我喜欢用 " var" 之类的东西来的地方之一。
-So this is one of those places where I
-tend to prefer using something like a var.
+所以这是我倾向于使用var之类的东西的地方之一。
+So this is one of those places where I tend to prefer using something like a var.
 
 89
 00:05:46.420 --> 00:05:50.290
-当我们在讨论 var 的话题时，瓦尔能做的另一件事是
-While we're on the topic of var, another
-thing that var can do which let can not is
+当我们讨论var时，var可以做的另一件事是
+While we're on the topic of var, another thing that var can do which let can not is
 
 90
 00:05:50.290 --> 00:05:52.899
-您可以在作用域内多次使用 var 。
-that you can use var more
-than once inside of a scope.
+您可以在一个作用域中多次使用var。
+that you can use var more than once inside of a scope.
 
 91
 00:05:53.920 --> 00:05:57.370
-此变量在函数作用域中使用了两次，并且
-Here var is being used twice
-within a function scope, and
+这里var在一个函数范围内被使用了两次，并且
+Here var is being used twice within a function scope, and
 
 92
 00:05:57.370 --> 00:05:59.870
-我们也不会有任何例外
-we're not gonna get any
-exceptions whatsoever.
+我们不会有任何例外。
+we're not gonna get any exceptions whatsoever.
 
 93
 00:05:59.870 --> 00:06:04.490
-我在网上用了 6 个变量因为我想澄清
-And I used the var online six
-because I was trying to disambiguate
+我使用var online six是因为我试图消除歧义
+And I used the var online six because I was trying to disambiguate
 
 94
 00:06:04.490 --> 00:06:06.709
-这里的 id 是从哪里来的
+我的身份来自哪里。
 where id comes from.
 
 95
 00:06:06.709 --> 00:06:09.879
-这是我发送给读者的语意信号
-This is a semantic signal that
-I'm sending to the reader,
+这是我发送给读者的语义信号，
+This is a semantic signal that I'm sending to the reader,
 
 96
 00:06:09.879 --> 00:06:11.730
-不管我们经历了什么
+不管我们走哪条路，
 regardless of which path we go through,
 
 97
 00:06:11.730 --> 00:06:15.339
-在功能范围内肯定会有一个标识它会有一个价值
-there's gonna be an id in the function
-scope and it's gonna have a value.
+函数作用域中会有一个id，它会有一个值。
+there's gonna be an id in the function scope and it's gonna have a value.
 
 98
 00:06:16.579 --> 00:06:20.819
-所以我把 var 放在两个地方，我可以这样做，因为那是 var 可以做的。
-So I put var in both places, and I can
-do that because that's what var can do.
+所以我把var放在这两个地方，我可以这样做，因为var可以做到这一点。
+So I put var in both places, and I can do that because that's what var can do.
 
 99
 00:06:20.819 --> 00:06:21.959
-我不能用一个 let来
+我不能这么做。
 I can't do that with a let.
 
 100
 00:06:23.759 --> 00:06:27.350
-我不经常这样做就像我说的那样
-I don't do this that often,
-as again as I've said.
+我不经常这样做，就像我说的那样。
+I don't do this that often, as again as I've said.
 
 101
 00:06:27.350 --> 00:06:29.550
-这不是在代码中发生的事情。
-This is not something that
-happens a lot in the code.
+这并不是代码中经常发生的事情。
+This is not something that happens a lot in the code.
 
 102
 00:06:29.550 --> 00:06:33.920
-但在发生这种情况的地方我认为
-But in the places that it happens,
-I think that it is better that var is
+但在发生这种情况的地方，我认为var更好
+But in the places that it happens, I think that it is better that var is
 
 103
 00:06:33.920 --> 00:06:37.829
-具有不同功能的工具就会被允许。
-a tool that has a different
-capability then does let.
+然后，具有不同功能的工具确实会让。
+a tool that has a different capability then does let.
 
 104
 00:06:37.829 --> 00:06:42.668
-如果我采纳了一些完全禁止使用 var的 ESLint 规则，
-And if I had adopted some ESLint rule
-that completely forbid all uses of var,
+如果我采用了一些完全禁止使用var的ESLint规则，
+And if I had adopted some ESLint rule that completely forbid all uses of var,
 
 105
 00:06:42.668 --> 00:06:45.939
-在此场景中，我将受到限制。
+在这种情况下我会受到限制。
 I would be restricted in this scenario.
 
 106
 00:06:45.939 --> 00:06:50.459
-这里是另一个我喜欢用 var 来区分范围的地方。
-Here's another place where I like to use
-the var for the disambiguation of scope.
+这里还有一个地方，我喜欢使用var来消除范围的歧义。
+Here's another place where I like to use the var for the disambiguation of scope.
 
 107
 00:06:50.459 --> 00:06:55.159
-我倾向于我的功能不超过 15 或 20 行代码。
-I tended to prefer my functions to be no
-longer than about 15 or 20 lines of code.
+我倾向于我的函数长度不超过15或20行代码。
+I tended to prefer my functions to be no longer than about 15 or 20 lines of code.
 
 108
 00:06:55.159 --> 00:06:59.970
-我想把我所有的功能都放在我的代码屏幕上
-Cuz I'd like to have all of my functions
-be visible on my code screen at once,
+因为我想让我的所有功能在我的代码屏幕上一次可见，
+Cuz I'd like to have all of my functions be visible on my code screen at once,
 
 109
 00:06:59.970 --> 00:07:01.410
-在我的编辑里
+马上在我的编辑里。
 in my editor at once.
 
 110
 00:07:01.410 --> 00:07:04.339
-但每过一段时间也许比我承认的要多
-But every once in a while,
-maybe more often than I'd like to admit,
+但每隔一段时间，也许比我愿意承认的更频繁，
+But every once in a while, maybe more often than I'd like to admit,
 
 111
 00:07:04.339 --> 00:07:08.029
-我的功能是 100 行还是 200 行就行了
-my functions are 100 lines or
-200 lines long, it does happen.
+我的函数是100行或200行长，它确实发生了。
+my functions are 100 lines or 200 lines long, it does happen.
 
 112
 00:07:08.029 --> 00:07:11.120
-你们中的一些可能有一些长的功能，好的。
-Some of you probably have
-some long functions, okay.
+你们中的一些人可能有一些长的功能，好吧。
+Some of you probably have some long functions, okay.
 
 113
 00:07:11.120 --> 00:07:15.339
-如果我在函数中声明某个函数变量和
-If I declare on line one of
-a function some variable and
+如果我在函数的第一行声明某个变量
+If I declare on line one of a function some variable and
 
 114
 00:07:15.339 --> 00:07:19.160
-是叫老师的，我是用它来的，我用的
-it's called teacher and I'm using it for
-some purpose, and I use it for
+它叫老师，我把它用于某种目的，我用它来
+it's called teacher and I'm using it for some purpose, and I use it for
 
 115
 00:07:19.160 --> 00:07:24.240
-几行然后我们就会有 200 条线然后我又要用这个变量了
-a few lines and then we go down 200 lines
-and then I need to use the variable again.
+几行，然后我们向下200行，然后我需要再次使用变量。
+a few lines and then we go down 200 lines and then I need to use the variable again.
 
 116
 00:07:24.240 --> 00:07:26.733
-如果我开始进入并分配给它
-If I just start accessing it and
-assigning to it, and
+如果我开始访问它并分配给它，并且
+If I just start accessing it and assigning to it, and
 
 117
 00:07:26.733 --> 00:07:30.137
-读者在那里一直滚动着，看到老师，
-the reader is scrolled all the way
-down there and they see that teacher,
+读者一直滚动到那里，他们看到了那个老师，
+the reader is scrolled all the way down there and they see that teacher,
 
 118
 00:07:30.137 --> 00:07:32.826
-对他们的影响是不清楚的。
-it is not gonna be clear to
-them what scope it comes from.
+他们不会清楚它来自什么范围。
+it is not gonna be clear to them what scope it comes from.
 
 119
 00:07:32.826 --> 00:07:34.738
-他们要怎么解决这个问题
+他们怎么解决这个问题？
 How are they gonna solve that?
 
 120
 00:07:34.738 --> 00:07:37.550
-他们得把 200 条线卷起来然后去找个 var 老师
-They're gonna have to scroll 200 lines
-up and go look for a var teacher.
+他们得往上滚动200行然后去找一位var老师。
+They're gonna have to scroll 200 lines up and go look for a var teacher.
 
 121
 00:07:39.928 --> 00:07:44.064
->> Kyle Simpson: 我想做的是在任何地方重复使用变量
-&gt;&gt; Kyle Simpson: What I like to do is any
-place where I'm going to reuse a variable
+&gt；&gt；Kyle Simpson：我喜欢在任何地方重用变量
+&gt;&gt; Kyle Simpson: What I like to do is any place where I'm going to reuse a variable
 
 122
 00:07:44.064 --> 00:07:48.512
-在一个很明显已经被宣布的地方
-in a place where it's not obviously
-already having been declared,
+在一个显然还没有宣布的地方，
+in a place where it's not obviously already having been declared,
 
 123
 00:07:48.512 --> 00:07:50.853
-我要重新声明要清楚
+是我重新声明它是为了让它更清楚
 is I redeclare it to make it clear and
 
 124
 00:07:50.853 --> 00:07:55.159
-完全明白它属于什么范围。
-completely unambiguous
-what scope it belongs to.
+完全明确它属于什么范围。
+completely unambiguous what scope it belongs to.
 
 125
 00:07:55.159 --> 00:07:59.088
-所以我把另一个变量标识在 200 线上
-So I put another var id down on
-line 200 to show you that I'm
+所以我在第200行写了另一个变量来告诉你我
+So I put another var id down on line 200 to show you that I'm
 
 126
 00:07:59.088 --> 00:08:01.788
-在此作用域中使用称为 " 标识 " 的变量，
+在这个作用域中使用名为id的变量，
 using a variable called id in this scope,
 
 127
 00:08:01.788 --> 00:08:06.353
-无论其是否仅声明一次或重新声明。
-regardless of whether it was declared
-only once or being redeclared.
+无论是只声明一次还是重新声明。
+regardless of whether it was declared only once or being redeclared.
 
 128
 00:08:06.353 --> 00:08:09.300
-无法在作用域内复用 Var 。
-Vars can be reused within a scope,
-lets cannot.
+var可以在范围内重用，但不能。
+Vars can be reused within a scope, lets cannot.
 
 129
 00:08:10.459 --> 00:08:15.670
-所以有语义上的原因和行为上的原因
-So there are both semantic reasons and
-behavioral reasons why I think var and
+所以我认为var和var的原因既有语义上的原因，也有行为上的原因
+So there are both semantic reasons and behavioral reasons why I think var and
 
 130
 00:08:15.670 --> 00:08:19.879
-应该在您的程序中共存，而不是让它成为另一个。
-let should coexist in your program
-rather than having one be the other.
+我们应该在你的程序中共存，而不是让一个成为另一个。
+let should coexist in your program rather than having one be the other.
 
 131
 00:08:19.879 --> 00:08:24.319
-事实上我想说基本上所有电脑都没时间
-As a matter of fact, I would say,
-essentially no time in all of computer
+事实上，我会说，基本上没有时间在所有的计算机
+As a matter of fact, I would say, essentially no time in all of computer
 
 132
 00:08:24.319 --> 00:08:28.779
-科学历史曾经是真实的 X 是新的
-science history has that ever really
-been true, that x is the new y.
+科学史上一直都是真实的，x就是新的y。
+science history has that ever really been true, that x is the new y.
 
 133
 00:08:30.310 --> 00:08:32.360
-那不是件事
+这不是一件事。
 That's just not a thing.
 
 134
 00:08:32.360 --> 00:08:37.220
-我们创造了新的东西，但它几乎没有，在所有东西的范围内
-We create new stuff, but it almost never,
-in the whole scope of everything that
+我们创造新的东西，但它几乎从来没有，在整个范围内
+We create new stuff, but it almost never, in the whole scope of everything that
 
 135
 00:08:37.220 --> 00:08:40.590
-我们发明了一个新事物的案例
-we've invented, it is almost never
-the case that when you create a new thing
+我们发明了，当你创造一个新的东西时，几乎从来没有这种情况
+we've invented, it is almost never the case that when you create a new thing
 
 136
 00:08:40.590 --> 00:08:44.830
-完全彻底地排除了之前的事
-it completely and totally obviates
-the previous thing immediately.
+它完全和完全地立即排除了之前的事情。
+it completely and totally obviates the previous thing immediately.
 
 137
 00:08:45.909 --> 00:08:48.298
-几乎都是它的预兆
+它几乎总是在增加。
 It's almost always that it augments.
 
 138
 00:08:49.769 --> 00:08:52.580
-所以我们这里就是一个例子
-And so
-what we have here is an example where
+所以我们这里有一个例子
+And so what we have here is an example where
 
 139
 00:08:52.580 --> 00:08:55.529
-我们喜欢写有新 var 的博客帖子
-we love to write blog post that
-say let is the new var and
+我们喜欢写博客文章，说let是新的var和
+we love to write blog post that say let is the new var and
 
 140
 00:08:55.529 --> 00:08:58.570
-我们喜欢有 T 恤衫说我们喜欢做全球发现
-we love to have t-shirts that say that and
-we love to do global find and
+我们喜欢有这样的T恤，我们喜欢做全球搜索和
+we love to have t-shirts that say that and we love to do global find and
 
 141
 00:08:58.570 --> 00:09:03.059
-替换，但实际上不是新 var，它是加 var。
-replaces, but in reality let is not
-the new var, it is let plus var.
+取代，但实际上让不是新的var，它是让加var。
+replaces, but in reality let is not the new var, it is let plus var.
 
 142
 00:09:04.500 --> 00:09:06.830
@@ -827,62 +712,55 @@ They both are useful for our programs.
 
 143
 00:09:06.830 --> 00:09:07.825
-你有问题吗
+你有问题吗？
 You had a question?
 
 144
 00:09:07.825 --> 00:09:12.121
->> 演讲者 1: 是的，如果你愿意的话，如果你有两次 id 的话。
-&gt;&gt; Speaker 1: Yeah, if you,
-like in this case, if you have id twice.
+&gt；&gt；扬声器1：是的，如果你，就像在这种情况下，如果你有两次id。
+&gt;&gt; Speaker 1: Yeah, if you, like in this case, if you have id twice.
 
 145
 00:09:12.121 --> 00:09:14.669
-是存储在同一内存位置的 var ，或者
-Is then the var stored in
-the same memory location or
+那么var是否存储在相同的内存位置或
+Is then the var stored in the same memory location or
 
 146
 00:09:14.669 --> 00:09:17.870
-是否有两个相互引用的内存位置，或者?
-are there two memory locations
-that reference each other or?
+是否有两个相互引用的内存位置或？
+are there two memory locations that reference each other or?
 
 147
 00:09:17.870 --> 00:09:18.909
->> 凯尔 - 辛普森: 只有一个大理石。
+&gt；&gt；Kyle Simpson：只有一个大理石。
 &gt;&gt; Kyle Simpson: Just one marble.
 
 148
 00:09:18.909 --> 00:09:23.570
-请记住我们之前的示例，当我们在第 6 行上运行第二个 var 时
-Remember from our earlier example, when
-we run across the second var on line six
+还记得前面的示例，当我们在第六行遇到第二个var时
+Remember from our earlier example, when we run across the second var on line six
 
 149
 00:09:23.570 --> 00:09:27.259
-在编译阶段，我们会说，哎蓝色的范围，
-during the compilation phase,
-we would have said, hey blue scope,
+在编译阶段，我们会说，嘿，蓝色范围，
+during the compilation phase, we would have said, hey blue scope,
 
 150
 00:09:27.259 --> 00:09:30.210
-哎查找记录的范围，有没有听说过这个叫 id的东西 ?
-hey scope of lookup record,
-ever heard of this thing called id?
+嘿查找记录的范围，听说过这个叫id的东西吗？
+hey scope of lookup record, ever heard of this thing called id?
 
 151
 00:09:30.210 --> 00:09:31.659
 他会说，是的，他会说，
-And he would have said, yep,
-and he would have said,
+And he would have said, yep, and he would have said,
 
 152
 00:09:31.659 --> 00:09:34.730
-好的冷静点没事的
+好的酷，没什么可做的，没有行动。
 okay cool, nothing to do, no op.
 
 153
 00:09:36.059 --> 00:09:37.419
-已经有一个叫做 id的大理石
+已经有一个叫id的大理石了。
 There's already a marble called id.

@@ -2,188 +2,160 @@ WEBVTT
 
 1
 00:00:00.140 --> 00:00:03.645
->> 凯尔 - 辛普森: 在这次的提升过程中，你会有机会
-&gt;&gt; Kyle Simpson: In this hoisting
-exercise, you're gonna get a chance to
+&gt；&gt；Kyle Simpson：在这个提升练习中，你将有机会
+&gt;&gt; Kyle Simpson: In this hoisting exercise, you're gonna get a chance to
 
 2
 00:00:03.645 --> 00:00:08.102
-将函数从其作用域中移出的做法 ( 如果它们 )
-practice with that idea of bringing
-functions out of their scopes if they
+实践这个想法，将函数带出它们的作用域，如果它们
+practice with that idea of bringing functions out of their scopes if they
 
 3
 00:00:08.102 --> 00:00:12.426
-不需要嵌套或使用作用域底部的函数。
-don't need to be nested, or
-using functions at the bottom of scopes.
+不需要嵌套，也不需要使用作用域底部的函数。
+don't need to be nested, or using functions at the bottom of scopes.
 
 4
 00:00:12.426 --> 00:00:15.018
-就像我们在演讲中提到的那样
-That sort of thing like we've
-just talked about in the lecture,
+就像我们刚才在讲座中谈到的那样，
+That sort of thing like we've just talked about in the lecture,
 
 5
 00:00:15.018 --> 00:00:17.039
-你会有机会练习的
-you're gonna get a chance
-to practice with that.
+你会有机会练习的。
+you're gonna get a chance to practice with that.
 
 6
 00:00:17.039 --> 00:00:22.664
-所以我们要用一个已经使用了各种功能的现有代码库
-So we're gonna take an existing code base
-that already uses a variety of function
+所以我们将采用已经使用各种功能的现有代码库
+So we're gonna take an existing code base that already uses a variety of function
 
 7
 00:00:22.664 --> 00:00:28.044
-表达式，我们将使用我们的新发现重构该代码库
-expressions, and we're going to refactor
-that code base using our newfound
+表达式，我们将使用新发现的
+expressions, and we're going to refactor that code base using our newfound
 
 8
 00:00:28.044 --> 00:00:33.276
-关于提升的知识，我们改变它所写的方式的能力。
-knowledge of hoisting, our ability
-to change the way that it's written.
+提升的知识，我们改变书写方式的能力。
+knowledge of hoisting, our ability to change the way that it's written.
 
 9
 00:00:33.276 --> 00:00:37.088
-我们没有改变任何行为，只是简单地改变编码方式。
-We're not changing any behavior, we're
-just simply changing the coding style.
+我们没有改变任何行为，我们只是简单地改变了编码风格。
+We're not changing any behavior, we're just simply changing the coding style.
 
 10
 00:00:37.088 --> 00:00:40.954
-如果你看它的当前版本，它看起来就像这样。
-If you look at the current version of it,
-It looks like this.
+如果你看它的当前版本，它看起来是这样的。
+If you look at the current version of it, It looks like this.
 
 11
 00:00:40.954 --> 00:00:45.895
-我们有一组函数声明和内联函数表达式
-We have a set of function declarations and
-inline function expressions,
+我们有一组函数声明和内联函数表达式，
+We have a set of function declarations and inline function expressions,
 
 12
 00:00:45.895 --> 00:00:50.676
-还有几个地方有内联函数表达式
-and there are several places where
-we have inline function expressions
+在几个地方我们可以使用内联函数表达式
+and there are several places where we have inline function expressions
 
 13
 00:00:50.676 --> 00:00:54.756
-不需要直接插入函数表达式。
-that don't really need to be
-inline function expressions.
+其实并不需要是内联函数表达式。
+that don't really need to be inline function expressions.
 
 14
 00:00:54.756 --> 00:00:57.469
-举个例子，就在这里。
+一次这样的例子，就在这里。
 Once such example, right here.
 
 15
 00:00:57.469 --> 00:01:02.270
-该函数表达式本身不使用任何词法变量，因此
-That function expression isn't using any
-of the lexical variables around itself, so
+该函数表达式没有使用其自身周围的任何词法变量，所以
+That function expression isn't using any of the lexical variables around itself, so
 
 16
 00:01:02.270 --> 00:01:07.150
-没有什么特别的理由去直接插入它除了一种风格的偏好
-there's no particular reason to inline it,
-other than maybe just a style preference.
+没有特别的理由内联它，除了可能只是一种风格偏好。
+there's no particular reason to inline it, other than maybe just a style preference.
 
 17
 00:01:07.150 --> 00:01:09.469
-但没有机械的理由这样做。
+但是没有机械的理由这样做。
 But there's no mechanical reason to do so.
 
 18
 00:01:09.469 --> 00:01:13.700
-所以用我们知道的函数声明和
-So using what we know about
-function declarations and
+所以利用我们所知道的函数声明和
+So using what we know about function declarations and
 
 19
 00:01:13.700 --> 00:01:16.519
-功能提升让我们把它拉出来
-function hoisting,
-let's pull that one out.
+函数提升，让我们把那个拉出来。
+function hoisting, let's pull that one out.
 
 20
 00:01:16.519 --> 00:01:17.489
-所以你找
+所以你在寻找
 So you look for
 
 21
 00:01:17.489 --> 00:01:22.230
-可以将函数拉出外部作用域的示例，
-those examples where functions can
-be pulled out to an outer scope,
+可以将函数拉出到外部范围的那些示例，
+those examples where functions can be pulled out to an outer scope,
 
 22
 00:01:22.230 --> 00:01:27.170
-如果不需要嵌套，则使范围更简单，更平坦。
-if they don't need to be nested, that
-makes simpler and flatter scope structure.
+如果它们不需要嵌套，那么就会使作用域结构更简单、更平坦。
+if they don't need to be nested, that makes simpler and flatter scope structure.
 
 23
 00:01:27.170 --> 00:01:29.739
-而你所拥有的范围结构越简单
-And the simpler and
-flatter the scope structure you have,
+你的作用域结构越简单越平坦，
+And the simpler and flatter the scope structure you have,
 
 24
 00:01:29.739 --> 00:01:32.409
-越容易阅读和理解
-the easier it will be to read and
-understand.
+就越容易阅读和理解。
+the easier it will be to read and understand.
 
 25
 00:01:32.409 --> 00:01:36.969
-越嵌套越越越越越越越越越越越越越越接近
-The more nested it is, the harder it is
-to keep track of all those boundaries.
+它越嵌套，就越难跟踪所有这些边界。
+The more nested it is, the harder it is to keep track of all those boundaries.
 
 26
 00:01:36.969 --> 00:01:40.650
-另外，您将注意到所有可执行代码位于底部
-Also, you'll notice that all
-the executable code is at the bottom
+此外，您会注意到所有可执行代码都在底部
+Also, you'll notice that all the executable code is at the bottom
 
 27
 00:01:40.650 --> 00:01:42.030
-这个项目的。
+这个程序。
 of this program.
 
 28
 00:01:42.030 --> 00:01:45.099
-我们学到的功能提升是我们可以将可执行的
-And what we learned about function
-hoisting is that we can put executable
+我们学到的关于函数提升的内容是，我们可以将可执行文件
+And what we learned about function hoisting is that we can put executable
 
 29
 00:01:45.099 --> 00:01:48.359
-顶部的代码，以及底部的所有功能。
-code at the top, and
-all the functions at the bottom.
+代码在顶部，所有函数在底部。
+code at the top, and all the functions at the bottom.
 
 30
 00:01:48.359 --> 00:01:53.109
-所以你的任务是去重新考虑或者重新安排这些功能，
-So your task is to sort of refactor,
-or rearrange, these functions,
+所以你的任务是对这些函数进行重构或重新安排，
+So your task is to sort of refactor, or rearrange, these functions,
 
 31
 00:01:53.109 --> 00:01:58.120
-在必要时把它们拉出来
-pull them out where necessary,
-And refactor this code so
+在需要的地方将它们拉出来，并重构此代码，使之
+pull them out where necessary, And refactor this code so
 
 32
 00:01:58.120 --> 00:02:01.689
-使用或利用功能提升的好处。
-that it uses or leverages
-the benefits of function hoisting.
+它使用或利用函数提升的好处。
+that it uses or leverages the benefits of function hoisting.

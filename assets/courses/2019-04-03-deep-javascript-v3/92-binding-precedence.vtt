@@ -2,163 +2,140 @@ WEBVTT
 
 1
 00:00:00.100 --> 00:00:04.120
->> Kyle Simpson: 如果你有一个像第 9 行那样的疯狂的呼叫站点呢 ?
-&gt;&gt; Kyle Simpson: What if you had
-a really crazy call site like line 9?
+&gt；&gt；Kyle Simpson：如果你有一个像9号线那样非常疯狂的呼叫站点怎么办？
+&gt;&gt; Kyle Simpson: What if you had a really crazy call site like line 9?
 
 2
 00:00:04.120 --> 00:00:08.593
-9 行，我有个新关键词，我有个讲习班点，所以
-On line 9, I have a new keyword,
-I have a workshop dot ask, so
+在第9行，我有一个新的关键字，我有一个车间点问，所以
+On line 9, I have a new keyword, I have a workshop dot ask, so
 
 3
 00:00:08.593 --> 00:00:10.414
-我有上下文对象。
+我有一个上下文对象。
 I have a context object.
 
 4
 00:00:10.414 --> 00:00:14.185
-我有点束缚，在应用的范围下。
-And I have dot bind, which under
-the covers of course using apply.
+并且我有点绑定，当然在封面下使用应用。
+And I have dot bind, which under the covers of course using apply.
 
 5
 00:00:14.185 --> 00:00:17.399
-我的四个规则中有三个是在同一个电话站点上匹配的。
-I have three of my four rules
-matched on the same call site.
+我的四个规则中有三个在相同的调用站点上匹配。
+I have three of my four rules matched on the same call site.
 
 6
 00:00:18.550 --> 00:00:21.829
-我不是说你应该这样写个电话网站
-I am not by the way suggesting you should
-ever write a call site like that, but
+顺便说一句，我并不是建议你写一个这样的呼叫站点，但是
+I am not by the way suggesting you should ever write a call site like that, but
 
 7
 00:00:21.829 --> 00:00:23.420
-它确实有效
+真的有用。
 it does actually work.
 
 8
 00:00:23.420 --> 00:00:28.820
-那么地球上的原因是什么，它怎么知道要用什么东西呢 ?
-So why on Earth does it work, and
-how does it know which thing to use?
+那么，它到底为什么会工作，它是如何知道使用哪种东西的呢？
+So why on Earth does it work, and how does it know which thing to use?
 
 9
 00:00:29.859 --> 00:00:34.490
-如果多个规则与一个呼叫站点匹配，那么优先顺序是什么 ?
-If more than one rule matches a call site,
-what's the order of precedence?
+如果有多个规则与一个调用地点匹配，优先顺序是什么？
+If more than one rule matches a call site, what's the order of precedence?
 
 10
 00:00:36.545 --> 00:00:39.508
->> 凯尔 - 辛普森: 好吧，你可以说服自己
-&gt;&gt; Kyle Simpson: Well, there's a way
-that you could convince yourself or
+&gt；&gt；Kyle Simpson：嗯，有一种方法可以说服你自己或者
+&gt;&gt; Kyle Simpson: Well, there's a way that you could convince yourself or
 
 11
 00:00:39.508 --> 00:00:43.656
-向您自己证明操作的顺序或优先顺序是什么。
-prove to yourself what the order of
-operations, or the order of precedence is.
+向自己证明操作的顺序或优先顺序是什么。
+prove to yourself what the order of operations, or the order of precedence is.
 
 12
 00:00:43.656 --> 00:00:46.475
-但我要去简化手续告诉你
-But I'm just gonna go ahead and
-simplify, and tell you,
+但我还是先简化一下，然后告诉你，
+But I'm just gonna go ahead and simplify, and tell you,
 
 13
 00:00:46.475 --> 00:00:48.549
-这就是提出这些问题的顺序。
+这就是问这些问题的顺序。
 this is the order to ask those questions.
 
 14
 00:00:48.549 --> 00:00:56.020
-从这里向前看如果你需要问自己我的关键字是什么
-So from here forward, if you ever need
-to ask yourself what is my thisKeyword
+所以从现在开始，如果你需要问自己我的关键词是什么
+So from here forward, if you ever need to ask yourself what is my thisKeyword
 
 15
 00:00:56.020 --> 00:01:00.469
-在调用此函数时将指出，这就是您确定该函数的方式。
-gonna point out when this function gets
-invoked, this is how you determine that.
+指出这个函数何时被调用，这就是你如何确定的。
+gonna point out when this function gets invoked, this is how you determine that.
 
 16
 00:01:05.766 --> 00:01:09.881
->> Kyle Simpson: 对 thisKeyword 的确定是第一个关键字，
-&gt;&gt; Kyle Simpson: The determination for
-the thisKeyword is, number one,
+&gt；&gt；Kyle Simpson：这个关键字的确定是，第一，
+&gt;&gt; Kyle Simpson: The determination for the thisKeyword is, number one,
 
 17
 00:01:09.881 --> 00:01:12.375
-是新函数调用的函数吗 ?
+函数是用new调用的吗？
 was the function called with new?
 
 18
 00:01:12.375 --> 00:01:15.405
-如果是，那么新创建的对象将为 thisKeyword。
-If so, the newly created object
-will be the thisKeyword.
+如果是，则新创建的对象将是thisKeyword。
+If so, the newly created object will be the thisKeyword.
 
 19
 00:01:17.206 --> 00:01:20.439
->> 凯尔 - 辛普森: 第二，该函数是通过调用或应用来调用的吗 ?
-&gt;&gt; Kyle Simpson: Number two, is
-the function called with a call or apply?
+&gt；&gt；Kyle Simpson：第二，函数是通过调用还是应用来调用的？
+&gt;&gt; Kyle Simpson: Number two, is the function called with a call or apply?
 
 20
 00:01:21.849 --> 00:01:26.879
-顺便说点，点绑定是这个规则的一个子，因为它也有应用。
-And by the way dot bind is a sub of
-that rule because it also uses apply.
+顺便说一下，点绑定是该规则的子规则，因为它也使用apply。
+And by the way dot bind is a sub of that rule because it also uses apply.
 
 21
 00:01:28.019 --> 00:01:31.310
-如果是这样，那么将使用指定的上下文对象。
-If so, the context object that
-is specified will be used.
+如果是，则将使用指定的上下文对象。
+If so, the context object that is specified will be used.
 
 22
 00:01:33.191 --> 00:01:35.710
->> 凯尔辛普森: 如果不匹配，那么第三个，
-&gt;&gt; Kyle Simpson: If that doesn't match,
-then number three,
+&gt；&gt；Kyle Simpson：如果不匹配，那么第三个，
+&gt;&gt; Kyle Simpson: If that doesn't match, then number three,
 
 23
 00:01:35.710 --> 00:01:39.375
-在上下文对象 ( 如研讨会点 ) 上调用的函数吗 ?
-is the function called on a context
-object like workshop dot ask?
+这个函数是在上下文对象上调用的吗，比如工作坊的dot ask？
+is the function called on a context object like workshop dot ask?
 
 24
 00:01:41.629 --> 00:01:43.763
->> 凯尔 - 辛普森: 如果是，请使用该对象。
+&gt；&gt；Kyle Simpson：如果是这样，请使用该对象。
 &gt;&gt; Kyle Simpson: If so, use that object.
 
 25
 00:01:43.763 --> 00:01:47.776
-如果这三种都没有应用，那么我们就会回到默认值。
-And if none of those three have applied,
-then we fall back to the default which
+如果这三个都没有应用，那么我们回退到默认的
+And if none of those three have applied, then we fall back to the default which
 
 26
 00:01:47.776 --> 00:01:50.759
-除严格方式外，对全局对象的缺省值。
-says default to the global
-object except in strict mode.
+表示默认为全局对象，但在严格模式下除外。
+says default to the global object except in strict mode.
 
 27
 00:01:52.099 --> 00:01:56.609
-就是这四条规则它会完美地完全
-That's it, just those four rules in that
-order, and it'll perfectly and completely
+就是这样，就是这四条规则的顺序，它将完美而完整地
+That's it, just those four rules in that order, and it'll perfectly and completely
 
 28
 00:01:56.609 --> 00:02:00.521
-回答所有关于我的关键字点有什么意义的问题 ?
-answer every question that you may have
-about what does my thisKeyword point at?
+回答你可能有的关于我的关键字指向什么的所有问题？
+answer every question that you may have about what does my thisKeyword point at?

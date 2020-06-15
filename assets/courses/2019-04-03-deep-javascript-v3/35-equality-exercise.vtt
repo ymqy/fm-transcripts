@@ -2,310 +2,265 @@ WEBVTT
 
 1
 00:00:00.120 --> 00:00:02.609
->> 凯尔 - 辛普森: 让我们深入讨论这个平等话题，
-&gt;&gt; Kyle Simpson: Let's dig in
-a bit on this topic of equality,
+&gt；&gt；Kyle Simpson：让我们深入探讨一下这个平等的话题，
+&gt;&gt; Kyle Simpson: Let's dig in a bit on this topic of equality,
 
 2
 00:00:02.609 --> 00:00:06.740
-因为有很多肉是我们在平等的条件下进行的
-because there's a lot of meat that we
-just went over in terms of equality.
+因为我们刚刚从平等的角度讨论了很多肉。
+because there's a lot of meat that we just went over in terms of equality.
 
 3
 00:00:06.740 --> 00:00:09.359
-所以我们要有一个专门的练习
-So we wanna have a whole
-exercise dedicated to this.
+所以我们希望有一个完整的练习致力于这一点。
+So we wanna have a whole exercise dedicated to this.
 
 4
 00:00:09.359 --> 00:00:13.554
-公平的警告，这项工作将会受到公平的处理。
-And fair warning, this exercise
-is going to be fairly involved.
+公平的警告，这次演习将会涉及到相当多的事情。
+And fair warning, this exercise is going to be fairly involved.
 
 5
 00:00:13.554 --> 00:00:17.079
-有很多细微的细微差别我们都要处理
-There's a lot of little nuances that
-we're gonna have to take care of.
+我们要处理很多细微的差别。
+There's a lot of little nuances that we're gonna have to take care of.
 
 6
 00:00:17.079 --> 00:00:20.524
-我要你做的事
-What I am asking you to
-do with this exercise
+我要你做的是这个练习
+What I am asking you to do with this exercise
 
 7
 00:00:20.524 --> 00:00:24.179
-你要写一个 findAll 实用程序
-is you're going to write
-a findAll utility.
+你要写一个findAll实用程序。
+is you're going to write a findAll utility.
 
 8
 00:00:24.179 --> 00:00:30.129
-此 findAll 实用程序通过数组进行搜索，查找范围内的任何值
-And this findAll utility searches through
-an array, looking for any values within
+并且这个findAll实用程序搜索一个数组，查找其中的任何值
+And this findAll utility searches through an array, looking for any values within
 
 9
 00:00:30.129 --> 00:00:35.719
-与您传入的某些测试值相等的阵列。
-the array that are coercively equal to
-some test value that you've passed in.
+强制等于已传入的某个测试值的数组。
+the array that are coercively equal to some test value that you've passed in.
 
 10
 00:00:35.719 --> 00:00:39.229
-但在这一强制性平等问题上存在一些非常具体的制约因素。
-But there are some very specific
-constraints on that coercive equality.
+但在强制平等上有一些非常具体的限制。
+But there are some very specific constraints on that coercive equality.
 
 11
 00:00:39.229 --> 00:00:43.735
-所以，当然，这并不像只应用双等号那么简单。
-So it's, of course, not as simple
-as just applying a double equals.
+所以，当然，它并不像应用双等号那么简单。
+So it's, of course, not as simple as just applying a double equals.
 
 12
 00:00:43.735 --> 00:00:49.439
-因此 findAll 实用程序需要返回具有所有匹配值的数组
-So the findAll utility needs to return
-an array with all of the values that match
+因此findAll实用程序需要返回一个数组，其中包含所有匹配的值
+So the findAll utility needs to return an array with all of the values that match
 
 13
 00:00:49.439 --> 00:00:55.259
-指示信息中描述的测试规则。
-the test rules as described
-here in the instructions.
+说明中此处所述的测试规则。
+the test rules as described here in the instructions.
 
 14
 00:00:55.259 --> 00:00:59.628
-所以我们想要的强迫性匹配，不仅是双等号，
-So the coercive matching that we want,
-which is not just the double equals,
+所以我们想要的强制匹配，不仅仅是双等号，
+So the coercive matching that we want, which is not just the double equals,
 
 15
 00:00:59.628 --> 00:01:03.807
-是完全匹配的，我们现在知道可以用这个对象点。
-is any exact matches, which we now know
-we can use an object dot this for.
+是任何精确匹配，我们现在知道我们可以使用一个对象点这个。
+is any exact matches, which we now know we can use an object dot this for.
 
 16
 00:01:03.807 --> 00:01:07.239
-任何确实的比赛，我们当然都想加入。
-And any exact matches, we,
-of course, want to include.
+以及任何精确的匹配，当然，我们希望包括。
+And any exact matches, we, of course, want to include.
 
 17
 00:01:07.239 --> 00:01:10.620
 如果有任何字符串，除了空字符串或
-If there are any strings,
-except for the empty string or
+If there are any strings, except for the empty string or
 
 18
 00:01:10.620 --> 00:01:13.250
-只会有白色的地方记得我们想忽略那些
-white space only, remember,
-we wanna ignore those, but
+只有空白，记住，我们想忽略这些，但是
+white space only, remember, we wanna ignore those, but
 
 19
 00:01:13.250 --> 00:01:17.530
-如果有任何字符串，他们就可以被强迫匹配号码。
-if there are any strings, they're
-allowed to coercively match numbers.
+如果有任何字符串，则允许它们强制匹配数字。
+if there are any strings, they're allowed to coercively match numbers.
 
 20
 00:01:17.530 --> 00:01:21.219
-如果有数字除了 NaN 和无穷大之外
-And if there are any numbers,
-other than NaN and the infinities,
+如果有任何数字，除了NaN和无穷大之外，
+And if there are any numbers, other than NaN and the infinities,
 
 21
 00:01:21.219 --> 00:01:22.859
-允许这些字符匹配字符串。
+允许匹配字符串。
 those are allowed to match strings.
 
 22
 00:01:23.950 --> 00:01:27.560
-但就像一点点提示要小心和 0
-But as a little bit of a hint,
-be very careful with -0,
+但作为一个提示，请非常小心使用-0，
+But as a little bit of a hint, be very careful with -0,
 
 23
 00:01:27.560 --> 00:01:32.463
-因为它会把扳手扔进几个测试用的好吗
-because it will throw a wrench into
-several of these test cases, okay?
+因为它会把扳手扔进几个这样的测试用例，好吗？
+because it will throw a wrench into several of these test cases, okay?
 
 24
 00:01:32.463 --> 00:01:34.819
-我们想让空值与未定义的匹配项匹配，并且
-We wanna allow null to match undefined,
-and
+我们希望允许NULL与未定义的匹配，并且
+We wanna allow null to match undefined, and
 
 25
 00:01:34.819 --> 00:01:37.204
-反之亦然这就直说了
-vise versa,
-that's pretty straight forward.
+反之亦然，这很直截了当。
+vise versa, that's pretty straight forward.
 
 26
 00:01:37.204 --> 00:01:40.724
-我们想让博文人只与其他的野人相匹配
-We wanna allow booleans only
-to match other booleans.
+我们只允许布尔值匹配其他布尔值。
+We wanna allow booleans only to match other booleans.
 
 27
 00:01:40.724 --> 00:01:44.525
-因此， true 仅匹配 true，而不是字符串 true 或数字匹配。
-So true only matches true,
-not the string true, or the number one,
+所以TRUE只匹配TRUE，而不是字符串TRUE或数字1，
+So true only matches true, not the string true, or the number one,
 
 28
 00:01:44.525 --> 00:01:46.599
-或者任何类似的事情
+或者其他类似的东西。
 or anything like that.
 
 29
 00:01:46.599 --> 00:01:50.960
-任何不是原始的东西就像任何物体一样
-And anything that's not a primitive,
-like any of the objects,
+以及任何不是原语的东西，比如任何物体，
+And anything that's not a primitive, like any of the objects,
 
 30
 00:01:50.960 --> 00:01:54.049
-这些都是严格的身份匹配
+这些都是严格的身份匹配。
 those are strictly identity only matching.
 
 31
 00:01:54.049 --> 00:01:59.587
-因此，不需要实施任何结构检查。
-So no structural checking
-that you need to implement.
+所以没有你需要实现的结构检查。
+So no structural checking that you need to implement.
 
 32
 00:01:59.587 --> 00:02:06.579
-在我们的 ex.js 文件中，您会注意到我们在这里有一堆测试用例。
-In our ex.js file, you'll notice that
-we have a bunch of test cases here.
+在我们的ex.js文件中，您会注意到我们这里有一堆测试用例。
+In our ex.js file, you'll notice that we have a bunch of test cases here.
 
 33
 00:02:06.579 --> 00:02:10.182
-底部有一个功能只会用于
-And there's a function at the bottom
-which is only being used for
+在底部有一个函数，它只用于
+And there's a function at the bottom which is only being used for
 
 34
 00:02:10.182 --> 00:02:11.929
-测试用例的用途。
+测试用例的目的。
 the purposes of the test case.
 
 35
 00:02:11.929 --> 00:02:15.568
 它正在检查以确保这些数组包含相同的值，并且
-It's checking to make sure that these
-arrays contain the same values, and
+It's checking to make sure that these arrays contain the same values, and
 
 36
 00:02:15.568 --> 00:02:18.060
-就算他们有不同的命令
+那么即使它们的顺序不同。
 then even if they're in different orders.
 
 37
 00:02:18.060 --> 00:02:21.199
-这些都是我们正在检查的测试用例。
-So these are all of our test
-cases that we're checking for.
+所以这些都是我们要检查的测试用例。
+So these are all of our test cases that we're checking for.
 
 38
 00:02:21.199 --> 00:02:24.020
-你能通过那些测试用例
-It would be useful for
-you to go through those test cases to make
+对您来说，通过这些测试用例来制作这些测试用例将是非常有用的
+It would be useful for you to go through those test cases to make
 
 39
 00:02:24.020 --> 00:02:27.189
-请确保您了解自述文件的内容。
-sure you understand what
-the readme is saying.
+当然你明白自述文件在说什么。
+sure you understand what the readme is saying.
 
 40
 00:02:27.189 --> 00:02:32.610
-但您想做的是实现一个 findAll ，它可以采用此值数组，并且
-But you wanna do is implement a findAll
-which can take this values array and
+但是您想要做的是实现一个findAll，它可以接受这个值数组并
+But you wanna do is implement a findAll which can take this values array and
 
 41
 00:02:32.610 --> 00:02:35.930
-比如说，让我们来这里就一个吧。
-a value like, for example,
-let's just take one here.
+一个值，例如，让我们在这里取一个。
+a value like, for example, let's just take one here.
 
 42
 00:02:35.930 --> 00:02:40.189
-因此 findAll 采用 -0 和值，并且
-So the findAll takes the -0 and
-the values, and
+因此findAll接受-0和值，以及
+So the findAll takes the -0 and the values, and
 
 43
 00:02:40.189 --> 00:02:44.079
-它应该只返回一个数组，其中包含一个 -0 。
-it should only return an array
-with a single -0 in it.
+它应该只返回一个包含单个-0的数组。
+it should only return an array with a single -0 in it.
 
 44
 00:02:44.079 --> 00:02:49.079
-但是，例如，如果将 findAll with "0" 传递，
-But for example,
-if you pass findAll with "0",
+但例如，如果用“0”传递findAll，
+But for example, if you pass findAll with "0",
 
 45
 00:02:49.079 --> 00:02:53.343
-那么应该同时找到常规 0 和引号 0，好吗 ?
-then that should find both
-the regular 0 and the quote 0, okay?
+那么应该找到普通的0和引用的0，好吗？
+then that should find both the regular 0 and the quote 0, okay?
 
 46
 00:02:55.099 --> 00:02:56.659
-但愿那是合理的
+希望这说得通。
 Hopefully that makes sense.
 
 47
 00:02:56.659 --> 00:02:59.288
-因此，我们要花一点时间，因为这牵涉到更多的问题。
-So we will take a bit more time
-because this is more involved.
+因此，我们将花费更多的时间，因为这涉及到更多的内容。
+So we will take a bit more time because this is more involved.
 
 48
 00:02:59.288 --> 00:03:02.055
-你会写几个不同的条款
-You're gonna write several
-different clauses and
+你要写几个不同的条款
+You're gonna write several different clauses and
 
 49
 00:03:02.055 --> 00:03:04.479
-来处理这些问题的
+if语句来处理所有这些。
 if statements to handle all of these.
 
 50
 00:03:04.479 --> 00:03:06.520
-如果你错过了这些案子也别难过了
-And don't feel bad if you
-miss some of these cases,
+如果你错过了一些案子也不要难过，
+And don't feel bad if you miss some of these cases,
 
 51
 00:03:06.520 --> 00:03:07.900
-我们这里有很多细微的差别
+因为这里有很多细微差别。
 cuz there's a lot of nuance here.
 
 52
 00:03:07.900 --> 00:03:11.671
-运动的重点是让你思考
-The point of the exercise is
-to get you thinking about,
+练习的重点是让你思考，
+The point of the exercise is to get you thinking about,
 
 53
 00:03:11.671 --> 00:03:16.599
-如何限制这种情况，使我有一套安全的强制比较?
-how do I restrict this so that I have
-a safe set of coercive comparisons?
+我如何限制这一点，以便有一组安全的强制比较？
+how do I restrict this so that I have a safe set of coercive comparisons?

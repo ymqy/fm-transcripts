@@ -2,276 +2,237 @@ WEBVTT
 
 1
 00:00:00.100 --> 00:00:03.936
->> 凯尔 - 辛普森: 所以现在你知道句法糖层是什么样子的，
-&gt;&gt; Kyle Simpson: So now you understand
-what the syntactic sugar layer looks like,
+&gt；&gt；Kyle Simpson：现在您了解了语法糖层是什么样子的，
+&gt;&gt; Kyle Simpson: So now you understand what the syntactic sugar layer looks like,
 
 2
 00:00:03.936 --> 00:00:07.214
-但让我们把封面剥下来看看下面
-but let's peel back the covers,
-look underneath, and
+但是让我们揭开被子，看看下面，然后
+but let's peel back the covers, look underneath, and
 
 3
 00:00:07.214 --> 00:00:11.839
-找出它在上面分层的原型系统是如何运作的
-find out how the prototype system that
-it's layered on top of actually works.
+了解它所在的原型系统实际上是如何工作的。
+find out how the prototype system that it's layered on top of actually works.
 
 4
 00:00:11.839 --> 00:00:15.840
-和我教你一样的都是一样的更好理解
-Exactly the same as everything else I've
-taught you, it's better to understand
+与我教给你的其他东西完全一样，最好理解
+Exactly the same as everything else I've taught you, it's better to understand
 
 5
 00:00:15.840 --> 00:00:20.088
-这些系统的运作，我不知道它是怎么运作的，它是一个黑盒子。
-these systems than to just have, well, I
-don't know how it works, it's a black box.
+这些系统比只有，嗯，我不知道它是如何工作的，这是一个黑匣子。
+these systems than to just have, well, I don't know how it works, it's a black box.
 
 6
 00:00:20.088 --> 00:00:23.649
-或者更糟的是对它有一个完全错误的精神模型
-Or worse,
-have a totally wrong mental model for it.
+或者更糟的是，有一个完全错误的心理模型。
+Or worse, have a totally wrong mental model for it.
 
 7
 00:00:23.649 --> 00:00:27.341
-我们想看看原型系统是如何运作的
-So we wanna look at how
-the prototype system works, and
+所以我们想看看原型系统是如何工作的，并且
+So we wanna look at how the prototype system works, and
 
 8
 00:00:27.341 --> 00:00:32.090
-专门用于在 JavaScript中实现类系统的方法。
-specifically how its used to implement
-class systems in JavaScript.
+具体地说，它是如何用JavaScript实现类系统的。
+specifically how its used to implement class systems in JavaScript.
 
 9
 00:00:32.090 --> 00:00:36.295
-首先观察到的是我们的程序中存在的物体
-First observation I would make is that
-objects that exist in our programs that we
+我要做的第一个观察是，我们程序中存在的对象
+First observation I would make is that objects that exist in our programs that we
 
 10
 00:00:36.295 --> 00:00:38.993
-可以看到我们和我们互动的
-can see and that we create or
-that we interact with,
+可以看到我们创造的或与之互动的东西，
+can see and that we create or that we interact with,
 
 11
 00:00:38.993 --> 00:00:42.542
-它们总是由这些所谓的构造函数调用产生的
-they're always created by these
-so-called constructor calls.
+它们总是由这些所谓的构造函数调用创建的。
+they're always created by these so-called constructor calls.
 
 12
 00:00:42.542 --> 00:00:47.408
-你可能记得在我们讨论这个关键词时我说过
-You might remember in our discussion
-of this keyword that I said that new in
+您可能还记得我们在讨论这个关键字时，我说的new in
+You might remember in our discussion of this keyword that I said that new in
 
 13
 00:00:47.408 --> 00:00:50.560
-函数调用的前端是构造函数调用。
-front of a function call
-is a constructor call.
+函数调用的前面是构造函数调用。
+front of a function call is a constructor call.
 
 14
 00:00:50.560 --> 00:00:54.673
-这并不是说有一个构造函数
-That is not the same thing as
-saying there's a constructor,
+这和说有一个构造函数不是一回事，
+That is not the same thing as saying there's a constructor,
 
 15
 00:00:54.673 --> 00:00:57.658
-就是简单地说这个基本上是为了
-it is to simply say that
-that is basically for
+简单地说，基本上是为了
+it is to simply say that that is basically for
 
 16
 00:00:57.658 --> 00:01:02.255
-在功能调用前使用新项时缺少更好的术语
-lack of a better term when you use
-new in front of a function call it's
+当您在函数调用前使用new时，缺少更好的术语
+lack of a better term when you use new in front of a function call it's
 
 17
 00:01:02.255 --> 00:01:07.278
-构造要用于该函数调用的此绑定的对象。
-constructing an object to be used for
-this binding of that function call.
+构造一个用于该函数调用的绑定的对象。
+constructing an object to be used for this binding of that function call.
 
 18
 00:01:07.278 --> 00:01:08.558
-这就是物体从哪里来的地方。
+这就是物体的来源。
 So that's where objects come from.
 
 19
 00:01:08.558 --> 00:01:11.730
-他们通过这些构造函数调用来进行新的调用。
-They come via new from
-these constructor calls.
+它们通过这些构造函数调用的new来。
+They come via new from these constructor calls.
 
 20
 00:01:11.730 --> 00:01:16.510
-而且经常说，在建造这些新物体的过程中，
-And it is often said that in that process
-of constructing these new objects
+人们常说，在构建这些新对象的过程中
+And it is often said that in that process of constructing these new objects
 
 21
 00:01:16.510 --> 00:01:21.150
-它是根据构造函数的原型制作对象的
-that it's making that object based
-on the constructor's prototype.
+它是基于构造器的原型来创建对象的。
+that it's making that object based on the constructor's prototype.
 
 22
 00:01:23.908 --> 00:01:27.159
->> Kyle Simpson: 这句话的基础是我要处理的问题。
-&gt;&gt; Kyle Simpson: That phrase based on
-is what I have to take issue with.
+&gt；&gt；Kyle Simpson：这个短语的基础就是我不得不提出的问题。
+&gt;&gt; Kyle Simpson: That phrase based on is what I have to take issue with.
 
 23
 00:01:27.159 --> 00:01:30.316
-所以我要从那一刻开始
-So I'm gonna just for
-a moment diverge from or
+所以我会暂时偏离或者
+So I'm gonna just for a moment diverge from or
 
 24
 00:01:30.316 --> 00:01:33.150
-从关于 JavaScript的讨论中开始。
+不要再谈论JavaScript了。
 go down from talking about JavaScript.
 
 25
 00:01:33.150 --> 00:01:36.290
-我暂时把你的 JavaScript 帽子摘了
-I'll take off the JavaScript hat for
-a moment, and
+我会先摘下JavaScript帽子，然后
+I'll take off the JavaScript hat for a moment, and
 
 26
 00:01:36.290 --> 00:01:39.810
 我想更多地谈谈阶级理论的基础。
-I wanna talk more about
-the foundations of class theory.
+I wanna talk more about the foundations of class theory.
 
 27
 00:01:39.810 --> 00:01:45.522
-就像你在 CS101 里一样他们会教你所有的课
-As if you were in CS101 and they were
-gonna teach you all about classes,
+就好像你在CS101他们会教你所有的课程，
+As if you were in CS101 and they were gonna teach you all about classes,
 
 28
 00:01:45.522 --> 00:01:49.128
-他们会怎么向你解释课
-what would they explain
-to you about classes?
+他们会向你解释什么课程？
+what would they explain to you about classes?
 
 29
 00:01:49.128 --> 00:01:54.396
-第一，用最常用的比喻来形容
-Well, number one, the most common metaphor
-to describe the difference between
+好的，第一个，最常见的比喻来描述
+Well, number one, the most common metaphor to describe the difference between
 
 30
 00:01:54.396 --> 00:01:59.209
 类和实例是类是事物的抽象模式。
-a class and an instance is that a class
-is the abstract pattern for a thing.
+a class and an instance is that a class is the abstract pattern for a thing.
 
 31
 00:01:59.209 --> 00:02:02.269
-就像一个蓝图。
+就像一张蓝图。
 It's like a blueprint.
 
 32
 00:02:02.269 --> 00:02:07.819
-例如，当架构设计师采用蓝图并构建该蓝图时，就会发生这种情况。
-And the instance is like when an architect
-takes the blueprint and builds the thing.
+这个例子就像建筑师拿着蓝图建造东西一样。
+And the instance is like when an architect takes the blueprint and builds the thing.
 
 33
 00:02:07.819 --> 00:02:10.879
-这才是真正的具体事情
+这是字面上具体的东西。
 It's the literal concrete thing.
 
 34
 00:02:10.879 --> 00:02:14.759
-所以我们有蓝图，抽象，计划，这就是阶级。
-So we have blueprint, abstract,
-plan, that's the class.
+所以我们有蓝图，抽象，计划，这就是班级。
+So we have blueprint, abstract, plan, that's the class.
 
 35
 00:02:14.759 --> 00:02:18.118
-我们有身体，具体，物体，就是这个例子。
-We have physical, concrete,
-object, that's the instance.
+我们有物理的，具体的，物体，这就是实例。
+We have physical, concrete, object, that's the instance.
 
 36
 00:02:18.118 --> 00:02:21.099
-那是那些隐喻中最常见的
+这是最常见的隐喻。
 That's the most common of those metaphors.
 
 37
 00:02:21.099 --> 00:02:25.000
-在这个比喻中不管你意识到与否
-Now in that metaphor,
-whether you realize it or not,
+现在这个比喻中，不管你是否意识到，
+Now in that metaphor, whether you realize it or not,
 
 38
 00:02:25.000 --> 00:02:28.128
-对你有什么暗示
+有些东西在暗示着你。
 there's something being implied to you.
 
 39
 00:02:28.128 --> 00:02:30.741
-你在收拾你还在内在化
-And you're picking up on and
-you're internalizing,
+你开始意识到，你正在内化，
+And you're picking up on and you're internalizing,
 
 40
 00:02:30.741 --> 00:02:34.168
-就像其他那些做过阶级式编码的人一样
-just like anybody else that's ever
-done class-oriented coding has.
+就像其他任何曾经做过面向类编码的人一样。
+just like anybody else that's ever done class-oriented coding has.
 
 41
 00:02:34.168 --> 00:02:42.579
-而且，面向类的编码基本上是复制操作。
-And it is that class-oriented coding
-is fundamentally a copy operation.
+而且面向类的编码从根本上来说是一种复制操作。
+And it is that class-oriented coding is fundamentally a copy operation.
 
 42
 00:02:42.579 --> 00:02:46.292
-当我这样说的时候，当我这样说的时候，像班级一样的人将会
-And I get push back on this a lot, when I
-say this, people that like classes will
+当我说这些的时候，喜欢上课的人会
+And I get push back on this a lot, when I say this, people that like classes will
 
 43
 00:02:46.292 --> 00:02:49.457
-他们说，不，不，不，但是，但是，但是
-push back and they say, no,
-no, no, but, but, but, but.
+反击，他们会说，不，但是。
+push back and they say, no, no, no, but, but, but, but.
 
 44
 00:02:49.457 --> 00:02:53.097
 他们会指出很多其他语言的例子
-And they'll point to lots of other
-examples of languages where it's
+And they'll point to lots of other examples of languages where it's
 
 45
 00:02:53.097 --> 00:02:54.109
-不是那样的
+不完全是那样。
 not exactly that.
 
 46
 00:02:54.109 --> 00:02:58.075
-事实是没有一个专门的标准
-The truth is that there is
-no one specific standard for
+事实是没有一个具体的标准
+The truth is that there is no one specific standard for
 
 47
 00:02:58.075 --> 00:03:01.169
-真正的设计模式是什么
+类设计模式的真正含义。
 what the class design pattern really is.
 
 48
@@ -281,187 +242,163 @@ There's a lots of different ones.
 
 49
 00:03:02.931 --> 00:03:08.972
-但写 JavaScript的大多数人也是如此
-But it is also true that the majority of
-people that write JavaScript, the first
+但同样真实的是，大多数编写JavaScript的人都是第一个
+But it is also true that the majority of people that write JavaScript, the first
 
 50
 00:03:08.972 --> 00:03:14.848
-他们看到像 Java ， C++这样的一种语言。
-time they ever saw something like a class
-was in a language like Java or C++.
+当他们看到类似类的东西时，是在Java或C+这样的语言中。
+time they ever saw something like a class was in a language like Java or C++.
 
 51
 00:03:14.848 --> 00:03:21.490
-所以 Java 和 C++的类型在思想上很有影响力，
-So Java and C++'s flavor of classes is
-heavily influential in the mind and
+因此，Java和C+的类风格对思想和
+So Java and C++'s flavor of classes is heavily influential in the mind and
 
 52
 00:03:21.490 --> 00:03:25.550
-人们对阶级的心理模式
-mental model that people
-have about classes.
+人们对班级的心理模型。
+mental model that people have about classes.
 
 53
 00:03:25.550 --> 00:03:29.526
-当然我的 CS 程序都是 Java 的 C++ 是唯一的
-Certainly my CS program did all Java and
-all C++, that's the only
+当然，我的CS程序做的都是Java和C+，这是唯一
+Certainly my CS program did all Java and all C++, that's the only
 
 54
 00:03:29.526 --> 00:03:33.878
-他们在我上学的那几年都是在课堂上学习的。
-class learning they did for the entire
-however many years I was in school.
+不管我在学校里有多少年，他们在课堂上都是这么做的。
+class learning they did for the entire however many years I was in school.
 
 55
 00:03:33.878 --> 00:03:38.793
-我想我绝对不是唯一一个以 JavaScript 方式来的人
-And I think I'm definitely not the only
-one who comes to JavaScript by way of
+而且我认为我绝对不是唯一一个通过以下方式来使用JavaScript的人
+And I think I'm definitely not the only one who comes to JavaScript by way of
 
 56
 00:03:38.793 --> 00:03:43.090
-我所称的更传统的面向阶级的语言
-what I would call more traditional
-class-oriented languages.
+我称之为更传统的面向类的语言。
+what I would call more traditional class-oriented languages.
 
 57
 00:03:43.090 --> 00:03:47.998
-当我们说这个复制的想法，当我们在一个 CS 节目里教它的时候
-And when we say this idea of copying,
-and when we teach it in a CS program
+当我们说复制的这个想法，当我们用CS程序教它的时候
+And when we say this idea of copying, and when we teach it in a CS program
 
 58
 00:03:47.998 --> 00:03:51.930
-就像有复制行为就意味着什么
-as if there's a copy behavior,
-that means something.
+如果有复制行为，那就意味着什么。
+as if there's a copy behavior, that means something.
 
 59
 00:03:51.930 --> 00:03:54.716
-这意味着我们的期望
+它意味着我们的期望，
 It means something about our expectations,
 
 60
 00:03:54.716 --> 00:03:59.270
-我们对我们认为密码会做什么的潜意识的期望
-our even subconscious expectations
-about what we think the code will do.
+我们甚至潜意识中对我们认为代码会做什么的期望。
+our even subconscious expectations about what we think the code will do.
 
 61
 00:03:59.270 --> 00:04:03.745
-这就是为什么这个比喻意味着没有你的复制关系
-So here's why that metaphor implies
-that copy relationship without you
+所以这就是为什么这个比喻意味着没有你的复制关系
+So here's why that metaphor implies that copy relationship without you
 
 62
 00:04:03.745 --> 00:04:05.659
-甚至可能知道
+甚至可能知道。
 potentially even knowing it.
 
 63
 00:04:05.659 --> 00:04:08.579
-想象你为一栋楼画设计图
-Let's imagine that you draw up
-the blueprints for a building and
+让我们想象一下，你为一座建筑绘制了蓝图，
+Let's imagine that you draw up the blueprints for a building and
 
 64
 00:04:08.579 --> 00:04:10.046
-然后你去建大楼
+然后你去建大楼。
 then you go build the building.
 
 65
 00:04:10.046 --> 00:04:13.359
-建筑师建造，设计它，然后有人去建造它。
-The architect builds, he designs it and
-then somebody goes and builds it.
+建筑师建造，他设计它，然后有人去建造它。
+The architect builds, he designs it and then somebody goes and builds it.
 
 66
 00:04:13.359 --> 00:04:19.139
-如果你回到蓝图你就会擦掉一堵墙会发生什么呢 ?
-Now, what would happen if you came back
-to the blueprints and you erased a wall?
+现在，如果你回到蓝图上擦掉一堵墙会发生什么？
+Now, what would happen if you came back to the blueprints and you erased a wall?
 
 67
 00:04:19.139 --> 00:04:22.331
-那堵墙会从大楼里消失吗
-Is that wall gonna disappear
-from the building?
+那堵墙会从楼里消失吗？
+Is that wall gonna disappear from the building?
 
 68
 00:04:22.331 --> 00:04:25.370
-不那太疯狂了吧
+不，那太疯狂了，对吧？
 No, that would be crazy, right?
 
 69
 00:04:25.370 --> 00:04:28.519
-这真的很奇怪
+那真的很奇怪。
 That would be really weird.
 
 70
 00:04:28.519 --> 00:04:30.737
-如果你去了大楼
-What happens if you went
-to the building and
+如果你去了那栋楼
+What happens if you went to the building and
 
 71
 00:04:30.737 --> 00:04:34.009
-你安装了一个新窗户不是原来的计划吗
-you installed a new window that
-wasn't in the original plans?
+你安装了一扇不在原计划中的新窗户？
+you installed a new window that wasn't in the original plans?
 
 72
 00:04:34.009 --> 00:04:37.435
-是否会在蓝图上大展大展 ?
-Does it magically show
-up on the blueprint?
+它会神奇地出现在蓝图上吗？
+Does it magically show up on the blueprint?
 
 73
 00:04:37.435 --> 00:04:42.331
-原因是，蓝图和蓝图之间存在的关系
-The reason is because the relationship
-that existed between the blueprint and
+原因是因为蓝图和
+The reason is because the relationship that existed between the blueprint and
 
 74
 00:04:42.331 --> 00:04:45.891
-如果你愿意的话就会有这栋楼
-the building existed for
-the split second, if you will,
+如果你愿意，这座建筑在瞬间就存在了，
+the building existed for the split second, if you will,
 
 75
 00:04:45.891 --> 00:04:48.764
-它正在被实例化
+它正在被实例化。
 that it was being instantiated.
 
 76
 00:04:48.764 --> 00:04:53.228
-已将蓝图中的特征复制到
-The characteristics from
-the blueprint were copied into
+蓝图中的特征被复制到
+The characteristics from the blueprint were copied into
 
 77
 00:04:53.228 --> 00:04:58.069
-真正的建筑和关系就不复存在了
-the real building and
-then the relationship ceased to exist.
+真正的建筑，然后这种关系就不复存在了。
+the real building and then the relationship ceased to exist.
 
 78
 00:04:58.069 --> 00:04:59.579
-你跟踪我吗
+你听懂了吗？
 You follow me?
 
 79
 00:04:59.579 --> 00:05:01.369
-所以这个比喻本身和
+所以隐喻本身和
 So that metaphor in and of itself and
 
 80
 00:05:01.369 --> 00:05:04.838
-我们在实例化过程中思考的方式
-the way we think about what we're
-doing when we're instantiating.
+我们在实例化时思考我们正在做的事情的方式。
+the way we think about what we're doing when we're instantiating.
 
 81
 00:05:04.838 --> 00:05:07.122
@@ -470,118 +407,103 @@ When you make an instance of a class,
 
 82
 00:05:07.122 --> 00:05:12.439
-你得到的精神模型就是我的例子是所有这些行为的副本
-the mental model that you're getting is my
-instance is a copy of all those behaviors.
+你得到的心智模型是我的实例是所有这些行为的副本。
+the mental model that you're getting is my instance is a copy of all those behaviors.
 
 83
 00:05:12.439 --> 00:05:16.778
-它们是遗传的，那就是复制。
+他们是遗传的，这就是复制。
 They're inherited, and that's copying.
 
 84
 00:05:16.778 --> 00:05:18.127
-说到继承的
+说到继承，
 Speaking of inherited,
 
 85
 00:05:18.127 --> 00:05:22.682
-当你开始谈论课程的时候你马上就开始谈论父母
-when you start talking about classes you
-immediately start talking about parent and
+当你开始谈论班级时，你立即开始谈论家长和
+when you start talking about classes you immediately start talking about parent and
 
 86
 00:05:22.682 --> 00:05:25.519
-子类以及所有继承的内容。
-child classes, and
-all what inheritance is about.
+子类，以及所有关于继承的东西。
+child classes, and all what inheritance is about.
 
 87
 00:05:25.519 --> 00:05:30.610
-继承也从根本上是复制操作。
-An inheritance is also
-fundamentally a copy operation.
+继承从根本上来说也是一个复制操作。
+An inheritance is also fundamentally a copy operation.
 
 88
 00:05:30.610 --> 00:05:34.470
-最常用来形容遗传的隐喻是遗传的
-The metaphor that's most often used to
-describe inheritance is the genetic
+最常用来描述遗传的隐喻是遗传
+The metaphor that's most often used to describe inheritance is the genetic
 
 89
 00:05:34.470 --> 00:05:35.079
-隐喻
+比喻。
 metaphor.
 
 90
 00:05:35.079 --> 00:05:39.886
-现在我有个儿子他八岁了
-Now I have a son, he's eight years old and
-when he was created,
+现在我有一个儿子，他八岁了，当他被创造的时候，
+Now I have a son, he's eight years old and when he was created,
 
 91
 00:05:39.886 --> 00:05:41.620
-他拿到了我的 DNA
+他拿到了我的DNA拷贝
 he got a copy of my DNA.
 
 92
 00:05:43.310 --> 00:05:47.720
->> 凯尔 - 辛普森: 他现在是一个完全独立的人。
-&gt;&gt; Kyle Simpson: He now exist as
-an entirely independent person.
+&GT；&GT；Kyle Simpson：他现在作为一个完全独立的人存在。
+&gt;&gt; Kyle Simpson: He now exist as an entirely independent person.
 
 93
 00:05:47.720 --> 00:05:52.694
-如果他今晚在棒球比赛中摔断腿我的腿就不会断了
-If he breaks his leg in his baseball game
-tonight, my leg is not gonna get broken.
+如果他在今晚的棒球比赛中摔断了腿，我的腿就不会断了。
+If he breaks his leg in his baseball game tonight, my leg is not gonna get broken.
 
 94
 00:05:52.694 --> 00:05:56.488
-如果有一天我失去头发希望他会失去头发
-And if I lose my hair someday,
-hopefully he does lose his hair.
+如果有一天我掉了头发，希望他真的掉了头发。
+And if I lose my hair someday, hopefully he does lose his hair.
 
 95
 00:05:56.488 --> 00:05:58.512
-我们是不同的人
+我们是截然不同的人，但是
 We are distinct people, but
 
 96
 00:05:58.512 --> 00:06:04.004
-我们在创建的时候有一个关系就是一种拷贝关系。
-we had a relationship at the moment of
-creation that was a copy relationship.
+我们在创造的那一刻就有一种关系，那是一种复制关系。
+we had a relationship at the moment of creation that was a copy relationship.
 
 97
 00:06:06.629 --> 00:06:10.393
->> 凯尔 - 辛普森: 事实上，即使你想到了很多语言，
-&gt;&gt; Kyle Simpson: As a matter of fact,
-even when you think about many languages,
+&gt；&gt；Kyle Simpson：事实上，即使你想到很多语言，
+&gt;&gt; Kyle Simpson: As a matter of fact, even when you think about many languages,
 
 98
 00:06:10.393 --> 00:06:13.730
-口译员，编制者将会实施课程，
-interpreters, compilers,
-will implement classes,
+解释器，编译器，将实现类，
+interpreters, compilers, will implement classes,
 
 99
 00:06:13.730 --> 00:06:17.279
-它们会因为性能的原因而使它们扁平化
-they will actually flatten them for
-performance reasons.
+实际上，由于性能原因，他们会将其展平。
+they will actually flatten them for performance reasons.
 
 100
 00:06:17.279 --> 00:06:21.406
-他们将会直接复制到实例中，而对于
-They will literally copy down into
-the instance, cuz it's much faster for
+它们将从字面上复制到实例中，因为它的速度要快得多
+They will literally copy down into the instance, cuz it's much faster for
 
 101
 00:06:21.406 --> 00:06:25.797
-要对该函数进行引用，而不必查找某些
-the instance to have a reference to the
-function instead of having to look up some
+实例具有对函数的引用，而不是必须查找一些
+the instance to have a reference to the function instead of having to look up some
 
 102
 00:06:25.797 --> 00:06:27.649
@@ -590,236 +512,205 @@ dynamic class hierarchy chain.
 
 103
 00:06:27.649 --> 00:06:31.608
-仅当存在相对多态性时，它们才会保持类层次结构链。
-They only maintain the class hierarchy
-chain when there's relative polymorphism.
+只有当存在相对多态性时，它们才维护类层次结构链。
+They only maintain the class hierarchy chain when there's relative polymorphism.
 
 104
 00:06:31.608 --> 00:06:33.771
-这叫虚拟桌
+这叫做虚拟表。
 It's called a virtual table.
 
 105
 00:06:33.771 --> 00:06:36.329
-那是 C++的吧
+这是来自C+的，好吗？
 That's from C++, okay?
 
 106
 00:06:36.329 --> 00:06:39.457
-所以在所有可能的情况下
-So in all possible ways
-that you slice this,
+所以在所有可能的方式你切片这个，
+So in all possible ways that you slice this,
 
 107
 00:06:39.457 --> 00:06:44.379
-类隐含的关系是拷贝关系。
-the relationship that is implied
-by classes is a copy relationship.
+类隐含的关系是复制关系。
+the relationship that is implied by classes is a copy relationship.
 
 108
 00:06:44.379 --> 00:06:48.057
-所以我们把对话的堆栈
-And so we pop the stack of
-our conversation back to
+所以我们把我们的谈话堆回到
+And so we pop the stack of our conversation back to
 
 109
 00:06:48.057 --> 00:06:52.288
-在幻灯片上的此语句以及基于该语句的短语。
-this statement on the slide,
-and that phrase based on.
+幻灯片上的这句话，以及那句话的基础。
+this statement on the slide, and that phrase based on.
 
 110
 00:06:52.288 --> 00:06:58.148
-当我们说一个构造函数的调用是基于它的原型
-When we say a constructor call is making
-the object based on its prototype,
+当我们说构造函数调用是基于其原型创建对象时，
+When we say a constructor call is making the object based on its prototype,
 
 111
 00:06:58.148 --> 00:07:02.612
-我们在我们的精神模型中说
-we're saying in our mental
-model that the constructor is
+我们在我们的心理模型中说，构造器是
+we're saying in our mental model that the constructor is
 
 112
 00:07:02.612 --> 00:07:06.339
 在实例中制作原型的副本。
-making a copy of the prototype
-in the instance.
+making a copy of the prototype in the instance.
 
 113
 00:07:06.339 --> 00:07:09.632
-除了有一点小小的细节
+只是有个小细节，
 Except there's a little tiny detail,
 
 114
 00:07:09.632 --> 00:07:14.038
-就是 JavaScript 根本没做任何复制
-which is JavaScript doesn't
-do any copying at all.
+也就是说，JavaScript根本不做任何复制。
+which is JavaScript doesn't do any copying at all.
 
 115
 00:07:14.038 --> 00:07:18.293
 事实上，要正确描述构造函数调用时发生的情况
-As a matter of fact, to properly describe
-what is happening when a constructor call
+As a matter of fact, to properly describe what is happening when a constructor call
 
 116
 00:07:18.293 --> 00:07:22.329
-根据构造函数的原型，它不会使它成为一个对象。
-makes an object, it doesn't make it
-based on the constructor's prototype.
+创建一个对象，而不是基于构造函数的原型。
+makes an object, it doesn't make it based on the constructor's prototype.
 
 117
 00:07:22.329 --> 00:07:25.069
-它使它与原型相连。
+它使它与原型相联系。
 It makes it linked to the prototype.
 
 118
 00:07:28.170 --> 00:07:31.769
->> 凯尔 - 辛普森: 现在有很多人跟我争论
-&gt;&gt; Kyle Simpson: Now there are many
-that have argued with me and
+&GT；&GT；凯尔·辛普森：现在有很多人和我争论，
+&gt;&gt; Kyle Simpson: Now there are many that have argued with me and
 
 119
 00:07:31.769 --> 00:07:34.612
-说，它不同意我，
+说，它不同意我和
 said, it have disagreed with me and
 
 120
 00:07:34.612 --> 00:07:40.064
-所述复制与链接是没有差别的区别。
-said copying versus linking is
-a distinction without difference.
+说复制和链接是没有区别的。
+said copying versus linking is a distinction without difference.
 
 121
 00:07:40.064 --> 00:07:44.625
-没有区别，没关系，只是两个不同的侧面
-There's no difference there, it doesn't
-matter, there are just two different sides
+没有区别，没关系，只有两个不同的方面
+There's no difference there, it doesn't matter, there are just two different sides
 
 122
 00:07:44.625 --> 00:07:47.779
-在同一事物中，链接只是复制的动态形式。
-of the same thing,
-linking is just the dynamic form of copy.
+同样，链接只是复制的动态形式。
+of the same thing, linking is just the dynamic form of copy.
 
 123
 00:07:47.779 --> 00:07:49.500
-我也不同意更多的意见。
+我非常不同意。
 And I couldn't disagree more.
 
 124
 00:07:51.120 --> 00:07:55.762
-链接和复制不仅仅是同一个硬币的两个不同侧面，
-Linking and copying are not just two
-different sides of the same coin,
+链接和复制不仅仅是同一枚硬币的两个不同面，
+Linking and copying are not just two different sides of the same coin,
 
 125
 00:07:55.762 --> 00:08:01.279
-它们在本质上是完全相反的
-they are completely and fundamentally and
-diametrically opposite to each other.
+它们是完全的，根本的，截然相反的。
+they are completely and fundamentally and diametrically opposite to each other.
 
 126
 00:08:01.279 --> 00:08:04.891
-他们完全改变了你对系统的期望
-And they completely change what your
-expectation of a system is based on
+并且它们完全改变了您对系统的期望所基于的内容
+And they completely change what your expectation of a system is based on
 
 127
 00:08:04.891 --> 00:08:07.478
-你的心理模型是关于复制，还是
-whether your mental model
-is all about copying, or
+无论你的心智模型是关于复制，还是
+whether your mental model is all about copying, or
 
 128
 00:08:07.478 --> 00:08:09.540
-你的精神模型是关于联系的
+你的心智模型都是关于链接的。
 your mental model is all about linking.
 
 129
 00:08:12.310 --> 00:08:15.360
->> 凯尔 - 辛普森: 最重要的是你的心理模型
-&gt;&gt; Kyle Simpson: It matters what
-mental model you're using for
+&gt；&gt；Kyle Simpson：你使用的心智模型很重要
+&gt;&gt; Kyle Simpson: It matters what mental model you're using for
 
 130
 00:08:15.360 --> 00:08:19.668
-因为当程序中断时，它为什么会中断?
-expectation because when the program
-breaks, why did it break?
+期望，因为当程序中断时，为什么会中断？
+expectation because when the program breaks, why did it break?
 
 131
 00:08:19.668 --> 00:08:23.240
-它破产是因为你和你的想法有分岐
-It broke because you had a divergence
-between what you were thinking,
+它坏了是因为你的想法和你的想法有分歧，
+It broke because you had a divergence between what you were thinking,
 
 132
 00:08:23.240 --> 00:08:26.610
-你的精神模型和系统的实际情况
-your mental model, and
-what the system was actually doing.
+你的心智模型，以及系统实际上在做什么。
+your mental model, and what the system was actually doing.
 
 133
 00:08:26.610 --> 00:08:31.000
-如果你想复制，它正在链接，你猜会发生什么。
-If you're thinking copying and it's doing
-linking, guess what is going to occur.
+如果你认为复制和它做的是链接，猜猜会发生什么。
+If you're thinking copying and it's doing linking, guess what is going to occur.
 
 134
 00:08:31.000 --> 00:08:35.019
-不可能是会发生的虫子
+不是也许，会发生，虫子。
 Not maybe, will occur, bugs.
 
 135
 00:08:35.019 --> 00:08:37.484
-你的思维模式与工作方式不同
-Cuz your mental model diverges
-from the way it works.
+因为你的心智模型偏离了它的工作方式。
+Cuz your mental model diverges from the way it works.
 
 136
 00:08:39.552 --> 00:08:43.081
->> 凯尔 - 辛普森: 所以我有一个问题
-&gt;&gt; Kyle Simpson: So I have a problem
-with this whole notion of trying to take
+&gt；&gt；Kyle Simpson：所以我对尝试
+&gt;&gt; Kyle Simpson: So I have a problem with this whole notion of trying to take
 
 137
 00:08:43.081 --> 00:08:47.419
-一个基本的系统，从根本上来说，设计模式的
-a class system, which is fundamentally
-copy, the design pattern's
+一个类系统，它从根本上是复制的，设计模式的
+a class system, which is fundamentally copy, the design pattern's
 
 138
 00:08:47.419 --> 00:08:52.222
-从根本上复制，并将其放在不复制的语言之上。
-fundamentally copy, and put it on top
-of a language that doesn't do copies.
+从根本上复制，并将其放在不进行复制的语言之上。
+fundamentally copy, and put it on top of a language that doesn't do copies.
 
 139
 00:08:54.019 --> 00:08:56.009
->> 凯尔 - 辛普森: 不合适。
+&gt；&gt；Kyle Simpson：它不合适。
 &gt;&gt; Kyle Simpson: It doesn't fit.
 
 140
 00:08:56.009 --> 00:09:00.682
-我们制造了这么多麻烦也就不足为奇了
-And it shouldn't be surprising that
-we've had so much trouble making
+我们在制作过程中遇到了这么多麻烦也就不足为奇了
+And it shouldn't be surprising that we've had so much trouble making
 
 141
 00:09:00.682 --> 00:09:05.369
-JavaScript 外观和行为类似于类相关语言。
-JavaScript look and feel and
-behave like a class-related language.
+JavaScript的外观和行为就像一种与类相关的语言。
+JavaScript look and feel and behave like a class-related language.
 
 142
 00:09:05.369 --> 00:09:08.538
-他们不是为了合身而设计的
+它们只是不适合在一起。
 They're just not designed to fit together.
 
 143
 00:09:08.538 --> 00:09:14.023
-至少在心理模型中，您可以从 Java 或 C++中获取。
-At least in the mental model you
-get from say a Java or a C++.
+至少在你从Java或C+得到的心智模型中是这样的。
+At least in the mental model you get from say a Java or a C++.

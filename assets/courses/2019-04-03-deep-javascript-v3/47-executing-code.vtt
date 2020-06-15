@@ -2,77 +2,68 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:01.429
->> 凯尔 - 辛普森: 我们已经制定了所有计划。
-&gt;&gt; Kyle Simpson: We have
-all our plan set up.
+&gt；&gt；kyle simpson：我们所有的计划都准备好了。
+&gt;&gt; Kyle Simpson: We have all our plan set up.
 
 2
 00:00:01.429 --> 00:00:05.419
-没有更多的声明代码，还有可执行的代码。
-There's no more declaration code,
-there is still executable code.
+没有更多的声明代码，仍然有可执行代码。
+There's no more declaration code, there is still executable code.
 
 3
 00:00:05.419 --> 00:00:09.720
-所以即使线条看起来像一个语句
-So even though line one
-looks like one statement,
+所以即使第一行看起来像一条语句，
+So even though line one looks like one statement,
 
 4
 00:00:09.720 --> 00:00:11.820
-这其实是两分
+实际上是两个不同的东西。
 it's actually two separate things.
 
 5
 00:00:11.820 --> 00:00:14.820
-有 var 老师的部分
+这是var教师部分。
 There's the var teacher part.
 
 6
 00:00:14.820 --> 00:00:16.500
-这就是编译器的处理方式。
+这就是编译器所处理的。
 That's what the compiler handles.
 
 7
 00:00:16.500 --> 00:00:19.230
-还有老师 " 凯尔" 的部分
-And then there's
-the teacher = "Kyle" part,
+然后是老师=“Kyle”部分，
+And then there's the teacher = "Kyle" part,
 
 8
 00:00:19.230 --> 00:00:23.000
-这才是执行引擎要处理的
-that's what the execution
-engine's gonna handle.
+这就是执行引擎要处理的。
+that's what the execution engine's gonna handle.
 
 9
 00:00:23.000 --> 00:00:24.440
-记住一点前的事
+现在，记得一点以前，
 Now, remember a little bit ago,
 
 10
 00:00:24.440 --> 00:00:28.750
-我说变量只能扮演两个角色。
-I said that there's only two
-roles that a variable can play.
+我说过一个变量只能扮演两个角色。
+I said that there's only two roles that a variable can play.
 
 11
 00:00:28.750 --> 00:00:34.189
-它可以是任务的目标，你可以看到第一条，
-It can either be the target of an
-assignment, and you can see on line one,
+它可以是分配的目标，你可以在第一行看到，
+It can either be the target of an assignment, and you can see on line one,
 
 12
 00:00:34.189 --> 00:00:38.628
-老师在那个角色，在接受任务，是目标。
-the teacher is in that role, it is
-receiving an assignment, it's the target.
+老师在那个角色中，它正在接受一个任务，它是目标。
+the teacher is in that role, it is receiving an assignment, it's the target.
 
 13
 00:00:39.990 --> 00:00:44.530
-它可以在源位置中扮演的唯一角色。
-The only other role that it can
-play is in the source position.
+它可以发挥的唯一其他作用是在源位置。
+The only other role that it can play is in the source position.
 
 14
 00:00:44.530 --> 00:00:47.350
@@ -81,923 +72,815 @@ It's going to give up its value.
 
 15
 00:00:47.350 --> 00:00:49.820
-你要从它的价值中提取价值。
-You're going to retrieve
-the value from it.
+您将从中检索值。
+You're going to retrieve the value from it.
 
 16
 00:00:49.820 --> 00:00:53.890
-就像我们在 10 号线上看到的那样，问题就在那个位置。
-That's like what we see on line ten,
-question, is in that position.
+这就像我们在第十行看到的问题，就在那个位置。
+That's like what we see on line ten, question, is in that position.
 
 17
 00:00:53.890 --> 00:00:58.820
-所以旧的学校术语是这样的，这不是一般的人，
-So, old school terminology for this is,
-and this isn't what people normally,
+所以，这个老学派的术语是，这不是人们通常所说的，
+So, old school terminology for this is, and this isn't what people normally,
 
 18
 00:00:58.820 --> 00:01:02.270
-如果你在维基百科上搜索谷歌，他们就不会使用这些术语。
-if you do a Google search on Wikipedia,
-they won't use these terms.
+如果你在维基百科上进行谷歌搜索，他们不会使用这些术语。
+if you do a Google search on Wikipedia, they won't use these terms.
 
 19
 00:01:02.270 --> 00:01:05.400
-但我在 20 多年前学会了计算机科学。
-But I learned computer science
-more than two decades ago.
+但我在二十多年前学的是计算机科学。
+But I learned computer science more than two decades ago.
 
 20
 00:01:05.400 --> 00:01:07.280
-这是我以前的学校术语。
+这是我以前学校的术语。
 So here's my old school terminology.
 
 21
 00:01:07.280 --> 00:01:13.719
-我们以前称之为左手， LHS ， RHS ，右手。
-We used to refer to this as a left hand
-side, an LHS and a RHS, a right hand side.
+我们过去把它称为左手边，LHS和RHS，右手边。
+We used to refer to this as a left hand side, an LHS and a RHS, a right hand side.
 
 22
 00:01:13.719 --> 00:01:16.700
-就像在一个平等的左边和右边
+就像在一个平等的左手和右手。
 As in left and right hand of an equals.
 
 23
 00:01:16.700 --> 00:01:19.219
-现在，您可以将其称为 L 值， R 值。
-Nowadays, you might call it an L value,
-an R value.
+现在，你可以称之为L值，R值。
+Nowadays, you might call it an L value, an R value.
 
 24
 00:01:19.219 --> 00:01:23.150
-也许只是为了简单的目的，让我们称其为源和目标。
-Maybe just for simple purposes,
-let's call them source and target.
+也许只是出于简单的目的，让我们称它们为源和目标。
+Maybe just for simple purposes, let's call them source and target.
 
 25
 00:01:24.500 --> 00:01:28.060
-在这条线上，老师在目标位置。
-Here on line one,
-teacher's in a target position.
+在一号线，老师在目标位置。
+Here on line one, teacher's in a target position.
 
 26
 00:01:28.060 --> 00:01:31.500
-在第 10 行，问题在源位置。
-On line ten, question,
-is in a source position.
+在第十行，问题，处于源位置。
+On line ten, question, is in a source position.
 
 27
 00:01:31.500 --> 00:01:32.780
-你跟踪吗
+你听懂了吗？
 You follow that?
 
 28
 00:01:32.780 --> 00:01:36.109
-那是编译器拿起来的信息
-That's a piece of information
-that the compiler picked up.
+这是编译器拾取的一条信息。
+That's a piece of information that the compiler picked up.
 
 29
 00:01:36.109 --> 00:01:41.229
-每当它创造出整个抽象树的时候
-Whenever it created that whole abstract
-tree and all that, it knew that each
+无论何时它创建了整个抽象树等等，它都知道每个
+Whenever it created that whole abstract tree and all that, it knew that each
 
 30
 00:01:41.229 --> 00:01:46.911
-标识，每个大理石，不仅是颜色，而且是什么位置。
-identifier, each marble, not only what
-color it was, but what position it was in.
+标识符，每个大理石，不仅是什么颜色，而且是什么位置。
+identifier, each marble, not only what color it was, but what position it was in.
 
 31
 00:01:46.911 --> 00:01:50.129
-这很关键，我们会知道为什么这很关键。
-And that's critical, and
-we'll see in a bit why that's so critical.
+这很关键，我们稍后会看到为什么这是如此关键。
+And that's critical, and we'll see in a bit why that's so critical.
 
 32
 00:01:50.129 --> 00:01:53.960
-关键是要知道我们要处理的是有价值的东西
-It's critical to know that we're dealing
-with something that's receiving a value,
+重要的是要知道我们正在处理的东西正在接收一个值，
+It's critical to know that we're dealing with something that's receiving a value,
 
 33
 00:01:53.960 --> 00:01:57.840
-它是目标或者我们要找回它的价值
-it's a target, or
-we're gonna retrieve it's value, okay?
+它是一个目标，或者我们要找回它的价值，好吗？
+it's a target, or we're gonna retrieve it's value, okay?
 
 34
 00:01:57.840 --> 00:02:02.140
-那么让我们按照 JavaScript 引擎的方式来执行这个代码，
-So let's then execute this code
-the way the JavaScript engine would,
+所以让我们按照JavaScript引擎的方式执行这段代码，
+So let's then execute this code the way the JavaScript engine would,
 
 35
 00:02:02.140 --> 00:02:05.129
-所有执行计划和范围的事情都已经成立了
-with all that execution plan and
-scope stuff set up.
+所有的执行计划和范围都设置好了。
+with all that execution plan and scope stuff set up.
 
 36
 00:02:05.129 --> 00:02:08.099
-每次我们输入一个范围，所有存储区的计划和
-Each time we enter a scope,
-all of the plans for the buckets and
+每次我们进入一个范围，所有的bucket和
+Each time we enter a scope, all of the plans for the buckets and
 
 37
 00:02:08.099 --> 00:02:12.310
-这些弹珠就会被创造了现在我们准备好去执行了
-the marbles will have been created, and so
-now we're ready to go ahead and execute.
+弹珠已经被创建了，所以现在我们已经准备好继续执行了。
+the marbles will have been created, and so now we're ready to go ahead and execute.
 
 38
 00:02:13.590 --> 00:02:15.939
-我们有两个人在说话
+我们又有两个人在说话了。
 We have two people talking, again.
 
 39
 00:02:15.939 --> 00:02:20.479
-我们还有范围管理员他得把弹珠伸出来
-We still have the scope manager,
-cuz he's gotta hand out the marbles.
+我们还有范围经理，因为他要分发弹珠。
+We still have the scope manager, cuz he's gotta hand out the marbles.
 
 40
 00:02:20.479 --> 00:02:23.500
-但我们现在也有一个不同的人在谈话中说话。
-But we also now have a different
-person talking in the conversation.
+但是我们现在也有一个不同的人在谈话。
+But we also now have a different person talking in the conversation.
 
 41
 00:02:23.500 --> 00:02:27.870
-这就是虚拟机，它是执行代码的 JavaScript 引擎。
-And that's the virtual machine, it's the
-JavaScript engine that's executing code.
+这就是虚拟机，它是执行代码的JavaScript引擎。
+And that's the virtual machine, it's the JavaScript engine that's executing code.
 
 42
 00:02:27.870 --> 00:02:30.259
-所以在第一条线上对话记得
-So that conversation on line one,
-remember,
+所以一号线上的对话，记住，
+So that conversation on line one, remember,
 
 43
 00:02:30.259 --> 00:02:33.050
-那里没有 var 它会像这样
-there's no var there,
-it's gonna go like this.
+那里没有var，它会像这样。
+there's no var there, it's gonna go like this.
 
 44
 00:02:33.050 --> 00:02:37.430
-我将扮演虚拟机或 JavaScript 引擎的角色。
-I'll play the part of the virtual
-machine or the JavaScript engine.
+我将扮演虚拟机或JavaScript引擎的一部分。
+I'll play the part of the virtual machine or the JavaScript engine.
 
 45
 00:02:37.430 --> 00:02:40.949
-作用域管理器 JavaScript 引擎在此处。
-Hey, scope manager,
-JavaScript engine here.
+嘿，作用域管理器，JavaScript引擎在这里。
+Hey, scope manager, JavaScript engine here.
 
 46
 00:02:40.949 --> 00:02:45.240
-我有一个变量叫做老师的变量。
-I have a target reference for
-a variable called teacher.
+我有一个名为Teacher的变量的目标引用。
+I have a target reference for a variable called teacher.
 
 47
 00:02:45.240 --> 00:02:47.900
-你看它是一个目标参考，它接收到一个任务。
-You see it's a target reference,
-it's receiving an assignment.
+你看，这是一个目标引用，它正在接受一个任务。
+You see it's a target reference, it's receiving an assignment.
 
 48
 00:02:47.900 --> 00:02:50.960
-你听说过这个叫老师的大理石吗
-Have you ever heard of this
-marble called teacher?
+你听说过这个叫老师的大理石吗？
+Have you ever heard of this marble called teacher?
 
 49
 00:02:50.960 --> 00:02:53.050
-我们在和红桶说话记得吗
+我们在跟红桶说话，记得吗？
 We're talking to the red bucket, remember.
 
 50
 00:02:53.050 --> 00:02:55.110
-它只能回答 " 是 " 或 " 否" 。
+它只能回答是或不是。
 And it can only answer yes or no.
 
 51
 00:02:55.110 --> 00:02:56.951
-那么在这件事情上，它会回答什么呢 ?
+所以在这种情况下，它会回答什么？
 So in this case, what's it gonna answer?
 
 52
 00:02:56.951 --> 00:02:57.698
->> 受众: 是。
+&gt；&gt；观众：是的。
 &gt;&gt; Audience: Yes.
 
 53
 00:02:57.698 --> 00:02:59.049
->> 凯尔 - 辛普森: 是的，为什么?
+&gt；&gt；Kyle Simpson：是的，怎么了？
 &gt;&gt; Kyle Simpson: Yes, why?
 
 54
 00:02:59.049 --> 00:03:02.943
-因为在编译时我们正式宣布了好吗
-Because at compile time we
-formally declared it, okay?
+因为在编译时我们正式声明了它，好吗？
+Because at compile time we formally declared it, okay?
 
 55
 00:03:02.943 --> 00:03:05.439
-如果我们没有正式宣布，事情就不一样了。
-Had we not formally declared it,
-things are different.
+如果我们没有正式宣布，情况就不同了。
+Had we not formally declared it, things are different.
 
 56
 00:03:05.439 --> 00:03:09.580
-但因为在编译时我们正式宣布了一个叫老师的东西，
-But because at compile time we formally
-declared something called teacher,
+但因为在编译时我们正式声明了一种叫做教师的东西，
+But because at compile time we formally declared something called teacher,
 
 57
 00:03:09.580 --> 00:03:12.469
-现在我们知道了是你的红色大理石
+现在我们知道了，是的，这是你的红色大理石。
 now we know, yes, here's your red marble.
 
 58
 00:03:12.469 --> 00:03:14.199
-所以这基本上是一种查找。
+所以这基本上是一个查找。
 So it's fundamentally a lookup.
 
 59
 00:03:14.199 --> 00:03:17.670
-我们是说，嘿，红桶，有个叫老师的大理石吗 ?
-We're saying, hey, red bucket,
-do you have a marble called teacher?
+我们在说，嘿，红桶，你有叫老师的大理石吗？
+We're saying, hey, red bucket, do you have a marble called teacher?
 
 60
 00:03:17.670 --> 00:03:20.270
-如果是的话请给我好吗
+如果是的话，请把它给我，好吗？
 If so, please give it to me, okay?
 
 61
 00:03:20.270 --> 00:03:23.219
-这里是红色的大理石这里是你的大理石
-And here we get the red marble,
-here's your marble, okay?
+这里是红色的大理石，这是你的大理石，好吗？
+And here we get the red marble, here's your marble, okay?
 
 62
 00:03:23.219 --> 00:03:25.346
-我们要用那个大理石怎么办
+那大理石怎么办？
 And what are we gonna do with that marble?
 
 63
 00:03:25.346 --> 00:03:26.753
-我们要给它分配一个价值
+我们要给它赋值。
 Well, we're gonna assign a value to it.
 
 64
 00:03:26.753 --> 00:03:31.109
-这个大理石是内存中需要分配给它的一个区域，
-That marble represents an area in
-memory that needs to get assigned to,
+大理石代表内存中需要分配的区域，
+That marble represents an area in memory that needs to get assigned to,
 
 65
 00:03:31.109 --> 00:03:32.060
-本质上是
+本质上。
 essentially.
 
 66
 00:03:32.060 --> 00:03:36.871
-因此，我们将从右边的值中获取值，在这种情况下，
-So, we're gonna take the value from the
-right hand side, in this case, the string
+因此，我们将从右侧获取值，在本例中为字符串
+So, we're gonna take the value from the right hand side, in this case, the string
 
 67
 00:03:36.871 --> 00:03:41.372
-凯尔把它分配给那个由红色大理石老师代表的地方
-Kyle, and assign it to that location
-represented by the red marble teacher.
+Kyle，并将其分配到红色大理石老师所代表的位置。
+Kyle, and assign it to that location represented by the red marble teacher.
 
 68
 00:03:41.372 --> 00:03:45.295
-3 到 6 号线和 8 到 11 号线都是声明
-Line three through six, and line eight
-through eleven, those were declarations,
+第三行到第六行，第八行到十一行，这些都是声明，
+Line three through six, and line eight through eleven, those were declarations,
 
 69
 00:03:45.295 --> 00:03:47.242
-他们已经不在那里了
+从某种意义上说，他们已经不在那里了。
 they're not there anymore, in a sense.
 
 70
 00:03:47.242 --> 00:03:48.716
-他们被编译了
+他们已经被编译走了。
 They've been compiled away.
 
 71
 00:03:48.716 --> 00:03:50.878
-因此，执行将移至第 13 行。
+因此，执行将移至第13行。
 So, execution would move to line 13.
 
 72
 00:03:52.050 --> 00:03:55.819
-我们来谈谈第 13 行的执行方式。
+让我们讨论一下第13行是如何执行的。
 Let's talk about how line 13 executes.
 
 73
 00:03:55.819 --> 00:04:00.689
-不要跳过功能本身，它是如何在内部运行的。
-Don't skip just to how the function
-itself, how it runs inside.
+不要只跳过函数本身，它在内部是如何运行的。
+Don't skip just to how the function itself, how it runs inside.
 
 74
 00:04:00.689 --> 00:04:04.879
-我们首先要问第 13 条本身是如何执行的。
-We first have to ask how
-the line 13 itself executes.
+我们首先要问的是第13行本身是如何执行的。
+We first have to ask how the line 13 itself executes.
 
 75
 00:04:04.879 --> 00:04:08.069
-Cz JavaScript 必须搞清楚并执行它。
-Cuz JavaScript has gotta figure
-out that and execute it.
+因为JavaScript必须弄清楚并执行它。
+Cuz JavaScript has gotta figure out that and execute it.
 
 76
 00:04:08.069 --> 00:04:12.530
-其他级别标识，我们在功能上看到的东西
-So is the other class identifier, the
-thing that we see there at the function
+另一个类标识符也是如此，我们在函数中看到的东西
+So is the other class identifier, the thing that we see there at the function
 
 77
 00:04:12.530 --> 00:04:16.819
-call ，是在目标位置还是在源位置?
-call, is it in a target position or
-is it in a source position?
+呼叫，它是在目标位置还是在源位置？
+call, is it in a target position or is it in a source position?
 
 78
 00:04:17.870 --> 00:04:18.425
->> 扬声器 3: 目标位置。
+&gt；&gt；扬声器3：目标位置。
 &gt;&gt; Speaker 3: Target position.
 
 79
 00:04:18.425 --> 00:04:19.937
->> 演讲者 4: 目标。
+&gt；&gt；扬声器4：目标。
 &gt;&gt; Speaker 4: Target.
 
 80
 00:04:19.937 --> 00:04:22.643
->> 凯尔 - 辛普森: 我听到一些目标，有人不同意吗 ?
-&gt;&gt; Kyle Simpson: I'm hearing some targets,
-anybody disagree with that?
+&gt；&gt；Kyle Simpson：我听到一些目标，有人不同意吗？
+&gt;&gt; Kyle Simpson: I'm hearing some targets, anybody disagree with that?
 
 81
 00:04:22.643 --> 00:04:23.940
->演讲者 5: 第 13 行，对吗 ?
+&gt；&gt；扬声器5：第13行，对吗？
 &gt;&gt; Speaker 5: Line 13, right?
 
 82
 00:04:23.940 --> 00:04:25.175
->> 受众: 第 13 行。
+&gt；&gt；观众：第13行。
 &gt;&gt; Audience: Line 13.
 
 83
 00:04:25.175 --> 00:04:29.367
-otherClass 在目标位置还是在源位置?
-Is otherClass in a target position or
-in a source position?
+other Class是在目标位置还是在源位置？
+Is otherClass in a target position or in a source position?
 
 84
 00:04:29.367 --> 00:04:30.053
->> 扬声器 3: 源。
+&gt；&gt；扬声器3：来源。
 &gt;&gt; Speaker 3: Source.
 
 85
 00:04:30.053 --> 00:04:30.980
->> 扬声器 5: 源。
+&gt；&gt；扬声器5：来源。
 &gt;&gt; Speaker 5: Source.
 
 86
 00:04:30.980 --> 00:04:33.490
->> Kyle Simpson: 好的，它在一个源位置。
-&gt;&gt; Kyle Simpson: Okay,
-it's in a source position.
+&gt；&gt；Kyle Simpson：好的，它在源位置。
+&gt;&gt; Kyle Simpson: Okay, it's in a source position.
 
 87
 00:04:33.490 --> 00:04:35.850
-我们没有给 otherClass 分配什么东西
-We're not assigning
-something to otherClass.
+我们不会将某些内容分配给other Class。
+We're not assigning something to otherClass.
 
 88
 00:04:35.850 --> 00:04:38.470
-所以如果我们不给它分配，我们必须做什么 ?
-So if we're not assigning to it,
-what must we be doing?
+所以，如果我们不分配给它，我们必须做什么？
+So if we're not assigning to it, what must we be doing?
 
 89
 00:04:39.810 --> 00:04:41.340
-将值拉出。
+拉出一个值。
 Pulling a value out.
 
 90
 00:04:41.340 --> 00:04:45.439
-我们想知道现在的标识符是什么
-We wanna know what is currently
-in the identifier otherClass.
+我们想知道当前在标识符other Class中有什么。
+We wanna know what is currently in the identifier otherClass.
 
 91
 00:04:45.439 --> 00:04:48.790
-因为，在一个瞬间，我们就要把遗嘱执行人变成这样了。
-Because, in just a moment,
-we're about to turn the executor.
+因为，稍等片刻，我们就要把遗嘱执行者。
+Because, in just a moment, we're about to turn the executor.
 
 92
 00:04:48.790 --> 00:04:50.860
-所以我们得去拿它我们要怎么办
-So we need to go get it,
-so what are we gonna do?
+所以我们需要去拿它，那我们怎么办？
+So we need to go get it, so what are we gonna do?
 
 93
 00:04:50.860 --> 00:04:52.779
-我们会像以前一样做同样的事
+我们要做和以前一样的事情。
 We're gonna do the same thing as before.
 
 94
 00:04:52.779 --> 00:04:58.199
-我们会说全球范围，红色的大理石，如果你愿意的话。
-We're gonna say, hey global scope,
-hey red marble, if you will.
+我们会说，嘿全球范围，嘿红色大理石，如果你愿意。
+We're gonna say, hey global scope, hey red marble, if you will.
 
 95
 00:04:58.199 --> 00:05:02.879
-我有一个叫做 otherClass 的大理石的资料来源
-I've got a source reference for
-a marble called otherClass.
+我有一个名为other Class的大理石的源引用。
+I've got a source reference for a marble called otherClass.
 
 96
 00:05:02.879 --> 00:05:04.930
-你听说过那个大理石吗
+你听说过那个大理石吗？
 Have you ever heard of that marble?
 
 97
 00:05:04.930 --> 00:05:06.812
-你的答案是什么
+答案是什么？
 And what's the answer gonna be?
 
 98
 00:05:06.812 --> 00:05:10.218
-是的，那是件好事，我们需要一个大理石，如果我们要求它的话，
-Yes, that's a good thing, cuz we need
-a marble, if we're asking for it,
+是的，这是件好事，因为我们需要一个大理石，如果我们要求的话，
+Yes, that's a good thing, cuz we need a marble, if we're asking for it,
 
 99
 00:05:10.218 --> 00:05:11.255
-我们需要它
+我们需要它。
 we're gonna need it.
 
 100
 00:05:11.255 --> 00:05:13.586
-所以他给了我们大理石我们怎么办
-So he gives us the marble,
-and what do we do?
+所以他给了我们大理石，我们怎么办？
+So he gives us the marble, and what do we do?
 
 101
 00:05:13.586 --> 00:05:16.990
-我们把价值从那个位置和记忆中拉出来
-We pull the value out from that
-location and memory conceptual,
+我们从那个位置和记忆概念中提取值，
+We pull the value out from that location and memory conceptual,
 
 102
 00:05:16.990 --> 00:05:20.091
-你把这个价值拿出来，这个时候的价值是什么呢 ?
-you pull the value out,
-what is that value at this moment?
+你把价值拉出来，这个时候的价值是什么？
+you pull the value out, what is that value at this moment?
 
 103
 00:05:24.024 --> 00:05:27.408
->> Kyle Simpson: 是将 otherClass 声明为点的函数
-&gt;&gt; Kyle Simpson: It's the function
-that otherClass was declared to point
+&gt；&gt；Kyle Simpson：这是other Class被声明指向的函数
+&gt;&gt; Kyle Simpson: It's the function that otherClass was declared to point
 
 104
 00:05:27.408 --> 00:05:28.319
-啊，对吧 ?
+对吧？
 at, right?
 
 105
 00:05:28.319 --> 00:05:29.889
-在编译时，是 otherClass，
+在编译时，other Class，
 At compile time, otherClass,
 
 106
 00:05:29.889 --> 00:05:32.970
-标识，与该功能相关联。
-the identifier,
-was associated with that function.
+标识符与该功能相关联。
+the identifier, was associated with that function.
 
 107
 00:05:32.970 --> 00:05:35.920
-该值为该值，或该值在该值中。
-That value is there, or
-that reference to that value is there.
+那个值在那里，或者对那个值的引用在那里。
+That value is there, or that reference to that value is there.
 
 108
 00:05:35.920 --> 00:05:40.980
-所以这是一件好事，因为在第 13 行，我们看到的那些括号
-So that's a good thing, because then,
-on line 13, those parentheses that we see
+这是一件好事，因为在第13行，我们看到的那些括号
+So that's a good thing, because then, on line 13, those parentheses that we see
 
 109
 00:05:40.980 --> 00:05:46.209
-在第 13 线里他们执行我们从那个变量中提取出来的东西
-there on line 13, they execute the thing
-that we just pulled out of that variable.
+在第13行，他们执行我们刚刚从变量中取出的内容。
+there on line 13, they execute the thing that we just pulled out of that variable.
 
 110
 00:05:46.209 --> 00:05:50.591
-如果我们从那个变量中提取出一个不是函数的变量
-If we pulled out of that variable
-something that wasn't a function, like,
+如果我们从变量中取出一些不是函数的东西，比如，
+If we pulled out of that variable something that wasn't a function, like,
 
 111
 00:05:50.591 --> 00:05:53.747
-或未定义，您认为会发生什么 ?
-null, or undefined,
-what do you think would happen?
+空，或者未定义，您认为会发生什么？
+null, or undefined, what do you think would happen?
 
 112
 00:05:53.747 --> 00:05:56.452
->演讲者 3: 一切都会燃烧。
+&gt；&gt；扬声器3：一切都会燃烧。
 &gt;&gt; Speaker 3: Everything would burn.
 
 113
 00:05:56.452 --> 00:05:56.952
->> Kyle Simpson: [LAUGH] 将刻录所有内容。
-&gt;&gt; Kyle Simpson: [LAUGH]
-Everything would burn.
+&gt；&gt；Kyle Simpson：[笑]一切都会燃烧。
+&gt;&gt; Kyle Simpson: [LAUGH] Everything would burn.
 
 114
 00:05:58.449 --> 00:06:00.978
-那就对了 整个计划崩溃了
-That's right.
-The whole program crashes down,
+这就对了。整个程序崩溃了
+That's right. The whole program crashes down,
 
 115
 00:06:00.978 --> 00:06:04.930
-具体发生的是一个叫做 TypeError的错误，
-specifically what would happen
-is an error called a TypeError,
+具体地说，会发生一个称为TypeError的错误，
+specifically what would happen is an error called a TypeError,
 
 116
 00:06:04.930 --> 00:06:08.369
-因为我们的价值是空的，或者没有定义的，
-because we would have a value like null,
-or undefined,
+因为我们会有一个类似NULL或undefined的值，
+because we would have a value like null, or undefined,
 
 117
 00:06:08.369 --> 00:06:12.120
-但这不是作为函数执行的合法值。
-but that is not a value that is
-legal to execute as a function.
+但这不是一个可以作为函数合法执行的值。
+but that is not a value that is legal to execute as a function.
 
 118
 00:06:12.120 --> 00:06:16.240
-所以我们做的是非法的那种叫 TypeError的
-So we're doing something illegal with
-that type, that's call the TypeError,
+所以我们用这种类型做了一些非法的事情，这就是所谓的TypeError，
+So we're doing something illegal with that type, that's call the TypeError,
 
 119
 00:06:16.240 --> 00:06:17.148
-运行时间错误，
+运行时错误，
 a run time error,
 
 120
 00:06:17.148 --> 00:06:21.920
-我们在做一些不允许的值的事情
-where we're doing something with a value
-that's not allowed for that type.
+我们正在做的事情的值是不允许用于该类型的。
+where we're doing something with a value that's not allowed for that type.
 
 121
 00:06:21.920 --> 00:06:25.519
-谢天谢地我们有了一个功能所以我们可以执行它
-Thankfully, in this case,
-we got a function, so we can execute it,
+谢天谢地，在这种情况下，我们有一个函数，所以我们可以执行它，
+Thankfully, in this case, we got a function, so we can execute it,
 
 122
 00:06:25.519 --> 00:06:27.762
-这意味着行刑会移到什么线
+这意味着行刑会移到哪一条线上？
 which means execution moves to what line?
 
 123
 00:06:27.762 --> 00:06:28.375
->> 扬声器 6: 4。
+&gt；&gt；扬声器6：4。
 &gt;&gt; Speaker 6: Four.
 
 124
 00:06:28.375 --> 00:06:33.995
->> Kyle Simpson: 第四行，第 4 行不再有 var ，但是
-&gt;&gt; Kyle Simpson: Line four, line four
-does not have a var on it anymore but
+&gt；&gt；Kyle Simpson：第四行，第四行不再有var，但是
+&gt;&gt; Kyle Simpson: Line four, line four does not have a var on it anymore but
 
 125
 00:06:33.995 --> 00:06:37.954
-它确实有，什么样的运作呢 ?
+它确实有，什么样的行动？
 it does have, what kind of operation?
 
 126
 00:06:37.954 --> 00:06:38.860
->> 扬声器 6: 具有大理石。
+&gt；&gt；扬声器6：有一个大理石。
 &gt;&gt; Speaker 6: Has a marble.
 
 127
 00:06:38.860 --> 00:06:40.970
->> 凯尔 - 辛普森: 有任务，所以
+&gt；&gt；Kyle Simpson：它有一个任务，所以
 &gt;&gt; Kyle Simpson: It has an assignment, so
 
 128
 00:06:40.970 --> 00:06:43.435
-它有什么对大理石的引用
-it's got what kind of
-reference to a marble in it?
+里面有什么对大理石的引用？
+it's got what kind of reference to a marble in it?
 
 129
 00:06:43.435 --> 00:06:44.747
->> 扬声器 6: 接收。
+&gt；&gt；扬声器6：接收者。
 &gt;&gt; Speaker 6: A receiving one.
 
 130
 00:06:44.747 --> 00:06:46.091
->> 演讲者 4: 目标。
+&gt；&gt；扬声器4：目标。
 &gt;&gt; Speaker 4: Target.
 
 131
 00:06:46.091 --> 00:06:48.250
->> Kyle Simpson: 目标，准确，接收，目标。
-&gt;&gt; Kyle Simpson: A target, exactly,
-a receiving one, a target.
+&gt；&gt；Kyle Simpson：一个目标，确切地说，一个接收目标，一个目标。
+&gt;&gt; Kyle Simpson: A target, exactly, a receiving one, a target.
 
 132
 00:06:48.250 --> 00:06:51.819
-这样对话就会像在第一条线上一样继续下去。
-So that conversation is gonna continue
-exactly like it did on line one.
+所以这段对话将一如既往地继续下去，就像在一号线上一样。
+So that conversation is gonna continue exactly like it did on line one.
 
 133
 00:06:51.819 --> 00:06:54.560
-嘿，你班的范围，嘿，蓝桶，
-Hey, scope of otherClass,
-hey, blue bucket,
+嘿，其他类的范围，嘿，蓝桶，
+Hey, scope of otherClass, hey, blue bucket,
 
 134
 00:06:55.610 --> 00:07:00.060
-我有个关于一个叫老师的大理石的 traget reference ，有听过吗 ?
-I have a traget reference for
-a marble called teacher, ever heard of it?
+我有一个叫老师的大理石的参考资料，听说过吗？
+I have a traget reference for a marble called teacher, ever heard of it?
 
 135
 00:07:00.060 --> 00:07:00.858
-答案是吗 ?
+答案是？
 And the answer is?
 
 136
 00:07:00.858 --> 00:07:02.910
->> 受众: 是。
+&gt；&gt；观众：是的。
 &gt;&gt; Audience: Yes.
 
 137
 00:07:02.910 --> 00:07:04.509
->> 凯尔 - 辛普森: 这是你的大理石
+凯尔·辛普森：这是你的大理石。
 &gt;&gt; Kyle Simpson: Here's your marble.
 
 138
 00:07:04.509 --> 00:07:05.959
-现在我们在记忆中有一个位置
+所以现在我们在内存中有了一个位置，
 So now we have a location in memory,
 
 139
 00:07:05.959 --> 00:07:08.490
-那地方跟第一排的位置不一样
-that's a different place
-than the one from line one.
+那是和一号线不同的地方。
+that's a different place than the one from line one.
 
 140
 00:07:08.490 --> 00:07:11.420
-它在内存中是一个不同的位置，它是一个不同的范围。
-It's a different location in memory,
-cuz it's a different scope.
+它在内存中是一个不同的位置，因为它是一个不同的作用域。
+It's a different location in memory, cuz it's a different scope.
 
 141
 00:07:11.420 --> 00:07:14.589
-我们有这个大理石然后我们用苏西的值
-We have this marble, and
-then we take the value Suzy, and
+我们有这个大理石，然后我们取Suzy的值，然后
+We have this marble, and then we take the value Suzy, and
 
 142
 00:07:14.589 --> 00:07:18.629
-我们分配给它，然后执行第四行。
-we assign into it,
-then line four is executed.
+我们向它赋值，然后执行第四行。
+we assign into it, then line four is executed.
 
 143
 00:07:18.629 --> 00:07:20.379
-大家都好吗
+到目前为止大家都还好吧？
 Everybody good so far?
 
 144
 00:07:20.379 --> 00:07:22.350
-第五行有什么事吗
+现在，五号线会发生什么？
 Now, what's gonna happen with line five?
 
 145
 00:07:22.350 --> 00:07:25.285
-我们会把这些细节掩盖一下
-We're gonna gloss over
-a bit of this detail, but
+我们会掩盖一些细节，但是
+We're gonna gloss over a bit of this detail, but
 
 146
 00:07:25.285 --> 00:07:28.230
-第 5 行是否有对标识的引用 ?
-Is there a reference to
-identifier on line five?
+第五行是否有对标识符的引用？
+Is there a reference to identifier on line five?
 
 147
 00:07:31.408 --> 00:07:32.792
->> Kyle Simpson: 不是我们创建的，但是
-&gt;&gt; Kyle Simpson: Not one that we created,
-but
+&gt；&gt；Kyle Simpson：不是我们创建的，但是
+&gt;&gt; Kyle Simpson: Not one that we created, but
 
 148
 00:07:32.792 --> 00:07:34.930
-名单上有一个标识符，对吧 ?
+名单上有一个标识符，对吧？
 there is an identifier on the list, right?
 
 149
 00:07:34.930 --> 00:07:39.396
-这里有一个概念上的大理石，叫做控制台，
-There is a marble here in a conceptual
-sense, which is call console,
+这里有一个概念意义上的大理石，叫做控制台，
+There is a marble here in a conceptual sense, which is call console,
 
 150
 00:07:39.396 --> 00:07:41.552
-一定要在某个地方存在
+一定存在于某个地方。
 that's got to exist somewhere.
 
 151
 00:07:41.552 --> 00:07:45.850
-JavaScript 引擎对我们具有类似自动全局的类型。
-The JavaScript engine has that available
-to us as sort of like an auto global.
+JavaScript引擎为我们提供了类似于自动全局的功能。
+The JavaScript engine has that available to us as sort of like an auto global.
 
 152
 00:07:45.850 --> 00:07:48.259
-不是我们创造的东西但它是可以用的
-Not something we created, but
-it's available nonetheless.
+不是我们创造的东西，但它仍然是可用的。
+Not something we created, but it's available nonetheless.
 
 153
 00:07:48.259 --> 00:07:50.100
-同样的过程，看看发生了什么。
-So the same process,
-look at what happened.
+所以同样的过程，看看发生了什么。
+So the same process, look at what happened.
 
 154
 00:07:50.100 --> 00:07:53.740
-我们基本上会说， " otherClass" 的范围，
-We would basically say,
-hey scope of otherClass,
+我们基本上会说，嘿，其他类的范围，
+We would basically say, hey scope of otherClass,
 
 155
 00:07:53.740 --> 00:07:57.360
-你有没有听过一个叫控制台的大理石
-have you ever heard of
-a marble called console?
+你听说过一种叫做控制台的大理石吗？
+have you ever heard of a marble called console?
 
 156
 00:07:57.360 --> 00:07:59.909
-库兹在源头上
+因为那是在源位置。
 Cuz that's in the source position.
 
 157
 00:07:59.909 --> 00:08:05.660
-现在， otherClass 是否定义了一个称为控制台的大理石 ?
-Now, has otherClass ever defined
-a marble called console?
+现在，other Class曾经定义过一个名为console的大理石吗？
+Now, has otherClass ever defined a marble called console?
 
 158
 00:08:05.660 --> 00:08:09.860
-那么接下来会发生什么，这是理解词法范围的关键，
-So what's going to happen then, and this
-is the key to understanding lexical scope,
+那么接下来会发生什么，这是理解词汇范围的关键，
+So what's going to happen then, and this is the key to understanding lexical scope,
 
 159
 00:08:09.860 --> 00:08:14.160
-如果找不到作用域中引用的变量，
-is that if we cannot find a variable
-that is referenced within the scope,
+如果我们找不到在作用域中引用的变量，
+is that if we cannot find a variable that is referenced within the scope,
 
 160
 00:08:14.160 --> 00:08:17.350
-在范围内声明我们下一步该做什么
-that was declared within the scope,
-what do we do next?
+这是在范围内声明的，我们下一步做什么？
+that was declared within the scope, what do we do next?
 
 161
 00:08:17.350 --> 00:08:21.129
-我们上一级，在这个情况下是到全球范围，我们会说，哎，
-We go up one level, in this case to
-the global scope, and we would say, hey,
+我们上升了一个层次，在这种情况下是全球范围，我们会说，嘿，
+We go up one level, in this case to the global scope, and we would say, hey,
 
 162
 00:08:21.129 --> 00:08:25.290
-全局作用域，您是否听过一个称为控制台的标识 ?
-global scope, have you ever heard
-of an identifier called console?
+全局范围，您是否听说过称为控制台的标识符？
+global scope, have you ever heard of an identifier called console?
 
 163
 00:08:25.290 --> 00:08:28.370
-虽然我们没有正式宣布它是一个全球性的
-And even though we didn't formally
-declare it, it's an auto global,
+尽管我们没有正式声明，但它是一个汽车全球，
+And even though we didn't formally declare it, it's an auto global,
 
 164
 00:08:28.370 --> 00:08:31.730
-已经有了一个红色的大理石叫做控制台
-it's already there, there's already
-a red marble called console.
+它已经在那里了，已经有一个叫做控制台的红色大理石了。
+it's already there, there's already a red marble called console.
 
 165
 00:08:31.730 --> 00:08:33.000
-那么全球范围会怎样呢 ?
+那么全球范围会做什么呢？
 So what is global scope gonna do?
 
 166
 00:08:34.500 --> 00:08:38.090
-这是你的红色大理石，我们可以看到那个大理石。
-Here's your red marble, and
-we can look on that marble.
+这是你的红色大理石，我们可以看看那个大理石。
+Here's your red marble, and we can look on that marble.
 
 167
 00:08:38.090 --> 00:08:40.730
-它是一个对象，它有一个叫记录的方法，等等。
-It's an object, it has a method
-call logged, and so on, and so
+它是一个对象，它记录了一个方法调用，等等
+It's an object, it has a method call logged, and so on, and so
 
 168
 00:08:40.730 --> 00:08:41.659
-我们可以调用它
+我们可以调用它。
 we can invoke it.
 
 169
 00:08:41.659 --> 00:08:43.860
-都是我的事好吗
+一切都和我有关，好吗？
 Everything with me on that, okay?
 
 170
 00:08:43.860 --> 00:08:46.460
-当您在源位置引用变量时，
-When you reference a variable
-in a source position,
+当在源位置引用变量时，
+When you reference a variable in a source position,
 
 171
 00:08:46.460 --> 00:08:48.080
-你得先查一查
+你得先查一下，然后
 you have to first look it up, and
 
 172
 00:08:48.080 --> 00:08:52.629
-当您在目标位置引用变量时，必须首先查找该变量。
-when you reference a variable in a target
-position, you have to first look it up.
+当您在目标位置引用变量时，必须首先查找它。
+when you reference a variable in a target position, you have to first look it up.
 
 173
 00:08:52.629 --> 00:08:56.029
-这就是这里的关键，就是有一个调查过程。
-That's the key takeaway here, is that
-there is a look up process involved.
+这就是这里的关键之处，就是其中涉及到一个查找过程。
+That's the key takeaway here, is that there is a look up process involved.
 
 174
 00:08:56.029 --> 00:08:59.259
-到目前为止，我们的调查一直发现我们正在寻找的东西。
-So far our look ups have always found
-the thing that we were looking for.
+到目前为止，我们的查找总是找到我们一直在寻找的东西。
+So far our look ups have always found the thing that we were looking for.
 
 175
 00:09:00.389 --> 00:09:03.625
-过了一段时间，我们就会讨论当我们找不到的时候会发生什么。
-After a while, we'll talk about
-what happens when we don't find it.
+一段时间后，我们将讨论当我们找不到它时会发生什么。
+After a while, we'll talk about what happens when we don't find it.
 
 176
 00:09:03.625 --> 00:09:05.720
-但现在我们都在好的道路上
+但现在我们都在好的道路上。
 But right now we're all in the good path.
 
 177
 00:09:05.720 --> 00:09:07.299
-我们正在寻找的一切
-We're finding everything
-that we're looking for
+我们正在寻找我们要寻找的一切
+We're finding everything that we're looking for

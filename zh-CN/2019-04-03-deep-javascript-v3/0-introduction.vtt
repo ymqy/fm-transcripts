@@ -2,86 +2,73 @@ WEBVTT
 
 1
 00:00:00.030 --> 00:00:04.049
->> 凯尔 - 辛普森: 七年前，马克给了我开始教书的开始。
-&gt;&gt; Kyle Simpson: Seven years ago,
-Mark gave me my start in teaching.
+&GT；&GT；凯尔·辛普森：七年前，马克给了我教书的开始。
+&gt;&gt; Kyle Simpson: Seven years ago, Mark gave me my start in teaching.
 
 2
 00:00:04.049 --> 00:00:07.730
-他跟我说，看到我给会议演讲，但是
-He reached out to me,
-had seen me giving conference talks, but
+他联系了我，看到我在做会议演讲，但是
+He reached out to me, had seen me giving conference talks, but
 
 3
 00:00:07.730 --> 00:00:10.980
-我从来没有在这个行业里教过任何东西
-I had never taught anything
-in this industry, whatsoever.
+我从来没有教过这个行业的任何东西。
+I had never taught anything in this industry, whatsoever.
 
 4
 00:00:10.980 --> 00:00:14.220
-他说，嘿，我想你应该给它一次机会。
-And he reached out and said, hey,
-I think you should give it a shot.
+他伸手说，嘿，我想你应该试一试。
+And he reached out and said, hey, I think you should give it a shot.
 
 5
 00:00:14.220 --> 00:00:16.001
-他花了几周时间来找我
+他花了几周时间哄我，
 And he took a couple of weeks to coax me,
 
 6
 00:00:16.001 --> 00:00:18.978
-主要是因为我要去滑雪了，冷冰冰的明尼苏达
-mostly because I was having to
-come up to snowy, cold Minnesota.
+主要是因为我要去明尼苏达州冰天雪地。
+mostly because I was having to come up to snowy, cold Minnesota.
 
 7
 00:00:18.978 --> 00:00:22.916
-但他花了几个星期的时间让我和我来到这里，给了我的第一次研讨会。
-But he took a couple weeks to coax me and
-I came up here and gave my first workshop.
+但他花了几个星期的时间哄我，我来到这里，给我的第一个研讨会。
+But he took a couple weeks to coax me and I came up here and gave my first workshop.
 
 8
 00:00:22.916 --> 00:00:28.030
-从那天到那个时候，我心里想，这就是我想做的事，
-And midway through that day, it clicked in
-my mind that this is what I wanted to do,
+那天过半的时候，我突然想到这就是我想要做的，
+And midway through that day, it clicked in my mind that this is what I wanted to do,
 
 9
 00:00:28.030 --> 00:00:30.789
-这就是我在这儿教的东西
-and this is what I'm here for,
-is to teach.
+这就是我在这里的目的，就是教书。
+and this is what I'm here for, is to teach.
 
 10
 00:00:31.829 --> 00:00:38.030
-所以我现在是全职老师，完全感谢马克。
-So I'm a teacher now full-time,
-thanks completely to Mark.
+所以我现在是一名全职教师，这完全多亏了马克。
+So I'm a teacher now full-time, thanks completely to Mark.
 
 11
 00:00:38.030 --> 00:00:41.270
-所以我一直很感激我总是觉得我要回家了
-So I always appreciate that and
-I always feel like I'm coming back home,
+所以我一直很感激这一点，我总是觉得我要回家了，
+So I always appreciate that and I always feel like I'm coming back home,
 
 12
 00:00:41.270 --> 00:00:42.939
-如果你愿意的话当我回到Fron趋向大师赛的时候
-if you will,
-when I come back to Frontend Masters.
+如果你愿意，当我回到前端大师的时候。
+if you will, when I come back to Frontend Masters.
 
 13
 00:00:42.939 --> 00:00:47.107
-所以我们要谈的是 JavaScript 和
-So this course, we're gonna be
-talking about JavaScript and
+因此，本课程，我们将讨论JavaScript和
+So this course, we're gonna be talking about JavaScript and
 
 14
 00:00:47.107 --> 00:00:53.100
-我们将会比你更深入的谈论这个问题
-we're gonna be talking about it much more
-deeply than you're used to likely going.
+我们会比你习惯的更深入地讨论这件事。
+we're gonna be talking about it much more deeply than you're used to likely going.
 
 15
 00:00:53.100 --> 00:00:57.450
@@ -90,457 +77,393 @@ Most people may know that I have a fairly
 
 16
 00:00:57.450 --> 00:01:00.020
-" GETIFY " 名称下的强大在线存在。
-strong online presence
-under the name GETIFY.
+名为GETIFY的强大在线存在。
+strong online presence under the name GETIFY.
 
 17
 00:01:00.020 --> 00:01:03.063
-所以如果你读了我的推特特别是最近
-So if you've read my Twitter streams,
-especially lately,
+所以如果你读过我的推特流，特别是最近，
+So if you've read my Twitter streams, especially lately,
 
 18
 00:01:03.063 --> 00:01:06.775
-我在准备课程的时候经常谈这些东西
-I've been talking a lot about all this
-stuff while preparing the course.
+在准备课程的时候，我已经谈论了很多关于这些的东西。
+I've been talking a lot about all this stuff while preparing the course.
 
 19
 00:01:06.775 --> 00:01:11.326
-但你可以在我的 Twitter上看到我的想法 GitHub
-But you can find all of my
-thoughts on my Twitter, on GitHub,
+但你可以在我的推特上，在GitHub上找到我所有的想法
+But you can find all of my thoughts on my Twitter, on GitHub,
 
 20
 00:01:11.326 --> 00:01:13.394
-那是我的邮箱地址
+这是我的电子邮件地址。
 that's my email address.
 
 21
 00:01:13.394 --> 00:01:16.332
-因此，我们可以自由地伸出或去寻找更多的信息。
-So feel free to reach out or
-look for more of that information.
+所以，请随时联系或寻找更多的信息。
+So feel free to reach out or look for more of that information.
 
 22
 00:01:16.332 --> 00:01:19.867
-我写了很多书，包括 < 你不知道 JS > 系列。
-I've written a number of books including
-the You Don't Know JS book series.
+我已经写了很多书，包括“你不知道JS”系列书。
+I've written a number of books including the You Don't Know JS book series.
 
 23
 00:01:19.867 --> 00:01:24.287
-这门课上的很多材料直接用前三本的
-A lot of material from this course tracks
-directly with the first three major books
+本课程中的许多材料都直接与前三本主要书籍有关
+A lot of material from this course tracks directly with the first three major books
 
 24
 00:01:24.287 --> 00:01:25.250
-系列的数据。
+系列中的。
 of the series.
 
 25
 00:01:25.250 --> 00:01:28.000
-" 范围和关闭 " 一书， " 此 " 和 " 对象原型 " 一书，以及
-The Scope and Closures book,
-the This &amp; Object Prototypes book, and
+范围和闭包一书，这&amp；对象原型一书，以及
+The Scope and Closures book, the This &amp; Object Prototypes book, and
 
 26
 00:01:28.000 --> 00:01:29.620
-< 类型和语法 > 一书。
+类型和语法书。
 the Types &amp; Grammar book.
 
 27
 00:01:29.620 --> 00:01:35.280
-因此，这些都是在这一过程中获得更多信息的最佳场所。
-So those are the best places to go after
-this course to get more information.
+因此，这些是本课程结束后获取更多信息的最佳去处。
+So those are the best places to go after this course to get more information.
 
 28
 00:01:35.280 --> 00:01:37.472
-可以免费阅读，也可以购买。
-You can read those for free or
-you can purchase them.
+你可以免费阅读，也可以购买。
+You can read those for free or you can purchase them.
 
 29
 00:01:37.472 --> 00:01:40.006
-我一直很感谢你的购买
-I always appreciate
-purchases if you like those.
+如果你喜欢的话，我总是很感激你的购买。
+I always appreciate purchases if you like those.
 
 30
 00:01:40.006 --> 00:01:44.000
-所以我想和你谈谈为什么我们要跳进 JavaScript
-So I wanna talk to you a little bit about
-why we're gonna jump into JavaScript so
+所以我想和你谈谈为什么我们要跳到JavaScript
+So I wanna talk to you a little bit about why we're gonna jump into JavaScript so
 
 31
 00:01:44.000 --> 00:01:44.879
-更深刻的
+更深。
 much more deeply.
 
 32
 00:01:44.879 --> 00:01:49.879
-而不是对各种框架和首字母缩略词进行广泛调查，
-Rather than a broad survey of every kind
-of framework and acronym that's possible,
+与其对每一种可能的框架和缩略语进行广泛的调查，
+Rather than a broad survey of every kind of framework and acronym that's possible,
 
 33
 00:01:49.879 --> 00:01:53.770
-为什么我们要深入到 JavaScript 中，为什么今天会有这个问题呢 ?
-why are we diving deep into JavaScript,
-and why does that even matter today?
+为什么我们要深入研究JavaScript，为什么这在今天还很重要？
+why are we diving deep into JavaScript, and why does that even matter today?
 
 34
 00:01:53.770 --> 00:01:57.390
-因为现在看来连 JavaScript 都没人写了。
-Because it seems the trend is nobody
-even writes JavaScript anymore.
+因为似乎趋势是没有人再写JavaScript了。
+Because it seems the trend is nobody even writes JavaScript anymore.
 
 35
 00:01:57.390 --> 00:02:00.700
-他们写点别的无论是 TypeScript 还是
-They write something else,
-whether it's TypeScript or
+他们写别的东西，不管是打字稿还是
+They write something else, whether it's TypeScript or
 
 36
 00:02:00.700 --> 00:02:03.019
-一种完全不同的语言，比如 Go 或 Closure。
-an entirely different language like Go or
-Closure.
+一种完全不同的语言，比如GO或Closure。
+an entirely different language like Go or Closure.
 
 37
 00:02:03.019 --> 00:02:06.150
-但似乎没有人真正写出自己的JavaScript 。
-But nobody seems to really
-write their JavaScript.
+但似乎没有人真正编写自己的JavaScript。
+But nobody seems to really write their JavaScript.
 
 38
 00:02:06.150 --> 00:02:09.110
-我是说连他们写的 JavaScript 都没有了
-I mean, nobody even ships
-JavaScript that they wrote anymore.
+我的意思是，甚至没有人再发布他们写的JavaScript了。
+I mean, nobody even ships JavaScript that they wrote anymore.
 
 39
 00:02:09.110 --> 00:02:13.840
-他们提供了 14 层 Babble 变换的代码。
-They ship the code that 14 layers of
-Babble transformations have done.
+它们提供了14层Babble转换所完成的代码。
+They ship the code that 14 layers of Babble transformations have done.
 
 40
 00:02:13.840 --> 00:02:18.340
-所以为什么我们要学会和理解
-So why does it even matter why
-we learn and understand and
+那么为什么我们学习和理解
+So why does it even matter why we learn and understand and
 
 41
 00:02:18.340 --> 00:02:20.719
-我们为什么要学习和理解 JavaScript?
-why should we learn and
-understand JavaScript?
+为什么我们应该学习和理解JavaScript？
+why should we learn and understand JavaScript?
 
 42
 00:02:20.719 --> 00:02:24.870
-所以我想简单的说，这就是我们将要报道的事情的概观。
-So I wanna, just a quick brief, this is an
-overview of what we're gonna be covering.
+所以我想，只是简短的介绍一下，这是我们将要报道的内容的概述。
+So I wanna, just a quick brief, this is an overview of what we're gonna be covering.
 
 43
 00:02:26.060 --> 00:02:27.920
-这很明显是很简单的代码
+这显然是非常简单的代码，但是
 This is obviously very simple code, but
 
 44
 00:02:27.920 --> 00:02:31.030
-这其实是我经历过的
-this is actually something
-that I experienced or
+这实际上是我经历过的或者
+this is actually something that I experienced or
 
 45
 00:02:31.030 --> 00:02:36.219
-我最近才了解到这个过程的准备和建设。
-I learned just recently, in the
-preparation and buildup to this course.
+我最近才了解到，在这门课程的准备和准备中。
+I learned just recently, in the preparation and buildup to this course.
 
 46
 00:02:36.219 --> 00:02:38.735
-所以你们中的大多数可能都知道 ++ 运营商的情况。
-So most of you probably
-know about the ++ operator.
+所以你们中的大多数人可能知道+运算符。
+So most of you probably know about the ++ operator.
 
 47
 00:02:38.735 --> 00:02:44.259
-当它出现在后缀位置上就像在第 3 行
-And that when it shows up in the postfix
-position, like it is here on line 3,
+当它出现在后缀位置时，就像第3行上的这里一样，
+And that when it shows up in the postfix position, like it is here on line 3,
 
 48
 00:02:44.259 --> 00:02:47.849
-当它出现在那个后置位置时它是一个增量
-when it shows up in that postfixed
-position it's an after increment.
+当它出现在后缀位置时，它是后置增量。
+when it shows up in that postfixed position it's an after increment.
 
 49
 00:02:47.849 --> 00:02:52.110
-所以它给你这个值，然后是递增的，这就是为什么 x++ 仍然返回
-So it gives you the value and then it
-increments, which is why x++ still returns
+所以它给出值，然后递增，这就是为什么x+仍然返回
+So it gives you the value and then it increments, which is why x++ still returns
 
 50
 00:02:52.110 --> 00:02:56.550
-我们 40岁但那 X 已经更新到 41了
+US 40，但x已更新为41。
 us 40, but then x has been updated to 41.
 
 51
 00:02:56.550 --> 00:03:02.009
-然后在第 6 行预先增量更新
-And then on line 6 we have
-the pre-increment which does the updating
+然后在第6行，我们有执行更新的预增量
+And then on line 6 we have the pre-increment which does the updating
 
 52
 00:03:02.009 --> 00:03:06.689
-首先，然后返回值，这就是为什么在该行上同时获得两个 42s。
-first and then returns the value,
-which is why on that line we get both 42s.
+首先，然后返回值，这就是为什么在该行上我们同时得到42。
+first and then returns the value, which is why on that line we get both 42s.
 
 53
 00:03:06.689 --> 00:03:10.199
-现在我的头和大部分的开发者都在脑中
-Now I've had in my head and I think most
-developers have had in their head a mental
+现在，我已经在我的头脑中，我认为大多数开发人员已经在他们的头脑中有一个心理
+Now I've had in my head and I think most developers have had in their head a mental
 
 54
 00:03:10.199 --> 00:03:13.319
-+ + 运算符正在执行的操作的模型。
++运算符正在执行的操作的模型。
 model for what the ++ operator is doing.
 
 55
 00:03:13.319 --> 00:03:16.926
-是啊那是之前和之后的细微差别
-Yes, there's the before and
-after kind of nuance, but
+是的，有之前和之后的细微差别，但是
+Yes, there's the before and after kind of nuance, but
 
 56
 00:03:16.926 --> 00:03:22.091
-在我脑海中，基本上，这个 ++ 运算符基本上是 x+1。
-I've had in my mind that essentially,
-this ++ operator is basically x+1.
+在我的脑海里，这个+运算符基本上就是x+1。
+I've had in my mind that essentially, this ++ operator is basically x+1.
 
 57
 00:03:22.091 --> 00:03:25.865
-我认为大多数人都认为情况就是这样。
-And I think most people probably
-think that that is the case.
+我想大多数人可能认为情况就是这样。
+And I think most people probably think that that is the case.
 
 58
 00:03:25.865 --> 00:03:28.795
-所以我特别调查了这个
-And so
-I was digging into this in particular, and
+所以我特别深入研究了这一点
+And so I was digging into this in particular, and
 
 59
 00:03:28.795 --> 00:03:32.156
-后来你就会知道为什么我这么想
-you'll find out later in
-the course why I was thinking so
+你会在后面的课程中发现我为什么这么想
+you'll find out later in the course why I was thinking so
 
 60
 00:03:32.156 --> 00:03:35.248
-对这种微妙的事情有很深的了解
-deeply about something as
-sort of nuanced as this.
+对像这样细微差别的东西深有感触。
+deeply about something as sort of nuanced as this.
 
 61
 00:03:35.248 --> 00:03:40.128
-但我想知道你是否有过某种价值
-But I was trying to think about if
-you have ++ on some value and it's in
+但我在想，如果你在某个值上有+，它是不是在
+But I was trying to think about if you have ++ on some value and it's in
 
 62
 00:03:40.128 --> 00:03:46.879
-position 位置，这是否表示该值完全未受影响?
-the postfix position, does that mean that
-the value comes back completely untouched?
+后缀位置，这是否意味着返回的值完全原封不动？
+the postfix position, does that mean that the value comes back completely untouched?
 
 63
 00:03:46.879 --> 00:03:51.090
-我以为是这个案子把这个价值完全没有触及的
-I assumed that that was the case, that it
-returned the value completely untouched
+我假设情况就是这样，它返回的是完全原封不动的值
+I assumed that that was the case, that it returned the value completely untouched
 
 64
 00:03:51.090 --> 00:03:54.389
-然后把它更新的任何增量都做了
-and then it made whatever
-increments it updated.
+然后它做了它更新的任何增量。
+and then it made whatever increments it updated.
 
 65
 00:03:54.389 --> 00:03:59.167
-那么问题就变成，当你在那个后缀中使用 ++ 的时候会发生什么
-So the question then becomes, well, what
-happens when you use ++ in that postfix
+所以问题就变成了，当你在后缀中使用+时会发生什么
+So the question then becomes, well, what happens when you use ++ in that postfix
 
 66
 00:03:59.167 --> 00:04:03.137
-位置，但在某些值上使用该位置，但该值不是数字吗 ?
-position, but you use it on some
-value that's not already a number?
+位置，但是你在一些还不是数字的值上使用它？
+position, but you use it on some value that's not already a number?
 
 67
 00:04:03.137 --> 00:04:06.305
-我们会在这门课上讲类型和
-And we're gonna be talking in just a
-little bit in this course about types and
+我们将在这门课上讲一点关于类型和
+And we're gonna be talking in just a little bit in this course about types and
 
 68
 00:04:06.305 --> 00:04:06.810
-强迫。
+胁迫。
 coercion.
 
 69
 00:04:06.810 --> 00:04:08.750
-我要深入讨论这个话题
-And I'm gonna get real
-deep into this topic.
+我将真正深入这个话题。
+And I'm gonna get real deep into this topic.
 
 70
 00:04:08.750 --> 00:04:10.460
-但问题变成了
+但问题是，
 But the question becomes,
 
 71
 00:04:10.460 --> 00:04:13.530
-当一个数字和一个数字的字符串表示
-what happens when there's a string
-representation of a number and
+当有一个数字的字符串表示和
+what happens when there's a string representation of a number and
 
 72
 00:04:13.530 --> 00:04:17.439
-那么你会做一些基本的事情比如增加它吗
-then you do something fundamentally
-mathematic like incrementing it?
+然后你做一些基本的数学运算，比如递增？
+then you do something fundamentally mathematic like incrementing it?
 
 73
 00:04:17.439 --> 00:04:22.860
-在我思想过程中，因为 x ++ l=x +1，
-In my mind thought process, again,
-because thinking of x++ as x equals x+1,
+在我的思维过程中，再一次，因为把x+想成x等于x+1，
+In my mind thought process, again, because thinking of x++ as x equals x+1,
 
 74
 00:04:22.860 --> 00:04:26.300
-我在想，那么它会把这个串五回来，
-I was thinking, well,
-it will return this string 5, and
+我在想，好吧，它会返回这个字符串5，然后
+I was thinking, well, it will return this string 5, and
 
 75
 00:04:26.300 --> 00:04:30.790
-然后它会将字符串 5 强制为 5 并更新为 6。
-then it'll coerce that string 5 to
-the number 5 and update it to 6.
+然后它将强制字符串5为数字5，并将其更新为6。
+then it'll coerce that string 5 to the number 5 and update it to 6.
 
 76
 00:04:30.790 --> 00:04:32.199
-那是我的精神模型
+这就是我的心智模型。
 That was the mental model I had.
 
 77
 00:04:32.199 --> 00:04:36.420
-事实证明，尽管这似乎是合理的，但这并不是发生的事情。
-And it turns out that even though that
-seems reasonable, that's not what happens.
+事实证明，即使这看起来是合理的，但事实并非如此。
+And it turns out that even though that seems reasonable, that's not what happens.
 
 78
 00:04:36.420 --> 00:04:40.899
-结果是它先把它逼到了一个数字，或者
-It turns out that it goes ahead and
-coerces it to a number first, or
+结果是它先进行并强制它到一个数字，或者
+It turns out that it goes ahead and coerces it to a number first, or
 
 79
 00:04:40.899 --> 00:04:42.899
-至少这才是最有可能发生的事情
+至少看起来是这样。
 at least that's what appears to happen.
 
 80
 00:04:42.899 --> 00:04:45.788
-你注意到我在 7 号线路上没找到 5 号线
-You notice that I didn't get back
-the string 5 there on line 7,
+你注意到我没有在第7行取回字符串5，
+You notice that I didn't get back the string 5 there on line 7,
 
 81
 00:04:45.788 --> 00:04:47.569
-我恢复了 5 号
+我拿回了5号
 I got back the number 5.
 
 82
 00:04:47.569 --> 00:04:50.949
-所以它确实是在某种意义上
-So it does go ahead and
-modify, in a sense,
+所以在某种意义上，它确实进行了修改，
+So it does go ahead and modify, in a sense,
 
 83
 00:04:50.949 --> 00:04:55.850
-如果需要将其强制转换为数字，那么在执行任何递增操作之前，该值都是必需的。
-the value if it needs to coerce it to
-a number, before it does any incrementing.
+如果需要在进行任何递增之前将其强制为一个数字，则为该值。
+the value if it needs to coerce it to a number, before it does any incrementing.
 
 84
 00:04:55.850 --> 00:04:58.810
-所以它甚至不是真正的一个之后，就在中间。
-So it's not even really an after,
-it's sort of in the middle.
+所以它甚至不是一个真正的后遗症，它在某种程度上是在中间。
+So it's not even really an after, it's sort of in the middle.
 
 85
 00:04:58.810 --> 00:04:59.959
-这件事很奇怪
+这是一件奇怪的事情。
 It's kind of a strange thing.
 
 86
 00:04:59.959 --> 00:05:03.189
-这是一个从未发生过的细微差别。
-And this was a nuance that had
-never occurred to me before.
+这是我以前从未想到的细微差别。
+And this was a nuance that had never occurred to me before.
 
 87
 00:05:03.189 --> 00:05:05.860
-现在我不是建议你用代码来解决这些问题。
-Now I'm not suggesting that you're gonna
-run across these problems in code.
+现在，我并不是建议您在代码中遇到这些问题。
+Now I'm not suggesting that you're gonna run across these problems in code.
 
 88
 00:05:05.860 --> 00:05:09.209
-但这说明了一个更大的点
-But this is to be illustrative
-of a larger point,
+但这是为了说明一个更大的问题，
+But this is to be illustrative of a larger point,
 
 89
 00:05:09.209 --> 00:05:13.370
-就是我们的开发者倾向于对代码进行心理模型。
-which is that we as developers tend
-to assume mental models about code.
+这就是我们作为开发人员倾向于假设关于代码的心理模型。
+which is that we as developers tend to assume mental models about code.
 
 90
 00:05:13.370 --> 00:05:17.221
-当虫子发生的时候我说什么时候
-And then when bugs happen,
-and I say when, not if,
+然后当虫子发生时，我说什么时候，而不是如果，
+And then when bugs happen, and I say when, not if,
 
 91
 00:05:17.221 --> 00:05:20.903
-当虫子发生时我们要责怪语言对吧
-when bugs happen we blame the language,
-right?
+当错误发生时，我们责怪语言，对吗？
+when bugs happen we blame the language, right?
 
 92
 00:05:20.903 --> 00:05:22.134
-我们将此归咎于语言。
+我们责怪语言。
 We blame the language.
 
 93
 00:05:22.134 --> 00:05:25.759
-显然， JavaScript 必须设计不佳，因为发生了这种情况。
-JavaScript clearly must have been
-designed poorly because this happened.
+显然，JavaScript的设计一定很糟糕，因为发生了这种情况。
+JavaScript clearly must have been designed poorly because this happened.
 
 94
 00:05:26.990 --> 00:05:28.600
@@ -549,261 +472,225 @@ Now I have lots of opinions.
 
 95
 00:05:28.600 --> 00:05:31.339
-跟我一样的人知道，我有很多关于 JavaScript的意见。
-Those that follow me know,
-I have lots of opinions on JavaScript.
+那些关注我的人都知道，我对JavaScript有很多看法。
+Those that follow me know, I have lots of opinions on JavaScript.
 
 96
 00:05:31.339 --> 00:05:33.000
-我绝不会为那些损失而损失
+我从来不会对这些东西感到迷茫。
 I'm never at a loss for those.
 
 97
 00:05:33.000 --> 00:05:36.170
-我想说我唯一的专家就是我自己的意见，对吧 ?
-I like to say the only thing I'm
-an expert on is my own opinions, right?
+我喜欢说我唯一的专家就是我自己的观点，对吧？
+I like to say the only thing I'm an expert on is my own opinions, right?
 
 98
 00:05:36.170 --> 00:05:37.840
-我绝不会为那些损失而损失
+我从来不会对这些东西感到迷茫。
 I'm never at a loss for those.
 
 99
 00:05:37.840 --> 00:05:42.329
-所以我有很多意见，是不是某方面是好的，
-So I have lots of opinions on whether or
-not some particular thing was a good or
+所以我对某些特定的东西是不是好还是不好有很多看法
+So I have lots of opinions on whether or not some particular thing was a good or
 
 100
 00:05:42.329 --> 00:05:45.629
-在设计 JavaScript时做出明智或明智的决策。
-smart or
-wise decision in the design of JavaScript.
+在JavaScript设计中做出明智或明智的决定。
+smart or wise decision in the design of JavaScript.
 
 101
 00:05:45.629 --> 00:05:48.409
-但我从未想过的是
-But what I never think
-is appropriate is for
+但我从不认为合适的是
+But what I never think is appropriate is for
 
 102
 00:05:48.409 --> 00:05:50.659
-我们要去做一件令我们感到惊讶的事情
-us to take something where
-we get surprised and
+我们去拿一些我们感到惊讶的东西
+us to take something where we get surprised and
 
 103
 00:05:50.659 --> 00:05:54.800
-说，因为我们很吃惊，所以 JavaScript 是错的。
-say, because we're surprised,
-therefore JavaScript is at fault.
+说，因为我们很惊讶，所以JavaScript是错误的。
+say, because we're surprised, therefore JavaScript is at fault.
 
 104
 00:05:56.110 --> 00:05:59.029
-如果你问一个 C++ 开发者的房间
+如果你问一屋子的C+开发人员，
 If you ask a room of C++ developers,
 
 105
 00:05:59.029 --> 00:06:02.819
-你有没有读过 C++ 规格的任何部分 ?
-have you ever read any part
-of the specification for C++?
+你读过C+规范的任何部分吗？
+have you ever read any part of the specification for C++?
 
 106
 00:06:02.819 --> 00:06:05.660
-大多数的手会上升，与 Java相同。
+大多数人都会举手，Java也是如此。
 Most hands will go up, same for Java.
 
 107
 00:06:05.660 --> 00:06:09.470
-但如果我问这个问题，我在全世界都问这个问题。
-But if I ask that same question, and I do,
-all over the world I ask this question
+但是如果我问同样的问题，而且我确实这么做了，全世界我都会问这个问题
+But if I ask that same question, and I do, all over the world I ask this question
 
 108
 00:06:09.470 --> 00:06:12.699
-几乎每次，您有多少人阅读了 JavaScript 规范的任何部分 ?
-almost every time, how many of you have
-read any part of the JavaScript spec?
+几乎每次都有多少人读过JavaScript规范的任何部分？
+almost every time, how many of you have read any part of the JavaScript spec?
 
 109
 00:06:12.699 --> 00:06:15.339
-我几乎没有手过
+而且我几乎没有得到任何人的手。
 And I hardly ever get any hands.
 
 110
 00:06:15.339 --> 00:06:19.228
-我想我在这里的部分原因是
-And I think part of what I'm getting
-at here is that many developers in
+我认为我在这里得到的部分是许多开发人员
+And I think part of what I'm getting at here is that many developers in
 
 111
 00:06:19.228 --> 00:06:23.653
-JavaScript 社区似乎认为 JavaScript 具有低屏障
-the JavaScript community seem to think
-that JavaScript with its low barrier to
+JavaScript社区似乎认为JavaScript对
+the JavaScript community seem to think that JavaScript with its low barrier to
 
 112
 00:06:23.653 --> 00:06:27.612
-输入应该是可以自动理解的，很直观的，
-entry, should be so automatically
-understandable, so intuitive,
+进入，应该是如此自动地可理解，如此直观，
+entry, should be so automatically understandable, so intuitive,
 
 113
 00:06:27.612 --> 00:06:32.062
-如果它不太直观，那么设计不好。
-that if it's not immediately intuitive,
-therefore it was poorly designed.
+如果它不是立即直观的，因此它设计得很差。
+that if it's not immediately intuitive, therefore it was poorly designed.
 
 114
 00:06:32.062 --> 00:06:37.590
-就像我们没有责任去了解我们的工具是如何运作的。
-As if we don't own a responsibility
-to learn how our tool works.
+好像我们没有责任去学习我们的工具是如何工作的。
+As if we don't own a responsibility to learn how our tool works.
 
 115
 00:06:38.610 --> 00:06:43.670
-所以如果你在寻找任何我教书的主题
-So if you're looking for any sort of
-overarching theme to what I teach and
+所以如果你在寻找我教的东西的总体主题
+So if you're looking for any sort of overarching theme to what I teach and
 
 116
 00:06:43.670 --> 00:06:48.860
-为什么我要教，尤其是这个课程，那是不够好的
-why I teach and specifically this course,
-it is that that's not good enough
+为什么我教，特别是这门课，那还不够好
+why I teach and specifically this course, it is that that's not good enough
 
 117
 00:06:48.860 --> 00:06:53.980
-作为开发商让我们假设一些东西，我们的假设是不正确的。
-as developers for us to assume something,
-our assumption to be incorrect.
+作为开发人员，我们要假设一些事情，我们的假设是不正确的。
+as developers for us to assume something, our assumption to be incorrect.
 
 118
 00:06:53.980 --> 00:06:57.740
-当我们被咬的时候，我们把责任推给别人。
-And then when we get bitten by it
-we shift the blame to someone else.
+然后当我们被它咬伤时，我们就把责任转移到别人身上。
+And then when we get bitten by it we shift the blame to someone else.
 
 119
 00:06:57.740 --> 00:07:00.899
-而不是其他社区的开发者说
-Instead of most developers
-in other communities saying,
+而不是其他社区的大多数开发人员说，
+Instead of most developers in other communities saying,
 
 120
 00:07:00.899 --> 00:07:02.110
-那是我自己的错
+好吧，这是我自己的错。
 well, the fault is my own.
 
 121
 00:07:02.110 --> 00:07:04.153
-我还没明白好吗
+我还不够明白，好吗？
 I didn't understand it enough, okay?
 
 122
 00:07:04.153 --> 00:07:09.057
-所以在这里，当我遇到它的时候，它是第五号，而不是字符串 5，
-So here, when I experienced it coming back
-as the number 5 instead of the string 5,
+所以在这里，当我体验到作为数字5而不是字符串5回来时，
+So here, when I experienced it coming back as the number 5 instead of the string 5,
 
 123
 00:07:09.057 --> 00:07:13.939
-我没说愚蠢的 JavaScript 你怎么能这么设计呢
-I didn't say, stupid JavaScript,
-how could you be so poorly designed?
+我没说，愚蠢的JavaScript，你怎么会设计得这么差？
+I didn't say, stupid JavaScript, how could you be so poorly designed?
 
 124
 00:07:13.939 --> 00:07:16.629
-我的问题是为什么，具体是什么 ?
+我的问题是为什么，具体是什么？
 My question was why, what specifically?
 
 125
 00:07:16.629 --> 00:07:19.290
-只有一种方法来回答这个问题。
-And there's really only one
-way to answer that question.
+只有一个方法可以回答这个问题。
+And there's really only one way to answer that question.
 
 126
 00:07:19.290 --> 00:07:22.750
-所以你有没有读过说明书的任何部分
-So the question of have you ever
-read any part of the specification
+所以问题是你有没有读过说明书的任何部分
+So the question of have you ever read any part of the specification
 
 127
 00:07:22.750 --> 00:07:26.720
-是一个一直存在的问题你应该一直在问自己
-is really an ever-present question that
-you should always be asking yourself.
+真的是一个永远存在的问题，你应该经常问自己。
+is really an ever-present question that you should always be asking yourself.
 
 128
 00:07:26.720 --> 00:07:30.447
-如果我不明白这一权威的来源在哪里呢 ?
-If I don't understand something,
-where is that source of authority?
+如果我不明白某件事，权力的来源在哪里？
+If I don't understand something, where is that source of authority?
 
 129
 00:07:30.447 --> 00:07:33.021
-我最近才有这个说法，有人说，我不知道，
-I actually had this argument recently
-where somebody said, I don't know,
+我最近真的有过这样的争论，有人说，我不知道，
+I actually had this argument recently where somebody said, I don't know,
 
 130
 00:07:33.021 --> 00:07:34.762
-JavaScript 引擎是权限的源。
-the JavaScript engine is
-the source of authority.
+JavaScript引擎是权威的来源。
+the JavaScript engine is the source of authority.
 
 131
 00:07:34.762 --> 00:07:36.000
-不不可能
+不，不是。
 No, it isn't.
 
 132
 00:07:36.000 --> 00:07:39.112
-规范是权限的来源。
-The specification is
-the source of authority.
+规范是权威的来源。
+The specification is the source of authority.
 
 133
 00:07:39.112 --> 00:07:43.331
-如果你想知道为什么会这么做，我为什么会看到这种行为呢 ?
-And if you're wondering why does something
-do it, why am I seeing this behavior?
+如果你想知道为什么某些东西会这样做，为什么我会看到这种行为？
+And if you're wondering why does something do it, why am I seeing this behavior?
 
 134
 00:07:43.331 --> 00:07:47.939
-为什么它看起来很奇怪或神秘或者黑盒子或狗车什么的
-Why does it seem weird or mysterious or
-black box or buggy or whatever?
+为什么它看起来怪异或神秘或黑匣子或马车或其他什么？
+Why does it seem weird or mysterious or black box or buggy or whatever?
 
 135
 00:07:47.939 --> 00:07:52.000
-你要问的第一个问题是规格说明应该发生什么 ?
-The first question you need to ask is what
-does the specification say should happen?
+您需要问的第一个问题是规范说应该发生什么？
+The first question you need to ask is what does the specification say should happen?
 
 136
 00:07:52.000 --> 00:07:56.790
-然后问我的行为是否符合规格呢 ?
-And then ask does my behavior
-that I'm seeing match the spec?
+然后问我现在看到的我的行为是否符合规格？
+And then ask does my behavior that I'm seeing match the spec?
 
 137
 00:07:58.000 --> 00:08:00.560
-如果他们不匹配那么你就有漏洞了
-If they don't match, well,
-then you have a bug.
+如果它们不匹配，好吧，那你就有问题了。
+If they don't match, well, then you have a bug.
 
 138
 00:08:00.560 --> 00:08:03.500
-但如果它们真的匹配你就会有不同的虫子
-But if they do match, then you
-have a different sort of a bug and
+但是如果它们真的匹配，那么你就会有一种不同类型的bug
+But if they do match, then you have a different sort of a bug and
 
 139
 00:08:03.500 --> 00:08:07.089
-大脑内部的缺陷是错误的想法
-it's a bug inside of your brain
-which is incorrect thinking.
+这是你大脑里的一个错误的想法。
+it's a bug inside of your brain which is incorrect thinking.

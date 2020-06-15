@@ -2,911 +2,793 @@ WEBVTT
 
 1
 00:00:00.050 --> 00:00:03.009
->> 凯尔 - 辛普森: 要更确切地了解这一点，
-&gt;&gt; Kyle Simpson: To understand
-this a little bit more concretely,
+&gt；&gt；Kyle Simpson：为了更具体地理解这一点，
+&gt;&gt; Kyle Simpson: To understand this a little bit more concretely,
 
 2
 00:00:03.009 --> 00:00:07.690
-我想穿过一个代码在几秒钟的时间里
-I wanna walk through a piece of code
-which within a few seconds of glancing at
+我想浏览一段代码，在几秒钟内浏览一下
+I wanna walk through a piece of code which within a few seconds of glancing at
 
 3
 00:00:07.690 --> 00:00:13.410
-你可以在你的脑海里处决他说我知道这个计划会怎么做
-you can in your mind have executed and
-said I know what this program is gonna do.
+你可以在你的脑海中执行并说我知道这个程序要做什么。
+you can in your mind have executed and said I know what this program is gonna do.
 
 4
 00:00:13.410 --> 00:00:16.280
-但事实证明这个代码比我们的复杂得多
-But it turns out there's a lot more
-complexity to this code than we
+但事实证明，这个代码比我们复杂得多
+But it turns out there's a lot more complexity to this code than we
 
 5
 00:00:16.280 --> 00:00:18.359
-通常用于处理。
+通常用来处理。
 are typically used to dealing with.
 
 6
 00:00:18.359 --> 00:00:22.649
-我想在接下来的几分钟里训练你思考这个代码
-And I'm gonna try to train you over the
-next few minutes to think about this code
+我会试着在接下来的几分钟里训练你思考这个代码
+And I'm gonna try to train you over the next few minutes to think about this code
 
 7
 00:00:22.649 --> 00:00:27.760
-以更接近 JavaScript 引擎思考方式的方式。
-in a way that more closely matches the way
-the JavaScript engine thinks about it.
+在某种程度上更接近JavaScript引擎思考它的方式。
+in a way that more closely matches the way the JavaScript engine thinks about it.
 
 8
 00:00:27.760 --> 00:00:31.550
-所以我们要用什么声音听起来像个傻
-So we're gonna do that by way of what's
-gonna sound like a bit of a silly
+所以我们要这样做，这听起来有点愚蠢
+So we're gonna do that by way of what's gonna sound like a bit of a silly
 
 9
 00:00:31.550 --> 00:00:32.729
-练习。
+锻炼。
 exercise.
 
 10
 00:00:32.729 --> 00:00:36.590
-但但愿它能减轻你的参与和兴趣
-But hopefully it'll be lighthearted enough
-to keep you engaged and interested.
+但希望它会足够轻松，让你继续参与和感兴趣。
+But hopefully it'll be lighthearted enough to keep you engaged and interested.
 
 11
 00:00:36.590 --> 00:00:39.460
-我们要假装一个对话正在发生
-We're going to pretend as if
-a conversation is happening
+我们要假装一场对话正在进行
+We're going to pretend as if a conversation is happening
 
 12
 00:00:39.460 --> 00:00:42.820
-在此 JavaScript 程序的处理中。
-in this processing of
-the JavaScript program.
+在这个JavaScript程序的处理中。
+in this processing of the JavaScript program.
 
 13
 00:00:42.820 --> 00:00:46.423
-会有两个演员，两个实体会说话。
-There's going to be two actors,
-two entities that are going to be talking.
+将会有两个演员，两个实体将会说话。
+There's going to be two actors, two entities that are going to be talking.
 
 14
 00:00:46.423 --> 00:00:50.789
-一个是编译器，是处理 JavaScript 程序的东西。
-One is the compiler, the thing that's
-processing the JavaScript program.
+一个是编译器，处理JavaScript程序的东西。
+One is the compiler, the thing that's processing the JavaScript program.
 
 15
 00:00:50.789 --> 00:00:55.579
-另一个是作用域管理器，作用域管理器是
-The other one is the scope manager, and
-scope manager is the one that makes
+另一个是作用域管理器，作用域管理器使
+The other one is the scope manager, and scope manager is the one that makes
 
 16
 00:00:55.579 --> 00:00:58.740
-桶，让弹珠，滴弹珠。
-buckets, makes marbles,
-drops the marbles in.
+水桶，做弹珠，把弹珠放进去。
+buckets, makes marbles, drops the marbles in.
 
 17
 00:00:58.740 --> 00:01:01.459
-是编译器说，嘿，我有这个东西，
-It's the compiler who says,
-hey, I have this thing, and
+是编译器说，嘿，我有这个东西，而且
+It's the compiler who says, hey, I have this thing, and
 
 18
 00:01:01.459 --> 00:01:04.233
-是范围内的经理说我要做个计划
-it's the scope manager who says,
-I'm gonna make a plan for
+是作用域经理说，我要制定一个计划
+it's the scope manager who says, I'm gonna make a plan for
 
 19
 00:01:04.233 --> 00:01:07.474
-我要为一个水桶做个计划来做一个大理石的计划
-that, I'm gonna make a plan for
-a bucket and make a plan for a marble.
+我要为水桶制定计划，为大理石制定计划。
+that, I'm gonna make a plan for a bucket and make a plan for a marble.
 
 20
 00:01:07.474 --> 00:01:12.289
-这将是我们第一次通过这个程序，就是这个汇编步骤。
-And that'll be our first pass through
-the program, is that compilation step.
+这将是我们通过程序的第一步，就是编译步骤。
+And that'll be our first pass through the program, is that compilation step.
 
 21
 00:01:12.289 --> 00:01:14.719
-等我们准备好了这些计划之后
-And then after we've
-set up all those plans,
+在我们制定了所有的计划之后，
+And then after we've set up all those plans,
 
 22
 00:01:14.719 --> 00:01:16.579
-我们就会回来执行代码
+然后我们会回来执行代码。
 then we'll come back and execute the code.
 
 23
 00:01:17.599 --> 00:01:21.409
-因此，我们希望根据该对话处理此代码。
-So we want to process this code
-according to that conversation.
+因此，我们希望根据该对话来处理此代码。
+So we want to process this code according to that conversation.
 
 24
 00:01:21.409 --> 00:01:24.614
-你可以跟我走，你可以大声说出来。
-And you can follow along with me,
-you can literally speak out loud.
+你可以跟着我，你真的可以大声说出来。
+And you can follow along with me, you can literally speak out loud.
 
 25
 00:01:24.614 --> 00:01:27.356
-它能帮你这就算是老师们的把戏了
-It helps you,
-it's sort of an old teacher trick,
+它对你有帮助，这是一种老师的把戏，
+It helps you, it's sort of an old teacher trick,
 
 26
 00:01:27.356 --> 00:01:31.230
-如果我让你大声说出来它会把它嵌入你的大脑里
-if I get you to say this stuff out loud,
-it embeds it more in your brain.
+如果我让你大声说出来，它就会更多地嵌入你的大脑。
+if I get you to say this stuff out loud, it embeds it more in your brain.
 
 27
 00:01:31.230 --> 00:01:34.311
-所以当我想让你跟我说话时
-So as we go along I want you
-to speak out loud with me,
+所以我们一起走的时候我想让你大声跟我说话，
+So as we go along I want you to speak out loud with me,
 
 28
 00:01:34.311 --> 00:01:36.835
-虽然听起来有点傻
+尽管听起来有点傻。
 even though it sounds a little bit silly.
 
 29
 00:01:36.835 --> 00:01:40.539
-请记住，在我们的处理阶段，在我们的编译阶段，
-Remember, in our processing phase,
-in our compilation phase,
+记住，在我们的处理阶段，在我们的编译阶段，
+Remember, in our processing phase, in our compilation phase,
 
 30
 00:01:40.539 --> 00:01:43.177
-我们有一个范围的管理者并且有一个编译器
-we have a scope manager and
-we have a compiler.
+我们有一个作用域管理器和一个编译器。
+we have a scope manager and we have a compiler.
 
 31
 00:01:43.177 --> 00:01:47.361
-因此，我将扮演编译器的角色，与范围的管理者交谈。
-So I'll play the part of compiler
-talking to a scope manager.
+所以我将扮演编译器与作用域管理器对话的角色。
+So I'll play the part of compiler talking to a scope manager.
 
 32
 00:01:47.361 --> 00:01:52.079
-当我遇到的时候，当我看到第 1 行的时候，当我看到线上的时候，
-And when I come across, as I see
-here on line 1, when I see on line,
+当我遇到，就像我在1号线上看到的，当我看到在线上，
+And when I come across, as I see here on line 1, when I see on line,
 
 33
 00:01:52.079 --> 00:01:56.079
-变量声明，不管它是 let 还是常量，或
-a var declaration,
-whether it's a let or a const, or
+var声明，无论是let还是const，或者
+a var declaration, whether it's a let or a const, or
 
 34
 00:01:56.079 --> 00:01:58.789
-这一刻就不重要了
+var目前并不相关。
 a var isn't relevant at this moment.
 
 35
 00:01:58.789 --> 00:02:01.989
-但我要用 vars 来简单说明
-But I'm gonna use vars just for
-the simplicity of illustration.
+但为了简单起见，我将使用vars。
+But I'm gonna use vars just for the simplicity of illustration.
 
 36
 00:02:01.989 --> 00:02:03.579
-那是正式声明
+这是正式声明。
 That's a formal declaration.
 
 37
 00:02:03.579 --> 00:02:05.140
-换句话说，我们正在制造一个大理石。
+换句话说，我们在创造一个大理石。
 In other words, we're creating a marble.
 
 38
 00:02:05.140 --> 00:02:08.520
-我们要知道什么颜色的大理石
-And we gotta know what color
-to make that marble, so
+我们要知道用什么颜色做大理石，所以
+And we gotta know what color to make that marble, so
 
 39
 00:02:08.520 --> 00:02:12.000
-我们要把它添加到某种程度上
-we gotta have some scope
-that we're adding it to.
+我们必须有一些范围，我们要增加它。
+we gotta have some scope that we're adding it to.
 
 40
 00:02:12.000 --> 00:02:15.909
-在这种情况下，显然它是全球性的，好吗 ?
-And in this case,
-obviously it's the global scope, okay?
+在这种情况下，显然是全局范围，好吗？
+And in this case, obviously it's the global scope, okay?
 
 41
 00:02:15.909 --> 00:02:18.270
-为了简单的讨论
-And just for
-the simplicity of our discussion,
+为了我们讨论的简单性，
+And just for the simplicity of our discussion,
 
 42
 00:02:18.270 --> 00:02:21.129
-我要用三种原色
+我要用三原色。
 I'm gonna use the three primary colors.
 
 43
 00:02:21.129 --> 00:02:26.340
-我要说外面的全球范围将会是红色的桶
-I'm gonna say the outer global scope
-is gonna be the red bucket and
+我要说外部全局作用域将是红色的桶和
+I'm gonna say the outer global scope is gonna be the red bucket and
 
 44
 00:02:26.340 --> 00:02:30.060
-只要我们有内斗我们就会有蓝和绿的
-then wherever we have inner buckets
-we'll have blue and green, okay?
+然后，只要我们有内桶，我们就会有蓝色和绿色，好吗？
+then wherever we have inner buckets we'll have blue and green, okay?
 
 45
 00:02:30.060 --> 00:02:33.920
-所以我们有一个红色的桶代表这个全球范围和我，
-So we have a red bucket that
-represents this global scope and I,
+所以我们有一个代表这个全局范围的红色桶，我，
+So we have a red bucket that represents this global scope and I,
 
 46
 00:02:33.920 --> 00:02:38.280
-当我看到正式声明如我在第 1 行的时候
-being the compiler, whenever I see
-a formal declaration like I do on line 1,
+作为编译器，每当我看到像我在第1行上所做的正式声明时，
+being the compiler, whenever I see a formal declaration like I do on line 1,
 
 47
 00:02:38.280 --> 00:02:43.900
-我要说，嘿，全球范围，嘿，红桶，我有一份正式声明。
-I'm gonna say, hey, global scope, hey,
-red bucket, I have a formal declaration.
+我要说，嘿，全球范围，嘿，红桶，我有一个正式的声明。
+I'm gonna say, hey, global scope, hey, red bucket, I have a formal declaration.
 
 48
 00:02:43.900 --> 00:02:48.069
-我这里有个大理石你听说过这个叫老师的吗
-I have a marble here, have you ever
-heard of this thing called teacher?
+我这里有一个大理石，你听说过这个叫老师的东西吗？
+I have a marble here, have you ever heard of this thing called teacher?
 
 49
 00:02:49.300 --> 00:02:53.819
-我在问这个问题，因为如果它已经知道了
-And I'm asking this question because if
-it already knows about an identifier of
+我问这个问题是因为如果它已经知道一个标识符
+And I'm asking this question because if it already knows about an identifier of
 
 50
 00:02:53.819 --> 00:02:56.509
-这个名字老师什么都不用做。
-the name teacher,
-it doesn't need to do anything.
+这个名字老师，它不需要做任何事情。
+the name teacher, it doesn't need to do anything.
 
 51
 00:02:56.509 --> 00:02:57.170
-那是不可操作的
+这是一个没有行动。
 That's a no op.
 
 52
 00:02:57.170 --> 00:02:59.550
-没有重新申报之类的东西
+没有重新声明这回事。
 There's no such thing as redeclaration.
 
 53
 00:02:59.550 --> 00:03:02.830
-挺好的你已经知道这个大理石了
-It's just okay, great,
-you already know about this marble.
+还好，太好了，你已经知道这个大理石了。
+It's just okay, great, you already know about this marble.
 
 54
 00:03:02.830 --> 00:03:06.581
-但在这个特殊情况下，这是第一次编译器会
-But in this particular case, since it's
-the first time that the compiler would
+但在这个特殊的情况下，因为这是编译器第一次
+But in this particular case, since it's the first time that the compiler would
 
 55
 00:03:06.581 --> 00:03:09.493
-问了一个叫做老师的变量的全局范围，
-have asked the global scope
-about a variable called teacher,
+已经向全局范围询问了一个名为Teacher的变量，
+have asked the global scope about a variable called teacher,
 
 56
 00:03:09.493 --> 00:03:12.466
-那么全球范围就会说 nope ，从没听说过
-then the global scope's gonna say,
-nope, never heard of it.
+然后全球范围会说，不，从来没有听说过。
+then the global scope's gonna say, nope, never heard of it.
 
 57
 00:03:12.466 --> 00:03:15.638
-但我为你创造了一个红色的大理石
-But I've created now a red marble for
-you and, pop,
+但我现在为你创造了一个红色的大理石，
+But I've created now a red marble for you and, pop,
 
 58
 00:03:15.638 --> 00:03:18.274
-现在我们把它扔进了红桶里
-now we just dropped it
-into the red bucket.
+现在我们刚刚把它扔进了红色的桶里。
+now we just dropped it into the red bucket.
 
 59
 00:03:18.274 --> 00:03:24.099
-它还没有被创造过，直到他们才真正创造了
-It hadn't actually been created,
-that they don't get created for real until
+它实际上并没有被创造出来，直到它们真正被创造出来
+It hadn't actually been created, that they don't get created for real until
 
 60
 00:03:24.099 --> 00:03:29.819
-但是从概念上来说，我们是从程序中看到的。
-execution, but conceptually we're creating
-this plan from what we see in the program.
+执行，但从概念上讲，我们是根据我们在程序中看到的内容创建这个计划的。
+execution, but conceptually we're creating this plan from what we see in the program.
 
 61
 00:03:29.819 --> 00:03:33.340
-那么是的，全球性的范围说，我们会做一个红色的大理石
-So yes, global scope says, sure,
-we'll make a red marble and
+所以，是的，全球范围内说，当然，我们会做一个红色的大理石
+So yes, global scope says, sure, we'll make a red marble and
 
 62
 00:03:33.340 --> 00:03:35.120
-我们会把它放到红桶里
+我们会把它扔进红色的桶里。
 we'll drop it into the red bucket.
 
 63
 00:03:36.219 --> 00:03:39.150
-现在我们在做的是寻找这些正式声明。
-Now what we're doing is looking for
-these formal declarations.
+现在我们要做的就是寻找这些正式的声明。
+Now what we're doing is looking for these formal declarations.
 
 64
 00:03:39.150 --> 00:03:42.329
-有时他们看起来像是 1 行的 var 老师。
-And sometimes they look
-like on line 1 var teacher.
+有时他们看起来就像1号线上的var老师。
+And sometimes they look like on line 1 var teacher.
 
 65
 00:03:42.329 --> 00:03:46.588
-有时，它们看起来像第 3 行，函数或其他类型的声明。
-Sometimes they look like line 3,
-functions or another kind of declaration.
+有时它们看起来像第3行、函数或其他类型的声明。
+Sometimes they look like line 3, functions or another kind of declaration.
 
 66
 00:03:47.699 --> 00:03:49.990
-函数制作一个大理石在这个箱子里
+函数构成大理石，在这种情况下，
 Functions make a marble, in this case,
 
 67
 00:03:49.990 --> 00:03:52.909
-第 3 行的大理石将被称为 " otherClass" 。
-the marble on line 3 would
-be called otherClass.
+第3行上的大理石将被称为other Class。
+the marble on line 3 would be called otherClass.
 
 68
 00:03:54.069 --> 00:03:57.400
-这需要添加到某个范围内。
+这需要被添加到一些范围内。
 And that needs to get added to some scope.
 
 69
 00:03:57.400 --> 00:04:04.069
-因此，如果我以编译器第 3 行的形式运行，
-So if I ran across, as the compiler,
-line 3, a formal declaration for
+因此，如果我运行，作为编译器，第3行，一个正式的声明
+So if I ran across, as the compiler, line 3, a formal declaration for
 
 70
 00:04:04.069 --> 00:04:07.419
-一个函数，我将与作用域管理器进行相同的对话。
-a function, I would have the same
-conversation with the scope manager.
+一个函数，我会与作用域管理器进行相同的对话。
+a function, I would have the same conversation with the scope manager.
 
 71
 00:04:07.419 --> 00:04:11.110
-我还会在这里说你的作用域管理器
-I'd say hey, scope manager,
-compiler here again.
+我想说，嘿，作用域管理器，编译器再次出现在这里。
+I'd say hey, scope manager, compiler here again.
 
 72
 00:04:11.110 --> 00:04:16.209
-我发现了另一个正式声明，在这个箱子里，有一个叫做 otherClass的大理石。
-I found another formal declaration, in
-this case for a marble called otherClass.
+我找到了另一个正式声明，在本例中是名为other Class的大理石。
+I found another formal declaration, in this case for a marble called otherClass.
 
 73
 00:04:16.209 --> 00:04:18.670
-你以前听过那个标识符吗
-Have you ever heard of
-that identifier before?
+你以前听说过这个标识符吗？
+Have you ever heard of that identifier before?
 
 74
 00:04:18.670 --> 00:04:20.449
-在这种情况下我的答案是什么
-And in this case,
-what's my answer gonna be?
+在这种情况下，我的答案是什么？
+And in this case, what's my answer gonna be?
 
 75
 00:04:21.889 --> 00:04:22.519
->> 扬声器 2: 否。 >> Kyle Simpson: Nope，
-&gt;&gt; Speaker 2: No.
-&gt;&gt; Kyle Simpson: Nope,
+&gt；&gt；扬声器2：否。&gt；&gt；Kyle Simpson：不，
+&gt;&gt; Speaker 2: No. &gt;&gt; Kyle Simpson: Nope,
 
 76
 00:04:22.519 --> 00:04:26.060
-从来没听说过但这里又有什么颜色的大理石
-never heard of it, but
-here's another, what color marble?
+从来没听说过，但这里还有一个，什么颜色的大理石？
+never heard of it, but here's another, what color marble?
 
 77
 00:04:26.060 --> 00:04:26.649
->> 扬声器 2: 红色。
+&gt；&gt；扬声器2：红色。
 &gt;&gt; Speaker 2: Red.
 
 78
 00:04:26.649 --> 00:04:28.899
->> 凯尔 - 辛普森: 红色的大理石，因为我们还在全球范围内，
-&gt;&gt; Kyle Simpson: Red marble because
-we're still in the global scope,
+&gt；&gt；Kyle Simpson：红色大理石，因为我们还在全球范围内，
+&gt;&gt; Kyle Simpson: Red marble because we're still in the global scope,
 
 79
 00:04:28.899 --> 00:04:31.339
-这里是另一个红色的大理石 bootp
+这是另一个红色大理石，砰。
 so here's another red marble, boop.
 
 80
 00:04:31.339 --> 00:04:34.709
-现在红桶里有两个红色的弹珠
-So now we have two red
-marbles in the red bucket.
+所以现在我们有两个红色的弹珠在红色的桶里。
+So now we have two red marbles in the red bucket.
 
 81
 00:04:35.769 --> 00:04:38.550
-这需要注意标识 otherClass
-That takes care of
-the identifier otherClass
+它负责标识符other Class
+That takes care of the identifier otherClass
 
 82
 00:04:38.550 --> 00:04:40.980
-以及标识符老师
+以及识别符教师。
 as well as the identifier teacher.
 
 83
 00:04:40.980 --> 00:04:45.819
-现在我是一个很聪明的人
-Now, I being the compiler am smart enough
-to realize, that's a special kind of
+现在，作为编译器，我足够聪明地意识到，这是一种特殊的
+Now, I being the compiler am smart enough to realize, that's a special kind of
 
 84
 00:04:45.819 --> 00:04:50.779
-因为一个函数会产生作用域，它会产生一个存储区。
-thing, because a function makes scopes,
-it makes buckets.
+事情，因为函数产生作用域，所以它产生桶。
+thing, because a function makes scopes, it makes buckets.
 
 85
 00:04:50.779 --> 00:04:55.000
-那么，范围经理猜测，我们还需要另一个桶。
-So, hey, scope manager guess what,
-we're gonna need another bucket.
+所以，嘿，示波器经理猜怎么着，我们还需要一个桶。
+So, hey, scope manager guess what, we're gonna need another bucket.
 
 86
 00:04:55.000 --> 00:04:59.110
-把这个比喻延伸到一点，现在我们正在制造一个水桶，
-And to stretch this metaphor a little bit,
-now we're creating a bucket inside of
+为了延伸这个比喻，现在我们在里面创建一个桶
+And to stretch this metaphor a little bit, now we're creating a bucket inside of
 
 87
 00:04:59.110 --> 00:05:02.970
-一个水桶，就像一个巨大的桶，里面还有一个小桶，好吗 ?
-a bucket, so like a giant barrel and
-then a tiny little bucket inside, okay?
+一个桶，就像一个巨大的桶，然后里面有一个很小的桶，好吗？
+a bucket, so like a giant barrel and then a tiny little bucket inside, okay?
 
 88
 00:05:02.970 --> 00:05:04.500
-我知道这只是个比喻
-I know it's stretching
-the metaphor a little bit.
+我知道这有点夸张了这个比喻。
+I know it's stretching the metaphor a little bit.
 
 89
 00:05:04.500 --> 00:05:07.790
-但是现在我们有一个巨大的红桶，里面，哎，
-But now we had a giant red barrel and
-inside of it, hey,
+但现在我们有了一个巨大的红色桶里面，嘿，
+But now we had a giant red barrel and inside of it, hey,
 
 90
 00:05:07.790 --> 00:05:11.814
-我们需要一个蓝色水桶因为它是一个功能
-scope manager we need a blue bucket,
-because it's a function.
+作用域管理器我们需要一个蓝色的桶，因为它是一个函数。
+scope manager we need a blue bucket, because it's a function.
 
 91
 00:05:13.250 --> 00:05:16.603
-所以，范围经理说，我们现在有一个蓝色的水桶，
-So scope manager says, sure,
-now we got a blue bucket, and
+所以作用域经理说，当然，现在我们有一个蓝色的桶，并且
+So scope manager says, sure, now we got a blue bucket, and
 
 92
 00:05:16.603 --> 00:05:21.096
-现在我们说的是蓝色的水桶，让我们进入那个功能，
-now we are talking about the blue bucket,
-and let's step into that function and
+现在我们讨论的是蓝色桶，让我们进入该函数并
+now we are talking about the blue bucket, and let's step into that function and
 
 93
 00:05:21.096 --> 00:05:25.281
-将其作为自己的作用域进行讨论，因为它的功能会创建作用域。
-talk about it as its own scope,
-since that's functions creates scopes.
+将它作为自己的作用域来讨论，因为它的函数创建作用域。
+talk about it as its own scope, since that's functions creates scopes.
 
 94
 00:05:25.281 --> 00:05:28.262
-那么我们接下来的正式声明呢 ?
-So where's our next
-formal declaration then?
+那么我们的下一个正式声明在哪里？
+So where's our next formal declaration then?
 
 95
 00:05:28.262 --> 00:05:30.430
-好吧第四行对吧
+嗯，是在4号线，对吧？
 Well, it's on line 4, right?
 
 96
 00:05:30.430 --> 00:05:34.680
-第 4 行有另一个正式声明，在此情况下，对于一个名为 " 教师" 的变量。
-Line 4 has another formal declaration, in
-this case for a variable called teacher.
+第4行有另一个正式声明，在本例中是一个名为teacher的变量。
+Line 4 has another formal declaration, in this case for a variable called teacher.
 
 97
 00:05:36.050 --> 00:05:39.220
-谈话会像以前一样继续下去
-So, the conversation is gonna
-continue exactly like before,
+所以，谈话将一如既往地继续，
+So, the conversation is gonna continue exactly like before,
 
 98
 00:05:39.220 --> 00:05:42.879
-虽然我们的名字相同但我们会说
-even though it's the same name,
-same conversation, we're gonna say, hey,
+即使是同样的名字，同样的对话，我们也会说，嘿，
+even though it's the same name, same conversation, we're gonna say, hey,
 
 99
 00:05:42.879 --> 00:05:46.689
-蓝色存储区， hescope 管理器用于此其他类。
-blue bucket, hey scope manager for
-this other class.
+蓝桶，嘿，另一个类的作用域管理器。
+blue bucket, hey scope manager for this other class.
 
 100
 00:05:47.730 --> 00:05:53.060
-我有一个叫老师的正式声明，听说过吗 ?
-I have a formal declaration for
-a marble called teacher, ever heard of it?
+我有一个叫老师的大理石的正式声明，听说过吗？
+I have a formal declaration for a marble called teacher, ever heard of it?
 
 101
 00:05:53.060 --> 00:05:57.050
 现在这个问题的答案可能会让你感到惊讶，因为你可能会想，
-Now the answer to that question might
-surprise you because you might think,
+Now the answer to that question might surprise you because you might think,
 
 102
 00:05:57.050 --> 00:05:59.019
-我们在 1 号线上听说了
+当然，我们在1号线上听说了！
 sure, we heard about it on line 1!
 
 103
 00:05:59.019 --> 00:06:02.410
-但记住我们现在要和整个不同的桶说话了
-But remember we're talking to
-an entire different bucket now.
+但请记住，我们现在所说的是一个完全不同的桶。
+But remember we're talking to an entire different bucket now.
 
 104
 00:06:02.410 --> 00:06:05.930
-我们在和蓝桶说话而不是红色的桶好吗
-We're talking to the blue bucket,
-not the red barrel, okay?
+我们说的是蓝色桶，不是红色桶，好吗？
+We're talking to the blue bucket, not the red barrel, okay?
 
 105
 00:06:05.930 --> 00:06:08.110
-我知道这个比喻太薄了好吧
-I know this stretches
-the metaphor horribly thin, okay.
+我知道这把比喻延伸得太薄了，好吧。
+I know this stretches the metaphor horribly thin, okay.
 
 106
 00:06:08.110 --> 00:06:09.819
-但我们在和蓝色桶说话
+但我们在和蓝色桶说话。
 But we're talking to the blue bucket.
 
 107
 00:06:09.819 --> 00:06:14.660
-所以我们在说，蓝桶，你有一个叫老师的大理石吗 ?
-So we're saying hey, blue bucket,
-do you have a marble called teacher?
+所以我们在说，嘿，蓝桶，你有没有一个叫老师的大理石？
+So we're saying hey, blue bucket, do you have a marble called teacher?
 
 108
 00:06:14.660 --> 00:06:16.069
-蓝色桶的反应是什么
+蓝桶的反应是什么？
 And what's blue bucket's response?
 
 109
 00:06:16.069 --> 00:06:17.404
-范围经理要怎么说?
+作用域经理会怎么说？
 What's the scope manager going to say?
 
 110
 00:06:17.404 --> 00:06:18.562
->> 演讲者 3: 否。
+&gt；&gt；扬声器3：否。
 &gt;&gt; Speaker 3: No.
 
 111
 00:06:18.562 --> 00:06:20.687
->> 凯尔 - 辛普森: 但这是你的，什么颜色的大理石?
-&gt;&gt; Kyle Simpson: But
-here's your, what color marble?
+凯尔·辛普森：但这是你的，什么颜色的大理石？
+&gt;&gt; Kyle Simpson: But here's your, what color marble?
 
 112
 00:06:20.687 --> 00:06:21.387
->演讲者 3: 蓝色大理石。
+&gt；&gt；扬声器3：蓝色大理石。
 &gt;&gt; Speaker 3: Blue marble.
 
 113
 00:06:21.387 --> 00:06:23.129
->> 凯尔 - 辛普森: 这是你的蓝色大理石。
+凯尔·辛普森：这是你的蓝色大理石。
 &gt;&gt; Kyle Simpson: Here's your blue marble.
 
 114
 00:06:23.129 --> 00:06:28.319
-好了，现在有两个大理石在两个不同颜色的两个桶里，
-Okay, so now there are two marbles in two
-separate buckets of two different colors,
+好的，现在有两个弹珠放在两个不同颜色的桶里，
+Okay, so now there are two marbles in two separate buckets of two different colors,
 
 115
 00:06:28.319 --> 00:06:31.029
-尽管他们的名字是一样的
+即使他们有相同的名字。
 even though they have the same name.
 
 116
 00:06:31.029 --> 00:06:32.120
-跟我来
+跟我来？
 Follow me?
 
 117
 00:06:32.120 --> 00:06:36.300
-顺便说下，在同一名称的不同范围有两个变量，
-By the way, having two variables at
-different scopes of the same name,
+顺便说一下，在相同名称的不同作用域中有两个变量，
+By the way, having two variables at different scopes of the same name,
 
 118
 00:06:36.300 --> 00:06:39.540
-有个词叫 " 影子"
+它有一个术语，叫做“影子”(Shadowing)。
 that has a term, it's called shadowing.
 
 119
 00:06:40.720 --> 00:06:43.519
-听起来像是邪恶什么的都没有什么不好的
-Sounds like sort of like evil or
-whatever, there's nothing bad about it,
+听起来像是邪恶的东西，没什么不好的，
+Sounds like sort of like evil or whatever, there's nothing bad about it,
 
 120
 00:06:43.519 --> 00:06:45.740
-阴影是完全可以的。
+跟踪完全没问题。
 shadowing is entirely okay.
 
 121
 00:06:45.740 --> 00:06:47.389
-但有一个影射的影射
+但也有影子的分支，
 But there is an offshoot of shadowing,
 
 122
 00:06:47.389 --> 00:06:50.230
-就是现在我们创造了一个叫老师的变量，
-which is, now that we've created
-a variable called teacher,
+也就是说，现在我们已经创建了一个称为教师的变量，
+which is, now that we've created a variable called teacher,
 
 123
 00:06:50.230 --> 00:06:55.689
-我们在其他种类的范围内创建了一个叫做 " 老师 " 的蓝色大理石
-we've created a blue marble called
-teacher in that other class scope.
+我们在另一个班级范围内创建了一个称为教师的蓝色大理石。
+we've created a blue marble called teacher in that other class scope.
 
 124
 00:06:55.689 --> 00:06:59.990
-那么现在我们无法通过词法来引用
-Well, now there's no possible way
-that we can reference lexically
+好的，现在我们没有可能在词汇上引用
+Well, now there's no possible way that we can reference lexically
 
 125
 00:06:59.990 --> 00:07:01.889
-第 1 行的变量。
+行1中的变量。
 the variable from line 1.
 
 126
 00:07:01.889 --> 00:07:06.220
-我们不能引用红色的大理石因为现在有一个蓝色的大理石
-We can't reference the red marble because
-now there's a blue marble of the same
+我们不能引用红色大理石，因为现在有了同样的蓝色大理石
+We can't reference the red marble because now there's a blue marble of the same
 
 127
 00:07:06.220 --> 00:07:07.910
-因为有阴暗的原因
+名字，因为阴影。
 name, because of the shadowing.
 
 128
 00:07:07.910 --> 00:07:11.610
-这是完全可以的，但它确实限制了我们从我们可以获得的东西。
-It's totally okay, but
-it does limit us from what we can access.
+它完全可以，但它确实限制了我们可以访问的内容。
+It's totally okay, but it does limit us from what we can access.
 
 129
 00:07:11.610 --> 00:07:14.550
-因为那些名字最接近的
-Because those names,
-it would match the nearest one,
+因为这些名字，它会匹配最近的名字，
+Because those names, it would match the nearest one,
 
 130
 00:07:14.550 --> 00:07:16.120
-在这个箱子里是蓝色的大理石
-which in this case would
-be the blue marble.
+在这种情况下应该是蓝色大理石。
+which in this case would be the blue marble.
 
 131
 00:07:17.250 --> 00:07:18.149
-跟我来
+跟我来？
 Follow me?
 
 132
 00:07:18.149 --> 00:07:20.980
-因此，我们期待任何其他正式声明。
-So, we look for
-any other formal declarations.
+因此，我们寻找任何其他正式声明。
+So, we look for any other formal declarations.
 
 133
 00:07:20.980 --> 00:07:25.389
-能在 otherClass 函数中找到更多吗 ?
-Do we find any more in
-the otherClass function?
+我们在other Class函数中还能找到更多吗？
+Do we find any more in the otherClass function?
 
 134
 00:07:25.389 --> 00:07:29.170
-我们看到了 console.log 的内容，但我们没有看到更正式的声明。
-We see a reference to console.log, but
-we see no more formal declarations.
+我们看到了对console.log的引用，但没有看到更正式的声明。
+We see a reference to console.log, but we see no more formal declarations.
 
 135
 00:07:29.170 --> 00:07:31.418
-我们已经完成了 otherClass 函数。
-So we're finished with
-the otherClass function.
+所以我们完成了other Class函数。
+So we're finished with the otherClass function.
 
 136
 00:07:32.569 --> 00:07:35.860
-现在我们又回到什么颜色范围了 ?
+现在我们退到什么颜色范围？
 Now we step back out to what color scope?
 
 137
 00:07:35.860 --> 00:07:36.439
->> 扬声器 2: 红色。
+&gt；&gt；扬声器2：红色。
 &gt;&gt; Speaker 2: Red.
 
 138
 00:07:36.439 --> 00:07:38.370
->> Kyle Simpson: 红色范围，全局作用域。
-&gt;&gt; Kyle Simpson: The red scope,
-the global scope.
+&gt；&gt；Kyle Simpson：红色范围，全局范围。
+&gt;&gt; Kyle Simpson: The red scope, the global scope.
 
 139
 00:07:38.370 --> 00:07:40.090
-我们寻找下一个正式的装饰
-And we look for
-the next formal decoration.
+我们寻找下一个正式的装饰。
+And we look for the next formal decoration.
 
 140
 00:07:40.090 --> 00:07:42.360
-下一个正式的装饰是什么线 ?
-What line do we find the next
-formal decoration on?
+我们在哪条线上找到下一个正式装饰？
+What line do we find the next formal decoration on?
 
 141
 00:07:42.360 --> 00:07:43.840
->> 扬声器 2: 8。 >> 凯尔 - 辛普森: 第 8 行吗 ?
-&gt;&gt; Speaker 2: 8.
-&gt;&gt; Kyle Simpson: How about line 8?
+&gt；&gt；扬声器2：8。&gt；&gt；Kyle Simpson：第8行怎么样？
+&gt;&gt; Speaker 2: 8. &gt;&gt; Kyle Simpson: How about line 8?
 
 142
 00:07:43.840 --> 00:07:48.120
-您在此看到的是一个称为请求的标识的正式函数声明。
-You see here the formal function
-declaration for an identifier called ask.
+您可以在这里看到名为ask的标识符的正式函数声明。
+You see here the formal function declaration for an identifier called ask.
 
 143
 00:07:48.120 --> 00:07:50.879
-对话就像以前一样。
-The conversation continues
-exactly like before.
+谈话一如既往地继续。
+The conversation continues exactly like before.
 
 144
 00:07:50.879 --> 00:07:53.560
-谈话说，嘿，什么范围?
+对话说，嘿，什么范围？
 The conversation says, hey, what scope?
 
 145
 00:07:53.560 --> 00:07:54.230
-你有什么事吗
+嘿？
 Hey?
 
 146
 00:07:54.230 --> 00:07:55.470
->> 扬声器 2: 全局。 >> 凯尔 - 辛普森: 全球范围，嘿，
-&gt;&gt; Speaker 2: Global.
-&gt;&gt; Kyle Simpson: Global scope, hey,
+&gt；&gt；扬声器2：全局。&gt；&gt；Kyle Simpson：全球范围，嘿，
+&gt;&gt; Speaker 2: Global. &gt;&gt; Kyle Simpson: Global scope, hey,
 
 147
 00:07:55.470 --> 00:07:58.709
-红桶我有一份正式声明
-red bucket,
-I have a formal declaration for
+红桶，我有一份正式的声明
+red bucket, I have a formal declaration for
 
 148
 00:07:58.709 --> 00:08:01.490
-一个叫问的人有没有听说过
-an identifier called ask,
-ever heard of it?
+一个叫做Ask的标识符，听说过吗？
+an identifier called ask, ever heard of it?
 
 149
 00:08:01.490 --> 00:08:03.779
-答案是吗 ?
+答案是？
 And the answer is?
 
 150
 00:08:03.779 --> 00:08:04.910
->> 演讲者 3: 否。 >> Kyle Simpson: Nope，从未听说过。
-&gt;&gt; Speaker 3: No.
-&gt;&gt; Kyle Simpson: Nope, never heard of it.
+&gt；&gt；扬声器3：否。&gt；&gt；Kyle Simpson：没有，从来没有听说过。
+&gt;&gt; Speaker 3: No. &gt;&gt; Kyle Simpson: Nope, never heard of it.
 
 151
 00:08:04.910 --> 00:08:06.610
-但这是你的吗
+但这是你的？
 But here's your?
 
 152
 00:08:06.610 --> 00:08:07.240
->演讲者 3: 红色大理石。
+&gt；&gt；扬声器3：红色大理石。
 &gt;&gt; Speaker 3: Red marble.
 
 153
 00:08:07.240 --> 00:08:10.170
->> 凯尔 - 辛普森: 红色的大理石，很棒，你很完美
-&gt;&gt; Kyle Simpson: Red marble,
-great, you're following perfectly.
+&gt；&gt；Kyle Simpson：红色大理石，太棒了，你完全遵循了。
+&gt;&gt; Kyle Simpson: Red marble, great, you're following perfectly.
 
 154
 00:08:10.170 --> 00:08:13.259
 有一个红色的大理石，因为我们在全球范围内。
-There's a red marble,
-because we are in the global scope.
+There's a red marble, because we are in the global scope.
 
 155
 00:08:13.259 --> 00:08:16.550
-这就是颜色大理石与红色桶相匹配的情况。
-And that's what color marble
-matches with the red bucket.
+这就是大理石和红色桶相配的颜色。
+And that's what color marble matches with the red bucket.
 
 156
 00:08:16.550 --> 00:08:17.300
-怎么了
+怎么了？
 Yes?
 
 157
 00:08:17.300 --> 00:08:19.850
->> 扬声器 3: 为何跳过控制台日志?
-&gt;&gt; Speaker 3: Why did we
-skip over console log?
+&gt；&gt；扬声器3：为什么我们跳过控制台日志？
+&gt;&gt; Speaker 3: Why did we skip over console log?
 
 158
 00:08:19.850 --> 00:08:23.589
->> Kyle Simpson: 我们不是从编译的角度跳过它的。
-&gt;&gt; Kyle Simpson: We didn't skip over
-it from the perspective of compilation.
+&gt；&gt；Kyle Simpson：我们没有从编译的角度跳过它。
+&gt;&gt; Kyle Simpson: We didn't skip over it from the perspective of compilation.
 
 159
 00:08:23.589 --> 00:08:25.180
@@ -915,9 +797,8 @@ That is a good question.
 
 160
 00:08:25.180 --> 00:08:29.600
-编译器当然会处理第 5 行，并进行一系列的编译。
-The compiler would have certainly handled
-line 5 and done a bunch of compilation.
+编译器肯定会处理第5行并进行大量编译。
+The compiler would have certainly handled line 5 and done a bunch of compilation.
 
 161
 00:08:29.600 --> 00:08:32.440
@@ -926,25 +807,23 @@ It doesn't have any impact on our scopes.
 
 162
 00:08:32.440 --> 00:08:37.500
-所以我们缩小了编译器理论的焦点以准备我们的标识符和
-So we've narrowed our focus of compiler
-theory to preparing our identifiers and
+因此，我们将编译器理论的重点缩小到准备标识符和
+So we've narrowed our focus of compiler theory to preparing our identifiers and
 
 163
 00:08:37.500 --> 00:08:38.250
-我们的范围
+我们的范围。
 our scopes.
 
 164
 00:08:38.250 --> 00:08:41.230
-做我们的大理石桶分类
+做我们的大理石桶分类的事情。
 Doing our marble bucket sorting thing.
 
 165
 00:08:41.230 --> 00:08:44.769
-我们正在跳过有趣的细节
-So we're just skipping over
-the uninteresting details at
+所以我们只是跳过了无趣的细节
+So we're just skipping over the uninteresting details at
 
 166
 00:08:44.769 --> 00:08:45.850
@@ -953,333 +832,298 @@ this point, right.
 
 167
 00:08:45.850 --> 00:08:48.570
-有完整的关于编译器理论的课程
-There's whole courses on compiler
-theory that would get into all
+有一整门关于编译理论的课程
+There's whole courses on compiler theory that would get into all
 
 168
 00:08:48.570 --> 00:08:51.960
-第 5 行的 nitty gritty ，但由于它不创建或
-the nitty gritty of line 5,
-but since it doesn't create or
+第5行的实质内容，但由于它不会创建或
+the nitty gritty of line 5, but since it doesn't create or
 
 169
 00:08:51.960 --> 00:08:55.730
-可以访问我们范围内的任何变量，我们不需要担心它。
-access any variables within our scopes,
-we don't need to worry about it.
+访问我们范围内的任何变量，我们不需要担心它。
+access any variables within our scopes, we don't need to worry about it.
 
 170
 00:08:55.730 --> 00:08:56.669
-有道理吗
+说得通吗？
 Make sense?
 
 171
 00:08:56.669 --> 00:08:57.610
-好的问题
+好的，问得好。
 Okay, good question.
 
 172
 00:08:58.690 --> 00:09:03.240
-好了我们只做了一个红色的大理石
-All right, so
-we just made a red marble called ask.
+好的，我们刚刚做了一个红色的大理石叫Ask。
+All right, so we just made a red marble called ask.
 
 173
 00:09:03.240 --> 00:09:08.320
-作为一个很好的编译器，我们注意到它有一个功能。
-And being a good compiler we notice
-that's attached to a function.
+作为一个好的编译器，我们注意到它附加到一个函数上。
+And being a good compiler we notice that's attached to a function.
 
 174
 00:09:08.320 --> 00:09:11.480
-看来我们需要另一个桶了
-Guess what, scope manager,
-we're gonna need another bucket.
+你猜怎么着，作用域经理，我们还需要一个桶。
+Guess what, scope manager, we're gonna need another bucket.
 
 175
 00:09:11.480 --> 00:09:13.480
-这个我们叫绿桶
+这个我们称之为绿色水桶。
 This one we'll call the green bucket.
 
 176
 00:09:13.480 --> 00:09:17.190
-所以范围的管理者，你可以为我们做一个绿色的桶。
-So scope manager, could you go ahead and
-make a green bucket for us.
+所以范围经理，你能为我们做一个绿色的水桶吗？
+So scope manager, could you go ahead and make a green bucket for us.
 
 177
 00:09:17.190 --> 00:09:21.840
-Scope 经理说肯定，现在我们进入绿桶的范围，
-Scope manager says sure, and now we
-step into the scope of the green bucket,
+作用域经理说肯定，现在我们进入绿色桶的作用域，
+Scope manager says sure, and now we step into the scope of the green bucket,
 
 178
 00:09:21.840 --> 00:09:24.870
-标记在这里的功能好吧
+标记为Ask的函数在这里，好的。
 the function labeled ask here, okay.
 
 179
 00:09:24.870 --> 00:09:27.049
-因此，我们在该职能中寻找正式声明。
-So we look for
-formal declarations in that function.
+因此，我们在该函数中寻找正式声明。
+So we look for formal declarations in that function.
 
 180
 00:09:27.049 --> 00:09:28.779
-我们将在何处找到下一次正式声明?
-Where do we find the next
-formal declaration?
+我们在哪里可以找到下一个正式声明？
+Where do we find the next formal declaration?
 
 181
 00:09:29.779 --> 00:09:30.389
->> 扬声器 2: 第 9 行。
+&gt；&gt；扬声器2：线路9。
 &gt;&gt; Speaker 2: Line 9.
 
 182
 00:09:30.389 --> 00:09:33.600
->> Kyle Simpson: 第 9 行，你在第 9 行看到我有一个 var 声明，
-&gt;&gt; Kyle Simpson: Line 9, you see there
-on line 9 I have a var declaration,
+&gt；&gt；Kyle Simpson：第9行，您可以看到在第9行，我有一个var声明，
+&gt;&gt; Kyle Simpson: Line 9, you see there on line 9 I have a var declaration,
 
 183
 00:09:33.600 --> 00:09:38.580
-所以这才是真正的重复对话的方式也是一样的
-so that's getting real repetitive, the
-conversation goes exactly the same way.
+所以这是真正的重复，谈话的方式完全相同。
+so that's getting real repetitive, the conversation goes exactly the same way.
 
 184
 00:09:38.580 --> 00:09:42.480
-绿色桶，嘿范围问，我有正式的声明
-Hey green bucket, hey scope of ask,
-I have a formal declaration for
+嘿绿色桶，嘿问的范围，我有一个正式的声明
+Hey green bucket, hey scope of ask, I have a formal declaration for
 
 185
 00:09:42.480 --> 00:09:44.509
-一个叫什么的
+一个叫做的识别符？
 an identifier called?
 
 186
 00:09:44.509 --> 00:09:45.059
->> 扬声器 2: 问题。
+&gt；&gt；扬声器2：问题。
 &gt;&gt; Speaker 2: Question.
 
 187
 00:09:45.059 --> 00:09:45.899
->> 扬声器 3: 问题。 >> Kyle Simpson: 问题，
-&gt;&gt; Speaker 3: Question.
-&gt;&gt; Kyle Simpson: Question,
+&gt；&gt；扬声器3：问题。&gt；&gt；Kyle Simpson：问题，
+&gt;&gt; Speaker 3: Question. &gt;&gt; Kyle Simpson: Question,
 
 188
 00:09:45.899 --> 00:09:46.950
-听说过他吗
+听说过他吗？
 ever heard of him?
 
 189
 00:09:46.950 --> 00:09:48.340
-答案是吗 ?
+答案是？
 And the answer is?
 
 190
 00:09:48.340 --> 00:09:49.509
->> 扬声器 2: 无。 >> 凯尔 - 辛普森: 但是?
-&gt;&gt; Speaker 2: Nope.
-&gt;&gt; Kyle Simpson: But?
+&gt；&gt；扬声器2：不。凯尔·辛普森：但是？
+&gt;&gt; Speaker 2: Nope. &gt;&gt; Kyle Simpson: But?
 
 191
 00:09:49.509 --> 00:09:50.539
-> 演讲者 3: 这里是你的绿色大理石。
+&gt；&gt；扬声器3：这是你的绿色大理石。
 &gt;&gt; Speaker 3: Here's your green marble.
 
 192
 00:09:50.539 --> 00:09:52.389
->> 凯尔 - 辛普森: 这是你的绿色大理石，对吧 ?
-&gt;&gt; Kyle Simpson: Here's your green marble,
-right?
+&gt；&gt；Kyle Simpson：这是你的绿色大理石，对吗？
+&gt;&gt; Kyle Simpson: Here's your green marble, right?
 
 193
 00:09:52.389 --> 00:09:55.730
-我们把绿色的大理石和酒放在绿色水桶里
-So we get a green marble and
-boop we drop it in the green bucket.
+所以我们得到了一个绿色的大理石，砰的一声，我们把它扔到了绿色的桶里。
+So we get a green marble and boop we drop it in the green bucket.
 
 194
 00:09:56.909 --> 00:09:58.220
-现在这很关键
+现在，这很关键，
 Now, this is critical,
 
 195
 00:09:58.220 --> 00:10:03.789
-因为你会在第 10 行通知我们有一个标识符
-because you'll notice on line 10 we
-have a reference to an identifier.
+因为您会注意到第10行我们有一个对标识符的引用。
+because you'll notice on line 10 we have a reference to an identifier.
 
 196
 00:10:03.789 --> 00:10:07.629
-这不是在制造弹珠，所以在这个处理步骤中我们不会担心的
-This isn't creating marbles, so in this
-processing step we're not gonna worry so
+这不是创造弹珠，所以在这个处理步骤中，我们不会担心
+This isn't creating marbles, so in this processing step we're not gonna worry so
 
 197
 00:10:07.629 --> 00:10:09.049
-关于创造它的问题
+关于创造它。
 much about creating it.
 
 198
 00:10:09.049 --> 00:10:12.500
-但我们要了解大理石是从哪里来的
-But we are going to have to understand
-where that marble comes from,
+但我们必须弄清楚这些大理石是从哪里来的，
+But we are going to have to understand where that marble comes from,
 
 199
 00:10:12.500 --> 00:10:17.059
-在接下来的步骤中执行代码时的颜色大理石。
-what color marble that is,
-when we execute the code in the next step.
+当我们在下一步执行代码时，这是什么颜色的大理石。
+what color marble that is, when we execute the code in the next step.
 
 200
 00:10:17.059 --> 00:10:20.049
-所以我们必须正确处理这一大理石分类
-So it's critical that we do
-this marble sorting correctly
+所以我们正确地对大理石进行分类是非常关键的
+So it's critical that we do this marble sorting correctly
 
 201
 00:10:20.049 --> 00:10:21.690
-当我们第一次处理密码时
+当我们第一次处理代码时。
 as we process the code the first time.
 
 202
 00:10:23.149 --> 00:10:25.139
-所以我们已经完成了这个要求的功能，对吧 ?
-So we're done with the ask function,
-right?
+我们已经完成了Ask函数，对吗？
+So we're done with the ask function, right?
 
 203
 00:10:25.139 --> 00:10:27.350
-没有更正式的声明了
+没有更正式的声明。
 There's no more formal declarations.
 
 204
 00:10:27.350 --> 00:10:28.980
-然后我们又回到了全球范围。
-And then we step back
-out to the global scope.
+然后我们回到全局范围。
+And then we step back out to the global scope.
 
 205
 00:10:28.980 --> 00:10:31.922
-我们是否在全球范围内发现了更正式的声明 ?
-Do we find any more formal
-declarations in the global scope?
+我们在全局范围内找到任何更正式的声明吗？
+Do we find any more formal declarations in the global scope?
 
 206
 00:10:34.070 --> 00:10:34.761
->> 扬声器 2: 否。
+&gt；&gt；扬声器2：否。
 &gt;&gt; Speaker 2: No.
 
 207
 00:10:34.761 --> 00:10:35.618
->> 凯尔 - 辛普森: 好吗 ?
+凯尔·辛普森：好吗？
 &gt;&gt; Kyle Simpson: Okay?
 
 208
 00:10:35.618 --> 00:10:38.886
-那么拇指向上，我们现在已经完成了这个处理阶段，
-So thumbs up, we are now done
-with that processing stage,
+所以竖起大拇指，我们现在已经完成了处理阶段，
+So thumbs up, we are now done with that processing stage,
 
 209
 00:10:38.886 --> 00:10:41.379
-此代码的编译器阶段。
+这段代码的编译器阶段。
 with that compiler phase of this code.
 
 210
 00:10:41.379 --> 00:10:46.850
-我们剩下的就是所有水桶和所有弹珠的计划。
-And what we are left with is a plan for
-all the buckets and all the marbles.
+我们剩下的是所有水桶和弹珠的计划。
+And what we are left with is a plan for all the buckets and all the marbles.
 
 211
 00:10:46.850 --> 00:10:49.730
-我们已经计算了所有存在的范围
-We've accounted for
-all the scopes that exist and
+我们已经考虑了所有存在的作用域和
+We've accounted for all the scopes that exist and
 
 212
 00:10:49.730 --> 00:10:52.639
-所有这些都适合的地方
-where all the identifiers
-fit into all of those.
+其中所有标识符都适合所有这些。
+where all the identifiers fit into all of those.
 
 213
 00:10:52.639 --> 00:10:57.860
-包括第 10 行中对它们的引用，我们知道是什么颜色的大理石。
-Including references to them like on line
-10, we know what color marble that is.
+包括对它们的引用，比如在第10行，我们知道那是什么颜色的大理石。
+Including references to them like on line 10, we know what color marble that is.
 
 214
 00:10:57.860 --> 00:10:58.799
-你和我一起吗
+你和我一起吗？
 You with me?
 
 215
 00:10:58.799 --> 00:11:00.039
-我们都知道这些
+我们都知道。
 We know all of that stuff.
 
 216
 00:11:00.039 --> 00:11:02.220
-我们把所有的计划都准备好了
+我们已经把所有的计划都安排好了。
 We've got all that plan all laid out.
 
 217
 00:11:02.220 --> 00:11:06.990
-那就是作为执行计划的一部分
-That is then handed over as
-part of the execution plan so
+然后作为执行计划的一部分进行移交
+That is then handed over as part of the execution plan so
 
 218
 00:11:06.990 --> 00:11:10.590
-虚拟机 JavaScript 引擎可以运行此代码。
-that the virtual machine,
-the JavaScript engine, can run this code.
+虚拟机JavaScript引擎可以运行此代码。
+that the virtual machine, the JavaScript engine, can run this code.
 
 219
 00:11:10.590 --> 00:11:12.120
-和我一起吗
+大家都跟我一起吗？
 Everybody with me?
 
 220
 00:11:12.120 --> 00:11:14.490
-现在重要的是要注意的是当我们执行代码时
-Now it's important to note
-that when we execute the code,
+现在重要的是要注意，当我们执行代码时，
+Now it's important to note that when we execute the code,
 
 221
 00:11:14.490 --> 00:11:17.259
-没有更多的声明可以做任何事
+没有更多的声明了。
 there's no more declarations for anything.
 
 222
 00:11:17.259 --> 00:11:19.059
-所有的 vars 都没了
+所有的瓶子都没了，
 All the vars are gone,
 
 223
 00:11:19.059 --> 00:11:22.100
-本质上，因为我们不需要再申报任何东西了。
-essentially, because we don't
-need to declare anything anymore.
+本质上，因为我们不再需要声明任何东西。
+essentially, because we don't need to declare anything anymore.
 
 224
 00:11:22.100 --> 00:11:24.129
-我们已经知道该怎么办了
+我们已经知道那会有什么用了，
 We already know what that's gonna do,
 
 225
 00:11:24.129 --> 00:11:26.080
-因为我们在编译时就知道了
-because we figured that
-stuff out at compile time.
+因为我们在编译时就算出来了。
+because we figured that stuff out at compile time.
 
 226
 00:11:27.129 --> 00:11:29.110
@@ -1288,93 +1132,80 @@ So, one key takeaway, don't miss this.
 
 227
 00:11:29.110 --> 00:11:33.826
-一个关键的 takeaway 是在词性限定的语言中， JavaScript 是全部的
-One key takeaway is that in a lexically
-scoped language which JavaScript is all
+一个关键的要点是，在词法范围内的语言中，JavaScript就是全部
+One key takeaway is that in a lexically scoped language which JavaScript is all
 
 228
 00:11:33.826 --> 00:11:37.972
-在我们处理的范围内所有词法范围
-of the scopes that we're dealing with,
-all of the lexical scopes and
+我们正在处理的作用域，所有的词法作用域和
+of the scopes that we're dealing with, all of the lexical scopes and
 
 229
 00:11:37.972 --> 00:11:41.475
-标识，都是在编译时确定的。
-identifiers, that's all
-determined at compile time.
+标识符，这都是在编译时确定的。
+identifiers, that's all determined at compile time.
 
 230
 00:11:41.475 --> 00:11:43.399
-在运行时未确定。
+它不是在运行时确定的。
 It's not determined at run time.
 
 231
 00:11:43.399 --> 00:11:48.419
 它在运行时使用，但在编译时确定。
-It is used at run time, but
-it is determined at compile time.
+It is used at run time, but it is determined at compile time.
 
 232
 00:11:48.419 --> 00:11:52.460
-重要的是这让发动机有了很大的动力
-And why that matters is,
-that allows the engine to much
+而这一点之所以重要，是因为它允许引擎在很大程度上
+And why that matters is, that allows the engine to much
 
 233
 00:11:52.460 --> 00:11:57.740
-更有效地优化，因为所有事物都是已知的，并且是固定的。
-more efficiently optimize, because
-everything is known and it's fixed.
+更有效地优化，因为一切都是已知的，并且是固定的。
+more efficiently optimize, because everything is known and it's fixed.
 
 234
 00:11:57.740 --> 00:12:02.129
-运行期间的任何内容都无法确定此大理石不再是红色的，
-Nothing during the run time can determine
-that this marble is no longer red,
+在运行时间期间没有任何东西可以确定这个大理石不再是红色的，
+Nothing during the run time can determine that this marble is no longer red,
 
 235
 00:12:02.129 --> 00:12:02.720
-现在是蓝色的
+现在它是蓝色的。
 now it's blue.
 
 236
 00:12:04.049 --> 00:12:07.629
-一旦我们处理好了我们就知道它是什么颜色的
-Once we've processed through, we already
-know what color marble it is and
+一旦我们处理完，我们已经知道它是什么颜色的大理石
+Once we've processed through, we already know what color marble it is and
 
 237
 00:12:07.629 --> 00:12:09.720
-我们的讨论结束了
+我们的讨论结束了。
 we're done with that discussion.
 
 238
 00:12:09.720 --> 00:12:14.259
-因此，它允许 JavaScript 引擎在工作上更有效率。
-So that allows the JavaScript engine
-to be much more efficient at its job.
+这样，JavaScript引擎的工作效率就会更高。
+So that allows the JavaScript engine to be much more efficient at its job.
 
 239
 00:12:14.259 --> 00:12:16.830
-你应该得到的外卖
-The takeaway that you
-should have from that is,
+你应该从中得到的启示是，
+The takeaway that you should have from that is,
 
 240
 00:12:16.830 --> 00:12:20.799
-我所做的决定是作者时间决定
-the decisions that I've made about
-scope are author time decisions.
+我所做的关于范围的决定是作者时间的决定。
+the decisions that I've made about scope are author time decisions.
 
 241
 00:12:20.799 --> 00:12:23.879
-当我写这个函数的时候我把这个变量放在这里
-When I write this function and
-I put this variable here,
+当我写这个函数，我把这个变量放在这里，
+When I write this function and I put this variable here,
 
 242
 00:12:23.879 --> 00:12:26.850
-这意味着那个变量永远是那个颜色的大理石
-it means that that variable is
-always gonna be that color marble.
+这意味着变量总是那个颜色的大理石。
+it means that that variable is always gonna be that color marble.

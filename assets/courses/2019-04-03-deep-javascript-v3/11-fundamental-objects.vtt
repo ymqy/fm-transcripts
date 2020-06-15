@@ -2,291 +2,250 @@ WEBVTT
 
 1
 00:00:00.100 --> 00:00:06.240
->> 扬声器 1: 除了基本值外，我们还具有基本对象。
-&gt;&gt; Speaker 1: In addition to our primitive
-values, we also have fundamental objects.
+&gt；&gt；Speaker 1：除了我们的原始值之外，我们还拥有基本对象。
+&gt;&gt; Speaker 1: In addition to our primitive values, we also have fundamental objects.
 
 2
 00:00:06.240 --> 00:00:09.910
-顺便说下这是我最近介绍的术语
-And by the way, this is a terminology that
-I think was somewhat recently introduced
+顺便说一下，这是一个我认为最近才引入的术语
+And by the way, this is a terminology that I think was somewhat recently introduced
 
 3
 00:00:09.910 --> 00:00:10.859
-在此规范中。
+在这个规格中。
 in this spec.
 
 4
 00:00:10.859 --> 00:00:13.321
-这些都被称为内置物体
-And these used to be referred
-to as built-in objects or
+这些过去被称为内置对象或
+And these used to be referred to as built-in objects or
 
 5
 00:00:13.321 --> 00:00:14.720
-甚至是土生土生
+甚至可能是本机函数。
 maybe even native functions.
 
 6
 00:00:14.720 --> 00:00:18.030
-我曾提到这些历史上的自然函数。
-I've referred to these
-historically as native functions.
+我在历史上将这些称为本机函数。
+I've referred to these historically as native functions.
 
 7
 00:00:18.030 --> 00:00:22.000
-我认为它们现在更常被称为基本物体。
-I think they're more commonly now
-referred to as fundamental objects.
+我认为它们现在更常被称为基本对象。
+I think they're more commonly now referred to as fundamental objects.
 
 8
 00:00:22.000 --> 00:00:25.660
-那么，以你的任何一个短语来说，选择和选择。
-So whichever phrase works for
-you, pick and choose.
+所以，无论哪个短语适合你，挑选并选择。
+So whichever phrase works for you, pick and choose.
 
 9
 00:00:25.660 --> 00:00:26.739
-但如果你读这个规范
+但如果你在读这份说明书，而且
 But if you're reading this spec, and
 
 10
 00:00:26.739 --> 00:00:30.739
-你会看到像一个基本物体的东西这就是它的来源
-you see something like a fundamental
-object, that's where this comes from.
+你看到的东西就像一个基本的物体，这就是它的来源。
+you see something like a fundamental object, that's where this comes from.
 
 11
 00:00:30.739 --> 00:00:33.640
-那么这些基本的物体是什么，它们是类型吗 ?
-So what are these fundamental objects,
-are they types?
+那么这些基本对象是什么，它们是类型吗？
+So what are these fundamental objects, are they types?
 
 12
 00:00:33.640 --> 00:00:35.929
-有点像但不太好
+算是吧，但不是真的。
 Sort of, but not really.
 
 13
 00:00:35.929 --> 00:00:40.810
-这就好比是基于 JavaScript 的对象的定位，
-This is like the kind of bolted on
-object orientedness of JavaScript,
+这就像JavaScript面向对象的螺栓，
+This is like the kind of bolted on object orientedness of JavaScript,
 
 14
 00:00:40.810 --> 00:00:45.049
-几乎是 Java 型的 JavaScript 变种
-the almost Java-like
-mutation of JavaScript
+JavaScript的几乎类似于Java的突变
+the almost Java-like mutation of JavaScript
 
 15
 00:00:45.049 --> 00:00:48.479
-在那些我们有原始价值的案例中
-where we have in all of those cases
-where we have primitive values,
+在所有我们有原始值的情况下，
+where we have in all of those cases where we have primitive values,
 
 16
 00:00:48.479 --> 00:00:53.020
-我们现在还具有类似行为的对象表示。
-we now also have object representations
-with similar behaviors.
+我们现在也有类似行为的对象表示。
+we now also have object representations with similar behaviors.
 
 17
 00:00:54.210 --> 00:00:56.295
-比如当你想做字符串的时候
-Like in Java when you
-want to make a string and
+就像在Java中，当您想要创建一个字符串并
+Like in Java when you want to make a string and
 
 18
 00:00:56.295 --> 00:01:01.170
-你称它为新的资本 S 弦我们有类似的情况
-you call it new capital S string,
-we have things like that in JavaScript.
+你把它称为新的大写S字符串，我们在JavaScript中有类似的东西。
+you call it new capital S string, we have things like that in JavaScript.
 
 19
 00:01:01.170 --> 00:01:06.010
-我不认为你应该用它们，但我认为你应该理解它们。
-I don't think you should use them, but
-I do think you should understand them.
+我认为你不应该使用它们，但我认为你应该理解它们。
+I don't think you should use them, but I do think you should understand them.
 
 20
 00:01:06.010 --> 00:01:11.670
-所以这些是你真正应该用这个新关键词的地方，
-So these are the ones where you really
-should absolutely use the new keyword,
+所以这些就是你真的应该绝对使用new关键字的地方，
+So these are the ones where you really should absolutely use the new keyword,
 
 21
 00:01:13.120 --> 00:01:17.579
 对象，数组，函数，日期，正则表达式，错误。
-Object, Array, Function, Date,
-Regular Expression, Error.
+Object, Array, Function, Date, Regular Expression, Error.
 
 22
 00:01:17.579 --> 00:01:22.599
-如果您需要构造该基本类型的对象，
-If you need to construct an object
-of that fundamental type,
+如果需要构造该基本类型的对象，
+If you need to construct an object of that fundamental type,
 
 23
 00:01:22.599 --> 00:01:25.870
-然后使用新对象，新阵列或新函数。
-then use new Object, or
-new Array, or new Function.
+然后使用新对象、新数组或新函数。
+then use new Object, or new Array, or new Function.
 
 24
 00:01:27.289 --> 00:01:32.473
-例如，我将会使用的钥匙可能是新日期。
-Probably the key one here that I would
-use would be new Date, for example.
+例如，我可能在这里使用的关键日期是新日期。
+Probably the key one here that I would use would be new Date, for example.
 
 25
 00:01:32.473 --> 00:01:36.281
-但还有一些基本的物体是可以用的
-But there are other ones that are
-fundamental objects which could be used
+但是还有其他一些可以使用的基本对象
+But there are other ones that are fundamental objects which could be used
 
 26
 00:01:36.281 --> 00:01:40.402
-全新的但我要告诉你肯定不能用新的
-with new, but I'm gonna tell you you
-should definitely not use them with new,
+用新的，但我要告诉你绝对不应该用它们和新的，
+with new, but I'm gonna tell you you should definitely not use them with new,
 
 27
 00:01:40.402 --> 00:01:43.478
-即这三个，字符串，数字和布尔值。
-and that is these three,
-string, number, and Boolean.
+这就是这三个，字符串，数字和布尔值。
+and that is these three, string, number, and Boolean.
 
 28
 00:01:44.719 --> 00:01:49.310
-它们可用于构造此表单的对象。
-They can be used with new to
-construct the objects of this form.
+它们可以与new一起使用来构造此形式的对象。
+They can be used with new to construct the objects of this form.
 
 29
 00:01:49.310 --> 00:01:51.079
-你绝对不应该这样做
+你绝对不应该那样做。
 You should absolutely never do that.
 
 30
 00:01:52.909 --> 00:01:56.770
-您应该仅将它们用作函数而不是构造函数。
-You should use them only as functions,
-not as constructors.
+您应该只将它们用作函数，而不是构造函数。
+You should use them only as functions, not as constructors.
 
 31
 00:01:56.770 --> 00:01:58.710
-当我们在胁迫的时候谈论
-And when we talk about
-later in coercion and
+当我们以后谈到胁迫和
+And when we talk about later in coercion and
 
 32
 00:01:58.710 --> 00:02:00.620
-你就会明白他们的用处
+你会明白它们的用处。
 you'll understand the usefulness of them.
 
 33
 00:02:00.620 --> 00:02:01.930
-但是字符串，数字和
+但是字符串、数字和
 But String, Number, and
 
 34
 00:02:01.930 --> 00:02:06.489
-当用作函数时，布尔会将任何值强制转换为相应的基本类型。
-Boolean when used as a function coerce any
-value to that respective primitive type.
+Boolean用作函数时会将任何值强制为相应基元类型。
+Boolean when used as a function coerce any value to that respective primitive type.
 
 35
 00:02:07.599 --> 00:02:11.159
-那是一个更有用的实用程序
+这是这些工具中一个更有用的工具
 That is a far more useful utility of those
 
 36
 00:02:11.159 --> 00:02:14.349
-比他们能建造这个奇怪的科学怪人物的事实
-than the fact that they can construct
-this weird Frankensteiny object.
+而不是他们能建造这个怪异的科学怪异的物体。
+than the fact that they can construct this weird Frankensteiny object.
 
 37
 00:02:18.129 --> 00:02:22.409
-所以在这里再举一个例子，我说新的日期
-So an example here again Date,
-I would say new Date
+所以这里的一个例子再次日期，我会说新的日期
+So an example here again Date, I would say new Date
 
 38
 00:02:22.409 --> 00:02:25.629
-以构造日期对象，因为没有日期文字。
-to construct the date object why
-because there is no date literal.
+构造Date对象的原因是没有Date文本。
+to construct the date object why because there is no date literal.
 
 39
 00:02:25.629 --> 00:02:28.409
-如果要进行日期，那么必须执行新日期。
-If you want to make dates,
-you have got to do new Date.
+如果你想约会，你必须做新的约会。
+If you want to make dates, you have got to do new Date.
 
 40
 00:02:28.409 --> 00:02:31.870
-这也许是我认为我们应该保持新经营者的唯一原因
-That might be the only reason why I think
-we should keep the new operator around
+这可能是我认为我们应该保留新运营商的唯一原因
+That might be the only reason why I think we should keep the new operator around
 
 41
 00:02:31.870 --> 00:02:36.949
-因为我需要从时间到时间，这是唯一的办法。
-because I need to make dates from time to
-time and that is the only way to do it.
+因为我需要不时地约会，这是唯一的方法。
+because I need to make dates from time to time and that is the only way to do it.
 
 42
 00:02:36.949 --> 00:02:39.670
-我希望有一天他们会加入一个日期的文字
-I do hope that maybe someday
-they add a date literal.
+我真的希望也许有一天他们会增加一个日期字面。
+I do hope that maybe someday they add a date literal.
 
 43
 00:02:39.670 --> 00:02:41.810
-但是，我们还没有做到这一点。
+但是，我们还没有。
 But, we don't have that yet.
 
 44
 00:02:41.810 --> 00:02:48.020
-所以我可以建造日期但如果我有一些不是绳子的东西
-So I can construct dates, but if I have
-something that is not already a string,
+所以我可以构造日期，但是如果我有一些还不是字符串的东西，
+So I can construct dates, but if I have something that is not already a string,
 
 45
 00:02:48.020 --> 00:02:53.199
-例如，如果我的 JSON 对象背面有 myGPA 的 myGPA ，那么
-for example, if I got a JSON object
-back that had myGPA from college in it,
+例如，如果我得到一个JSON对象，其中包含来自大学的myGPA，
+for example, if I got a JSON object back that had myGPA from college in it,
 
 46
 00:02:53.199 --> 00:02:55.469
-我在这里告诉你大学的 mgGPA 是什么
-here I am telling you what
-myGPA in college was.
+在这里我告诉你我的大学GPA是什么。
+here I am telling you what myGPA in college was.
 
 47
 00:02:56.680 --> 00:03:00.689
-如果我回了个 JSON 对象，那是我大学的成绩单
-If I got back a JSON object,
-that was my transcript from college and
+如果我拿回一个JSON对象，那就是我的大学成绩单
+If I got back a JSON object, that was my transcript from college and
 
 48
 00:03:00.689 --> 00:03:04.129
-它有我的 mysGPA 但是我得把它作为一个字符串
-it had myGPA in it, but
-I needed to represent it as a string,
+它包含myGPA，但我需要将其表示为字符串，
+it had myGPA in it, but I needed to represent it as a string,
 
 49
 00:03:04.129 --> 00:03:07.719
-大写 S 字符串函数执行此操作并正常运行。
-capital S string function does that and
-does it well.
+大写S字符串函数做到了这一点，并且做得很好。
+capital S string function does that and does it well.
 
 50
 00:03:07.719 --> 00:03:10.189
 它将其转换为该字符串表示。
-It converts it to that
-string representation.
+It converts it to that string representation.

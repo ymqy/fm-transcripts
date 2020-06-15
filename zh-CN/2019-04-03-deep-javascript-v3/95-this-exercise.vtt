@@ -2,192 +2,165 @@ WEBVTT
 
 1
 00:00:00.050 --> 00:00:02.049
->> 凯尔 - 辛普森: 让我们跳到这个关键词
-&gt;&gt; Kyle Simpson: Let's jump
-into the this keyword, and
+&gt；&gt；Kyle Simpson：让我们跳到this关键字，然后
+&gt;&gt; Kyle Simpson: Let's jump into the this keyword, and
 
 2
 00:00:02.049 --> 00:00:05.679
-试着用代码来了解它
-try to understand it a little
-bit better through code.
+尝试通过代码更好地理解它。
+try to understand it a little bit better through code.
 
 3
 00:00:05.679 --> 00:00:07.559
-让我们在此练习中编写一些代码。
+让我们在这个练习中编写一些代码。
 Let's write some code in this exercise.
 
 4
 00:00:08.660 --> 00:00:12.310
-在此练习中，您将重构当前使用的某些代码
-In this exercise you're gonna be
-refactoring some code that currently uses
+在本练习中，您将重构一些当前使用的代码
+In this exercise you're gonna be refactoring some code that currently uses
 
 5
 00:00:12.310 --> 00:00:17.144
-模块模式，而您将改为使用该名称空间模式
-the module pattern, and you're gonna
-instead make it use that namespace pattern
+模块模式，您将改为使其使用名称空间模式
+the module pattern, and you're gonna instead make it use that namespace pattern
 
 6
 00:00:17.144 --> 00:00:19.339
-在对象上使用的方法以及
+在对象上有方法的地方，并且
 where you have methods on an object and
 
 7
 00:00:19.339 --> 00:00:23.629
-它们使用此关键字引用该对象上的数据属性。
-they refer to the data properties on
-that object using the this keyword.
+它们使用this关键字引用该对象的数据属性。
+they refer to the data properties on that object using the this keyword.
 
 8
 00:00:23.629 --> 00:00:30.359
-因此，如果我们查看 ex.js ，您会注意到我们有模块定义。
-So if we look at the ex.js you'll notice
-that we have our module definition.
+因此，如果我们查看ex.js，您会注意到我们有我们的模块定义。
+So if we look at the ex.js you'll notice that we have our module definition.
 
 9
 00:00:30.359 --> 00:00:34.560
-我们有这个 defineWorkshop() 函数，它是我们的工厂功能。
-We've got this defineWorkshop() function,
-which is our factory function.
+我们已经得到了这个定义的工作坊()函数，它是我们的工厂函数。
+We've got this defineWorkshop() function, which is our factory function.
 
 10
 00:00:34.560 --> 00:00:38.710
-它正在制作这个公共 API 对象，它有这些内部的东西，
-It's producing this publicAPI object and
-it has these internal things,
+它产生了这个public API对象，它有这些内部的东西，
+It's producing this publicAPI object and it has these internal things,
 
 11
 00:00:38.710 --> 00:00:42.729
-这些内部数据值，如 currentEnrollment 和 studentRecords。
-these internal data values,
-like currentEnrollment and studentRecords.
+这些内部数据值，如currentEnrollment和StudentRecords。
+these internal data values, like currentEnrollment and studentRecords.
 
 12
 00:00:42.729 --> 00:00:46.792
-我们想做的是将 deepJS 定义为函数
-What we wanna do is turn the deepJS
-from being defined by a function to
+我们想要做的是把深度JS从函数定义变成
+What we wanna do is turn the deepJS from being defined by a function to
 
 13
 00:00:46.792 --> 00:00:49.357
-定义为具有以下内容的对象字面值
-being defined as an object
-literal that has
+被定义为具有
+being defined as an object literal that has
 
 14
 00:00:49.357 --> 00:00:53.798
-引用 currentEnrollment 和 studentRecords的属性。
-properties that reference
-the currentEnrollment and studentRecords.
+引用currentEnrollment和StudentRecords的属性。
+properties that reference the currentEnrollment and studentRecords.
 
 15
 00:00:53.798 --> 00:00:57.585
-所有这些功能，而不是隐藏起来，都是公共的
-And all of those functions, instead of
-being hidden, they'll all be public
+所有这些功能，而不是隐藏，它们都将是公开的
+And all of those functions, instead of being hidden, they'll all be public
 
 16
 00:00:57.585 --> 00:01:01.149
-对该对象的方法以及它们都将引用此停止。
-methods on that object and they'll
-all make references with this stop.
+方法，它们都会用这个stop进行引用。
+methods on that object and they'll all make references with this stop.
 
 17
 00:01:02.460 --> 00:01:07.280
-请注意，此代码中存在许多位置。
-A word of caution, that there
-are a bunch of places within this code.
+提醒一句，这段代码中有很多地方。
+A word of caution, that there are a bunch of places within this code.
 
 18
 00:01:07.280 --> 00:01:12.989
-例如，我们在这里通过一个类似的回调。
-For example, we pass in a callback
-like this one right here.
+例如，我们在这里传递一个像这样的回调。
+For example, we pass in a callback like this one right here.
 
 19
 00:01:12.989 --> 00:01:15.219
-我们将此回调传递到 .map。
+我们将此回调传递给.map。
 We pass in this callback to .map.
 
 20
 00:01:16.349 --> 00:01:18.640
-当它是一个规律的词法函数时
+当它是一个常规的词汇功能时，
 When it’s a regular lexical function,
 
 21
 00:01:18.640 --> 00:01:21.689
-在模块模式中，没有任何问题。
-the way it is in the module pattern,
-no problem whatsoever.
+它在模块模式中的方式，没有任何问题。
+the way it is in the module pattern, no problem whatsoever.
 
 22
 00:01:21.689 --> 00:01:24.539
-但当我们把它当功能的时候
-But when we pass in this
-to where functions,
+但是当我们将这个传递给Where函数时，
+But when we pass in this to where functions,
 
 23
 00:01:24.539 --> 00:01:26.359
-我们有这个束缚的问题
+我们有我们这个装订的问题。
 we have the problem of our this binding.
 
 24
 00:01:26.359 --> 00:01:29.579
-所以你要小心注意你需要的地方
-So you need to make sure to watch out for
-the places where you need
+所以你需要确保注意你需要的地方
+So you need to make sure to watch out for the places where you need
 
 25
 00:01:29.579 --> 00:01:33.560
-把这些方法硬的引用了好吗
-to pass in hard-bound references
-to the methods, okay?
+来传递对方法的硬绑定引用，好吗？
+to pass in hard-bound references to the methods, okay?
 
 26
 00:01:33.560 --> 00:01:36.926
-所以我的自述文件会给你关于
-So the readme will give you
-the instructions on taking out
+所以自述文件会给你关于取出的说明
+So the readme will give you the instructions on taking out
 
 27
 00:01:36.926 --> 00:01:41.189
-defineWorkshop() 工厂，将其替换为对象。
-the defineWorkshop() factory,
-replacing it with an object.
+定义工作坊()工厂，用一个对象替换它。
+the defineWorkshop() factory, replacing it with an object.
 
 28
 00:01:41.189 --> 00:01:43.758
-更改所有内部引用和
+更改所有这些内部基准电压源和
 Change all those internal references and
 
 29
 00:01:43.758 --> 00:01:48.448
-确保在需要时使用绑定，但不使用绑定
-make sure that you use the bind where
-it's needed, but don't use the bind on
+确保在需要的地方使用绑定，但不要使用绑定
+make sure that you use the bind where it's needed, but don't use the bind on
 
 30
 00:01:48.448 --> 00:01:52.650
-所有功能调用都不需要它。
-everything because it's not needed for
-all of the function calls.
+因为并不是所有的函数调用都需要它。
+everything because it's not needed for all of the function calls.
 
 31
 00:01:52.650 --> 00:01:56.210
-一如既往如果你被困住需要帮助
-As always, if you get stuck and
-need some help,
+一如既往，如果你遇到困难需要帮助，
+As always, if you get stuck and need some help,
 
 32
 00:01:56.210 --> 00:02:00.430
-请确保查看解决方案文件 ( ex.fixfix) 。
-make sure to look at the solution file,
-the ex.fixed.
+确保查看解决方案文件ex.Fixed。
+make sure to look at the solution file, the ex.fixed.
 
 33
 00:02:00.430 --> 00:02:02.840
-我们几分钟后就能通过解决方案
-We'll be back in a few minutes
-to talk through the solution.
+我们几分钟后回来讨论解决方案。
+We'll be back in a few minutes to talk through the solution.

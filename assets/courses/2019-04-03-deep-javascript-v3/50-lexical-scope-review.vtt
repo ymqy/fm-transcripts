@@ -2,1468 +2,1320 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:04.068
->> 凯尔: 所以，让我们确保我们都在同一个页面上。
-&gt;&gt; Kyle: So let's just make sure
-we're all on the same page here.
+&GT；&GT；Kyle：所以让我们确保我们都在同一页上。
+&gt;&gt; Kyle: So let's just make sure we're all on the same page here.
 
 2
 00:00:04.068 --> 00:00:09.076
-我们回顾 JavaScript 不是一种解释语言，
-We recall that JavaScript is
-not an interpreted language and
+我们记得JavaScript不是一种解释语言，并且
+We recall that JavaScript is not an interpreted language and
 
 3
 00:00:09.076 --> 00:00:12.619
-这一步是逐步向前迈出的一步
-that it goes step by
-step one line at a time.
+它一步地走，一次一行。
+that it goes step by step one line at a time.
 
 4
 00:00:12.619 --> 00:00:17.689
-但是，我们应该将 JavaScript 视为两个传递过程。
-But rather, we should think about
-JavaScript as a two pass processing.
+相反，我们应该将JavaScript视为两遍处理。
+But rather, we should think about JavaScript as a two pass processing.
 
 5
 00:00:17.689 --> 00:00:21.690
-第一次通过，我们可以称之为编译或解析 ( 如果我们感觉更好 ) 。
-First pass, we could call it compilation
-or parsing if we feel better about that.
+第一遍，如果我们感觉更好的话，我们可以称之为编译或解析。
+First pass, we could call it compilation or parsing if we feel better about that.
 
 6
 00:00:21.690 --> 00:00:24.588
-但我们要通过整个密码
-But we're gonna go
-through the entire code.
+但我们会检查整个代码。
+But we're gonna go through the entire code.
 
 7
 00:00:24.588 --> 00:00:29.248
-在解析和编译期间会发生很多事情
-And there's lots of things that happen
-during the parsing and compilation,
+在解析和编译过程中会发生很多事情，
+And there's lots of things that happen during the parsing and compilation,
 
 8
 00:00:29.248 --> 00:00:32.402
-但最主要的事情是范围
-but the main thing that
-happens is all of the scopes,
+但是发生的主要事情是所有的范围，
+but the main thing that happens is all of the scopes,
 
 9
 00:00:32.402 --> 00:00:36.868
-所有这些彩色的大理石水桶这些都是被制造的
-all of those colored marble buckets,
-the plan for those all get created.
+所有那些彩色的大理石桶，所有这些的计划都被创造出来了。
+all of those colored marble buckets, the plan for those all get created.
 
 10
 00:00:36.868 --> 00:00:39.079
-我们计算出所有范围的界限。
-We figure out where all
-the scope boundaries are.
+我们找出所有范围边界的位置。
+We figure out where all the scope boundaries are.
 
 11
 00:00:39.079 --> 00:00:41.457
-事实上所有的标识符都提到了
-And indeed,
-all of the identifier references,
+实际上，所有标识符引用，
+And indeed, all of the identifier references,
 
 12
 00:00:41.457 --> 00:00:43.950
-这些颜色被编码成弹珠
+那些是用大理石颜色编码的。
 those are color coded as marbles.
 
 13
 00:00:43.950 --> 00:00:47.539
-我们会有一个红色的大理石或蓝色的大理石或绿色的大理石。
-So we'll have a red marble or
-a blue marble or a green marble.
+所以我们会有一个红色的大理石或者一个蓝色的大理石或者一个绿色的大理石。
+So we'll have a red marble or a blue marble or a green marble.
 
 14
 00:00:47.539 --> 00:00:51.643
-我们会用这个关于大理石颜色的信息
-And we'll use that information
-about the color of the marble and
+我们将使用关于大理石颜色的信息
+And we'll use that information about the color of the marble and
 
 15
 00:00:51.643 --> 00:00:55.520
-它的来源是什么信息是关键的
-what bucket it comes from,
-that information is critical and
+它来自哪个桶，该信息是关键的，并且
+what bucket it comes from, that information is critical and
 
 16
 00:00:55.520 --> 00:00:58.569
-当我们执行代码时，在第二次传递中有用。
-useful in the second pass
-when we execute code.
+在我们执行代码的第二遍中很有用。
+useful in the second pass when we execute code.
 
 17
 00:00:58.569 --> 00:01:02.140
-所以我们要通过谈话作为我们的评论
-So we're gonna run through
-the conversation as our review.
+所以我们要把这次谈话作为回顾。
+So we're gonna run through the conversation as our review.
 
 18
 00:01:02.140 --> 00:01:05.719
-我希望你们所有人都能参与
-And I'm gonna expect, hope,
-that all of you are participating with it,
+我期待，希望，你们所有人都参与进来，
+And I'm gonna expect, hope, that all of you are participating with it,
 
 19
 00:01:05.719 --> 00:01:08.480
-而不仅仅是我
-rather than me only
-being the one speaking.
+而不是只有我一个人在说话。
+rather than me only being the one speaking.
 
 20
 00:01:08.480 --> 00:01:10.930
-所以跟我一起走吧
+所以在我们做这件事的时候跟我一起走。
 So follow along with me as we do this.
 
 21
 00:01:10.930 --> 00:01:14.319
-如果你在看 livestream，大声说话给你的电脑，
-If you're watching on the livestream,
-talk out loud to your computer,
+如果你在看直播，大声对着你的电脑说话，
+If you're watching on the livestream, talk out loud to your computer,
 
 22
 00:01:14.319 --> 00:01:16.329
-即使那感觉太傻了
+即使这感觉很傻。
 even if that feels silly.
 
 23
 00:01:16.329 --> 00:01:19.829
-这也是老师的戏法，如果你用嘴巴说的话，
-Again, it's the teacher trick, that if
-you physically say this with your mouth,
+再说一次，这是老师的把戏，如果你用嘴说这个，
+Again, it's the teacher trick, that if you physically say this with your mouth,
 
 24
 00:01:19.829 --> 00:01:21.960
-它会帮助你记住这些东西
+它会帮助你记住这些事情。
 it'll help you to remember these things.
 
 25
 00:01:21.960 --> 00:01:23.620
-所以我们再谈这个话题
-So we'll go through this
-conversation again,
+所以我们再谈一遍，
+So we'll go through this conversation again,
 
 26
 00:01:23.620 --> 00:01:26.739
-第一次通过编译，第二次通过执行。
-the first pass compilation,
-second pass execution.
+第一遍编译，第二遍执行。
+the first pass compilation, second pass execution.
 
 27
 00:01:26.739 --> 00:01:29.862
-在编译阶段，请记住它是编译器和作用域管理器或
-In the compilation phase, remember it's
-the compiler and the scope manager or
+在编译阶段，记住它是编译器和作用域管理器，或者
+In the compilation phase, remember it's the compiler and the scope manager or
 
 28
 00:01:29.862 --> 00:01:32.519
-解析器，不管你想怎么想，作用域管理器，
-the parser, whatever you want to think of,
-and the scope manager,
+解析器，无论您想要想到什么，以及作用域管理器，
+the parser, whatever you want to think of, and the scope manager,
 
 29
 00:01:32.519 --> 00:01:33.649
-他们会说话的
+他们会说话的。
 they're gonna be talking.
 
 30
 00:01:33.649 --> 00:01:36.209
-所以我们会扮演这个解析器或编译器的角色。
-So we'll play the part of that parser or
-compiler.
+所以我们将扮演解析器或编译器的一部分。
+So we'll play the part of that parser or compiler.
 
 31
 00:01:36.209 --> 00:01:40.689
-我们会到达第一条线我们会说正如编译器说的
-And we'll arrive at something like line
-one and we'll say, as compiler will say,
+我们将到达类似第一行的内容，我们会说，正如编译器将说的那样，
+And we'll arrive at something like line one and we'll say, as compiler will say,
 
 32
 00:01:40.689 --> 00:01:44.120
-嘿，范围管理器，我们现在在说全局范围。
-hey, scope manager,
-we're talking to the global scope now.
+嘿，作用域经理，我们现在正在和全局作用域谈话。
+hey, scope manager, we're talking to the global scope now.
 
 33
 00:01:44.120 --> 00:01:46.637
-我们会说，嘿，范围的管理者，
+我们会说，嘿，作用域经理，
 And we'll say, hey, scope manager,
 
 34
 00:01:46.637 --> 00:01:50.058
-我有一个叫变量的正式声明
-I have a formal declaration for
-a variable called.
+我有一个名为的变量的正式声明。
+I have a formal declaration for a variable called.
 
 35
 00:01:50.058 --> 00:01:50.750
->> 扬声器 2: 教师。
+&gt；&gt；扬声器2：教师。
 &gt;&gt; Speaker 2: Teacher.
 
 36
 00:01:50.750 --> 00:01:54.120
->> 凯尔: 老师，对，你以前听过吗 ?
-&gt;&gt; Kyle: Teacher, right, and
-have you ever heard of that before?
+&gt；&gt；Kyle：老师，对吧，你以前听说过吗？
+&gt;&gt; Kyle: Teacher, right, and have you ever heard of that before?
 
 37
 00:01:54.120 --> 00:01:55.640
-所以我们在和红桶说话
+所以我们在跟红桶说话。
 So we're talking to the red bucket.
 
 38
 00:01:55.640 --> 00:01:57.310
-我们会说你以前听过吗
-We'll say have you ever
-heard of it before?
+我们会说你以前听说过吗？
+We'll say have you ever heard of it before?
 
 39
 00:01:57.310 --> 00:02:00.742
-如果我们见到瓦尔老师几次在同一范围内
-If we'd seen var teacher a couple of
-times in the same scope, the reason for
+如果我们在同一范围内看过var教师几次，原因是
+If we'd seen var teacher a couple of times in the same scope, the reason for
 
 40
 00:02:00.742 --> 00:02:04.799
-问题是我们不需要用同样的名字来制作多个弹珠
-that question is we don't need to make
-multiple marbles with the same name.
+这个问题是我们不需要用相同的名字制造多个弹珠。
+that question is we don't need to make multiple marbles with the same name.
 
 41
 00:02:04.799 --> 00:02:07.905
-它只需要为同一作用域创建一次，并且
-It only needs to be created once for
-the same scope, and
+对于相同的作用域，只需创建一次，并且
+It only needs to be created once for the same scope, and
 
 42
 00:02:07.905 --> 00:02:11.430
-根本就没有重新创造的东西，好吗 ?
-there really is no such thing
-as recreating it, okay?
+真的没有再现它这样的东西，好吗？
+there really is no such thing as recreating it, okay?
 
 43
 00:02:11.430 --> 00:02:15.861
-问题是你有没有听说过这个叫老师的标识符，
-So that question would be have you ever
-heard of this identifier called teacher,
+所以问题是你有没有听说过这个叫做教师的标识符，
+So that question would be have you ever heard of this identifier called teacher,
 
 44
 00:02:15.861 --> 00:02:17.368
-会有什么反应吗
+你的反应会是什么？
 and the response would be?
 
 45
 00:02:17.368 --> 00:02:19.299
->> 扬声器 2: 否。 >> 凯尔: 不，但是我创造了，
-&gt;&gt; Speaker 2: No.
-&gt;&gt; Kyle: No, but I've created,
+&gt；&gt；扬声器2：否。&gt；&gt；Kyle：不，但我创造了，
+&gt;&gt; Speaker 2: No. &gt;&gt; Kyle: No, but I've created,
 
 46
 00:02:19.299 --> 00:02:20.709
-什么颜色的大理石
+什么颜色的大理石？
 what a color marble?
 
 47
 00:02:20.709 --> 00:02:21.288
->> 扬声器 2: 红色大理石。
+&gt；&gt；扬声器2：红色大理石。
 &gt;&gt; Speaker 2: Red marble.
 
 48
 00:02:21.288 --> 00:02:24.788
->> 凯尔: 红色的大理石， [ SOUND] 我们把它放到红桶里，好吗 ?
-&gt;&gt; Kyle: Red marble, [SOUND] we
-drop it in the red bucket, okay?
+&gt；&gt；Kyle：红色的大理石，[声音]我们把它扔到红色的桶里，好吗？
+&gt;&gt; Kyle: Red marble, [SOUND] we drop it in the red bucket, okay?
 
 49
 00:02:24.788 --> 00:02:27.689
-现在我们找到下一个正式声明，第 3 行。
-Now we find the next formal declaration,
-line 3.
+现在我们找到下一个正式声明，第3行。
+Now we find the next formal declaration, line 3.
 
 50
 00:02:27.689 --> 00:02:30.699
-全球范围我有一份正式声明
-Hey global scope,
-I have a formal declaration for-
+嘿，全球范围，我有一个正式声明-
+Hey global scope, I have a formal declaration for-
 
 51
 00:02:30.699 --> 00:02:31.419
->> 扬声器 2: 其他类。
+&gt；&gt；扬声器2：其他类。
 &gt;&gt; Speaker 2: Other class.
 
 52
 00:02:31.419 --> 00:02:32.728
->> 凯尔: 其他类，有听过吗 ?
+&gt；&gt；Kyle：其他班级，听说过吗？
 &gt;&gt; Kyle: Other class, ever heard of it?
 
 53
 00:02:32.728 --> 00:02:34.521
-答案是- >> 演讲者 2: 不。
-And the answer is-
-&gt;&gt; Speaker 2: No.
+答案是-&gt；&gt；扬声器2：不。
+And the answer is- &gt;&gt; Speaker 2: No.
 
 54
 00:02:34.521 --> 00:02:35.908
->> 凯尔: 从未听说过，但
+&gt；&gt；Kyle：从未听说过，但是
 &gt;&gt; Kyle: Never heard of it, but
 
 55
 00:02:35.908 --> 00:02:37.338
-这里是你的 -- > 众说家 2: 红色。
-here's your-
-&gt;&gt; Speaker 2: Red.
+这是您的-&gt；&gt；扬声器2：红色。
+here's your- &gt;&gt; Speaker 2: Red.
 
 56
 00:02:37.338 --> 00:02:40.520
->> 凯尔: 红色大理石， [SOUND] 我们把它放到红桶里。
-&gt;&gt; Kyle: Red marble,
-[SOUND] we drop it in the red bucket.
+&gt；&gt；Kyle：红色的大理石，[声音]我们把它扔到红色的桶里。
+&gt;&gt; Kyle: Red marble, [SOUND] we drop it in the red bucket.
 
 57
 00:02:40.520 --> 00:02:45.490
-顺便说下，全球范围，红色的大理石，指向一个功能。
-By the way, global scope, that red marble,
-that was pointing at a function.
+顺便说一下，全局范围，那个红色的大理石，指向一个函数。
+By the way, global scope, that red marble, that was pointing at a function.
 
 58
 00:02:45.490 --> 00:02:48.319
-所以我们需要一个新的水桶，我们需要水桶里的桶。
-So we need a new bucket,
-we need a bucket inside of a bucket.
+所以我们需要一个新的桶，我们需要一个桶里面的桶。
+So we need a new bucket, we need a bucket inside of a bucket.
 
 59
 00:02:48.319 --> 00:02:49.598
-你能给我们做个蓝桶吗
+你能给我们做一个蓝色的桶吗？
 Can you make us a blue bucket?
 
 60
 00:02:49.598 --> 00:02:53.509
-好的，现在让我们谈谈蓝色桶。
-Sure, okay now let's talk
-about the blue bucket.
+当然，好吧，现在我们来谈谈蓝色的桶。
+Sure, okay now let's talk about the blue bucket.
 
 61
 00:02:53.509 --> 00:02:56.906
-于是我们进入了蓝色的桶里，移动到第 4 行
-So we stepped inside of the blue bucket,
-we move to line 4 and
+所以我们走进了蓝色的桶里，我们移到了第4行
+So we stepped inside of the blue bucket, we move to line 4 and
 
 62
 00:02:56.906 --> 00:02:59.050
-我们再找一份正式声明
+我们找到了另一个正式声明。
 we find another formal declaration.
 
 63
 00:02:59.050 --> 00:03:01.479
-嘿，其他课的范围。
+嘿，其他类的范围。
 Hey, scope of other class.
 
 64
 00:03:01.479 --> 00:03:05.659
-嘿蓝桶镜我给老师正式声明了
-Hey, blue bucket scope,
-I've a formal declaration for teacher.
+嘿，蓝桶范围，我有一份老师的正式声明。
+Hey, blue bucket scope, I've a formal declaration for teacher.
 
 65
 00:03:05.659 --> 00:03:07.340
-你有听过吗 答案是吗 ?
-Have you ever heard it?
-And the answer is?
+你听过吗？答案是？
+Have you ever heard it? And the answer is?
 
 66
 00:03:07.340 --> 00:03:08.234
->> 扬声器 2: 否。 >> 凯尔: 为什么，
-&gt;&gt; Speaker 2: No.
-&gt;&gt; Kyle: Why,
+&gt；&gt；扬声器2：否。凯尔：为什么，
+&gt;&gt; Speaker 2: No. &gt;&gt; Kyle: Why,
 
 67
 00:03:08.234 --> 00:03:11.079
-我们为什么不听老师的
+为什么我们没有听说过老师？
 why haven't we heard of teacher?
 
 68
 00:03:11.079 --> 00:03:11.778
->演讲者 3: 这是一个新的水桶。
+&gt；&gt；扬声器3：这是一个新的桶。
 &gt;&gt; Speaker 3: It's a new bucket.
 
 69
 00:03:11.778 --> 00:03:14.068
->> 凯尔: 我们在这里跟一个不同的水桶说话，对。
-&gt;&gt; Kyle: Cuz we're talking to
-a different bucket here, right.
+&gt；&gt；Kyle：因为我们在这里谈论的是一个不同的桶，对吧。
+&gt;&gt; Kyle: Cuz we're talking to a different bucket here, right.
 
 70
 00:03:14.068 --> 00:03:17.882
-重要的是牢记这一点因为当我们进行处理的时候
-And it's important to keep that in mind
-because when we get to processing,
+记住这一点很重要，因为当我们开始处理时，
+And it's important to keep that in mind because when we get to processing,
 
 71
 00:03:17.882 --> 00:03:19.219
-我们会问其他的范围
+我们将询问其他范围。
 we will ask other scopes.
 
 72
 00:03:19.219 --> 00:03:23.247
-但我们只是在考虑这是正式声明
-But here we're only considering,
-since it's a formal declaration,
+但在这里我们只是考虑，因为这是一个正式的声明，
+But here we're only considering, since it's a formal declaration,
 
 73
 00:03:23.247 --> 00:03:27.015
-我们只是要求它是为了这个特定的范围而创建的吗
-we're only asking has it been created for
-this particular scope?
+我们只是问它是为这个特定的作用域创建的吗？
+we're only asking has it been created for this particular scope?
 
 74
 00:03:27.015 --> 00:03:30.615
-答案是不，但你的颜色是大理石吗 ?
-And the answer is no, but
-here's your what color marble?
+答案是没有，但这是你的什么颜色的大理石？
+And the answer is no, but here's your what color marble?
 
 75
 00:03:30.615 --> 00:03:31.229
->> 演讲者 2: 蓝色。
+&gt；&gt；扬声器2：蓝色。
 &gt;&gt; Speaker 2: Blue.
 
 76
 00:03:31.229 --> 00:03:34.849
->> 凯尔: 蓝色大理石，好， [SOUND] 现在它在蓝色的桶里。
-&gt;&gt; Kyle: Blue marble, okay,
-[SOUND] now it's in the blue bucket.
+&gt；&gt；Kyle：蓝色大理石，好的，[声音]现在它在蓝色的桶里。
+&gt;&gt; Kyle: Blue marble, okay, [SOUND] now it's in the blue bucket.
 
 77
 00:03:34.849 --> 00:03:37.501
-我们在那个功能上看不到任何正式的声明
-We don't see any more formal
-declarations in that function, so
+我们在该函数中看不到任何更正式的声明，所以
+We don't see any more formal declarations in that function, so
 
 78
 00:03:37.501 --> 00:03:39.719
-我们又回到了全球范围的红桶里
-we step back out to the global scope,
-the red bucket.
+我们退回到全局范围，红色的桶。
+we step back out to the global scope, the red bucket.
 
 79
 00:03:41.060 --> 00:03:43.868
-我们发现的下一个正式声明是在第 8 行。
-The next formal declaration
-we find is on line 8.
+我们找到的下一个正式声明在第8行。
+The next formal declaration we find is on line 8.
 
 80
 00:03:43.868 --> 00:03:48.099
-全局范围，我有一个叫标识的正式声明吗 ?
-Hey, global scope, I have a formal
-declaration for an identifier called?
+嘿，全局范围，我有一个正式的标识符声明，叫做？
+Hey, global scope, I have a formal declaration for an identifier called?
 
 81
 00:03:48.099 --> 00:03:48.719
->> 扬声器 2: 询问。
+&gt；&gt；扬声器2：询问。
 &gt;&gt; Speaker 2: Ask.
 
 82
 00:03:48.719 --> 00:03:49.668
->> 凯尔: 问，听说过吗 ?
+&GT；&GT；Kyle：问，听说过吗？
 &gt;&gt; Kyle: Ask, ever heard of it?
 
 83
 00:03:49.668 --> 00:03:50.819
-答案是吗 ?
+答案是？
 And the answer is?
 
 84
 00:03:50.819 --> 00:03:51.591
->> 扬声器 2: 否。
+&gt；&gt；扬声器2：否。
 &gt;&gt; Speaker 2: No.
 
 85
 00:03:51.591 --> 00:03:53.159
->> 凯尔: 但这里是您的 - > > 扬声器 2: 红色。
-&gt;&gt; Kyle: But here's your-
-&gt;&gt; Speaker 2: Red.
+&gt；&gt；Kyle：但这是您的-&gt；&gt；扬声器2：红色。
+&gt;&gt; Kyle: But here's your- &gt;&gt; Speaker 2: Red.
 
 86
 00:03:53.159 --> 00:03:57.658
->> 凯尔: 红色的大理石，伟大的，我们把红色的大理石扔到红色的桶里。
-&gt;&gt; Kyle: Red marble, great, we dropped the
-[SOUND] the red marble in the red bucket.
+&gt；&gt；Kyle：红色的大理石，太棒了，我们把红色的大理石扔进了红色的桶里。
+&gt;&gt; Kyle: Red marble, great, we dropped the [SOUND] the red marble in the red bucket.
 
 87
 00:03:57.658 --> 00:04:02.372
-顺便说下，全球范围，那个标识符是指向一个新功能，所以
-By the way, global scope, that identifier
-is pointing at a new function, so
+顺便说一下，全局范围，该标识符指向一个新函数，所以
+By the way, global scope, that identifier is pointing at a new function, so
 
 88
 00:04:02.372 --> 00:04:03.689
-我们需要一个新的水桶
+我们需要一个新桶。
 we need a new bucket.
 
 89
 00:04:03.689 --> 00:04:05.679
-让我们把它做个绿色
+让我们把这件弄成绿色。
 Let's make this one green.
 
 90
 00:04:05.679 --> 00:04:08.759
-全球范围说，当然，这里是你的绿色桶。
-And the global scope says,
-sure, here's your green bucket.
+全球范围说，当然，这是你的绿色水桶。
+And the global scope says, sure, here's your green bucket.
 
 91
 00:04:08.759 --> 00:04:12.058
-现在我们要和绿桶打交道了
-Now we're gonna step into that function
-and deal with the green bucket.
+现在我们将进入该函数并处理绿色桶。
+Now we're gonna step into that function and deal with the green bucket.
 
 92
 00:04:12.058 --> 00:04:16.391
-绿色桶，嘿范围问，我有正式的声明吗 ?
-Hey green bucket, hey scope of ask,
-I have a formal declaration for?
+嘿绿桶，嘿问范围，我有正式申报吗？
+Hey green bucket, hey scope of ask, I have a formal declaration for?
 
 93
 00:04:16.391 --> 00:04:17.451
->> 扬声器 2: 问题。
+&gt；&gt；扬声器2：问题。
 &gt;&gt; Speaker 2: Question.
 
 94
 00:04:17.451 --> 00:04:19.459
->> 凯尔: 问题，听过吗 ?
+&gt；&gt；Kyle：问题，听说过吗？
 &gt;&gt; Kyle: Question, ever heard of it?
 
 95
 00:04:19.459 --> 00:04:20.459
-答案是吗 ?
+答案是？
 And the answer is?
 
 96
 00:04:20.459 --> 00:04:21.269
->> 扬声器 2: 否。
+&gt；&gt；扬声器2：否。
 &gt;&gt; Speaker 2: No.
 
 97
 00:04:21.269 --> 00:04:22.846
->> 凯尔: 但这里是你的 -- > 扬声器 2: 绿色大理石。
-&gt;&gt; Kyle: But here's your-
-&gt;&gt; Speaker 2: Green marble.
+&gt；&gt；Kyle：但这是你的-&gt；&gt；扬声器2：绿色大理石。
+&gt;&gt; Kyle: But here's your- &gt;&gt; Speaker 2: Green marble.
 
 98
 00:04:22.846 --> 00:04:26.637
->> 凯尔: [SOUND] 绿色大理石就是绿色的桶。
-&gt;&gt; Kyle: [SOUND] Green marble
-goes the green bucket.
+&gt；&gt；Kyle：[声音]绿色大理石走绿色桶。
+&gt;&gt; Kyle: [SOUND] Green marble goes the green bucket.
 
 99
 00:04:26.637 --> 00:04:30.194
-在该职能中不再有正式声明，我们将重返全球
-No more formal declarations in that
-function, we step back out to the global
+在该函数中没有更正式的声明，我们将退回到全局
+No more formal declarations in that function, we step back out to the global
 
 100
 00:04:30.194 --> 00:04:34.319
-在全球范围内，没有更正式的声明，我们也做了处理。
-scope, no more formal declarations in the
-global scope, and we're done processing.
+作用域，在全局作用域中没有更正式的声明，我们就完成了处理。
+scope, no more formal declarations in the global scope, and we're done processing.
 
 101
 00:04:34.319 --> 00:04:36.668
-现在它正在处理这个代码，让我们执行代码。
-Now it's process this code,
-let's execute the code.
+现在它正在处理这段代码，让我们执行代码。
+Now it's process this code, let's execute the code.
 
 102
 00:04:36.668 --> 00:04:40.334
-记住所有范围的计划一切都已经完成了
-Remember all the plans for all the scopes
-and everything is already done,
+记住所有范围的所有计划，一切都已经完成了，
+Remember all the plans for all the scopes and everything is already done,
 
 103
 00:04:40.334 --> 00:04:43.899
-我们已经没有任何装饰了我们只是有可执行的密码
-we don't have any decoration anymore,
-we just have executable code.
+我们不再有任何装饰，我们只有可执行的代码。
+we don't have any decoration anymore, we just have executable code.
 
 104
 00:04:43.899 --> 00:04:49.889
-一个是要执行的，我们知道老师在什么岗位上 ?
-Line one is going to execute, and we know
-that teacher is in what kind of position?
+第一行将要执行，我们知道老师是在什么样的位置？
+Line one is going to execute, and we know that teacher is in what kind of position?
 
 105
 00:04:49.889 --> 00:04:52.269
-老师的位置是什么 ?
+老师在什么位置？
 What position is teacher in?
 
 106
 00:04:52.269 --> 00:04:53.899
-要么是源要么是
+它不是一个来源就是一个？
 It's either a source or it's a?
 
 107
 00:04:53.899 --> 00:04:54.528
->> 扬声器 2: 目标。
+&gt；&gt；扬声器2：目标。
 &gt;&gt; Speaker 2: Target.
 
 108
 00:04:54.528 --> 00:04:56.911
->> 凯尔: 目标，在此处的目标位置。
-&gt;&gt; Kyle: Target, and
-it's in a target position here.
+&gt；&gt；Kyle：目标，它在这里的目标位置。
+&gt;&gt; Kyle: Target, and it's in a target position here.
 
 109
 00:04:56.911 --> 00:05:00.389
-所以我们要说我们现在是执行引擎， VM，
-So we're going to say we are now
-the execution engine, the VM,
+所以我们要说我们现在是执行引擎，VM，
+So we're going to say we are now the execution engine, the VM,
 
 110
 00:05:00.389 --> 00:05:01.968
-不管你想说什么
+随便你怎么叫。
 whatever you wanna call it.
 
 111
 00:05:01.968 --> 00:05:05.379
-我们将执行这一代码，我们将会说，嘿范围管理人员，
-We are going to execute this code and
-we are going to say, hey scope manager,
+我们将执行这段代码，我们会说，嘿，范围管理器，
+We are going to execute this code and we are going to say, hey scope manager,
 
 112
 00:05:05.379 --> 00:05:08.810
-全球范围，我有老师的目标参考，听说过吗 ?
-hey global scope, I have a target
-reference for teacher, ever heard of it?
+嘿，全球范围，我有一个老师的目标参考，听说过吗？
+hey global scope, I have a target reference for teacher, ever heard of it?
 
 113
 00:05:08.810 --> 00:05:09.824
-答案是吗 ?
+答案是？
 And the answer is?
 
 114
 00:05:09.824 --> 00:05:10.646
->> 扬声器 2: 是。 >> 凯尔: 是，
-&gt;&gt; Speaker 2: Yes.
-&gt;&gt; Kyle: Yes,
+&gt；&gt；扬声器2：是的。凯尔：是的，
+&gt;&gt; Speaker 2: Yes. &gt;&gt; Kyle: Yes,
 
 115
 00:05:10.646 --> 00:05:12.550
-因为范围内就有一个。
+因为范围内有一个。
 because there is one in the scope.
 
 116
 00:05:12.550 --> 00:05:14.119
-这里是你的 -- > 扬声器 3: 红色大理石。
-So here’s your-
-&gt;&gt; Speaker 3: Red marble.
+这是你的-&gt；&gt；扬声器3：红色大理石。
+So here’s your- &gt;&gt; Speaker 3: Red marble.
 
 117
 00:05:14.119 --> 00:05:15.939
->> 凯尔: 红色的大理石，非常感谢。
+&gt；&gt；Kyle：红色大理石，非常感谢。
 &gt;&gt; Kyle: Red marble, thank you very much.
 
 118
 00:05:15.939 --> 00:05:17.759
-我去右边我找到了价值
-I go to the right hand side,
-I find the value.
+我走到右手边，我找到了价值。
+I go to the right hand side, I find the value.
 
 119
 00:05:17.759 --> 00:05:21.420
-我把它分配给目标，我们用第 1 行做。
-I assign it in the target,
-and we are done with line 1.
+我在目标中分配它，我们完成了第1行。
+I assign it in the target, and we are done with line 1.
 
 120
 00:05:21.420 --> 00:05:23.759
-现在行刑将转移到第 13 行因为记住
-Now execution is gonna move to line 13,
-because remember,
+现在执行将移至第13行，因为请记住，
+Now execution is gonna move to line 13, because remember,
 
 121
 00:05:23.759 --> 00:05:25.930
-所有声明都被汇编了
-all the declarations
-have been compiled away.
+所有的声明都已汇编完毕。
+all the declarations have been compiled away.
 
 122
 00:05:25.930 --> 00:05:27.959
-我们还是在那里看到的是有象征意义的
-We still see them there for
-symbolic reasons, but
+出于象征性的原因，我们仍然可以在那里看到它们，但是
+We still see them there for symbolic reasons, but
 
 123
 00:05:27.959 --> 00:05:31.589
-他们并不是这样做的，对，这只是一个可执行的代码。
-they're not really there like that,
-right, this is only executable code.
+它们不是真的那样存在的，对吧，这只是可执行代码。
+they're not really there like that, right, this is only executable code.
 
 124
 00:05:31.589 --> 00:05:33.658
-执行移至第 13 行。
+所以执行移到第13行。
 So execution moves to line 13.
 
 125
 00:05:33.658 --> 00:05:36.759
-第 13 行本身如何执行?
+第13行本身是如何执行的？
 How does line 13 itself execute?
 
 126
 00:05:36.759 --> 00:05:40.095
-全球范围，我有什么参考?
-Hey, global scope,
-I have a what kind of reference?
+嘿，全球范围内，我有一个什么样的推荐人？
+Hey, global scope, I have a what kind of reference?
 
 127
 00:05:40.095 --> 00:05:40.988
-源。
+来源。
 Source.
 
 128
 00:05:40.988 --> 00:05:42.170
->> 扬声器 2: 我有一个源引用。
+&gt；&gt；扬声器2：我有一个源引用。
 &gt;&gt; Speaker 2: I have a source reference.
 
 129
 00:05:42.170 --> 00:05:43.608
-> > 凯尔: 下面就在下面。
-&gt;&gt; Kyle: It's right down
-here at the bottom.
+&gt；&gt；Kyle：它就在下面的底部。
+&gt;&gt; Kyle: It's right down here at the bottom.
 
 130
 00:05:43.608 --> 00:05:45.269
-我有一个资料来源
+我有一个来源参考。
 I have a source reference.
 
 131
 00:05:45.269 --> 00:05:47.420
-为什么是源参考?
+为什么它是源引用？
 Why is it a source reference?
 
 132
 00:05:47.420 --> 00:05:49.420
->演讲者 4: 正在获得价值，对吗 ?
+&gt；&gt；扬声器4：它正在取值，对吗？
 &gt;&gt; Speaker 4: It's getting values, right?
 
 133
 00:05:49.420 --> 00:05:52.409
->> 凯尔: 最好的答案是它不是目标引用。
-&gt;&gt; Kyle: The best answer is because
-it's not a target reference.
+&gt；&gt；Kyle：最好的答案是因为它不是一个目标引用。
+&gt;&gt; Kyle: The best answer is because it's not a target reference.
 
 134
 00:05:52.409 --> 00:05:56.389
-如果它没有接收目标，那么它必须是源， cuz 是唯一的两个选项。
-If it's not receiving a target, it must be
-a source, cuz that's the only two options.
+如果它没有接收到目标，它一定是一个源，因为这是唯一的两个选择。
+If it's not receiving a target, it must be a source, cuz that's the only two options.
 
 135
 00:05:56.389 --> 00:05:58.630
-所以我们清楚地看到它没有接收到目标
-So we clearly see it's
-not receiving a target,
+所以我们清楚地看到它没有接收到目标，
+So we clearly see it's not receiving a target,
 
 136
 00:05:58.630 --> 00:06:01.778
-它不是目标接收对象所以它必须是一个源
-it's not the target receiving something,
-so it must be a source.
+它不是目标接收到的东西，所以它一定是一个源。
+it's not the target receiving something, so it must be a source.
 
 137
 00:06:01.778 --> 00:06:04.331
-那么，全球范围，我还有别的课源参考，
-So, hey, global scope,
-I have a source reference for other class,
+所以，嘿，全局范围，我有一个其他类的源引用，
+So, hey, global scope, I have a source reference for other class,
 
 138
 00:06:04.331 --> 00:06:05.040
-每个人都听到了吗
+每个人都听说过吗？
 every heard of it?
 
 139
 00:06:05.040 --> 00:06:06.230
-答案是吗 ?
+答案是？
 And the answer is?
 
 140
 00:06:06.230 --> 00:06:06.778
->> 扬声器 2: 是。
+&gt；&gt；扬声器2：是的。
 &gt;&gt; Speaker 2: Yes.
 
 141
 00:06:06.778 --> 00:06:08.781
->> 凯尔: 是的，这里是你的
+凯尔：是的，这是你的。
 &gt;&gt; Kyle: Yes, here is your.
 
 142
 00:06:08.781 --> 00:06:09.420
->> 扬声器 2: 红色大理石。
+&gt；&gt；扬声器2：红色大理石。
 &gt;&gt; Speaker 2: Red marble.
 
 143
 00:06:09.420 --> 00:06:13.603
->> 凯尔: 红色的大理石，我们去看红色大理石的东西，在概念上，
-&gt;&gt; Kyle: Red marble, we go and look
-what's in that red marble, conceptually,
+&gt；&gt；Kyle：红色大理石，我们去看看红色大理石里有什么，概念上，
+&gt;&gt; Kyle: Red marble, we go and look what's in that red marble, conceptually,
 
 144
 00:06:13.603 --> 00:06:15.502
-那是什么记忆区
+那个记忆区域里有什么？
 what's in that area of memory?
 
 145
 00:06:15.502 --> 00:06:18.410
-那红色的大理石现在装的是什么
+那个红色的大理石现在装的是什么？
 What is that red marble holding right now?
 
 146
 00:06:18.410 --> 00:06:19.192
->> 扬声器 2: 蓝色存储区。
+&gt；&gt；扬声器2：蓝色桶。
 &gt;&gt; Speaker 2: Blue bucket.
 
 147
 00:06:19.192 --> 00:06:23.119
->> 凯尔: 对这个函数的引用，我们称之为其他类，对吗 ?
-&gt;&gt; Kyle: A reference to that function
-which we call other class, right?
+&gt；&gt；Kyle：对我们称为其他类的函数的引用，对吗？
+&gt;&gt; Kyle: A reference to that function which we call other class, right?
 
 148
 00:06:23.119 --> 00:06:25.240
-如果你愿意的话那是蓝色的水桶
+如果你愿意，那就是蓝色的桶。
 It's the blue bucket if you will, exactly.
 
 149
 00:06:25.240 --> 00:06:27.012
-所以现在我们要执行这个
+所以现在我们要执行它，
 So now we're going to execute that,
 
 150
 00:06:27.012 --> 00:06:29.709
-这条线的末端是括号里的
-which is what the parentheses
-do on the end of that line.
+这就是该行末尾的圆括号所做的事情。
+which is what the parentheses do on the end of that line.
 
 151
 00:06:29.709 --> 00:06:31.389
-他们执行我们发现的功能。
+它们执行我们发现的函数。
 They execute the function that we found.
 
 152
 00:06:31.389 --> 00:06:34.759
-如果我们没有找到一个功能，我们就会得到一个什么样的错误，
-If we hadn't found a function we would
-have gotten a what kind of error,
+如果我们没有找到一个函数，我们会得到一个什么样的错误，
+If we hadn't found a function we would have gotten a what kind of error,
 
 153
 00:06:34.759 --> 00:06:35.430
-有人记得吗
+有人记得吗？
 anybody remember?
 
 154
 00:06:36.759 --> 00:06:39.399
-类型错误，引用错误将不同。
-A type error,
-reference errors will be different.
+一个类型错误，引用错误将是不同的。
+A type error, reference errors will be different.
 
 155
 00:06:39.399 --> 00:06:41.189
-我们只要一点点就好了好吗
-We'll get to those in just a little bit,
-okay?
+我们很快就会讲到这些，好吗？
+We'll get to those in just a little bit, okay?
 
 156
 00:06:41.189 --> 00:06:44.288
-好，我们正在执行其他类的功能。
-All right, so
-we are executing the other class function.
+好的，我们正在执行另一个类函数。
+All right, so we are executing the other class function.
 
 157
 00:06:44.288 --> 00:06:47.226
-执行移至第 4 行。
+执行移动到第4行。
 Execution moves to line 4.
 
 158
 00:06:47.226 --> 00:06:48.735
-什么范围?
+嘿，什么范围？
 Hey, what scope?
 
 159
 00:06:48.735 --> 00:06:50.081
->> 演讲者 2: 蓝色。 >> 凯尔: 蓝色范围，
-&gt;&gt; Speaker 2: Blue.
-&gt;&gt; Kyle: Blue scope,
+&gt；&gt；扬声器2：蓝色。&gt；&gt；Kyle：蓝色范围，
+&gt;&gt; Speaker 2: Blue. &gt;&gt; Kyle: Blue scope,
 
 160
 00:06:50.081 --> 00:06:51.808
-其他类的范围。
+嘿其他类的范围。
 hey scope of other class.
 
 161
 00:06:51.808 --> 00:06:53.668
-我有什么参考?
+我有一个什么样的推荐人？
 I have a what kind of reference?
 
 162
 00:06:53.668 --> 00:06:54.718
->> 扬声器 2: 目标。
+&gt；&gt；扬声器2：目标。
 &gt;&gt; Speaker 2: Target.
 
 163
 00:06:54.718 --> 00:06:56.639
->> 凯尔: 我有目标引用吗 ?
+&gt；&gt；Kyle：我有一个目标参考？
 &gt;&gt; Kyle: I have a target reference for?
 
 164
 00:06:56.639 --> 00:06:57.843
->> 扬声器 2: 教师。 >> 凯尔: 听过，
-&gt;&gt; Speaker 2: Teacher.
-&gt;&gt; Kyle: Ever heard of it, and
+&gt；&gt；扬声器2：教师。&gt；&gt；Kyle：听说过吗？
+&gt;&gt; Speaker 2: Teacher. &gt;&gt; Kyle: Ever heard of it, and
 
 165
 00:06:57.843 --> 00:06:58.538
-答案是什么
+答案是？
 the answer is?
 
 166
 00:06:58.538 --> 00:06:59.370
->> 扬声器 2: 是。
+&gt；&gt；扬声器2：是的。
 &gt;&gt; Speaker 2: Yes.
 
 167
 00:06:59.370 --> 00:07:00.509
->凯尔 : 这是你的吗 ?
+&gt；&gt；Kyle：这是你的？
 &gt;&gt; Kyle: Here's your?
 
 168
 00:07:00.509 --> 00:07:01.009
->> 扬声器 2: 蓝色大理石。
+&gt；&gt；扬声器2：蓝色大理石。
 &gt;&gt; Speaker 2: Blue marble.
 
 169
 00:07:01.009 --> 00:07:03.290
->> 凯尔: 蓝色大理石，伟大，现在我们有一个蓝色大理石。
-&gt;&gt; Kyle: Blue marble, great,
-so now we have a blue marble.
+&gt；&gt；Kyle：蓝色大理石，太棒了，所以现在我们有了一个蓝色大理石。
+&gt;&gt; Kyle: Blue marble, great, so now we have a blue marble.
 
 170
 00:07:03.290 --> 00:07:04.559
-我们到右边。
+我们去右边。
 We go to the right hand side.
 
 171
 00:07:04.559 --> 00:07:05.848
-我们找到了苏西的弦
+我们找到了绳子苏西。
 We find the string Suzy.
 
 172
 00:07:05.848 --> 00:07:10.160
-我们把它分配给第 4 行
+我们分配它，然后完成第4行。
 We assign it and we're done with line 4.
 
 173
 00:07:10.160 --> 00:07:13.471
-第五行我们有什么参考吗
+第五行，我们有一个什么样的参考？
 Line 5, we have a what kinda reference?
 
 174
 00:07:15.509 --> 00:07:16.178
->> 扬声器 2: 源。
+&gt；&gt；扬声器2：来源。
 &gt;&gt; Speaker 2: A source.
 
 175
 00:07:16.178 --> 00:07:17.935
->> 凯尔: 源引用 ?
+&gt；&gt；Kyle：来源参考？
 &gt;&gt; Kyle: A source reference for?
 
 176
 00:07:17.935 --> 00:07:18.928
->> 扬声器 2: 全局作用域。
+&gt；&gt；扬声器2：全局范围。
 &gt;&gt; Speaker 2: Global scope.
 
 177
 00:07:18.928 --> 00:07:21.576
->> 演讲者 4: 控制台。
+&gt；&gt；扬声器4：控制台。
 &gt;&gt; Speaker 4: Console.
 
 178
 00:07:21.576 --> 00:07:22.869
->> 凯尔: 控制台的源引用。
+&gt；&gt；Kyle：控制台的源引用。
 &gt;&gt; Kyle: A source reference for console.
 
 179
 00:07:22.869 --> 00:07:24.481
-你的范围呢
+嘿范围？
 Hey scope of?
 
 180
 00:07:25.769 --> 00:07:27.120
->> 扬声器 3: 蓝色存储区。
+&gt；&gt；扬声器3：蓝色桶。
 &gt;&gt; Speaker 3: Blue bucket.
 
 181
 00:07:27.120 --> 00:07:28.569
->> 凯尔: 其他类的范围。
+&gt；&gt；Kyle：嘿，其他类的范围。
 &gt;&gt; Kyle: Hey scope of other class.
 
 182
 00:07:28.569 --> 00:07:30.418
-你有没有听过控制台，答案是?
-Have you ever heard of console,
-and the answer is?
+你听说过控制台吗？答案是？
+Have you ever heard of console, and the answer is?
 
 183
 00:07:30.418 --> 00:07:31.122
->> 扬声器 2: 否。
+&gt；&gt；扬声器2：否。
 &gt;&gt; Speaker 2: No.
 
 184
 00:07:31.122 --> 00:07:33.422
->> 凯尔: 否，那么下一步呢 ?
+&GT；&GT；凯尔：不，那么我们下一步去哪里？
 &gt;&gt; Kyle: No, so where do we go next?
 
 185
 00:07:33.422 --> 00:07:34.470
->> 扬声器 2: 向上。 > > 凯尔: 我们上一级，
-&gt;&gt; Speaker 2: Up.
-&gt;&gt; Kyle: We go up one level,
+&gt；&gt；扬声器2：up。&GT；&GT；Kyle：我们上升一个层次，
+&gt;&gt; Speaker 2: Up. &gt;&gt; Kyle: We go up one level,
 
 186
 00:07:34.470 --> 00:07:35.718
-在这件案子里是全球性的
+在这种情况下是全局的。
 which in this case is the global.
 
 187
 00:07:35.718 --> 00:07:39.404
-我们问同一个问题，全球范围，我有一个源参考
-And we ask the same question, hey global
-scope, I have a source reference for
+我们问同样的问题，嘿，全球范围，我有一个来源参考
+And we ask the same question, hey global scope, I have a source reference for
 
 188
 00:07:39.404 --> 00:07:41.840
-控制台，听说过它，答案是吗 ?
-console, ever heard of it,
-and the answer is?
+安慰，听说过吗，答案是？
+console, ever heard of it, and the answer is?
 
 189
 00:07:41.840 --> 00:07:43.564
->> 扬声器 2: 是。 >> 凯尔: 虽然我们没有申报，
-&gt;&gt; Speaker 2: Yes.
-&gt;&gt; Kyle: Even though we didn't declare it,
+&gt；&gt；扬声器2：是的。&GT；&GT；Kyle：即使我们没有申报，
+&gt;&gt; Speaker 2: Yes. &gt;&gt; Kyle: Even though we didn't declare it,
 
 190
 00:07:43.564 --> 00:07:45.478
-JavaScript 环境已提供给我们。
-the JavaScript environment
-has provided it to us.
+JavaScript环境已经为我们提供了它。
+the JavaScript environment has provided it to us.
 
 191
 00:07:45.478 --> 00:07:47.627
-所以实际上就是在这个范围内，是不是在这个范围内，
-So in effect it's there,
-whether it's in the scope or not,
+所以实际上它就在那里，不管它在不在范围内，
+So in effect it's there, whether it's in the scope or not,
 
 192
 00:07:47.627 --> 00:07:48.819
-实际上是我们可以得到的
+实际上它对我们是可用的。
 in effect it's available to us.
 
 193
 00:07:48.819 --> 00:07:51.279
-所以我们得到的回应是肯定的。
+所以我们得到的回答是肯定的。
 So the response that we get is yes.
 
 194
 00:07:51.279 --> 00:07:54.358
-这是你的红色大理石，也许是粉红色大理石。
-Here's your red marble, essentially,
-maybe it's a pink marble.
+这是你的红色大理石，本质上，可能是粉红色的大理石。
+Here's your red marble, essentially, maybe it's a pink marble.
 
 195
 00:07:54.358 --> 00:07:56.430
-但这是你的红色大理石好吗
+但这是你的红色大理石，好吗？
 But here's your red marble, okay?
 
 196
 00:07:56.430 --> 00:08:00.461
-然后，我们可以访问一个方法，一个对象上的属性，等等。
-And then we can access a method,
-a property on the object, and so on and so
+然后我们可以访问方法、对象上的属性等等
+And then we can access a method, a property on the object, and so on and so
 
 197
 00:08:00.461 --> 00:08:03.189
-我们可以执行这个功能好吗
-forth, and
-we can execute the function, okay?
+第四，我们可以执行函数，好吗？
+forth, and we can execute the function, okay?
 
 198
 00:08:03.189 --> 00:08:07.170
-现在，执行已完成，第 13 行，我们移至第 14 行。
-Now, execution's finished with line 13,
-we move to line 14.
+现在，第13行的执行已经完成，我们移到第14行。
+Now, execution's finished with line 13, we move to line 14.
 
 199
 00:08:07.170 --> 00:08:08.778
-14 的执行完全如 13。
+14执行与13完全相同。
 14 executes exactly like 13.
 
 200
 00:08:08.778 --> 00:08:12.028
-嘿全球范围我有什么参考
-Hey, global scope I have
-a what kind of reference?
+嘿，全球范围我有一个什么样的推荐人？
+Hey, global scope I have a what kind of reference?
 
 201
 00:08:12.028 --> 00:08:12.552
->> 扬声器 2: 源引用。
+&gt；&gt；扬声器2：源引用。
 &gt;&gt; Speaker 2: Source reference.
 
 202
 00:08:12.552 --> 00:08:13.848
->> 凯尔: 源引用 ?
+&gt；&gt；Kyle：来源参考？
 &gt;&gt; Kyle: Source reference for?
 
 203
 00:08:13.848 --> 00:08:14.372
->> 演讲者 2: 应用程序。
+&gt；&gt；扬声器2：应用程序。
 &gt;&gt; Speaker 2: Apps.
 
 204
 00:08:14.372 --> 00:08:16.738
->> 凯尔: 听过它，答案是吗 ?
-&gt;&gt; Kyle: Ever heard of it and
-the answer is?
+&GT；&GT；Kyle：听说过吗？答案是？
+&gt;&gt; Kyle: Ever heard of it and the answer is?
 
 205
 00:08:16.738 --> 00:08:17.831
->> 扬声器 2: 是。 >> 凯尔: 这是你的
-&gt;&gt; Speaker 2: Yes.
-&gt;&gt; Kyle: Here's your.
+&gt；&gt；扬声器2：是的。凯尔：这是你的。
+&gt;&gt; Speaker 2: Yes. &gt;&gt; Kyle: Here's your.
 
 206
 00:08:17.831 --> 00:08:18.959
->> 扬声器 2: 绿色大理石。
+&gt；&gt；扬声器2：绿色大理石。
 &gt;&gt; Speaker 2: Green marble.
 
 207
 00:08:18.959 --> 00:08:19.764
->演讲者 3: 红色大理石。
+&gt；&gt；扬声器3：红色大理石。
 &gt;&gt; Speaker 3: Red marble.
 
 208
 00:08:19.764 --> 00:08:20.533
->> 凯尔: 红色大理石。
+&gt；&gt；Kyle：红色大理石。
 &gt;&gt; Kyle: Red marble.
 
 209
 00:08:20.533 --> 00:08:22.346
-记住我们现在在全球范围内
+记住，我们现在是在全局范围内。
 Remember we're in the global scope now.
 
 210
 00:08:22.346 --> 00:08:25.093
-所以我们讨论的是这个范围内的一个标识，一个红色的大理石。
-So we're talking about an identifier
-in that scope, a red marble.
+所以我们讨论的是那个范围内的标识符，一个红色的大理石。
+So we're talking about an identifier in that scope, a red marble.
 
 211
 00:08:25.093 --> 00:08:27.211
->> 演讲者 2: [LAUGH] >> 凯尔: 好的，好的
-&gt;&gt; Speaker 2: [LAUGH]
-&gt;&gt; Kyle: Okay, all right, so
+&gt；&gt；扬声器2：[笑]&gt；&gt；Kyle：好的，那么
+&gt;&gt; Speaker 2: [LAUGH] &gt;&gt; Kyle: Okay, all right, so
 
 212
 00:08:27.211 --> 00:08:29.620
-现在我们有了红色大理石
+现在我们有了红色的大理石。
 now we have the red marble.
 
 213
 00:08:29.620 --> 00:08:33.090
-内存在那个位置有什么 ?
-What's being held in
-that location of memory?
+内存的那个位置保存着什么？
+What's being held in that location of memory?
 
 214
 00:08:33.090 --> 00:08:34.918
->> 扬声器 4: 红色大理石表示绿色水桶。
-&gt;&gt; Speaker 4: Red marble
-says go to green bucket.
+&gt；&gt；扬声器4：红色大理石说去绿色桶。
+&gt;&gt; Speaker 4: Red marble says go to green bucket.
 
 215
 00:08:34.918 --> 00:08:36.334
->> 凯尔: 它是- >> 演讲者 4: 否?
-&gt;&gt; Kyle: It is-
-&gt;&gt; Speaker 4: No?
+&gt；&gt；Kyle：它是-&gt；&gt；扬声器4：不？
+&gt;&gt; Kyle: It is- &gt;&gt; Speaker 4: No?
 
 216
 00:08:36.334 --> 00:08:40.909
->> 凯尔: 特定大理石正在引用具有以下功能的函数 :
-&gt;&gt; Kyle: That particular marble is
-referencing the function which has
+&gt；&gt；Kyle：该特定大理石引用的函数具有
+&gt;&gt; Kyle: That particular marble is referencing the function which has
 
 217
 00:08:40.909 --> 00:08:43.289
-与它相连的绿色范围。
+连接到它的绿色范围。
 the green scope attached to it.
 
 218
 00:08:43.289 --> 00:08:44.980
-但是这里是功能参考权吗 ?
+但这里是函数引用，对吧？
 But here's the function reference right?
 
 219
 00:08:44.980 --> 00:08:47.808
-函数有作用域，但它们不是作用域吗?
-Functions have a scope but
-they aren't a scope okay?
+函数有作用域，但它们不是作用域，好吗？
+Functions have a scope but they aren't a scope okay?
 
 220
 00:08:47.808 --> 00:08:49.588
-这是功能参考。
+这是函数引用。
 So here's the function reference.
 
 221
 00:08:49.588 --> 00:08:52.911
-我们按照你的意思来执行它
-We execute it which is going to
-end up invoking as you were saying
+我们执行它，它最终会像您所说的那样调用
+We execute it which is going to end up invoking as you were saying
 
 222
 00:08:52.911 --> 00:08:53.860
-绿色的范围。
+绿色望远镜。
 the green scope.
 
 223
 00:08:53.860 --> 00:08:55.590
-现在我们在绿色水桶里
+所以现在我们在绿色的桶里。
 So now we're in the green bucket.
 
 224
 00:08:55.590 --> 00:08:57.411
-我们将执行移至第 9 行。
+我们将执行移至第9行。
 We move execution to line 9.
 
 225
 00:08:57.411 --> 00:09:00.212
-第 9 行如何执行?
+第9行是如何执行的？
 How does line 9 execute?
 
 226
 00:09:00.212 --> 00:09:01.562
-你的范围呢
+嘿，范围？
 Hey, scope of?
 
 227
 00:09:01.562 --> 00:09:03.764
->> 扬声器 2: 绿色。 >> 凯尔: 绿桶，问的范围，
-&gt;&gt; Speaker 2: Green.
-&gt;&gt; Kyle: Green bucket, hey scope of ask,
+&gt；&gt；扬声器2：绿色。&gt；&gt；Kyle：绿桶，嘿，问的范围，
+&gt;&gt; Speaker 2: Green. &gt;&gt; Kyle: Green bucket, hey scope of ask,
 
 228
 00:09:03.764 --> 00:09:05.150
-什么样的参考
+什么样的推荐人？
 what kind of reference?
 
 229
 00:09:05.150 --> 00:09:06.080
->> 扬声器 2: 目标引用。
+&gt；&gt；扬声器2：目标引用。
 &gt;&gt; Speaker 2: Target reference.
 
 230
 00:09:06.080 --> 00:09:07.878
->> 凯尔: 目标引用请求，是否已听过 ?
-&gt;&gt; Kyle: Target reference request,
-ever heard of it?
+&gt；&gt；Kyle：目标参考请求，听说过吗？
+&gt;&gt; Kyle: Target reference request, ever heard of it?
 
 231
 00:09:07.878 --> 00:09:08.798
-答案是吗 ?
+答案是？
 And the answer is?
 
 232
 00:09:08.798 --> 00:09:11.038
->> 扬声器 2: 是。 >> 凯尔: 是的，这是你的吗 ?
-&gt;&gt; Speaker 2: Yes.
-&gt;&gt; Kyle: Yes, here's your?
+&gt；&gt；扬声器2：是的。凯尔：是的，这是你的？
+&gt;&gt; Speaker 2: Yes. &gt;&gt; Kyle: Yes, here's your?
 
 233
 00:09:11.038 --> 00:09:11.620
->> 扬声器 2: 绿色大理石。
+&gt；&gt；扬声器2：绿色大理石。
 &gt;&gt; Speaker 2: Green marble.
 
 234
 00:09:11.620 --> 00:09:15.817
->> 凯尔: 绿色大理石，我们把 Y 放在右边
-&gt;&gt; Kyle: Green marble, we take
-the string Y on the right hand side,
+&gt；&gt；Kyle：绿色大理石，我们取右边的字符串Y，
+&gt;&gt; Kyle: Green marble, we take the string Y on the right hand side,
 
 235
 00:09:15.817 --> 00:09:18.399
-请将其分配，现在已完成第 9 行。
+分配它，现在第9行完成了。
 assign it, and now line 9 is done.
 
 236
 00:09:18.399 --> 00:09:21.338
-最后，第 10 行，我们查找控制台。
+最后，第10行，我们查找控制台。
 Finally, line 10, we look up console.
 
 237
 00:09:21.338 --> 00:09:24.860
-我们在问的范围内找不到它，我们在哪里找到它呢 ?
-We don't find it in the scope of ask,
-where do we find it?
+我们在问的范围内找不到它，我们在哪里找到它？
+We don't find it in the scope of ask, where do we find it?
 
 238
 00:09:24.860 --> 00:09:26.576
->> 演讲者 2: 在全球 [CROSSTALK] >> 凯尔:
-&gt;&gt; Speaker 2: In the global [CROSSTALK]
-&gt;&gt; Kyle: So red marble, right,
+&gt；&gt；扬声器2：在全球[CROSSTALK]&gt；&gt；Kyle：所以红色大理石，对，
+&gt;&gt; Speaker 2: In the global [CROSSTALK] &gt;&gt; Kyle: So red marble, right,
 
 239
 00:09:26.576 --> 00:09:30.051
-我们在全球范围内找到它就像我们从第 5 行开始的那样
-we find it in the global scope,
-exactly like we did from line 5.
+我们在全局范围内找到它，就像我们在第5行中所做的那样。
+we find it in the global scope, exactly like we did from line 5.
 
 240
 00:09:30.051 --> 00:09:33.491
-但是在我们可以在控制台上调用该日志方法之前，
-But before we can call that log
-method on the console object,
+但是在我们可以调用Console对象上的log方法之前，
+But before we can call that log method on the console object,
 
 241
 00:09:33.491 --> 00:09:35.052
-我们得先做些什么
+我们首先要做什么？
 what do we have to do first?
 
 242
 00:09:35.052 --> 00:09:37.931
->> 演讲者 2: 你必须来源- >> 凯尔: 我们必须搞清楚
-&gt;&gt; Speaker 2: You have to source-
-&gt;&gt; Kyle: We've got to figure out what
+&gt；&gt；演讲者2：你必须找到来源-&gt；&gt；Kyle：我们必须弄清楚
+&gt;&gt; Speaker 2: You have to source- &gt;&gt; Kyle: We've got to figure out what
 
 243
 00:09:37.931 --> 00:09:38.519
-就是。
+那就是。
 that is.
 
 244
 00:09:38.519 --> 00:09:42.658
-那么这个问题会是，哎，范围呢 ?
-So that question is going to be,
-hey, scope of?
+所以这个问题将会是，嘿，范围？
+So that question is going to be, hey, scope of?
 
 245
 00:09:42.658 --> 00:09:43.462
->> 扬声器 2: 绿色存储区。
+&gt；&gt；扬声器2：绿色桶。
 &gt;&gt; Speaker 2: Green bucket.
 
 246
 00:09:43.462 --> 00:09:46.710
->> 凯尔: 绿桶，问的范围，我有什么参考?
-&gt;&gt; Kyle: Green bucket, hey scope of ask,
-I have a what kind of reference?
+&gt；&gt；Kyle：绿桶，嘿，问的范围，我有一个什么样的推荐人？
+&gt;&gt; Kyle: Green bucket, hey scope of ask, I have a what kind of reference?
 
 247
 00:09:46.710 --> 00:09:48.234
->> 扬声器 2: 源。 >> 凯尔: 源引用请求，
-&gt;&gt; Speaker 2: Source.
-&gt;&gt; Kyle: Source reference request,
+&gt；&gt；扬声器2：来源。&gt；&gt；Kyle：源引用请求，
+&gt;&gt; Speaker 2: Source. &gt;&gt; Kyle: Source reference request,
 
 248
 00:09:48.234 --> 00:09:48.989
-听说过吗
+听说过吗？
 ever heard of it?
 
 249
 00:09:48.989 --> 00:09:50.042
-答案是吗 ?
+答案是？
 And the answer is?
 
 250
 00:09:50.042 --> 00:09:52.221
->> 扬声器 2: 是。 >> 凯尔: 是的，这是你的吗 ?
-&gt;&gt; Speaker 2: Yes.
-&gt;&gt; Kyle: Yes, here's your?
+&gt；&gt；扬声器2：是的。凯尔：是的，这是你的？
+&gt;&gt; Speaker 2: Yes. &gt;&gt; Kyle: Yes, here's your?
 
 251
 00:09:52.221 --> 00:09:53.107
->> 扬声器 2: 绿色大理石。
+&gt；&gt；扬声器2：绿色大理石。
 &gt;&gt; Speaker 2: Green marble.
 
 252
 00:09:53.107 --> 00:09:57.178
->> 凯尔: 绿色大理石，当时的绿色大理石是什么 ?
-&gt;&gt; Kyle: Green marble, and what is
-in the green marble at that moment?
+&gt；&gt；kyle：绿色大理石，那时候绿色大理石里有什么？
+&gt;&gt; Kyle: Green marble, and what is in the green marble at that moment?
 
 253
 00:09:57.178 --> 00:09:57.868
->> 扬声器 2: 为什么。
+&gt；&gt；扬声器2：为什么。
 &gt;&gt; Speaker 2: Why.
 
 254
 00:09:57.868 --> 00:10:01.519
->> 凯尔: 这个字符串，为什么? 因为它是一个论点，
-&gt;&gt; Kyle: The string, Why?,
-and because it's an argument,
+&gt；&gt；Kyle：字符串，为什么？，因为它是一个参数，
+&gt;&gt; Kyle: The string, Why?, and because it's an argument,
 
 255
 00:10:01.519 --> 00:10:05.190
-我们该怎么做呢
+我们要怎么处理这个争论？
 what are we gonna do with that argument?
 
 256
 00:10:05.190 --> 00:10:08.917
-我们要把这一争论传递到那个功能上
-We're going to pass that
-argument into that function,
+我们将把这个参数传递给那个函数，
+We're going to pass that argument into that function,
 
 257
 00:10:08.917 --> 00:10:13.219
-它具有将该参数指定给参数的效果。
-which has the effect of assigning
-that argument to a parameter.
+其具有将该参数分配给参数的效果。
+which has the effect of assigning that argument to a parameter.
 
 258
 00:10:13.219 --> 00:10:15.952
-所以最后的一步是我们没有看到它的功能但是
-So the final step here,
-which we don't see that function, but
+所以这里的最后一步，我们看不到这个函数，但是
+So the final step here, which we don't see that function, but
 
 259
 00:10:15.952 --> 00:10:18.274
-最后的一步就是那个函数说，
-the final step would have
-been that function saying,
+最后一步应该是函数说，
+the final step would have been that function saying,
 
 260
 00:10:18.274 --> 00:10:20.869
-我有个接收任务的参数
-hey I have a parameter that's
-receiving this assignment.
+嘿，我有一个参数正在接受这个赋值。
+hey I have a parameter that's receiving this assignment.
 
 261
 00:10:20.869 --> 00:10:25.690
-我要查一下那个大理石，然后收到任务，每个人都有吗 ?
-I need to look up that marble, then
-receive the assignment, everybody with me?
+我需要去找那个大理石，然后接受任务，每个人都跟我一起吗？
+I need to look up that marble, then receive the assignment, everybody with me?
 
 262
 00:10:25.690 --> 00:10:28.870
-同样的过程即使我们在那里看不到等号
-Same process, even though we
-don't see the equals sign there,
+同样的过程，即使我们看不到等号，
+Same process, even though we don't see the equals sign there,
 
 263
 00:10:28.870 --> 00:10:31.989
-在概念上，同样的事情发生了，一个参数被分配给一个参数。
-conceptually the same thing's happening,
-an argument's assigned to a parameter.
+从概念上讲，同样的事情正在发生，一个参数被分配给一个参数。
+conceptually the same thing's happening, an argument's assigned to a parameter.
 
 264
 00:10:33.159 --> 00:10:37.750
-好的，第 10 行，第 14 行了，我们的程序完成了。
-Okay, line 10 is done, line 14 is done,
-and our program is complete.
+好了，第10行完成了，第14行完成了，我们的程序完成了。
+Okay, line 10 is done, line 14 is done, and our program is complete.

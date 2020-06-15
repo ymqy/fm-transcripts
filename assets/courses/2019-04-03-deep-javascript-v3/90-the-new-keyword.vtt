@@ -2,110 +2,98 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:00.542
->> 凯尔辛普森: 好的，
+凯尔·辛普森：好的，
 &gt;&gt; Kyle Simpson: All right,
 
 2
 00:00:00.542 --> 00:00:03.971
-第三种方法是调用函数使用新关键字。
-the third way that we'll look at
-invoking functions uses the new keyword.
+我们将讨论调用函数的第三种方式使用new关键字。
+the third way that we'll look at invoking functions uses the new keyword.
 
 3
 00:00:03.971 --> 00:00:08.881
-我完全理解新关键词好像有什么关系
-And I fully understand that the new
-keyword seems as if it has something to
+而且我完全理解这个新的关键字似乎有一些
+And I fully understand that the new keyword seems as if it has something to
 
 4
 00:00:08.881 --> 00:00:11.550
-与调用类构造函数一起使用。
+调用类构造函数。
 do with invoking class constructors.
 
 5
 00:00:13.029 --> 00:00:15.429
-这与班级没有关系。
-This has not got anything
-to do with classes.
+这和班级没有任何关系。
+This has not got anything to do with classes.
 
 6
 00:00:15.429 --> 00:00:17.399
-这只是一种不幸的语法
+这只是一个不幸的句法
 It's just an unfortunate syntactic
 
 7
 00:00:18.449 --> 00:00:23.059
-让它看起来像是在处理课的时候
-trick to make it look like it's dealing
-with classes when it really isn't.
+让它看起来像是在处理类，而实际上并不是。
+trick to make it look like it's dealing with classes when it really isn't.
 
 8
 00:00:23.059 --> 00:00:27.039
-实际上，新关键字是您可以调用函数的第三种方法。
-Actually, the new keyword is the third
-way that you can invoke a function.
+实际上，new关键字是调用函数的第三种方式。
+Actually, the new keyword is the third way that you can invoke a function.
 
 9
 00:00:27.039 --> 00:00:30.239
-结果证明它做了 4 件非常具体的事情
-And it turns out that it does
-four very specific things,
+结果是它做了四件非常具体的事情，
+And it turns out that it does four very specific things,
 
 10
 00:00:30.239 --> 00:00:32.189
-我要为你准备的名单
+我正要为你列出。
 which I'm about to list for you.
 
 11
 00:00:32.189 --> 00:00:33.840
-它做了四个非常具体的事情
+它做了四件非常具体的事情，
 It does four very specific things,
 
 12
 00:00:33.840 --> 00:00:36.929
-当你看电话时就不太明显了
-which are not particularly obvious
-when you look at the call say.
+当你看着电话说，这并不是特别明显。
+which are not particularly obvious when you look at the call say.
 
 13
 00:00:38.250 --> 00:00:42.670
-但是新关键字的目的实际上是要调用
-But the purpose of the new
-keyword is actually to invoke
+但new关键字的目的实际上是调用
+But the purpose of the new keyword is actually to invoke
 
 14
 00:00:42.670 --> 00:00:47.670
-具有指向整个新空对象的此关键字的函数。
-a function with a this keyword
-pointing at a whole new empty object.
+具有this关键字的函数指向整个新的空对象。
+a function with a this keyword pointing at a whole new empty object.
 
 15
 00:00:49.640 --> 00:00:53.939
-如果我们调用函数并将它们指向上下文对象，
-If we have invoking functions and
-pointing them at a context object,
+如果我们有调用函数并将它们指向上下文对象，
+If we have invoking functions and pointing them at a context object,
 
 16
 00:00:53.939 --> 00:00:57.880
-就像个 workshop.ask ，那是一个方法。
+就像一个工厂。问吧，这是一种方式。
 like a workshop.ask, that's one way.
 
 17
 00:00:57.880 --> 00:01:02.981
-或者我们说我要调用一个函数并给它指定一个特定的对象。
-Or we say I'm gonna invoke a function and
-give it a specific object with .call or
+或者我们说我要调用一个函数，并用.call或给它一个特定的对象
+Or we say I'm gonna invoke a function and give it a specific object with .call or
 
 18
 00:01:02.981 --> 00:01:06.299
-.apply 或我将用一个 .bind 来强制它。
+.申请，否则我将用.bind强制它。
 .apply or I'm gonna force it with a .bind.
 
 19
 00:01:06.299 --> 00:01:09.569
 第三种方法是说我想调用一个函数
-A third way of doing it is to say
-I wanna invoke a function and
+A third way of doing it is to say I wanna invoke a function and
 
 20
 00:01:09.569 --> 00:01:11.109
@@ -114,238 +102,205 @@ use a whole new empty object.
 
 21
 00:01:13.379 --> 00:01:15.730
-新的关键词可以做到这一点。
+而新的关键字可以实现这一点。
 And the new keyword can accomplish that.
 
 22
 00:01:15.730 --> 00:01:19.879
-它做其他事情但也完成了这一任务
-It does other stuff, but
-it also accomplishes that task,
+它做其他的事情，但它也完成了这个任务，
+It does other stuff, but it also accomplishes that task,
 
 23
 00:01:19.879 --> 00:01:22.980
-即用新的空对象调用函数。
-which is to invoke a function
-with a new empty object.
+这是用一个新的空对象调用一个函数。
+which is to invoke a function with a new empty object.
 
 24
 00:01:22.980 --> 00:01:28.849
-现在我要说你可以实现同样的目标
-Now, I would say that you could
-accomplish that same goal
+现在，我想说你可以实现同样的目标
+Now, I would say that you could accomplish that same goal
 
 25
 00:01:28.849 --> 00:01:33.349
-通过话，函数点调用，打开，闭合的大括号。
-by saying, function dot call,
-open, close curly bracket.
+通过说，函数点调用，打开，关闭花括号。
+by saying, function dot call, open, close curly bracket.
 
 26
 00:01:34.840 --> 00:01:39.340
-将在全新空对象的上下文中调用您的函数的 Cuz 。
-Cuz that would invoke your function in
-the context of a brand new empty object.
+因为它会在一个全新的空对象的上下文中调用您的函数。
+Cuz that would invoke your function in the context of a brand new empty object.
 
 27
 00:01:40.930 --> 00:01:45.939
-所以新的关键词并不是真正地向你买除了语法糖之外
-So the new keyword isn't actually buying
-you much except the syntactic sugar of,
+所以新的关键字实际上并没有给你买很多东西，除了句法上的糖分，
+So the new keyword isn't actually buying you much except the syntactic sugar of,
 
 28
 00:01:45.939 --> 00:01:49.849
-我希望此函数使用新的此内容调用。
-hey I want this function invoked
-with a new this content.
+嘿，我想用一个新的this内容调用这个函数。
+hey I want this function invoked with a new this content.
 
 29
 00:01:51.349 --> 00:01:53.439
-这是我们第三次也是最后的方式。
-That's our third and
-final way of doing it.
+这是我们的第三种也是最后一种方法。
+That's our third and final way of doing it.
 
 30
 00:01:53.439 --> 00:01:55.069
-那么这四件事情是怎样的呢 ?
+顺便问一下，这四件事是什么？
 So what are those four things by the way?
 
 31
 00:01:55.069 --> 00:01:58.150
-你要在这张幻灯片上再参考一下
-You're gonna wanna be able to
-refer back to this slide in a bit.
+你会希望能够稍后再参考这张幻灯片。
+You're gonna wanna be able to refer back to this slide in a bit.
 
 32
 00:01:58.150 --> 00:02:02.010
-这个关键词的四个方面是什么，
-What are the four things
-that the this keyword,
+this关键字的四件事是什么，
+What are the four things that the this keyword,
 
 33
 00:02:02.010 --> 00:02:05.969
-当它用来调用我们的功能时，新关键字会做什么，我
-that the new keyword is going to do when
-it's used to invoke our function, what I
+new关键字用于调用我们的函数时将要做的事情，我
+that the new keyword is going to do when it's used to invoke our function, what I
 
 34
 00:02:05.969 --> 00:02:10.355
-用重质空气加一个构造函数的话，这四个东西是什么 ?
-call a with heavy air quotes a constructor
-call, what are those four things?
+用沉重的空气调用引用构造函数调用，这四件事是什么？
+call a with heavy air quotes a constructor call, what are those four things?
 
 35
 00:02:10.355 --> 00:02:18.219
-数字 1，我们创建一个全新的空对象。
-Number 1, number 1 we create
-a brand new empty object.
+1号，1号我们创建了一个全新的空对象。
+Number 1, number 1 we create a brand new empty object.
 
 36
 00:02:19.729 --> 00:02:23.038
-我们已经知道了这部分但我们创造了一个全新的空物体
-Well we already know that part but
-we create a brand new empty object out
+嗯，我们已经知道了这一部分，但我们创建了一个全新的空对象
+Well we already know that part but we create a brand new empty object out
 
 37
 00:02:23.038 --> 00:02:25.819
-这就是新关键词所做的
-of thin air,
-that's what the new keyword does.
+稀薄的空气，这就是新关键字所做的。
+of thin air, that's what the new keyword does.
 
 38
 00:02:25.819 --> 00:02:30.239
-数字 2，新关键字将该对象链接到另一个对象。
-Number 2, the new keyword links
-that object to another object.
+第二，new关键字将该对象链接到另一个对象。
+Number 2, the new keyword links that object to another object.
 
 39
 00:02:31.479 --> 00:02:34.212
-你在想什么呢
+你在想林克，什么？
 And you're thinking link, what?
 
 40
 00:02:34.212 --> 00:02:35.837
-这就是为什么那里有个星号
+这就是为什么那里有一个星号。
 That's why there's an asterisk there.
 
 41
 00:02:35.837 --> 00:02:38.009
-我们会回来解释联系的
-We'll come back and
-explain the linkage later.
+我们稍后会回来解释这种联系。
+We'll come back and explain the linkage later.
 
 42
 00:02:39.069 --> 00:02:43.460
-但它首先创建一个全新的对象，然后将它链接到某个地方。
-But it first creates a brand new
-object and then links it somewhere.
+但它首先创建一个全新的对象，然后将其链接到某个地方。
+But it first creates a brand new object and then links it somewhere.
 
 43
 00:02:43.460 --> 00:02:46.250
-然后第三号调用函数
-And then number 3,
-it invokes the function,
+然后数字3，它调用函数，
+And then number 3, it invokes the function,
 
 44
 00:02:46.250 --> 00:02:50.180
-它用它的，这个，关键字指向新对象来调用这个函数。
-it calls the function with its, this,
-keyword pointed at the new object.
+它使用其、this、关键字指向新对象来调用函数。
+it calls the function with its, this, keyword pointed at the new object.
 
 45
 00:02:51.800 --> 00:02:53.360
-不是链接对象，新对象。
+不是链接对象，而是新对象。
 Not the linked object, the new object.
 
 46
 00:02:55.759 --> 00:03:00.134
->> Kyle Simpson: 第四，最后，函数调用后的新关键字
-&gt;&gt; Kyle Simpson: And fourth and finally,
-the new keyword after the function call is
+&gt；&gt；Kyle Simpson：第四个也是最后一个，函数调用后的新关键字是
+&gt;&gt; Kyle Simpson: And fourth and finally, the new keyword after the function call is
 
 47
 00:03:00.134 --> 00:03:03.807
-完成，如果该函数不返回其自己的对象，
-done, if that function does
-not return its own object,
+完成后，如果该函数没有返回其自己的对象，
+done, if that function does not return its own object,
 
 48
 00:03:03.807 --> 00:03:07.967
-新关键字假定您打算返回此关键字。
-the new keyword assumes that you
-meant to return this keyword.
+new关键字假设您打算返回此关键字。
+the new keyword assumes that you meant to return this keyword.
 
 49
 00:03:09.741 --> 00:03:12.751
->> Kyle Simpson: 因此，这四种情况在每次出现新关键字时都发生
-&gt;&gt; Kyle Simpson: So these four things
-happen every single time a new keyword is
+&gt；&gt；Kyle Simpson：所以每次出现新关键字时都会发生这四件事
+&gt;&gt; Kyle Simpson: So these four things happen every single time a new keyword is
 
 50
 00:03:12.751 --> 00:03:14.849
-使用函数调用。
+用函数调用。
 invoked with a function.
 
 51
 00:03:14.849 --> 00:03:18.545
-现在我只想从某种意义上说
-Now I just wanna ask
-sort of in a meta sense,
+现在我只想问一个元意义上的问题，
+Now I just wanna ask sort of in a meta sense,
 
 52
 00:03:18.545 --> 00:03:22.037
-当我用这种方式描述的时候
+哪一个，当我这样描述的时候，
 which one, when I describe it this way,
 
 53
 00:03:22.037 --> 00:03:27.397
-这两个实体中的哪一个好像都在做呢 ?
-which of the two entities seems
-like it's doing all the work?
+这两个实体中的哪一个看起来像是在做所有的工作？
+which of the two entities seems like it's doing all the work?
 
 54
 00:03:27.397 --> 00:03:30.252
-似乎新关键字正在执行所有工作，或者
-Does it seem like the new keyword
-is doing all the work, or
+看起来像是new关键字做了所有的工作，还是
+Does it seem like the new keyword is doing all the work, or
 
 55
 00:03:30.252 --> 00:03:33.655
-你的构造函数是否能完成所有工作
-does it seem like your constructor
-function's doing all the work?
+看起来像是你的构造函数在做所有的工作吗？
+does it seem like your constructor function's doing all the work?
 
 56
 00:03:36.445 --> 00:03:37.909
->> 凯尔 - 辛普森: 这真的是新的关键词吗 ?
-&gt;&gt; Kyle Simpson: It's really
-the new keyword, isn't it?
+&gt；&gt；Kyle Simpson：这真的是新的关键字，不是吗？
+&gt;&gt; Kyle Simpson: It's really the new keyword, isn't it?
 
 57
 00:03:38.979 --> 00:03:42.599
-事实上如果你在几乎所有功能上都有新的内容
-As a matter of fact, if you put new
-in front of almost any function,
+事实上，如果你把新的功能放在几乎所有的功能前面，
+As a matter of fact, if you put new in front of almost any function,
 
 58
 00:03:42.599 --> 00:03:46.319
-即使是一个完全空的功能，所有四种情况都将发生。
-even a completely empty function,
-all four of these things would happen.
+即使是一个完全空的函数，这四种情况都会发生。
+even a completely empty function, all four of these things would happen.
 
 59
 00:03:47.639 --> 00:03:51.009
-几乎就像功能根本不重要
-It’s almost as if the function
-doesn’t even matter.
+就好像这个函数根本不重要。
+It’s almost as if the function doesn’t even matter.
 
 60
 00:03:52.765 --> 00:03:55.960
-新关键字只是把它的功能
-The new keyword is just sort
-of hijacking the function so
+新的关键字只是在某种程度上劫持了函数，所以
+The new keyword is just sort of hijacking the function so
 
 61
 00:03:55.960 --> 00:03:57.189
-它能做到这四件事
+它可以做这四件事。
 that it can do these four things.

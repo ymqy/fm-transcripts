@@ -2,282 +2,240 @@ WEBVTT
 
 1
 00:00:00.340 --> 00:00:03.176
->> 键盘: 在使用块作用域限定的主题上，
-&gt;&gt; Kyle: While we're on the topic
-of using block scoping, and
+&gt；&gt；Kyle：当我们讨论使用块作用域的主题时，以及
+&gt;&gt; Kyle: While we're on the topic of using block scoping, and
 
 2
 00:00:03.176 --> 00:00:05.886
-我们讨论的话题是考虑是否
-while we're on the topic
-of considering whether or
+当我们在考虑是否或者
+while we're on the topic of considering whether or
 
 3
 00:00:05.886 --> 00:00:09.118
-不允许在顶级功能中使用。
-not lets at the top level of
-your functions are appropriate.
+不让在你的函数的顶层是合适的。
+not lets at the top level of your functions are appropriate.
 
 4
 00:00:09.118 --> 00:00:11.673
-如果你有这种习惯就像你们很多人一样
-If you're of the habit,
-as many of you are,
+如果你有这种习惯，就像你们中的许多人一样，
+If you're of the habit, as many of you are,
 
 5
 00:00:11.673 --> 00:00:16.739
-在您的功能的顶级使用，并且您仍然要执行此操作。
-of using lets at the top level of your
-function, and you still want to do that.
+在您的函数的顶层使用let，而您仍然希望这样做。
+of using lets at the top level of your function, and you still want to do that.
 
 6
 00:00:16.739 --> 00:00:21.010
-我要提醒你还有很多时候你只会去
-I'm going to caution you also that there
-are lots of times where you're only going
+我也要提醒你，很多时候你只会去
+I'm going to caution you also that there are lots of times where you're only going
 
 7
 00:00:21.010 --> 00:00:23.719
-为几行代码使用变量，并且
-to use a variable for
-a few lines of code, and
+将变量用于几行代码，并且
+to use a variable for a few lines of code, and
 
 8
 00:00:23.719 --> 00:00:27.120
-你不应该把它扔进范围的顶层
-you should not just throw it
-into the top level of the scope.
+你不应该仅仅把它扔到作用域的顶层。
+you should not just throw it into the top level of the scope.
 
 9
 00:00:27.120 --> 00:00:29.480
-您应该做的是为其创建作用域。
-What you should do is create a scope for
-it.
+您应该做的是为它创建一个作用域。
+What you should do is create a scope for it.
 
 10
 00:00:30.699 --> 00:00:34.549
-打开卷曲的花括号对，并仅为
-Open up a curly brace pair and
-create a scope just for
+打开一个圆括号对并创建一个范围
+Open up a curly brace pair and create a scope just for
 
 11
 00:00:34.549 --> 00:00:38.380
-使用前缀和剩余变量的三行代码，以及
-those three lines of code to use
-the prefixed and the rest variable, and
+这三行代码使用前缀和rest变量，以及
+those three lines of code to use the prefixed and the rest variable, and
 
 12
 00:00:38.380 --> 00:00:40.719
-那就别让他们在功能的其他方面存在了
-then don't let them exist for
-any other part of the function.
+然后，不要让它们存在于函数的任何其他部分。
+then don't let them exist for any other part of the function.
 
 13
 00:00:42.079 --> 00:00:44.189
-不要只是说说说说和前缀
+不要只说let和prefix，还有
 Don't just say let, and prefix, and
 
 14
 00:00:44.189 --> 00:00:47.140
-在你的功能之上打开一个大撑
-rest at the top of your function,
-open up a curly brace there.
+在函数的顶部休息，在那里打开一个圆括号。
+rest at the top of your function, open up a curly brace there.
 
 15
 00:00:47.140 --> 00:00:50.270
-事实上，我在任何地方都这么做，即使是在声明中。
-As a matter of fact, I do that anywhere,
-even inside of an if statement.
+事实上，我在任何地方都会这样做，甚至在if语句中也是如此。
+As a matter of fact, I do that anywhere, even inside of an if statement.
 
 16
 00:00:50.270 --> 00:00:52.310
-如果我有一个只需要存在的变量
-If I have a variable that
-only needs to exist for
+如果我有一个变量只需要存在于
+If I have a variable that only needs to exist for
 
 17
 00:00:52.310 --> 00:00:56.770
-有几条线，要做的就是为它做一个街区。
-a couple of lines, the way to do
-that is to make a block for it.
+几行，这样做的方法是为它制作一个块。
+a couple of lines, the way to do that is to make a block for it.
 
 18
 00:00:56.770 --> 00:00:59.340
-顺便说下这不是我的新发明
-And that's not a new invention of mine,
-by the way.
+顺便说一下，这不是我的新发明。
+And that's not a new invention of mine, by the way.
 
 19
 00:00:59.340 --> 00:01:00.250
-我们已经这样做了
+我们这么做是为了
 We've done that for
 
 20
 00:01:00.250 --> 00:01:03.890
-30 年的所有其他编程语言都有块作用域限定。
-30 years in every other programming
-language that's ever had block scoping.
+在所有其他曾经有过块作用域的编程语言中工作了30年。
+30 years in every other programming language that's ever had block scoping.
 
 21
 00:01:03.890 --> 00:01:07.409
-我们打开卷曲的支架，把它覆盖在块上。
-We open up curly brace pairs and
-we scope it to the block.
+我们打开卷曲的括号对，我们把它放到块上。
+We open up curly brace pairs and we scope it to the block.
 
 22
 00:01:07.409 --> 00:01:11.138
-我要说的是让我们用 JavaScript 来做
-All I'm saying is let's do
-that in JavaScript because it
+我想说的是让我们用JavaScript来做这件事，因为它
+All I'm saying is let's do that in JavaScript because it
 
 23
 00:01:11.138 --> 00:01:14.176
-用其他语言做的好吗
-worked really well in other languages,
-yes?
+在其他语言中工作得很好，是吗？
+worked really well in other languages, yes?
 
 24
 00:01:14.176 --> 00:01:17.019
->> 扬声器 2: 您是否将此参数完全用于语义，或者
-&gt;&gt; Speaker 2: Are you making this
-argument purely for semantics, or
+&gt；&gt；演讲者2：你是纯粹为了语义而提出这个论点，还是
+&gt;&gt; Speaker 2: Are you making this argument purely for semantics, or
 
 25
 00:01:17.019 --> 00:01:20.760
-这样做有什么好处呢 ?
-is there a performance benefit
-to doing something like that?.
+做那样的事情对性能有好处吗？
+is there a performance benefit to doing something like that?.
 
 26
 00:01:20.760 --> 00:01:24.500
->> 凯尔: 你几乎不可能看到或
-&gt;&gt; Kyle: It is extremely unlikely
-that you would ever see or
+&gt；&gt；Kyle：你不太可能看到或
+&gt;&gt; Kyle: It is extremely unlikely that you would ever see or
 
 27
 00:01:24.500 --> 00:01:27.150
-能够观察到任何的性能差异。
-be able to observe any
-performance difference.
+能够观察到任何性能差异。
+be able to observe any performance difference.
 
 28
 00:01:27.150 --> 00:01:29.060
-有理论上的性能差异，
-There are theoretical
-performance differences,
+理论上有表现上的差异，
+There are theoretical performance differences,
 
 29
 00:01:29.060 --> 00:01:33.620
-就像理论上的一个越线垃圾回收器
-like theoretically an offthread
-garbage collector could
+就像理论上脱线程垃圾收集器可以
+like theoretically an offthread garbage collector could
 
 30
 00:01:33.620 --> 00:01:36.090
-理论上垃圾会更早地收集
-theoretically garbage
-collect it slightly earlier.
+从理论上讲，垃圾收集得稍微早一些。
+theoretically garbage collect it slightly earlier.
 
 31
 00:01:36.090 --> 00:01:40.390
-或者理论上，它会减少关闭的可用空间。
-Or theoretically it would reduce
-what was available to a closure.
+或者从理论上讲，它会减少可用于闭包的内容。
+Or theoretically it would reduce what was available to a closure.
 
 32
 00:01:40.390 --> 00:01:44.004
-有理论上的原因但实际上
-There are theoretic reasons,
-but in practice,
+有理论上的原因，但在实践中，
+There are theoretic reasons, but in practice,
 
 33
 00:01:44.004 --> 00:01:49.310
-你几乎肯定不会有这样的表现。
-you almost certainly would not see
-a performance difference this way.
+几乎可以肯定，您不会以这种方式看到性能差异。
+you almost certainly would not see a performance difference this way.
 
 34
 00:01:50.942 --> 00:01:53.520
->> 凯尔: 我只是说这一点更加明确。
-&gt;&gt; Kyle: I'm simply saying that
-this communicates more clearly.
+&gt；&gt；kyle：我只是说这样可以更清晰地沟通。
+&gt;&gt; Kyle: I'm simply saying that this communicates more clearly.
 
 35
 00:01:53.520 --> 00:01:57.049
-顺便说一下我故意让我的
-And by the way,
-I intentionally did put my lets,
+顺便说一句，我是故意把我的曲子放进去的，
+And by the way, I intentionally did put my lets,
 
 36
 00:01:57.049 --> 00:01:59.789
-它不仅节省了幻灯片上的空间，而且可以帮助您。
-it's not just saving space on the slides,
-it helps.
+这不仅节省了幻灯片上的空间，还有帮助。
+it's not just saving space on the slides, it helps.
 
 37
 00:01:59.789 --> 00:02:03.000
-但我故意这样做如果我要打开一个街区
-But I intentionally do,
-if I'm gonna open up a block, just for
+但我故意这样做，如果我要打开一个街区，只是为了
+But I intentionally do, if I'm gonna open up a block, just for
 
 38
 00:02:03.000 --> 00:02:05.310
-有几个变量的存在
-the existence of a couple
-of variables like that,
+像这样的几个变量的存在，
+the existence of a couple of variables like that,
 
 39
 00:02:05.310 --> 00:02:09.340
-我会把我的声明和开场大撑的那条线放在同一条线上
-I'll put my declarations on the very
-same line as the opening curly brace.
+我将把我的声明放在与左大括号完全相同的行上。
+I'll put my declarations on the very same line as the opening curly brace.
 
 40
 00:02:09.340 --> 00:02:14.240
-为了让读者很清楚，嘿，这两个是为这个街区创造的，
-To make it super clear to the reader, hey,
-these two are created for this block, and
+为了让读者非常清楚，嘿，这两个是为这个块创建的，并且
+To make it super clear to the reader, hey, these two are created for this block, and
 
 41
 00:02:14.240 --> 00:02:16.319
-它们只为了这个街区的目的而存在
-they exist only for
-the purpose of the block.
+他们只是为了街区的目的而存在。
+they exist only for the purpose of the block.
 
 42
 00:02:16.319 --> 00:02:19.270
-相对来说你得去找
-As opposed to,
-you have to go looking for whether or
+与之相反，你必须去寻找是否或
+As opposed to, you have to go looking for whether or
 
 43
 00:02:19.270 --> 00:02:20.889
-在此作用域中不存在变量。
+此作用域中没有变量。
 not there are variables in this scope.
 
 44
 00:02:21.900 --> 00:02:22.920
-你得把它弄明白
+你得去想办法。
 You have to go figure it out.
 
 45
 00:02:24.289 --> 00:02:25.884
-我想让它变得非常明显
+我想让它变得超级明显。
 I want it to be super obvious.
 
 46
 00:02:29.635 --> 00:02:33.911
->> 凯尔: 我强烈建议您考虑使用更多这些显式
-&gt;&gt; Kyle: I strongly recommend that you
-consider using more of these explicit
+&gt；&gt；Kyle：我强烈建议您考虑使用更多的显式
+&gt;&gt; Kyle: I strongly recommend that you consider using more of these explicit
 
 47
 00:02:33.911 --> 00:02:34.735
-让我们阻止
+让块，
 let blocks,
 
 48
 00:02:34.735 --> 00:02:39.770
-将您的变量使用的范围缩小到实际情况。
-narrowing the scope where you are using
-your variables as much as is practical.
+缩小使用变量的范围，尽可能多地使用实用的变量。
+narrowing the scope where you are using your variables as much as is practical.

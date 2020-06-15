@@ -2,129 +2,113 @@ WEBVTT
 
 1
 00:00:00.260 --> 00:00:05.750
->> 凯尔 - 辛普森: 我相信 JavaScript 可以分为三个核心，
-&gt;&gt; Kyle Simpson: I believe JavaScript
-can be divided into three cores,
+&gt；&gt；Kyle Simpson：我认为JavaScript可以分为三个核心，
+&gt;&gt; Kyle Simpson: I believe JavaScript can be divided into three cores,
 
 2
 00:00:05.750 --> 00:00:07.919
-三根支柱如果你愿意的话
+如果你愿意的话，有三根柱子。
 three pillars if you will.
 
 3
 00:00:07.919 --> 00:00:11.730
-这三大支柱对于
-And those three pillars
-are absolutely critical for
+这三个支柱绝对是至关重要的
+And those three pillars are absolutely critical for
 
 4
 00:00:11.730 --> 00:00:13.990
-所有你要做的 JavaScript 编码
-all of the JavaScript coding
-that you will ever do,
+你将要做的所有JavaScript编码，
+all of the JavaScript coding that you will ever do,
 
 5
 00:00:13.990 --> 00:00:18.899
-即使有品牌名称 React 或品牌名称 Vue.js 或品牌 Angular。
-even if it has the brand name React or the
-brand name Vue.js or the brand Angular.
+即使它有品牌名称react或品牌名称Vue.js或品牌棱角。
+even if it has the brand name React or the brand name Vue.js or the brand Angular.
 
 6
 00:00:18.899 --> 00:00:19.910
-你猜是什么
+你猜怎么着？
 Guess what?
 
 7
 00:00:19.910 --> 00:00:22.179
-或者像我这样的老学校
+甚至对像我这样的老校友来说，
 Or even for the old school folks like me,
 
 8
 00:00:22.179 --> 00:00:27.019
-即使是 JQuery 仍然是 JavaScript 好吗
-even if it's jQuery it's still JavaScript,
-okay?
+即使它是jQuery，它仍然是JavaScript，好吗？
+even if it's jQuery it's still JavaScript, okay?
 
 9
 00:00:27.019 --> 00:00:30.629
-这些东西仍然以同样的基本支柱为基础。
-And those things are still based
-upon the same fundamental pillars.
+而这些东西仍然是基于相同的基本支柱。
+And those things are still based upon the same fundamental pillars.
 
 10
 00:00:31.750 --> 00:00:35.807
-我看到开发商一直在自我缠绕和扭曲自己
-And I see developers all the time, winding
-themselves and contorting themselves
+我看到开发人员总是缠绕着自己，扭曲着自己
+And I see developers all the time, winding themselves and contorting themselves
 
 11
 00:00:35.807 --> 00:00:39.573
-围绕着特定框架内的各种古怪行为
-around all kinds of certain weirdness
-within their particular framework or
+围绕着他们特定框架内的所有类型的怪异或
+around all kinds of certain weirdness within their particular framework or
 
 12
 00:00:39.573 --> 00:00:41.838
-不管他们在做什么
+不管他们在做什么。
 utility whatever it is they're working on.
 
 13
 00:00:41.838 --> 00:00:46.142
-结果是他们不了解其中一个支柱，或者
-And it turns out it's they don't
-understand one of the pillars, or
+结果是他们不理解其中一根柱子，或者
+And it turns out it's they don't understand one of the pillars, or
 
 14
 00:00:46.142 --> 00:00:48.340
-这些支柱之一的一部分
+其中一根柱子的一部分。
 some part of one of these pillars.
 
 15
 00:00:48.340 --> 00:00:50.307
-这个课程的目的就是要解决这个问题。
+本课程旨在解决这个问题。
 And this course aims to fix that.
 
 16
 00:00:50.307 --> 00:00:55.216
-我有一个疯狂的想法如果你选择了你
-I have this crazy notion that if for
-whatever reason you've chosen you
+我有一个疯狂的想法，如果你出于什么原因选择了你
+I have this crazy notion that if for whatever reason you've chosen you
 
 17
 00:00:55.216 --> 00:00:59.957
-让你的事业成为一个 JavaScript 开发者如果你选择
-to make your career be a JavaScript
-developer, if you've chosen to
+要让您的职业成为一名JavaScript开发人员，如果您选择了
+to make your career be a JavaScript developer, if you've chosen to
 
 18
 00:00:59.957 --> 00:01:04.555
-拿到钱来写 JavaScript 你应该明白你的工具
-get paid to write JavaScript,
-you oughta understand your tool.
+为了获得写JavaScript的报酬，你应该理解你的工具。
+get paid to write JavaScript, you oughta understand your tool.
 
 19
 00:01:04.555 --> 00:01:07.016
-那么，我们要看看这三大支柱是怎样的呢 ?
-So what are we going to
-look at those three pillar?
+那么我们要怎么看这三根柱子呢？
+So what are we going to look at those three pillar?
 
 20
 00:01:07.016 --> 00:01:10.996
-这些支柱中的第一个支柱可能是最不受欢迎的
-The first of those pillars may be the
-least popular of them actually definitely
+这些柱子中的第一个可能是最不受欢迎的
+The first of those pillars may be the least popular of them actually definitely
 
 21
 00:01:10.996 --> 00:01:14.192
-最不受欢迎的，没有人喜欢谈类型，
-the least popular of them,
-nobody likes to talk about types and
+其中最不受欢迎的，没有人喜欢谈论类型和
+the least popular of them, nobody likes to talk about types and
 
 22
 00:01:14.192 --> 00:01:17.632
-尤其是在像 JavaScript这样的动态语言中
-especially within a dynamically
-typed language like JavaScript,
+特别是在像JavaScript这样的动态类型语言中，
+especially within a dynamically typed language like JavaScript,
 
 23
 00:01:17.632 --> 00:01:19.402
@@ -133,185 +117,157 @@ this is one of those taboo topics.
 
 24
 00:01:19.402 --> 00:01:24.754
-如果你跟踪 Doug Crockford 他会告诉你别用这些东西
-If you follow a Doug Crockford, he tells
-you don't use any of this stuff don't
+如果你跟随道格·克罗克福德，他会告诉你不要使用这些东西
+If you follow a Doug Crockford, he tells you don't use any of this stuff don't
 
 25
 00:01:24.754 --> 00:01:30.043
-想想这些当然不是实际可行的
-think about any of these things of course,
-that isn’t actually practical.
+当然，想想这些事情中的任何一个，这实际上是不实际的。
+think about any of these things of course, that isn’t actually practical.
 
 26
 00:01:30.043 --> 00:01:34.270
-我们要谈谈为什么你应该关心类型。
-And we're gonna talk about why
-you should care about types.
+我们将讨论为什么你应该关心类型。
+And we're gonna talk about why you should care about types.
 
 27
 00:01:34.270 --> 00:01:37.680
-但我还是会把豆子洒在这里
-But I will just go ahead and
-spill the beans here.
+但我还是会在这里说漏嘴的。
+But I will just go ahead and spill the beans here.
 
 28
 00:01:37.680 --> 00:01:41.890
-这个特殊单位的核心外卖是
-The takeaway from this particular core for
-this particular unit is,
+这个特别的核心对于这个特别的单位的意义是，
+The takeaway from this particular core for this particular unit is,
 
 29
 00:01:41.890 --> 00:01:45.870
 你写代码是不负责任的
-it is irresponsible of
-you to write code and
+it is irresponsible of you to write code and
 
 30
 00:01:45.870 --> 00:01:50.520
-不了解这个语言的这个批判性的这个事实，好吗 ?
-not understand this critical
-fact of the language, okay?
+不理解语言的这个关键事实，好吗？
+not understand this critical fact of the language, okay?
 
 31
 00:01:50.520 --> 00:01:54.219
-说的是不负责任的，好一些好的地方让我尽量避免
-It is irresponsible to say, well,
-some good parts told me to just avoid that
+说，好吧，有些好的部分告诉我要避免这样做是不负责任的
+It is irresponsible to say, well, some good parts told me to just avoid that
 
 32
 00:01:54.219 --> 00:01:57.799
-题，别学了，不用担心。
-topic, don't learn it,
-don't need to worry about it.
+话题，不要学，不用担心。
+topic, don't learn it, don't need to worry about it.
 
 33
 00:01:57.799 --> 00:02:01.659
-这是人们在代码中产生虫子的主要原因之一。
-That is one of the big reasons why
-people produce bugs in their code.
+这是人们在代码中产生bug的主要原因之一。
+That is one of the big reasons why people produce bugs in their code.
 
 34
 00:02:01.659 --> 00:02:04.530
-他们写代码，他们不了解他们在写的代码，好吗 ?
-They write code and they don't understand
-the code that they're writing, okay?
+他们写代码，但他们不理解他们正在写的代码，好吗？
+They write code and they don't understand the code that they're writing, okay?
 
 35
 00:02:04.530 --> 00:02:08.389
-这样我们就能覆盖这些类型，特别是强制系统。
-So we're gonna cover the types and
-specifically the coercion system.
+所以我们将涵盖类型，特别是强制系统。
+So we're gonna cover the types and specifically the coercion system.
 
 36
 00:02:08.389 --> 00:02:11.639
-现在我要对它敞开心心因为我知道你这么做
-Now, I'm gonna ask to have an open mind
-on it because I know you have been so
+现在，我要求对此持开放的态度，因为我知道你一直如此
+Now, I'm gonna ask to have an open mind on it because I know you have been so
 
 37
 00:02:11.639 --> 00:02:15.639
-编程来认为我们不需要做这些事我们只应该
-programmed to think that we don't need
-to do these things, we should only just
+被编程认为我们不需要做这些事情，我们应该只是
+programmed to think that we don't need to do these things, we should only just
 
 38
 00:02:15.639 --> 00:02:19.219
-用三等比，如果我们用三等号，谁需要在乎呢 ?
-use the triple equals, and who needs to
-care about it if we use the triple equals?
+使用三等号，如果我们使用三等号，谁还需要关心呢？
+use the triple equals, and who needs to care about it if we use the triple equals?
 
 39
 00:02:19.219 --> 00:02:23.569
-这不是编写 JavaScript的实际方法。
-That is just not a practical
-way of writing JavaScript.
+这不是编写JavaScript的实用方法。
+That is just not a practical way of writing JavaScript.
 
 40
 00:02:23.569 --> 00:02:27.340
-你一直在想这不是有效的
-You've been getting by,
-and it's not effective.
+你一直过得很好，但效果不好。
+You've been getting by, and it's not effective.
 
 41
 00:02:27.340 --> 00:02:31.729
-所以我要让你在我告诉你的时候有个开放的想法
-So I'm gonna ask you to have an open
-mind when I tell you, and maybe more so
+所以当我告诉你的时候，我会要求你有一个开放的心态，也许更开放一些
+So I'm gonna ask you to have an open mind when I tell you, and maybe more so
 
 42
 00:02:31.729 --> 00:02:34.599
-我就会有一个很坚强的
-than I have ever before,
-I'm gonna have a very strong,
+比以往任何时候，我都会有一个非常强烈的，
+than I have ever before, I'm gonna have a very strong,
 
 43
 00:02:34.599 --> 00:02:38.069
-我要把我的脚牢牢地植在你的位置
-I'm gonna firmly plant my foot in
-a position here about what you should be
+我要坚定地把我的脚踩在你应该是什么的位置上
+I'm gonna firmly plant my foot in a position here about what you should be
 
 44
 00:02:38.069 --> 00:02:42.060
-以强制方式执行，您应该使用 JavaScript 的类型系统。
-doing with coercion, what you should
-be doing with JavaScript's type system.
+使用强制执行时，您应该使用JavaScript的类型系统进行操作。
+doing with coercion, what you should be doing with JavaScript's type system.
 
 45
 00:02:42.060 --> 00:02:46.930
-过去我有自己的想法，就像自己做自己的
-In the past I've sort of have views that
-were kind of like well just make your own
+在过去，我有一些观点，就像是好吧，你自己做吧
+In the past I've sort of have views that were kind of like well just make your own
 
 46
 00:02:46.930 --> 00:02:49.949
-我相信我的观点已经改变了
-sorts of decisions but I have come to
-believe, my views have shifted and
+一些决定，但我开始相信，我的观点发生了转变
+sorts of decisions but I have come to believe, my views have shifted and
 
 47
 00:02:49.949 --> 00:02:53.780
-我得相信这是正确的想法
-I have to come believe there is
-a correct way to think about this and
+我必须相信有一个正确的方式来思考这个问题
+I have to come believe there is a correct way to think about this and
 
 48
 00:02:53.780 --> 00:02:54.930
-我们还没到那里
+我们还没到那一步。
 we're not getting there yet.
 
 49
 00:02:54.930 --> 00:02:56.520
-我们还不是一个社区
+作为一个社区，我们还没有做到这一点。
 We're not there yet as a community.
 
 50
 00:02:58.129 --> 00:03:01.039
-所以也许我们在这个过程中能做的最重要的事情之一是
-So maybe one of the most important
-things we can do in this course is
+所以我们在这门课上可以做的最重要的事情之一就是
+So maybe one of the most important things we can do in this course is
 
 51
 00:03:01.039 --> 00:03:03.620
-告诉你为什么这么重要吗
-enlighten you to why that's so
-important okay?
+告诉你为什么这很重要好吗？
+enlighten you to why that's so important okay?
 
 52
 00:03:03.620 --> 00:03:06.560
-我们将要谈论的第二个核心单元是范围系统。
-The second core unit that we're going
-to talk about is the scope system.
+我们将要讨论的第二个核心单元是示波器系统。
+The second core unit that we're going to talk about is the scope system.
 
 53
 00:03:06.560 --> 00:03:10.129
-Lexical scalsces ，引导我们讨论关闭和
-Lexical scopes which leads us into
-discussions about closure and
+词汇范围，引导我们讨论闭包和
+Lexical scopes which leads us into discussions about closure and
 
 54
 00:03:10.129 --> 00:03:11.299
-最终是模块化的模式
+最终是模块化模式。
 eventually the modular pattern.
 
 55
@@ -321,62 +277,53 @@ This is a critical pillar of the language.
 
 56
 00:03:14.629 --> 00:03:16.750
-几乎所有的东西都在它的基础上。
+几乎所有其他东西都是建立在它之上的。
 Almost everything else is built upon it.
 
 57
 00:03:16.750 --> 00:03:19.400
-第三个支柱是物体系统。
-And the third of the pillars
-is the objects system.
+第三个支柱是客体系统。
+And the third of the pillars is the objects system.
 
 58
 00:03:19.400 --> 00:03:24.159
-我喜欢把这个称为面向对象，有点不一样
-I like to refer to this as the objects
-oriented, a little bit different than
+我喜欢把这称为面向对象，有点不同于
+I like to refer to this as the objects oriented, a little bit different than
 
 59
 00:03:24.159 --> 00:03:28.150
-面向对象，它实际上是类定向的。
-object oriented,
-which is actually class oriented.
+面向对象，实际上是面向类的。
+object oriented, which is actually class oriented.
 
 60
 00:03:28.150 --> 00:03:32.250
-我们需要了解 JavaScript 的对象系统是如何运作的，
-We need to understand how
-JavaScript's objects system works,
+我们需要了解JavaScript的对象系统是如何工作的，
+We need to understand how JavaScript's objects system works,
 
 61
 00:03:32.250 --> 00:03:36.400
-包括这个关键词，完全是要做的事情，那就是
-which includes the this keyword,
-that completely befuddling thing that's
+其中包括this关键字，这个完全令人困惑的东西
+which includes the this keyword, that completely befuddling thing that's
 
 62
 00:03:36.400 --> 00:03:39.889
-一旦你学会了它所做的事情
-actually very straightforward once
-you've been taught what it does.
+实际上，一旦你被教会了它的作用，就会变得非常直截了当。
+actually very straightforward once you've been taught what it does.
 
 63
 00:03:39.889 --> 00:03:42.909
-一旦你与其他语言的语言断开连接
-Once you disconnect from what
-it does in other languages and
+一旦你脱离了它在其他语言中的作用
+Once you disconnect from what it does in other languages and
 
 64
 00:03:42.909 --> 00:03:45.629
-你知道它用 JavaScript 做什么是很直接的
-you learn what it does in JavaScript,
-it's very straightforward.
+您将了解它在JavaScript中的作用，它非常简单。
+you learn what it does in JavaScript, it's very straightforward.
 
 65
 00:03:47.280 --> 00:03:50.629
-所以我们要了解这三个核心是很重要的。
-So it's important for
-us to understand all three of these cores.
+所以对我们来说理解这三个核心是很重要的。
+So it's important for us to understand all three of these cores.
 
 66
 00:03:50.629 --> 00:03:52.420
@@ -385,175 +332,150 @@ And when we dig into this and
 
 67
 00:03:52.420 --> 00:03:55.840
-然后我们就会去找原型你得先了解这些东西
-then we dig into the prototypes, you have
-to understand that stuff before you can
+然后我们深入研究原型，你必须先了解这些东西，然后才能
+then we dig into the prototypes, you have to understand that stuff before you can
 
 68
 00:03:55.840 --> 00:04:00.280
-了解某个与类关键字类似的同步糖上的分层。
-understand somebody layering on top
-a syntactic sugar like the class keyword.
+了解某人在顶部分层的语法糖分，如class关键字。
+understand somebody layering on top a syntactic sugar like the class keyword.
 
 69
 00:04:01.379 --> 00:04:07.030
-我没有在网上隐藏自己的思想和选项，
-I have not hidden my thoughts and
-options online about the class keyword and
+我没有在网上隐藏我关于class关键字的想法和选项
+I have not hidden my thoughts and options online about the class keyword and
 
 70
 00:04:07.030 --> 00:04:12.159
-我将再次告诉你，我坚信它不应该用在 JavaScript中。
-I will tell you again I firmly believe
-that it should not be used in JavaScript.
+我再告诉你一次，我坚信它不应该在JavaScript中使用。
+I will tell you again I firmly believe that it should not be used in JavaScript.
 
 71
 00:04:12.159 --> 00:04:15.110
-但我的意思是你不应该用它
-But there is a difference between
-me saying, you shouldn't use it and
+但我说你不应该用它和
+But there is a difference between me saying, you shouldn't use it and
 
 72
 00:04:15.110 --> 00:04:16.220
-我说你不该学
+我说你不应该学。
 me saying you shouldn't learn it.
 
 73
 00:04:17.750 --> 00:04:20.220
-你绝对应该学习这个系统
+你绝对应该学习这个系统。
 You absolutely should learn this system.
 
 74
 00:04:20.220 --> 00:04:24.891
-你绝对必须学会这个支柱来理解为什么
-You absolutely must learn this pillar
-to understand why that particular
+你绝对必须学习这个支柱才能理解为什么
+You absolutely must learn this pillar to understand why that particular
 
 75
 00:04:24.891 --> 00:04:29.718
-编码风格不符合 JavaScript 和理解方式
-coding style doesn't fit with JavaScript
-and to understand, by the way,
+编码风格不适合JavaScript，顺便说一句，要理解，
+coding style doesn't fit with JavaScript and to understand, by the way,
 
 76
 00:04:29.718 --> 00:04:32.550
-如果你被迫这么做怎么做那么好
-if you are forced to do it,
-how to do so well,
+如果你是被迫做的，怎么做得这么好，
+if you are forced to do it, how to do so well,
 
 77
 00:04:32.550 --> 00:04:37.659
-如果这个框架让你和他们中的许多人有这个选择
-if that framework makes that choice for
-you and many of them have.
+如果框架为您做出了选择，他们中的许多人都做了。
+if that framework makes that choice for you and many of them have.
 
 78
 00:04:37.659 --> 00:04:42.110
-你还能有效还是要用眼罩来编码 ?
-Can you still be effective or you're
-simply gonna be coding with blinders on?
+你还能有效率吗？或者你只是要戴着眼罩编写代码？
+Can you still be effective or you're simply gonna be coding with blinders on?
 
 79
 00:04:43.569 --> 00:04:47.090
-这些是 JavaScript 语言的三大核心支柱
-So these are the three core pillars
-of the JavaScript language and
+这是JavaScript语言的三大核心支柱
+So these are the three core pillars of the JavaScript language and
 
 80
 00:04:47.090 --> 00:04:51.488
-大部分这些支柱都是在 10 天结束时发生的
-largely all of these pillars were
-in place at the end of the 10 day
+基本上所有这些柱子都在10天结束时就位
+largely all of these pillars were in place at the end of the 10 day
 
 81
 00:04:52.699 --> 00:04:55.990
-我和布伦达和我在 1995年的原型机
-prototyping session that Brenda and
-I put back in in 1995.
+布伦达和我在1995年举行的原型会议。
+prototyping session that Brenda and I put back in in 1995.
 
 82
 00:04:55.990 --> 00:05:01.350
-这主要是我们 24 年来所使用的 JavaScript 。
-This is largely the JavaScript
-that we've had now for 24 years.
+这在很大程度上是我们已经使用了24年的JavaScript。
+This is largely the JavaScript that we've had now for 24 years.
 
 83
 00:05:01.350 --> 00:05:04.040
-是的，确实有不同的细节。
-Yes, there are definitely
-different details.
+是的，肯定有不同的细节。
+Yes, there are definitely different details.
 
 84
 00:05:04.040 --> 00:05:06.589
-但很多东西都是核心的
+但这些事情中的许多都是核心和
 But many of these things are as core and
 
 85
 00:05:06.589 --> 00:05:09.620
-以语言为基础的基础。
-root of a foundation as
-it gets in the language.
+基础的根，因为它在语言中。
+root of a foundation as it gets in the language.
 
 86
 00:05:09.620 --> 00:05:14.779
-在这一过程结束的过程中，为期大约两天的时间，
-At the end of this course which will
-cover over a period of about two days,
+在本课程结束时，它将涵盖大约两天的时间，
+At the end of this course which will cover over a period of about two days,
 
 87
 00:05:14.779 --> 00:05:17.550
-就会有更多像我们五岁以上的感觉
-it's going to feel a lot more
-like we just went over five or
+感觉就像我们刚过了五个月或者
+it's going to feel a lot more like we just went over five or
 
 88
 00:05:17.550 --> 00:05:21.129
-非常压缩的 10 天的材料
-ten days worth of material because
-it's extremely compressed.
+十天的材料，因为它是非常压缩的。
+ten days worth of material because it's extremely compressed.
 
 89
 00:05:21.129 --> 00:05:25.410
-所以我并不是说你就在这个课程的最后，说，我是经过认证的，
-So I don't mean for you to come at the end
-of this course and say, aha I'm certified,
+所以我不是想让你在这门课结束时说，啊哈，我有资格，
+So I don't mean for you to come at the end of this course and say, aha I'm certified,
 
 90
 00:05:25.410 --> 00:05:28.649
-我知道关于 JavaScript 的所有事情都是关于 JavaScript的
-I know everything there is to know about
-JavaScript, this is not the end but
+我知道关于JavaScript的一切，这不是结束，但是
+I know everything there is to know about JavaScript, this is not the end but
 
 91
 00:05:28.649 --> 00:05:30.529
-开首
+为什么的开始
 the beginning of what for
 
 92
 00:05:30.529 --> 00:05:34.980
-我已经完成了 20 年的旅程去了解 JavaScript。
-me has been over a 20 year
-journey to understand JavaScript.
+我已经花了20年的时间来理解JavaScript。
+me has been over a 20 year journey to understand JavaScript.
 
 93
 00:05:34.980 --> 00:05:39.439
-我正在为你记录我对地图的了解
-And I'm documenting for
-you what I've figured out about the map.
+我正在为你记录我对地图的理解。
+And I'm documenting for you what I've figured out about the map.
 
 94
 00:05:39.439 --> 00:05:42.560
-我尝试为我的旅程建立一个藏宝图
-I've tried to put together
-a treasure map for my journey.
+我试着为我的旅途拼凑出一张藏宝图。
+I've tried to put together a treasure map for my journey.
 
 95
 00:05:42.560 --> 00:05:45.990
-我正在为你记录这些书，这也是书的内容。
-And I'm documenting that for you,
-that's also what the books are.
+我为你们记录了这一点，这也是书的内容。
+And I'm documenting that for you, that's also what the books are.
 
 96
 00:05:45.990 --> 00:05:47.409
-所以把那些伴们用在这里
+所以在这里用它们作为伴侣。
 So use those as companions here.

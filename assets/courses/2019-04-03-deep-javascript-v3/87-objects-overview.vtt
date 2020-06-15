@@ -2,33 +2,28 @@ WEBVTT
 
 1
 00:00:00.231 --> 00:00:01.782
->> 凯尔 - 辛普森: 在课程开始时，
-&gt;&gt; Kyle Simpson: At
-the outset of the course,
+&gt；&gt；Kyle Simpson：在课程开始时，
+&gt;&gt; Kyle Simpson: At the outset of the course,
 
 2
 00:00:01.782 --> 00:00:04.570
-我提到了三大核心支柱。
-I talked about three core
-pillars of the language.
+我谈到了语言的三个核心支柱。
+I talked about three core pillars of the language.
 
 3
 00:00:04.570 --> 00:00:08.548
-这三个核心支柱中的一个对于
-And one of those three core
-pillars that's very critical for
+这三个核心支柱之一对于
+And one of those three core pillars that's very critical for
 
 4
 00:00:08.548 --> 00:00:11.907
 你要了解的是面向对象的系统。
-you to understand is
-the objects oriented system.
+you to understand is the objects oriented system.
 
 5
 00:00:11.907 --> 00:00:15.589
-对象，此关键字和原型，
-The objects, the this keyword and
-the prototypes,
+对象、this关键字和原型，
+The objects, the this keyword and the prototypes,
 
 6
 00:00:15.589 --> 00:00:18.693
@@ -37,135 +32,115 @@ those make up the objects oriented system.
 
 7
 00:00:18.693 --> 00:00:23.053
-我特意强调的是面向对象而不是面向对象
-I'm deliberately saying objects
-oriented instead of object oriented
+我故意说面向对象而不是面向对象
+I'm deliberately saying objects oriented instead of object oriented
 
 8
 00:00:23.053 --> 00:00:25.812
-因为这不是严格的等级制度，
-because this is not
-strictly a class system,
+因为这不是严格的阶级制度，
+because this is not strictly a class system,
 
 9
 00:00:25.812 --> 00:00:29.449
-上面有层次化的阶级
-there is classes that have
-been layered on top of it.
+有一些类是在它之上分层的。
+there is classes that have been layered on top of it.
 
 10
 00:00:29.449 --> 00:00:32.810
-这也是许多人喜欢的选择
-And that is an option that
-many people prefer, but
+这是很多人喜欢的选择，但是
+And that is an option that many people prefer, but
 
 11
 00:00:32.810 --> 00:00:35.530
-它本身并不是一个阶级制度。
+它本质上不是一个阶级系统。
 it is not inherently a class system.
 
 12
 00:00:35.530 --> 00:00:38.509
-所以我们要先了解这个关键词
-So we're gonna start by
-understanding this keyword,
+所以我们将从理解这个关键字开始，
+So we're gonna start by understanding this keyword,
 
 13
 00:00:38.509 --> 00:00:41.229
-是这里的一个基本部件
-which is one of
-the foundational pieces here.
+这是这里的基础部分之一。
+which is one of the foundational pieces here.
 
 14
 00:00:41.229 --> 00:00:43.579
-我们看看班制是怎么做的，
+我们来看看班级系统是怎么做的，
 We'll look at what the class system does,
 
 15
 00:00:43.579 --> 00:00:46.799
-在 JavaScript 顶部分层的类关键字。
-the class keyword layered
-on top of JavaScript.
+位于JavaScript之上的class关键字。
+the class keyword layered on top of JavaScript.
 
 16
 00:00:46.799 --> 00:00:52.369
-然后我们再回个地方去了解其中的糖分在哪里
-And then we'll circle back to understand
-where that is syntactic sugar on top of,
+然后我们再回来看看这是什么句法糖分，
+And then we'll circle back to understand where that is syntactic sugar on top of,
 
 17
 00:00:52.369 --> 00:00:55.039
-其实是原型机系统
+这实际上是原型系统。
 which is actually the prototype system.
 
 18
 00:00:55.039 --> 00:00:58.880
-然后我们充分了解了 JavaScript的
-And then after we've fully
-understood how JavaScript's
+然后在我们完全理解JavaScript是如何
+And then after we've fully understood how JavaScript's
 
 19
 00:00:58.880 --> 00:01:03.310
-对象系统已用于实现类模式，
-objects system has been used to
-implement the class pattern,
+对象系统已经被用来实现类模式，
+objects system has been used to implement the class pattern,
 
 20
 00:01:03.310 --> 00:01:08.460
-在这个单位结束时我要留给你的是一个关于
-what I'm gonna leave you with at the end
-of this unit is a discussion about
+在这个单元的末尾，我将留给你们的是一个关于
+what I'm gonna leave you with at the end of this unit is a discussion about
 
 21
 00:01:08.460 --> 00:01:13.450
-与委托模式相反的类中的继承模式。
-the inheritance pattern from classes
-as opposed to the delegation pattern.
+类的继承模式，而不是委托模式。
+the inheritance pattern from classes as opposed to the delegation pattern.
 
 22
 00:01:13.450 --> 00:01:17.489
-我想说代表团模式是一个更强大的模式
-And I'm gonna argue that the delegation
-pattern is a more powerful pattern
+我要争辩的是，授权模式是一种更强大的模式
+And I'm gonna argue that the delegation pattern is a more powerful pattern
 
 23
 00:01:17.489 --> 00:01:21.219
-我们根本不利用我们的优势
-that we basically aren't taking
-advantage of because we're
+我们基本上没有利用因为我们
+that we basically aren't taking advantage of because we're
 
 24
 00:01:21.219 --> 00:01:25.650
-只关注使用 JavaScript 原型的类。
-focused on only doing classes
-with JavaScript's prototypes.
+专注于只用JavaScript的原型做类。
+focused on only doing classes with JavaScript's prototypes.
 
 25
 00:01:25.650 --> 00:01:32.014
-代表团模式更强大，更广泛，
-The delegation pattern is much more
-powerful and much more widespread,
+授权模式要强大得多，也广泛得多，
+The delegation pattern is much more powerful and much more widespread,
 
 26
 00:01:32.014 --> 00:01:36.723
-但我们只集中在课堂上
-but we sort of focus very
-myopically only on classes.
+但我们只关注班级，非常短视。
+but we sort of focus very myopically only on classes.
 
 27
 00:01:36.723 --> 00:01:41.938
-这将引导我们对比 OO 是面向类的编码样式
-And that leads us to a comparison of
-coding styles where OO is class oriented
+这让我们比较了面向对象的面向类的编码风格
+And that leads us to a comparison of coding styles where OO is class oriented
 
 28
 00:01:41.938 --> 00:01:47.563
-在 JavaScript 中，我用不同的代码来称呼 OLOO，
-in JavaScript, and I've come up with a
-different style of code that I call OLOO,
+在JavaScript中，我提出了一种不同风格的代码，我称之为Oloo，
+in JavaScript, and I've come up with a different style of code that I call OLOO,
 
 29
 00:01:47.563 --> 00:01:51.159
 它代表链接到其他对象的对象。
-which stands for
-objects linked to other objects.
+which stands for objects linked to other objects.

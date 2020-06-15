@@ -2,515 +2,445 @@ WEBVTT
 
 1
 00:00:00.220 --> 00:00:04.169
->> 凯尔 - 辛普森: 让我们来看看 ++ 运营商的规格
-&gt;&gt; Kyle Simpson: So let's take a look
-at the spec for the ++ operator and
+&gt；&gt；Kyle Simpson：让我们看看+运算符和
+&gt;&gt; Kyle Simpson: So let's take a look at the spec for the ++ operator and
 
 2
 00:00:04.169 --> 00:00:08.169
-在这件案子里，邮局的接线员，因为那是一个问题。
-in this case, the postfix operator,
-since that's the one in question.
+在本例中，是后缀运算符，因为这是有问题的运算符。
+in this case, the postfix operator, since that's the one in question.
 
 3
 00:00:08.169 --> 00:00:12.369
-你会注意到它被写出了，而且大部分的规格都是这样的。
-You'll notice that it is written out,
-and most of the spec is this way.
+您会注意到它是写出来的，并且大多数规范都是这样的。
+You'll notice that it is written out, and most of the spec is this way.
 
 4
 00:00:12.369 --> 00:00:16.100
-它以算法的编号算法写出。
-It is written out in the sorta
-numbered algorithmic format.
+它是以某种编号的算法格式写出的。
+It is written out in the sorta numbered algorithmic format.
 
 5
 00:00:16.100 --> 00:00:20.170
-好消息是您是开发者，开发者阅读并阅读
-The good news is you're developers,
-and developers read and
+好消息是您是开发人员，开发人员阅读并
+The good news is you're developers, and developers read and
 
 6
 00:00:20.170 --> 00:00:22.420
-写了一整天的算法
+整天写算法。
 write algorithms all day long.
 
 7
 00:00:22.420 --> 00:00:26.019
-虽然有一些挑战性的部分要跳入
-So while there are certainly some
-challenging parts to jumping into
+所以虽然确实有一些具有挑战性的部分需要跳入
+So while there are certainly some challenging parts to jumping into
 
 8
 00:00:26.019 --> 00:00:30.739
-那个规格我不想把那个规格洗了
-the spec, and I don't wanna wash over
-that the spec is just immediate,
+规格，我不想忽略规格是即时的，
+the spec, and I don't wanna wash over that the spec is just immediate,
 
 9
 00:00:30.739 --> 00:00:32.049
-很容易阅读
+很容易阅读。
 it's easy reading.
 
 10
 00:00:32.049 --> 00:00:33.460
-那一定要工作
+这绝对是需要努力的。
 That definitely takes work.
 
 11
 00:00:33.460 --> 00:00:37.079
-但当然有一些事情是可以挑战的
-But while there are certainly
-things that can be challenging
+但是，虽然确实有一些事情是具有挑战性的
+But while there are certainly things that can be challenging
 
 12
 00:00:37.079 --> 00:00:41.560
-看说明书，就看这几个片段，
-about reading the specification, even
-just reading these couple of snippets,
+关于阅读规范，甚至只是阅读这几个片段，
+about reading the specification, even just reading these couple of snippets,
 
 13
 00:00:41.560 --> 00:00:43.609
-这个名单上的五个项目
+这个布尔列表中的这五个项目，
 these five items in this bool list,
 
 14
 00:00:43.609 --> 00:00:48.460
-有一种非常简单的算法来确定要做什么。
-there's a very straightforward
-algorithm for determining what to do.
+有一个非常简单的算法来确定要做什么。
+there's a very straightforward algorithm for determining what to do.
 
 15
 00:00:48.460 --> 00:00:52.310
-现在，算法背后的原因是完全不同的话题。
-Now the reasons behind the algorithm
-are an entirely different topic.
+现在算法背后的原因是一个完全不同的话题。
+Now the reasons behind the algorithm are an entirely different topic.
 
 16
 00:00:52.310 --> 00:00:56.049
-它是否与其他算法一致是一个完全独立的主题。
-And whether it's consistent with other
-algorithms is a totally separate topic.
+它是否与其他算法一致是一个完全独立的话题。
+And whether it's consistent with other algorithms is a totally separate topic.
 
 17
 00:00:56.049 --> 00:00:59.338
-但如果我们想了解 ++ 运营商正在做什么，
-But if we wanna understand
-what the ++ operator is doing,
+但如果我们想了解+运算符在做什么，
+But if we wanna understand what the ++ operator is doing,
 
 18
 00:00:59.338 --> 00:01:01.350
-预测并避免问题。
+预测它并避免问题。
 predict it and avoid problems.
 
 19
 00:01:01.350 --> 00:01:05.730
-唯一能做到这一点的方法就是了解它要做什么。
-The only way to do that is to
-understand what it's gonna do.
+唯一的办法就是了解它会做什么。
+The only way to do that is to understand what it's gonna do.
 
 20
 00:01:05.730 --> 00:01:10.239
-我不知道有任何其他方式来理解它的算法。
-And I don't know of any other way of doing
-that than understanding its algorithm.
+除了了解它的算法之外，我不知道有任何其他方法可以做到这一点。
+And I don't know of any other way of doing that than understanding its algorithm.
 
 21
 00:01:10.239 --> 00:01:14.250
-所以从某种意义上来说，这整个过程其实是想帮助你理解
-So in a sense, this whole course is
-really trying to help you to understand
+所以从某种意义上说，整个课程都是为了帮助你理解
+So in a sense, this whole course is really trying to help you to understand
 
 22
 00:01:14.250 --> 00:01:17.248
-算法， JavaScript 的 DNA 。
+算法，JavaScript的DNA。
 the algorithms, the DNA of JavaScript.
 
 23
 00:01:18.530 --> 00:01:19.569
-我为什么要那样做
+我为什么要这么做？
 Why would I wanna do that?
 
 24
 00:01:19.569 --> 00:01:22.420
-因为我希望你作为一个开发者更有效。
-It's because I want you to be
-more effective as a developer.
+这是因为我希望你作为一个开发者更有效率。
+It's because I want you to be more effective as a developer.
 
 25
 00:01:22.420 --> 00:01:27.969
-我认为最能影响我们效率的其中一个因素
-I think one of the things that creates
-the biggest roadblock to our effectiveness
+我认为对我们的效率造成最大障碍的原因之一
+I think one of the things that creates the biggest roadblock to our effectiveness
 
 26
 00:01:27.969 --> 00:01:33.549
-因为开发商不知道我们在做什么
-as developers is that we code without
-really knowing what we're doing and
+作为开发人员，我们在不真正知道自己在做什么的情况下进行编码
+as developers is that we code without really knowing what we're doing and
 
 27
 00:01:33.549 --> 00:01:36.750
-那么我们希望我们不会因此而陷入一个错误。
-then we hope that we don't
-run into a bug as a result.
+然后我们希望我们不会因此而遇到bug。
+then we hope that we don't run into a bug as a result.
 
 28
 00:01:39.280 --> 00:01:42.219
-这对我很有趣我问过这个问题
-It's interesting to me,
-I've ask this question and
+这对我来说很有趣，我问过这个问题
+It's interesting to me, I've ask this question and
 
 29
 00:01:42.219 --> 00:01:44.229
-我只得到一个有道理的答案
-I've only ever gotten one
-answer that made any sense.
+我只得到了一个有意义的答案。
+I've only ever gotten one answer that made any sense.
 
 30
 00:01:44.229 --> 00:01:50.450
-你能把你的职业命名为一个专业的 guesser吗 ?
-Can you name any profession where
-essentially you're a professional guesser?
+你能说出一个你本质上是专业猜测者的职业吗？
+Can you name any profession where essentially you're a professional guesser?
 
 31
 00:01:51.944 --> 00:01:54.939
-这些 JavaScript 开发者和实际上的开发者
-The JavaScript developers and
-in fact developers on a lot of senses but
+JavaScript开发人员和实际上在很多意义上的开发人员，但是
+The JavaScript developers and in fact developers on a lot of senses but
 
 32
 00:01:54.939 --> 00:01:59.560
-尤其是 JavaScript 开发者，我们真的不知道
-especially JavaScript developers,
-isn't it true that we don't really know
+尤其是JavaScript开发人员，我们不是真的不知道
+especially JavaScript developers, isn't it true that we don't really know
 
 33
 00:01:59.560 --> 00:02:02.230
-为什么密码正常工作现在就在工作
-why the code's working,
-it just seems to be working right now.
+为什么代码可以工作，它现在看起来就是在工作。
+why the code's working, it just seems to be working right now.
 
 34
 00:02:02.230 --> 00:02:06.579
-现在它符合我们人工构造的任何精神模型。
-And it at the moment fits whatever mental
-model we have artificially constructed.
+目前它符合我们人工构建的任何心理模型。
+And it at the moment fits whatever mental model we have artificially constructed.
 
 35
 00:02:06.579 --> 00:02:10.650
-就像我构造了 X 等于 X 加上一个，这样做是合理的。
-Like I constructed the X equals X plus
-one, which is reasonable by the way.
+就像我构造的X等于X加1，顺便说一下，这是合理的。
+Like I constructed the X equals X plus one, which is reasonable by the way.
 
 36
 00:02:10.650 --> 00:02:14.659
-我不是在暗示你是否觉得你的思维模式很奇怪
-I'm not suggesting if that's your mental
-model that you're weird for thinking that,
+我并不是说如果那是你的思维模式你这么想很奇怪，
+I'm not suggesting if that's your mental model that you're weird for thinking that,
 
 37
 00:02:14.659 --> 00:02:19.509
-这是合理的，但是我们人为地构造了这些心理模型，
-it's reasonable, but we artificially
-construct these mental models, and
+这是合理的，但我们人为地构建了这些心理模型，并且
+it's reasonable, but we artificially construct these mental models, and
 
 38
 00:02:19.509 --> 00:02:23.800
-好像是在工作，所以我们说，我希望测试套件通过。
-it seems to work, and so we say,
-I hope the test suite passes.
+它似乎起作用了，所以我们说，我希望测试套件通过。
+it seems to work, and so we say, I hope the test suite passes.
 
 39
 00:02:23.800 --> 00:02:27.620
-你能想象这个建筑的设计师说我希望墙能保持住
-Can you imagine an architect of this
-building saying, I hope the walls stay up,
+你能想象这座建筑的建筑师会说，我希望墙壁不会倒塌，
+Can you imagine an architect of this building saying, I hope the walls stay up,
 
 40
 00:02:27.620 --> 00:02:29.420
-我希望屋顶能保持住吗
+我希望屋顶一直开着？
 and I hope the roof stays on?
 
 41
 00:02:29.420 --> 00:02:31.280
-让我们把人放进去看看它是怎么运作的
-Let's put people in it and
-see how it works.
+让我们把人放进去看看它是如何工作的。
+Let's put people in it and see how it works.
 
 42
 00:02:32.430 --> 00:02:33.998
-我们来测试看看它是怎么运作的
+让我们运行测试，看看它是如何工作的。
 Let's run the tests and see how it works.
 
 43
 00:02:35.469 --> 00:02:39.250
-我不知道任何其他方法对你的密码有信心
-I don't know of any other way of
-developing a confidence over your code.
+我不知道有什么其他方法可以让你对你的代码产生信心。
+I don't know of any other way of developing a confidence over your code.
 
 44
 00:02:39.250 --> 00:02:42.599
-但这正是我努力的方向，让我们能够理解代码在做什么。
-But it's what I'm striving towards, to be
-able to understand what the code is doing.
+但这就是我努力的方向，能够理解代码在做什么。
+But it's what I'm striving towards, to be able to understand what the code is doing.
 
 45
 00:02:42.599 --> 00:02:46.840
-就在这个特殊的规范中，它告诉我们到底发生了什么。
-And right here in this particular spec,
-it tells us exactly what happens.
+就在这里，在这个特定的规范中，它确切地告诉我们发生了什么。
+And right here in this particular spec, it tells us exactly what happens.
 
 46
 00:02:46.840 --> 00:02:51.300
-它将抓取旧值并对其执行两个数字操作。
-It grabs the old value and
-does the two number operation on it.
+它获取旧值并对其进行两个数字运算。
+It grabs the old value and does the two number operation on it.
 
 47
 00:02:51.300 --> 00:02:53.349
-它把它变成一个数字
-It turns it from whatever
-it is into a number.
+它把它从任何东西变成一个数字。
+It turns it from whatever it is into a number.
 
 48
 00:02:53.349 --> 00:02:56.620
-我们要谈谈这两个数字，叫做抽象化操作。
-And we're gonna talk about that two number
-that's called an abstract operation.
+我们将讨论这两个被称为抽象运算的数字。
+And we're gonna talk about that two number that's called an abstract operation.
 
 49
 00:02:56.620 --> 00:02:58.860
-在这个过程中我们会明白的
+我们会在这门课上讲到这一点。
 We're gonna get into that in this course.
 
 50
 00:02:58.860 --> 00:03:01.449
-但我希望你能有足够的舒适感
-But I want you to be able to
-be comfortable enough that,
+但我希望你能有足够的舒适感，
+But I want you to be able to be comfortable enough that,
 
 51
 00:03:01.449 --> 00:03:04.449
-如果你不明白什么你可以检查 MDN
-if you didn't understand something,
-you could check MDN.
+如果你不明白什么，你可以查看MDN。
+if you didn't understand something, you could check MDN.
 
 52
 00:03:04.449 --> 00:03:04.955
-但你猜怎么办
+但是你猜怎么着？
 But guess what?
 
 53
 00:03:04.955 --> 00:03:07.800
-MDN 并非总是 [LAUGH] 正确。
+MDN并不总是[笑]对的。
 MDN is not always [LAUGH] right.
 
 54
 00:03:07.800 --> 00:03:10.819
-我定期解决 MDN 的问题。
-I fixed problems on MDN
-on a regular basis.
+我定期修复MDN上的问题。
+I fixed problems on MDN on a regular basis.
 
 55
 00:03:10.819 --> 00:03:15.069
-所以如果你看到的东西与你阅读的内容不相符的话
-So if there's something that you're seeing
-that's not matching what you're reading,
+所以如果你看到的东西和你读到的不匹配，
+So if there's something that you're seeing that's not matching what you're reading,
 
 56
 00:03:15.069 --> 00:03:17.930
-只有一个地方可以去它是这个规格
-there's really only one place to go and
-it's the spec.
+真的只有一个地方可以去，那就是规格。
+there's really only one place to go and it's the spec.
 
 57
 00:03:17.930 --> 00:03:22.430
-如果我想把这个说明书翻译成某种
-If I were to try to translate that
-specification into some kind of
+如果我试图将该规范转换为某种
+If I were to try to translate that specification into some kind of
 
 58
 00:03:22.430 --> 00:03:26.509
-我们能更好地理解的 JavaScript 代码基本上是这样的
-JavaScript code that we could maybe
-better understand, it's basically this,
+我们也许可以更好地理解的JavaScript代码，基本上是这样的，
+JavaScript code that we could maybe better understand, it's basically this,
 
 59
 00:03:26.509 --> 00:03:28.348
-这个 ++ 就像一个函数。
++就像一个函数。
 that the ++ is like a function.
 
 60
 00:03:28.348 --> 00:03:32.206
-它是一个操作符，但它就像一个函数，它占据了原始的 X。
-It's an operator, but it's like
-a function that takes the original X.
+它是一个运算符，但它就像一个接受原始X的函数。
+It's an operator, but it's like a function that takes the original X.
 
 61
 00:03:32.206 --> 00:03:35.509
-就在第 4 行里，它强迫它为一个数字。
-And right there on line 4,
-it coerces it to a number.
+就在第4行，它将其强制为一个数字。
+And right there on line 4, it coerces it to a number.
 
 62
 00:03:35.509 --> 00:03:39.610
-它更新后又回复了原来的号码
-And it returns that original
-number after having updated it
+并在更新后返回原始编号
+And it returns that original number after having updated it
 
 63
 00:03:39.610 --> 00:03:41.090
-随你的增加
+以1为增量。
 with the increment of one.
 
 64
 00:03:42.460 --> 00:03:48.439
-这就是一个更清晰的精神模型
-So this is an illustration of
-having a more clear mental model,
+所以这是一个更清晰的心智模型的例子，
+So this is an illustration of having a more clear mental model,
 
 65
 00:03:48.439 --> 00:03:50.939
-而我唯一的方法就是把它读出来
-and the only way that I got
-that was reading this back.
+而我得到这些的唯一途径就是把这个读回来。
+and the only way that I got that was reading this back.
 
 66
 00:03:50.939 --> 00:03:52.900
-我看到了我预料会发生的事
-I saw something that I
-expected to have happen.
+我看到了一些我预期会发生的事情。
+I saw something that I expected to have happen.
 
 67
 00:03:52.900 --> 00:03:54.430
-没发生过
+它没有发生，而且
 It didn't happen, and
 
 68
 00:03:54.430 --> 00:03:58.979
-我发现这就是我缺乏理解的问题，我有错误的精神模型。
-I noticed that's my lack of understanding,
-I have the wrong mental model.
+我注意到这是我缺乏理解，我有错误的心理模型。
+I noticed that's my lack of understanding, I have the wrong mental model.
 
 69
 00:03:58.979 --> 00:04:00.650
-有一种方法可以解决这个问题，阅读规范。
-And there's one way to solve that,
-read the spec.
+有一种方法可以解决这个问题，阅读说明书。
+And there's one way to solve that, read the spec.
 
 70
 00:04:03.500 --> 00:04:08.069
-当你的大脑思考什么的时候
-Whenever there is a divergence between
-what your brain thinks and what is
+每当你的大脑想法和现实之间有分歧的时候
+Whenever there is a divergence between what your brain thinks and what is
 
 71
 00:04:08.069 --> 00:04:11.430
-实际上是在电脑里发生的那就是虫子进入密码的地方
-actually happening in the computer,
-that's where bugs enter the code.
+实际上发生在计算机中，这就是臭虫进入代码的地方。
+actually happening in the computer, that's where bugs enter the code.
 
 72
 00:04:11.430 --> 00:04:16.204
-而这正是我要做的事情让你感到沮丧的是
-And that's really what I'm getting at, the
-thing that causes you to be frustrated as
+这就是我真正想要的，让你感到沮丧的事情
+And that's really what I'm getting at, the thing that causes you to be frustrated as
 
 73
 00:04:16.204 --> 00:04:19.917
-一个开发者发现错误的发生在我的意料之外
-a developer is that bugs happen in
-unexpected ways and I think one of
+开发人员是以意想不到的方式发生错误的，我认为其中之一
+a developer is that bugs happen in unexpected ways and I think one of
 
 74
 00:04:19.917 --> 00:04:23.894
-最常见的错误是我们有错误的想法
-the most common ways that bugs enter
-is we have the incorrect thinking,
+虫子最常见的进入方式是我们有错误的思维，
+the most common ways that bugs enter is we have the incorrect thinking,
 
 75
 00:04:23.894 --> 00:04:25.584
-不正确的精神模型
+不正确的心理模型。
 the incorrect mental model.
 
 76
 00:04:25.584 --> 00:04:29.355
-我们在想一些事情但这与我们的想法和
-We're thinking something but then it's
-a divergent to what we're thinking and
+我们在想一些事情，但这与我们所想的是不同的
+We're thinking something but then it's a divergent to what we're thinking and
 
 77
 00:04:29.355 --> 00:04:32.870
-电脑在做什么，那是错误进入代码的时候。
-what the computer's doing and
-that's when the bug enters the code.
+当漏洞进入代码时，计算机正在做什么。
+what the computer's doing and that's when the bug enters the code.
 
 78
 00:04:32.870 --> 00:04:35.569
-我的意思是，有错误发生的原因是你刚刚
-I mean yes, there are bugs
-that happen because you just
+我的意思是，是的，有错误发生，因为你只是
+I mean yes, there are bugs that happen because you just
 
 79
 00:04:35.569 --> 00:04:37.399
-意外地输入了两个而不是三个
+不小心键入了两个而不是三个。
 accidentally type two instead of three.
 
 80
 00:04:37.399 --> 00:04:38.759
-那就发生了
+这是常有的事。
 That happens.
 
 81
 00:04:38.759 --> 00:04:43.590
-我不是说所有虫子都是这样但我认为
-I'm not suggesting that all bugs are this
-way, but I think that the predominant set
+我并不是说所有的bug都是这样的，但我认为优势集
+I'm not suggesting that all bugs are this way, but I think that the predominant set
 
 82
 00:04:43.590 --> 00:04:46.971
-发生的错误是因为我们在思考一件事
-of bugs that occur is because
-we're thinking one thing and
+是因为我们在想一件事
+of bugs that occur is because we're thinking one thing and
 
 83
 00:04:46.971 --> 00:04:49.322
-其他的事情正在发生
+还有别的事情正在发生。
 something else is actually happening.
 
 84
 00:04:49.322 --> 00:04:51.764
-你会在整个过程中听到很多声音
-You're gonna hear a lot
-throughout this course,
+你在这门课上会听到很多东西，
+You're gonna hear a lot throughout this course,
 
 85
 00:04:51.764 --> 00:04:55.310
-但这也是我定期重复的其中一个
-but this is one of those sayings that
-I will repeat on a regular basis, and
+但这是其中一句我会经常重复的话，而且
+but this is one of those sayings that I will repeat on a regular basis, and
 
 86
 00:04:55.310 --> 00:04:57.970
-人们喜欢把这些称为 " Geotify" 的法律。
-people like to refer to
-these as getify's laws.
+人们喜欢将这些称为getify的法律。
+people like to refer to these as getify's laws.
 
 87
 00:04:57.970 --> 00:04:59.850
-所以我就开始了，开始对它们进行编号。
-So I went ahead and
-just started numbering them.
+所以我就开始给它们编号。
+So I went ahead and just started numbering them.
 
 88
 00:04:59.850 --> 00:05:04.759
-所以这就是 17 号的第 17 号法律
-So this is getify's law number 17, when
-there's a divergence between your brain
+这就是getify的第17条定律，当你的大脑出现分歧时
+So this is getify's law number 17, when there's a divergence between your brain
 
 89
 00:05:04.759 --> 00:05:06.680
-以及漏洞进入代码的计算机。
-and the computer that's where
-the bug enters the code.
+而电脑就是虫子输入代码的地方。
+and the computer that's where the bug enters the code.

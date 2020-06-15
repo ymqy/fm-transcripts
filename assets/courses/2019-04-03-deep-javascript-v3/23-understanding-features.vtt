@@ -2,201 +2,173 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:01.937
->> Kyle Simpson: Doug Crockford 有一句名言 :
-&gt;&gt; Kyle Simpson: Doug Crockford
-famously said,
+&gt；&gt；Kyle Simpson：Doug Crockford有句名言，
+&gt;&gt; Kyle Simpson: Doug Crockford famously said,
 
 2
 00:00:01.937 --> 00:00:05.809
-如果功能部件有时是有用的，有时是危险的，并且
-iif a feature is sometimes useful and
-sometimes dangerous, and
+iif一个功能有时有用，有时很危险，并且
+iif a feature is sometimes useful and sometimes dangerous, and
 
 3
 00:00:05.809 --> 00:00:09.769
-如果有更好的选择，则总是用更好的选择。
-if there's a better option,
-then always use the better option.
+如果有更好的选择，那么总是使用更好的选择。
+if there's a better option, then always use the better option.
 
 4
 00:00:09.769 --> 00:00:14.644
-事实上几乎所有的好部分都源于
-As a matter of fact almost all
-of the good parts stems from
+事实上，几乎所有好的部分都源于
+As a matter of fact almost all of the good parts stems from
 
 5
 00:00:14.644 --> 00:00:17.980
-这是一个基本的观点
+这是一个基本的观点。
 this one foundational perspective.
 
 6
 00:00:17.980 --> 00:00:20.748
-我尊重道格为我们的产业所做的一切
-I respect what Doug has done for
-our industry,
+我尊重道格为我们的行业所做的
+I respect what Doug has done for our industry,
 
 7
 00:00:20.748 --> 00:00:24.019
-但我不同意这个未来的看法
-but I couldn't disagree
-more with this prospective.
+但我非常不同意这一观点。
+but I couldn't disagree more with this prospective.
 
 8
 00:00:25.489 --> 00:00:30.344
-部分我不同意这一点，因为我们把这个原则转过去，
-Partially I disagree with this because
-we throw this principle around,
+我部分不同意这一点，因为我们把这个原则抛诸脑后，
+Partially I disagree with this because we throw this principle around,
 
 9
 00:00:30.344 --> 00:00:33.698
-我们甚至都不知道我们的意思是什么
-and we don't even say what
-we mean by these words.
+我们甚至没有说出这些话的意思。
+and we don't even say what we mean by these words.
 
 10
 00:00:33.698 --> 00:00:38.890
-那么，什么是危险的，只有什么狗认为是有用的 ?
-So what is useful in what is dangerous,
-only what dog thinks is useful dangerous?
+那么什么是有用的危险，只有狗认为有用的危险？
+So what is useful in what is dangerous, only what dog thinks is useful dangerous?
 
 11
 00:00:38.890 --> 00:00:42.170
-是否有一些通用的定义，以作有用的危险?
-Is there some universal definition for
-useful dangerous?
+有用的危险有什么普遍的定义吗？
+Is there some universal definition for useful dangerous?
 
 12
 00:00:42.170 --> 00:00:45.340
-如何选择更好的选择 ?
+有没有更好的选择？
 How about better option?
 
 13
 00:00:45.340 --> 00:00:47.168
-我们如何定义更好的选择?
+我们如何定义更好的选择？
 How do we define better option?
 
 14
 00:00:47.168 --> 00:00:51.978
-我们是否有一些通用的标准来衡量更好呢 ?
-Is there some universal standard
-by which we measure better?
+有没有什么通用的标准可以让我们更好地衡量？
+Is there some universal standard by which we measure better?
 
 15
 00:00:51.978 --> 00:00:56.100
-该语句在其抽象意义上无效。
-The statement is not useful
-in its abstract sense.
+这种说法在抽象意义上是没有用处的。
+The statement is not useful in its abstract sense.
 
 16
 00:00:56.100 --> 00:01:00.530
-它用在抽象的意义上，但它并不有用。
-It's used in its abstract sense,
-but it's not useful.
+它是在抽象意义上使用的，但它没有用处。
+It's used in its abstract sense, but it's not useful.
 
 17
 00:01:02.820 --> 00:01:06.456
-让我把我的印记放在沙滩上
+所以，让我把我的标记放在沙子上
 So, let me put my mark in the sand and
 
 18
 00:01:06.456 --> 00:01:10.829
-告诉你这些话是什么意思好吗
+告诉你我说的话是什么意思，好吗？
 tell you what I mean by those words, okay?
 
 19
 00:01:10.829 --> 00:01:16.081
-第一，当读者专注于什么是重要的时候，
-Number one, useful is when the reader
-is focused on what's important,
+第一，有用的是当读者专注于什么是重要的时候，
+Number one, useful is when the reader is focused on what's important,
 
 20
 00:01:16.081 --> 00:01:20.996
-危险的是当读者不知道会发生什么的时候
-and dangerous is when the reader
-can't tell what's gonna happen.
+危险的是当读者不能说出将要发生的事情时。
+and dangerous is when the reader can't tell what's gonna happen.
 
 21
 00:01:20.996 --> 00:01:24.159
-更美好的是当读者理解代码的时候。
-And better is when the reader
-understands the code.
+更好的是当读者理解代码时。
+And better is when the reader understands the code.
 
 22
 00:01:28.370 --> 00:01:30.073
->> 凯尔 - 辛普森: 所以你可以接受这个原则
-&gt;&gt; Kyle Simpson: So
-you could take that principle and
+&gt；&gt；Kyle Simpson：所以你可以把这个原则
+&gt;&gt; Kyle Simpson: So you could take that principle and
 
 23
 00:01:30.073 --> 00:01:34.161
-将特定含义应用到其中，但不能简单地将该语句抛出为
-apply the specific meaning to it, but you
-can't simply throw that sentence around as
+应用它的具体含义，但你不能简单地把这句话当作
+apply the specific meaning to it, but you can't simply throw that sentence around as
 
 24
 00:01:34.161 --> 00:01:37.759
-说明为什么您避免学习语言的整个部分。
-a justification for why you avoid
-learning an entire part of the language.
+这是你避免学习整个语言部分的理由。
+a justification for why you avoid learning an entire part of the language.
 
 25
 00:01:40.729 --> 00:01:47.551
->> 凯尔 - 辛普森: 关键的关键在于道格的观点，有更好的选择，
-&gt;&gt; Kyle Simpson: The big crux here is, in
-Doug's opinion, there's a better option,
+&GT；&GT；Kyle Simpson：在Doug看来，这里的一个大问题是，有一个更好的选择，
+&gt;&gt; Kyle Simpson: The big crux here is, in Doug's opinion, there's a better option,
 
 26
 00:01:47.551 --> 00:01:52.418
-这只是不了解和理解的类型
-which is just don't learn and
-understand types.
+这就是不学习和理解类型。
+which is just don't learn and understand types.
 
 27
 00:01:52.418 --> 00:01:55.753
-我的看法是一点都不更好
-My perspective is that's
-not better at all,
+我的观点是一点都不好，
+My perspective is that's not better at all,
 
 28
 00:01:55.753 --> 00:02:01.480
-因为它会导致开发者系统地不理解他们的代码。
-because it leads to developers
-systemically not understanding their code.
+因为它导致开发人员系统地不理解他们的代码。
+because it leads to developers systemically not understanding their code.
 
 29
 00:02:01.480 --> 00:02:04.009
-这不更好，因为它会导致更少的理解。
-It's not better because it
-leads to less understanding.
+这并不是因为它导致更少的理解。
+It's not better because it leads to less understanding.
 
 30
 00:02:04.009 --> 00:02:09.561
-takaway我想让你来这里是故意的
-The takeaway, I want you to get here is
-that it is irresponsible to knowingly
+我想让你明白的是，明知故犯是不负责任的
+The takeaway, I want you to get here is that it is irresponsible to knowingly
 
 31
 00:02:09.561 --> 00:02:14.618
-避免使用可提高代码可读性的功能。
-avoid usage of a feature that can and
-does improve code readability.
+避免使用能够并且确实提高代码可读性的功能。
+avoid usage of a feature that can and does improve code readability.
 
 32
 00:02:14.618 --> 00:02:18.723
-不仅仅是简单的，你不是在利用一些伟大的东西，
-It is not just simply, you're not
-taking advantage of some great things,
+这不仅仅是简单的，你没有利用一些伟大的东西，
+It is not just simply, you're not taking advantage of some great things,
 
 33
 00:02:18.723 --> 00:02:20.949
-你实际上是把代码变坏了
+你实际上是在让代码变得更糟。
 you are actually making code worse off.
 
 34
 00:02:20.949 --> 00:02:24.064
-不仅是为了你未来的自我，而对于所有其他需要阅读和阅读的人
-Not only for your future self, but for
-all other people that need to read and
+不仅是为了你未来的自己，也是为了所有其他需要阅读和
+Not only for your future self, but for all other people that need to read and
 
 35
 00:02:24.064 --> 00:02:24.969
@@ -205,6 +177,5 @@ maintain your code.
 
 36
 00:02:26.568 --> 00:02:29.560
->> Kyle Simpson: 该工具存在，不学习和使用它是不负责任的。
-&gt;&gt; Kyle Simpson: That tool exists and it's
-irresponsible not to learn and use it.
+&gt；&gt；Kyle Simpson：这个工具存在，不学习和使用它是不负责任的。
+&gt;&gt; Kyle Simpson: That tool exists and it's irresponsible not to learn and use it.
